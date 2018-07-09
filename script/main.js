@@ -283,7 +283,7 @@ function clickRowButton(row) {
         itemGrid[row]['button'].style.backgroundColor = 'red';
         itemGrid[row][8]['item'].style.display = '';
         itemGrid[row]['half'].style.display = 'none';	
-        itemLayout[row][8] = 'blank';
+        itemLayout[row][6] = 'blank';
     } else {
         itemGrid[row]['button'].innerHTML = '+';
         itemGrid[row]['button'].style.backgroundColor = 'green';
