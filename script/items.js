@@ -124,6 +124,7 @@ var items = {
     SerenadeofWater:false,
     NocturneofShadow:false,
     RequiemofSpirit:false,
+    Scarecrow:0,
 
     KokiriEmerald:false,
     GoronRuby:false,
@@ -154,6 +155,7 @@ var itemsMin = {
     Nuts:0,
     Mask:0,
     Trade:0,
+    Scarecrow:0,
 };
 
 var itemsMax = {
@@ -172,4 +174,5 @@ var itemsMax = {
     Nuts:3,
     Mask:6,
     Trade:10,
+    Scarecrow:2,
 };
