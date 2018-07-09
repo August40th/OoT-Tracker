@@ -229,7 +229,7 @@ function showSettings(sender) {
             if (!itemLayout[r] || !itemLayout[r].length) {
                 itemGrid[r]['row'].style.display = 'none';
             } else {
-                for (c = 0; c < 8; c++) {
+                for (c = 0; c < 6; c++) {
                     if (!!itemLayout[r][c] && itemLayout[r][c] != 'blank') {
                         startdraw = true;
                         r++;
@@ -281,15 +281,15 @@ function clickRowButton(row) {
     if (itemLayout[row].length % 2 == 0) {
         itemGrid[row]['button'].innerHTML = '-';
         itemGrid[row]['button'].style.backgroundColor = 'red';
-        itemGrid[row][8]['item'].style.display = '';
+        itemGrid[row][6]['item'].style.display = '';
         itemGrid[row]['half'].style.display = 'none';	
-        itemLayout[row][8] = 'blank';
+        itemLayout[row][6] = 'blank';
     } else {
         itemGrid[row]['button'].innerHTML = '+';
         itemGrid[row]['button'].style.backgroundColor = 'green';
-        itemGrid[row][8]['item'].style.display = 'none';
+        itemGrid[row][6]['item'].style.display = 'none';
         itemGrid[row]['half'].style.display = '';	
-        document.getElementById(itemLayout[row][8]).style.opacity = 1;
+        document.getElementById(itemLayout[row][6]).style.opacity = 1;
         itemLayout[row].splice(-1, 1);
     }
     updateGridItem(row, 8);
