@@ -454,7 +454,7 @@ function initGridRow(itemsets) {
 
     var r, c;
     var startdraw = false;
-    for (r = 9; r >= 0 && !startdraw; r--) {
+    for (r = 7; r >= 0 && !startdraw; r--) {
         if (!itemsets[r] || !itemsets[r].length) {
             itemGrid[r]['row'].style.display = 'none';
             itemGrid[r]['half'].style.display = 'none';
