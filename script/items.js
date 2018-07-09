@@ -1,40 +1,52 @@
 var defaultItemGrid = [
     [
-        "Bow",
-        "Hookshot",
-        "Hammer",
-        "Bombs",
-        "Scale",
-        "Glove"
-    ],
-    [
         "KokiriSword",
+        "MasterSword",
         "BiggoronSword",
-        "MirrorShield",
-        "ZoraTunic",
-        "GoronTunic",
-        "IronBoots",
-        "HoverBoots"
-    ],
-    [
-        "Dins",
-        "Farores",
-        "Nayrus",
-        "Magic",
+        "StoneofAgony",
+        "Stick",
+        "Nuts",
+        "Bow",
         "Fire",
-        "Ice",
-        "Light"
+        "Dins"
     ],
     [
-        "Slingshot",
-        "Boomerang",
-        "Lens",
-        "Bottle",
-        "ZoraLetter",
+        "DekuShield",
+        "HylianShield",
+        "MirrorShield",
         "Wallet",
-        "Skulltula"
+        "Slingshot",
+        "Bombs",
+        "Hookshot",
+        "Ice",
+        "Farores"
     ],
     [
+        "KokiriTunic",
+        "GoronTunic",
+        "ZoraTunic",
+        "Glove",
+        "Boomerang",
+        "Bombchu",
+        "Hammer",
+        "Light",
+        "Nayrus"
+    ],
+    [
+        "KokiriBoots",
+        "IronBoots",
+        "HoverBoots",
+        "Scale",
+        "ZoraLetter",
+        "Bottle",
+        "blank",
+        "Lens",
+        "Magic"
+    ],
+    [
+        "blank",
+        "LightMedallion",
+        "blank",
         "ZeldasLullaby",
         "EponasSong",
         "SunsSong",
@@ -43,6 +55,9 @@ var defaultItemGrid = [
         "SongofStorms"
     ],
     [
+        "ShadowMedallion",
+        "blank"
+        "ForestMedallion
         "MinuetofForest",
         "BoleroofFire",
         "SerenadeofWater",
@@ -51,21 +66,25 @@ var defaultItemGrid = [
         "PreludeofLight"
     ],
     [
-        "ForestMedallion",
-        "FireMedallion",
-        "WaterMedallion",
-        "ShadowMedallion",
         "SpiritMedallion",
-        "LightMedallion"
+        "FireMedallion",
+        "blank",
+        "blank",
+        "blank",
+        "blank",
+        "Mask",
+        "Scarecrow"
     ],
     [
         "blank",
+        "WaterMedallion
         "blank",
         "KokiriEmerald",
         "GoronRuby",
         "ZoraSapphire",
         "blank",
-        "blank"
+        "Trade",
+        "Skulltula"
     ]
 ]
 
