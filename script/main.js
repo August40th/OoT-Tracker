@@ -485,7 +485,7 @@ function initGridRow(itemsets) {
         }
         itemGrid[r]['button'].style.display = 'none';
 
-        for (c = 0; c < 9; c++) {
+        for (c = 0; c < 7; c++) {
             if (itemsets[r][c]) {
                 setGridItem(itemsets[r][c], r, c);
             } 
