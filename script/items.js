@@ -6,9 +6,7 @@ var defaultItemGrid = [
         "StoneofAgony",
         "Stick",
         "Nuts",
-        "Bow",
-        "Fire",
-        "Dins"
+        "Bow"
     ],
     [
         "DekuShield",
