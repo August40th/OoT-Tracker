@@ -425,7 +425,7 @@ function updateGridItem(row, index) {
 
 function updateGridItemAll() {
     for (r = 0; r < 8; r++) {
-        for (c = 0; c < 9; c++) {
+        for (c = 0; c < 7; c++) {
             updateGridItem(r, c);
         }
     }
@@ -510,7 +510,7 @@ function gridItemClick(row, col, corner) {
                 var r,c;
                 var found = false;
                 for (r = 0; r < 8; r++) {
-                    for (c = 0; c < 9; c++) {
+                    for (c = 0; c < 7; c++) {
                         if (itemLayout[r][c] == selected.item) {
                             itemLayout[r][c] = 'blank';
                             found = true;
@@ -637,7 +637,7 @@ function itemConfigClick (sender) {
             var r,c;
             var found = false;
             for (r = 0; r < 8; r++) {
-                for (c = 0; c < 9; c++) {
+                for (c = 0; c < 7; c++) {
                     if (itemLayout[r][c] == item) {
                         itemLayout[r][c] = 'blank';
                         updateGridItem(r, c);
