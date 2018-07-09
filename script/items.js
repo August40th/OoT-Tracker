@@ -172,7 +172,7 @@ var itemsMax = {
     Skulltula:5,
     Stick:3,
     Nuts:3,
-    Mask:6,
-    Trade:10,
+    Mask:7,
+    Trade:11,
     Scarecrow:2,
 };
