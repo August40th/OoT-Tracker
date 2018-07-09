@@ -95,6 +95,7 @@ var items = {
     Bombchu:false,
     Mask:0,
     Trade:0,
+    Bean:false,
 
     KokiriSword:false,
     MasterSword:true,
