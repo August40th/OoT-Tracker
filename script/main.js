@@ -332,7 +332,7 @@ function createItemTracker(sender) {
         tr.appendChild(itemGrid[r]['half']);
 
         var i;
-        for (i = 0; i < 7; i++) {	
+        for (i = 0; i < 9; i++) {	
             itemGrid[r][i] = [];
             itemLayout[r][i] = 'blank';
 
