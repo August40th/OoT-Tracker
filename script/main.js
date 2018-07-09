@@ -637,7 +637,7 @@ function itemConfigClick (sender) {
             var r,c;
             var found = false;
             for (r = 0; r < 8; r++) {
-                for (c = 0; c < 9; c++) {
+                for (c = 0; c < 6; c++) {
                     if (itemLayout[r][c] == item) {
                         itemLayout[r][c] = 'blank';
                         updateGridItem(r, c);
