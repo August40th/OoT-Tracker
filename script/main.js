@@ -1,5 +1,5 @@
 var medallions = [];
-var dungeonImg = ['Unknown', 'Ocarina0', 'Slingshot0', 'Bombs0', 'Boomerang', 'Bow0', 'Hammer', 'Hookshot0', 'HoverBoots', 'MirrorShield']
+var dungeonImg = ['Unknown', 'Ocarina1', 'Slingshot0', 'Bombs0', 'Boomerang', 'Bow0', 'Hammer', 'Hookshot0', 'MirrorShield', 'HoverBoots']
 ganonlogic = 'Open';
 showprizes = false;
 
@@ -39,7 +39,7 @@ var cookieDefault = {
     map:1,
     iZoom:100,
     mZoom:100,
-    mPos:0,
+    mPos:50,
     glogic:'Open',
     prize:1,
     items:defaultItemGrid
@@ -225,11 +225,11 @@ function showSettings(sender) {
     if (editmode) {
         var r, c;
         var startdraw = false;
-        for (r = 9; r >= 0 && !startdraw; r--) {
+        for (r = 7; r >= 0 && !startdraw; r--) {
             if (!itemLayout[r] || !itemLayout[r].length) {
                 itemGrid[r]['row'].style.display = 'none';
             } else {
-                for (c = 0; c < 8; c++) {
+                for (c = 0; c < 6; c++) {
                     if (!!itemLayout[r][c] && itemLayout[r][c] != 'blank') {
                         startdraw = true;
                         r++;
@@ -254,7 +254,7 @@ function showSettings(sender) {
         showTracker('mapdiv', document.getElementsByName('showmap')[0]);
         document.getElementById('itemconfig').style.display = 'none';
 
-        sender.innerHTML = 'üîß';
+        sender.innerHTML = '🔧';
         saveCookie();
     } else {
         var x = document.getElementById("settings");
@@ -263,7 +263,7 @@ function showSettings(sender) {
             sender.innerHTML = 'X';
         } else {
             x.style.display = 'none';		
-            sender.innerHTML = 'üîß';
+            sender.innerHTML = '🔧';
         } 
     }
 }
@@ -332,7 +332,7 @@ function createItemTracker(sender) {
         tr.appendChild(itemGrid[r]['half']);
 
         var i;
-        for (i = 0; i < 7; i++) {	
+        for (i = 0; i < 9; i++) {	
             itemGrid[r][i] = [];
             itemLayout[r][i] = 'blank';
 
@@ -425,7 +425,7 @@ function updateGridItem(row, index) {
 
 function updateGridItemAll() {
     for (r = 0; r < 8; r++) {
-        for (c = 0; c < 9; c++) {
+        for (c = 0; c < 7; c++) {
             updateGridItem(r, c);
         }
     }
@@ -459,7 +459,7 @@ function initGridRow(itemsets) {
             itemGrid[r]['row'].style.display = 'none';
             itemGrid[r]['half'].style.display = 'none';
         } else {
-            for (c = 0; c < 8; c++) {
+            for (c = 0; c < 6; c++) {
                 if (!!itemsets[r][c] && itemsets[r][c] != 'blank') {
                     startdraw = true;
                     r++;
@@ -485,7 +485,7 @@ function initGridRow(itemsets) {
         }
         itemGrid[r]['button'].style.display = 'none';
 
-        for (c = 0; c < 7; c++) {
+        for (c = 0; c < 10; c++) {
             if (itemsets[r][c]) {
                 setGridItem(itemsets[r][c], r, c);
             } 
@@ -510,7 +510,7 @@ function gridItemClick(row, col, corner) {
                 var r,c;
                 var found = false;
                 for (r = 0; r < 8; r++) {
-                    for (c = 0; c < 9; c++) {
+                    for (c = 0; c < 7; c++) {
                         if (itemLayout[r][c] == selected.item) {
                             itemLayout[r][c] = 'blank';
                             found = true;
@@ -551,7 +551,7 @@ function gridItemClick(row, col, corner) {
     if(medallions[item] !== undefined && showprizes){
         if (corner == 3) {
             medallions[item]++;
-            if (medallions[item] >=  9)
+            if (medallions[item] >=  10)
                 medallions[item] = 0;
         } 
         else {
@@ -637,7 +637,7 @@ function itemConfigClick (sender) {
             var r,c;
             var found = false;
             for (r = 0; r < 8; r++) {
-                for (c = 0; c < 7; c++) {
+                for (c = 0; c < 6; c++) {
                     if (itemLayout[r][c] == item) {
                         itemLayout[r][c] = 'blank';
                         updateGridItem(r, c);
