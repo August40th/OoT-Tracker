@@ -138,6 +138,7 @@ var items = {
     SpiritMedallion:false,
     ShadowMedallion:false,
     LightMedallion:false,
+    Rauru:false,
 
     blank: false
 };
