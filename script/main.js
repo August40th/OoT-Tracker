@@ -1,5 +1,5 @@
 var medallions = [];
-var dungeonImg = ['Unknown', 'Rauru', 'Slingshot0', 'Bombs0', 'Boomerang', 'Bow0', 'Hammer', 'Hookshot0', 'MirrorShield', 'HoverBoots']
+var dungeonImg = ['Rauru', 'Slingshot0', 'Bombs0', 'Boomerang', 'Bow0', 'Hammer', 'Hookshot0', 'MirrorShield', 'HoverBoots']
 ganonlogic = 'Open';
 showprizes = false;
 
