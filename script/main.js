@@ -292,7 +292,7 @@ function clickRowButton(row) {
         document.getElementById(itemLayout[row][6]).style.opacity = 1;
         itemLayout[row].splice(-1, 1);
     }
-    updateGridItem(row, 8);
+    updateGridItem(row, 6);
 }
 
 
