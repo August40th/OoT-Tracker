@@ -70,7 +70,7 @@ var defaultItemGrid = [
     ],
     [
         "Mask",
-        "Boomerang
+        "Boomerang",
         "Bombchu",
         "blank",
         "Nayrus",
