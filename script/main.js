@@ -289,7 +289,7 @@ function clickRowButton(row) {
         itemGrid[row]['button'].style.backgroundColor = 'green';
         itemGrid[row][8]['item'].style.display = 'none';
         itemGrid[row]['half'].style.display = '';	
-        document.getElementById(itemLayout[row][6]).style.opacity = 1;
+        document.getElementById(itemLayout[row][8]).style.opacity = 1;
         itemLayout[row].splice(-1, 1);
     }
     updateGridItem(row, 8);
