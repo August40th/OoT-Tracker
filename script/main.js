@@ -229,7 +229,7 @@ function showSettings(sender) {
             if (!itemLayout[r] || !itemLayout[r].length) {
                 itemGrid[r]['row'].style.display = 'none';
             } else {
-                for (c = 0; c < 10; c++) {
+                for (c = 0; c < 8; c++) {
                     if (!!itemLayout[r][c] && itemLayout[r][c] != 'blank') {
                         startdraw = true;
                         r++;
@@ -459,7 +459,7 @@ function initGridRow(itemsets) {
             itemGrid[r]['row'].style.display = 'none';
             itemGrid[r]['half'].style.display = 'none';
         } else {
-            for (c = 0; c < 10; c++) {
+            for (c = 0; c < 8; c++) {
                 if (!!itemsets[r][c] && itemsets[r][c] != 'blank') {
                     startdraw = true;
                     r++;
