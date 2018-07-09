@@ -459,7 +459,7 @@ function initGridRow(itemsets) {
             itemGrid[r]['row'].style.display = 'none';
             itemGrid[r]['half'].style.display = 'none';
         } else {
-            for (c = 0; c < 8; c++) {
+            for (c = 0; c < 6; c++) {
                 if (!!itemsets[r][c] && itemsets[r][c] != 'blank') {
                     startdraw = true;
                     r++;
