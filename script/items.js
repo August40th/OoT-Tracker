@@ -98,6 +98,7 @@ var items = {
     MasterSword:true,
     KokiriBoots:true,
     KokiriTunic:true,
+    Rauru:true,
 
     KokiriSword:false,
     BiggoronSword:false,
