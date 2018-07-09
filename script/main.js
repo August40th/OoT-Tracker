@@ -459,7 +459,7 @@ function initGridRow(itemsets) {
             itemGrid[r]['row'].style.display = 'none';
             itemGrid[r]['half'].style.display = 'none';
         } else {
-            for (c = 0; c < 6; c++) {
+            for (c = 0; c < 8; c++) {
                 if (!!itemsets[r][c] && itemsets[r][c] != 'blank') {
                     startdraw = true;
                     r++;
@@ -479,7 +479,7 @@ function initGridRow(itemsets) {
 
         if (itemsets[r].length % 2 != 0) {
             itemGrid[r]['half'].style.display = 'none';
-            itemGrid[r][6]['item'].style.display = '';
+            itemGrid[r][8]['item'].style.display = '';
         } else {
             clickRowButton(r);
         }
@@ -637,7 +637,7 @@ function itemConfigClick (sender) {
             var r,c;
             var found = false;
             for (r = 0; r < 8; r++) {
-                for (c = 0; c < 6; c++) {
+                for (c = 0; c < 8; c++) {
                     if (itemLayout[r][c] == item) {
                         itemLayout[r][c] = 'blank';
                         updateGridItem(r, c);
