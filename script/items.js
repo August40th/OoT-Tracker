@@ -52,7 +52,7 @@ var defaultItemGrid = [
     [
         "SongofStorms",
         "Stick"
-        "Nuts
+        "Nuts",
         "Lens",
         "Dins",
         "Fire",
