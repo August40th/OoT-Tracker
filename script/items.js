@@ -5,7 +5,9 @@ var defaultItemGrid = [
         "Hammer",
         "Bombs",
         "Scale",
-        "Glove"
+        "Glove",
+        "Stick",
+        "KokiriTunic"
     ],
     [
         "KokiriSword",
