@@ -88,6 +88,16 @@ var items = {
     Bottle:0,
     Wallet:0,
     Skulltula:0,
+    Sticks:0,
+    Nuts:0,
+    Bombchu:false,
+    Mask:0,
+    Trade:0,
+    DekuShield:false,
+    HylianShield:false,
+    MasterSword:true,
+    KokoriBoots:true,
+    KokoriTunic:true,
 
     KokiriSword:false,
     BiggoronSword:false,
@@ -140,6 +150,10 @@ var itemsMin = {
     Magic:0,
     Wallet:0,
     Skulltula:0,
+    Sticks:0,
+    Nuts:0,
+    Mask:0,
+    Trade:0,
 };
 
 var itemsMax = {
@@ -154,4 +168,8 @@ var itemsMax = {
     Magic:2,
     Wallet:2,
     Skulltula:5,
+    Sticks:3,
+    Nuts:3,
+    Mask:6,
+    Trade:10,
 };
