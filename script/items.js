@@ -1,50 +1,40 @@
 var defaultItemGrid = [
     [
-        "KokiriSword",
-        "MasterSword",
-        "BiggoronSword",
-        "StoneofAgony",
-        "Stick",
-        "Nuts",
-        "Bow"
-    ],
-    [
-        "DekuShield",
-        "HylianShield",
-        "MirrorShield",
-        "Wallet",
-        "Slingshot",
-        "Bombs",
+        "Bow",
         "Hookshot",
-        "Ice",
-        "Farores"
-    ],
-    [
-        "KokiriTunic",
-        "GoronTunic",
-        "ZoraTunic",
-        "Glove",
-        "Boomerang",
-        "Bombchu",
         "Hammer",
-        "Light",
-        "Nayrus"
-    ],
-    [
-        "KokiriBoots",
-        "IronBoots",
-        "HoverBoots",
+        "Bombs",
         "Scale",
-        "ZoraLetter",
-        "Bottle",
-        "blank",
-        "Lens",
-        "Magic"
+        "Glove"
     ],
     [
-        "blank",
-        "LightMedallion",
-        "blank",
+        "KokiriSword",
+        "BiggoronSword",
+        "MirrorShield",
+        "ZoraTunic",
+        "GoronTunic",
+        "IronBoots",
+        "HoverBoots"
+    ],
+    [
+        "Dins",
+        "Farores",
+        "Nayrus",
+        "Magic",
+        "Fire",
+        "Ice",
+        "Light"
+    ],
+    [
+        "Slingshot",
+        "Boomerang",
+        "Lens",
+        "Bottle",
+        "ZoraLetter",
+        "Wallet",
+        "Skulltula"
+    ],
+    [
         "ZeldasLullaby",
         "EponasSong",
         "SunsSong",
@@ -53,9 +43,6 @@ var defaultItemGrid = [
         "SongofStorms"
     ],
     [
-        "ShadowMedallion",
-        "blank"
-        "ForestMedallion
         "MinuetofForest",
         "BoleroofFire",
         "SerenadeofWater",
@@ -64,28 +51,23 @@ var defaultItemGrid = [
         "PreludeofLight"
     ],
     [
-        "SpiritMedallion",
+        "ForestMedallion",
         "FireMedallion",
-        "blank",
-        "blank",
-        "blank",
-        "blank",
-        "Mask",
-        "Scarecrow"
+        "WaterMedallion",
+        "ShadowMedallion",
+        "SpiritMedallion",
+        "LightMedallion"
     ],
     [
         "blank",
-        "WaterMedallion
         "blank",
         "KokiriEmerald",
         "GoronRuby",
         "ZoraSapphire",
         "blank",
-        "Trade",
-        "Skulltula"
+        "blank"
     ]
 ]
-
 
 var items = {
     Bow:0,
