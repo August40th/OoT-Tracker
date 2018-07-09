@@ -229,7 +229,7 @@ function showSettings(sender) {
             if (!itemLayout[r] || !itemLayout[r].length) {
                 itemGrid[r]['row'].style.display = 'none';
             } else {
-                for (c = 0; c < 8; c++) {
+                for (c = 0; c < 10; c++) {
                     if (!!itemLayout[r][c] && itemLayout[r][c] != 'blank') {
                         startdraw = true;
                         r++;
@@ -425,7 +425,7 @@ function updateGridItem(row, index) {
 
 function updateGridItemAll() {
     for (r = 0; r < 8; r++) {
-        for (c = 0; c < 7; c++) {
+        for (c = 0; c < 9; c++) {
             updateGridItem(r, c);
         }
     }
@@ -459,7 +459,7 @@ function initGridRow(itemsets) {
             itemGrid[r]['row'].style.display = 'none';
             itemGrid[r]['half'].style.display = 'none';
         } else {
-            for (c = 0; c < 8; c++) {
+            for (c = 0; c < 10; c++) {
                 if (!!itemsets[r][c] && itemsets[r][c] != 'blank') {
                     startdraw = true;
                     r++;
@@ -485,7 +485,7 @@ function initGridRow(itemsets) {
         }
         itemGrid[r]['button'].style.display = 'none';
 
-        for (c = 0; c < 7; c++) {
+        for (c = 0; c < 9; c++) {
             if (itemsets[r][c]) {
                 setGridItem(itemsets[r][c], r, c);
             } 
@@ -510,7 +510,7 @@ function gridItemClick(row, col, corner) {
                 var r,c;
                 var found = false;
                 for (r = 0; r < 8; r++) {
-                    for (c = 0; c < 7; c++) {
+                    for (c = 0; c < 9; c++) {
                         if (itemLayout[r][c] == selected.item) {
                             itemLayout[r][c] = 'blank';
                             found = true;
@@ -637,7 +637,7 @@ function itemConfigClick (sender) {
             var r,c;
             var found = false;
             for (r = 0; r < 8; r++) {
-                for (c = 0; c < 7; c++) {
+                for (c = 0; c < 9; c++) {
                     if (itemLayout[r][c] == item) {
                         itemLayout[r][c] = 'blank';
                         updateGridItem(r, c);
