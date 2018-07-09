@@ -5,7 +5,6 @@ var defaultItemGrid = [
         "StoneofAgony",
         "LightMedallion",
         "Skulltula",
-        "MasterSword",
         "BiggoronSword",
         "MinuetofForest"
     ],
@@ -15,13 +14,11 @@ var defaultItemGrid = [
         "ShadowMedallion",
         "blank",
         "ForestMedallion",
-	"HylianShield",
         "MirrorShield",
         "BoleroofFire"
     ],
     [
         "SariasSong",
-	"KokiriTunic",
         "SpiritMedallion",
         "Wallet",
         "FireMedallion",
@@ -31,7 +28,6 @@ var defaultItemGrid = [
     ],
     [
         "SunSong",
-	"KokiriBoots",
         "ZorasLetter",
         "WaterMedallion",
         "Bottle",
@@ -41,7 +37,6 @@ var defaultItemGrid = [
     ],
     [
         "SongofTime",
-        "Ocarina",
         "KokiriEmerald",
         "GoronRuby",
         "ZoraSaphire",
@@ -52,7 +47,6 @@ var defaultItemGrid = [
     [
         "SongofStorms",
         "Stick"
-        "Nuts
         "Lens",
         "Dins",
         "Fire",
@@ -60,7 +54,6 @@ var defaultItemGrid = [
         "PreludeofLight"
     ],
     [
-        "Scarecrow",
         "Slingshot",
         "Bombs",
         "Magic",
@@ -72,7 +65,6 @@ var defaultItemGrid = [
         "Mask",
         "Boomerang
         "Bombchu",
-        "blank",
         "Nayrus",
         "Light",
         "Hammer",
