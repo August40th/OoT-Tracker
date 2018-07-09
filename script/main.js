@@ -479,7 +479,7 @@ function initGridRow(itemsets) {
 
         if (itemsets[r].length % 2 != 0) {
             itemGrid[r]['half'].style.display = 'none';
-            itemGrid[r][8]['item'].style.display = '';
+            itemGrid[r][6]['item'].style.display = '';
         } else {
             clickRowButton(r);
         }
