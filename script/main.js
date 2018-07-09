@@ -229,7 +229,7 @@ function showSettings(sender) {
             if (!itemLayout[r] || !itemLayout[r].length) {
                 itemGrid[r]['row'].style.display = 'none';
             } else {
-                for (c = 0; c < 8; c++) {
+                for (c = 0; c < 6; c++) {
                     if (!!itemLayout[r][c] && itemLayout[r][c] != 'blank') {
                         startdraw = true;
                         r++;
