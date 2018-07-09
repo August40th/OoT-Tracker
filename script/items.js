@@ -40,7 +40,8 @@ var defaultItemGrid = [
         "SunsSong",
         "SariasSong",
         "SongofTime",
-        "SongofStorms"
+        "SongofStorms",
+        "Ocarina"
     ],
     [
         "MinuetofForest",
@@ -48,7 +49,8 @@ var defaultItemGrid = [
         "SerenadeofWater",
         "NocturneofShadow",
         "RequiemofSpirit",
-        "PreludeofLight"
+        "PreludeofLight",
+        "Scarecrow"
     ],
     [
         "ForestMedallion",
@@ -59,13 +61,13 @@ var defaultItemGrid = [
         "LightMedallion"
     ],
     [
-        "blank",
+        "Mask",
         "blank",
         "KokiriEmerald",
         "GoronRuby",
         "ZoraSapphire",
         "blank",
-        "blank"
+        "Trade"
     ]
 ]
 
