@@ -3,7 +3,7 @@ var dungeonImg = ['Unknown', 'Slingshot0', 'Bombs0', 'Boomerang', 'Bow0', 'Hamme
 ganonlogic = 'Open';
 showprizes = false;
 
-var itemGrid = [7];
+var itemGrid = [];
 var itemLayout = [];
 
 var editmode = false;
@@ -281,18 +281,18 @@ function clickRowButton(row) {
     if (itemLayout[row].length % 2 == 0) {
         itemGrid[row]['button'].innerHTML = '-';
         itemGrid[row]['button'].style.backgroundColor = 'red';
-        itemGrid[row][6]['item'].style.display = '';
+        itemGrid[row][8]['item'].style.display = '';
         itemGrid[row]['half'].style.display = 'none';	
-        itemLayout[row][6] = 'blank';
+        itemLayout[row][8] = 'blank';
     } else {
         itemGrid[row]['button'].innerHTML = '+';
         itemGrid[row]['button'].style.backgroundColor = 'green';
-        itemGrid[row][6]['item'].style.display = 'none';
+        itemGrid[row][8]['item'].style.display = 'none';
         itemGrid[row]['half'].style.display = '';	
-        document.getElementById(itemLayout[row][6]).style.opacity = 1;
+        document.getElementById(itemLayout[row][8]).style.opacity = 1;
         itemLayout[row].splice(-1, 1);
     }
-    updateGridItem(row, 6);
+    updateGridItem(row, 8);
 }
 
 
@@ -479,7 +479,7 @@ function initGridRow(itemsets) {
 
         if (itemsets[r].length % 2 != 0) {
             itemGrid[r]['half'].style.display = 'none';
-            itemGrid[r][6]['item'].style.display = '';
+            itemGrid[r][8]['item'].style.display = '';
         } else {
             clickRowButton(r);
         }
