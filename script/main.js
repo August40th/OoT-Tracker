@@ -1,5 +1,5 @@
 var medallions = [];
-var dungeonImg = ['Unknown', 'Slingshot0', 'Bombs0', 'Boomerang', 'Bow0', 'Hammer', 'Hookshot0', 'MirrorShield', 'HoverBoots']
+var dungeonImg = ['Unknown', 'Rauru', 'Slingshot0', 'Bombs0', 'Boomerang', 'Bow0', 'Hammer', 'Hookshot0', 'MirrorShield', 'HoverBoots']
 ganonlogic = 'Open';
 showprizes = false;
 
@@ -551,7 +551,7 @@ function gridItemClick(row, col, corner) {
     if(medallions[item] !== undefined && showprizes){
         if (corner == 3) {
             medallions[item]++;
-            if (medallions[item] >=  9)
+            if (medallions[item] >=  10)
                 medallions[item] = 0;
         } 
         else {
