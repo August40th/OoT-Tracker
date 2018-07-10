@@ -551,7 +551,7 @@ function gridItemClick(row, col, corner) {
     if(medallions[item] !== undefined && showprizes){
         if (corner == 3) {
             medallions[item]++;
-            if (medallions[item] >=  10)
+            if (medallions[item] >=  11)
                 medallions[item] = 0;
         } 
         else {
