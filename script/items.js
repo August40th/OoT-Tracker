@@ -96,6 +96,7 @@ var items = {
     Mask:0,
     Trade:0,
     Bean:false,
+    Heart:false,
 
     KokiriSword:false,
     MasterSword:true,
@@ -173,7 +174,7 @@ var itemsMax = {
     Scale:2,
     Magic:2,
     Wallet:2,
-    Skulltula:5,
+    Skulltula:6,
     Stick:3,
     Nuts:3,
     Mask:7,
