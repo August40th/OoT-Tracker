@@ -174,7 +174,7 @@ var itemsMax = {
     Scale:2,
     Magic:2,
     Wallet:2,
-    Skulltula:6,
+    Skulltula:50,
     Stick:3,
     Nuts:3,
     Mask:7,
