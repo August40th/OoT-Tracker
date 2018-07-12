@@ -459,7 +459,7 @@ function initGridRow(itemsets) {
         KokiriEmerald: 0,
         GoronRuby: 0,
         ZoraSapphire: 0,
-    }
+    };
     keys = {
         ForestKey: 0,
         FireKey: 0,
@@ -469,8 +469,7 @@ function initGridRow(itemsets) {
         CastleKey: 0,
         GTGKey: 0,
         WellKey: 0,
-    }
-};
+    };
 
     var r, c;
     var startdraw = false;
