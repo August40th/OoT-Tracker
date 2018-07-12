@@ -57,17 +57,19 @@ var defaultItemGrid = [
         "Dins",
         "Fire",
         "Bow",
-        "PreludeofLight"
+        "PreludeofLight",
+        "CastleKey0"
     ],
     [
-        "Scarecrow",
+        "WellKey0",
         "Slingshot",
         "Bombs",
         "Magic",
         "Farores",
         "Ice",
         "Hookshot",
-        "Scarecrow"
+        "Scarecrow",
+        "GTGKey0"
     ],
     [
         "Bean",
