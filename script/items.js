@@ -143,13 +143,12 @@ var items = {
     
     ForestKey:0,
     FireKey:0,
-    WaterKey:0,
+    WaterKey:false,
     SpiritKey:0,
     ShadowKey:0,
     CastleKey:0,
     WellKey:0,
     GTGKey:0,
-    BossKey:0,
 
     blank: false
 };
@@ -174,13 +173,11 @@ var itemsMin = {
     
     ForestKey:0,
     FireKey:0,
-    WaterKey:0,
     SpiritKey:0,
     ShadowKey:0,
     CastleKey:0,
     WellKey:0,
     GTGKey:0,
-    BossKey:0,
 };
 
 var itemsMax = {
@@ -203,11 +200,9 @@ var itemsMax = {
     
     ForestKey:5,
     FireKey:8,
-    WaterKey:0,
     SpiritKey:3,
     ShadowKey:6,
     CastleKey:2,
     WellKey:3,
     GTGKey:9,
-    BossKey:1,
 };
