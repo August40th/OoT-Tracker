@@ -1,75 +1,71 @@
 var defaultItemGrid = [
     [
-        "ZeldasLullaby",
+        "Bow",
+        "Hookshot",
+        "Hammer",
+        "Bombs",
+        "Scale",
+        "Glove"
+    ],
+    [
         "KokiriSword",
-        "Mask",
-        "LightMedallion",
-        "Trade",
-        "MasterSword",
         "BiggoronSword",
-    ],
-    [
-	    "EponasSong",
-        "DekuShield",
-        "ShadowMedallion",
-        "Heart",
-        "ForestMedallion",
-	    "HylianShield",
         "MirrorShield",
-    ],
-    [
-        "SariasSong",
-    	"KokiriTunic",
-        "SpiritMedallion",
-        "Wallet",
-        "FireMedallion",
-        "GoronTunic",
         "ZoraTunic",
-    ],
-    [
-        "SunSong",
-	    "KokiriBoots",
-        "ZorasLetter",
-        "WaterMedallion",
-        "Bottle",
+        "GoronTunic",
         "IronBoots",
-        "HoverBoots",
+        "HoverBoots"
     ],
     [
+        "Dins",
+        "Farores",
+        "Nayrus",
+        "Magic",
+        "Fire",
+        "Ice",
+        "Light"
+    ],
+    [
+        "Slingshot",
+        "Boomerang",
+        "Lens",
+        "Bottle",
+        "ZoraLetter",
+        "Wallet",
+        "Skulltula"
+    ],
+    [
+        "ZeldasLullaby",
+        "EponasSong",
+        "SunsSong",
+        "SariasSong",
         "SongofTime",
-        "Ocarina",
+        "SongofStorms"
+    ],
+    [
+        "MinuetofForest",
+        "BoleroofFire",
+        "SerenadeofWater",
+        "NocturneofShadow",
+        "RequiemofSpirit",
+        "PreludeofLight"
+    ],
+    [
+        "ForestMedallion",
+        "FireMedallion",
+        "WaterMedallion",
+        "ShadowMedallion",
+        "SpiritMedallion",
+        "LightMedallion"
+    ],
+    [
+        "Mask",
+        "Trade",
         "KokiriEmerald",
         "GoronRuby",
-        "ZoraSaphire",
-        "Scale",
-        "Glove",
-    ],
-    [
-        "SongofStorms",
-        "Stick"
-        "Nuts
-        "Lens",
-        "Dins",
-        "Fire",
-        "Bow",
-    ],
-    [
-        "Scarecrow",
-        "Slingshot",
-        "Bombs",
-        "Magic",
-        "Farores",
-        "Ice",
-        "Hookshot"
-    ],
-    [
-        "Bean",
-        "Boomerang
-        "Bombchu",
-        "StoneofAgony",
-        "Nayrus",
-        "Light",
-        "Hammer",
+        "ZoraSapphire",
+        "blank",
+        "Skulltula"
     ]
 ]
 
