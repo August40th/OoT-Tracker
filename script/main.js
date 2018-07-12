@@ -1,7 +1,7 @@
 var medallions = [];
 var dungeonImg = ['Unknown', 'Rauru', 'Slingshot0', 'Bombs0', 'Boomerang', 'Bow0', 'Hammer', 'Hookshot0', 'MirrorShield', 'HoverBoots']
 var keys = [];
-var bosskey = ['BossKey0', 'BossKey1'];
+var bosskey = ['Unknown', 'BossKey1'];
 
 ganonlogic = 'Open';
 showprizes = false;
@@ -469,7 +469,8 @@ function initGridRow(itemsets) {
         CastleKey: 0,
         GTGKey: 0,
         WellKey: 0,
-    };
+    }
+};
 
     var r, c;
     var startdraw = false;
@@ -578,9 +579,9 @@ function gridItemClick(row, col, corner) {
         }
     }
     else if(keys[item] !== undefined && showprizes){
-        if (corner == 2) {
+        if (corner == 3) {
             keys[item]++;
-            if (keys[item] >=  10)
+            if (keys[item] >=  2)
                 keys[item] = 0;
         } 
         else {
@@ -854,13 +855,13 @@ function preloader() {
         }
     }
 
-    for (medallion in dungeonImg) {
+    for (medallions in dungeonImg) {
         var img = new Image();
-        img.src = "images/" + dungeonImg[medallion] + ".png";
+        img.src = "images/" + dungeonImg[medallions] + ".png";
     }
-    for (key in bosskey) {
+    for (keys in bosskey) {
         var img = new Image();
-        img.src = "images/" + bosskey[key] + ".png";
+        img.src = "images/" + bosskey[keys] + ".png";
     }
 }
 function addLoadEvent(func) {
