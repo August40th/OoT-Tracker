@@ -143,7 +143,7 @@ var items = {
     
     ForestKey:0,
     FireKey:0,
-    WaterKey:false,
+    WaterKey0:false,
     SpiritKey:0,
     ShadowKey:0,
     CastleKey:0,
