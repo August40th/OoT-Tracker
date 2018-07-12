@@ -5,7 +5,9 @@ var defaultItemGrid = [
         "Mask",
         "LightMedallion",
         "Trade",
-        "MasterSword"
+        "MasterSword",
+        "BiggoronSword",
+        "MinuetofForest"
     ],
     [
         "KokiriSword",
