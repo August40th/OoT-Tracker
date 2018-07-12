@@ -149,6 +149,15 @@ var items = {
     ShadowMedallion:false,
     LightMedallion:false,
     Rauru:false,
+    
+    ForestKey:false,
+    FireKey:false,
+    WaterKey:false,
+    SpiritKey:false,
+    ShadowKey:false,
+    CastleKey:false,
+    GTGKey:false,
+    WellKey:false,
 
     blank: false
 };
