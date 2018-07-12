@@ -1,74 +1,83 @@
 var defaultItemGrid = [
     [
-        "Bow",
-        "Hookshot",
-        "Hammer",
-        "Bombs",
+        "ZeldasLullaby",
+        "KokiriSword",
+        "Mask",
+        "LightMedallion",
+        "Trade",
+        "MasterSword",
+        "BiggoronSword",
+        "MinuetofForest"
+    ],
+    [
+	    "EponasSong",
+        "DekuShield",
+        "ShadowMedallion",
+        "Heart",
+        "ForestMedallion",
+	    "HylianShield",
+        "MirrorShield",
+        "BoleroofFire"
+    ],
+    [
+        "SariasSong",
+    	"KokiriTunic",
+        "SpiritMedallion",
+        "Wallet",
+        "FireMedallion",
+        "GoronTunic",
+        "ZoraTunic",
+        "SerenadeoWater"
+    ],
+    [
+        "SunSong",
+	    "KokiriBoots",
+        "ZorasLetter",
+        "WaterMedallion",
+        "Bottle",
+        "IronBoots",
+        "HoverBoots",
+        "RequiemofSpirit"
+    ],
+    [
+        "SongofTime",
+        "Ocarina",
+        "KokiriEmerald",
+        "GoronRuby",
+        "ZoraSaphire",
         "Scale",
         "Glove",
-        "Nuts"
+        "NocturneofShadow"
     ],
     [
-        "KokiriSword",
-        "BiggoronSword",
-        "MirrorShield",
-        "ZoraTunic",
-        "GoronTunic",
-        "IronBoots",
-        "HoverBoots"
-    ],
-    [
-        "Dins",
-        "Farores",
-        "Nayrus",
-        "Magic",
-        "Fire",
-        "Ice",
-        "Light"
-    ],
-    [
-        "Slingshot",
-        "Boomerang",
-        "Lens",
-        "Bottle",
-        "ZoraLetter",
-        "Wallet",
-        "Skulltula"
-    ],
-    [
-        "ZeldasLullaby",
-        "EponasSong",
-        "SunsSong",
-        "SariasSong",
-        "SongofTime",
         "SongofStorms",
-        "Ocarina"
+        "Stick"
+        "Nuts
+        "Lens",
+        "Dins",
+        "Fire",
+        "Bow",
+        "PreludeofLight"
     ],
     [
-        "MinuetofForest",
-        "BoleroofFire",
-        "SerenadeofWater",
-        "NocturneofShadow",
-        "RequiemofSpirit",
-        "PreludeofLight",
+        "Scarecrow",
+        "Slingshot",
+        "Bombs",
+        "Magic",
+        "Farores",
+        "Ice",
+        "Hookshot"
         "Scarecrow"
     ],
     [
-        "ForestMedallion",
-        "FireMedallion",
-        "WaterMedallion",
-        "ShadowMedallion",
-        "SpiritMedallion",
-        "LightMedallion"
-    ],
-    [
-        "Mask",
-        "blank",
-        "KokiriEmerald",
-        "GoronRuby",
-        "ZoraSapphire",
-        "blank",
-        "Trade"
+        "Bean",
+        "Boomerang
+        "Bombchu",
+        "StoneofAgony",
+        "Nayrus",
+        "Light",
+        "Hammer",
+        "Skulltula"
     ]
 ]
 
