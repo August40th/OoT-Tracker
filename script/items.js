@@ -10,13 +10,14 @@ var defaultItemGrid = [
         "MinuetofForest"
     ],
     [
-        "KokiriSword",
-        "BiggoronSword",
+        "EponasSong",
+        "DekuShield",
+        "ShadowMedallion",
+        "Heart",
+        "ForestMedallion",
+        "HylianShield",
         "MirrorShield",
-        "ZoraTunic",
-        "GoronTunic",
-        "IronBoots",
-        "HoverBoots"
+        "BoleroofFire"
     ],
     [
         "Dins",
