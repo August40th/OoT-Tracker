@@ -854,13 +854,13 @@ function preloader() {
         }
     }
 
-    for (medallions in dungeonImg) {
+    for (medallion in dungeonImg) {
         var img = new Image();
-        img.src = "images/" + dungeonImg[medallions] + ".png";
+        img.src = "images/" + dungeonImg[medallion] + ".png";
     }
-    for (keys in bosskey) {
+    for (key in bosskey) {
         var img = new Image();
-        img.src = "images/" + bosskey[keys] + ".png";
+        img.src = "images/" + bosskey[key] + ".png";
     }
 }
 function addLoadEvent(func) {
