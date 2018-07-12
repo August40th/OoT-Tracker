@@ -858,10 +858,6 @@ function preloader() {
         var img = new Image();
         img.src = "images/" + dungeonImg[medallion] + ".png";
     }
-    for (key in bosskey) {
-        var img = new Image();
-        img.src = "images/" + bosskey[key] + ".png";
-    }
 }
 function addLoadEvent(func) {
     var oldonload = window.onload;
