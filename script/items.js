@@ -7,7 +7,6 @@ var defaultItemGrid = [
         "Trade",
         "MasterSword",
         "BiggoronSword",
-        "MinuetofForest"
     ],
     [
 	    "EponasSong",
@@ -17,7 +16,6 @@ var defaultItemGrid = [
         "ForestMedallion",
 	    "HylianShield",
         "MirrorShield",
-        "BoleroofFire"
     ],
     [
         "SariasSong",
@@ -27,7 +25,6 @@ var defaultItemGrid = [
         "FireMedallion",
         "GoronTunic",
         "ZoraTunic",
-        "SerenadeoWater"
     ],
     [
         "SunSong",
@@ -37,7 +34,6 @@ var defaultItemGrid = [
         "Bottle",
         "IronBoots",
         "HoverBoots",
-        "RequiemofSpirit"
     ],
     [
         "SongofTime",
@@ -47,7 +43,6 @@ var defaultItemGrid = [
         "ZoraSaphire",
         "Scale",
         "Glove",
-        "NocturneofShadow"
     ],
     [
         "SongofStorms",
@@ -57,7 +52,6 @@ var defaultItemGrid = [
         "Dins",
         "Fire",
         "Bow",
-        "PreludeofLight"
     ],
     [
         "Scarecrow",
@@ -67,7 +61,6 @@ var defaultItemGrid = [
         "Farores",
         "Ice",
         "Hookshot"
-        "Scarecrow"
     ],
     [
         "Bean",
@@ -77,7 +70,6 @@ var defaultItemGrid = [
         "Nayrus",
         "Light",
         "Hammer",
-        "Skulltula"
     ]
 ]
 
