@@ -170,6 +170,15 @@ var itemsMin = {
     Mask:0,
     Trade:0,
     Scarecrow:0,
+    
+    ForestKey:0,
+    FireKey:0,
+    WaterKey:0,
+    SpiritKey:0,
+    ShadowKey:0,
+    CastleKey:0,
+    WellKey:0,
+    GTGKey:0,
 };
 
 var itemsMax = {
@@ -189,4 +198,13 @@ var itemsMax = {
     Mask:7,
     Trade:11,
     Scarecrow:2,
+    
+    ForestKey:5,
+    FireKey:8,
+    WaterKey:0,
+    SpiritKey:3,
+    ShadowKey:6,
+    CastleKey:2,
+    WellKey:3,
+    GTGKey:9,
 };
