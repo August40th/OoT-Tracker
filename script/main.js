@@ -1,7 +1,7 @@
 var medallions = [];
 var dungeonImg = ['Unknown', 'Rauru', 'Slingshot0', 'Bombs0', 'Boomerang', 'Bow0', 'Hammer', 'Hookshot0', 'MirrorShield', 'HoverBoots']
 var keys = [];
-var bosskey = ['Unknown', 'BossKey1'];
+var bosskey = ['Unknown', 'BossKey1']
 
 ganonlogic = 'Open';
 showprizes = false;
