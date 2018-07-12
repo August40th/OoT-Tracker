@@ -615,15 +615,15 @@ var dungeons = [
             ['Nocturne of Shadow']: { isAvailable: function () {
                 return (items.ForestMedallion && items.FireMedallion && items.WaterMedallion); } },
             ['Skulltula House 10']: { isAvailable: function () {
-                return (items.Skulltula >= 1); } },
+                return (items.Skulltula >= 10); } },
             ['Skulltula House 20']: { isAvailable: function () {
-                return (items.Skulltula >= 2); } },
+                return (items.Skulltula >= 20); } },
             ['Skulltula House 30']: { isAvailable: function () {
-                return (items.Skulltula >= 3); } },
+                return (items.Skulltula >= 30); } },
             ['Skulltula House 40']: { isAvailable: function () {
-                return (items.Skulltula >= 4); } },
+                return (items.Skulltula >= 40); } },
             ['Skulltula House 50']: { isAvailable: function () {
-                return (items.Skulltula >= 5); } },
+                return (items.Skulltula >= 50); } },
         },
         isBeatable: function(){
             return this.canGetChest();
