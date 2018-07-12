@@ -30,45 +30,53 @@ var defaultItemGrid = [
         "SerenadeofWater"
     ],
     [
-        "Slingshot",
-        "Boomerang",
-        "Lens",
-        "Bottle",
+        "SunSong",
+        "KokiriBoots",
         "ZoraLetter",
-        "Wallet",
-        "Skulltula"
-    ],
-    [
-        "ZeldasLullaby",
-        "EponasSong",
-        "SunsSong",
-        "SariasSong",
-        "SongofTime",
-        "SongofStorms"
-    ],
-    [
-        "MinuetofForest",
-        "BoleroofFire",
-        "SerenadeofWater",
-        "NocturneofShadow",
-        "RequiemofSpirit",
-        "PreludeofLight"
-    ],
-    [
-        "ForestMedallion",
-        "FireMedallion",
         "WaterMedallion",
-        "ShadowMedallion",
-        "SpiritMedallion",
-        "LightMedallion"
+        "Bottle",
+        "IronBoots",
+        "HoverBoots",
+        "RequiemofSpirit"
     ],
     [
-        "Mask",
-        "Trade",
+        "SongofTime",
+        "Ocarina",
         "KokiriEmerald",
         "GoronRuby",
         "ZoraSapphire",
-        "blank",
+        "Scale",
+        "Gloves",
+        "NocturneofShadow"
+    ],
+    [
+        "SongofStorms",
+        "Stick",
+        "Nuts",
+        "Lens",
+        "Dins",
+        "Fire",
+        "Bow",
+        "PreludeofLight"
+    ],
+    [
+        "Scarecrow",
+        "Slingshot",
+        "Bombs",
+        "Magic",
+        "Farores",
+        "Ice",
+        "Hookshot",
+        "Scarecrow"
+    ],
+    [
+        "Bean",
+        "Boomerang",
+        "Bombchu",
+        "StoneofAgony",
+        "Nayrus",
+        "Light",
+        "Hammer",
         "Skulltula"
     ]
 ]
