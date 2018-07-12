@@ -149,6 +149,7 @@ var items = {
     CastleKey:0,
     WellKey:0,
     GTGKey:0,
+    BossKey:false,
 
     blank: false
 };
