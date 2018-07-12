@@ -1,11 +1,11 @@
 var defaultItemGrid = [
     [
-        "Bow",
-        "Hookshot",
-        "Hammer",
-        "Bombs",
-        "Scale",
-        "Glove"
+        "ZeldasLullaby",
+        "KokiriSword",
+        "Mask",
+        "LightMedallion",
+        "Trade",
+        "MasterSword"
     ],
     [
         "KokiriSword",
