@@ -20,13 +20,14 @@ var defaultItemGrid = [
         "BoleroofFire"
     ],
     [
-        "Dins",
-        "Farores",
-        "Nayrus",
-        "Magic",
-        "Fire",
-        "Ice",
-        "Light"
+        "SariasSong",
+        "KokiriTunic",
+        "SpiritMedallion",
+        "Wallet",
+        "FireMedallion",
+        "GoronTunic",
+        "ZoraTunic",
+        "SerenadeofWater"
     ],
     [
         "Slingshot",
