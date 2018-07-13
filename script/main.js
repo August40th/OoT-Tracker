@@ -425,7 +425,7 @@ function updateGridItem(row, index) {
 
 function updateGridItemAll() {
     for (r = 0; r < 8; r++) {
-        for (c = 0; c < 8; c++) {
+        for (c = 0; c < 7; c++) {
             updateGridItem(r, c);
         }
     }
