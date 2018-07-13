@@ -425,7 +425,7 @@ function updateGridItem(row, index) {
 
 function updateGridItemAll() {
     for (r = 0; r < 8; r++) {
-        for (c = 0; c < 6; c++) {
+        for (c = 0; c < 9; c++) {
             updateGridItem(r, c);
         }
     }
@@ -485,7 +485,7 @@ function initGridRow(itemsets) {
         }
         itemGrid[r]['button'].style.display = 'none';
 
-        for (c = 0; c < 8; c++) {
+        for (c = 0; c < 9; c++) {
             if (itemsets[r][c]) {
                 setGridItem(itemsets[r][c], r, c);
             } 
