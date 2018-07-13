@@ -1,6 +1,6 @@
 var medallions = [];
-var dungeonImg = ['Unknown', 'Rauru', 'Slingshot0', 'Bombs0', 'Boomerang', 'Bow0', 'Hammer', 'Hookshot0', 'MirrorShield', 'HoverBoots']
-ganonlogic = 'Vanilla';
+var dungeonImg = ['Unknown', 'Rauru', 'Slingshot0', 'Bombs0', 'Boomerang', 'Bow0', 'Hammer', 'Hookshot0', 'HoverBoots', 'MirrorShield']
+ganonlogic = 'Open';
 showprizes = false;
 
 var itemGrid = [];
@@ -40,7 +40,7 @@ var cookieDefault = {
     iZoom:100,
     mZoom:100,
     mPos:0,
-    glogic:'Vanilla',
+    glogic:'Open',
     prize:1,
     items:defaultItemGrid
 }
@@ -93,7 +93,7 @@ function saveCookie() {
     cookieobj.iZoom = document.getElementsByName('itemdivsize')[0].value;
     cookieobj.mZoom = document.getElementsByName('mapdivsize')[0].value;
 
-    cookieobj.mPos = document.getElementsByName('mapposition')[0].checked ? 1 : 0;
+    cookieobj.mPos = document.getElementsByName('mapposition')[1].checked ? 1 : 0;
 
     cookieobj.prize = document.getElementsByName('showprizes')[0].checked ? 1 : 0;
 
@@ -225,11 +225,11 @@ function showSettings(sender) {
     if (editmode) {
         var r, c;
         var startdraw = false;
-        for (r = 7; r >= 0 && !startdraw; r--) {
+        for (r = 9; r >= 0 && !startdraw; r--) {
             if (!itemLayout[r] || !itemLayout[r].length) {
                 itemGrid[r]['row'].style.display = 'none';
             } else {
-                for (c = 0; c < 9; c++) {
+                for (c = 0; c < 10; c++) {
                     if (!!itemLayout[r][c] && itemLayout[r][c] != 'blank') {
                         startdraw = true;
                         r++;
@@ -254,7 +254,7 @@ function showSettings(sender) {
         showTracker('mapdiv', document.getElementsByName('showmap')[0]);
         document.getElementById('itemconfig').style.display = 'none';
 
-        sender.innerHTML = '🔧';
+        sender.innerHTML = 'ðŸ”§';
         saveCookie();
     } else {
         var x = document.getElementById("settings");
@@ -263,7 +263,7 @@ function showSettings(sender) {
             sender.innerHTML = 'X';
         } else {
             x.style.display = 'none';		
-            sender.innerHTML = '🔧';
+            sender.innerHTML = 'ðŸ”§';
         } 
     }
 }
@@ -459,7 +459,7 @@ function initGridRow(itemsets) {
             itemGrid[r]['row'].style.display = 'none';
             itemGrid[r]['half'].style.display = 'none';
         } else {
-            for (c = 0; c < 9; c++) {
+            for (c = 0; c < 10; c++) {
                 if (!!itemsets[r][c] && itemsets[r][c] != 'blank') {
                     startdraw = true;
                     r++;
