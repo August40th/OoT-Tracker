@@ -40,7 +40,7 @@ var cookieDefault = {
     iZoom:100,
     mZoom:100,
     mPos:1,
-    glogic:'Open',
+    glogic:'Vanilla',
     prize:1,
     items:defaultItemGrid
 }
@@ -93,7 +93,7 @@ function saveCookie() {
     cookieobj.iZoom = document.getElementsByName('itemdivsize')[0].value;
     cookieobj.mZoom = document.getElementsByName('mapdivsize')[0].value;
 
-    cookieobj.mPos = document.getElementsByName('mapposition')[0].checked ? 1 : 0;
+    cookieobj.mPos = document.getElementsByName('mapposition')[1].checked ? 1 : 0;
 
     cookieobj.prize = document.getElementsByName('showprizes')[0].checked ? 1 : 0;
 
