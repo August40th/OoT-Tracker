@@ -39,7 +39,7 @@ var cookieDefault = {
     map:1,
     iZoom:100,
     mZoom:100,
-    mPos:1,
+    mPos:0,
     glogic:'Vanilla',
     prize:1,
     items:defaultItemGrid
