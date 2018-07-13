@@ -454,12 +454,12 @@ function initGridRow(itemsets) {
 
     var r, c;
     var startdraw = false;
-    for (r = 8; r >= 0 && !startdraw; r--) {
+    for (r = 7; r >= 0 && !startdraw; r--) {
         if (!itemsets[r] || !itemsets[r].length) {
             itemGrid[r]['row'].style.display = 'none';
             itemGrid[r]['half'].style.display = 'none';
         } else {
-            for (c = 0; c < 10; c++) {
+            for (c = 0; c < 9; c++) {
                 if (!!itemsets[r][c] && itemsets[r][c] != 'blank') {
                     startdraw = true;
                     r++;
