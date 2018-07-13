@@ -1,6 +1,6 @@
 var medallions = [];
 var dungeonImg = ['Unknown', 'Rauru', 'Slingshot0', 'Bombs0', 'Boomerang', 'Bow0', 'Hammer', 'Hookshot0', 'MirrorShield', 'HoverBoots']
-ganonlogic = 'Open';
+ganonlogic = 'Vanilla';
 showprizes = false;
 
 var itemGrid = [];
