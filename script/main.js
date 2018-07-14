@@ -1,5 +1,5 @@
 var medallions = [];
-var dungeonImg = ['Unknown', 'Rauru', 'Slingshot0', 'Bombs0', 'Boomerang', 'Bow0', 'Hammer', 'Hookshot1', 'MirrorShield', 'Hoverboots']
+var dungeonImg = ['Unknown', 'Rauru', 'Slingshot0', 'Bombs0', 'Boomerang', 'Bow0', 'Hammer', 'Hookshot1', 'MirrorShield', 'HoverBoots']
 var dungeonkeys = [];
 var bosskey = ['BossKey0', 'BossKey1']
 ganonlogic = 'Open';
@@ -425,9 +425,9 @@ function updateGridItem(row, index) {
     }
     else if (dungeonkeys[item] !== undefined){
         if (showprizes)
-           itemGrid[row][index][2].style.backgroundImage = "url(images/" + bosskey[dungeonkeys[item]] + ".png)";
+           itemGrid[row][index][3].style.backgroundImage = "url(images/" + bosskey[dungeonkeys[item]] + ".png)";
         else
-            itemGrid[row][index][2].style.backgroundImage = "";           
+            itemGrid[row][index][3].style.backgroundImage = "";           
     }
 }
 
@@ -577,7 +577,7 @@ function gridItemClick(row, col, corner) {
         }
     }
     else if(dungeonkeys[item] !== undefined && showprizes){
-        if (corner == 2) {
+        if (corner == 4) {
             dungeonkeys[item]++;
             if (dungeonkeys[item] >=  1)
                 dungeonkeys[item] = 0;
