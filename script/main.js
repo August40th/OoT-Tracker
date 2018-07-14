@@ -460,9 +460,9 @@ function initGridRow(itemsets) {
         ZoraSapphire: 0,
     },
     dungeonkeys = {
-        ForestKey: 0,
-        FireKey: 0,
-        WaterKey: 0,
+        ForestKey0: 0,
+        FireKey0: 0,
+        WaterKey0: 0,
         ShadowKey: 0,
         SpiritKey: 0,
         CastleKey: 0,
