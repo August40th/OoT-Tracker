@@ -425,7 +425,7 @@ function updateGridItem(row, index) {
     }
     else if (dungeonkeys[item] !== undefined){
         if (showprizes)
-           itemGrid[row][index][3].style.backgroundImage = "url(images/" + items[item] + itemsMax[item] + ".png)";
+           itemGrid[row][index][3].style.backgroundImage = "url(images/" + bosskey[dungeonkeys[item]] + itemsMax[item] + ".png)";
         else
             itemGrid[row][index][3].style.backgroundImage = "";           
     }
@@ -466,8 +466,6 @@ function initGridRow(itemsets) {
         ShadowKey: 0,
         SpiritKey: 0,
         CastleKey: 0,
-        GTGKey: 0,
-        WellKey: 0,
     };
 
     var r, c;
