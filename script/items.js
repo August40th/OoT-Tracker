@@ -150,16 +150,16 @@ var items = {
     SpiritMedallion:false,
     ShadowMedallion:false,
     LightMedallion:false,
-    Rauru:false,
+    BigPoe:0,
     
-    ForestKey0:false,
-    FireKey0:false,
-    WaterKey0:false,
-    SpiritKey0:false,
-    ShadowKey0:false,
-    CastleKey0:false,
-    GTGKey0:false,
-    WellKey0:false,
+    ForestKey:0,
+    FireKey:0,
+    WaterKey:0,
+    SpiritKey:0,
+    ShadowKey:0,
+    CastleKey:0,
+    GTGKey:0,
+    WellKey:0,
 
     blank: false
 };
@@ -181,6 +181,15 @@ var itemsMin = {
     Mask:0,
     Trade:0,
     Scarecrow:0,
+    ForestKey:0,
+    FireKey:0,
+    WaterKey:0,
+    SpiritKey:0,
+    ShadowKey:0,
+    CastleKey:0,
+    GTGKey:0,
+    WellKey:0,
+    BigPoe:0,
 };
 
 var itemsMax = {
@@ -200,4 +209,13 @@ var itemsMax = {
     Mask:7,
     Trade:11,
     Scarecrow:2,
+    ForestKey:5,
+    FireKey:8,
+    WaterKey:6,
+    SpiritKey:5,
+    ShadowKey:5,
+    CastleKey:2,
+    GTGKey:9,
+    WellKey:3,
+    BigPoe:10,
 };
