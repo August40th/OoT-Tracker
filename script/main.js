@@ -227,7 +227,7 @@ function showSettings(sender) {
     if (editmode) {
         var r, c;
         var startdraw = false;
-        for (r = 9; r >= 0 && !startdraw; r--) {
+        for (r = 7; r >= 0 && !startdraw; r--) {
             if (!itemLayout[r] || !itemLayout[r].length) {
                 itemGrid[r]['row'].style.display = 'none';
             } else {
