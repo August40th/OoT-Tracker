@@ -50,7 +50,7 @@ var defaultItemGrid = [
         "GoronRuby",
         "ZoraSapphire",
         "Scale",
-        "Gloves",
+        "Glove",
         "NocturneofShadow",
         "ShadowKey"
     ],
