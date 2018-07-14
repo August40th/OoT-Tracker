@@ -425,9 +425,9 @@ function updateGridItem(row, index) {
     }
     else if (dungeonkeys[item] !== undefined){
         if (showprizes)
-           itemGrid[row][index][3].style.backgroundImage = "url(images/" + items[dungeonkeys[item]] + itemsMax[item] + ".png)";
+           itemGrid[row][index][1].style.backgroundImage = "url(images/" + items[dungeonkeys[item]] + itemsMax[item] + ".png)";
         else
-            itemGrid[row][index][3].style.backgroundImage = "";           
+            itemGrid[row][index][1].style.backgroundImage = "";           
     }
 }
 
@@ -463,9 +463,9 @@ function initGridRow(itemsets) {
         ForestKey0: 0,
         FireKey0: 0,
         WaterKey0: 0,
-        ShadowKey: 0,
-        SpiritKey: 0,
-        CastleKey: 0,
+        ShadowKey0: 0,
+        SpiritKey0: 0,
+        CastleKey0: 0,
     };
 
     var r, c;
