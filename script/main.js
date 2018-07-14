@@ -425,9 +425,9 @@ function updateGridItem(row, index) {
     }
     else if (dungeonkeys[item] !== undefined){
         if (showprizes)
-           itemGrid[row][index][1].style.backgroundImage = "url(images/" + items[dungeonkeys[item]] + itemsMax[item] + ".png)";
+           itemGrid[row][index][3].style.backgroundImage = "url(images/" + items[dungeonkeys[item]] + itemsMax[item] + ".png)";
         else
-            itemGrid[row][index][1].style.backgroundImage = "";           
+            itemGrid[row][index][3].style.backgroundImage = "";           
     }
 }
 
@@ -575,7 +575,7 @@ function gridItemClick(row, col, corner) {
         }
     }
     else if(dungeonkeys[item] !== undefined && showprizes){
-        if (corner == 1) {
+        if (corner == 3) {
             dungeonkeys[item]++;
             if (dungeonkeys[item] >=  1)
                 dungeonkeys[item] = 0;
