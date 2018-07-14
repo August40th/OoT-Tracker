@@ -33,7 +33,7 @@ var defaultItemGrid = [
         "WaterKey"
     ],
     [
-        "SunSong",
+        "SunsSong",
         "KokiriBoots",
         "ZoraLetter",
         "WaterMedallion",
