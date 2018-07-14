@@ -79,6 +79,7 @@ var defaultItemGrid = [
         "Nayrus",
         "Light",
         "Hammer",
+        "BigPoe",
         "Skulltula"
     ]
 ]
