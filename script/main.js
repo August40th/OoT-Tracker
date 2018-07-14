@@ -423,7 +423,7 @@ function updateGridItem(row, index) {
         else
             itemGrid[row][index][3].style.backgroundImage = "";           
     }
-    else if (dungeonkeys[item] !== undefined{
+    else if (dungeonkeys[item] !== undefined){
         if (showprizes)
            itemGrid[row][index][2].style.backgroundImage = "url(images/" + bosskey[dungeonkeys[item]] + ".png)";
         else
