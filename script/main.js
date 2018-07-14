@@ -1,5 +1,7 @@
 var medallions = [];
-var dungeonImg = ['Unknown', 'Rauru', 'Slingshot0', 'Bombs0', 'Boomerang', 'Bow0', 'Hammer', 'Hookshot0', 'HoverBoots', 'MirrorShield']
+var dungeonImg = ['Unknown', 'Rauru', 'Slingshot0', 'Bombs0', 'Boomerang', 'Bow0', 'Hammer', 'Hookshot1', 'MirrorShield', 'Hoverboots']
+var dungeonkeys = [];
+var bosskey = ['BossKey0', 'BossKey1']
 ganonlogic = 'Open';
 showprizes = false;
 
@@ -421,6 +423,11 @@ function updateGridItem(row, index) {
         else
             itemGrid[row][index][3].style.backgroundImage = "";           
     }
+    else if (dungeonkeys[item] !== undefined{
+           itemGrid[row][index][3].style.backgroundImage = "url(images/" + dungeonImg[dungeonkeys[item]] + ".png)";
+        else
+            itemGrid[row][index][3].style.backgroundImage = "";           
+    }
 }
 
 function updateGridItemAll() {
@@ -450,6 +457,16 @@ function initGridRow(itemsets) {
         KokiriEmerald: 0,
         GoronRuby: 0,
         ZoraSapphire: 0,
+    },
+    dungeonkeys = {
+        ForestKey: 0,
+        FireKey: 0,
+        WaterKey: 0,
+        ShadowKey: 0,
+        SpiritKey: 0,
+        CastleKey: 0,
+        GTGKey: 0,
+        WellKey: 0,
     };
 
     var r, c;
@@ -553,6 +570,16 @@ function gridItemClick(row, col, corner) {
             medallions[item]++;
             if (medallions[item] >=  10)
                 medallions[item] = 0;
+        } 
+        else {
+            items[item] = !items[item];
+        }
+    }
+    else if(dungeonkeys[item] !== undefined && showprizes){
+        if (corner == 2) {
+            dungeonkeys[item]++;
+            if (dungeonkeys[item] >=  1)
+                dungeonkeys[item] = 0;
         } 
         else {
             items[item] = !items[item];
@@ -828,6 +855,10 @@ function preloader() {
     for (medallion in dungeonImg) {
         var img = new Image();
         img.src = "images/" + dungeonImg[medallion] + ".png";
+    }
+    for (dungeonkey in bosskey) {
+        var img = new Image();
+        img.src = "images/" + bosskey[dungeonkey] + ".png";
     }
 }
 function addLoadEvent(func) {
