@@ -577,7 +577,7 @@ function gridItemClick(row, col, corner) {
     else if(dungeonkeys[item] !== undefined && showprizes){
         if (corner == 3) {
             dungeonkeys[item]++;
-            if (dungeonkeys[item] >=  1)
+            if (dungeonkeys[item] >=  2)
                 dungeonkeys[item] = 0;
         } 
         else {
