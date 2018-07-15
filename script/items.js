@@ -11,7 +11,7 @@ var defaultItemGrid = [
         "ForestKey"
     ],
     [
-        "EponasSong",
+        "SunsSong",
         "DekuShield",
         "ShadowMedallion",
         "Heart",
@@ -33,7 +33,7 @@ var defaultItemGrid = [
         "WaterKey"
     ],
     [
-        "SunsSong",
+        "Scarecrow",
         "KokiriBoots",
         "ZoraLetter",
         "WaterMedallion",
@@ -73,7 +73,7 @@ var defaultItemGrid = [
         "Farores",
         "Ice",
         "Hookshot",
-        "Scarecrow",
+        "EponasSong",
         "GTGKey"
     ],
     [
