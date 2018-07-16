@@ -24,19 +24,19 @@ function generalCanGetChest(chestlist) {
 var dungeons = [
     {
         name: "Deku Tree",
-        x: "87.0%",
-        y: "57.0%",
+        x: "88.0%",
+        y: "62.0%",
         chestlist: {
             ['Lobby Chest']: { isAvailable: function () {return true} },
+            ['Slingshot Chest']: { isAvailable: function () {return items.DekuShield;} },
+            ['Slingshot Room Side Chest']: { isAvailable: function () {return items.DekuShield;} },
             ['Compass Chest']: { isAvailable: function () {return true} },
             ['Compass Room Side Chest']: { isAvailable: function () {return true} },
             ['Basement Chest']: { isAvailable: function () {return true} },
-            ['Slingshot Chest']: { isAvailable: function () {return true} },
-            ['Slingshot Room Side Chest']: { isAvailable: function () {return true} },
-            ['Gohma']: { isAvailable: function () {return items.Slingshot;} },
+            ['Gohma']: { isAvailable: function () {return items.DekuShield && (items.Slingshot || (items.Stick && items.Nuts));} },
         },
         isBeatable: function(){
-            if(items.Slingshot) {
+            if(items.DekuShield && (items.Slingshot || (items.Stick && items.Nuts))) {
                 if (this.canGetChest() == 'available')
                     return 'available';
                 return 'possible';
