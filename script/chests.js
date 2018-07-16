@@ -25,7 +25,7 @@ var dungeons = [
     {
         name: "Deku Tree",
         x: "88.0%",
-        y: "62.0%",
+        y: "50.0%",
         chestlist: {
             ['Lobby Chest']: { isAvailable: function () {return true} },
             ['Slingshot Chest']: { isAvailable: function () {return items.DekuShield;} },
