@@ -231,7 +231,7 @@ var dungeons = [
             ['Behind Right Grate']: { isAvailable:  function () {
                 return items.SongofStorms && items.WellKey >= 1; } },
             ['Basement Chest']: { isAvailable:  function () {
-                return items.SongofStorms && (items.Bombs || Items.Bombchu); } },
+                return items.SongofStorms && (items.Bombs || items.Bombchu); } },
             ['Underwater Front Chest']: { isAvailable: function () {
                 return items.SongofStorms && items.ZeldasLullaby ; } },
             ['Defeat Boss']: { isAvailable:  function () {
