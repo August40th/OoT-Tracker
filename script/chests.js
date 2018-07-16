@@ -154,7 +154,7 @@ var dungeons = [
             ['Child Switch Chest']: { isAvailable: function () {
                 return items.RequiemofSpirit && (items.Boomerang || items.Slingshot); } },
             ['Child Torch Chest']: { isAvailable:  function () {
-                return items.RequiemofSpirit && ((items.Dins && items.Magic) || items.Stick)); } },
+                return items.RequiemofSpirit && ((items.Dins && items.Magic) || items.Stick); } },
             ['Child Climb East Chest']: { isAvailable:  function () {
                 return ((items.RequiemofSpirit && (items.Boomerang || items.Slingshot)) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2)); } },
             ['Child Climb North Chest']: { isAvailable: function () {
