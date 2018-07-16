@@ -111,7 +111,7 @@ var dungeons = [
             ['Silver Block Like Like 3 Invisible Chest']: { isAvailable: function () {
                 return (items.EponasSong || items.Hookshot >= 2) && items.Hookshot && items.Glove >= 2; } },
             ['Shoot Cyclops Statue/s Eye']: { isAvailable: function () {
-                return (items.EponasSong || items.Hookshot >= 2) && items.Bow &&; } },
+                return (items.EponasSong || items.Hookshot >= 2) && items.Bow ; } },
             ['Near Scarecrow Chest']: { isAvailable: function () {
                 return (items.EponasSong || items.Hookshot >= 2) && items.Bow; } },
             ['Hammer Room Clear Chest']: { isAvailable:  function () {
