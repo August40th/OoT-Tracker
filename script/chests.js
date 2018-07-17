@@ -91,8 +91,8 @@ var dungeons = [
     },
     {
         name: "Gerudo Training Grounds",
-        x: "20.0%",
-        y: "17.0%",
+        x: "22.0%",
+        y: "16.6%",
         chestlist: {
             ['Lobby Right Chest']: { isAvailable:  function () {
                 return (items.EponasSong || items.Hookshot >= 2) && items.Bow; } },
@@ -207,8 +207,8 @@ var dungeons = [
     },
     {
         name: "Bottom of the Well",
-        x: "68.0%",
-        y: "23.0%",
+        x: "71.0%",
+        y: "22.5%",
         chestlist: {
             ['Front Left Hidden Wall']: { isAvailable:  function () {
                 return items.SongofStorms; } },
@@ -336,8 +336,8 @@ var dungeons = [
     },
     {
         name: "Fire Temple",
-        x: "66.0%",
-        y: "06.0%",
+        x: "64.0%",
+        y: "09.0%",
         chestlist: {
             ['Chest Near Boss']: { isAvailable:  function () {
                 return items.GoronTunic && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)); } },
@@ -482,7 +482,7 @@ var dungeons = [
     },
     {
         name: "Ganon's Castle",
-        x: "49.5%",
+        x: "49.0%",
         y: "14.0%",
         chestlist: {
             ['Forest Trial Chest']: { isAvailable: function () { 
@@ -540,7 +540,7 @@ var dungeons = [
     {
         name: "The Market",
         x: "50.5%",
-        y: "20.0%",
+        y: "20.2%",
         chestlist: {
             ['Zelda\'s Lullaby']: { isAvailable: function () {
                 return (true); } },
@@ -635,7 +635,7 @@ var dungeons = [
     {
         name: "Goron City",
         x: "70.0%",
-        y: "06.0%",
+        y: "06.3%",
         chestlist: {
             ['Left Boulder Maze Chest']: { isAvailable: function () {
                 return (items.Glove >= 2 || items.Hammer); } },
@@ -661,7 +661,7 @@ var dungeons = [
     },
     {
         name: "Lost Woods",
-        x: "74.5%",
+        x: "75.0%",
         y: "47.0%",
         chestlist: {
             ['Skull Kid']: { isAvailable: function () {
