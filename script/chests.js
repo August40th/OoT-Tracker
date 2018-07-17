@@ -91,7 +91,7 @@ var dungeons = [
     },
     {
         name: "Gerudo Training Grounds",
-        x: "24%",
+        x: "18.0%",
         y: "17.0%",
         chestlist: {
             ['Lobby Right Chest']: { isAvailable:  function () {
@@ -435,8 +435,8 @@ var dungeons = [
     },
     {
         name: "Forest Temple",
-        x: "80.5%",
-        y: "44.0%",
+        x: "78.5%",
+        y: "39.0%",
         chestlist: {
             ['First Chest']: { isAvailable:  function () {
                 return (items.SariasSong || items.MinuetofForest) && items.Hookshot; } },
@@ -482,8 +482,8 @@ var dungeons = [
     },
     {
         name: "Ganon's Castle",
-        x: "48.0%",
-        y: "15.0%",
+        x: "49.5%",
+        y: "13.0%",
         chestlist: {
             ['Forest Trial Chest']: { isAvailable: function () { 
                 return isBridgeOpen(); } },
@@ -539,7 +539,7 @@ var dungeons = [
     },
     {
         name: "Castle Town",
-        x: "48.0%",
+        x: "50.5%",
         y: "20.5%",
         chestlist: {
             ['Zelda\'s Lullaby']: { isAvailable: function () {
@@ -576,7 +576,7 @@ var dungeons = [
     {
         name: "Kakariko Village",
         x: "65.0%",
-        y: "18.0%",
+        y: "21.0%",
         chestlist: {
             ['Anju as Adult']: { isAvailable: function () {
                 return (true); } },
@@ -635,7 +635,7 @@ var dungeons = [
     {
         name: "Goron City",
         x: "68.0%",
-        y: "13.5%",
+        y: "06.5%",
         chestlist: {
             ['Left Boulder Maze Chest']: { isAvailable: function () {
                 return (items.Glove >= 2 || items.Hammer); } },
@@ -661,8 +661,8 @@ var dungeons = [
     },
     {
         name: "Lost Woods",
-        x: "72.0%",
-        y: "45.0%",
+        x: "76.0%",
+        y: "47.0%",
         chestlist: {
             ['Skull Kid']: { isAvailable: function () {
                 return (items.SariasSong); } },
