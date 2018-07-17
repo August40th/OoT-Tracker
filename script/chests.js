@@ -25,7 +25,7 @@ var dungeons = [
     {
         name: "Kokiri Forest",
         x: "75.0%",
-        y: "50.0%",
+        y: "60.0%",
         chestlist: {
             ['Kokiri Sword Chest']: { isAvailable: function() {return true} },
             ['Midos House x4 Chests']: { isAvailable: function() {return true} },
@@ -781,32 +781,6 @@ var dungeons = [
 
 //define overworld chests
 var chests = [
-    {
-        name: "Kokiri Sword Chest",
-        x: "76.0%",
-        y: "63.5%",
-        isAvailable: function(){
-            return "available";
-        }
-    },
-    {
-        name: "Mido's House (4)",
-        x: "78.5%",
-        y: "58.0%",
-        isAvailable: function(){
-            return "available";
-        }
-    },
-    {
-        name: "Kokiri Song of Storms Grotto",
-        x: "77.5%",
-        y: "54.5%",
-        isAvailable: function(){
-            if(items.SongofStorms)
-                return "available";
-            return "unavailable";
-        }
-    },
     {
         name: "Song of Time",
         x: "52.3%",
