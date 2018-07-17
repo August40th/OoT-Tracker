@@ -696,7 +696,7 @@ var dungeons = [
     },
     {
         name: "Zora\'s Domain",
-        x: "93.6%",
+        x: "92.9%",
         y: "34.5%",
         chestlist: {
             ['Diving Minigame']: { isAvailable: function () {
