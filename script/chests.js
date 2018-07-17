@@ -40,6 +40,10 @@ var dungeons = [
             else
                 return "unavailable";
     },
+        canGetChest: function(){
+            return generalCanGetChest(this.chestlist);
+        }
+},
     {
         name: "Deku Tree",
         x: "88.0%",
