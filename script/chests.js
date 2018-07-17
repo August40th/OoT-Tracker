@@ -91,8 +91,8 @@ var dungeons = [
     },
     {
         name: "Gerudo Training Grounds",
-        x: "21.0%",
-        y: "16.6%",
+        x: "20.8%",
+        y: "16.5%",
         chestlist: {
             ['Lobby Right Chest']: { isAvailable:  function () {
                 return (items.EponasSong || items.Hookshot >= 2) && items.Bow; } },
@@ -207,8 +207,8 @@ var dungeons = [
     },
     {
         name: "Bottom of the Well",
-        x: "69.0%",
-        y: "23.0%",
+        x: "69.3%",
+        y: "23.4%",
         chestlist: {
             ['Front Left Hidden Wall']: { isAvailable:  function () {
                 return items.SongofStorms; } },
@@ -248,8 +248,8 @@ var dungeons = [
     },
     {
         name: "Shadow Temple",
-        x: "76.0%",
-        y: "21.0%",
+        x: "75.7%",
+        y: "20.8%",
         chestlist: {
             ['Map Chest']: { isAvailable:  function () {
                 return items.NocturneofShadow && items.Dins && items.Magic && items.Lens && (items.HoverBoots || items.Hookshot); } },
@@ -336,7 +336,7 @@ var dungeons = [
     },
     {
         name: "Fire Temple",
-        x: "64.6%",
+        x: "65.4%",
         y: "09.0%",
         chestlist: {
             ['Chest Near Boss']: { isAvailable:  function () {
@@ -696,8 +696,8 @@ var dungeons = [
     },
     {
         name: "Zora\'s Domain",
-        x: "93.5%",
-        y: "29.0%",
+        x: "92.0%",
+        y: "36.0%",
         chestlist: {
             ['Diving Minigame']: { isAvailable: function () {
                 return ((items.Bombs && items.ZeldasLullaby) || items.Scale); } },
