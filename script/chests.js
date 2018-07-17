@@ -91,7 +91,7 @@ var dungeons = [
     },
     {
         name: "Gerudo Training Grounds",
-        x: "22.0%",
+        x: "21.0%",
         y: "16.6%",
         chestlist: {
             ['Lobby Right Chest']: { isAvailable:  function () {
@@ -207,8 +207,8 @@ var dungeons = [
     },
     {
         name: "Bottom of the Well",
-        x: "71.0%",
-        y: "22.5%",
+        x: "69.0%",
+        y: "23.0%",
         chestlist: {
             ['Front Left Hidden Wall']: { isAvailable:  function () {
                 return items.SongofStorms; } },
@@ -303,8 +303,8 @@ var dungeons = [
     },
     {
         name: "Dodongo's Cavern",
-        x: "60.0%",
-        y: "06.5%",
+        x: "60.6%",
+        y: "06.9%",
         chestlist: {
             ['Map Chest']: { isAvailable:  function () {
                 return items.Bombs || items.Hammer || items.Glove || items.Bombchu ; } },
@@ -336,7 +336,7 @@ var dungeons = [
     },
     {
         name: "Fire Temple",
-        x: "64.0%",
+        x: "64.6%",
         y: "09.0%",
         chestlist: {
             ['Chest Near Boss']: { isAvailable:  function () {
@@ -575,7 +575,7 @@ var dungeons = [
     },
     {
         name: "Kakariko Village",
-        x: "65.5%",
+        x: "65.4%",
         y: "22.0%",
         chestlist: {
             ['Anju as Adult']: { isAvailable: function () {
@@ -661,7 +661,7 @@ var dungeons = [
     },
     {
         name: "Lost Woods",
-        x: "75.0%",
+        x: "75.3%",
         y: "47.0%",
         chestlist: {
             ['Skull Kid']: { isAvailable: function () {
