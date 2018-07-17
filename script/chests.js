@@ -271,7 +271,7 @@ var dungeons = [
     {
         name: "Shadow Temple",
         x: "79.7%",
-        y: "20.0%",
+        y: "19.5%",
         chestlist: {
             ['Map Chest']: { isAvailable:  function () {
                 return items.NocturneofShadow && items.Dins && items.Magic && items.Lens && (items.HoverBoots || items.Hookshot); } },
@@ -799,14 +799,14 @@ var dungeons = [
 },
     {
         name: "Zora/s River",
-        x: "79.7%",
+        x: "77.7%",
         y: "29.0%",
         chestlist: {
             ['River Heart Piece 1']: { isAvailable: function() {return true;} },
             ['River Open Grotto']: { isAvailable: function() {return true;} },
-            ['River Heart Piece 2']: { isAvailable: function() {return (items.HoverBoots || items.Boomerang || items.Bombs || items.Bombchu);} },
-            ['Frogs in the Rain']: { isAvailable: function() {return items.SongofStorms;} },
-            ['Frogs mini game']: { isAvailable: function() {return items.ZeldasLullaby && items.EponasSong && items.SariasSong && items.SunsSong && items.SongofTime;} },
+            ['River Heart Piece 2']: { isAvailable: function() {return (items.HoverBoots || items.Boomerang || items.Bombs || items.Bombchu || items.Scale);} },
+            ['Frogs in the Rain']: { isAvailable: function() {return items.SongofStorms && (items.Bombs || items.Bombchu || items.Scale);} },
+            ['Frogs mini game']: { isAvailable: function() {return (items.Bombs || items.Bombchu || items.Scale) && items.ZeldasLullaby && items.EponasSong && items.SariasSong && items.SunsSong && items.SongofTime;} },
         },
         isBeatable: function(){
             if( items.EponasSong && items.Mask >=2) {
@@ -1040,54 +1040,6 @@ var chests = [
             if(items.RequiemofSpirit && (items.Bombs || items.Scale))
                 return "available";
             return "unavailable";
-        }
-    },
-    {
-        name: "Frog Ocarina Game",
-        x: "79.8%",
-        y: "32.0%",
-        isAvailable: function(){
-            if((items.Scale || items.Bombs) && items.ZeldasLullaby && items.SariasSong && items.SunsSong && items.EponasSong && items.SongofTime && items.SongofStorms)
-                return "available";
-            return "unavailable";
-        }
-    },
-    {
-        name: "Frogs in the Rain",
-        x: "78.0%",
-        y: "32.0%",
-        isAvailable: function(){
-            if((items.Scale || items.Bombs) && items.SongofStorms)
-                return "available";
-            return "unavailable";
-        }
-    },
-    {
-        name: "Zora River Heart Piece 1",
-        x: "75.0%",
-        y: "30.0%",
-        isAvailable: function(){
-            if(items.Scale || items.Bombs || items.HoverBoots)
-                return "available";
-            return "unavailable";
-        }
-    },
-    {
-        name: "Zora River Heart Piece 2",
-        x: "86.0%",
-        y: "29.2%",
-        isAvailable: function(){
-            if(items.Scale || items.Bombs || items.HoverBoots)
-                return "available";
-            return "unavailable";
-        }
-    },
-    {
-        name: "Zora River Grotto",
-        x: "75.5%",
-        y: "34.5%",
-        isAvailable: function(){
-            return "available";
         }
     },
 ]
