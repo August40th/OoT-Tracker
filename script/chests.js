@@ -91,8 +91,8 @@ var dungeons = [
     },
     {
         name: "Gerudo Training Grounds",
-        x: "18.8%",
-        y: "28.0%",
+        x: "24%",
+        y: "17.0%",
         chestlist: {
             ['Lobby Right Chest']: { isAvailable:  function () {
                 return (items.EponasSong || items.Hookshot >= 2) && items.Bow; } },
@@ -303,8 +303,8 @@ var dungeons = [
     },
     {
         name: "Dodongo's Cavern",
-        x: "59.0%",
-        y: "13.5%",
+        x: "60.0%",
+        y: "06.5%",
         chestlist: {
             ['Map Chest']: { isAvailable:  function () {
                 return items.Bombs || items.Hammer || items.Glove || items.Bombchu ; } },
@@ -336,8 +336,8 @@ var dungeons = [
     },
     {
         name: "Fire Temple",
-        x: "68.0%",
-        y: "06.5%",
+        x: "66.0%",
+        y: "02.5%",
         chestlist: {
             ['Chest Near Boss']: { isAvailable:  function () {
                 return items.GoronTunic && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)); } },
@@ -435,8 +435,8 @@ var dungeons = [
     },
     {
         name: "Forest Temple",
-        x: "78.5%",
-        y: "39.0%",
+        x: "80.5%",
+        y: "44.0%",
         chestlist: {
             ['First Chest']: { isAvailable:  function () {
                 return (items.SariasSong || items.MinuetofForest) && items.Hookshot; } },
@@ -482,8 +482,8 @@ var dungeons = [
     },
     {
         name: "Ganon's Castle",
-        x: "52.0%",
-        y: "10.0%",
+        x: "48.0%",
+        y: "15.0%",
         chestlist: {
             ['Forest Trial Chest']: { isAvailable: function () { 
                 return isBridgeOpen(); } },
@@ -539,8 +539,8 @@ var dungeons = [
     },
     {
         name: "Castle Town",
-        x: "52.0%",
-        y: "20.0%",
+        x: "48.0%",
+        y: "20.5%",
         chestlist: {
             ['Zelda\'s Lullaby']: { isAvailable: function () {
                 return (true); } },
@@ -576,7 +576,7 @@ var dungeons = [
     {
         name: "Kakariko Village",
         x: "65.0%",
-        y: "24.0%",
+        y: "18.0%",
         chestlist: {
             ['Anju as Adult']: { isAvailable: function () {
                 return (true); } },
@@ -634,8 +634,8 @@ var dungeons = [
     },
     {
         name: "Goron City",
-        x: "60.0%",
-        y: "06.5%",
+        x: "68.0%",
+        y: "13.5%",
         chestlist: {
             ['Left Boulder Maze Chest']: { isAvailable: function () {
                 return (items.Glove >= 2 || items.Hammer); } },
@@ -661,8 +661,8 @@ var dungeons = [
     },
     {
         name: "Lost Woods",
-        x: "78.0%",
-        y: "48.0%",
+        x: "72.0%",
+        y: "45.0%",
         chestlist: {
             ['Skull Kid']: { isAvailable: function () {
                 return (items.SariasSong); } },
@@ -721,8 +721,8 @@ var dungeons = [
     },
     {
         name: "Death Mountain",
-        x: "64.0%",
-        y: "09.0%",
+        x: "60.0%",
+        y: "14.0%",
         chestlist: {
             ['Heart Piece Above Dodongo Cavern']: { isAvailable: function () {
                 return (items.Bombs || (items.Glove && items.Scale)); } },
