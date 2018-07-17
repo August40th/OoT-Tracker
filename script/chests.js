@@ -25,7 +25,7 @@ var dungeons = [
     {
         name: "Kokiri Forest",
         x: "75.0%",
-        y: "50.0%,
+        y: "50.0%",
         chestlist: {
             ['Kokiri Sword Chest']: { isAvailable: function() {return true} },
             ['Midos House x4 Chests']: { isAvailable: function() {return true} },
