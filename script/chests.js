@@ -29,7 +29,7 @@ var dungeons = [
         chestlist: {
             ['Kokiri Sword Chest']: { isAvailable: function() {return true} },
             ['Midos House x4 Chests']: { isAvailable: function() {return true} },
-            ['Song of Storms Grotto']: { is Available: function() {return items.SongofStorms;} },
+            ['Song of Storms Grotto']: { isAvailable: function() {return items.SongofStorms;} },
         },
         isBeatable: function(){
             if( items.SongofStorms) {
