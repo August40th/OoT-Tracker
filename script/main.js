@@ -857,7 +857,7 @@ function preloader() {
     }
     for (dungeonkey in bosskey) {
         var img = new Image();
-        img.src = "images/" + bosskey[dungeonkey] + ".png";
+        img.src = "url(images/" + bosskey[dungeonkey] + itemsMax[item] + ".png");
     }
 }
 function addLoadEvent(func) {
