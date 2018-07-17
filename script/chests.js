@@ -270,8 +270,8 @@ var dungeons = [
     },
     {
         name: "Shadow Temple",
-        x: "75.7%",
-        y: "20.8%",
+        x: "78.7%",
+        y: "19.5%",
         chestlist: {
             ['Map Chest']: { isAvailable:  function () {
                 return items.NocturneofShadow && items.Dins && items.Magic && items.Lens && (items.HoverBoots || items.Hookshot); } },
@@ -408,7 +408,7 @@ var dungeons = [
     {
         name: "Jabu Jabu's Belly",
         x: "88.4%",
-        y: "17.0%",
+        y: "18.0%",
         chestlist: {
             ['Boomerang Chest']: { isAvailable: function () {
                 return ((items.Bombs && items.ZeldasLullaby) || items.Scale) && items.ZoraLetter && items.Bottle && (items.Slingshot || items.Bombs || items.Boomerang); } },
@@ -435,7 +435,7 @@ var dungeons = [
     {
         name: "Ice Cavern",
         x: "93.5%",
-        y: "17.0%",
+        y: "18.0%",
         chestlist: {
             ['Map Chest']: { isAvailable:  function () {
                 return (items.Bombs || items.Scale) && items.ZoraLetter && items.ZeldasLullaby && items.Bottle; } },
