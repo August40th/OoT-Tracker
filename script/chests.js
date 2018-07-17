@@ -407,8 +407,8 @@ var dungeons = [
     },
     {
         name: "Jabu Jabu's Belly",
-        x: "88.8%",
-        y: "18.0%",
+        x: "86.4%",
+        y: "16.4%",
         chestlist: {
             ['Boomerang Chest']: { isAvailable: function () {
                 return ((items.Bombs && items.ZeldasLullaby) || items.Scale) && items.ZoraLetter && items.Bottle && (items.Slingshot || items.Bombs || items.Boomerang); } },
@@ -434,8 +434,8 @@ var dungeons = [
     },
     {
         name: "Ice Cavern",
-        x: "92.3%",
-        y: "18.0%",
+        x: "95.0%",
+        y: "16.4%",
         chestlist: {
             ['Map Chest']: { isAvailable:  function () {
                 return (items.Bombs || items.Scale) && items.ZoraLetter && items.ZeldasLullaby && items.Bottle; } },
@@ -776,8 +776,8 @@ var dungeons = [
     },
     {
         name: "Lon Lon Ranch",
-        x: "46.8%",
-        y: "45.0%",
+        x: "47.4%",
+        y: "45.6%",
         chestlist: {
             ['Talon/s Cucco game']: { isAvailable: function() {return items.Mask >= 2;} },
             ['Malon/s Song']: { isAvailable: function() {return items.Mask >= 2;} },
