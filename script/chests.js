@@ -407,8 +407,8 @@ var dungeons = [
     },
     {
         name: "Jabu Jabu's Belly",
-        x: "91.5%",
-        y: "21.0%",
+        x: "88.8%",
+        y: "18.0%",
         chestlist: {
             ['Boomerang Chest']: { isAvailable: function () {
                 return ((items.Bombs && items.ZeldasLullaby) || items.Scale) && items.ZoraLetter && items.Bottle && (items.Slingshot || items.Bombs || items.Boomerang); } },
@@ -434,8 +434,8 @@ var dungeons = [
     },
     {
         name: "Ice Cavern",
-        x: "90.5%",
-        y: "16.0%",
+        x: "92.3%",
+        y: "18.0%",
         chestlist: {
             ['Map Chest']: { isAvailable:  function () {
                 return (items.Bombs || items.Scale) && items.ZoraLetter && items.ZeldasLullaby && items.Bottle; } },
@@ -774,6 +774,29 @@ var dungeons = [
             return generalCanGetChest(this.chestlist);
         }
     },
+    {
+        name: "Lon Lon Ranch",
+        x: "48.0%",
+        y: "48.0%",
+        chestlist: {
+            ['Talon/s Cucco game']: { isAvailable: function() {return items.Mask >= 2;} },
+            ['Malon/s Song']: { isAvailable: function() {return items.Mask >= 2;} },
+            ['Silo Heart Piece']: { isAvailable: function() {return true;} },
+            ['Race Ingo']: { isAvailable: function() {return items.EponasSong;} },
+        },
+        isBeatable: function(){
+            if( items.EponasSong && items.Mask >=2) {
+                if (this.canGetChest() == 'available')
+                    return 'avialable';
+                return 'possible';
+            }
+            else
+                return "unavailable";
+    },
+        canGetChest: function(){
+            return generalCanGetChest(this.chestlist);
+        }
+},
 ];
 
 
