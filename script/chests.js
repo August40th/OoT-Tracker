@@ -91,8 +91,8 @@ var dungeons = [
     },
     {
         name: "Gerudo Training Grounds",
-        x: "20.8%",
-        y: "16.5%",
+        x: "20.7%",
+        y: "16.4%",
         chestlist: {
             ['Lobby Right Chest']: { isAvailable:  function () {
                 return (items.EponasSong || items.Hookshot >= 2) && items.Bow; } },
@@ -304,7 +304,7 @@ var dungeons = [
     {
         name: "Dodongo's Cavern",
         x: "60.6%",
-        y: "06.9%",
+        y: "08.4%",
         chestlist: {
             ['Map Chest']: { isAvailable:  function () {
                 return items.Bombs || items.Hammer || items.Glove || items.Bombchu ; } },
@@ -696,8 +696,8 @@ var dungeons = [
     },
     {
         name: "Zora\'s Domain",
-        x: "92.0%",
-        y: "36.0%",
+        x: "96.3%",
+        y: "34.5%",
         chestlist: {
             ['Diving Minigame']: { isAvailable: function () {
                 return ((items.Bombs && items.ZeldasLullaby) || items.Scale); } },
