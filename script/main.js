@@ -419,7 +419,7 @@ function updateGridItem(row, index) {
 
     if (medallions[item] !== undefined){
         if (showprizes)
-            itemGrid[row][index][3].style.backgroundImage = "url(images/" + dungeonimg[medallions[item]] + ".png)";
+            itemGrid[row][index][3].style.backgroundImage = "url(images/" + dungeonImg[medallions[item]] + ".png)";
         else
             itemGrid[row][index][3].style.backgroundImage = "";           
     }
@@ -853,7 +853,7 @@ function preloader() {
 
     for (medallion in dungeonImg) {
         var img = new Image();
-        img.src = "images/" + bosskey[medallion] + ".png";
+        img.src = "images/" + dungeonImg[medallion] + ".png";
     }
     for (dungeonkey in bosskey) {
         var img = new Image();
