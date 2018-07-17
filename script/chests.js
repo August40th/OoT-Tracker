@@ -799,8 +799,8 @@ var dungeons = [
 },
     {
         name: "Zora/s River",
-        x: "77.7%",
-        y: "29.0%",
+        x: "78.7%",
+        y: "29.5%",
         chestlist: {
             ['River Heart Piece 1']: { isAvailable: function() {return true;} },
             ['River Open Grotto']: { isAvailable: function() {return true;} },
