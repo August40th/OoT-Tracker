@@ -419,15 +419,15 @@ function updateGridItem(row, index) {
 
     if (medallions[item] !== undefined){
         if (showprizes)
-            itemGrid[row][index][3].style.backgroundImage = "url(images/" + bosskey[medallions[item]] + ".png)";
+            itemGrid[row][index][3].style.backgroundImage = "url(images/" + dungeonimg[medallions[item]] + ".png)";
         else
             itemGrid[row][index][3].style.backgroundImage = "";           
     }
-    else if (dungeonkeys[item] !== undefined){
+    if (dungeonkeys[item] !== undefined){
         if (showprizes)
-           itemGrid[row][index][1].style.backgroundImage = "url(images/" + bosskey[dungeonkeys[item]] + itemsMax[item] + ".png)";
+           itemGrid[row][index][3].style.backgroundImage = "url(images/" + bosskey[dungeonkeys[item]] + itemsMax[item] + ".png)";
         else
-            itemGrid[row][index][1].style.backgroundImage = "";           
+            itemGrid[row][index][3].style.backgroundImage = "";           
     }
 }
 
@@ -857,7 +857,7 @@ function preloader() {
     }
     for (dungeonkey in bosskey) {
         var img = new Image();
-        img.src = "images/" + bosskey[dungeonkey] + itemsMax[item] + ".png";
+        img.src = "images/" + bosskey[dungeonkey] + ".png";
     }
 }
 function addLoadEvent(func) {
