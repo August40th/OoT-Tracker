@@ -270,8 +270,8 @@ var dungeons = [
     },
     {
         name: "Shadow Temple",
-        x: "78.7%",
-        y: "19.5%",
+        x: "79.7%",
+        y: "20.0%",
         chestlist: {
             ['Map Chest']: { isAvailable:  function () {
                 return items.NocturneofShadow && items.Dins && items.Magic && items.Lens && (items.HoverBoots || items.Hookshot); } },
@@ -783,6 +783,30 @@ var dungeons = [
             ['Malon/s Song']: { isAvailable: function() {return items.Mask >= 2;} },
             ['Silo Heart Piece']: { isAvailable: function() {return true;} },
             ['Race Ingo']: { isAvailable: function() {return items.EponasSong;} },
+        },
+        isBeatable: function(){
+            if( items.EponasSong && items.Mask >=2) {
+                if (this.canGetChest() == 'available')
+                    return 'avialable';
+                return 'possible';
+            }
+            else
+                return "unavailable";
+    },
+        canGetChest: function(){
+            return generalCanGetChest(this.chestlist);
+        }
+},
+    {
+        name: "Zora/s River",
+        x: "79.7%",
+        y: "25.0%",
+        chestlist: {
+            ['River Heart Piece 1']: { isAvailable: function() {return true;} },
+            ['River Open Grotto']: { isAvailable: function() {return true;} },
+            ['River Heart Piece 2']: { isAvailable: function() {return true;} },
+            ['Frogs in the Rain']: { isAvailable: function() {return items.SongofStorms;} },
+            ['Frogs mini game']: { isAvailable: function() {return items.ZeldasLullaby && items.EponasSong && items.SariasSong && items.SunsSong && items.SongofTime;} },
         },
         isBeatable: function(){
             if( items.EponasSong && items.Mask >=2) {
