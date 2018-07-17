@@ -425,7 +425,7 @@ function updateGridItem(row, index) {
     }
     else if (dungeonkeys[item] !== undefined){
         if (showprizes)
-           itemGrid[row][index][1].style.backgroundImage = "url(images/" + items[dungeonkeys[item]] + itemsMax[item] + ".png)";
+           itemGrid[row][index][1].style.backgroundImage = "url(images/" + bosskey[dungeonkeys[item]] + itemsMax[item] + ".png)";
         else
             itemGrid[row][index][1].style.backgroundImage = "";           
     }
