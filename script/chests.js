@@ -407,8 +407,8 @@ var dungeons = [
     },
     {
         name: "Jabu Jabu's Belly",
-        x: "87.6%",
-        y: "15.9%",
+        x: "88.4%",
+        y: "17.0%",
         chestlist: {
             ['Boomerang Chest']: { isAvailable: function () {
                 return ((items.Bombs && items.ZeldasLullaby) || items.Scale) && items.ZoraLetter && items.Bottle && (items.Slingshot || items.Bombs || items.Boomerang); } },
@@ -434,8 +434,8 @@ var dungeons = [
     },
     {
         name: "Ice Cavern",
-        x: "93.6%",
-        y: "15.9%",
+        x: "93.5%",
+        y: "17.0%",
         chestlist: {
             ['Map Chest']: { isAvailable:  function () {
                 return (items.Bombs || items.Scale) && items.ZoraLetter && items.ZeldasLullaby && items.Bottle; } },
