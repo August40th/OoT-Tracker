@@ -800,11 +800,11 @@ var dungeons = [
     {
         name: "Zora/s River",
         x: "79.7%",
-        y: "25.0%",
+        y: "29.0%",
         chestlist: {
             ['River Heart Piece 1']: { isAvailable: function() {return true;} },
             ['River Open Grotto']: { isAvailable: function() {return true;} },
-            ['River Heart Piece 2']: { isAvailable: function() {return true;} },
+            ['River Heart Piece 2']: { isAvailable: function() {return (items.HoverBoots || items.Boomerang || items.Bombs || items.Bombchu);} },
             ['Frogs in the Rain']: { isAvailable: function() {return items.SongofStorms;} },
             ['Frogs mini game']: { isAvailable: function() {return items.ZeldasLullaby && items.EponasSong && items.SariasSong && items.SunsSong && items.SongofTime;} },
         },
