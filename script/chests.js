@@ -24,7 +24,7 @@ function generalCanGetChest(chestlist) {
 var dungeons = [
     {
         name: "Kokiri Forest",
-        x: "76.0%",
+        x: "77.7%",
         y: "63.6%",
         chestlist: {
             ['Kokiri Sword Chest']: { isAvailable: function() {return true} },
