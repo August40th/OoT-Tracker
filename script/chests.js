@@ -23,6 +23,24 @@ function generalCanGetChest(chestlist) {
 // define dungeon chests
 var dungeons = [
     {
+        name: "Kokiri Forest",
+        x: "75.0%",
+        y: "50.0%,
+        chestlist: {
+            ['Kokiri Sword Chest']: { isAvailable: function() {return true} },
+            ['Midos House x4 Chests']: { isAvailable: function() {return true} },
+            ['Song of Storms Grotto']: { is Available: function() {return items.SongofStorms;} },
+        },
+        isBeatable: function(){
+            if( items.SongofStorms) {
+                if (this.canGetChest() == 'available')
+                    return 'avialable';
+                return 'possible';
+            }
+            else
+                return "unavailable";
+    },
+    {
         name: "Deku Tree",
         x: "88.0%",
         y: "48.5%",
