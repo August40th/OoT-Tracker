@@ -91,7 +91,7 @@ var dungeons = [
     },
     {
         name: "Gerudo Training Grounds",
-        x: "18.0%",
+        x: "20.0%",
         y: "17.0%",
         chestlist: {
             ['Lobby Right Chest']: { isAvailable:  function () {
@@ -337,7 +337,7 @@ var dungeons = [
     {
         name: "Fire Temple",
         x: "66.0%",
-        y: "02.5%",
+        y: "06.0%",
         chestlist: {
             ['Chest Near Boss']: { isAvailable:  function () {
                 return items.GoronTunic && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)); } },
@@ -483,7 +483,7 @@ var dungeons = [
     {
         name: "Ganon's Castle",
         x: "49.5%",
-        y: "13.0%",
+        y: "14.0%",
         chestlist: {
             ['Forest Trial Chest']: { isAvailable: function () { 
                 return isBridgeOpen(); } },
@@ -538,9 +538,9 @@ var dungeons = [
         }
     },
     {
-        name: "Castle Town",
+        name: "The Market",
         x: "50.5%",
-        y: "20.5%",
+        y: "20.0%",
         chestlist: {
             ['Zelda\'s Lullaby']: { isAvailable: function () {
                 return (true); } },
@@ -575,8 +575,8 @@ var dungeons = [
     },
     {
         name: "Kakariko Village",
-        x: "65.0%",
-        y: "21.0%",
+        x: "65.5%",
+        y: "22.0%",
         chestlist: {
             ['Anju as Adult']: { isAvailable: function () {
                 return (true); } },
@@ -634,8 +634,8 @@ var dungeons = [
     },
     {
         name: "Goron City",
-        x: "68.0%",
-        y: "06.5%",
+        x: "70.0%",
+        y: "06.0%",
         chestlist: {
             ['Left Boulder Maze Chest']: { isAvailable: function () {
                 return (items.Glove >= 2 || items.Hammer); } },
@@ -661,7 +661,7 @@ var dungeons = [
     },
     {
         name: "Lost Woods",
-        x: "76.0%",
+        x: "74.5%",
         y: "47.0%",
         chestlist: {
             ['Skull Kid']: { isAvailable: function () {
@@ -721,8 +721,8 @@ var dungeons = [
     },
     {
         name: "Death Mountain",
-        x: "60.0%",
-        y: "14.0%",
+        x: "62.0%",
+        y: "13.7%",
         chestlist: {
             ['Heart Piece Above Dodongo Cavern']: { isAvailable: function () {
                 return (items.Bombs || (items.Glove && items.Scale)); } },
