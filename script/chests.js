@@ -776,8 +776,8 @@ var dungeons = [
     },
     {
         name: "Lon Lon Ranch",
-        x: "48.0%",
-        y: "48.0%",
+        x: "46.8%",
+        y: "45.0%",
         chestlist: {
             ['Talon/s Cucco game']: { isAvailable: function() {return items.Mask >= 2;} },
             ['Malon/s Song']: { isAvailable: function() {return items.Mask >= 2;} },
@@ -860,30 +860,6 @@ var chests = [
             if((items.Bombs || items.Hammer) && (items.Scale >= 2 || items.IronBoots))
                 return "available";
             return "unavailable";
-        }
-    },
-    {
-        name: "Talon's Chickens Minigame",
-        x: "49.0%",
-        y: "38.0%",
-        isAvailable: function(){
-            return "available";
-        }
-    },
-    {
-        name: "Epona's Song",
-        x: "47.0%",
-        y: "41.5%",
-        isAvailable: function(){
-            return "available";
-        }
-    },
-    {
-        name: "Lon Lon Heart Piece",
-        x: "44.0%",
-        y: "43.5%",
-        isAvailable: function(){
-            return "available";
         }
     },
     {
