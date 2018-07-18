@@ -809,13 +809,32 @@ var dungeons = [
             ['Frogs mini game']: { isAvailable: function() {return (items.Bombs || items.Bombchu || items.Scale) && items.ZeldasLullaby && items.EponasSong && items.SariasSong && items.SunsSong && items.SongofTime;} },
         },
         isBeatable: function(){
-            if( items.EponasSong && items.Mask >=2) {
+            if( (items.Bombs || items.Bombchu || items.Scale || items.Boomerang || items.HoverBoots) && items.ZeldasLullaby && items.EponasSong && items.SariasSong && items.SunsSong && items.SongofTime && items.SongofStorms) {
                 if (this.canGetChest() == 'available')
                     return 'avialable';
                 return 'possible';
             }
             else
                 return "unavailable";
+    },
+        canGetChest: function(){
+            return generalCanGetChest(this.chestlist);
+        }
+},
+    {
+        name: "Lake Hylia",
+        x: "42.0%",
+        y: "86.0%",
+        chestlist: {
+            ['Child Fishing']: { isAvailable: function() {return items.KokiriSword;} },
+            ['Silver Scale item']: { isAvailable: function() {return items.Scale;} },
+            ['Diving in the Lab']: { isAvailable: function() {return items.Scale >= 2 || (items.IronBoots && items.Hookshot);} },
+            ['Lab Roof Heart Piece']: { isAvailable: function() {return items.Bean || (items.Hookshot && items.Scarecrow >= 2);} },
+            ['Adult Fishing']: { isAvailable: function() {return true;} },
+            ['Shoot the Sun']: { isAvailable: function() {return items.Bow && items.Hookshot >= 2 && items.Scarecrow >= 2;} },
+        },
+        isBeatable: function(){
+            return this.canGetChest();
     },
         canGetChest: function(){
             return generalCanGetChest(this.chestlist);
