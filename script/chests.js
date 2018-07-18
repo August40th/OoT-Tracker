@@ -845,8 +845,8 @@ var dungeons = [
 },
     {
         name: "Gerudo Valley",
-        x: "18.0%",
-        y: "32.0%",
+        x: "19.0%",
+        y: "31.5%",
         chestlist: {
             ['Crate Heart Piece']: { isAvailable: function() { return true; } },
             ['Waterfall Heart Piece']: { isAvailable: function() { return true; } },
