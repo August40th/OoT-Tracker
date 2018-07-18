@@ -758,18 +758,13 @@ var dungeons = [
         chestlist: {
             ['River Heart Piece 1']: { isAvailable: function() {return true;} },
             ['River Open Grotto']: { isAvailable: function() {return true;} },
-            ['River Heart Piece 2']: { isAvailable: function() {return (items.HoverBoots || items.Boomerang || items.Bombs || items.Bombchu || items.Scale);} },
+            ['River Heart Piece 2']: { isAvailable: function() {return items.HoverBoots || (items.Boomerang && (items.Bombs || items.Bombchu || items.Scale));} },           
             ['Frogs in the Rain']: { isAvailable: function() {return items.SongofStorms && (items.Bombs || items.Bombchu || items.Scale);} },
             ['Frogs mini game']: { isAvailable: function() {return (items.Bombs || items.Bombchu || items.Scale) && items.ZeldasLullaby && items.EponasSong && items.SariasSong && items.SunsSong && items.SongofTime;} },
+            ['Bean Salesman']: { isAvailable: function() {items.Bombs || items.Bombchu || items.Scale;} },    
         },
         isBeatable: function(){
-            if( (items.Bombs || items.Bombchu || items.Scale || items.Boomerang || items.HoverBoots) && items.ZeldasLullaby && items.EponasSong && items.SariasSong && items.SunsSong && items.SongofTime && items.SongofStorms) {
-                if (this.canGetChest() == 'available')
-                    return 'avialable';
-                return 'possible';
-            }
-            else
-                return "unavailable";
+            return this.canGetChest();
         },
         canGetChest: function(){
             return generalCanGetChest(this.chestlist);
@@ -781,7 +776,7 @@ var dungeons = [
         y: "85.0%",
         chestlist: {
             ['Scarecrow Song setup']: { isAvailable: function() { return items.Ocarina; } },
-            ['Scarecrow Song']: { isAvailable: function() { return items.Scarecrow; } },
+            ['Scarecrow Song']: { isAvailable: function() { return items.Scarecrow && items.MasterSword; } },
             ['Child Fishing']: { isAvailable: function() {return items.KokiriSword;} },
             ['Silver Scale item']: { isAvailable: function() {return items.Scale;} },
             ['Diving in the Lab']: { isAvailable: function() {return items.Scale >= 2 || (items.IronBoots && items.Hookshot);} },
@@ -841,7 +836,7 @@ var dungeons = [
             ['Dampe Digging']: { isAvailable: function () {
                 return (true); } },
             ['Magic Bean Heart Piece']: { isAvailable: function () {
-                return (items.Scale || items.Bombs || items.Bombchu || items.Hookshot >= 2); } }, 
+                return (items.Bean || items.Hookshot >= 2); } }, 
             ['Dampe Race 1']: { isAvailable: function () {
                 return (items.MasterSword); } },
             ['Dampe Race 2']: { isAvailable: function () {
@@ -925,4 +920,3 @@ var chests = [
         }
     },
 ]
-
