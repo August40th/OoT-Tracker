@@ -850,7 +850,7 @@ var dungeons = [
                 return (true); } },
             ['Redead Grave']: { isAvailable: function () {
                 return (items.SunsSong); } },
-            ['Composer Brother's Song']: { isAvailable: function () {
+            ['Composer Brother/s Song']: { isAvailable: function () {
                 return (items.ZeldasLullaby); } },
             ['Royal Tomb Chest']: { isAvailable: function () {
                 return (items.ZeldasLullaby && ((items.Dins || (items.Fire && items.Bow)) && items.Magic)); } },                          
