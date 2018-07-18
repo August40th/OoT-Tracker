@@ -707,7 +707,7 @@ var dungeons = [
             ['Storms Grotto']: { isAvailable: function () {
                 return (items.SongofStorms); } },
             ['Bolero of Fire']: { isAvailable: function () {
-                return (items.BoleroofFire || items.HoverBoots || items.Hookshot; } },
+                return items.BoleroofFire || items.HoverBoots || items.Hookshot; } },
             ['Crater Bean Heart Piece']: { isAvailable: function () {
                 return (items.Bean && items.BoleroofFire); } },            
             ['Crater Fairy Fountain']: { isAvailable: function () {
