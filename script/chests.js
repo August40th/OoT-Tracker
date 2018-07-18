@@ -877,9 +877,9 @@ var dungeons = [
 //define overworld chests
 var chests = [
     {
-        name: "Song of Time",
-        x: "52.3%",
-        y: "30.5%",
+        name: "Ocarina of Time",
+        x: "54.3%",
+        y: "28.0%",
         isAvailable: function(){
             if(items.KokiriEmerald && items.GoronRuby && items.ZoraSapphire)
                 return "available";
@@ -891,7 +891,7 @@ var chests = [
         x: "50.0%",
         y: "28.0%",
         isAvailable: function(){
-            if(items.Bombs || items.Hammer)
+            if(items.Bombs || items.Hammer || items.Bombchu)
                 return "available";
             return "unavailable";
         }
@@ -901,7 +901,7 @@ var chests = [
         x: "60.0%",
         y: "59.0%",
         isAvailable: function(){
-            if(items.Bombs || items.Hammer)
+            if(items.Bombs || items.Hammer || items.Bombchu)
                 return "available";
             return "unavailable";
         }
@@ -915,61 +915,21 @@ var chests = [
         }
     },
     {
-        name: "Souhern Grotto Deku Saleman $10",
+        name: "Souhern Grotto $10",
         x: "42.0%",
         y: "64.0%",
         isAvailable: function(){
-            if(items.Bombs || items.Hammer)
+            if(items.Bombs || items.Hammer || items.Bombchu)
                 return "available";
             return "unavailable";
         }
     },
     {
-        name: "Heart Piece Underwater Grotto",
+        name: "Tektite Grotto",
         x: "44.0%",
         y: "32.0%",
         isAvailable: function(){
-            if((items.Bombs || items.Hammer) && (items.Scale >= 2 || items.IronBoots))
-                return "available";
-            return "unavailable";
-        }
-    },
-    {
-        name: "Haunted Wasteland Chest",
-        x: "14.0%",
-        y: "25.0%",
-        isAvailable: function(){
-            if(((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2) && ((items.Dins || (items.Fire && items.Bow)) && items.Magic))
-                return "available";
-            return "unavailable";
-        }
-    },
-    {
-        name: "Requiem of Spirit",
-        x: "04.5%",
-        y: "21.5%",
-        isAvailable: function(){
-            if( (((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2) && items.Lens && items.Magic) || items.RequiemofSpirit)
-                return "available";
-            return "unavailable";
-        }
-    },
-    {
-        name: "Desert Colossus Fairy",
-        x: "08.0%",
-        y: "19.0%",
-        isAvailable: function(){
-            if( ((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2) && items.Lens && items.Magic) || items.RequiemofSpirit) && items.Bombs && items.ZeldasLullaby)
-                return "available";
-            return "unavailable";
-        }
-    },    
-    {
-        name: "Desert Colossus Heart Piece",
-        x: "06.4%",
-        y: "23.5%",
-        isAvailable: function(){
-            if(items.RequiemofSpirit && (items.Bombs || items.Scale))
+            if((items.Bombs || items.Hammer || items.Bombchu) && (items.Scale >= 2 || items.IronBoots))
                 return "available";
             return "unavailable";
         }
