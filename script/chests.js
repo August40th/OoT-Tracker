@@ -916,8 +916,8 @@ var chests = [
     },
     {
         name: "Tektite Grotto",
-        x: "44.0%",
-        y: "32.0%",
+        x: "42.0%",
+        y: "33.0%",
         isAvailable: function(){
             if((items.Bombs || items.Hammer || items.Bombchu) && (items.Scale >= 2 || items.IronBoots))
                 return "available";
