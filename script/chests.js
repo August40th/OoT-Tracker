@@ -359,7 +359,7 @@ var dungeons = [
             ['Maze Side Room']: { isAvailable:  function () {
                 return items.FireKey >= 3 && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)) && items.Glove; } },
             ['Map Chest']: { isAvailable: function () {
-                return (items.FireKey >= 4 && items.Bow) || items.FireKey >= 5) && (items.BoleroofFire || items.HoverBoots || items.Hookshot) && items.Glove; } },           
+                return ((items.FireKey >= 4 && items.Bow) || items.FireKey >= 5) && (items.BoleroofFire || items.HoverBoots || items.Hookshot) && items.Glove; } },           
             ['Maze Upper Chest']: { isAvailable:  function () {
                 return items.FireKey >= 5 && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)) && items.Glove; } },
             ['Boulder Maze Bombable Pit']: { isAvailable:  function () {
