@@ -824,10 +824,10 @@ var dungeons = [
     {
         name: "Lake Hylia",
         x: "38.0%",
-        y: "85.5%",
+        y: "85.0%",
         chestlist: {
-            ['Scarecrow Song setup'] { isAvailable: function() { return true; } },
-            ['Scarecrow Song'] { isAvailable: function() { return items.Scarecrow; } },
+            ['Scarecrow Song setup']: { isAvailable: function() { return true; } },
+            ['Scarecrow Song']: { isAvailable: function() { return items.Scarecrow; } },
             ['Child Fishing']: { isAvailable: function() {return items.KokiriSword;} },
             ['Silver Scale item']: { isAvailable: function() {return items.Scale;} },
             ['Diving in the Lab']: { isAvailable: function() {return items.Scale >= 2 || (items.IronBoots && items.Hookshot);} },
