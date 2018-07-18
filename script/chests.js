@@ -29,6 +29,7 @@ var dungeons = [
         chestlist: {
             ['Kokiri Sword Chest']: { isAvailable: function() {return true} },
             ['Midos House x4 Chests']: { isAvailable: function() {return true} },
+            ['Fairy Ocarina']: { isAvailable: function() {return true} },
             ['Song of Storms Grotto']: { isAvailable: function() {return items.SongofStorms;} },
         },
         isBeatable: function(){
@@ -823,7 +824,7 @@ var dungeons = [
     },
     {
         name: "Lake Hylia",
-        x: "38.0%",
+        x: "37.0%",
         y: "85.0%",
         chestlist: {
             ['Scarecrow Song setup']: { isAvailable: function() { return true; } },
@@ -842,6 +843,25 @@ var dungeons = [
             return generalCanGetChest(this.chestlist);
         }
 },
+    {
+        name: "Gerudo Valley",
+        x: "16.0%",
+        y: "42.0%",
+        chestlist: {
+            ['Crate Heart Piece']: { isAvailable: function() { return true; } },
+            ['Waterfall Heart Piece']: { isAvailable: function() { return true; } },
+            ['Hammer Rocks Chest']: { isAvailable: function() { return (items.EponasSong || items.Hookshot >= 2) && items.Hammer; } },
+            ['Gerudo Fortress Rooftop Chest']: { isAvailable: function() { return (items.EponasSong || items.Hookshot >= 2) && items.HoverBoots || items.Hookshot >= 2; } },
+            ['Horseback Archery 1000 pts']: { isAvailable: function() { return items.Bow && items.EponasSong; } },
+            ['Horseback Archery 1500 pts']: { isAvailable: function() { return items.Bow && items.EponasSong; } },
+        },
+        isBeatable: function(){
+            return this.canGetChest();
+        },
+        canGetChest: function(){
+            return generalCanGetChest(this.chestlist);
+        }
+    },
 ];
 
 //define overworld chests
@@ -895,7 +915,7 @@ var chests = [
         }
     },
     {
-        name: "Iron Boots \ Gold Scale Grotto",
+        name: "Heart Piece Underwater Grotto",
         x: "44.0%",
         y: "32.0%",
         isAvailable: function(){
@@ -935,7 +955,7 @@ var chests = [
         x: "18.8%",
         y: "23.0%",
         isAvailable: function(){
-            if((items.EponasSong || items.Hookshot >= 2) && items.HoverBoots || items.Hookshot >= 2)
+            if((items.EponasSong || items.Hookshot >= 2) && items.HoverBoots || (items.Hookshot && items.Scarecrow))
                 return "available";
             return "unavailable";
         }
@@ -945,7 +965,7 @@ var chests = [
         x: "21.7%",
         y: "28.0%",
         isAvailable: function(){
-            if((items.EponasSong || items.Hookshot >= 2) && items.EponasSong && items.Bow)
+            if(items.EponasSong && items.Bow)
                 return "available";
             return "unavailable";
         }
