@@ -823,14 +823,14 @@ var dungeons = [
 },
     {
         name: "Lake Hylia",
-        x: "42.0%",
-        y: "86.0%",
+        x: "38.0%",
+        y: "85.5%",
         chestlist: {
             ['Child Fishing']: { isAvailable: function() {return items.KokiriSword;} },
             ['Silver Scale item']: { isAvailable: function() {return items.Scale;} },
             ['Diving in the Lab']: { isAvailable: function() {return items.Scale >= 2 || (items.IronBoots && items.Hookshot);} },
             ['Lab Roof Heart Piece']: { isAvailable: function() {return items.Bean || (items.Hookshot && items.Scarecrow >= 2);} },
-            ['Adult Fishing']: { isAvailable: function() {return true;} },
+            ['Adult Fishing']: { isAvailable: function() {return items.Bean || (items.Hookshot && items.Scarecrow >= 2);} },
             ['Shoot the Sun']: { isAvailable: function() {return items.Bow && items.Hookshot >= 2 && items.Scarecrow >= 2;} },
         },
         isBeatable: function(){
@@ -841,9 +841,6 @@ var dungeons = [
         }
 },
 ];
-
-
-
 
 //define overworld chests
 var chests = [
@@ -858,7 +855,7 @@ var chests = [
         }
     },
     {
-        name: "Hyrule Field North Grotto",
+        name: "Grotto West of Castle Gate",
         x: "50.0%",
         y: "28.0%",
         isAvailable: function(){
@@ -868,7 +865,7 @@ var chests = [
         }
     },
     {
-        name: "Hyrule Field Forest Grotto",
+        name: "South East Grotto",
         x: "60.0%",
         y: "59.0%",
         isAvailable: function(){
@@ -878,7 +875,7 @@ var chests = [
         }
     },
     {
-        name: "Hyrule Field South Grotto",
+        name: "Southern Open Grotto",
         x: "44.5%",
         y: "64.0%",
         isAvailable: function(){
@@ -886,7 +883,7 @@ var chests = [
         }
     },
     {
-        name: "Hyrule Field Deku Salesman Grotto",
+        name: "Souhern Grotto Deku Saleman $10",
         x: "42.0%",
         y: "64.0%",
         isAvailable: function(){
@@ -896,71 +893,11 @@ var chests = [
         }
     },
     {
-        name: "Diving Heart Piece Grotto",
+        name: "Iron Boots \ Gold Scale Grotto",
         x: "44.0%",
         y: "32.0%",
         isAvailable: function(){
             if((items.Bombs || items.Hammer) && (items.Scale >= 2 || items.IronBoots))
-                return "available";
-            return "unavailable";
-        }
-    },
-    {
-        name: "Underwater Bottle",
-        x: "38.6%",
-        y: "80.0%",
-        isAvailable: function(){
-            if(items.Scale)
-                return "available";
-            return "unavailable";
-        }
-    },
-    {
-        name: "Lake Hylia Sun",
-        x: "41.5%",
-        y: "91.0%",
-        isAvailable: function(){
-            if(items.Hookshot >= 2 && items.Bow)
-                return "available";
-            return "unavailable";
-        }
-    },
-    {
-        name: "Diving in the Lab",
-        x: "35.2%",
-        y: "77.4%",
-        isAvailable: function(){
-            if(items.Scale >= 2)
-                return "available";
-            return "unavailable";
-        }
-    },
-    {
-        name: "Lab Roof Heart Piece",
-        x: "35.2%",
-        y: "74.0%",
-        isAvailable: function(){
-            if(items.Scale || items.Bombs || items.Hookshot)
-                return "available";
-            return "unavailable";
-        }
-    },
-    {
-        name: "Child Fishing",
-        x: "45.0%",
-        y: "78.0%",
-        isAvailable: function(){
-            if(items.KokiriSword)
-                return "available";
-            return "unavailable";
-        }
-    },
-    {
-        name: "Adult Fishing",
-        x: "46.9%",
-        y: "78.0%",
-        isAvailable: function(){
-            if(items.Hookshot || items.Scale || items.Bombs)
                 return "available";
             return "unavailable";
         }
