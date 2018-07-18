@@ -643,7 +643,7 @@ var dungeons = [
             ['Minuet of Forest']: { isAvailable: function () {
                 return items.MasterSword; } },           
             ['Deku Sale $40']: { isAvailable: function () {
-                return (true); } },
+                return (items.DekuShield || items.Nuts || items.Stick); } },
             ['Skull Kid']: { isAvailable: function () {
                 return (items.SariasSong); } },
             ['Ocarina Memory Game']: { isAvailable: function () {
@@ -653,7 +653,7 @@ var dungeons = [
             ['Bomb Grotto Chest']: { isAvailable: function () {
                 return items.Bombs || items.Hammer || items.Bombchu; } },
             ['Deku Sale Grotto $40']: { isAvailable: function () {
-                return (items.Bombs || items.Hammer || items.Bombchu); } },
+                return (items.Bombs || items.Hammer || items.Bombchu) && (items.DekuShield || items.Nuts || items.Stick); } },
             ['Wolfos Grotto']: { isAvailable: function () {
                 return items.Bombs || items.Hammer || items.Bombchu; } },
             ['Saria\'s Song']: { isAvailable: function () {
@@ -905,7 +905,7 @@ var chests = [
         }
     },
     {
-        name: "Souhern Grotto $10",
+        name: "Deku Sale Bomb Grotto $10",
         x: "42.0%",
         y: "64.0%",
         isAvailable: function(){
