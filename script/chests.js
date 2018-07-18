@@ -845,8 +845,8 @@ var dungeons = [
 },
     {
         name: "Gerudo Valley",
-        x: "16.0%",
-        y: "42.0%",
+        x: "21.0%",
+        y: "32.0%",
         chestlist: {
             ['Crate Heart Piece']: { isAvailable: function() { return true; } },
             ['Waterfall Heart Piece']: { isAvailable: function() { return true; } },
@@ -920,62 +920,6 @@ var chests = [
         y: "32.0%",
         isAvailable: function(){
             if((items.Bombs || items.Hammer) && (items.Scale >= 2 || items.IronBoots))
-                return "available";
-            return "unavailable";
-        }
-    },
-    {
-        name: "Gerudo Valley Hammer Rocks Chest",
-        x: "22.0%",
-        y: "38.0%",
-        isAvailable: function(){
-            if((items.EponasSong || items.Hookshot >= 2) && items.Hammer)
-                return "available";
-            return "unavailable";
-        }
-    },
-    {
-        name: "Gerudo Valley Crate Heart Piece",
-        x: "24.0%",
-        y: "41.5%",
-        isAvailable: function(){
-            return "available";
-        }
-    },
-    {
-        name: "Gerudo Valley Waterfall Heart Piece",
-        x: "25.5%",
-        y: "32.0%",
-        isAvailable: function(){
-            return "available";
-        }
-    },
-    {
-        name: "Gerudo Fortress Rooftop Chest",
-        x: "18.8%",
-        y: "23.0%",
-        isAvailable: function(){
-            if((items.EponasSong || items.Hookshot >= 2) && items.HoverBoots || (items.Hookshot && items.Scarecrow))
-                return "available";
-            return "unavailable";
-        }
-    },
-    {
-        name: "Horseback Archery Game 1000pts",
-        x: "21.7%",
-        y: "28.0%",
-        isAvailable: function(){
-            if(items.EponasSong && items.Bow)
-                return "available";
-            return "unavailable";
-        }
-    },
-    {
-        name: "Horseback Archery Game 1500pts",
-        x: "23.5%",
-        y: "28.0%",
-        isAvailable: function(){
-            if((items.EponasSong || items.Hookshot >= 2) && items.EponasSong && items.Bow)
                 return "available";
             return "unavailable";
         }
