@@ -792,11 +792,11 @@ var dungeons = [
             }
             else
                 return "unavailable";
-    },
+        },
         canGetChest: function(){
             return generalCanGetChest(this.chestlist);
         }
-},
+    },
     {
         name: "Zora/s River",
         x: "78.7%",
@@ -816,16 +816,18 @@ var dungeons = [
             }
             else
                 return "unavailable";
-    },
+        },
         canGetChest: function(){
             return generalCanGetChest(this.chestlist);
         }
-},
+    },
     {
         name: "Lake Hylia",
         x: "38.0%",
         y: "85.5%",
         chestlist: {
+            ['Scarecrow Song setup'] { isAvailable: function() { return true; } },
+            ['Scarecrow Song'] { isAvailable: function() { return items.Scarecrow; } },
             ['Child Fishing']: { isAvailable: function() {return items.KokiriSword;} },
             ['Silver Scale item']: { isAvailable: function() {return items.Scale;} },
             ['Diving in the Lab']: { isAvailable: function() {return items.Scale >= 2 || (items.IronBoots && items.Hookshot);} },
@@ -835,7 +837,7 @@ var dungeons = [
         },
         isBeatable: function(){
             return this.canGetChest();
-    },
+        },
         canGetChest: function(){
             return generalCanGetChest(this.chestlist);
         }
