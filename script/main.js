@@ -465,7 +465,7 @@ function initGridRow(itemsets) {
         WaterKey0: 0,
         ShadowKey0: 0,
         SpiritKey0: 0,
-        CastleKey: 0,
+        CastleKey0: 0,
     };
 
     var r, c;
