@@ -835,8 +835,8 @@ var dungeons = [
     },
     {
         name: "Graveyard",
-        x: "68.6%",
-        y: "19.0%",
+        x: "74.6%",
+        y: "19.5%",
         chestlist: {            
             ['Dampe Digging']: { isAvailable: function () {
                 return (true); } },
