@@ -371,7 +371,7 @@ var dungeons = [
             ['Switch under Song of Time Block']: { isAvailable:  function () {
                 return (items.FireKey >= 7 || items.HoverBoots) && (items.BoleroofFire || items.HoverBoots || items.Hookshot) && items.Glove && items.Hammer; } },
             ['Megaton Hammer Chest']: { isAvailable: function () {
-                return items.FireKey >= 6 && (items.BoleroofFire || items.HoverBoots || items.Hooksho)) && items.Glove && (items.Bombs || items.Bombchu || items.Hammer); } },
+                return items.FireKey >= 6 && (items.BoleroofFire || items.HoverBoots || items.Hooksho) && items.Glove && (items.Bombs || items.Bombchu || items.Hammer); } },
             ['Volvagia']: { isAvailable: function () {
                 return (items.GoronTunic && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)) && items.Hammer && (items.HoverBoots || (items.Glove && (items.Bombs || items.Hookshot) && items.Bombs))); } },
         },
