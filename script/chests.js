@@ -100,13 +100,7 @@ var dungeons = [
                 return (items.ZoraTunic && items.IronBoots && items.Hookshot >= 2); } },
         },
         isBeatable: function(){
-            if(items.IronBoots && items.Hookshot >= 2) {
-                if (this.canGetChest() == 'available')
-                    return 'available';
-                return 'possible';
-            }
-            else
-                return "unavailable";
+            return this.canGetChest();
         },
         canGetChest: function(){
             return generalCanGetChest(this.chestlist);
@@ -854,6 +848,22 @@ var dungeons = [
             ['Gerudo Fortress Rooftop Chest']: { isAvailable: function() { return (items.EponasSong || items.Hookshot >= 2) && items.HoverBoots || items.Hookshot >= 2; } },
             ['Horseback Archery 1000 pts']: { isAvailable: function() { return items.Bow && items.EponasSong; } },
             ['Horseback Archery 1500 pts']: { isAvailable: function() { return items.Bow && items.EponasSong; } },
+        },
+        isBeatable: function(){
+            return this.canGetChest();
+        },
+        canGetChest: function(){
+            return generalCanGetChest(this.chestlist);
+        }
+    },
+    {
+        name: "Desert Colossus",
+        x: "8.4%",
+        y: "16.0%",
+        chestlist: {
+            ['Requiem of Spirit']: { isAvailable: function() {return (items.EponasSong && items.HoverBoots) || items.Hookshot >= 2 || items.RequiemofSpirit} },
+            ['Desert Bean Heart Piece']: { isAvailable: function() {return items.Bean && items.RequiemofSpirit} },          
+            ['Fairy Fountain']: { isAvailable: function() {return items.ZeldasLullaby && (items.Bombs || items.Bombchu)} },
         },
         isBeatable: function(){
             return this.canGetChest();
