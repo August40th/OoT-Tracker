@@ -659,9 +659,9 @@ var dungeons = [
             ['Saria\'s Song']: { isAvailable: function () {
                 return items.Mask >= 2; } },            
             ['Deku Theater Skull Mask']: { isAvailable: function () {
-                return items.Mask >= 4; } },
+                return items.Mask >= 6; } },
             ['Deku Theater Mask of Truth']: { isAvailable: function () {
-                return items.KokiriEmerald && items.GoronRuby && items.ZoraSapphire && items.Mask >= 7; } },
+                return items.KokiriEmerald && items.GoronRuby && items.ZoraSapphire && items.Mask >= 12; } },
         },
         isBeatable: function(){
             return this.canGetChest();
@@ -739,13 +739,7 @@ var dungeons = [
             ['Race Ingo']: { isAvailable: function() {return items.MasterSword && items.EponasSong;} },
         },
         isBeatable: function(){
-            if( items.EponasSong && items.Mask >=2) {
-                if (this.canGetChest() == 'available')
-                    return 'avialable';
-                return 'possible';
-            }
-            else
-                return "unavailable";
+            return this.canGetChest();
         },
         canGetChest: function(){
             return generalCanGetChest(this.chestlist);
