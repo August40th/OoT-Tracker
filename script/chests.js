@@ -550,13 +550,13 @@ var dungeons = [
             ['Hyrule Castle Fairy']: { isAvailable: function () {
                 return (items.Bombs || items.Bombchu) && items.ZeldasLullaby; } },
             ['Prelude of Light']: { isAvailable: function () {
-                return (items.ForestMedallion); } },
+                return (items.MasterSword && items.ForestMedallion); } },
             ['Zelda\'s Secret Weapon']: { isAvailable: function () {
-                return (items.ShadowMedallion && items.SpiritMedallion); } },
+                return (items.MasterSword && items.ShadowMedallion && items.SpiritMedallion); } },
             ['Ganon\'s Castle Fairy']: { isAvailable: function () {
-                return (items.Glove >= 3 && items.ZeldasLullaby); } },           
+                return (items.MasterSword && items.Glove >= 3 && items.ZeldasLullaby); } },           
             ['10 Big Poes']: { isAvailable: function () {
-                return (items.Bow && items.EponasSong && items.Bottle); } },
+                return (items.MasterSword && items.Bow && items.EponasSong && items.Bottle); } },
         },
         isBeatable: function(){
             return this.canGetChest();
@@ -588,18 +588,18 @@ var dungeons = [
                 return (true); } },
             ['Kakariko Redead Grotto']: { isAvailable: function () {
                 return (items.Bombs || items.Hammer || items.Bombchu); } },
-            ['Anju\'s Adult item']: { isAvailable: function () {
-                return (items.MasterSword); } },
             ['Cow Heart Piece']: { isAvailable: function () {
                 return (true); } },
+            ['Anju\'s Adult item']: { isAvailable: function () {
+                return (items.MasterSword); } },            
             ['Windmill Song']: { isAvailable: function () {
                 return items.MasterSword && items.Ocarina; } },
             ['Windmill Heart Piece']: { isAvailable: function () {
                 return items.MasterSword || items.Boomerang; } },
             ['Bow Mini Game']: { isAvailable: function () {
-                return (items.Bow); } },                   
+                return (items.MasterSword && items.Bow); } },                   
             ['Nocturne of Shadow']: { isAvailable: function () {
-                return (items.ForestMedallion && items.FireMedallion && items.WaterMedallion); } },            
+                return (items.MasterSword && items.ForestMedallion && items.FireMedallion && items.WaterMedallion); } },            
         },
         isBeatable: function(){
             return this.canGetChest();
@@ -614,9 +614,9 @@ var dungeons = [
         y: "06.3%",
         chestlist: {
             ['Link the Goron']: { isAvailable: function () {
-                return (items.Glove || items.Bombs || items.Bow || items.Bombchu); } },  
+                return items.MasterSword && (items.Glove || items.Bombs || items.Bow || items.Bombchu); } },  
             ['Left Boulder Maze Chest']: { isAvailable: function () {
-                return (items.Glove >= 2 || items.Hammer); } },
+                return items.MasterSword && (items.Glove >= 2 || items.Hammer); } },
             ['Center Boulder Maze Chest']: { isAvailable: function () {
                 return (items.Bombs || items.Hammer || items.Glove >= 2 || items.Bombchu); } },
             ['Right Boulder Maze Chest']: { isAvailable: function () {
@@ -682,11 +682,11 @@ var dungeons = [
             ['Fairy Fountain']: { isAvailable: function () {
                 return items.ZoraLetter && (items.Bombs || items.Bombchu); } },
             ['Iceberg Heart Piece']: { isAvailable: function () {
-                return (items.ZoraLetter && (items.Bombs || items.Scale || items.Bombchu) && items.ZeldasLullaby); } },
+                return (items.MasterSword && items.ZoraLetter && (items.Bombs || items.Scale || items.Bombchu) && items.ZeldasLullaby); } },
             ['Underwater Heart Piece']: { isAvailable: function () {
-                return items.ZoraLetter && items.IronBoots && (items.ZeldasLullaby || items.HoverBoots); } },
+                return items.MasterSword && items.ZoraLetter && items.IronBoots && (items.ZeldasLullaby || items.HoverBoots); } },
             ['Thaw King Zora']: { isAvailable: function () {
-                return (items.ZeldasLullaby || items.HoverBoots) && ((items.ZoraLetter && (items.Bombs || items.Scale || items.Bombchu)) || isBridgeOpen() || items.Wallet >= 2); } },
+                return (items.MasterSword && items.ZeldasLullaby || items.HoverBoots) && ((items.ZoraLetter && (items.Bombs || items.Scale || items.Bombchu)) || isBridgeOpen() || items.Wallet >= 2); } },
         },
         isBeatable: function(){
             return this.canGetChest();
@@ -707,7 +707,7 @@ var dungeons = [
             ['Storms Grotto']: { isAvailable: function () {
                 return (items.SongofStorms); } },
             ['Bolero of Fire']: { isAvailable: function () {
-                return items.BoleroofFire || items.HoverBoots || items.Hookshot; } },
+                return items.MasterSword && (items.BoleroofFire || items.HoverBoots || items.Hookshot); } },
             ['Crater Bean Heart Piece']: { isAvailable: function () {
                 return (items.Bean && items.BoleroofFire); } },            
             ['Crater Fairy Fountain']: { isAvailable: function () {
@@ -719,7 +719,7 @@ var dungeons = [
             ['Summit Fairy Fountain']: { isAvailable: function () {
                 return ((items.Bombs || items.Hammer || items.Bombchu) && items.ZeldasLullaby); } },
             ['Biggoron\'s Finest Work']: { isAvailable: function () {
-                return (items.Trade >= 1 && items.ZoraLetter && (items.EponasSong || items.Hookshot >= 2)) || (items.Trade >= 6 && (items.EponasSong || items.Hookshot >= 2)) || items.Trade >= 9; } },
+                return (items.MasterSword && items.Trade >= 1 && items.ZoraLetter && (items.EponasSong || items.Hookshot >= 2)) || (items.Trade >= 6 && (items.EponasSong || items.Hookshot >= 2)) || items.Trade >= 9; } },
         },
         isBeatable: function(){
             return this.canGetChest();
@@ -769,14 +769,14 @@ var dungeons = [
         x: "40.0%",
         y: "81.0%",
         chestlist: {
-            ['Scarecrow Song setup']: { isAvailable: function() { return items.Ocarina; } },
+            ['Scarecrow setup']: { isAvailable: function() { return items.Ocarina; } },
             ['Scarecrow Song']: { isAvailable: function() { return items.Scarecrow && items.MasterSword; } },
             ['Child Fishing']: { isAvailable: function() {return items.KokiriSword;} },
             ['Silver Scale item']: { isAvailable: function() {return items.Scale;} },
-            ['Diving in the Lab']: { isAvailable: function() {return items.Scale >= 2 || (items.IronBoots && items.Hookshot);} },
-            ['Lab Roof Heart Piece']: { isAvailable: function() {return items.Bean || (items.Hookshot && items.Scarecrow >= 2);} },
-            ['Adult Fishing']: { isAvailable: function() {return items.Bean || (items.Hookshot && items.Scarecrow >= 2);} },
-            ['Shoot the Sun']: { isAvailable: function() {return items.Bow && items.Hookshot >= 2 && items.Scarecrow >= 2;} },
+            ['Diving in the Lab']: { isAvailable: function() {return items.MasterSword && (items.Scale >= 2 || (items.IronBoots && items.Hookshot));} },
+            ['Lab Roof Heart Piece']: { isAvailable: function() {return items.MasterSword && (items.Bean || (items.Hookshot && items.Scarecrow >= 2));} },
+            ['Adult Fishing']: { isAvailable: function() {return items.MasterSword && (items.Bean || (items.Hookshot && items.Scarecrow >= 2));} },
+            ['Shoot the Sun']: { isAvailable: function() {return items.MasterSword && items.Bow && items.Hookshot >= 2 && items.Scarecrow >= 2;} },
         },
         isBeatable: function(){
             return this.canGetChest();
@@ -792,10 +792,10 @@ var dungeons = [
         chestlist: {
             ['Crate Heart Piece']: { isAvailable: function() { return true; } },
             ['Waterfall Heart Piece']: { isAvailable: function() { return true; } },
-            ['Hammer Rocks Chest']: { isAvailable: function() { return (items.EponasSong || items.Hookshot >= 2) && items.Hammer; } },
-            ['Gerudo Fortress Rooftop Chest']: { isAvailable: function() { return (items.EponasSong || items.Hookshot >= 2) && items.HoverBoots || items.Hookshot >= 2; } },
-            ['Horseback Archery 1000 pts']: { isAvailable: function() { return items.Bow && items.EponasSong; } },
-            ['Horseback Archery 1500 pts']: { isAvailable: function() { return items.Bow && items.EponasSong; } },
+            ['Hammer Rocks Chest']: { isAvailable: function() { return (items.EponasSong || items.Hookshot >= 2) && items.MasterSword && items.Hammer; } },
+            ['Gerudo Fortress Rooftop Chest']: { isAvailable: function() { return (items.EponasSong || items.Hookshot >= 2) && items.MasterSword && (items.HoverBoots || (items.Scarecrow >= 2 && items.Hookshot)); } },
+            ['Horseback Archery 1000 pts']: { isAvailable: function() { return items.MasterSword && items.Bow && items.EponasSong; } },
+            ['Horseback Archery 1500 pts']: { isAvailable: function() { return items.MasterSword && items.Bow && items.EponasSong; } },
         },
         isBeatable: function(){
             return this.canGetChest();
