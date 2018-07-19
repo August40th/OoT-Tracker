@@ -1,7 +1,5 @@
 var medallions = [];
 var dungeonImg = ['Unknown', 'Rauru', 'Slingshot0', 'Bombs0', 'Boomerang', 'Bow0', 'Hammer', 'Hookshot2', 'MirrorShield', 'HoverBoots']
-var dungeonkeys = [];
-var bosskey = ['BossKey0', 'BossKey1']
 ganonlogic = 'Open';
 showprizes = false;
 
@@ -423,12 +421,6 @@ function updateGridItem(row, index) {
         else
             itemGrid[row][index][3].style.backgroundImage = "";           
     }
-    if (dungeonkeys[item] !== undefined){
-        if (showprizes)
-           itemGrid[row][index][3].style.backgroundImage = "url(images/" + bosskey[dungeonkeys[item]] + itemsMax[item] + ".png)";
-        else
-            itemGrid[row][index][3].style.backgroundImage = "";           
-    }
 }
 
 function updateGridItemAll() {
@@ -458,14 +450,6 @@ function initGridRow(itemsets) {
         KokiriEmerald: 0,
         GoronRuby: 0,
         ZoraSapphire: 0,
-    },
-    dungeonkeys = {
-        ForestKey0: 0,
-        FireKey0: 0,
-        WaterKey0: 0,
-        ShadowKey0: 0,
-        SpiritKey0: 0,
-        CastleKey0: 0,
     };
 
     var r, c;
@@ -569,16 +553,6 @@ function gridItemClick(row, col, corner) {
             medallions[item]++;
             if (medallions[item] >=  10)
                 medallions[item] = 0;
-        } 
-        else {
-            items[item] = !items[item];
-        }
-    }
-    else if(dungeonkeys[item] !== undefined && showprizes){
-        if (corner == 1) {
-            dungeonkeys[item]++;
-            if (dungeonkeys[item] >=  2)
-                dungeonkeys[item] = 0;
         } 
         else {
             items[item] = !items[item];
@@ -854,10 +828,6 @@ function preloader() {
     for (medallion in dungeonImg) {
         var img = new Image();
         img.src = "images/" + dungeonImg[medallion] + ".png";
-    }
-    for (dungeonkey in bosskey) {
-        var img = new Image();
-        img.src = "images/" + bosskey[dungeonkey] + ".png";
     }
 }
 function addLoadEvent(func) {
