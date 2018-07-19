@@ -28,7 +28,7 @@ var dungeons = [
         y: "63.9%",
         chestlist: {
             ['Kokiri Sword Chest']: { isAvailable: function() {return true} },
-            ['Midos House x4 Chests']: { isAvailable: function() {return true} },
+            ['Mido\s House x4 Chests']: { isAvailable: function() {return true} },
             ['Fairy Ocarina']: { isAvailable: function() {return true} },
             ['Song of Storms Grotto']: { isAvailable: function() {return items.SongofStorms;} },
         },
@@ -56,7 +56,7 @@ var dungeons = [
             ['Compass Chest']: { isAvailable: function () {return true} },
             ['Compass Room Side Chest']: { isAvailable: function () {return true} },
             ['Basement Chest']: { isAvailable: function () {return true} },
-            ['Gohma']: { isAvailable: function () {return items.DekuShield && (items.Slingshot || (items.Stick && items.Nuts));} },
+            ['Queen Gohma']: { isAvailable: function () {return items.DekuShield && (items.Slingshot || (items.Stick && items.Nuts));} },
         },
         isBeatable: function(){
             if(items.DekuShield && (items.Slingshot || (items.Stick && items.Nuts))) {
@@ -173,9 +173,9 @@ var dungeons = [
             ['Child Torch Chest']: { isAvailable:  function () {
                 return items.RequiemofSpirit && ((items.Dins && items.Magic) || items.Stick); } },
             ['Child Climb East Chest']: { isAvailable:  function () {
-                return ((items.RequiemofSpirit && (items.Boomerang || items.Slingshot)) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2)); } },
+                return ((items.RequiemofSpirit && (items.Boomerang || items.Slingshot)) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && (items.Glove >= 2 && items.SpiritKey))); } },
             ['Child Climb North Chest']: { isAvailable: function () {
-                 return ((items.RequiemofSpirit && (items.Boomerang || items.Slingshot)) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2)); } },
+                 return ((items.RequiemofSpirit && (items.Boomerang || items.Slingshot)) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && (items.Glove >= 2 && items.SpiritKey))); } },
             ['Sun Block Room Chest']: { isAvailable: function () {
                 return ((items.RequiemofSpirit && items.Bombs) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2) && items.Lens && items.Magic) || items.RequiemofSpirit) && items.Glove >= 2 && (items.Dins || (items.Fire && items.Bow)) && items.Magic)) ; } },
             ['Silver Gauntlets Chest']: { isAvailable:  function () {
@@ -233,14 +233,14 @@ var dungeons = [
                 return items.SongofStorms && (items.Bombs || items.Bombchu); } },
             ['Center Large Chest']: { isAvailable: function () {
                 return items.SongofStorms; } },
-            ['Center Small Chest']: { isAvailable:  function () {
-                return items.SongofStorms; } },
-            ['Back Left Bombable']: { isAvailable:  function () {
-                return items.SongofStorms && (items.Bombs || items.Bombchu); } },
             ['Underwater Left Chest']: { isAvailable:  function () {
                 return items.SongofStorms && items.ZeldasLullaby; } },
             ['Coffin Key']: { isAvailable:  function () {
                 return items.SongofStorms && (items.Scale || items.ZeldasLullaby); } },
+            ['Center Small Chest']: { isAvailable:  function () {
+                return items.SongofStorms; } },
+            ['Back Left Bombable']: { isAvailable:  function () {
+                return items.SongofStorms && (items.Bombs || items.Bombchu); } },
             ['Right Bottom Hidden Wall']: { isAvailable:  function () {
                 return items.SongofStorms; } },
             ['Locked Pits']: { isAvailable:  function () {
@@ -416,7 +416,7 @@ var dungeons = [
                 return (items.Bombs || items.Scale) && items.ZoraLetter && (items.ZeldasLullaby || items.HoverBoots); } },
             ['Iron Boots Chest']: { isAvailable:  function () {
                 return (items.Bombs || items.Scale) && items.ZoraLetter && (items.ZeldasLullaby || items.HoverBoots); } },
-            ['Sheik in Ice Cavern']: { isAvailable:  function () {
+            ['Ice Cavern Song']: { isAvailable:  function () {
                 return (items.Bombs || items.Scale) && items.ZoraLetter && (items.ZeldasLullaby || items.HoverBoots); } },
         },
         isBeatable: function(){
@@ -437,7 +437,7 @@ var dungeons = [
                 return items.Hookshot; } },           
             ['Map Chest']: { isAvailable: function () {
                 return items.Hookshot; } },
-            ['Outside Hookshot Chest']: { isAvailable: function () {
+            ['Courtyard Hookshot Chest']: { isAvailable: function () {
                 return items.Hookshot; },  }, 
             ['Well Chest']: { isAvailable: function () {
                 return items.Hookshot; } },
@@ -535,23 +535,23 @@ var dungeons = [
         x: "50.5%",
         y: "20.2%",
         chestlist: {
-            ['Impa/s Song']: { isAvailable: function () {
+            ['Impa\s Song']: { isAvailable: function () {
                 return (items.Mask >= 1); } },
-            ['Slingshot mini game']: { isAvailable: function () {
+            ['Slingshot Mini Game']: { isAvailable: function () {
                 return (true); } },
-            ['Dog Lady']: { isAvailable: function () {
+            ['Return Richard']: { isAvailable: function () {
                 return (true); } },
             ['Bombchu Bowling 1']: { isAvailable: function () {
                 return (items.Bombs); } },
             ['Bombchu Bowling 2']: { isAvailable: function () {
                 return (items.Bombs); } },
-            ['Treasure Chest Game']: { isAvailable: function () {
+            ['Treasure Chest Mini Game']: { isAvailable: function () {
                 return (items.Lens && items.Magic); } },                       
             ['Hyrule Castle Fairy']: { isAvailable: function () {
                 return (items.Bombs || items.Bombchu) && items.ZeldasLullaby; } },
             ['Prelude of Light']: { isAvailable: function () {
                 return (items.ForestMedallion); } },
-            ['Zelda/s Secret Weapon']: { isAvailable: function () {
+            ['Zelda\s Secret Weapon']: { isAvailable: function () {
                 return (items.ShadowMedallion && items.SpiritMedallion); } },
             ['Ganon\'s Castle Fairy']: { isAvailable: function () {
                 return (items.Glove >= 3 && items.ZeldasLullaby); } },           
@@ -582,7 +582,7 @@ var dungeons = [
                 return (items.Skulltula >= 50); } },
             ['Anju\'s Chickens']: { isAvailable: function () {
                 return (true); } },
-            ['Anju as Adult']: { isAvailable: function () {
+            ['Anju Adult item']: { isAvailable: function () {
                 return (items.MasterSword); } },
             ['Cow Heart Piece']: { isAvailable: function () {
                 return (true); } },
@@ -648,7 +648,7 @@ var dungeons = [
                 return (items.SariasSong); } },
             ['Ocarina Memory Game']: { isAvailable: function () {
                 return (items.Ocarina); } },
-            ['Target in Woods']: { isAvailable: function () {
+            ['Slingshot Target']: { isAvailable: function () {
                 return (items.Slingshot); } },
             ['Bomb Grotto Chest']: { isAvailable: function () {
                 return items.Bombs || items.Hammer || items.Bombchu; } },
@@ -671,18 +671,18 @@ var dungeons = [
         }
     },
     {
-        name: "Zora\'s Domain",
+        name: "Zora's Domain",
         x: "92.9%",
         y: "34.5%",
         chestlist: {
             ['Diving Minigame']: { isAvailable: function () {
                 return true; } },
-            ['Zoras Domain Torch Run']: { isAvailable: function () {
+            ['Torch Run']: { isAvailable: function () {
                 return true; } },
             ['Fairy Fountain']: { isAvailable: function () {
                 return items.ZoraLetter && (items.Bombs || items.Bombchu); } },
             ['Iceberg Heart Piece']: { isAvailable: function () {
-                return (items.ZoraLetter && (items.Bombs || items.Scale) && items.ZeldasLullaby); } },
+                return (items.ZoraLetter && (items.Bombs || items.Scale || items.Bombchu) && items.ZeldasLullaby); } },
             ['Underwater Heart Piece']: { isAvailable: function () {
                 return items.ZoraLetter && items.IronBoots && (items.ZeldasLullaby || items.HoverBoots); } },
             ['Thaw King Zora']: { isAvailable: function () {
@@ -700,9 +700,9 @@ var dungeons = [
         x: "62.0%",
         y: "13.7%",
         chestlist: {
-            ['Heart Piece Above Dodongo/s Cavern']: { isAvailable: function () {
+            ['Heart Piece Above Dodongo\s Cavern']: { isAvailable: function () {
                 return true; } },
-            ['Breakble Wall Chest']: { isAvailable: function () {
+            ['Breakable Wall Chest']: { isAvailable: function () {
                 return (items.Bombs || items.Hammer || items.Bombchu); } },
             ['Storms Grotto']: { isAvailable: function () {
                 return (items.SongofStorms); } },
@@ -718,7 +718,7 @@ var dungeons = [
                 return true; } },
             ['Summit Fairy Fountain']: { isAvailable: function () {
                 return ((items.Bombs || items.Hammer || items.Bombchu) && items.ZeldasLullaby); } },
-            ['Biggoron/s Finest Work']: { isAvailable: function () {
+            ['Biggoron\s Finest Work']: { isAvailable: function () {
                 return (items.Trade >= 1 && items.ZoraLetter && (items.EponasSong || items.Hookshot >= 2)) || (items.Trade >= 6 && (items.EponasSong || items.Hookshot >= 2)) || items.Trade >= 9; } },
         },
         isBeatable: function(){
@@ -733,8 +733,8 @@ var dungeons = [
         x: "47.4%",
         y: "45.6%",
         chestlist: {
-            ['Talon/s Cucco game']: { isAvailable: function() {return items.Mask >= 2;} },
-            ['Malon/s Song']: { isAvailable: function() {return items.Mask >= 2 && items.Ocarina;} },
+            ['Talon\s Cucco game']: { isAvailable: function() {return items.Mask >= 2;} },
+            ['Malon\s Song']: { isAvailable: function() {return items.Mask >= 2 && items.Ocarina;} },
             ['Silo Heart Piece']: { isAvailable: function() {return true;} },
             ['Race Ingo']: { isAvailable: function() {return items.MasterSword && items.EponasSong;} },
         },
@@ -752,13 +752,13 @@ var dungeons = [
         }
     },
     {
-        name: "Zora/s River",
+        name: "Zora's River",
         x: "78.7%",
         y: "29.5%",
         chestlist: {
             ['River Heart Piece 1']: { isAvailable: function() {return true;} },
             ['River Open Grotto']: { isAvailable: function() {return true;} },
-            ['River Heart Piece 2']: { isAvailable: function() {return items.HoverBoots || (items.Boomerang && (items.Bombs || items.Bombchu || items.Scale));} },           
+            ['River Heart Piece 2']: { isAvailable: function() {return items.HoverBoots || (items.Bombs || items.Bombchu || items.Scale);} },           
             ['Frogs in the Rain']: { isAvailable: function() {return items.SongofStorms && (items.Bombs || items.Bombchu || items.Scale);} },
             ['Frogs mini game']: { isAvailable: function() {return (items.Bombs || items.Bombchu || items.Scale) && items.ZeldasLullaby && items.EponasSong && items.SariasSong && items.SunsSong && items.SongofTime;} },
             ['Bean Salesman']: { isAvailable: function() {items.Bombs || items.Bombchu || items.Scale;} },    
@@ -772,8 +772,8 @@ var dungeons = [
     },
     {
         name: "Lake Hylia",
-        x: "37.0%",
-        y: "85.0%",
+        x: "42.0%",
+        y: "80.0%",
         chestlist: {
             ['Scarecrow Song setup']: { isAvailable: function() { return items.Ocarina; } },
             ['Scarecrow Song']: { isAvailable: function() { return items.Scarecrow && items.MasterSword; } },
@@ -845,7 +845,7 @@ var dungeons = [
                 return (true); } },
             ['Redead Grave']: { isAvailable: function () {
                 return (items.SunsSong); } },
-            ['Composer Brother/s Song']: { isAvailable: function () {
+            ['Composer Brother\s Song']: { isAvailable: function () {
                 return (items.ZeldasLullaby && items.Ocarina); } },
             ['Royal Tomb Chest']: { isAvailable: function () {
                 return (items.ZeldasLullaby && ((items.Dins || (items.Fire && items.Bow)) && items.Magic)); } },                          
