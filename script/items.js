@@ -57,7 +57,7 @@ var defaultItemGrid = [
         "Glove",
         "NocturneofShadow",
         "ShadowKey",
-        "BossSpirit0"
+        "BossShadow0"
     ],
     [
         "SongofStorms",
