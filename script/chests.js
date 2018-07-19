@@ -107,7 +107,7 @@ var dungeons = [
         }
     },
     {
-        name: "Gerudo Training Grounds",
+        name: "GTG",
         x: "20.7%",
         y: "16.4%",
         chestlist: {
@@ -452,7 +452,7 @@ var dungeons = [
             ['Bow Chest']: { isAvailable: function () {
                 return items.Hookshot && items.Bow && items.ForestKey >= 3; },   },            
             ['Blue Poe Chest']: { isAvailable: function () {
-                items.Hookshot && items.Bow && items.ForestKey >= 3; } },
+                return items.Hookshot && items.Bow && items.ForestKey >= 3; } },
             ['Falling Room Chest']: { isAvailable: function () {
                 return items.Hookshot &&  items.ForestKey >= 4 && (items.Bow || (items.Dins && items.Magic)); } },
             ['Near Boss Chest']: { isAvailable: function () {
