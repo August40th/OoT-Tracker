@@ -328,9 +328,9 @@ var dungeons = [
             ['End of Bridge Chest']: { isAvailable:  function () {
                 return items.Bombs || items.Hammer || items.Glove || items.Bombchu ; } },
             ['Chest Above King Dodongo']: { isAvailable: function () {
-                return items.Bombs || items.Hammer || items.Glove || items.Bombchu ; } },
+                return items.Bombs || items.Hammer || items.Bombchu ; } },
             ['King Dodongo']: { isAvailable: function () {
-                return items.Glove || items.Bombs ; } },
+                return (items.Glove && items.Bombchu) || (items.Gove && items.Hammer) || items.Bombs ; } },
         },
         isBeatable: function(){
             return this.canGetChest();
