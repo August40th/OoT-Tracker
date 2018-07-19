@@ -9,7 +9,7 @@ var defaultItemGrid = [
         "BiggoronSword",
         "MinuetofForest",
         "ForestKey",
-        "BossForest0"
+        "BossForest"
     ],
     [
         "SunsSong",
@@ -21,7 +21,7 @@ var defaultItemGrid = [
         "MirrorShield",
         "BoleroofFire",
         "FireKey",
-        "BossFire0"
+        "BossFire"
     ],
     [
         "SariasSong",
@@ -33,7 +33,7 @@ var defaultItemGrid = [
         "ZoraTunic",
         "SerenadeofWater",
         "WaterKey",
-        "BossWater0"
+        "BossWater"
     ],
     [
         "Scarecrow",
@@ -45,7 +45,7 @@ var defaultItemGrid = [
         "HoverBoots",
         "RequiemofSpirit",
         "SpiritKey",
-        "BossSpirit0"
+        "BossSpirit"
     ],
     [
         "SongofTime",
@@ -57,7 +57,7 @@ var defaultItemGrid = [
         "Glove",
         "NocturneofShadow",
         "ShadowKey",
-        "BossShadow0"
+        "BossShadow"
     ],
     [
         "SongofStorms",
@@ -69,7 +69,7 @@ var defaultItemGrid = [
         "Bow",
         "PreludeofLight",
         "CastleKey",
-        "BossCastle0"
+        "BossCastle"
     ],
     [
         "WellKey",
@@ -80,7 +80,8 @@ var defaultItemGrid = [
         "Ice",
         "Hookshot",
         "EponasSong",
-        "GTGKey"
+        "GTGKey",
+        "blank"
     ],
     [
         "Bean",
@@ -91,7 +92,8 @@ var defaultItemGrid = [
         "Light",
         "Hammer",
         "BigPoe",
-        "Skulltula"
+        "Skulltula",
+        "blank"
     ]
 ]
 
