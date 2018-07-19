@@ -676,9 +676,9 @@ var dungeons = [
         y: "34.5%",
         chestlist: {
             ['Diving Minigame']: { isAvailable: function () {
-                return true; } },
+                return items.Bombs || items.Scale || items.Bombchu; } },
             ['Torch Run']: { isAvailable: function () {
-                return true; } },
+                return items.Bombs || items.Scale || items.Bombchu; } },
             ['Fairy Fountain']: { isAvailable: function () {
                 return items.ZoraLetter && (items.Bombs || items.Bombchu); } },
             ['Iceberg Heart Piece']: { isAvailable: function () {
@@ -703,7 +703,7 @@ var dungeons = [
             ['Heart Piece Above Dodongo\'s Cavern']: { isAvailable: function () {
                 return true; } },
             ['Breakable Wall Chest']: { isAvailable: function () {
-                return (items.Bombs || items.Hammer || items.Bombchu); } },
+                return (items.Bombs || items.Hammer || items.Bombchu || items.Glove); } },
             ['Storms Grotto']: { isAvailable: function () {
                 return (items.SongofStorms); } },
             ['Bolero of Fire']: { isAvailable: function () {
