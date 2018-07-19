@@ -766,8 +766,8 @@ var dungeons = [
     },
     {
         name: "Lake Hylia",
-        x: "39.3%",
-        y: "82.0%",
+        x: "40.4%",
+        y: "81.0%",
         chestlist: {
             ['Scarecrow Song setup']: { isAvailable: function() { return items.Ocarina; } },
             ['Scarecrow Song']: { isAvailable: function() { return items.Scarecrow && items.MasterSword; } },
