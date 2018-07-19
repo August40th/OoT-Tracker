@@ -807,7 +807,7 @@ var dungeons = [
     {
         name: "Desert Colossus",
         x: "8.4%",
-        y: "15.0%",
+        y: "15.9%",
         chestlist: {           
             ['Haunted Wasteland Chest']: { isAvailable: function() {return ((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2) && (items.Magic && (items.Dins || (items.Bow && items.Fire))) } },
             ['Requiem of Spirit']: { isAvailable: function() {return (items.EponasSong && items.HoverBoots) || items.Hookshot >= 2 || items.RequiemofSpirit} },
