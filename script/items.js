@@ -166,6 +166,13 @@ var items = {
     CastleKey:0,
     GTGKey:0,
     WellKey:0,
+    
+    BossForest:0,
+    BossFire:0,
+    BossWater:0,
+    BossSpirit:0,
+    BossShadow:0,
+    BossCastle:0,
 
     blank: false
 };
@@ -195,6 +202,12 @@ var itemsMin = {
     CastleKey:0,
     GTGKey:0,
     WellKey:0,
+    BossForest:0,
+    BossFire:0,
+    BossWater:0,
+    BossSpirit:0,
+    BossShadow:0,
+    BossCastle:0,
     BigPoe:0,
 };
 
@@ -223,5 +236,11 @@ var itemsMax = {
     CastleKey:2,
     GTGKey:9,
     WellKey:3,
+    BossForest:1,
+    BossFire:1,
+    BossWater:1,
+    BossSpirit:1,
+    BossShadow:1,
+    BossCastle:1,
     BigPoe:10,
 };
