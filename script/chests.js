@@ -812,7 +812,7 @@ var dungeons = [
             ['Haunted Wasteland Chest']: { isAvailable: function() {return ((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2) && (items.Magic && (items.Dins || (items.Bow && items.Fire))) } },
             ['Requiem of Spirit']: { isAvailable: function() {return (items.EponasSong && items.HoverBoots) || items.Hookshot >= 2 || items.RequiemofSpirit} },
             ['Desert Bean Heart Piece']: { isAvailable: function() {return items.Bean && items.RequiemofSpirit} },          
-            ['Fairy Fountain']: { isAvailable: function() {return items.ZeldasLullaby && (items.Bombs || items.Bombchu)} },
+            ['Fairy Fountain']: { isAvailable: function() {return (items.ZeldasLullaby && (items.Bombs || items.Bombchu)) && ((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2 || items.RequiemofSpirit)} },
         },
         isBeatable: function(){
             return this.canGetChest();
