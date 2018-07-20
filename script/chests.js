@@ -680,7 +680,7 @@ var dungeons = [
             ['Torch Run']: { isAvailable: function () {
                 return items.Bombs || items.Scale || items.Bombchu; } },
             ['Fairy Fountain']: { isAvailable: function () {
-                return items.ZoraLetter && (items.Bombs || items.Bombchu); } },
+                return items.ZoraLetter && (items.Bombs || items.Bombchu) && items.ZeldasLullaby; } },
             ['Iceberg Heart Piece']: { isAvailable: function () {
                 return (items.MasterSword && items.ZoraLetter && (items.Bombs || items.Scale || items.Bombchu) && items.ZeldasLullaby); } },
             ['Underwater Heart Piece']: { isAvailable: function () {
