@@ -448,7 +448,7 @@ var dungeons = [
             ['Floormaster Chest']: { isAvailable: function () {
                 return items.Hookshot && ((items.Bow && items.ForestKey >= 2) || (items.HoverBoots && items.ForestKey)); },  },
             ['Red Poe Chest']: { isAvailable:  function () {
-                return items.ForestKey >= 3 && items.Hookshot && items.Bow &&; } },
+                return items.ForestKey >= 3 && items.Hookshot && items.Bow; } },
             ['Bow Chest']: { isAvailable: function () {
                 return items.ForestKey >= 3 && items.Hookshot && items.Bow; },   },            
             ['Blue Poe Chest']: { isAvailable: function () {
