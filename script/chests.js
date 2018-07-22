@@ -144,7 +144,7 @@ var dungeons = [
             ['Underwater Silver Rupees']: { isAvailable: function () {
                 return (items.EponasSong || items.Hookshot >= 2) && items.Hookshot && items.SongofTime && items.IronBoots; } },
             ['Beamos Room']: { isAvailable: function () {
-                return (items.EponasSong || items.Hookshot >= 2) && (items.Bombs || items.Bombchu; } },
+                return (items.EponasSong || items.Hookshot >= 2) && (items.Bombs || items.Bombchu); } },
             ['Hidden Ceiling Chest']: { isAvailable: function () {
                 return items.GTGKey && (items.EponasSong || items.Hookshot >= 2) && (items.Bow || items.Hookshot) && items.Lens && items.Magic ; } },
             ['Maze Path First Chest']: { isAvailable:  function () {
