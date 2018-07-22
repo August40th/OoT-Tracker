@@ -505,7 +505,7 @@ var dungeons = [
             ['Light Trial Right 3']: { isAvailable:  function () {
                 return isBridgeOpen() && items.Glove >= 3; } },
             ['Light Trail Center']: { isAvailable: function () {
-                return isBridgeOpen() && items.Glove >= 3 && (items.Magic && items.Lens); } },
+                return isBridgeOpen() && items.Glove >= 3; } },
             ['Light Trial Lullaby Chest']: { isAvailable:  function () {
                 return isBridgeOpen() && items.Glove >= 3 && items.ZeldasLullaby && items.CastleKey; } },
         },
@@ -513,7 +513,7 @@ var dungeons = [
             ['Forest Trial Clear']: { isAvailable:  function () {
                 return isBridgeOpen() && items.Magic && items.Bow && items.Light && (items.Fire || (items.Hookshot && items.Dins)); } },
             ['Fire Trial Clear']: { isAvailable:  function () {
-                return isBridgeOpen() && items.GoronTunic && items.Glove >= 3 && items.Magic && items.Bow && items.Light && items.Hookshot >= 2; } },
+                return isBridgeOpen() && items.Glove >= 3 && items.Magic && items.Bow && items.Light && items.Hookshot >= 2; } },
             ['Water Trial Clear']: { isAvailable:  function () {
                 return isBridgeOpen() && items.Bottle && items.Hammer && items.Magic && items.Bow && items.Light; } },
             ['Shadow Trial Clear']: { isAvailable:  function () {
