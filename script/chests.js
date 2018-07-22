@@ -757,7 +757,7 @@ var dungeons = [
             ['River Heart Piece 2']: { isAvailable: function() {return items.HoverBoots || (items.Bombs || items.Bombchu || items.Scale);} },           
             ['Frogs in the Rain']: { isAvailable: function() {return items.SongofStorms && (items.Bombs || items.Bombchu || items.Scale);} },
             ['Frogs Mini Game']: { isAvailable: function() {return (items.Bombs || items.Bombchu || items.Scale) && items.ZeldasLullaby && items.EponasSong && items.SariasSong && items.SunsSong && items.SongofTime;} },
-            ['Bean Salesman']: { isAvailable: function() {items.Bombs || items.Bombchu || items.Scale;} },    
+            ['Bean Salesman']: { isAvailable: function() {return items.Bombs || items.Bombchu || items.Scale;} },    
         },
         isBeatable: function(){
             return this.canGetChest();
