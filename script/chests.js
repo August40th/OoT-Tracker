@@ -303,7 +303,7 @@ var dungeons = [
             ['Floormaster Room']: { isAvailable:  function () {
                 return items.NocturneofShadow && items.Dins && items.HoverBoots && items.Bombs && items.Hookshot && items.Glove && items.ZeldasLullaby; } },
             ['Bongo Bongo']: { isAvailable:  function () {
-                return items.ShadowKey >= 5 && items.BossShadow && items.ShadowKey >= 5(items.NocturneofShadow && items.Dins && items.HoverBoots && items.Bombs && items.Hookshot && items.Glove && items.ZeldasLullaby && items.Bow); } },
+                return items.ShadowKey >= 5 && items.BossShadow && items.ShadowKey >= 5 && (items.NocturneofShadow && items.Dins && items.HoverBoots && items.Bombs && items.Hookshot && items.Glove && items.ZeldasLullaby && items.Bow); } },
             },
         isBeatable: function(){
             return this.canGetChest();
