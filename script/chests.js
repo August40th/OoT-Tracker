@@ -168,9 +168,9 @@ var dungeons = [
         x: "02.5%",
         y: "17.0%",
         chestlist: {
-            ['Child Left Chest']: { isAvailable: function () {
+            ['Child Switch Room']: { isAvailable: function () {
                 return items.RequiemofSpirit && (items.Boomerang || items.Slingshot); } },
-            ['Child Right Chest']: { isAvailable:  function () {
+            ['Child 1st Floor Torches']: { isAvailable:  function () {
                 return items.RequiemofSpirit && (items.Boomerang || items.Slingshot); } },
             ['Child Climb East Chest']: { isAvailable:  function () {
                 return items.SpiritKey && ((items.RequiemofSpirit && (items.Boomerang || items.Slingshot)) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && (items.Hookshot || items.Bow))); } },
@@ -268,7 +268,7 @@ var dungeons = [
         x: "79.7%",
         y: "19.5%",
         chestlist: {
-            ['Keese & Redead Room']: { isAvailable:  function () {
+            ['Keese and Redead Room']: { isAvailable:  function () {
                 return items.NocturneofShadow && items.Dins && (items.HoverBoots || items.Hookshot); } },
             ['Deadhand Room']: { isAvailable: function () {
                 return items.NocturneofShadow && items.Dins && (items.HoverBoots || items.Hookshot); } },
@@ -286,11 +286,11 @@ var dungeons = [
                 return items.ShadowKey && items.NocturneofShadow && items.Dins && items.HoverBoots && items.Bombs && items.Glove; } },
             ['Falling Spikes Switch Chest']: { isAvailable:  function () {
                 return items.ShadowKey && items.NocturneofShadow && items.Dins && items.HoverBoots && items.Bombs && items.Glove; } },
-            ['Readeads & Silver Rupees Chest']: { isAvailable:  function () {
+            ['Readeads and Silver Rupees Chest']: { isAvailable:  function () {
                 return items.ShadowKey >= 2 && items.NocturneofShadow && items.Dins && items.HoverBoots && items.Bombs; } },
             ['Skull Pot Bombing']: { isAvailable:  function () {
                 return items.ShadowKey >= 2 && items.NocturneofShadow && items.Dins && items.HoverBoots && items.Bombs && items.Hookshot; } },
-            ['Readead & Hint']: { isAvailable:  function () {
+            ['Readead and Hint']: { isAvailable:  function () {
                 return items.ShadowKey >= 3 && items.NocturneofShadow && items.Dins && items.HoverBoots && items.Bombs && items.Hookshot; } },
             ['2nd Gibdos Room']: { isAvailable:  function () {
                 return items.ShadowKey >= 3 && items.NocturneofShadow && items.Dins && items.HoverBoots && items.Bombs && items.Hookshot; } },
