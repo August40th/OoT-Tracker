@@ -373,7 +373,7 @@ var dungeons = [
             ['Megaton Hammer Chest']: { isAvailable: function () {
                 return items.FireKey >= 6 && (items.BoleroofFire || items.HoverBoots || items.Hooksho) && items.Glove && (items.Bombs || items.Bombchu || items.Hammer); } },
             ['Volvagia']: { isAvailable: function () {
-                return (items.GoronTunic && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)) && items.Hammer && (items.HoverBoots || (items.Glove && (items.Bombs || items.Hookshot) && items.Bombs))); } },
+                return items.BossFire && ((items.GoronTunic || items.Bottle) && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)) && items.Hammer && (items.HoverBoots || (items.Glove && (items.Bombs || items.Hookshot) && items.Bombs))); } },
         },
         isBeatable: function(){
             return this.canGetChest();
@@ -442,23 +442,23 @@ var dungeons = [
             ['Well Chest']: { isAvailable: function () {
                 return items.Hookshot; } },
             ['Block Push Chest']: { isAvailable: function () {
-                return items.Hookshot && items.Bow && items.ForestKey; } },
+                return items.ForestKey && items.Hookshot && items.Bow; } },
             ['Boss Key Chest']: { isAvailable: function () {
-                return items.Hookshot && items.Bow && items.ForestKey >= 2; } },
+                return items.ForestKey >= 2 && items.Hookshot && items.Bow; } },
             ['Floormaster Chest']: { isAvailable: function () {
                 return items.Hookshot && ((items.Bow && items.ForestKey >= 2) || (items.HoverBoots && items.ForestKey)); },  },
             ['Red Poe Chest']: { isAvailable:  function () {
-                return items.Hookshot && items.Bow && items.ForestKey >= 3; } },
+                return items.ForestKey >= 3 && items.Hookshot && items.Bow &&; } },
             ['Bow Chest']: { isAvailable: function () {
-                return items.Hookshot && items.Bow && items.ForestKey >= 3; },   },            
+                return items.ForestKey >= 3 && items.Hookshot && items.Bow; },   },            
             ['Blue Poe Chest']: { isAvailable: function () {
-                return items.Hookshot && items.Bow && items.ForestKey >= 3; } },
+                return items.ForestKey >= 3 && items.Hookshot && items.Bow; } },
             ['Falling Room Chest']: { isAvailable: function () {
-                return items.Hookshot &&  items.ForestKey >= 4 && (items.Bow || (items.Dins && items.Magic)); } },
+                return items.ForestKey >= 5 && items.Hookshot && (items.Bow || (items.Dins && items.Magic)); } },
             ['Near Boss Chest']: { isAvailable: function () {
-                return items.Hookshot && items.Bow && items.ForestKey >= 5; } },
+                return items.ForestKey >= 5 && items.Hookshot && items.Bow; } },
             ['Phantom Ganon']: { isAvailable: function () {
-                return items.Hookshot && items.Bow && items.ForestKey >= 5; } },
+                return items.ForestKey >= 5 && items.BossForest && items.Hookshot && items.Bow; } },
         },
         isBeatable: function(){
             if((items.SariasSong || items.MinuetofForest) && items.Hookshot && items.Bow) {
