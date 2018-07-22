@@ -524,7 +524,7 @@ var dungeons = [
                 return isBridgeOpen() && items.Glove >= 3 && items.Magic && items.Bow && items.Hookshot && items.Light && items.CastleKey >= 2; }      },
         },
         isBeatable: function(){
-            return generalCanGetChest(this.trials);
+            return generalCanGetChest(this.trials) && items.BossCastle;
         },
         canGetChest: function(){
             return generalCanGetChest(this.chestlist);
