@@ -277,33 +277,33 @@ var dungeons = [
             ['1st Silver Rupees']: { isAvailable: function () {
                 return items.NocturneofShadow && items.Dins && items.HoverBoots; } },
             ['Like Like Visible Chest']: { isAvailable:  function () {
-                return items.ShadowKey && items.NocturneofShadow && items.Dins && items.HoverBoots && items.Bombs; } },
+                return items.ShadowKey && items.NocturneofShadow && items.Dins && items.HoverBoots && (items.Bombs || items.Bombchu); } },
             ['Like Like Invisible Chest']: { isAvailable:  function () {
-                return items.ShadowKey && items.NocturneofShadow && items.Dins && items.HoverBoots && items.Bombs; } },
+                return items.ShadowKey && items.NocturneofShadow && items.Dins && items.HoverBoots && (items.Bombs || items.Bombchu); } },
             ['Falling Spikes Lower Chest']: { isAvailable:  function () {
-                return items.ShadowKey && items.NocturneofShadow && items.Dins && items.HoverBoots && items.Bombs; } },
+                return items.ShadowKey && items.NocturneofShadow && items.Dins && items.HoverBoots && (items.Bombs || items.Bombchu); } },
             ['Falling Spikes Upper Chest']: { isAvailable:  function () {
-                return items.ShadowKey && items.NocturneofShadow && items.Dins && items.HoverBoots && items.Bombs && items.Glove; } },
+                return items.ShadowKey && items.NocturneofShadow && items.Dins && items.HoverBoots && (items.Bombs || items.Bombchu) && items.Glove; } },
             ['Falling Spikes Switch Chest']: { isAvailable:  function () {
-                return items.ShadowKey && items.NocturneofShadow && items.Dins && items.HoverBoots && items.Bombs && items.Glove; } },
+                return items.ShadowKey && items.NocturneofShadow && items.Dins && items.HoverBoots && (items.Bombs || items.Bombchu)  && items.Glove; } },
             ['Readeads and Silver Rupees']: { isAvailable:  function () {
-                return items.ShadowKey >= 2 && items.NocturneofShadow && items.Dins && items.HoverBoots && items.Bombs; } },
+                return items.ShadowKey >= 2 && items.NocturneofShadow && items.Dins && items.HoverBoots && (items.Bombs || items.Bombchu); } },
             ['Skull Pot Bombing']: { isAvailable:  function () {
-                return items.ShadowKey >= 2 && items.NocturneofShadow && items.Dins && items.HoverBoots && items.Bombs && items.Hookshot; } },
+                return items.ShadowKey >= 2 && items.NocturneofShadow && items.Dins && items.HoverBoots && (items.Bombs || items.Bombchu) && items.Hookshot; } },
             ['Readead and Hint']: { isAvailable:  function () {
-                return items.ShadowKey >= 3 && items.NocturneofShadow && items.Dins && items.HoverBoots && items.Bombs && items.Hookshot; } },
+                return items.ShadowKey >= 3 && items.NocturneofShadow && items.Dins && items.HoverBoots && (items.Bombs || items.Bombchu) && items.Hookshot; } },
             ['2nd Gibdos Room']: { isAvailable:  function () {
-                return items.ShadowKey >= 3 && items.NocturneofShadow && items.Dins && items.HoverBoots && items.Bombs && items.Hookshot; } },
+                return items.ShadowKey >= 3 && items.NocturneofShadow && items.Dins && items.HoverBoots && (items.Bombs || items.Bombchu) && items.Hookshot; } },
             ['Gibdos Hidden Chest']: { isAvailable:  function () {
-                return items.ShadowKey >= 3 && items.NocturneofShadow && items.Dins && items.HoverBoots && items.Bombs && items.Hookshot; } },
-            ['Burnable Spikes Left Chest']: { isAvailable:  function () {
-                return items.NocturneofShadow && items.Dins && items.HoverBoots && items.Bombs && items.Hookshot && items.Glove && items.ZeldasLullaby; } },
-            ['Boss Key Chest']: { isAvailable:  function () {
-                return items.ShadowKey >= 4 && items.NocturneofShadow && items.Dins && items.HoverBoots && items.Bombs && items.Hookshot && items.Glove && items.ZeldasLullaby; } },
+                return items.ShadowKey >= 3 && items.NocturneofShadow && items.Dins && items.HoverBoots && (items.Bombs || items.Bombchu) && items.Hookshot; } },
             ['Floormaster Room']: { isAvailable:  function () {
-                return items.NocturneofShadow && items.Dins && items.HoverBoots && items.Bombs && items.Hookshot && items.Glove && items.ZeldasLullaby; } },
+                return items.ShadowKey >= 3 && items.NocturneofShadow && items.Dins && items.HoverBoots && (items.Bombs || items.Bombchu) && items.Hookshot && items.Glove && items.ZeldasLullaby; } },            
+            ['Burnable Spikes Left Chest']: { isAvailable:  function () {
+                return items.ShadowKey >= 4 && items.NocturneofShadow && items.Dins && items.HoverBoots && (items.Bombs || items.Bombchu) && items.Hookshot && items.Glove && items.ZeldasLullaby; } },
+            ['Boss Key Chest']: { isAvailable:  function () {
+                return items.ShadowKey >= 4 && items.NocturneofShadow && items.Dins && items.HoverBoots && (items.Bombs || items.Bombchu) && i(items.Bombs || items.Bombchu) tems.Hookshot && items.Glove && items.ZeldasLullaby; } },
             ['Bongo Bongo']: { isAvailable:  function () {
-                return items.ShadowKey >= 5 && items.BossShadow && items.ShadowKey >= 5 && (items.NocturneofShadow && items.Dins && items.HoverBoots && items.Bombs && items.Hookshot && items.Glove && items.ZeldasLullaby && items.Bow); } },
+                return items.ShadowKey >= 5 && items.BossShadow && items.ShadowKey >= 5 && (items.NocturneofShadow && items.Dins && items.HoverBoots && (items.Bombs || items.Bombchu) && items.Hookshot && items.Glove && items.ZeldasLullaby && items.Bow); } },
             },
         isBeatable: function(){
             return this.canGetChest();
