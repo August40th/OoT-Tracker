@@ -495,7 +495,7 @@ var dungeons = [
             ['Shadow Chests x2']: { isAvailable:  function () {
                 return isBridgeOpen() && ((items.Magic && items.Bow && items.Fire) || items.Hookshot >= 2) && items.HoverBoots; } },
             ['Shadow Trial']: { isAvailable:  function () {
-                return isBridgeOpen() && items.Magic && items.Bow items.Light && items.Hammer && ((items.Magic && items.Bow && items.Fire) || (items.Hookshot >= 2 && items.HoverBoots)); } },           
+                return isBridgeOpen() && items.Magic && items.Bow && items.Light && items.Hammer && ((items.Magic && items.Bow && items.Fire) || (items.Hookshot >= 2 && items.HoverBoots)); } },           
             ['Light Chests x6']: { isAvailable:  function () {
                 return isBridgeOpen() && items.Glove >= 3; } },
             ['Light Invisible CHest']: { isAvailable:  function () {
