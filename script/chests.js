@@ -301,7 +301,7 @@ var dungeons = [
             ['Burnable Spikes Left Chest']: { isAvailable:  function () {
                 return items.ShadowKey >= 4 && items.NocturneofShadow && items.Dins && items.HoverBoots && (items.Bombs || items.Bombchu) && items.Hookshot && items.Glove && items.ZeldasLullaby; } },
             ['Boss Key Chest']: { isAvailable:  function () {
-                return items.ShadowKey >= 4 && items.NocturneofShadow && items.Dins && items.HoverBoots && (items.Bombs || items.Bombchu) && (items.Bombs || items.Bombchu) tems.Hookshot && items.Glove && items.ZeldasLullaby; } },
+                return items.ShadowKey >= 4 && items.NocturneofShadow && items.Dins && items.HoverBoots && (items.Bombs || items.Bombchu) && (items.Bombs || items.Bombchu) items.Hookshot && items.Glove && items.ZeldasLullaby; } },
             ['Bongo Bongo']: { isAvailable:  function () {
                 return items.ShadowKey >= 5 && items.BossShadow && items.ShadowKey >= 5 && (items.NocturneofShadow && items.Dins && items.HoverBoots && (items.Bombs || items.Bombchu) && items.Hookshot && items.Glove && items.ZeldasLullaby && items.Bow); } },
             },
