@@ -647,7 +647,7 @@ var dungeons = [
             ['Skull Kid']: { isAvailable: function () {
                 return (items.SariasSong); } },
             ['Ocarina Memory Game']: { isAvailable: function () {
-                return (items.Ocarina); } },
+                return (items.Ocarina && !items.MasterSword); } },
             ['Slingshot Target']: { isAvailable: function () {
                 return (items.Slingshot); } },
             ['Bomb Grotto Chest']: { isAvailable: function () {
