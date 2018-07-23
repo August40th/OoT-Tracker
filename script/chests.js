@@ -492,17 +492,9 @@ var dungeons = [
                 return isBridgeOpen() && items.Hookshot; } },
             ['Spirit Trial 2']: { isAvailable:  function () {
                 return isBridgeOpen() && items.Hookshot && items.Bombchu; } },
-            ['Light Trial Left 1']: { isAvailable:  function () {
+            ['Light Trial Left 1\, 2\, 3']: { isAvailable:  function () {
                 return isBridgeOpen() && items.Glove >= 3; } },
-            ['Light Trial Left 2']: { isAvailable:  function () {
-                return isBridgeOpen() && items.Glove >= 3; } },
-            ['Light Trial Left 3']: { isAvailable:  function () {
-                return isBridgeOpen() && items.Glove >= 3; } },
-            ['Light Trial Right 1']: { isAvailable:  function () {
-                return isBridgeOpen() && items.Glove >= 3; } },
-            ['Light Trial Right 2']: { isAvailable:  function () {
-                return isBridgeOpen() && items.Glove >= 3; } },
-            ['Light Trial Right 3']: { isAvailable:  function () {
+            ['Light Trial Right 1\, 2\, 3']: { isAvailable:  function () {
                 return isBridgeOpen() && items.Glove >= 3; } },
             ['Light Trail Center']: { isAvailable: function () {
                 return isBridgeOpen() && items.Glove >= 3; } },
