@@ -484,7 +484,7 @@ var dungeons = [
                 return isBridgeOpen() && items.Bow && (items.Dins || items.Fire) && items.Magic && items.Light; } },          
              ['Fire Trail']: { isAvailable: function () {
                 return isBridgeOpen() && items.Glove >= 3; } },
-            ['Ice Chests x@']: { isAvailable: function () { 
+            ['Ice Chests x2']: { isAvailable: function () { 
                 return isBridgeOpen(); } },
             ['Ice Trial']: { isAvailable: function () { 
                 return isBridgeOpen() && items.Magic && items.Bow && items.Light; } },           
