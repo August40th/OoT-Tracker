@@ -369,7 +369,7 @@ var dungeons = [
             ['Compass Chest']: { isAvailable: function () {
                 return items.FireKey >= 6 && (items.BoleroofFire || items.HoverBoots || items.Hookshot) && items.Glove; } },
             ['Song of Time Block']: { isAvailable:  function () {
-                return (items.FireKey >= 7 || (items.FireKey >=6 && items.HoverBoots) && (items.BoleroofFire || items.HoverBoots || items.Hookshot) && items.Glove && items.Hammer; } },
+                return (items.FireKey >= 7 || (items.FireKey >=6 && items.HoverBoots)) && (items.BoleroofFire || items.HoverBoots || items.Hookshot) && items.Glove && items.Hammer; } },
             ['Megaton Hammer Chest']: { isAvailable: function () {
                 return items.FireKey >= 6 && (items.BoleroofFire || items.HoverBoots || items.Hooksho) && items.Glove && (items.Bombs || items.Bombchu || items.Hammer); } },
             ['Volvagia']: { isAvailable: function () {
