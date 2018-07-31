@@ -112,49 +112,49 @@ var dungeons = [
         y: "16.4%",
         chestlist: {
             ['Lobby Right Chest']: { isAvailable:  function () {
-                return (items.EponasSong || items.Hookshot >= 2) && items.Bow; } },
+                return (items.EponasSong || items.Hookshot >= 2 || items.Membership) && items.Bow; } },
             ['Lobby Left Chest']: { isAvailable: function () {
-                return (items.EponasSong || items.Hookshot >= 2) && items.Bow; } },
+                return (items.EponasSong || items.Hookshot >= 2 || items.Membership) && items.Bow; } },
             ['Stalfos Room']: { isAvailable:  function () {
-                return (items.EponasSong || items.Hookshot >= 2); } },
+                return (items.EponasSong || items.Hookshot >= 2 || items.Membership); } },
             ['Wolfos Room']: { isAvailable:  function () {
-                return (items.EponasSong || items.Hookshot >= 2) && items.Hookshot; } },
+                return (items.EponasSong || items.Hookshot >= 2 || items.Membership) && items.Hookshot; } },
             ['Like Like Open Chest']: { isAvailable:  function () {
-                return (items.EponasSong || items.Hookshot >= 2) && items.Hookshot && items.Glove >= 2; } },
+                return (items.EponasSong || items.Hookshot >= 2 || items.Membership) && items.Hookshot && items.Glove >= 2; } },
             ['Like Like Room 1st Chest']: { isAvailable:  function () {
-                return (items.EponasSong || items.Hookshot >= 2) && items.Hookshot && items.Glove >= 2; } },
+                return (items.EponasSong || items.Hookshot >= 2 || items.Membership) && items.Hookshot && items.Glove >= 2; } },
             ['Like Like Room 2nd Chest']: { isAvailable:  function () {
-                return (items.EponasSong || items.Hookshot >= 2) && items.Hookshot && items.Glove >= 2; } },
+                return (items.EponasSong || items.Hookshot >= 2 || items.Membership) && items.Hookshot && items.Glove >= 2; } },
             ['Like Like Invisible Chest']: { isAvailable: function () {
-                return (items.EponasSong || items.Hookshot >= 2) && items.Hookshot && items.Glove >= 2; } },
+                return (items.EponasSong || items.Hookshot >= 2 || items.Membership) && items.Hookshot && items.Glove >= 2; } },
             ['Cyclops Statue Eyes']: { isAvailable: function () {
-                return (items.EponasSong || items.Hookshot >= 2) && items.Bow && (items.SongofTime || items.HoverBoots || items.Hookshot >=2 || (items.Hookshot)); } },
+                return (items.EponasSong || items.Hookshot >= 2 || items.Membership) && items.Bow && (items.SongofTime || items.HoverBoots || items.Hookshot >=2 || (items.Hookshot)); } },
             ['Cyclops Room Top Room']: { isAvailable: function () {
-                return (items.EponasSong || items.Hookshot >= 2) && items.Hookshot && items.Bow; } },
+                return (items.EponasSong || items.Hookshot >= 2 || items.Membership) && items.Hookshot && items.Bow; } },
             ['Fire Enemies Clear']: { isAvailable:  function () {
-                return (items.EponasSong || items.Hookshot >= 2) && (items.Hookshot || (items.SongofTime || items.HoverBoots || items.Hookshot >=2)); } },
+                return (items.EponasSong || items.Hookshot >= 2 || items.Membership) && (items.Hookshot || (items.SongofTime || items.HoverBoots || items.Hookshot >=2)); } },
             ['Fire Enemies Fire Chest']: { isAvailable: function () {
-                return (items.EponasSong || items.Hookshot >= 2) && (items.Hookshot || (items.SongofTime || items.HoverBoots || items.Hookshot >=2)); } },           
+                return (items.EponasSong || items.Hookshot >= 2 || items.Membership) && (items.Hookshot || (items.SongofTime || items.HoverBoots || items.Hookshot >=2)); } },           
             ['Maze Right Open Key']: { isAvailable: function () {
-                return (items.EponasSong || items.Hookshot >= 2) && (((items.Hookshot || items.HoverBoots) || items.SongofTime) || items.GTGKey >= 2); } },
+                return (items.EponasSong || items.Hookshot >= 2 || items.Membership) && (((items.Hookshot || items.HoverBoots) || items.SongofTime) || items.GTGKey >= 2); } },
             ['Maze Right Central Chest']: { isAvailable:  function () {
-                return (items.EponasSong || items.Hookshot >= 2) && (((items.Hookshot || items.HoverBoots) || items.SongofTime) || items.GTGKey >= 2); } },
+                return (items.EponasSong || items.Hookshot >= 2 || items.Membership) && (((items.Hookshot || items.HoverBoots) || items.SongofTime) || items.GTGKey >= 2); } },
             ['Maze Right Side Chest']: { isAvailable: function () {
-                return (items.EponasSong || items.Hookshot >= 2) && (((items.Hookshot || items.HoverBoots) || items.SongofTime) || items.GTGKey >= 2); } },            
+                return (items.EponasSong || items.Hookshot >= 2 || items.Membership) && (((items.Hookshot || items.HoverBoots) || items.SongofTime) || items.GTGKey >= 2); } },            
             ['Underwater Silver Rupees']: { isAvailable: function () {
-                return (items.EponasSong || items.Hookshot >= 2) && items.Hookshot && items.SongofTime && items.IronBoots; } },
+                return (items.EponasSong || items.Hookshot >= 2 || items.Membership) && items.Hookshot && items.SongofTime && items.IronBoots; } },
             ['Beamos Room']: { isAvailable: function () {
-                return (items.EponasSong || items.Hookshot >= 2) && (items.Bombs || items.Bombchu); } },
+                return (items.EponasSong || items.Hookshot >= 2 || items.Membership) && (items.Bombs || items.Bombchu); } },
             ['Hidden Ceiling Chest']: { isAvailable: function () {
-                return items.GTGKey && (items.EponasSong || items.Hookshot >= 2); } },
+                return items.GTGKey && (items.EponasSong || items.Hookshot >= 2 || items.Membership); } },
             ['Maze Left First Chest']: { isAvailable:  function () {
-                return items.GTGKey >= 2 && (items.EponasSong || items.Hookshot >= 2); } },
+                return items.GTGKey >= 2 && (items.EponasSong || items.Hookshot >= 2 || items.Membership); } },
             ['Maze Left Second Chest']: { isAvailable:  function () {
-                return items.GTGKey >= 4 && (items.EponasSong || items.Hookshot >= 2); } },
+                return items.GTGKey >= 4 && (items.EponasSong || items.Hookshot >= 2 || items.Membership); } },
             ['Maze Left Third Chest']: { isAvailable:  function () {
-                return items.GTGKey >= 5 && (items.EponasSong || items.Hookshot >= 2); } },
+                return items.GTGKey >= 5 && (items.EponasSong || items.Hookshot >= 2 || items.Membership); } },
             ['Maze Big Chest']: { isAvailable: function () {
-                return items.GTGKey >= 7 && (items.EponasSong || items.Hookshot >= 2); } },                                               
+                return items.GTGKey >= 7 && (items.EponasSong || items.Hookshot >= 2 || items.Membership); } },                                               
             },
         isBeatable: function(){
             return this.canGetChest();
@@ -794,10 +794,10 @@ var dungeons = [
         chestlist: {
             ['Crate Heart Piece']: { isAvailable: function() { return true; } },
             ['Waterfall Heart Piece']: { isAvailable: function() { return true; } },
-            ['Hammer Rocks Chest']: { isAvailable: function() { return (items.EponasSong || items.Hookshot >= 2) && items.MasterSword && items.Hammer; } },
-            ['Gerudo Fortress Rooftop Chest']: { isAvailable: function() { return (items.EponasSong || items.Hookshot >= 2) && items.MasterSword && (items.HoverBoots || (items.Scarecrow >= 2 && items.Hookshot)); } },
+            ['Hammer Rocks Chest']: { isAvailable: function() { return (items.EponasSong || items.Hookshot >= 2 || items.Membership) && items.MasterSword && items.Hammer; } },
+            ['Gerudo Fortress Rooftop Chest']: { isAvailable: function() { return (items.EponasSong || items.Hookshot >= 2 || items.Membership) && items.MasterSword && (items.HoverBoots || (items.Scarecrow >= 2 && items.Hookshot)); } },
             ['Horseback Archery 1000 pts']: { isAvailable: function() { return items.MasterSword && items.Bow && items.EponasSong; } },
-            ['Horseback Archery 1500 pts']: { isAvailable: function() { return items.MasterSword && items.Bow && items.EponasSong; } },
+            ['Horseback Archery 1500 pts']: { isAvailable: function() { return items.MasterSword && items.Bow && items.EponasSong || items.Membership; } },
         },
         isBeatable: function(){
             return this.canGetChest();
@@ -811,10 +811,10 @@ var dungeons = [
         x: "8.4%",
         y: "15.9%",
         chestlist: {           
-            ['Haunted Wasteland Chest']: { isAvailable: function() {return ((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2) && (items.Magic && (items.Dins || (items.Bow && items.Fire))) } },
-            ['Requiem of Spirit']: { isAvailable: function() {return (items.EponasSong && items.HoverBoots) || items.Hookshot >= 2 || items.RequiemofSpirit} },
+            ['Haunted Wasteland Chest']: { isAvailable: function() {return (((items.EponasSong || items.Membership) && items.HoverBoots) || items.Hookshot >= 2) && (items.Magic && (items.Dins || (items.Bow && items.Fire))) } },
+            ['Requiem of Spirit']: { isAvailable: function() {return ((items.EponasSong || items.Membership) && items.HoverBoots) || items.Hookshot >= 2 || items.RequiemofSpirit} },
             ['Desert Bean Heart Piece']: { isAvailable: function() {return items.Bean && items.RequiemofSpirit} },          
-            ['Desert Fairy Fountain']: { isAvailable: function() {return (items.ZeldasLullaby && (items.Bombs || items.Bombchu)) && ((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2 || items.RequiemofSpirit)} },
+            ['Desert Fairy Fountain']: { isAvailable: function() {return (items.ZeldasLullaby && (items.Bombs || items.Bombchu)) && (((items.EponasSong || items.Membership) && items.HoverBoots) || items.Hookshot >= 2 || items.RequiemofSpirit)} },
         },
         isBeatable: function(){
             return this.canGetChest();
