@@ -797,7 +797,7 @@ var dungeons = [
             ['Hammer Rocks Chest']: { isAvailable: function() { return (items.EponasSong || items.Hookshot >= 2 || items.Membership) && items.MasterSword && items.Hammer; } },
             ['Gerudo Fortress Rooftop Chest']: { isAvailable: function() { return (items.EponasSong || items.Hookshot >= 2 || items.Membership) && items.MasterSword && (items.HoverBoots || (items.Scarecrow >= 2 && items.Hookshot)); } },
             ['Horseback Archery 1000 pts']: { isAvailable: function() { return items.MasterSword && items.Bow && items.EponasSong; } },
-            ['Horseback Archery 1500 pts']: { isAvailable: function() { return items.MasterSword && items.Bow && items.EponasSong || items.Membership; } },
+            ['Horseback Archery 1500 pts']: { isAvailable: function() { return items.MasterSword && items.Bow && items.EponasSong; } },
         },
         isBeatable: function(){
             return this.canGetChest();
