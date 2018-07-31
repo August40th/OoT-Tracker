@@ -43,9 +43,9 @@ var defaultItemGrid = [
         "Bottle",
         "IronBoots",
         "HoverBoots",
-        "RequiemofSpirit",
-        "SpiritKey",
-        "BossSpirit"
+        "EponasSong",
+        "GTGKey",
+        "Membership"
     ],
     [
         "SongofTime",
@@ -55,9 +55,9 @@ var defaultItemGrid = [
         "ZoraSapphire",
         "Scale",
         "Glove",
-        "NocturneofShadow",
-        "ShadowKey",
-        "BossShadow"
+        "RequiemofSpirit",
+        "SpiritKey",
+        "BossSpirit"
     ],
     [
         "SongofStorms",
@@ -67,9 +67,9 @@ var defaultItemGrid = [
         "Dins",
         "Fire",
         "Bow",
-        "PreludeofLight",
-        "CastleKey",
-        "BossCastle"
+        "NocturneofShadow",
+        "ShadowKey",
+        "BossShadow"
     ],
     [
         "WellKey",
@@ -79,9 +79,9 @@ var defaultItemGrid = [
         "Farores",
         "Ice",
         "Hookshot",
-        "EponasSong",
-        "GTGKey",
-        "blank"
+        "PreludeofLight",
+        "CastleKey",
+        "BossCastle"
     ],
     [
         "Bean",
@@ -113,7 +113,7 @@ var items = {
     Light:false,
     Ocarina:0,
     Bottle:0,
-    Wallet:0,
+    Wallet:1,
     Skulltula:0,
     Stick:0,
     Nuts:0,
@@ -181,6 +181,7 @@ var items = {
     BossSpirit:0,
     BossShadow:0,
     BossCastle:0,
+    Membership:false,
 
     blank: false
 };
@@ -195,7 +196,7 @@ var itemsMin = {
     Glove:0,
     Scale:0,
     Magic:0,
-    Wallet:0,
+    Wallet:1,
     Skulltula:0,
     Stick:0,
     Nuts:0,
@@ -229,7 +230,7 @@ var itemsMax = {
     Glove:3,
     Scale:2,
     Magic:2,
-    Wallet:2,
+    Wallet:3,
     Skulltula:50,
     Stick:3,
     Nuts:3,
