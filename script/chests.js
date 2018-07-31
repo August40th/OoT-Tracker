@@ -505,9 +505,9 @@ var dungeons = [
             ['Light Trail']: { isAvailable: function () {
                 return isBridgeOpen() && items.Glove >= 3 && items.ZeldasLullaby && items.CastleKey >=2; } },
             ['Boss Key Chest']: { isAvailable: function () {
-                return isBridgeOpen() && items.BossCastle; } },
-            ['GanonDorf']: { isAvailable: function () {
                 return isBridgeOpen() && generalCanGetChest(this.trials); } },
+            ['GanonDorf']: { isAvailable: function () {
+                return isBridgeOpen() && generalCanGetChest(this.trials) && items.BossCastle; } },
         },
         trials: {
             ['Forest Trial Clear']: { isAvailable:  function () {
