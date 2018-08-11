@@ -83,11 +83,11 @@ var dungeons = [
             ['Torches Chest']: { isAvailable: function () {
                 return (items.IronBoots && items.Hookshot) && (items.Bow || (items.Dins && items.Magic)) && items.ZeldasLullaby; } },
             ['Dragon Chest']: { isAvailable: function () {
-                return (items.IronBoots && items.Hookshot) && items.ZeldasLullaby && items.SongofTime && items.Bow; } },
+                return (items.IronBoots && items.Hookshot) && (items.ZeldasLullaby && items.SongofTime && items.Bow) || (items.WaterKey >= 2 && items.Bow && (items.Hookshot || items.HoverBoots)); } },
             ['Central Pillar Basement']: { isAvailable: function () {
                 return (items.WaterKey || items.Bow) && items.IronBoots && items.Hookshot && items.ZeldasLullaby ; } },
             ['Cracked Wall']: { isAvailable: function () {
-                return (items.IronBoots && items.Hookshot && items.ZeldasLullaby) && ((items.Bombs && items.WaterKey) || items.Bombchu); } },
+                return (items.IronBoots && items.Hookshot) && ((items.Bombs && items.WaterKey && items.ZeldasLullaby) || items.Bombchu); } },
             ['Central Bow Target']: { isAvailable: function () {
                 return (items.IronBoots && items.Hookshot) && items.Bow && items.Glove && items.ZeldasLullaby && (items.HoverBoots || items.Hookshot >= 2); } },
             ['Boss Key Chest']: { isAvailable:  function () {
@@ -441,7 +441,7 @@ var dungeons = [
                 return items.Hookshot; },  }, 
             ['Well Chest']: { isAvailable: function () {
                 return items.Hookshot; } },
-            ['Block Push Chest']: { isAvailable: function () {
+            ['Push Block Room Chest']: { isAvailable: function () {
                 return items.ForestKey && items.Hookshot && items.Bow; } },
             ['Boss Key Chest']: { isAvailable: function () {
                 return items.ForestKey >= 2 && items.Hookshot && items.Bow; } },
@@ -681,7 +681,7 @@ var dungeons = [
                 return items.Bombs || items.Scale || items.Bombchu; } },
             ['Torch Run']: { isAvailable: function () {
                 return items.Bombs || items.Scale || items.Bombchu; } },
-            ['Fairy Fountain']: { isAvailable: function () {
+            ['Zora Fairy Fountain']: { isAvailable: function () {
                 return items.ZoraLetter && (items.Bombs || items.Bombchu) && items.ZeldasLullaby; } },
             ['Iceberg Heart Piece']: { isAvailable: function () {
                 return (items.MasterSword && items.ZoraLetter && (items.Bombs || items.Scale || items.Bombchu) && items.ZeldasLullaby); } },
@@ -771,7 +771,7 @@ var dungeons = [
         x: "40.0%",
         y: "81.0%",
         chestlist: {
-            ['Scarecrow setup']: { isAvailable: function() { return items.Ocarina; } },
+            ['Scarecrow Setup']: { isAvailable: function() { return items.Ocarina; } },
             ['Scarecrow Song']: { isAvailable: function() { return items.Scarecrow && items.MasterSword; } },
             ['Child Fishing']: { isAvailable: function() {return items.KokiriSword;} },
             ['Silver Scale item']: { isAvailable: function() {return items.Scale;} },
@@ -830,14 +830,14 @@ var dungeons = [
         chestlist: {            
             ['Dampe Digging']: { isAvailable: function () {
                 return (true); } },
+            ['Vanilla Shield Grave']: { isAvailable: function () {
+                return (true); } },
             ['Magic Bean Heart Piece']: { isAvailable: function () {
                 return (items.Bean || items.Hookshot >= 2 || items.Boomerang); } }, 
             ['Dampe Race 1']: { isAvailable: function () {
                 return (items.MasterSword); } },
             ['Dampe Race 2']: { isAvailable: function () {
-                return (items.MasterSword); } },
-            ['Vanilla Shield Grave']: { isAvailable: function () {
-                return (true); } },
+                return (items.MasterSword); } },          
             ['Redead Grave']: { isAvailable: function () {
                 return (items.SunsSong); } },
             ['Composer Brothers\' Song']: { isAvailable: function () {
@@ -895,7 +895,7 @@ var chests = [
         }
     },
     {
-        name: "Deku Sale Bomb Grotto $10",
+        name: "Bomb Grotto Deku Sale 10$",
         x: "42.0%",
         y: "64.0%",
         isAvailable: function(){
