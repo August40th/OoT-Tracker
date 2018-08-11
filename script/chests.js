@@ -446,19 +446,19 @@ var dungeons = [
             ['Boss Key Chest']: { isAvailable: function () {
                 return items.ForestKey >= 2 && items.Hookshot && items.Bow; } },
             ['Floormaster Chest']: { isAvailable: function () {
-                return items.Hookshot && ((items.Bow && items.ForestKey >= 2) || (items.HoverBoots && items.ForestKey)); },  },
+                return items.Hookshot && ((items.Bow && items.ForestKey >= 2 && items.Glove) || (items.HoverBoots && items.ForestKey)); },  },
             ['Red Poe Chest']: { isAvailable:  function () {
-                return items.ForestKey >= 3 && items.Hookshot && items.Bow; } },
+                return items.ForestKey >= 3 && items.Hookshot && items.Bow && items.Glove; } },
             ['2nd Floor Stalfos']: { isAvailable: function () {
-                return items.ForestKey >= 3 && items.Hookshot && items.Bow; },   },            
+                return items.ForestKey >= 3 && items.Hookshot && items.Bow && items.Glove; },   },            
             ['Blue Poe Chest']: { isAvailable: function () {
-                return items.ForestKey >= 3 && items.Hookshot && items.Bow; } },
+                return items.ForestKey >= 3 && items.Hookshot && items.Bow && items.Glove; } },
             ['Checkerboard Chest']: { isAvailable: function () {
-                return items.ForestKey >= 5 && items.Hookshot && (items.Bow || (items.Dins && items.Magic)); } },
+                return items.ForestKey >= 5 && items.Hookshot && items.Glove && (items.Bow || (items.Dins && items.Magic)); } },
             ['Near Boss Chest']: { isAvailable: function () {
-                return items.ForestKey >= 5 && items.Hookshot && items.Bow; } },
+                return items.ForestKey >= 5 && items.Hookshot && items.Bow && items.Glove; } },
             ['Phantom Ganon']: { isAvailable: function () {
-                return items.ForestKey >= 5 && items.BossForest && items.Hookshot && items.Bow; } },
+                return items.ForestKey >= 5 && items.BossForest && items.Hookshot && items.Bow && items.Glove; } },
         },
         isBeatable: function(){
             if((items.SariasSong || items.MinuetofForest) && items.Hookshot && items.Bow) {
