@@ -483,7 +483,7 @@ var dungeons = [
              ['Forest Trial']: { isAvailable: function () { 
                 return isBridgeOpen() && items.Bow && (items.Dins || items.Fire) && items.Magic && items.Light; } },          
              ['Fire Trail']: { isAvailable: function () {
-                return isBridgeOpen() && items.Glove >= 3; } },
+                return isBridgeOpen() && items.Glove >= 3 && items.Bow && items.Magic && items.Light; } },
             ['Ice Chests x2']: { isAvailable: function () { 
                 return isBridgeOpen(); } },
             ['Ice Trial']: { isAvailable: function () { 
@@ -491,7 +491,7 @@ var dungeons = [
             ['Spirit Chest x2']: { isAvailable:  function () {
                 return isBridgeOpen() && items.Hookshot && items.Bombchu; } },
             ['Spirit Trial ']: { isAvailable:  function () {
-                return isBridgeOpen() && items.Hookshot && items.Bombchu && (items.Mirror || items.Dins || items.Fire); } },
+                return isBridgeOpen() && items.Hookshot && items.Bombchu && items.Mirror && items.Magic && items.Bow; } },
             ['Shadow Chests x2']: { isAvailable:  function () {
                 return isBridgeOpen() && ((items.Magic && items.Bow && items.Fire) || items.Hookshot >= 2) && items.HoverBoots; } },
             ['Shadow Trial']: { isAvailable:  function () {
@@ -503,11 +503,11 @@ var dungeons = [
             ['Light Trial Lullaby Chest']: { isAvailable:  function () {
                 return isBridgeOpen() && items.Glove >= 3 && items.ZeldasLullaby && items.CastleKey; } },
             ['Light Trail']: { isAvailable: function () {
-                return isBridgeOpen() && items.Glove >= 3 && items.ZeldasLullaby && items.CastleKey >=2; } },
+                return isBridgeOpen() && items.Glove >= 3 && items.ZeldasLullaby && items.CastleKey >=2 && items.Bow && items.Magic && items.Light; } },
             ['Boss Key Chest']: { isAvailable: function () {
                 return isBridgeOpen() && generalCanGetChest(this.trials); } },
             ['GanonDorf']: { isAvailable: function () {
-                return isBridgeOpen() && generalCanGetChest(this.trials) && items.BossCastle; } },
+                return isBridgeOpen() && generalCanGetChest(this.trials) && items.BossCastle && items.Bow && items.Magic && items.Light; } },
         },
         trials: {
             ['Forest Trial Clear']: { isAvailable:  function () {
