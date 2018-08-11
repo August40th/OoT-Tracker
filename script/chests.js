@@ -688,7 +688,7 @@ var dungeons = [
             ['Underwater Heart Piece']: { isAvailable: function () {
                 return items.MasterSword && items.ZoraLetter && items.IronBoots && (items.ZeldasLullaby || items.HoverBoots); } },
             ['Thaw King Zora']: { isAvailable: function () {
-                return (items.MasterSword && items.ZeldasLullaby || items.HoverBoots) && ((items.ZoraLetter && (items.Bombs || items.Scale || items.Bombchu)) || isBridgeOpen() || items.Wallet >= 2); } },
+                return (items.Bottle && items.MasterSword && items.ZeldasLullaby || items.HoverBoots) && ((items.ZoraLetter && (items.Bombs || items.Scale || items.Bombchu)) || isBridgeOpen() || items.Wallet >= 2); } },
         },
         isBeatable: function(){
             return this.canGetChest();
