@@ -297,7 +297,7 @@ var dungeons = [
             ['Gibdos Hidden Chest']: { isAvailable:  function () {
                 return items.ShadowKey >= 3 && items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots && (items.Bombs || items.Bombchu) && items.Hookshot; } },
             ['Floormaster Room']: { isAvailable:  function () {
-                return items.ShadowKey >= 3 && items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots && (items.Bombs || items.Bombchu) && items.Hookshot && items.Glove && items.ZeldasLullaby; } },            
+                return items.ShadowKey >= 4 && items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots && (items.Bombs || items.Bombchu) && items.Hookshot && items.Glove && items.ZeldasLullaby; } },            
             ['Burnable Spikes Left Chest']: { isAvailable:  function () {
                 return items.ShadowKey >= 4 && items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots && (items.Bombs || items.Bombchu) && items.Hookshot && items.Glove && items.ZeldasLullaby; } },
             ['Boss Key Chest']: { isAvailable:  function () {
