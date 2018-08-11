@@ -252,9 +252,9 @@ var dungeons = [
             ['Underwater Front Chest']: { isAvailable: function () {
                 return items.SongofStorms && items.ZeldasLullaby ; } },
             ['Dead Hand']: { isAvailable:  function () {
-                return items.SongofStorms && (items.ZeldasLullaby || items.Scale) && (items.KokiriSword || items.Stick); } },
+                return items.SongofStorms && items.ZeldasLullaby && (items.KokiriSword || items.Stick); } },
             ['Invisible Chest']: { isAvailable:  function () {
-                return items.SongofStorms && (items.ZeldasLullaby || items.Scale); } },
+                return items.SongofStorms && items.ZeldasLullaby; } },
         },
         isBeatable: function(){
             return this.canGetChest();
