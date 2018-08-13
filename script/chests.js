@@ -83,7 +83,7 @@ var dungeons = [
             ['Torches Chest']: { isAvailable: function () {
                 return (items.IronBoots && items.Hookshot) && (items.Bow || (items.Dins && items.Magic)) && items.ZeldasLullaby; } },
             ['Dragon Chest']: { isAvailable: function () {
-                return (items.IronBoots && items.Hookshot) && (items.ZeldasLullaby && items.SongofTime && items.Bow) || (items.WaterKey >= 2 && items.Bow && (items.Hookshot || items.HoverBoots)); } },
+                return (items.IronBoots && items.Hookshot) && ((items.ZeldasLullaby && items.SongofTime && items.Bow) || (items.WaterKey >= 2 && items.Bow && (items.Hookshot || items.HoverBoots))); } },
             ['Central Pillar Basement']: { isAvailable: function () {
                 return (items.WaterKey || items.Bow) && items.IronBoots && items.Hookshot && items.ZeldasLullaby ; } },
             ['Cracked Wall']: { isAvailable: function () {
@@ -490,8 +490,8 @@ var dungeons = [
                 return isBridgeOpen() && items.Magic && items.Bow && items.Light; } },           
             ['Spirit Chest x2']: { isAvailable:  function () {
                 return isBridgeOpen() && items.Hookshot && items.Bombchu; } },
-            ['Spirit Trial ']: { isAvailable:  function () {
-                return isBridgeOpen() && items.Hookshot && items.Bombchu && items.Mirror && items.Magic && items.Bow; } },
+            ['Spirit Trial']: { isAvailable: function () { 
+                return isBridgeOpen() && items.Hookshot && items.Bombchu && items.Mirror && items.Magic && items.Bow && items.Light; } },  
             ['Shadow Chests x2']: { isAvailable:  function () {
                 return isBridgeOpen() && ((items.Magic && items.Bow && items.Fire) || items.Hookshot >= 2) && items.HoverBoots; } },
             ['Shadow Trial']: { isAvailable:  function () {
