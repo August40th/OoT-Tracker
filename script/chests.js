@@ -491,7 +491,7 @@ var dungeons = [
             ['Spirit Chest x2']: { isAvailable:  function () {
                 return isBridgeOpen() && items.Hookshot && items.Bombchu; } },
             ['Spirit Trial']: { isAvailable: function () { 
-                return isBridgeOpen() && items.Hookshot && items.Bombchu && items.Mirror && items.Magic && items.Bow && items.Light; } },  
+                return isBridgeOpen() && items.Hookshot && items.Bombchu && items.MirrorShield && items.Magic && items.Bow && items.Light; } },  
             ['Shadow Chests x2']: { isAvailable:  function () {
                 return isBridgeOpen() && ((items.Magic && items.Bow && items.Fire) || items.Hookshot >= 2) && items.HoverBoots; } },
             ['Shadow Trial']: { isAvailable:  function () {
