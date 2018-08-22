@@ -805,14 +805,14 @@ var dungeons = [
     },
         {
         name: "Gerudo Fortress",
-        x: "16.0%",
+        x: "15.5%",
         y: "16.4%",
         chestlist: {
             ['Fortress Guard 1']: { isAvailable: function() { return (items.EponasSong || items.Hookshot >= 2 || items.Membership >=5) && items.MasterSword; } },
             ['Fortress Guard 2']: { isAvailable: function() { return (items.EponasSong || items.Hookshot >= 2 || items.Membership >=5) && items.MasterSword; } },
             ['Fortress Guard 3']: { isAvailable: function() { return (items.EponasSong || items.Hookshot >= 2 || items.Membership >=5) && items.MasterSword; } },
             ['Fortress Guard 4']: { isAvailable: function() { return (items.EponasSong || items.Hookshot >= 2 || items.Membership >=5) && items.MasterSword; } },
-            ['Fortress Rooftop Chest']: { isAvailable: function() { return (items.EponasSong || items.Hookshot >= 2 || items.Membership >=5) && items.MasterSword && (items.HoverBoots || (items.Scarecrow >= 2 && items.Hookshot)); } },
+            ['Fortress Rooftop Chest']: { isAvailable: function() { return (items.EponasSong || items.Hookshot >= 2 || items.Membership >=5) && items.MasterSword && (items.HoverBoots || (items.Scarecrow >= 2 && items.Hookshot) || items.Hookshot >= 2); } },
             ['Horseback Archery 1000 pts']: { isAvailable: function() { return items.Membership >=5 && items.MasterSword && items.Bow && items.EponasSong; } },
             ['Horseback Archery 1500 pts']: { isAvailable: function() { return items.Membership >=5  && items.MasterSword && items.Bow && items.EponasSong; } },
         },
