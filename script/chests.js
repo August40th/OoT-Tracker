@@ -626,7 +626,7 @@ var dungeons = [
             ['Big Rolling Goron']: { isAvailable: function () {
                 return (items.Bombs); } },
             ['Spinning Pot Heart Piece']: { isAvailable: function () {
-                return ((items.Glove || items.Bombs) && ((items.Ocarina && items.ZeldasLullaby) || (items.Magic && items.Dins))); } },
+                return ((items.Glove || items.Bombs) && ((items.Ocarina && items.ZeldasLullaby && items.Stick) || (items.Magic && items.Dins))); } },
             ['Darunia\'s Dance']: { isAvailable: function () {
                 return (items.Ocarina && items.ZeldasLullaby && items.SariasSong); } },         
         },
