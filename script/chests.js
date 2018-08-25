@@ -684,11 +684,11 @@ var dungeons = [
             ['Zora Fairy Fountain']: { isAvailable: function () {
                 return items.ZoraLetter && (items.Bombs || items.Bombchu) && items.Ocarina && items.ZeldasLullaby; } },
             ['Iceberg Heart Piece']: { isAvailable: function () {
-                return (items.MasterSword && items.ZoraLetter && (items.Bombs || items.Scale || items.Bombchu) && (items.Ocarina && items.ZeldasLullaby) || items.HoverBoots); } },
+                return items.MasterSword && items.ZoraLetter && (items.Bombs || items.Scale || items.Bombchu) && ((items.Ocarina && items.ZeldasLullaby) || items.HoverBoots); } },
             ['Underwater Heart Piece']: { isAvailable: function () {
                 return items.MasterSword && items.ZoraLetter && items.IronBoots && ((items.Ocarina && items.ZeldasLullaby) || items.HoverBoots); } },
             ['Thaw King Zora']: { isAvailable: function () {
-                return items.Bottle && items.MasterSword && ((items.Ocarina && items.ZeldasLullaby) || items.HoverBoots) && ((items.ZoraLetter && (items.Bombs || items.Scale || items.Bombchu)) || isBridgeOpen() || items.Wallet >= 2); } },
+                return items.Bottle && items.MasterSword && ((items.Ocarina && items.ZeldasLullaby) || items.HoverBoots) && (((items.ZoraLetter && (items.Bombs || items.Scale || items.Bombchu)) || isBridgeOpen() || items.Wallet >= 2)); } },
         },
         isBeatable: function(){
             return this.canGetChest();
