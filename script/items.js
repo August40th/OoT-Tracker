@@ -226,7 +226,7 @@ var itemsMax = {
     Slingshot:3,
     Bombs:3,    
     Hookshot:2,
-    Ocarina:1,
+    Ocarina:2,
     Bottle:4,
     Glove:3,
     Scale:2,
