@@ -33,17 +33,11 @@ var dungeons = [
             ['Song of Storms Grotto']: { isAvailable: function() {return items.Ocarina && items.SongofStorms;} },
         },
         isBeatable: function(){
-            if( items.SongofStorms) {
-                if (this.canGetChest() == 'available')
-                    return 'avialable';
-                return 'possible';
-            }
-            else
-                return "unavailable";
-    },
+            return this.canGetChest();
+        },
         canGetChest: function(){
             return generalCanGetChest(this.chestlist);
-        }
+}
 },
     {
         name: "Deku Tree",
@@ -59,17 +53,11 @@ var dungeons = [
             ['Queen Gohma']: { isAvailable: function () {return items.DekuShield && (items.Slingshot || (items.Stick && items.Nuts));} },
         },
         isBeatable: function(){
-            if(items.DekuShield && (items.Slingshot || (items.Stick && items.Nuts))) {
-                if (this.canGetChest() == 'available')
-                    return 'available';
-                return 'possible';
-            }
-            else
-                return "unavailable";
+            return this.canGetChest();
         },
         canGetChest: function(){
             return generalCanGetChest(this.chestlist);
-        }
+}
     },
     {
         name: "Water Temple",
