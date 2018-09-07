@@ -705,7 +705,7 @@ var dungeons = [
             ['Crater Grotto']: { isAvailable: function () {
                 return (items.Bombs || items.Hammer || items.Bombchu); } },
             ['Crater Wall Heart Piece']: { isAvailable: function () {
-                return true; } },
+                return (items.BoleroofFire && (items.HoverBoots || items.Hookshot)) || items.Bombs || items.Bombchu || items.Bow || items.Glove; } },
             ['Summit Fairy Fountain']: { isAvailable: function () {
                 return ((items.Bombs || items.Hammer || items.Bombchu) && items.Ocarina && items.ZeldasLullaby); } },
             ['Biggoron\'s Finest Work']: { isAvailable: function () {
