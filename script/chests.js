@@ -376,7 +376,7 @@ var dungeons = [
         y: "18.0%",
         chestlist: {
             ['Boomerang Chest']: { isAvailable: function () {
-                return (items.Bombs || items.Scale) && items.ZoraLetter && (items.Slingshot || items.Boomerang || items.Bombs); } },
+                return (items.Bombs || items.Bombchu || items.Scale) && items.ZoraLetter && (items.Slingshot || items.Boomerang || items.Bombs); } },
             ['Map Chest']: { isAvailable:  function () {
                 return (items.Bombs || items.Scale) && items.ZoraLetter && items.Boomerang; } },
             ['Compass Chest']: { isAvailable:  function () {
