@@ -79,7 +79,7 @@ var dungeons = [
             ['Central Bow Target']: { isAvailable: function () {
                 return (items.IronBoots && items.Hookshot) && items.Bow && items.Glove && items.Ocarina && items.ZeldasLullaby && (items.HoverBoots || items.Hookshot >= 2); } },
             ['Boss Key Chest']: { isAvailable:  function () {
-                return items.WaterKey >= 2 && items.IronBoots && items.Hookshot && ((items.Bombs && items.Glove) || items.HoverBoots) && items.Hookshot >= 2; } },
+                return items.WaterKey >= 2 && items.IronBoots && items.Hookshot && (((items.Bombs || items.Bombchu) && items.Glove) || items.HoverBoots) && (items.Hookshot >= 2 || items.HoverBoots); } },
             ['Dark Link']: { isAvailable: function () {
                 return items.WaterKey >= 2 && items.IronBoots && items.Hookshot; } },
             ['River Chest']: { isAvailable:  function () {
