@@ -38,7 +38,7 @@ body{
 }
 
 .tracker td{
-    width: 84px;
+    width: 64px;
     height: 64px;
     padding: 0px;
     background-repeat: no-repeat;
@@ -176,8 +176,8 @@ label {
 }
 
 .chest{
-    width: 16;
-    height: 16;
+    width: 12;
+    height: 12;
     background-size: 100% 100%;
 
     position: absolute;
