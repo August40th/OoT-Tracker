@@ -148,8 +148,8 @@ label {
     background-repeat: no-repeat;
 
     position: relative;
-    width: 855px;
-    height: 466px;
+    width: 1020px;
+    height: 500px;
     left: 0px;
 }
 
@@ -159,7 +159,7 @@ label {
 
     position: absolute;
     width: 248px;
-    height: 278px;
+    height: 312px;
     margin-top: 188px;
 }
 
@@ -176,8 +176,8 @@ label {
 }
 
 .chest{
-    width: 12;
-    height: 12;
+    width: 16;
+    height: 16;
     background-size: 100% 100%;
 
     position: absolute;
