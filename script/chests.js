@@ -71,7 +71,7 @@ var dungeons = [
             ['Torches Chest']: { isAvailable: function () {
                 return (items.IronBoots && items.Hookshot) && (items.Bow || (items.Dins && items.Magic)) && items.Ocarina && items.ZeldasLullaby; } },
             ['Dragon Chest']: { isAvailable: function () {
-                return (items.IronBoots && items.Hookshot) && ((items.ZeldasLullaby && items.SongofTime && items.Bow) || (items.WaterKey >= 2 && items.Bow && (items.Hookshot || items.HoverBoots))); } },
+                return (items.IronBoots && items.Hookshot) && (((items.SongofTime && items.Bow && items.WaterKey >= 2)) || (items.ZeldasLullaby && items.Glove)); } },
             ['Central Pillar Basement']: { isAvailable: function () {
                 return (items.WaterKey || items.Bow) && items.IronBoots && items.Hookshot && items.Ocarina && items.ZeldasLullaby ; } },
             ['Cracked Wall']: { isAvailable: function () {
@@ -191,7 +191,7 @@ var dungeons = [
             ['Mirror Shield Chest']: { isAvailable: function () {
                 return items.SpiritKey >= 2 && (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2); } },           
             ['Boss Key Chest']: { isAvailable: function () {
-                return items.SpiritKey >= 3 && (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2) && items.ZeldasLullaby && items.Bow && items.Hookshot && (items.Bombs || items.Hammer || items.Bombchu) ; } },
+                return items.SpiritKey >= 3 && (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2) && items.ZeldasLullaby && items.Hookshot && (items.Bombs || items.Hammer || items.Bombchu) ; } },
             ['Topmost Chest']: { isAvailable:  function () {
                 return items.SpiritKey >= 3 && (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2) && (items.Hookshot || items.Bow || items.Bombs || items.Bombchu) && items.MirrorShield; } },
             ['Twinrova']: { isAvailable:  function () {
@@ -291,7 +291,7 @@ var dungeons = [
             ['Boss Key Chest']: { isAvailable:  function () {
                 return items.ShadowKey >= 4 && items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots && (items.Bombs || items.Bombchu) && (items.Bombs || items.Bombchu) && items.Hookshot && items.Glove && items.Ocarina && items.ZeldasLullaby; } },
             ['Bongo Bongo']: { isAvailable:  function () {
-                return items.ShadowKey >= 5 && items.BossShadow && (items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots && (items.Bombs || items.Bombchu) && items.Hookshot && items.Glove && items.Ocarina && items.ZeldasLullaby && items.Bow); } },
+                return items.ShadowKey >= 5 && items.BossShadow && (items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots && (items.Bombs || items.Bombchu) && items.Hookshot && items.Glove && items.Ocarina && items.ZeldasLullaby && (items.Bow || items.Scarecrow >= 2)); } },
             },
         isBeatable: function(){
             return this.canGetChest();
