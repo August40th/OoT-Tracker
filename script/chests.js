@@ -690,7 +690,7 @@ var dungeons = [
         x: "62.0%",
         y: "13.7%",
         chestlist: {
-            ['Heart Piece Above Dodongo\'s Cavern']: { isAvailable: function () {
+            ['HP Above Dodongo\'s Cavern']: { isAvailable: function () {
                 return true; } },
             ['Breakable Wall Chest']: { isAvailable: function () {
                 return (items.Bombs || items.Hammer || items.Bombchu || items.Glove); } },
