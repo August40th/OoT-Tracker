@@ -438,7 +438,7 @@ var dungeons = [
             ['Red Poe Chest']: { isAvailable:  function () {
                 return items.ForestKey >= 3 && items.Hookshot && items.Bow && items.Glove; } },
             ['2nd Floor Stalfos']: { isAvailable: function () {
-                return items.ForestKey >= 3 && items.Hookshot && items.Bow && items.Glove; },   },            
+                return items.ForestKey >= 3 && items.Hookshot && items.Glove; },   },            
             ['Blue Poe Chest']: { isAvailable: function () {
                 return items.ForestKey >= 3 && items.Hookshot && items.Bow && items.Glove; } },
             ['Checkerboard Chest']: { isAvailable: function () {
