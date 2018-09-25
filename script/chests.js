@@ -71,11 +71,11 @@ var dungeons = [
             ['Torches Chest']: { isAvailable: function () {
                 return (items.IronBoots && items.Hookshot) && (items.Bow || (items.Dins && items.Magic)) && items.Ocarina && items.ZeldasLullaby; } },
             ['Dragon Chest']: { isAvailable: function () {
-                return (items.IronBoots && items.Hookshot) && (((items.SongofTime && items.Bow && items.WaterKey >= 2)) || (items.ZeldasLullaby && items.Glove)); } },
+                return (items.IronBoots && items.Hookshot) && items.Ocarina && (((items.SongofTime && items.Bow && items.WaterKey >= 2)) || (items.ZeldasLullaby && items.Glove)); } },
             ['Central Pillar Basement']: { isAvailable: function () {
                 return (items.WaterKey || items.Bow) && items.IronBoots && items.Hookshot && items.Ocarina && items.ZeldasLullaby ; } },
             ['Cracked Wall']: { isAvailable: function () {
-                return (items.IronBoots && items.Hookshot) && ((items.Bombs && items.WaterKey && items.Ocarina && items.ZeldasLullaby) || items.Bombchu); } },
+                return (items.IronBoots && items.Hookshot) && (items.Bombs || items.Bombchu); } },
             ['Central Bow Target']: { isAvailable: function () {
                 return (items.IronBoots && items.Hookshot) && items.Bow && items.Glove && items.Ocarina && items.ZeldasLullaby && (items.HoverBoots || items.Hookshot >= 2); } },
             ['Boss Key Chest']: { isAvailable:  function () {
@@ -236,7 +236,7 @@ var dungeons = [
             ['Behind Right Grate']: { isAvailable:  function () {
                 return items.Ocarina && items.SongofStorms && items.WellKey >= 1; } },
             ['Basement Chest']: { isAvailable:  function () {
-                return items.Ocarina && items.SongofStorms && (items.Bombs || items.Bombchu); } },
+                return items.Ocarina && items.SongofStorms && (items.Bombs || items.Bombchu || items.Glove); } },
             ['Underwater Front Chest']: { isAvailable: function () {
                 return items.SongofStorms && items.Ocarina && items.ZeldasLullaby ; } },
             ['Dead Hand']: { isAvailable:  function () {
@@ -314,7 +314,7 @@ var dungeons = [
             ['Bomb Bag Chest']: { isAvailable:  function () {
                 return items.Bombs || (items.Hammer && items.Bow) || items.Glove || items.Bombchu ; } },
             ['End of Bridge Chest']: { isAvailable:  function () {
-                return items.Bombs || (items.Hammer && items.Bow) || items.Glove || items.Bombchu ; } },
+                return items.Bombs || (items.Hammer && items.Bow) || items.Bombchu ; } },
             ['Chest Above King Dodongo']: { isAvailable: function () {
                 return items.Bombs || items.Bombchu ; } },
             ['King Dodongo']: { isAvailable: function () {
@@ -674,7 +674,7 @@ var dungeons = [
             ['Iceberg Heart Piece']: { isAvailable: function () {
                 return items.MasterSword && items.ZoraLetter && (items.Bombs || items.Scale || items.Bombchu) && ((items.Ocarina && items.ZeldasLullaby) || items.HoverBoots); } },
             ['Underwater Heart Piece']: { isAvailable: function () {
-                return items.MasterSword && items.ZoraLetter && items.IronBoots && ((items.Ocarina && items.ZeldasLullaby) || items.HoverBoots); } },
+                return items.MasterSword && (items.Bombs || items.Scale || items.Bombchu) && items.ZoraLetter && items.IronBoots && ((items.Ocarina && items.ZeldasLullaby) || items.HoverBoots); } },
             ['Thaw King Zora']: { isAvailable: function () {
                 return items.Bottle && items.MasterSword && ((items.Ocarina && items.ZeldasLullaby) || items.HoverBoots) && (((items.ZoraLetter && (items.Bombs || items.Scale || items.Bombchu)) || isBridgeOpen() || items.Wallet >= 3)); } },
         },
