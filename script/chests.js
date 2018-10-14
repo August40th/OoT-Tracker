@@ -116,13 +116,13 @@ var dungeons = [
             ['Like Like Invisible Chest']: { isAvailable: function () {
                 return (items.EponasSong || items.Hookshot >= 2 || items.Membership >=5 ) && items.Hookshot && items.Glove >= 2; } },
             ['Cyclops Statue Eyes']: { isAvailable: function () {
-                return (items.EponasSong || items.Hookshot >= 2 || items.Membership >=5 ) && items.Bow && (items.SongofTime || items.HoverBoots || items.Hookshot >=2 || (items.Hookshot)); } },
+                return (items.EponasSong || items.Hookshot >= 2 || items.Membership >=5 ) && items.Hookshot && items.Bow && (items.SongofTime || items.HoverBoots || items.Hookshot >=2 || (items.Hookshot)); } },
             ['Cyclops Room Top Room']: { isAvailable: function () {
                 return (items.EponasSong || items.Hookshot >= 2 || items.Membership >=5 ) && items.Hookshot && items.Bow; } },
             ['Fire Enemies Clear']: { isAvailable:  function () {
-                return (items.EponasSong || items.Hookshot >= 2 || items.Membership >=5 ) && (items.Hookshot || (items.SongofTime || items.HoverBoots || items.Hookshot >=2)); } },
+                return (items.EponasSong || items.Hookshot >= 2 || items.Membership >=5 ) && items.Hookshot; } },
             ['Fire Enemies Fire Chest']: { isAvailable: function () {
-                return (items.EponasSong || items.Hookshot >= 2 || items.Membership >=5 ) && (items.Hookshot || (items.SongofTime || items.HoverBoots || items.Hookshot >=2)); } },           
+                return (items.EponasSong || items.Hookshot >= 2 || items.Membership >=5 ) && items.Hookshot; } },           
             ['Maze Right Open Key']: { isAvailable: function () {
                 return (items.EponasSong || items.Hookshot >= 2 || items.Membership >=5 ) && ((items.Ocarina && items.SongofTime) || items.GTGKey >= 2); } },
             ['Maze Right Central Chest']: { isAvailable:  function () {
