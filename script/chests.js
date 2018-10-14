@@ -468,30 +468,18 @@ var dungeons = [
         chestlist: {
             ['Forest Chest']: { isAvailable: function () { 
                 return isBridgeOpen(); } },
-             ['Forest Trial']: { isAvailable: function () { 
-                return isBridgeOpen() && items.Bow && (items.Dins || items.Fire) && items.Magic && items.Light; } },          
-             ['Fire Trail']: { isAvailable: function () {
-                return isBridgeOpen() && items.Glove >= 3 && items.Bow && items.Magic && items.Light; } },
             ['Ice Chests x2']: { isAvailable: function () { 
                 return isBridgeOpen(); } },
-            ['Ice Trial']: { isAvailable: function () { 
-                return isBridgeOpen() && items.Magic && items.Bow && items.Light; } },           
             ['Spirit Chest x2']: { isAvailable:  function () {
                 return isBridgeOpen() && items.Hookshot && items.Bombchu; } },
-            ['Spirit Trial']: { isAvailable: function () { 
-                return isBridgeOpen() && items.Hookshot && items.Bombchu && items.MirrorShield && items.Magic && items.Bow && items.Light; } },  
             ['Shadow Chests x2']: { isAvailable:  function () {
                 return isBridgeOpen() && ((items.Magic && items.Bow && items.Fire) || items.Hookshot >= 2) && items.HoverBoots; } },
-            ['Shadow Trial']: { isAvailable:  function () {
-                return isBridgeOpen() && items.Magic && items.Bow && items.Light && items.Hammer && ((items.Magic && items.Bow && items.Fire) || (items.Hookshot >= 2 && items.HoverBoots)); } },           
             ['Light Chests x6']: { isAvailable:  function () {
                 return isBridgeOpen() && items.Glove >= 3; } },
-            ['Light Invisible CHest']: { isAvailable:  function () {
+            ['Light Trial Invisible CHest']: { isAvailable:  function () {
                 return isBridgeOpen() && items.Glove >= 3; } },
             ['Light Trial Lullaby Chest']: { isAvailable:  function () {
                 return isBridgeOpen() && items.Glove >= 3 && items.Ocarina && items.ZeldasLullaby && items.CastleKey; } },
-            ['Light Trail']: { isAvailable: function () {
-                return isBridgeOpen() && items.Glove >= 3 && items.ZeldasLullaby && items.CastleKey >=2 && items.Bow && items.Magic && items.Light; } },
             ['Boss Key Chest']: { isAvailable: function () {
                 return isBridgeOpen() && generalCanGetChest(this.trials); } },
             ['GanonDorf']: { isAvailable: function () {
