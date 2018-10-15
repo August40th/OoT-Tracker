@@ -804,10 +804,10 @@ var dungeons = [
         x: "8.4%",
         y: "15.9%",
         chestlist: {           
-            ['Haunted Wasteland Chest']: { isAvailable: function() {return (((items.EponasSong || items.Membership) && items.HoverBoots) || items.Hookshot >= 2) && (items.Magic && (items.Dins || (items.Bow && items.Fire))) } },
-            ['Requiem of Spirit']: { isAvailable: function() {return ((items.EponasSong || items.Membership) && items.HoverBoots) || items.Hookshot >= 2 || (items.Ocarina && items.RequiemofSpirit)} },
+            ['Haunted Wasteland Chest']: { isAvailable: function() {return (((items.EponasSong || items.Membership >= 5) && items.HoverBoots) || items.Hookshot >= 2) && (items.Magic && (items.Dins || (items.Bow && items.Fire))) } },
+            ['Requiem of Spirit']: { isAvailable: function() {return ((items.EponasSong || items.Membership >= 5) && items.HoverBoots) || items.Hookshot >= 2 || (items.Ocarina && items.RequiemofSpirit)} },
             ['Desert Bean Heart Piece']: { isAvailable: function() {return items.Bean && items.Ocarina && items.RequiemofSpirit} },          
-            ['Desert Fairy Fountain']: { isAvailable: function() {return (items.Ocarina && items.ZeldasLullaby && (items.Bombs || items.Bombchu)) && (((items.EponasSong || items.Membership) && items.HoverBoots) || items.Hookshot >= 2 || items.RequiemofSpirit)} },
+            ['Desert Fairy Fountain']: { isAvailable: function() {return (items.Ocarina && items.ZeldasLullaby && (items.Bombs || items.Bombchu)) && (((items.EponasSong || items.Membership >= 5) && items.HoverBoots) || items.Hookshot >= 2 || items.RequiemofSpirit)} },
         },
         isBeatable: function(){
             return this.canGetChest();
