@@ -685,7 +685,7 @@ var dungeons = [
             ['Storms Grotto']: { isAvailable: function () {
                 return (items.Ocarina && items.SongofStorms); } },
             ['Bolero of Fire']: { isAvailable: function () {
-                return items.MasterSword && (items.BoleroofFire || items.HoverBoots || items.Hookshot); } },
+                return items.MasterSword && (items.BoleroofFire || items.HoverBoots || items.Hookshot) && (items.Bombs || items.Bombchu || items.Hammer || items.Bow || (items.Magic && items.Dins)); } },
             ['Crater Bean Heart Piece']: { isAvailable: function () {
                 return (items.Bean && items.BoleroofFire) || items.HoverBoots; } },            
             ['Crater Fairy Fountain']: { isAvailable: function () {
