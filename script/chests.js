@@ -27,15 +27,15 @@ var dungeons = [
         x: "78.9%",
         y: "63.9%",
         chestlist: {
-            vanilla:{
+            [vanilla:{
                 ['Kokiri Sword Chest']: { isAvailable: function() {return true} },
                 ['Mido\'s House x4 Chests']: { isAvailable: function() {return true} },
                 ['Fairy Ocarina']: { isAvailable: function() {return true} },
                 ['Song of Storms Grotto']: { isAvailable: function() {return items.Ocarina && items.SongofStorms;} },
-            },
-            skulltule: {
+            },]
+            [skulltule: {
                 ['Skulltula test']: { isAvailable: function() {return true} },
-            },
+            },]
         },
         isBeatable: function(){
             return this.canGetChest();
