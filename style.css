@@ -464,7 +464,7 @@ label {
 .mapspan .tooltipgray {
     visibility: hidden;
     width: 160px;
-    font-size: 20;
+    font-size: 16;
     background-color: black;
     color: #fff;
     text-align: center;
@@ -488,7 +488,7 @@ label {
 .mapspan .tooltip {
     visibility: hidden;
     width: 160px;
-    font-size: 20;
+    font-size: 16;
     background-color: black;
     color: #fff;
     text-align: center;
