@@ -148,6 +148,242 @@ label {
     background-repeat: no-repeat;
 
     position: relative;
+    width: 828px;
+    height: 400;
+    left: 0px;
+}
+
+
+.submapdiv{
+    background-color: black;
+
+    position: absolute;
+    width: 232px;
+    height: 240px;
+    margin-top: 160px;
+}
+
+
+.mapvdiv{
+    background-image: url("images/mapv.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    position: relative;
+    width: 438px;
+    height: 888px;
+    left: 0px;
+}
+
+.chest{
+    width: 16;
+    height: 16;
+    background-size: 100% 100%;
+
+    position: absolute;
+    margin-left: -8px;
+    margin-top: -8px;
+    cursor: pointer;
+}
+
+.unavailable{
+    background-color: rgb(255,0,0);
+}
+
+.available{
+    background-color: rgb(0,255,0);
+}
+
+.possible{
+    background-color: rgb(255,255,0);
+}
+
+.opened{
+    background-color: rgb(200,200,200);
+}
+
+
+.DCunavailable{
+    color: rgb(255,0,0);
+}
+
+.DCavailable{
+    color: rgb(0,255,0);
+}
+
+.DCpossible{
+    color: rgb(255,255,0);
+    
+}
+
+.DCopened{
+    color: rgb(200,200,200);
+}
+
+.DChighlight{
+    color: rgb(0,0,0);
+}
+
+
+.mapspan .tooltipgray {
+    visibility: hidden;
+    width: 160px;
+    font-size: 16;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 120%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.mapspan .tooltipgray:hover {
+    display: none;
+}
+
+.mapspan:hover .tooltipgray {
+    visibility: visible;
+}
+
+.mapspan .tooltip {
+    visibility: hidden;
+    width: 160px;
+    font-size: 16;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 170%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.mapspan .tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+.mapspan .tooltip:hover {
+    display: none;
+}
+
+.mapspan:hover .tooltip {
+    visibility: visible;
+}
+
+}
+
+.itemconfig {
+    border-spacing: 0px;
+    border: 1px solid white;	
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.stoops{
+    width: 128;
+    height: 128;
+    background-size: 200% 200%;
+}
+
+input {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display:inline-block;
+    *display: inline;     /* for IE7*/
+    zoom:1;              /* for IE7*/
+    vertical-align:middle;
+    margin-left:20px
+}
+
+label {
+    display:inline-block;
+    *display: inline;     /* for IE7*/
+    zoom:1;              /* for IE7*/
+    float: left;
+    padding-top: 5px;
+    text-align: right;
+    width: 240px;
+}
+
+.lonk{
+    width: 64px;
+    height: 64px;
+    border-spacing: 0px;
+    border: 0px;
+}
+
+.corner{
+    width: 32px;
+    height: 32px;
+}
+
+.true{
+    opacity: 1;
+}
+
+.false{
+    opacity: 0.45;
+}
+
+.mini{
+    width: 16;
+    height: 16;
+    vertical-align: text-bottom;
+}
+
+.boss{
+    width: 12;
+    height: 12;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 75% 75%;
+
+    position: absolute;
+    margin-left: -6px;
+    margin-top: -6px;
+
+    z-index: 2;
+}
+
+.dungeon{
+    width: 24;
+    height: 24;
+    background-size: 100% 100%;
+
+    position: absolute;
+    margin-left: -12px;
+    margin-top: -12px;
+    cursor: pointer;
+}
+
+.itemdiv{
+    position: relative;
+    left: 0px;
+}
+
+.mapdiv{
+    background-image: url("images/map.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    position: relative;
     width: 1020px;
     height: 500px;
     left: 0px;
