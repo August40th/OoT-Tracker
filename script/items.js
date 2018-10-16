@@ -1,6 +1,6 @@
 var defaultItemGrid = [
     [
-        "ZeldasLullaby",
+        "SongofTime",
         "KokiriSword",
         "Mask",
         "LightMedallion",
@@ -36,19 +36,19 @@ var defaultItemGrid = [
         "BossWater"
     ],
     [
-        "Scarecrow",
+        "EponasSong",
         "KokiriBoots",
         "ZoraLetter",
         "WaterMedallion",
         "Bottle",
         "IronBoots",
         "HoverBoots",
-        "EponasSong",
+        "Scarecrow",
         "GTGKey",
         "Membership"
     ],
     [
-        "SongofTime",
+        "ZeldasLullaby",
         "Ocarina",
         "KokiriEmerald",
         "GoronRuby",
@@ -93,7 +93,7 @@ var defaultItemGrid = [
         "Hammer",
         "BigPoe",
         "Skulltula",
-        "blank"
+        "GoMode"
     ]
 ]
 
@@ -165,6 +165,7 @@ var items = {
     ShadowMedallion:false,
     LightMedallion:false,
     BigPoe:0,
+    GoMode:false,
     
     ForestKey:0,
     FireKey:0,
