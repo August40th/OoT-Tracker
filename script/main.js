@@ -421,8 +421,7 @@ function updateGridItem(row, index) {
         else
             itemGrid[row][index][3].style.backgroundImage = "";           
     }
-}
- else if (medallions[item] !== undefined){
+    else if (medallions[item] !== undefined){
         if (showprizes)
             itemGrid[row][index][2].style.backgroundImage = "url(images/" + dungeonImg[medallions[item]] + ".png)";
         else
