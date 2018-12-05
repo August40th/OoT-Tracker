@@ -689,7 +689,7 @@ function populateMapdiv() {
 
         var ss = document.createElement('span');
         ss.className = "tooltip";
-        ss.innerHTML = chests[k].name + url(images/MQ.png);
+        ss.innerHTML = chests[k].name + "url(images/MQ.png)";
         s.appendChild(ss);
 
         mapdiv.appendChild(s);
