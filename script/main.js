@@ -561,7 +561,7 @@ function gridItemClick(row, col, corner) {
             if (medallions[item] >=  10)
                 medallions[item] = 0;
         } 
-        else if (corner == 2 {
+        else if (corner == 2) {
             medallions[item]++;
             if (medallions[item] >=  10)
                 medallions[item] = 0;
