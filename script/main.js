@@ -417,12 +417,6 @@ function updateGridItem(row, index) {
 
     if (medallions[item] !== undefined){
         if (showprizes)
-            itemGrid[row][index][3].style.backgroundImage = "url(images/" + dungeonImg[medallions[item]] + ".png)";
-        else
-            itemGrid[row][index][3].style.backgroundImage = "";           
-    }
-    else if (medallions[item] !== undefined){
-        if (showprizes)
             itemGrid[row][index][2].style.backgroundImage = "url(images/" + dungeonImg[medallions[item]] + ".png)";
         else
             itemGrid[row][index][2].style.backgroundImage = "";           
@@ -456,7 +450,6 @@ function initGridRow(itemsets) {
         KokiriEmerald: 0,
         GoronRuby: 0,
         ZoraSapphire: 0,
-        CastleKey: 0,
     };
 
     var r, c;
