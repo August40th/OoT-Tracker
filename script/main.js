@@ -559,6 +559,16 @@ function gridItemClick(row, col, corner) {
             items[item] = !items[item];
         }
     }
+    else if(medallions[item] !== undefined && showprizes){
+        if (corner == 1) {
+            medallions[item]++;
+            if (medallions[item] >=  10)
+                medallions[item] = 0;
+        } 
+        else {
+            items[item] = !items[item];
+        }
+    }
     else if((typeof items[item]) == "boolean"){
         items[item] = !items[item];
     }
