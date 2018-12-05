@@ -422,6 +422,13 @@ function updateGridItem(row, index) {
             itemGrid[row][index][3].style.backgroundImage = "";           
     }
 }
+ else if (medallions[item] !== undefined){
+        if (showprizes)
+            itemGrid[row][index][2].style.backgroundImage = "url(images/" + dungeonImg[medallions[item]] + ".png)";
+        else
+            itemGrid[row][index][2].style.backgroundImage = "";           
+    }
+}
 
 function updateGridItemAll() {
     for (r = 0; r < 8; r++) {
@@ -550,7 +557,12 @@ function gridItemClick(row, col, corner) {
     var item = itemLayout[row][col];
 
     if(medallions[item] !== undefined && showprizes){
-        if (corner == 2) {
+        if (corner == 3) {
+            medallions[item]++;
+            if (medallions[item] >=  10)
+                medallions[item] = 0;
+        } 
+        else if (corner == 2 {
             medallions[item]++;
             if (medallions[item] >=  10)
                 medallions[item] = 0;
