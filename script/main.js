@@ -450,6 +450,7 @@ function initGridRow(itemsets) {
         KokiriEmerald: 0,
         GoronRuby: 0,
         ZoraSapphire: 0,
+        CastleKey: 0,
     };
 
     var r, c;
