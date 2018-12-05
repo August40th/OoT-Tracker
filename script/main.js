@@ -1,5 +1,5 @@
 var medallions = [];
-var dungeonImg = ['MQ', 'Rauru', 'Gohma', 'Dodongo', 'Jellyfish', 'PoeSisters', 'FireDancer', 'Clam', 'IronKnuckle', 'Gibdo']
+var dungeonImg = ['Unknown', 'Rauru', 'Gohma', 'Dodongo', 'Jellyfish', 'PoeSisters', 'FireDancer', 'Clam', 'IronKnuckle', 'Gibdo']
 ganonlogic = 'Open';
 showprizes = false;
 
@@ -730,7 +730,7 @@ function populateMapdiv() {
 
         var ss = document.createElement('span');
         ss.className = "tooltipgray";
-        ss.innerHTML = dungeons[k].name + "images/MQ.png" ;
+        ss.innerHTML = dungeons[k].name;
         s.appendChild(ss);
 
         mapdiv.appendChild(s);
