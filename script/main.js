@@ -730,7 +730,7 @@ function populateMapdiv() {
 
         var ss = document.createElement('span');
         ss.className = "tooltipgray";
-        ss.innerHTML = dungeons[k].name + url("images/MQ.png") ;
+        ss.innerHTML = dungeons[k].name + "images/MQ.png" ;
         s.appendChild(ss);
 
         mapdiv.appendChild(s);
