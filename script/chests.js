@@ -23,7 +23,7 @@ function generalCanGetChest(chestlist) {
 // define dungeon chests
 var dungeons = [
     {
-        name: "Kokiri Forest",
+        name: "url(images/MQ.png)",
         x: "78.9%",
         y: "63.9%",
         chestlist: {
