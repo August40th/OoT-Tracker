@@ -45,8 +45,8 @@ var dungeons = [
         y: "48.5%",
         chestlist: {
             ['Lobby Chest']: { isAvailable: function () {return true} },
-            ['Slingshot Chest']: { isAvailable: function () {return items.DekuShield;} },
-            ['Slingshot Room Side Chest']: { isAvailable: function () {return items.DekuShield;} },
+            ['2nd Floor Big Chest']: { isAvailable: function () {return items.DekuShield;} },
+            ['2nd Floor Side Chest']: { isAvailable: function () {return items.DekuShield;} },
             ['Top Floor Big Chest']: { isAvailable: function () {return true} },
             ['Top Floor Side Chest']: { isAvailable: function () {return true} },
             ['Basement Chest']: { isAvailable: function () {return true} },
@@ -168,11 +168,11 @@ var dungeons = [
                 return items.SpiritKey && ((items.Ocarina && items.RequiemofSpirit && (items.Bombs || items.Bombchu)) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2)) && (items.Magic && (items.Dins || (items.Fire && items.Bow && items.Glove >= 2)) || items.Stick); } },
             ['Sun Block Room Chest']: { isAvailable: function () {
                 return items.SpiritKey && ((items.Ocarina && items.RequiemofSpirit && items.Stick && (items.Bombs|| items.Bombchu)) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && (items.Dins || (items.Fire && items.Bow)) && items.Magic)) ; } },
-            ['Silver Gauntlets Chest']: { isAvailable:  function () {
+            ['Child Iron Knuckle Chest']: { isAvailable:  function () {
                 return (items.RequiemofSpirit && items.SpiritKey >= 2 && items.Ocarina && (items.Bombs|| items.Bombchu)) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && items.SpiritKey); } },            
             ['1st Lullaby Chest']: { isAvailable:  function () {
                 return ((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && items.Hookshot && items.Ocarina && items.ZeldasLullaby; } },
-            ['Past the Rolling Gorons']: { isAvailable:  function () {
+            ['Silver Rupee Halfpipe']: { isAvailable:  function () {
                 return ((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && (items.Bow || items.Hookshot || items.Bombs); } },
             ['Floormaster Left Chest']: { isAvailable:  function () {
                 return items.SpiritKey && ((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2; } },
@@ -188,7 +188,7 @@ var dungeons = [
                 return items.SpiritKey >= 2 && (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2); } },
             ['Right Invisible Chest']: { isAvailable: function () {
                 return items.SpiritKey >= 2 && (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2); } },
-            ['Mirror Shield Chest']: { isAvailable: function () {
+            ['Adult Iron Knuckle Chest']: { isAvailable: function () {
                 return items.SpiritKey >= 2 && (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2); } },           
             ['Boss Key Chest']: { isAvailable: function () {
                 return items.SpiritKey >= 3 && (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2) && items.ZeldasLullaby && (items.Bombs || items.Hammer || items.Bombchu) ; } },
@@ -233,7 +233,7 @@ var dungeons = [
                 return items.Ocarina && items.SongofStorms; } },
             ['Locked Pits']: { isAvailable:  function () {
                 return items.Ocarina && items.SongofStorms && items.WellKey >= 1; } },
-            ['Behind Right Grate']: { isAvailable:  function () {
+            ['Like Like Chest']: { isAvailable:  function () {
                 return items.Ocarina && items.SongofStorms && items.WellKey >= 1; } },
             ['Basement Chest']: { isAvailable:  function () {
                 return items.Ocarina && items.SongofStorms && (items.Bombs || items.Bombchu || items.Glove); } },
@@ -305,13 +305,13 @@ var dungeons = [
         x: "60.6%",
         y: "08.4%",
         chestlist: {
-            ['Map Chest']: { isAvailable:  function () {
+            ['Lobby Chest']: { isAvailable:  function () {
                 return items.Bombs || items.Hammer || items.Glove || items.Bombchu ; } },
-            ['Compass Chest']: { isAvailable:  function () {
+            ['Armos Chest']: { isAvailable:  function () {
                 return items.Bombs || items.Hammer || items.Glove || items.Bombchu ; } },
             ['Bomb Flower Platform']: { isAvailable:  function () {
                 return items.Bombs || (items.Hammer && items.Bow) || items.Glove || items.Bombchu ; } },
-            ['Bomb Bag Chest']: { isAvailable:  function () {
+            ['Top Floor Big Chest']: { isAvailable:  function () {
                 return items.Bombs || (items.Hammer && items.Bow) || items.Glove || items.Bombchu ; } },
             ['End of Bridge Chest']: { isAvailable:  function () {
                 return items.Bombs || (items.Hammer && items.Bow) || items.Bombchu ; } },
@@ -354,7 +354,7 @@ var dungeons = [
                 return items.FireKey >= 5 && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)) && items.Glove && (items.Bombs || items.Bombchu); } },
             ['Scarecrow Chest']: { isAvailable: function () {
                 return items.FireKey >= 5 && items.Glove && items.Hookshot && items.Ocarina && items.Scarecrow >= 2; } },
-            ['Compass Chest']: { isAvailable: function () {
+            ['Flame Maze Side Room']: { isAvailable: function () {
                 return items.FireKey >= 6 && (items.BoleroofFire || items.HoverBoots || items.Hookshot) && items.Glove; } },
             ['Song of Time Block']: { isAvailable:  function () {
                 return (items.FireKey >= 7 || (items.FireKey >=6 && items.HoverBoots)) && (items.BoleroofFire || items.HoverBoots || items.Hookshot) && items.Glove && items.Hammer; } },
@@ -396,15 +396,15 @@ var dungeons = [
         x: "93.5%",
         y: "18.0%",
         chestlist: {
-            ['Map Chest']: { isAvailable:  function () {
+            ['1st Chest']: { isAvailable:  function () {
                 return (items.Bombs || items.Scale) && items.ZoraLetter && (items.ZeldasLullaby || items.HoverBoots); } },
-            ['Compass Chest']: { isAvailable:  function () {
+            ['Alcove Chest']: { isAvailable:  function () {
                 return (items.Bombs || items.Scale) && items.ZoraLetter && (items.ZeldasLullaby || items.HoverBoots); } },
-            ['Heart Piece']: { isAvailable:  function () {
+            ['Alcove Heart Piece']: { isAvailable:  function () {
                 return (items.Bombs || items.Scale) && items.ZoraLetter && (items.ZeldasLullaby || items.HoverBoots); } },
             ['White Wolfos']: { isAvailable:  function () {
                 return (items.Bombs || items.Scale) && items.ZoraLetter && (items.ZeldasLullaby || items.HoverBoots); } },
-            ['Ice Cavern Song']: { isAvailable:  function () {
+            ['Sheilk in Ice Cavern']: { isAvailable:  function () {
                 return (items.Bombs || items.Scale) && items.ZoraLetter && (items.ZeldasLullaby || items.HoverBoots); } },
         },
         isBeatable: function(){
@@ -419,11 +419,11 @@ var dungeons = [
         x: "78.5%",
         y: "39.0%",
         chestlist: {
-            ['First Chest']: { isAvailable:  function () {
+            ['Lobby Chest']: { isAvailable:  function () {
                 return items.Hookshot; } },
             ['1st Floor Stalfos']: { isAvailable: function () {
                 return items.Hookshot; } },           
-            ['Map Chest']: { isAvailable: function () {
+            ['Bubble Chest']: { isAvailable: function () {
                 return items.Hookshot; } },
             ['Courtyard Hookshot Chest']: { isAvailable: function () {
                 return items.Hookshot; },  }, 
@@ -517,7 +517,7 @@ var dungeons = [
                 return (true); } },
             ['Malon\s Weird Egg']: { isAvailable: function () {
                 return (true); } },
-            ['Impa\'s Song']: { isAvailable: function () {
+            ['Song from Impa']: { isAvailable: function () {
                 return (items.Mask >= 1); } },
             ['Bombchu Bowling 1']: { isAvailable: function () {
                 return (items.Bombs); } },
@@ -678,7 +678,7 @@ var dungeons = [
         x: "62.0%",
         y: "13.7%",
         chestlist: {
-            ['HP Above Dodongo\'s Cavern']: { isAvailable: function () {
+            ['Cavern Roof Heart Piece']: { isAvailable: function () {
                 return true; } },
             ['Breakable Wall Chest']: { isAvailable: function () {
                 return (items.Bombs || items.Hammer || items.Bombchu || items.Glove); } },
@@ -712,7 +712,7 @@ var dungeons = [
         y: "45.6%",
         chestlist: {
             ['Talon\'s Cucco game']: { isAvailable: function() {return items.Mask >= 2;} },
-            ['Malon\'s Song']: { isAvailable: function() {return items.Mask >= 2 && items.Ocarina;} },
+            ['Song from Malon']: { isAvailable: function() {return items.Mask >= 2 && items.Ocarina;} },
             ['Silo Heart Piece']: { isAvailable: function() {return true;} },
             ['Race Ingo']: { isAvailable: function() {return items.MasterSword && items.EponasSong;} },
         },
@@ -733,7 +733,6 @@ var dungeons = [
             ['River Heart Piece 2']: { isAvailable: function() {return items.HoverBoots || (items.Bombs || items.Bombchu || items.Scale);} },           
             ['Frogs in the Rain']: { isAvailable: function() {return items.Ocarina && items.SongofStorms && (items.Bombs || items.Bombchu || items.Scale);} },
             ['Frogs Mini Game']: { isAvailable: function() {return items.Ocarina && (items.Bombs || items.Bombchu || items.Scale) && items.ZeldasLullaby && items.EponasSong && items.SariasSong && items.SunsSong && items.SongofTime && items.SongofStorms;} },
-            ['Bean Salesman']: { isAvailable: function() {return items.Bombs || items.Bombchu || items.Scale;} },    
         },
         isBeatable: function(){
             return this.canGetChest();
@@ -748,7 +747,7 @@ var dungeons = [
         y: "81.0%",
         chestlist: {
             ['Scarecrow Setup']: { isAvailable: function() { return items.Ocarina; } },
-            ['Scarecrow Song']: { isAvailable: function() { return items.Scarecrow && items.MasterSword; } },
+            ['Scarecrow Song']: { isAvailable: function() { return items.Ocarina && items.Scarecrow && items.MasterSword; } },
             ['Child Fishing']: { isAvailable: function() {return items.KokiriSword;} },
             ['Silver Scale item']: { isAvailable: function() {return items.Scale;} },
             ['Diving in the Lab']: { isAvailable: function() {return items.MasterSword && (items.Scale >= 2 || (items.IronBoots && items.Hookshot));} },
