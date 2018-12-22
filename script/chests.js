@@ -169,8 +169,8 @@ var dungeons = [
             ['Sun Block Room Chest']: { isAvailable: function () {
                 return items.SpiritKey && ((items.Ocarina && items.RequiemofSpirit && items.Stick && (items.Bombs|| items.Bombchu)) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && (items.Dins || (items.Fire && items.Bow)) && items.Magic)) ; } },
             ['Child Iron Knuckle Chest']: { isAvailable:  function () {
-                return (items.RequiemofSpirit && items.SpiritKey >= 2 && items.Ocarina && (items.Bombs|| items.Bombchu)) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && items.SpiritKey); } },            
-            ['1st Lullaby Chest']: { isAvailable:  function () {
+                return (items.RequiemofSpirit && items.SpiritKey >= 2 && items.Ocarina && (items.Bombs|| items.Bombchu)) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && items.SpiritKey >= 2); } },            
+            ['Wolfos Lullaby Chest']: { isAvailable:  function () {
                 return ((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && items.Hookshot && items.Ocarina && items.ZeldasLullaby; } },
             ['Silver Rupee Halfpipe']: { isAvailable:  function () {
                 return ((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && (items.Bow || items.Hookshot || items.Bombs); } },
