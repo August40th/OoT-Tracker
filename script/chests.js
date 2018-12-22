@@ -883,7 +883,7 @@ var chests = [
         x: "44.5%",
         y: "64.0%",
         isAvailable: function(){
-            return "available";
+            return dungeons.'Gerudo Fortress'.'Fortress Guard 1'.isOpened;
         }
     },
     {
