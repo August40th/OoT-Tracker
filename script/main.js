@@ -210,6 +210,36 @@ function setGanonLogic(sender) {
     saveCookie();
 }
 
+function setFortressLogic(sender) {
+    gerudobridge = sender.value;
+    updateMap();
+    saveCookie();
+}
+
+function setSmallKeys(sender) {
+    smallkeys = sender.value;
+    updateMap();
+    saveCookie();
+}
+
+function setBossKeys(sender) {
+    bosskeys = sender.value;
+    updateMap();
+    saveCookie();
+}
+
+function setSkulltula(sender) {
+    skulltula = sender.value;
+    updateMap();
+    saveCookie();
+}
+
+function setSrub(sender) {
+    scrubs = sender.value;
+    updateMap();
+    saveCookie();
+}
+
 function setZoom(target, sender) {
     document.getElementById(target).style.zoom = sender.value / 100;
     document.getElementById(target).style.zoom = sender.value / 100;
