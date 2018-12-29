@@ -231,7 +231,8 @@ function setSmallKeys(sender) {
 
 function setBossKeys(sender) {
     bosskeys = sender.value;
-    if (bosskeys == 'Remove') then items.BossForest = true; 
+    if (bosskeys == 'Remove')
+        items.BossForest = true; 
     updateMap();
     saveCookie();
 }
