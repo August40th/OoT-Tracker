@@ -225,6 +225,7 @@ function setSmallKeys(sender) {
     smallkeys = sender.value;
     if (smallkeys == 'Remove')
         itenms.ForestKey = 5;
+    updateGridItemAll();
     updateMap();
     saveCookie();
 }
