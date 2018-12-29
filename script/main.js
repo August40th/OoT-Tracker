@@ -1,6 +1,11 @@
 var medallions = [];
 var dungeonImg = ['Unknown', 'Rauru', 'Gohma', 'Dodongo', 'Jellyfish', 'PoeSisters', 'FireDancer', 'Clam', 'IronKnuckle', 'Gibdo']
 ganonlogic = 'Open';
+gerudobridge ='Default';
+smallkeys = 'Dungeons';
+bosskeys = 'Dungeons';
+skulltula = 'Off';
+scrubs = 'Off';
 showprizes = false;
 
 var itemGrid = [];
@@ -218,12 +223,16 @@ function setFortressLogic(sender) {
 
 function setSmallKeys(sender) {
     smallkeys = sender.value;
+    if (smallkeys == 'Remove')
+        itenms.ForestKey = 5;
     updateMap();
     saveCookie();
 }
 
 function setBossKeys(sender) {
     bosskeys = sender.value;
+    if (bosskeys == 'Remove')
+        items.BossForest = true;
     updateMap();
     saveCookie();
 }
