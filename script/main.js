@@ -217,7 +217,7 @@ function setGanonLogic(sender) {
 
 function setFortressLogic(sender) {
     gerudobridge = sender.value;
-    if (gerudobridge == 'Start'
+    if (gerudobridge == 'Start')
         items.Membership = 5;
     updateGridItemAll();
     updateMap();
