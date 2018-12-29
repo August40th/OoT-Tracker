@@ -232,8 +232,8 @@ function setFortressLogic(sender) {
 function setSmallKeys(sender) {
     smallkeys = sender.value;
     if (smallkeys == 'Remove')
-        items.ForestKey = 5;
-        items.FireKey = 8;
+        items.ForestKey = 5
+        items.FireKey = 8
         items.WaterKey = 6;
         items.ShadowKey = 5;
         items.SpiritKey = 5;
