@@ -219,6 +219,11 @@ function setFortressLogic(sender) {
     gerudobridge = sender.value;
     if (gerudobridge == 'Start')
         items.Membership = 5;
+    if (gerudobridge != 'Start')
+        if (smallkeys != 'Keysanity')
+            items.Membership = 0;
+        if (smallkeys == 'Keysanity')
+            items.Membership = 4;
     updateGridItemAll();
     updateMap();
     saveCookie();
@@ -245,7 +250,17 @@ function setSmallKeys(sender) {
         items.CastleKey = 2;
         items.Membership = 4;
         items.GTGKey = 9;
-        items.WellKey = 3; 
+        items.WellKey = 3;
+    if (smallkeys == 'Keysanity')
+        items.ForestKey = 0;
+        items.FireKey = 0;
+        items.WaterKey = 0;
+        items.ShadowKey = 0;
+        items.SpiritKey = 0;
+        items.CastleKey = 0;
+        items.Membership = 0;
+        items.GTGKey = 0;
+        items.WellKey = 0;
     updateGridItemAll();
     updateMap();
     saveCookie();
@@ -253,20 +268,27 @@ function setSmallKeys(sender) {
 
 function setBossKeys(sender) {
     bosskeys = sender.value;
-    if (bosskeys == 'Remove' || bosskeys =='Dungeons')
+    if (bosskeys == 'Remove')
         items.BossForest = true; 
         items.BossFire = true; 
         items.BossWater = true; 
         items.BossShadow = true; 
         items.BossSpirit = true; 
         items.BossCastle = true; 
-    //else if (bosskeys == 'Dungeons')
-      //  items.BossForest = true; 
-        //items.BossFire = true; 
-        //items.BossWater = true; 
-        //items.BossShadow = true; 
-        //items.BossSpirit = true; 
-        //items.BossCastle = true; 
+    else if (bosskeys == 'Dungeons')
+        items.BossForest = true; 
+        items.BossFire = true; 
+        items.BossWater = true; 
+        items.BossShadow = true; 
+        items.BossSpirit = true; 
+        items.BossCastle = true; 
+    else if (bosskeys == 'Keysanity')
+        items.BossForest = false; 
+        items.BossFire = false; 
+        items.BossWater = false; 
+        items.BossShadow = false; 
+        items.BossSpirit = false; 
+        items.BossCastle = false; 
     updateGridItemAll();
     updateMap();
     saveCookie();
