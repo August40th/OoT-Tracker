@@ -275,14 +275,14 @@ function setBossKeys(sender) {
         items.BossShadow = true; 
         items.BossSpirit = true; 
         items.BossCastle = true; 
-    else if (bosskeys == 'Dungeons')
+    if (bosskeys == 'Dungeons')
         items.BossForest = true; 
         items.BossFire = true; 
         items.BossWater = true; 
         items.BossShadow = true; 
         items.BossSpirit = true; 
         items.BossCastle = true; 
-    else if (bosskeys == 'Keysanity')
+    if (bosskeys == 'Keysanity')
         items.BossForest = false; 
         items.BossFire = false; 
         items.BossWater = false; 
