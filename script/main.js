@@ -219,6 +219,7 @@ function setFortressLogic(sender) {
     gerudobridge = sender.value;
     if (gerudobridge == 'Start')
         items.Membership = 5;
+    end if
     updateGridItemAll();
     updateMap();
     saveCookie();
@@ -236,7 +237,7 @@ function setSmallKeys(sender) {
         items.Membership = 4;
         items.GTGKey = 9;
         items.WellKey = 3; 
-    if (smallkeys == 'Dungeons')
+    else if (smallkeys == 'Dungeons')
         items.ForestKey = 5;
         items.FireKey = 8;
         items.WaterKey = 6;
@@ -246,6 +247,7 @@ function setSmallKeys(sender) {
         items.Membership = 4;
         items.GTGKey = 9;
         items.WellKey = 3; 
+    end if
     updateGridItemAll();
     updateMap();
     saveCookie();
@@ -253,20 +255,22 @@ function setSmallKeys(sender) {
 
 function setBossKeys(sender) {
     bosskeys = sender.value;
-    if (bosskeys == 'Remove')
+    if (bosskeys == 'Remove' || bosskeys =='Dungeons')
         items.BossForest = true; 
         items.BossFire = true; 
         items.BossWater = true; 
         items.BossShadow = true; 
         items.BossSpirit = true; 
         items.BossCastle = true; 
-    if (bosskeys == 'Dungeons')
-        items.BossForest = true; 
-        items.BossFire = true; 
-        items.BossWater = true; 
-        items.BossShadow = true; 
-        items.BossSpirit = true; 
-        items.BossCastle = true; 
+    //else if (bosskeys == 'Dungeons')
+      //  items.BossForest = true; 
+        //items.BossFire = true; 
+        //items.BossWater = true; 
+        //items.BossShadow = true; 
+        //items.BossSpirit = true; 
+        //items.BossCastle = true; 
+    end if
+    updateGridItemAll();
     updateMap();
     saveCookie();
 }
