@@ -276,28 +276,28 @@ function setSmallKeys(sender) {
 function setBossKeys(sender) {
     bosskeys = sender.value;
     if (bosskeys == 'Remove') {
-        items.BossForest = true; 
-        items.BossFire = true; 
-        items.BossWater = true; 
-        items.BossShadow = true; 
-        items.BossSpirit = true; 
-        items.BossCastle = true; 
+        items.BossForest = 1; 
+        items.BossFire = 1; 
+        items.BossWater = 1; 
+        items.BossShadow = 1; 
+        items.BossSpirit = 1; 
+        items.BossCastle = 1; 
     }
     if (bosskeys == 'Dungeons') {
-        items.BossForest = true; 
-        items.BossFire = true; 
-        items.BossWater = true; 
-        items.BossShadow = true; 
-        items.BossSpirit = true; 
-        items.BossCastle = true; 
+        items.BossForest = 1; 
+        items.BossFire = 1; 
+        items.BossWater = 1; 
+        items.BossShadow = 1; 
+        items.BossSpirit = 1; 
+        items.BossCastle = 1; 
     }
     if (bosskeys == 'Keysanity') {
-        items.BossForest = false; 
-        items.BossFire = false; 
-        items.BossWater = false; 
-        items.BossShadow = false; 
-        items.BossSpirit = false; 
-        items.BossCastle = false; 
+        items.BossForest = 0; 
+        items.BossFire = 0; 
+        items.BossWater = 0; 
+        items.BossShadow = 0; 
+        items.BossSpirit = 0; 
+        items.BossCastle = 0; 
     }
     updateGridItemAll();
     updateMap();
