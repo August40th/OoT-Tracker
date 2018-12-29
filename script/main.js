@@ -837,6 +837,18 @@ function isBridgeOpen() {
     return false;
 }
 
+function isFortressOpen() {
+    switch (gerudobridge) {
+        case "Default":
+            return false;
+        case "Shuffle":
+            return false;
+        case "Start":
+            return true;
+    }
+    return false;
+} 
+
 function init() {
     createItemTracker(document.getElementById('itemdiv'));
     populateMapdiv();
