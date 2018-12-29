@@ -49,15 +49,15 @@
             </fieldset>
             <fieldset>
                     <legend> Fortress Logic</legend>
-                    0: <input type='range' name='FreeCarpenters' value='0' max='4' min'0' onchange="setCarpenters(this)">
-                    <span id='FreeCarpenters'>4</span><br>
-                    Gerudo Membership: <input type="checkbox" name="GerudoMembership" checked='false' onchange="setMembership(this)">Shuffled<br>
+                    <input type='radio' name='Membership' value='Remove' onclick="setSmallKey(this(">Default
+                            <input type='radio' name='Membership' value='Shuffle' checked='true' onclick="setSmallKey(this(">Shuffle
+                            <input type='radio' name='Membership' value='Start' onclick="setSmallKey(this(">Start with
             </fieldset>
             <fieldset>
                     <legend>Rainbow Bridge Logic</legend>
                     <input type='radio' name='ganonlogic' value='Open' checked='true' onclick="setGanonLogic(this)">Open
-                    <input type='radio' name='ganonlogic' value='Vanilla' onclick="setGanonLogic(this)">Vanilla<br>
-                    <input type='radio' name='ganonlogic' value='Medallions' onclick="setGanonLogic(this)">Medallions<br>
+                    <input type='radio' name='ganonlogic' value='Vanilla' onclick="setGanonLogic(this)">Vanilla
+                    <input type='radio' name='ganonlogic' value='Medallions' onclick="setGanonLogic(this)">Medallions
                     <input type='radio' name='ganonlogic' value='Dungeons' onclick="setGanonLogic(this)">Dungeons<br>
             </fieldset>
                 <fieldset>
@@ -68,11 +68,21 @@
                             <input type='radio' name='SmallKey' value='Remove' onclick="setSmallKey(this(">Remove
                             <input type='radio' name='SmallKey' value='Dungeons' checked='true' onclick="setSmallKey(this(">Dungeons
                             <input type='radio' name='SmallKey' value='Keysanity' onclick="setSmallKey(this(">Keysanity
+                        Boss Keys: 
+                            <input type='radio' name='BossKey' value='Remove' onclick="setBossKey(this(">Remove
+                            <input type='radio' name='BossKey' value='Dungeons' checked='true' onclick="setBossKey(this(">Dungeons
+                            <input type='radio' name='BossKey' value='Keysanity' onclick="setBossKey(this(">Keysanity
                     </fieldset>
-                    <legend>Skulltula</legend>
-                    <input type='radio' name='skulltula' value='Off' checked='true' onclick="setSkulltula(this)">Off
-                    <input type='radio' name='skulltula' value='Dungeons' onclick="setSkulltula(this)">Dungeons<br>
-                    <input type='radio' name='skulltula' value='All' onclick="setSkulltula(this)">All<br>
+                    <fieldset><legend>Skulltula</legend>
+                        <input type='radio' name='skulltula' value='Off' checked='true' onclick="setSkulltula(this)">Off
+                        <input type='radio' name='skulltula' value='Dungeons' onclick="setSkulltula(this)">Dungeons
+                        <input type='radio' name='skulltula' value='All' onclick="setSkulltula(this)">All<br>
+                    </fieldset>
+                    <fieldset> <legend>Scrub Salesmen</legend>
+                        <input type='radio' name='scrubs' value='Major Item' checked='true' onclick="setScrubthis)">Off
+                        <input type='radio' name='scrubs' value='All' onclick="setScrub(this)">Scrubsanity<br>
+                        <input type='radio' name='scrubs' value='MinusWorst' onclick="setScrub(this)">Minus Worst<br>
+                    </fieldset>
                 </fieldset>
             
         
