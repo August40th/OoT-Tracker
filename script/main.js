@@ -236,7 +236,7 @@ function setSmallKeys(sender) {
         items.Membership = 4;
         items.GTGKey = 9;
         items.WellKey = 3; 
-    else if (smallkeys == 'Dungeons')
+    elseif (smallkeys == 'Dungeons')
         items.ForestKey = 5;
         items.FireKey = 8;
         items.WaterKey = 6;
