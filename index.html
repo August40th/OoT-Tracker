@@ -40,6 +40,7 @@
             </fieldset>
             <fieldset>
                 <legend>Map Tracker</legend>
+                <input type="checkbox" name="showmap" checked='true' onchange="showTracker('mapdiv', this)">Enabled<br>
                 Size:
                 <input type="range" name='mapdivsize' value='100' max='200' min='1' onchange="setZoom('mapdiv', this)">
                 <span id='mapdivsize'>100%</span><br>
