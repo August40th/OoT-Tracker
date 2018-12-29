@@ -247,7 +247,7 @@ function setSmallKeys(sender) {
         items.Membership = 4;
         items.GTGKey = 9;
         items.WellKey = 3; 
-    end if
+    end
     updateGridItemAll();
     updateMap();
     saveCookie();
@@ -269,7 +269,7 @@ function setBossKeys(sender) {
         //items.BossShadow = true; 
         //items.BossSpirit = true; 
         //items.BossCastle = true; 
-    end if
+    end
     updateGridItemAll();
     updateMap();
     saveCookie();
