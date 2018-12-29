@@ -217,13 +217,17 @@ function setGanonLogic(sender) {
 
 function setFortressLogic(sender) {
     gerudobridge = sender.value;
-    if (gerudobridge == 'Start')
+    if (gerudobridge == 'Start') {
         items.Membership = 5;
-    if (gerudobridge != 'Start')
-        if (smallkeys != 'Keysanity')
+    }
+    if (gerudobridge != 'Start') {
+        if (smallkeys != 'Keysanity') {
             items.Membership = 0;
-        if (smallkeys == 'Keysanity')
+        }
+        if (smallkeys == 'Keysanity') {
             items.Membership = 4;
+        }
+    }
     updateGridItemAll();
     updateMap();
     saveCookie();
@@ -231,9 +235,9 @@ function setFortressLogic(sender) {
 
 function setSmallKeys(sender) {
     smallkeys = sender.value;
-    if (smallkeys == 'Remove')
-        items.ForestKey = 5
-        items.FireKey = 8
+    if (smallkeys == 'Remove') {
+        items.ForestKey = 5;
+        items.FireKey = 8;
         items.WaterKey = 6;
         items.ShadowKey = 5;
         items.SpiritKey = 5;
@@ -241,7 +245,8 @@ function setSmallKeys(sender) {
         items.Membership = 4;
         items.GTGKey = 9;
         items.WellKey = 3; 
-    if (smallkeys == 'Dungeons')
+    }
+    if (smallkeys == 'Dungeons') {
         items.ForestKey = 5;
         items.FireKey = 8;
         items.WaterKey = 6;
@@ -251,7 +256,8 @@ function setSmallKeys(sender) {
         items.Membership = 4;
         items.GTGKey = 9;
         items.WellKey = 3;
-    if (smallkeys == 'Keysanity')
+    }
+    if (smallkeys == 'Keysanity') {
         items.ForestKey = 0;
         items.FireKey = 0;
         items.WaterKey = 0;
@@ -261,6 +267,7 @@ function setSmallKeys(sender) {
         items.Membership = 0;
         items.GTGKey = 0;
         items.WellKey = 0;
+    }
     updateGridItemAll();
     updateMap();
     saveCookie();
@@ -268,27 +275,30 @@ function setSmallKeys(sender) {
 
 function setBossKeys(sender) {
     bosskeys = sender.value;
-    if (bosskeys == 'Remove')
+    if (bosskeys == 'Remove') {
         items.BossForest = true; 
         items.BossFire = true; 
         items.BossWater = true; 
         items.BossShadow = true; 
         items.BossSpirit = true; 
         items.BossCastle = true; 
-    if (bosskeys == 'Dungeons')
+    }
+    if (bosskeys == 'Dungeons') {
         items.BossForest = true; 
         items.BossFire = true; 
         items.BossWater = true; 
         items.BossShadow = true; 
         items.BossSpirit = true; 
         items.BossCastle = true; 
-    if (bosskeys == 'Keysanity')
+    }
+    if (bosskeys == 'Keysanity') {
         items.BossForest = false; 
         items.BossFire = false; 
         items.BossWater = false; 
         items.BossShadow = false; 
         items.BossSpirit = false; 
         items.BossCastle = false; 
+    }
     updateGridItemAll();
     updateMap();
     saveCookie();
