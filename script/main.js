@@ -219,7 +219,6 @@ function setFortressLogic(sender) {
     gerudobridge = sender.value;
     if (gerudobridge == 'Start')
         items.Membership = 5;
-    end if
     updateGridItemAll();
     updateMap();
     saveCookie();
