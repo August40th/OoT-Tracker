@@ -217,6 +217,9 @@ function setGanonLogic(sender) {
 
 function setFortressLogic(sender) {
     gerudobridge = sender.value;
+    if (gerudobridge == 'Start'
+        items.Membership = 5;
+    updateGridItemAll();
     updateMap();
     saveCookie();
 }
@@ -225,6 +228,24 @@ function setSmallKeys(sender) {
     smallkeys = sender.value;
     if (smallkeys == 'Remove')
         items.ForestKey = 5;
+        items.FireKey = 8;
+        items.WaterKey = 6;
+        items.ShadowKey = 5;
+        items.SpiritKey = 5;
+        items.CastleKey = 2;
+        items.Membership = 4;
+        items.GTGKey = 9;
+        items.WellKey = 3; 
+    if (smallkeys == 'Dungeons')
+        items.ForestKey = 5;
+        items.FireKey = 8;
+        items.WaterKey = 6;
+        items.ShadowKey = 5;
+        items.SpiritKey = 5;
+        items.CastleKey = 2;
+        items.Membership = 4;
+        items.GTGKey = 9;
+        items.WellKey = 3; 
     updateGridItemAll();
     updateMap();
     saveCookie();
@@ -234,6 +255,18 @@ function setBossKeys(sender) {
     bosskeys = sender.value;
     if (bosskeys == 'Remove')
         items.BossForest = true; 
+        items.BossFire = true; 
+        items.BossWater = true; 
+        items.BossShadow = true; 
+        items.BossSpirit = true; 
+        items.BossCastle = true; 
+    if (bosskeys == 'Dungeons')
+        items.BossForest = true; 
+        items.BossFire = true; 
+        items.BossWater = true; 
+        items.BossShadow = true; 
+        items.BossSpirit = true; 
+        items.BossCastle = true; 
     updateMap();
     saveCookie();
 }
