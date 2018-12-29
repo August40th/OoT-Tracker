@@ -231,8 +231,7 @@ function setSmallKeys(sender) {
 
 function setBossKeys(sender) {
     bosskeys = sender.value;
-    if (bosskeys == 'Remove')
-        items.BossForest = true;
+    if (bosskeys == 'Remove') then items.BossForest = true; 
     updateMap();
     saveCookie();
 }
@@ -243,7 +242,7 @@ function setSkulltula(sender) {
     saveCookie();
 }
 
-function setSrub(sender) {
+function setScrub(sender) {
     scrubs = sender.value;
     updateMap();
     saveCookie();
