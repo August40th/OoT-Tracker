@@ -236,7 +236,7 @@ function setSmallKeys(sender) {
         items.Membership = 4;
         items.GTGKey = 9;
         items.WellKey = 3; 
-    elseif (smallkeys == 'Dungeons')
+    if (smallkeys == 'Dungeons')
         items.ForestKey = 5;
         items.FireKey = 8;
         items.WaterKey = 6;
@@ -246,7 +246,6 @@ function setSmallKeys(sender) {
         items.Membership = 4;
         items.GTGKey = 9;
         items.WellKey = 3; 
-    end
     updateGridItemAll();
     updateMap();
     saveCookie();
@@ -268,7 +267,6 @@ function setBossKeys(sender) {
         //items.BossShadow = true; 
         //items.BossSpirit = true; 
         //items.BossCastle = true; 
-    end
     updateGridItemAll();
     updateMap();
     saveCookie();
