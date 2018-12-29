@@ -769,7 +769,7 @@ var dungeons = [
         chestlist: {
             ['Crate Heart Piece']: { isAvailable: function() { return true; } },
             ['Waterfall Heart Piece']: { isAvailable: function() { return true; } },
-            ['Hammer Rocks Chest']: { isAvailable: function() { return (items.EponasSong || items.Hookshot >= 2 || items.Membership) && items.MasterSword && items.Hammer; } },
+            ['Hammer Rocks Chest']: { isAvailable: function() { return (items.EponasSong || items.Hookshot >= 2 || items.Membership >= 5) && items.MasterSword && items.Hammer; } },
         },
         isBeatable: function(){
             return this.canGetChest();
