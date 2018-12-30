@@ -1,5 +1,9 @@
 var medallions = [];
 var dungeonImg = ['Unknown', 'Rauru', 'Gohma', 'Dodongo', 'Jellyfish', 'PoeSisters', 'FireDancer', 'Clam', 'IronKnuckle', 'Gibdo']
+
+var fortresskeys = [];
+var keyimg = ['Membership1', 'Membership2', 'Membership3', 'Membership4'];
+
 ganonlogic = 'Open';
 gerudobridge ='Default';
 smallkeys = 'Dungeons';
@@ -527,6 +531,13 @@ function updateGridItem(row, index) {
         else
             itemGrid[row][index][3].style.backgroundImage = "";           
     }
+    
+    if (fortresskeys[item] !== undefined){
+        if (gerudobridge = 'Shuffle')
+            itemGrid[row][index][3].style.backgroundImage = "url(images/" + keyimg[fortresskeys[item]] + ".png)";
+        else
+            itemGrid[row][index][3].style.backgroundImage = "";           
+    }           
 }
 
 function updateGridItemAll() {
@@ -557,6 +568,7 @@ function initGridRow(itemsets) {
         GoronRuby: 0,
         ZoraSapphire: 0,
     };
+    fortresskeys = { Membership0; }
 
     var r, c;
     var startdraw = false;
@@ -659,11 +671,16 @@ function gridItemClick(row, col, corner) {
             medallions[item]++;
             if (medallions[item] >=  10)
                 medallions[item] = 0;
-        } 
-        else if (corner == 2) {
-            medallions[item]++;
-            if (medallions[item] >=  10)
-                medallions[item] = 0;
+        }  
+        else {
+            items[item] = !items[item];
+        }
+    }
+    else if (fortresskeys[item] != undefined && gerudobridge == 'Shuffle'){
+        if (corner == 3) {
+            fortresskeys[item]++;
+            if (fortresskeys[item] >=  4)
+                fortresskeys[item] = 0;
         } 
         else {
             items[item] = !items[item];
@@ -951,6 +968,11 @@ function preloader() {
     for (medallion in dungeonImg) {
         var img = new Image();
         img.src = "images/" + dungeonImg[medallion] + ".png";
+    }
+    
+    for (fortresskey in keyimg) {
+        var fort = new Image();
+        img.src = "images/" + keyimg[fortresskeys] +".png";
     }
 }
 function addLoadEvent(func) {
