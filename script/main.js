@@ -715,12 +715,12 @@ function gridItemClick(row, col, corner) {
     else if(songs[item] !== undefined){
         if (corner == 3) {
             songs[item]++;
-            if (songs[item] >=  12)
+            if (songs[item] >=  13)
                 songs[item] = 0;
         }
         else if (corner == 2) {
             songs[item]++;
-            if (songs[item] >=  12)
+            if (songs[item] >=  13)
                 songs[item] = 0;
         }
         else {
