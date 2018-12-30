@@ -688,7 +688,7 @@ function gridItemClick(row, col, corner) {
             if (medallions[item] >=  10)
                 medallions[item] = 0;
         }  
-        else if (corner !== 3) {
+        else if (corner == 2) {
             medallions++;
             if (medallions[item] >=  10)
                 medallions[item] = 0;
@@ -700,14 +700,9 @@ function gridItemClick(row, col, corner) {
     else if (fortresskeys[item] != undefined && gerudobridge == 'Shuffle'){
         if (corner == 3) {
             fortresskeys[item]++;
-            if (fortresskeys[item] >=  4)
+            if (fortresskeys[item] >=  5)
                 fortresskeys[item] = 0;
         } 
-        else if (corner == 2) {
-            fortresskeys[item]++;
-            if (fortresskeys[item] >=  4)
-                fortresskeys[item] = 0;
-        }
         else {
             items[item] = !items[item];
         }
@@ -715,12 +710,12 @@ function gridItemClick(row, col, corner) {
     if(songs[item] !== undefined){
         if (corner == 3) {
             songs[item]++;
-            if (songs[item] >=  6)
+            if (songs[item] >=  7)
                 songs[item] = 0;
         }
         else if (corner == 2) {
             songs[item]++;
-            if (songs[item] >=  6)
+            if (songs[item] >=  7)
                 songs[item] = 0;
         }
         else {
