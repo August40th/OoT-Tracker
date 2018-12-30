@@ -45,7 +45,7 @@ var defaultItemGrid = [
         "HoverBoots",
         "Scarecrow",
         "GTGKey",
-        "Membership0"
+        "Membership"
     ],
     [
         "ZeldasLullaby",
@@ -182,7 +182,7 @@ var items = {
     BossSpirit:0,
     BossShadow:0,
     BossCastle:0,
-    Membership0:false,
+    Membership:false,
 
     blank: false
 };
