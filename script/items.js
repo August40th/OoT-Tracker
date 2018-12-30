@@ -45,7 +45,7 @@ var defaultItemGrid = [
         "HoverBoots",
         "Scarecrow",
         "GTGKey",
-        "Membership"
+        "Membership0"
     ],
     [
         "ZeldasLullaby",
@@ -182,7 +182,7 @@ var items = {
     BossSpirit:0,
     BossShadow:0,
     BossCastle:0,
-    Membership:0,
+    Membership0:false,
 
     blank: false
 };
@@ -218,7 +218,6 @@ var itemsMin = {
     BossSpirit:0,
     BossShadow:0,
     BossCastle:0,
-    Membership:0,
     BigPoe:0,
 };
 
@@ -253,6 +252,5 @@ var itemsMax = {
     BossSpirit:1,
     BossShadow:1,
     BossCastle:1,
-    Membership:5,
     BigPoe:10,
 };
