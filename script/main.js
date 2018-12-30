@@ -1,8 +1,11 @@
 var medallions = [];
-var dungeonImg = ['Unknown', 'Rauru', 'Gohma', 'Dodongo', 'Jellyfish', 'PoeSisters', 'FireDancer', 'Clam', 'IronKnuckle', 'Gibdo']
+var dungeonImg = ['Unknown', 'Rauru', 'Gohma', 'Dodongo', 'Jellyfish', 'PoeSisters', 'FireDancer', 'Clam', 'IronKnuckle', 'Gibdo'];
 
 var fortresskeys = [];
 var keyimg = ['Membership1', 'MQ', 'Membership3', 'MQ'];
+
+var songs = [];
+var songimg = ['NocturneofShadow', 'SerenadeofWater', 'RequiemofSpirit' , 'BoleroofFire' , 'MinuetofForest' , 'PreludeofLight'];
 
 ganonlogic = 'Open';
 gerudobridge ='Default';
@@ -531,13 +534,15 @@ function updateGridItem(row, index) {
         else
             itemGrid[row][index][3].style.backgroundImage = "";           
     }
-    
     if (fortresskeys[item] !== undefined){
         if (gerudobridge = 'Shuffle')
             itemGrid[row][index][3].style.backgroundImage = "url(images/" + keyimg[fortresskeys[item]] + ".png)";
         else
             itemGrid[row][index][3].style.backgroundImage = "";           
-    }           
+    }
+    if (songs[item] !== undefined) {
+          itemGrid[row][index][3].style.backgroundImage = "url(images/" + songimg[songs[item]] + ".png)";
+    }
 }
 
 function updateGridItemAll() {
@@ -569,6 +574,20 @@ function initGridRow(itemsets) {
         ZoraSapphire: 0,
     };
     fortresskeys = { Membership: 0, };
+    songs = {
+        ZeldasLullaby: 0,
+        EponasSong: 0,
+        SunsSong: ,0
+        SariasSong: 0,
+        SongofTime: 0,
+        SongofStorms: 0,
+        MinuetofForest: 0,
+        PreludeofLight: 0,
+        BoleroofFire: 0,
+        SerenadeofWater: 0,
+        NocturneofShadow: 0,
+        RequiemofSpirit: 0,
+    };
 
     var r, c;
     var startdraw = false;
@@ -682,6 +701,16 @@ function gridItemClick(row, col, corner) {
             if (fortresskeys[item] >=  4)
                 fortresskeys[item] = 0;
         } 
+        else {
+            items[item] = !items[item];
+        }
+    }
+    if(songs[item] !== undefined){
+        if (corner == 3) {
+            medallions[item]++;
+            if (medallions[item] >=  6)
+                medallions[item] = 0;
+        }  
         else {
             items[item] = !items[item];
         }
@@ -974,6 +1003,12 @@ function preloader() {
         var fort = new Image();
         img.src = "images/" + keyimg[fortresskeys] +".png";
     }
+    
+    for (song in songimg) {
+        var teacher = new Image();
+        img.src = "images/" + songimg[songs] + ",png";
+    }
+
 }
 function addLoadEvent(func) {
     var oldonload = window.onload;
