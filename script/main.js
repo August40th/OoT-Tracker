@@ -577,7 +577,7 @@ function initGridRow(itemsets) {
     songs = {
         ZeldasLullaby: 0,
         EponasSong: 0,
-        SunsSong: ,0
+        SunsSong: 0,
         SariasSong: 0,
         SongofTime: 0,
         SongofStorms: 0,
