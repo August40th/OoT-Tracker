@@ -2,7 +2,7 @@ var medallions = [];
 var dungeonImg = ['Unknown', 'Rauru', 'Gohma', 'Dodongo', 'Jellyfish', 'PoeSisters', 'FireDancer', 'Clam', 'IronKnuckle', 'Gibdo']
 
 var fortresskeys = [];
-var keyimg = ['Membership1', 'Membership2', 'Membership3', 'Membership4'];
+var keyimg = ['Membership1', 'MQ', 'Membership3', 'MQ'];
 
 ganonlogic = 'Open';
 gerudobridge ='Default';
