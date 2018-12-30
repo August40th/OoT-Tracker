@@ -5,7 +5,7 @@ var fortresskeys = [];
 var keyimg = ['Membership1', 'MQ', 'Membership3', 'MQ'];
 
 var songs = [];
-var songimg = ['NocturneofShadow', 'SerenadeofWater', 'RequiemofSpirit' , 'BoleroofFire' , 'MinuetofForest' , 'PreludeofLight'];
+var songimg = ['Unknown', 'NocturneofShadow', 'SerenadeofWater', 'RequiemofSpirit' , 'BoleroofFire' , 'MinuetofForest' , 'PreludeofLight'];
 
 ganonlogic = 'Open';
 gerudobridge ='Default';
