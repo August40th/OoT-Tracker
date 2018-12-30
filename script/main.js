@@ -691,6 +691,11 @@ function gridItemClick(row, col, corner) {
             if (medallions[item] >=  10)
                 medallions[item] = 0;
         }  
+        else if (corner !== 3) {
+            medallions[item]++;
+            if (medallions[item] >=  10)
+                medallions[item] = 0;
+        }
         else {
             items[item] = !items[item];
         }
@@ -701,16 +706,26 @@ function gridItemClick(row, col, corner) {
             if (fortresskeys[item] >=  4)
                 fortresskeys[item] = 0;
         } 
+        else if (corner !== 3) {
+            fortresskeys[item]++;
+            if (fortresskeys[item] >=  4)
+                fortresskeys[item] = 0;
+        }
         else {
             items[item] = !items[item];
         }
     }
     if(songs[item] !== undefined){
         if (corner == 3) {
-            medallions[item]++;
-            if (medallions[item] >=  6)
-                medallions[item] = 0;
-        }  
+            songs[item]++;
+            if (songs[item] >=  6)
+                songs[item] = 0;
+        }
+        else if (corner !== 3) {
+            songs[item]++;
+            if (songs[item] >=  6)
+                songs[item] = 0;
+        }
         else {
             items[item] = !items[item];
         }
