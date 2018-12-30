@@ -222,11 +222,11 @@ function setGanonLogic(sender) {
 function setFortressLogic(sender) {
     gerudobridge = sender.value;
     if (gerudobridge == 'Start') {
-        items.Membership0 = true;
+        items.Membership = true;
     }
     if (gerudobridge != 'Start') {
         if (smallkeys != 'Keysanity') {
-            items.Membership0 = false;
+            items.Membership = false;
         }
         //if (smallkeys == 'Keysanity') {
         //    items.Membership = 4;
@@ -568,7 +568,7 @@ function initGridRow(itemsets) {
         GoronRuby: 0,
         ZoraSapphire: 0,
     };
-    fortresskeys = { Membership0: 0, };
+    fortresskeys = { Membership: 0, };
 
     var r, c;
     var startdraw = false;
