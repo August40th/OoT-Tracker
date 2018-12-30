@@ -5,7 +5,7 @@ var fortresskeys = [];
 var keyimg = ['Membership1', 'Membership2', 'Membership3', 'Membership4'];
 
 var songs = [];
-var songimg = ['Unknown', 'NocturneofShadow', 'SerenadeofWater', 'RequiemofSpirit' , 'BoleroofFire' , 'MinuetofForest' , 'PreludeofLight'];
+var songimg = ['Unknown', 'NocturneofShadow', 'SongofTime', 'SerenadeofWater', 'RequiemofSpirit' , 'BoleroofFire' , 'MinuetofForest' , 'PreludeofLight', 'SunsSong', 'SongofStorms', 'SariasSong', 'EponasSong', 'ZeldasLullaby'];
 
 ganonlogic = 'Open';
 gerudobridge ='Default';
@@ -715,12 +715,12 @@ function gridItemClick(row, col, corner) {
     else if(songs[item] !== undefined){
         if (corner == 3) {
             songs[item]++;
-            if (songs[item] >=  6)
+            if (songs[item] >=  12)
                 songs[item] = 0;
         }
         else if (corner == 2) {
             songs[item]++;
-            if (songs[item] >=  6)
+            if (songs[item] >=  12)
                 songs[item] = 0;
         }
         else {
