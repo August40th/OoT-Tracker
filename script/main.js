@@ -568,7 +568,7 @@ function initGridRow(itemsets) {
         GoronRuby: 0,
         ZoraSapphire: 0,
     };
-    fortresskeys = { Membership0; };
+    fortresskeys = { Membership0: 0, };
 
     var r, c;
     var startdraw = false;
