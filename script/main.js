@@ -229,11 +229,11 @@ function setFortressLogic(sender) {
     }
     if (gerudobridge != 'Start') {
         if (smallkeys != 'Keysanity') {
-            items.Membership = false;
+            items.Membership[keyimg] = 0;
         }
-        //if (smallkeys == 'Keysanity') {
-        //    items.Membership = 4;
-        //}
+        if (smallkeys == 'Keysanity') {
+            items.Membership[keyimg] = 4;
+        }
     }
     updateGridItemAll();
     updateMap();
@@ -249,7 +249,6 @@ function setSmallKeys(sender) {
         items.ShadowKey = 5;
         items.SpiritKey = 5;
         items.CastleKey = 2;
-        //items.Membership = 4;
         items.GTGKey = 9;
         items.WellKey = 3; 
     }
@@ -260,7 +259,6 @@ function setSmallKeys(sender) {
         items.ShadowKey = 5;
         items.SpiritKey = 5;
         items.CastleKey = 2;
-        //items.Membership = 4;
         items.GTGKey = 9;
         items.WellKey = 3;
     }
@@ -271,7 +269,6 @@ function setSmallKeys(sender) {
         items.ShadowKey = 0;
         items.SpiritKey = 0;
         items.CastleKey = 0;
-        //items.Membership = 0;
         items.GTGKey = 0;
         items.WellKey = 0;
     }
@@ -691,7 +688,7 @@ function gridItemClick(row, col, corner) {
             if (medallions[item] >=  10)
                 medallions[item] = 0;
         }  
-        else if (corner !== 3) {
+        else if (corner == 2) {
             medallions[item]++;
             if (medallions[item] >=  10)
                 medallions[item] = 0;
@@ -706,7 +703,7 @@ function gridItemClick(row, col, corner) {
             if (fortresskeys[item] >=  4)
                 fortresskeys[item] = 0;
         } 
-        else if (corner !== 3) {
+        else if (corner == 2) {
             fortresskeys[item]++;
             if (fortresskeys[item] >=  4)
                 fortresskeys[item] = 0;
@@ -721,7 +718,7 @@ function gridItemClick(row, col, corner) {
             if (songs[item] >=  6)
                 songs[item] = 0;
         }
-        else if (corner !== 3) {
+        else if (corner == 2) {
             songs[item]++;
             if (songs[item] >=  6)
                 songs[item] = 0;
