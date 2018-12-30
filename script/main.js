@@ -222,15 +222,15 @@ function setGanonLogic(sender) {
 function setFortressLogic(sender) {
     gerudobridge = sender.value;
     if (gerudobridge == 'Start') {
-        items.Membership = 5;
+        items.Membership0 = true;
     }
     if (gerudobridge != 'Start') {
         if (smallkeys != 'Keysanity') {
-            items.Membership = 0;
+            items.Membership0 = false;
         }
-        if (smallkeys == 'Keysanity') {
-            items.Membership = 4;
-        }
+        //if (smallkeys == 'Keysanity') {
+        //    items.Membership = 4;
+        //}
     }
     updateGridItemAll();
     updateMap();
@@ -246,7 +246,7 @@ function setSmallKeys(sender) {
         items.ShadowKey = 5;
         items.SpiritKey = 5;
         items.CastleKey = 2;
-        items.Membership = 4;
+        //items.Membership = 4;
         items.GTGKey = 9;
         items.WellKey = 3; 
     }
@@ -257,7 +257,7 @@ function setSmallKeys(sender) {
         items.ShadowKey = 5;
         items.SpiritKey = 5;
         items.CastleKey = 2;
-        items.Membership = 4;
+        //items.Membership = 4;
         items.GTGKey = 9;
         items.WellKey = 3;
     }
@@ -268,7 +268,7 @@ function setSmallKeys(sender) {
         items.ShadowKey = 0;
         items.SpiritKey = 0;
         items.CastleKey = 0;
-        items.Membership = 0;
+        //items.Membership = 0;
         items.GTGKey = 0;
         items.WellKey = 0;
     }
