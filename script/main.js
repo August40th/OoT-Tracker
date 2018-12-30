@@ -690,6 +690,8 @@ function gridItemClick(row, col, corner) {
         }  
         else if (corner !== 3) {
             medallions++;
+            if (medallions[item] >=  10)
+                medallions[item] = 0;
         }
         else {
             items[item] = !items[item];
