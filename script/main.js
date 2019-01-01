@@ -339,7 +339,7 @@ function showSettings(sender) {
             if (!itemLayout[r] || !itemLayout[r].length) {
                 itemGrid[r]['row'].style.display = 'none';
             } else {
-                for (c = 0; c < 10; c++) {
+                for (c = 0; c < 8; c++) {
                     if (!!itemLayout[r][c] && itemLayout[r][c] != 'blank') {
                         startdraw = true;
                         r++;
@@ -364,16 +364,16 @@ function showSettings(sender) {
         showTracker('mapdiv', document.getElementsByName('showmap')[0]);
         document.getElementById('itemconfig').style.display = 'none';
 
-        sender.innerHTML = 'ðŸ”§';
+        sender.innerHTML = '🔧';
         saveCookie();
     } else {
-        var x = document.getElementById("settings");
+        var x = document.getElementById('settings');
         if (!x.style.display || x.style.display == 'none') {
             x.style.display = 'initial';
             sender.innerHTML = 'X';
         } else {
             x.style.display = 'none';		
-            sender.innerHTML = 'ðŸ”§';
+            sender.innerHTML = '🔧';
         } 
     }
 }
@@ -416,13 +416,12 @@ function EditMode() {
 
     editmode = true;
     updateGridItemAll();
-    showTracker('mapdiv', {checked:false});
+    showTracker('mapdiv', {checked: false});
     document.getElementById('settings').style.display = 'none';
     document.getElementById('itemconfig').style.display = '';
 
     document.getElementById('settingsbutton').innerHTML = 'Exit Edit Mode';
 }
-
 
 function createItemTracker(sender) {
     var r;
