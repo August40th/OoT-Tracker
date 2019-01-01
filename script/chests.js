@@ -100,49 +100,49 @@ var dungeons = [
         y: "16.4%",
         chestlist: {
             ['Lobby Right Chest']: { isAvailable:  function () {
-                return (items.EponasSong || items.Hookshot >= 2 || items.Membership) && items.Bow; } },
+                return (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Bow; } },
             ['Lobby Left Chest']: { isAvailable: function () {
-                return (items.EponasSong || items.Hookshot >= 2 || items.Membership) && items.Bow; } },
+                return (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Bow; } },
             ['Stalfos Room']: { isAvailable:  function () {
-                return (items.EponasSong || items.Hookshot >= 2 || items.Membership); } },
+                return (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()); } },
             ['Wolfos Room']: { isAvailable:  function () {
-                return (items.EponasSong || items.Hookshot >= 2 || items.Membership) && items.Hookshot; } },
+                return (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Hookshot; } },
             ['Like Like Open Chest']: { isAvailable:  function () {
-                return (items.EponasSong || items.Hookshot >= 2 || items.Membership) && items.Hookshot && items.Glove >= 2; } },
+                return (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Hookshot && items.Glove >= 2; } },
             ['Like Like Room 1st Chest']: { isAvailable:  function () {
-                return (items.EponasSong || items.Hookshot >= 2 || items.Membership) && items.Hookshot && items.Glove >= 2; } },
+                return (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Hookshot && items.Glove >= 2; } },
             ['Like Like Room 2nd Chest']: { isAvailable:  function () {
-                return (items.EponasSong || items.Hookshot >= 2 || items.Membership) && items.Hookshot && items.Glove >= 2; } },
+                return (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Hookshot && items.Glove >= 2; } },
             ['Like Like Invisible Chest']: { isAvailable: function () {
-                return (items.EponasSong || items.Hookshot >= 2 || items.Membership) && items.Hookshot && items.Glove >= 2; } },
+                return (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Hookshot && items.Glove >= 2; } },
             ['Cyclops Statue Eyes']: { isAvailable: function () {
-                return (items.EponasSong || items.Hookshot >= 2 || items.Membership) && items.Hookshot && items.Bow && (items.SongofTime || items.HoverBoots || items.Hookshot >=2 || (items.Hookshot)); } },
+                return (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Hookshot && items.Bow && (items.SongofTime || items.HoverBoots || items.Hookshot >=2 || (items.Hookshot)); } },
             ['Cyclops Room Top Room']: { isAvailable: function () {
-                return (items.EponasSong || items.Hookshot >= 2 || items.Membership) && items.Hookshot && items.Bow; } },
+                return (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Hookshot && items.Bow; } },
             ['Fire Enemies Clear']: { isAvailable:  function () {
-                return (items.EponasSong || items.Hookshot >= 2 || items.Membership) && items.Hookshot; } },
+                return (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Hookshot; } },
             ['Fire Enemies Fire Chest']: { isAvailable: function () {
-                return (items.EponasSong || items.Hookshot >= 2 || items.Membership) && items.Hookshot; } },           
+                return (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Hookshot; } },           
             ['Maze Right Open Key']: { isAvailable: function () {
-                return (items.EponasSong || items.Hookshot >= 2 || items.Membership) && ((items.Ocarina && items.SongofTime) || items.GTGKey >= 2); } },
+                return (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && ((items.Ocarina && items.SongofTime) || items.GTGKey >= 2); } },
             ['Maze Right Central Chest']: { isAvailable:  function () {
-                return (items.EponasSong || items.Hookshot >= 2 || items.Membership) && ((items.Ocarina && items.SongofTime) || items.GTGKey >= 2); } },
+                return (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && ((items.Ocarina && items.SongofTime) || items.GTGKey >= 2); } },
             ['Maze Right Side Chest']: { isAvailable: function () {
-                return (items.EponasSong || items.Hookshot >= 2 || items.Membership) && ((items.Ocarina && items.SongofTime) || items.GTGKey >= 2); } },            
+                return (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && ((items.Ocarina && items.SongofTime) || items.GTGKey >= 2); } },            
             ['Underwater Silver Rupees']: { isAvailable: function () {
-                return (items.EponasSong || items.Hookshot >= 2 || items.Membership) && items.Hookshot && items.Ocarina && items.SongofTime && items.IronBoots; } },
+                return (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Hookshot && items.Ocarina && items.SongofTime && items.IronBoots; } },
             ['Beamos Room']: { isAvailable: function () {
-                return (items.EponasSong || items.Hookshot >= 2 || items.Membership) && (items.Bombs || items.Bombchu); } },
+                return (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && (items.Bombs || items.Bombchu); } },
             ['Hidden Ceiling Chest']: { isAvailable: function () {
-                return items.GTGKey && (items.EponasSong || items.Hookshot >= 2 || items.Membership); } },
+                return items.GTGKey && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()); } },
             ['Maze Left First Chest']: { isAvailable:  function () {
-                return items.GTGKey >= 2 && (items.EponasSong || items.Hookshot >= 2 || items.Membership); } },
+                return items.GTGKey >= 2 && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()); } },
             ['Maze Left Second Chest']: { isAvailable:  function () {
-                return items.GTGKey >= 4 && (items.EponasSong || items.Hookshot >= 2 || items.Membership); } },
+                return items.GTGKey >= 4 && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()); } },
             ['Maze Left Third Chest']: { isAvailable:  function () {
-                return items.GTGKey >= 5 && (items.EponasSong || items.Hookshot >= 2 || items.Membership); } },
+                return items.GTGKey >= 5 && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()); } },
             ['Maze Big Chest']: { isAvailable: function () {
-                return items.GTGKey >= 7 && (items.EponasSong || items.Hookshot >= 2 || items.Membership); } },                                               
+                return items.GTGKey >= 7 && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()); } },                                               
             },
         isBeatable: function(){
             return this.canGetChest();
@@ -769,7 +769,7 @@ var dungeons = [
         chestlist: {
             ['Crate Heart Piece']: { isAvailable: function() { return true; } },
             ['Waterfall Heart Piece']: { isAvailable: function() { return true; } },
-            ['Hammer Rocks Chest']: { isAvailable: function() { return (items.EponasSong || items.Hookshot >= 2 || items.Membership) && items.MasterSword && items.Hammer; } },
+            ['Hammer Rocks Chest']: { isAvailable: function() { return (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.MasterSword && items.Hammer; } },
         },
         isBeatable: function(){
             return this.canGetChest();
@@ -783,9 +783,9 @@ var dungeons = [
         x: "15.5%",
         y: "16.4%",
         chestlist: {
-            ['Fortress Rooftop Chest']: { isAvailable: function() { return (items.EponasSong || items.Hookshot >= 2 || items.Membership) && items.MasterSword && (items.HoverBoots || (items.Scarecrow >= 2 && items.Hookshot) || items.Hookshot >= 2); } },
-            ['Horseback Archery 1000 pts']: { isAvailable: function() { return items.Membership && items.MasterSword && items.Bow && items.EponasSong; } },
-            ['Horseback Archery 1500 pts']: { isAvailable: function() { return items.Membership && items.MasterSword && items.Bow && items.EponasSong; } },
+            ['Fortress Rooftop Chest']: { isAvailable: function() { return (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.MasterSword && (items.HoverBoots || (items.Scarecrow >= 2 && items.Hookshot) || items.Hookshot >= 2); } },
+            ['Horseback Archery 1000 pts']: { isAvailable: function() { return isFortressOpen() && items.MasterSword && items.Bow && items.EponasSong; } },
+            ['Horseback Archery 1500 pts']: { isAvailable: function() { return isFortressOpen() && items.MasterSword && items.Bow && items.EponasSong; } },
         },
         isBeatable: function(){
             return this.canGetChest();
@@ -799,10 +799,10 @@ var dungeons = [
         x: "8.4%",
         y: "15.9%",
         chestlist: {           
-            ['Haunted Wasteland Chest']: { isAvailable: function() {return (((items.EponasSong || items.Membership) && items.HoverBoots) || items.Hookshot >= 2) && (items.Magic && (items.Dins || (items.Bow && items.Fire))) } },
-            ['Requiem of Spirit']: { isAvailable: function() {return ((items.EponasSong || items.Membership) && items.HoverBoots) || items.Hookshot >= 2 || (items.Ocarina && items.RequiemofSpirit)} },
+            ['Haunted Wasteland Chest']: { isAvailable: function() {return (((items.EponasSong || isFortressOpen()) && items.HoverBoots) || items.Hookshot >= 2) && (items.Magic && (items.Dins || (items.Bow && items.Fire))) } },
+            ['Requiem of Spirit']: { isAvailable: function() {return ((items.EponasSong || isFortressOpen()) && items.HoverBoots) || items.Hookshot >= 2 || (items.Ocarina && items.RequiemofSpirit)} },
             ['Desert Bean Heart Piece']: { isAvailable: function() {return items.Bean && items.Ocarina && items.RequiemofSpirit} },          
-            ['Desert Fairy Fountain']: { isAvailable: function() {return (items.Ocarina && items.ZeldasLullaby && (items.Bombs || items.Bombchu)) && (((items.EponasSong || items.Membership) && items.HoverBoots) || items.Hookshot >= 2 || items.RequiemofSpirit)} },
+            ['Desert Fairy Fountain']: { isAvailable: function() {return (items.Ocarina && items.ZeldasLullaby && (items.Bombs || items.Bombchu)) && (((items.EponasSong || isFortressOpen()) && items.HoverBoots) || items.Hookshot >= 2 || items.RequiemofSpirit)} },
         },
         isBeatable: function(){
             return this.canGetChest();
