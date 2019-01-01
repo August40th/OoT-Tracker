@@ -973,19 +973,13 @@ function isBridgeOpen() {
 function isFortressOpen() {
     switch (gerudobridge) {
         case "Default":
-            if(items.Membership == true)
-                return true;
-            else
-                return false;
+            return items.Membership;
         case "Shuffle":
-            if(items.Membership == true)
-               return true;
-            else
-                return false;
+            return items.Membership;
         case "Start":
             return true;
     }
-    return false;
+    return items.Membership;
 } 
 
 function init() {
