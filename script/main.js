@@ -5,7 +5,7 @@ var fortresskeys = [];
 var keyimg = ['Membership1', 'Membership2', 'Membership3', 'Membership4'];
 
 var songs = [];
-var songimg = ['Unknown', 'BurningKak', 'Ocarina2', 'Ice', 'Desert' , 'Crater' , 'Forest' , 'TempleofTime', 'CompBro', 'Guru', 'SariasSong2', 'Malon', 'Impa'];
+var songimg = ['Unknown', 'BurningKak', 'Ocarina2', 'IceSong', 'Desert' , 'Crater' , 'Forest' , 'TempleofTime', 'CompBro', 'Guru', 'SariasSong2', 'Malon', 'Impa'];
 
 ganonlogic = 'Open';
 gerudobridge ='Default';
