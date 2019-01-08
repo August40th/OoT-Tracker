@@ -2,10 +2,10 @@ var medallions = [];
 var dungeonImg = ['Unknown', 'Rauru', 'Gohma', 'Dodongo', 'Jellyfish', 'PoeSisters', 'FireDancer', 'Clam', 'IronKnuckle', 'Gibdo'];
 
 var fortresskeys = [];
-var keyimg = ['Membership1', 'Membership2', 'Membership3', 'Membership4'];
+var keyimg = ['Membership0', 'Membership1', 'Membership2', 'Membership3', 'Membership4'];
 
 var songs = [];
-var songimg = ['Unknown', 'BurningKak', 'Ocarina2', 'IceSong', 'Desert' , 'Crater' , 'Forest' , 'TempleofTime', 'CompBro', 'Guru', 'SariasSong2', 'Malon', 'Impa'];
+var songimg = ['Unknown', 'Impa', 'Malon', 'SariasSong2', 'Guru' , 'CompBro' , 'Forest' , 'Crater', 'TempleofTime', 'Desert', 'BurningKak', 'IceSong', 'Ocarina2'];
 
 ganonlogic = 'Open';
 gerudobridge ='Default';
@@ -699,12 +699,12 @@ function gridItemClick(row, col, corner) {
     else if(fortresskeys[item] !== undefined){
         if (corner == 3) {
             fortresskeys[item]++;
-            if (fortresskeys[item] >=  4)
+            if (fortresskeys[item] >=  5)
                 fortresskeys[item] = 0;
         }
         else if (corner == 2) {
             fortresskeys[item]++;
-            if (fortresskeys[item] >=  4)
+            if (fortresskeys[item] >=  5)
                 fortresskeys[item] = 0;
         }
         else {
