@@ -754,7 +754,7 @@ function gridItemClick(row, col, corner) {
         }
          else if (quest == 'Vanilla') {
              questdungeons[item]++
-             if (questdungeons{item] >= itemsMax)
+             if (questdungeons[item] >= itemsMax)
                     questdungeons[item] = 0;
              questdungeons[item] = 0;
         }
