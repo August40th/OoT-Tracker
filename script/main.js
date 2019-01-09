@@ -50,13 +50,19 @@ function getCookie() {
     return {};
 }
 
-var cookiekeys = ['map', 'iZoom', 'mZoom', 'mOrien', 'mPos', 'glogic', 'prize', 'items'];
+var cookiekeys = ['map', 'iZoom', 'mZoom', 'mOrien', 'mPos', 'glogic', 'prize', 'items', 'qlogic', 'flogic', 'smallk', 'bossk', 'sclogic', 'sklogic'];
 var cookieDefault = {
     map:1,
     iZoom:100,
     mZoom:100,
     mPos:0,
     glogic:'Open',
+    qlogic:'Vanilla',
+    flogic:'Default',
+    smallk:'Dungeons',
+    bossk:'Dungeons',
+    sclogic:'Major Item',
+    sklogic:'Off',
     prize:1,
     items:defaultItemGrid
 }
@@ -94,6 +100,42 @@ function loadCookie() {
         if (rbutton.value == cookieobj.glogic)
             rbutton.click();
     }
+    
+    for (rbuttonID in document.getElementsByName('quest')) {
+        rbutton = document.getElementsByName('quest')[rbuttonID]
+        if (rbutton.value == cookieobj.qlogic)
+            rbutton.click();
+    }
+    
+    for (rbuttonID in document.getElementsByName('gerudobridge')) {
+        rbutton = document.getElementsByName('gerudobridge')[rbuttonID]
+        if (rbutton.value == cookieobj.flogic)
+            rbutton.click();
+    }
+    
+    for (rbuttonID in document.getElementsByName('smallkeys')) {
+        rbutton = document.getElementsByName('smallkeys')[rbuttonID]
+        if (rbutton.value == cookieobj.smallk)
+            rbutton.click();
+    }
+    
+    for (rbuttonID in document.getElementsByName('bosskeys')) {
+        rbutton = document.getElementsByName('bosskeys')[rbuttonID]
+        if (rbutton.value == cookieobj.bossk)
+            rbutton.click();
+    }
+    
+    for (rbuttonID in document.getElementsByName('skulltula')) {
+        rbutton = document.getElementsByName('skulltula')[rbuttonID]
+        if (rbutton.value == cookieobj.sklogic)
+            rbutton.click();
+    }
+    
+    for (rbuttonID in document.getElementsByName('scrubs')) {
+        rbutton = document.getElementsByName('scrubs')[rbuttonID]
+        if (rbutton.value == cookieobj.sclogic)
+            rbutton.click();
+    }
 
     cookielock = false;
 }
@@ -117,6 +159,42 @@ function saveCookie() {
         rbutton = document.getElementsByName('ganonlogic')[rbuttonID]
         if (rbutton.checked)
             cookieobj.glogic = rbutton.value;
+    }
+    
+    for (rbuttonID in document.getElementsByName('quest')) {
+        rbutton = document.getElementsByName('quest')[rbuttonID]
+        if (rbutton.checked)
+            cookieobj.qlogic = rbutton.value;
+    }
+    
+    for (rbuttonID in document.getElementsByName('gerudobridge')) {
+        rbutton = document.getElementsByName('gerudobridge')[rbuttonID]
+        if (rbutton.checked)
+            cookieobj.flogic = rbutton.value;
+    }
+    
+    for (rbuttonID in document.getElementsByName('smallkeys')) {
+        rbutton = document.getElementsByName('smallkeys')[rbuttonID]
+        if (rbutton.checked)
+            cookieobj.smallk = rbutton.value;
+    }
+    
+    for (rbuttonID in document.getElementsByName('bosskeys')) {
+        rbutton = document.getElementsByName('bosskeys')[rbuttonID]
+        if (rbutton.checked)
+            cookieobj.bossk = rbutton.value;
+    }
+    
+    for (rbuttonID in document.getElementsByName('skulltula')) {
+        rbutton = document.getElementsByName('skulltula')[rbuttonID]
+        if (rbutton.checked)
+            cookieobj.sklogic = rbutton.value;
+    }
+    
+    for (rbuttonID in document.getElementsByName('scrubs')) {
+        rbutton = document.getElementsByName('scrubs')[rbuttonID]
+        if (rbutton.checked)
+            cookieobj.sclogic = rbutton.value;
     }
 
     cookieobj.items = JSON.parse(JSON.stringify(itemLayout));
@@ -233,6 +311,7 @@ function setQuest(sender) {
     else if (quest == 'Master') {
     }
     updateMap();
+    saveCookie();
 }
 
 function setFortressLogic(sender) {
