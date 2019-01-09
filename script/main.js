@@ -322,14 +322,6 @@ function setFortressLogic(sender) {
     if (gerudobridge == 'Start') {
         items.Membership = true;
     }
-    else if (gerudobridge ==!= 'Default') {
-        if (smallkeys != 'Keysanity') {
-            items.Membership[keyimg] = 0;
-        }
-        if (smallkeys == 'Keysanity') {
-            items.Membership[keyimg] = 4;
-        }
-    }
     updateGridItemAll();
     updateMap();
     saveCookie();
