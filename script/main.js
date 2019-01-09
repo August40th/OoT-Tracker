@@ -721,7 +721,7 @@ function gridItemClick(row, col, corner) {
         }
     }
     if(questdungeons[item] !== undefined){
-        if (quest == 'Mixed'{
+        if (quest == 'Mixed') {
             if (corner == 3) {
                 questdungeons[item]++;
                 if (questdungeons[item] >=  2)
@@ -736,9 +736,12 @@ function gridItemClick(row, col, corner) {
                 items[item] = !items[item];
             }
         }
-        else if (quest == 'Master' {
-                 questdungeons[item] = 1;
-                 }
+        else if (quest == 'Master') {
+            questdungeons[item] = 1;
+        }
+         else if (quest == 'Vanilla') {
+            questdungeons[item] = 0;
+        }
     }
     else if(fortresskeys[item] !== undefined){
         if (corner == 3) {
