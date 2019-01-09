@@ -1141,6 +1141,18 @@ function isFortressOpen() {
     return items.Membership;
 } 
 
+function isKeysanity() {
+    switch (smallkeys) {
+        case "Remove":
+            return false;
+        case "Dungeons":
+            return false;
+        case "Keysanity":
+            return true;
+    }
+    return false;
+}
+
 function init() {
     createItemTracker(document.getElementById('itemdiv'));
     populateMapdiv();
