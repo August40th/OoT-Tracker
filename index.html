@@ -47,6 +47,12 @@
                 <input type='radio' name='mapposition' value='Side' onclick="setOrder(false)">Side<br>
             </fieldset>    
             <fieldset>
+                    <legend> Quest</legend>
+                      <input type='radio' name='quest' value='Vanilla' checked='true' onclick="setQuest(this)">Vanilla
+                      <input type='radio' name='quest' value='Master' onclick="setQuest(this)">Master
+                      <input type='radio' name='quest' value='Mixed' onclick="setQuest(this)">Mixed
+            </fieldset>
+            <fieldset>
                     <legend>Fortress Logic</legend>
                         Gerudo Membership:
                             <input type='radio' name='gerudobridge' value='Default' checked='true' onclick="setFortressLogic(this)">Default<br>
