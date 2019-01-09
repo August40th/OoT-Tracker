@@ -903,16 +903,6 @@ var chests = [
         }
     },
     {
-        name: "Skulltula & Hint Grotto",
-        x: "36.1%",
-        y: "39.0%",
-        isAvailable: function(){
-            if (items.Magic && ((items.Dins && (items.Bombs || items.Bombchu) && items.Boomerang) || ( ( (items.Bow || items.Fire) || items.Dins) && items.Hokkshot && (items.Bombs || items.Hammer || items.Bombchu)) ) )
-                return "available 
-            return "unavailable";
-        }
-    },
-    {
         name: "Skulltula Grotto",
         x: "56.0%",
         y: "26.0%",
@@ -921,5 +911,15 @@ var chests = [
                 return "available";
             return "unavailable";
         }
+    },{
+        name: "Skulltula & Hint Grotto",
+        x: "36.1%",
+        y: "39.0%",
+        isAvailable: function(){
+            if (items.Magic && ( (items.Dins && (items.Bombs || items.Bombchu) && items.Boomerang) || ( ( (items.Bow && items.Fire) || items.Dins) && items.Hokkshot && (items.Bombs || items.Hammer || items.Bombchu) ) ) )
+                return "available 
+            return "unavailable";
+        }
     },
+    
 ]
