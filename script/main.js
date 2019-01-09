@@ -809,12 +809,12 @@ function gridItemClick(row, col, corner) {
     else if(questdungeons[item] !== undefined){
         if (quest == 'Mixed') {
             if (corner == 1) {
-                items.questdungeons[item]++;
+                questdungeons[item]++;
                 if (questdungeons[item] >=  2)
                     questdungeons[item] = 0;
             }
             else if (corner == 0) {
-                items.questdungeons[item]++;
+                questdungeons[item]++;
                 if (questdungeons[item] >=  2)
                     questdungeons[item] = 0;
             }
