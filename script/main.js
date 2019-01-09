@@ -7,6 +7,9 @@ var keyimg = ['Membership0', 'Membership1', 'Membership2', 'Membership3', 'Membe
 var songs = [];
 var songimg = ['Unknown', 'Impa', 'Malon', 'SariasSong2', 'Guru' , 'CompBro' , 'Forest' , 'Crater', 'TempleofTime', 'Desert', 'BurningKak', 'IceSong', 'Ocarina2'];
 
+var questdungeons = [];
+var questimg = ['', 'MQ ];
+
 ganonlogic = 'Open';
 gerudobridge ='Default';
 smallkeys = 'Dungeons';
@@ -542,8 +545,16 @@ function updateGridItem(row, index) {
         else
             itemGrid[row][index][3].style.backgroundImage = "";           
     }
+    if (questdungeons[item] !== undefined){
+        if (quest == 'Mixed')
+            itemGrid[row][index][3].style.backgroundImage = "url(images/" + questimg[questdungeons[item]] + ".png)";
+        else if (quest == 'Master')
+            itemGrid[row][index][3].style.backgroundImage = "url(images/MQ.png)";
+        else
+            itemGrid[row][index][3].style.backgroundImage = "";
+    }            
     if (fortresskeys[item] !== undefined){
-        if (gerudobridge = 'Shuffle')
+        if (gerudobridge == 'Shuffle')
             itemGrid[row][index][3].style.backgroundImage = "url(images/" + keyimg[fortresskeys[item]] + ".png)";
         else
             itemGrid[row][index][3].style.backgroundImage = "";           
@@ -595,6 +606,9 @@ function initGridRow(itemsets) {
         SerenadeofWater: 0,
         NocturneofShadow: 0,
         RequiemofSpirit: 0,
+    };
+    questdungeons = {
+        ForestKey: 0
     };
 
     var r, c;
@@ -707,6 +721,26 @@ function gridItemClick(row, col, corner) {
         else {
             items[item] = !items[item];
         }
+    }
+    if(questdungeons[item] !== undefined){
+        if (quest == 'Mixed'{
+            if (corner == 3) {
+                questdungeons[item]++;
+                if (questdungeons[item] >=  2)
+                    questdungeons[item] = 0;
+            }
+            else if (corner == 2) {
+                questdungeons[item]++;
+                if (questdungeons[item] >=  2)
+                    questdungeons[item] = 0;
+            }
+            else {
+                items[item] = !items[item];
+            }
+        }
+        else if (quest == 'Master' {
+                 questdungeons[item] = 1;
+                 }
     }
     else if(fortresskeys[item] !== undefined){
         if (corner == 3) {
@@ -1020,6 +1054,11 @@ function preloader() {
     for (medallion in dungeonImg) {
         var img = new Image();
         img.src = "images/" + dungeonImg[medallion] + ".png";
+    }
+    
+    for (questdungeon in questimg) {
+        var img = new Image();
+        imgsrc = "images/" + questimg[questdungeon] + ".png";
     }
     
     for (fortresskey in keyimg) {
