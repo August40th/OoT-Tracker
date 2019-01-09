@@ -322,7 +322,7 @@ function setFortressLogic(sender) {
     if (gerudobridge == 'Start') {
         items.Membership = true;
     }
-    if (gerudobridge != 'Start') {
+    else if (gerudobridge ==!= 'Default') {
         if (smallkeys != 'Keysanity') {
             items.Membership[keyimg] = 0;
         }
@@ -627,7 +627,6 @@ function updateGridItem(row, index) {
     }
     if (questdungeons[item] !== undefined){
         if (quest == 'Mixed') {
-            questimg = 0;
             itemGrid[row][index][3].style.backgroundImage = "url(images/" + questimg[questdungeons[item]] + ".png)";            
         }
         else if (quest == 'Master') {
@@ -640,7 +639,7 @@ function updateGridItem(row, index) {
         }
     }            
     if (fortresskeys[item] !== undefined){
-        if (gerudobridge == 'Shuffle')
+        if (smallkeys == 'Keysanity' && gerudobridge != 'Start')
             itemGrid[row][index][3].style.backgroundImage = "url(images/" + keyimg[fortresskeys[item]] + ".png)";
         else
             itemGrid[row][index][3].style.backgroundImage = "";           
