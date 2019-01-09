@@ -14,6 +14,7 @@ bosskeys = 'Dungeons';
 skulltula = 'Off';
 scrubs = 'Off';
 showprizes = false;
+quest = 'Vanilla';
 
 var itemGrid = [];
 var itemLayout = [];
@@ -220,6 +221,17 @@ function setGanonLogic(sender) {
     ganonlogic = sender.value;
     updateMap();
     saveCookie();
+}
+
+function setQuest(sender) {
+    quest = sender.value;
+    if (quest == 'Mixed') {
+        dungeons.'Kokiri Forest'.'Fairy Ocarina'.isOpened
+    }
+    else if (quest == 'Master') 
+        dungeons.'Kokiri Forest'.'Kokiri Sword Chest'.isOpened
+    }
+    updateMap();
 }
 
 function setFortressLogic(sender) {
