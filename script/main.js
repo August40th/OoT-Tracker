@@ -606,7 +606,7 @@ function initGridRow(itemsets) {
         RequiemofSpirit: 0,
     };
     questdungeons = {
-        ForestKey: 0
+        ForestKey[]: 0
     };
 
     var r, c;
