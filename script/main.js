@@ -819,7 +819,7 @@ function gridItemClick(row, col, corner) {
     else if(questimg[item] !== undefined){
         if (quest == 'Mixed') {
             if (corner == 1) {
-                //items.questdungeons[questimg]++;
+                items.questdungeons[questimg]++;
                 if (items.questdungeons[questimg] == 0)
                     items.questdungeons[questimg] = 1;
                 else if (items.questdungeons[questimg] == 1)
@@ -828,7 +828,7 @@ function gridItemClick(row, col, corner) {
                     questdungeons[item] = 0;
             }
             else if (corner == 0) {
-                //items.questdungeons[questimg]++;
+                items.questdungeons[questimg]++;
                 if (items.questdungeons[questimg] == 0)
                     items.questdungeons[questimg] = 1;
                 else if (items.questdungeons[questimg] == 1)
