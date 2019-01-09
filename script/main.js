@@ -838,7 +838,6 @@ function gridItemClick(row, col, corner) {
         }
         else if (quest == 'Master') {
             questimg = 1;
-            questdungeons[item]++;
             if (questdungeons >= itemsMax)
                     questdungeon[item] = 0;
             questdungeons[item] = 1;
