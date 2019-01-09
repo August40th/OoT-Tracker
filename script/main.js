@@ -606,12 +606,12 @@ function initGridRow(itemsets) {
         RequiemofSpirit: 0,
     };
     questdungeons = {
-        ForestKey: [0],
-        ForestKey: [1],
-        ForestKey: [2],
-        ForestKey: [3],
-        ForestKey: [4],
-        ForestKey: [5],
+        ForestKey0: 0,
+        ForestKey1: 0,
+        ForestKey2: 0,
+        ForestKey3: 0,
+        ForestKey4: 0,
+        ForestKey5: 0,
     };
 
     var r, c;
@@ -742,10 +742,12 @@ function gridItemClick(row, col, corner) {
             }
         }
         else if (quest == 'Master') {
+            questdungeons[item]++;
             questdungeons[item] = 1;
         }
          else if (quest == 'Vanilla') {
-            questdungeons[item] = 0;
+             questdungeons[item]++;
+             questdungeons[item] = 0;
         }
     }
     else if(fortresskeys[item] !== undefined){
