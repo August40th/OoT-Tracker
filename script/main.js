@@ -226,7 +226,7 @@ function setGanonLogic(sender) {
 function setQuest(sender) {
     quest = sender.value;
     if (quest == 'Mixed') {
-        dungeons.'Kokiri Forest'.chestlist['Fairy Ocarina'].isOpened
+        dungeons.[1].chestlist['Fairy Ocarina'].isOpened
     }
     else if (quest == 'Master') 
         dungeons.[1].[1].isOpened
