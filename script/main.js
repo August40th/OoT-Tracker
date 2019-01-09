@@ -728,7 +728,7 @@ function gridItemClick(row, col, corner) {
             items[item] = !items[item];
         }
     }
-    else if(questdungeons[item] !== undefined){
+    else if(questimg[item] !== undefined){
         if (quest == 'Mixed') {
             if (corner == 1) {
                 questimg[item]++;
@@ -755,7 +755,6 @@ function gridItemClick(row, col, corner) {
         }
          else if (quest == 'Vanilla') {
              questimg = 0;
-             questdungeons[item]++;
              if (questdungeons[item] >= itemsMax)
                     questdungeons[item] = 0;
              questdungeons[item] = 0;
