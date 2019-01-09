@@ -338,7 +338,7 @@ function setSmallKeys(sender) {
         items.CastleKey = 2;
         items.GTGKey = 9;
         items.WellKey = 3; 
-        dungeons.[0].chestlist['Fairy Ocarina'].DCopened
+        dungeons.['Kokiri Forest'].chestlist['Fairy Ocarina'].DCopened
     }
     if (smallkeys == 'Dungeons') {
         items.ForestKey = 5;
