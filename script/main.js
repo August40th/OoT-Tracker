@@ -751,12 +751,14 @@ function gridItemClick(row, col, corner) {
         else if (quest == 'Master') {
             items['ForestKey']++;
             items['FireKey']++;
-            if (items['ForestKey'] >= 6)
-                    items['ForestKey'] = 0;
+            questimg = 1;
+            if (questdungeons >= itemsMax)
+                    questdungeon[item] = 0;
             questdungeons[item] = 1;
         }
          else if (quest == 'Vanilla') {
              questdungeons[item]++;
+             questimg = 0;
              if (questdungeons[item] >= itemsMax)
                     questdungeons[item] = 0;
              questdungeons[item] = 0;
