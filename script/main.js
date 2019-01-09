@@ -743,8 +743,8 @@ function gridItemClick(row, col, corner) {
             else {
                 items['ForestKey']++;
                 items['FireKey']++;
-                if (items >= itemsMax)
-                    items = 0;
+                if (questdungeons >= itemsMax)
+                    questdungeons = 0;
                 items[item] = !items[item];
             }
         }
@@ -756,8 +756,7 @@ function gridItemClick(row, col, corner) {
             questdungeons[item] = 1;
         }
          else if (quest == 'Vanilla') {
-             items['ForestKey']++;
-             items['FireKey']++;
+             questdungeons[item]++;
              if (questdungeons[item] >= itemsMax)
                     questdungeons[item] = 0;
              questdungeons[item] = 0;
