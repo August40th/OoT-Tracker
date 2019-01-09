@@ -545,11 +545,11 @@ function updateGridItem(row, index) {
     }
     if (questdungeons[item] !== undefined){
         if (quest == 'Mixed')
-            itemGrid[row][index][1].style.backgroundImage = "url(images/" + questimg[questdungeons[item]] + ".png)";
+            itemGrid[row][index][0].style.backgroundImage = "url(images/" + questimg[questdungeons[item]] + ".png)";
         else if (quest == 'Master')
-            itemGrid[row][index][1].style.backgroundImage = "url(images/MQ.png)";
+            itemGrid[row][index][0].style.backgroundImage = "url(images/MQ.png)";
         else
-            itemGrid[row][index][1].style.backgroundImage = "";
+            itemGrid[row][index][0].style.backgroundImage = "";
     }            
     if (fortresskeys[item] !== undefined){
         if (gerudobridge == 'Shuffle')
@@ -731,6 +731,7 @@ function gridItemClick(row, col, corner) {
         if (quest == 'Mixed') {
             if (corner == 1) {
                 questdungeons[item]++;
+                items++
                 if (questdungeons[item] >=  2)
                     questdungeons[item] = 0;
             }
@@ -740,20 +741,23 @@ function gridItemClick(row, col, corner) {
                     questdungeons[item] = 0;
             }
             else {
-                items['ForestKey']++
-                if (items['ForestKey'] >= itemsMax)
-                    items['ForestKey'] = 0;
+                items['ForestKey']++;
+                items['FireKey]++;
+                if (items >= itemsMax)
+                    items = 0;
                 items[item] = !items[item];
             }
         }
         else if (quest == 'Master') {
-            items['ForestKey']++
+            items['ForestKey']++;
+            items['FireKey]++;
             if (items['ForestKey'] >= 6)
                     items['ForestKey'] = 0;
             questdungeons[item] = 1;
         }
          else if (quest == 'Vanilla') {
-             questdungeons[item]++
+             items['ForestKey']++;
+             items['FireKey]++;
              if (questdungeons[item] >= itemsMax)
                     questdungeons[item] = 0;
              questdungeons[item] = 0;
