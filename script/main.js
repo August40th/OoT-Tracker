@@ -607,11 +607,11 @@ function initGridRow(itemsets) {
     };
     questdungeons = {
         ForestKey0: 0,
-        ForestKey1: 0,
-        ForestKey2: 0,
-        ForestKey3: 0,
-        ForestKey4: 0,
-        ForestKey5: 0,
+        ForestKey1: 1,
+        ForestKey2: 1,
+        ForestKey3: 1,
+        ForestKey4: 1,
+        ForestKey5: 1,
     };
 
     var r, c;
