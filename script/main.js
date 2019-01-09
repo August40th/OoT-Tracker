@@ -742,7 +742,7 @@ function gridItemClick(row, col, corner) {
             }
             else {
                 items['ForestKey']++;
-                items['FireKey]++;
+                items['FireKey']++;
                 if (items >= itemsMax)
                     items = 0;
                 items[item] = !items[item];
@@ -750,14 +750,14 @@ function gridItemClick(row, col, corner) {
         }
         else if (quest == 'Master') {
             items['ForestKey']++;
-            items['FireKey]++;
+            items['FireKey']++;
             if (items['ForestKey'] >= 6)
                     items['ForestKey'] = 0;
             questdungeons[item] = 1;
         }
          else if (quest == 'Vanilla') {
              items['ForestKey']++;
-             items['FireKey]++;
+             items['FireKey']++;
              if (questdungeons[item] >= itemsMax)
                     questdungeons[item] = 0;
              questdungeons[item] = 0;
