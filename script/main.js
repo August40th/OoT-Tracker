@@ -306,14 +306,13 @@ function setGanonLogic(sender) {
 
 function setQuest(sender) {
     quest = sender.value;
-    if (quest == 'Mixed') {
+    if (quest == 'Vanilla') {
+        questimg = 0;
     }
     else if (quest == 'Master') {
         questimg = 1;
     }
-    else {
-        questimg = 0;
-    }
+    updateGridItemAll();
     updateMap();
     saveCookie();
 }
