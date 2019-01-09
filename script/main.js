@@ -607,8 +607,13 @@ function initGridRow(itemsets) {
     };
     questdungeons = {
         ForestKey: 0,
-        ForestKey: 1,
-        ForestKey: 2.
+        FireKey: 0,
+        WaterKey: 0,
+        SpiritKey: 0,
+        ShadowKey: 0,
+        CastleKey: 0,
+        WellKey: 0,
+        GTGKey: 0,
     };
 
     var r, c;
@@ -736,21 +741,21 @@ function gridItemClick(row, col, corner) {
             }
             else {
                 items['ForestKey']++
-                if (items['ForestKey'] >= 5)
+                if (items['ForestKey'] >= itemsMax)
                     items['ForestKey'] = 0;
                 items[item] = !items[item];
             }
         }
         else if (quest == 'Master') {
             items['ForestKey']++
-            if (items['ForestKey'] >= 5)
+            if (items['ForestKey'] >= 6)
                     items['ForestKey'] = 0;
             questdungeons[item] = 1;
         }
          else if (quest == 'Vanilla') {
-             items['ForestKey']++
-             if (items['ForestKey'] >= 5)
-                    items['ForestKey'] = 0;
+             questdungeons[item]++
+             if (questdungeons{item] >= itemsMax)
+                    questdungeons[item] = 0;
              questdungeons[item] = 0;
         }
     }
