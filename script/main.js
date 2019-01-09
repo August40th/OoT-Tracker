@@ -730,13 +730,11 @@ function gridItemClick(row, col, corner) {
     if(questimg[item] !== undefined){
         if (quest == 'Mixed') {
             if (corner == 1) {
-                questdungeons[item]++;
                 questimg[item]++;
                 if (questdungeons[item] >=  2)
                     questdungeons[item] = 0;
             }
             else if (corner == 0) {
-                questdungeons[item]++;
                 questimg[item]++;
                 if (questimg[item] >=  2)
                     questimg[item] = 0;
