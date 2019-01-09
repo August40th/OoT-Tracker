@@ -902,4 +902,24 @@ var chests = [
             return "unavailable";
         }
     },
+    {
+        name: "Skulltula Hammer Grotto",
+        x:36.1%,
+        y: 39.0%,
+        isAvailable: function(){
+            if (items.Hammer && items.Hookshot)
+                return "available";
+            return "unavailable";
+        }
+    },
+    {
+        name: "Skulltula Bomb Grotto",
+        x: "56.0%",
+        y: "26.0%",
+        isAvailable: function(){
+            if((items.Bombs || items.Hammer || items.Bombchu) && items.Hookshot)
+                return "available";
+            return "unavailable";
+        }
+    },
 ]
