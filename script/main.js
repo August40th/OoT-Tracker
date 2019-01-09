@@ -8,7 +8,7 @@ var songs = [];
 var songimg = ['Unknown', 'Impa', 'Malon', 'SariasSong2', 'Guru' , 'CompBro' , 'Forest' , 'Crater', 'TempleofTime', 'Desert', 'BurningKak', 'IceSong', 'Ocarina2'];
 
 var questdungeons = [];
-var questimg = ['', 'MQ ];
+var questimg = ['', 'MQ' ];
 
 ganonlogic = 'Open';
 gerudobridge ='Default';
