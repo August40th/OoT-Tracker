@@ -229,10 +229,8 @@ function setGanonLogic(sender) {
 function setQuest(sender) {
     quest = sender.value;
     if (quest == 'Mixed') {
-        dungeons.[1].chestlist[3].isOpened
     }
     else if (quest == 'Master') 
-        dungeons.[1].[1].isOpened
     }
     updateMap();
 }
