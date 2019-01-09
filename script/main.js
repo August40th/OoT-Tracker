@@ -226,10 +226,10 @@ function setGanonLogic(sender) {
 function setQuest(sender) {
     quest = sender.value;
     if (quest == 'Mixed') {
-        dungeons.'Kokiri Forest'.'Fairy Ocarina'.isOpened
+        dungeons.'Kokiri Forest'.chestlist['Fairy Ocarina'].isOpened
     }
     else if (quest == 'Master') 
-        dungeons.'Kokiri Forest'.'Kokiri Sword Chest'.isOpened
+        dungeons.[1].[1].isOpened
     }
     updateMap();
 }
