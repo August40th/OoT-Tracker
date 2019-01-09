@@ -545,12 +545,7 @@ function updateGridItem(row, index) {
     }
     if (questdungeons[item] !== undefined){
         if (quest == 'Mixed'){
-            if (questimg == 1) {
-                itemGrid[row][index][0].style.backgroundImage = "url(images/" + "MQ" + ".png)";
-            }
-            else if (questimg == 0) {
-                itemGrid[row][index][0].style.backgroundImage = "url(images/" + "" + ".png)";
-            }
+            itemGrid[row][index][3].style.backgroundImage = "url(images/" + questimg[questdungeons[item]] + ".png)";            
         }
         else if (quest == 'Master')
             itemGrid[row][index][0].style.backgroundImage = "url(images/MQ.png)";
@@ -733,7 +728,7 @@ function gridItemClick(row, col, corner) {
             items[item] = !items[item];
         }
     }
-    if(questimg[item] !== undefined){
+    else if(questimg[item] !== undefined){
         if (quest == 'Mixed') {
             if (corner == 1) {
                 questimg++;
