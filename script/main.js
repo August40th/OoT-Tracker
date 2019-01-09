@@ -312,9 +312,6 @@ function setQuest(sender) {
     else if (quest == 'Master') {
         questimg = 1;
     }
-    else if (quest == 'Vanilla') {
-        questimg = 1;
-    }
     updateGridItemAll();
     updateMap();
     saveCookie();
@@ -818,15 +815,23 @@ function gridItemClick(row, col, corner) {
             items[item] = !items[item];
         }
     }
-    else if(questdungeons[item] !== undefined){
+    else if(questimg[item] !== undefined){
         if (quest == 'Mixed') {
             if (corner == 1) {
                 items.questdungeons[questimg]++;
+                if (items.questdungeons[questimg] == 0)
+                    items.questdungeons[questimg] = 1;
+                else if (items.questdungeons[questimg] == 1)
+                    items.questdungeons[questimg] = 0;
                 if (questdungeons[item] >=  2)
                     questdungeons[item] = 0;
             }
             else if (corner == 0) {
-                questimg++;
+                items.questdungeons[questimg]++;
+                if (items.questdungeons[questimg] == 0)
+                    items.questdungeons[questimg] = 1;
+                else if (items.questdungeons[questimg] == 1)
+                    items.questdungeons[questimg] = 0;
                 if (questdungeons[item] >=  2)
                     questdungeons[item] = 0;
             }
@@ -838,6 +843,7 @@ function gridItemClick(row, col, corner) {
         }
         else if (quest == 'Master') {
             questimg = 1;
+            questdungeons[item]++;
             if (questdungeons >= itemsMax)
                     questdungeon[item] = 0;
             questdungeons[item] = 1;
