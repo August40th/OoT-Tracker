@@ -545,11 +545,11 @@ function updateGridItem(row, index) {
     }
     if (questdungeons[item] !== undefined){
         if (quest == 'Mixed')
-            itemGrid[row][index][3].style.backgroundImage = "url(images/" + questimg[questdungeons[item]] + ".png)";
+            itemGrid[row][index][4].style.backgroundImage = "url(images/" + questimg[questdungeons[item]] + ".png)";
         else if (quest == 'Master')
-            itemGrid[row][index][3].style.backgroundImage = "url(images/MQ.png)";
+            itemGrid[row][index][4].style.backgroundImage = "url(images/MQ.png)";
         else
-            itemGrid[row][index][3].style.backgroundImage = "";
+            itemGrid[row][index][4].style.backgroundImage = "";
     }            
     if (fortresskeys[item] !== undefined){
         if (gerudobridge == 'Shuffle')
@@ -606,12 +606,12 @@ function initGridRow(itemsets) {
         RequiemofSpirit: 0,
     };
     questdungeons = {
-        ForestKey0: 0,
-        ForestKey1: 0,
-        ForestKey2: 0,
-        ForestKey3: 0,
-        ForestKey4: 0,
-        ForestKey5: 0,
+        ForestKey: 0,
+        ForestKey: 1,
+        ForestKey: 2,
+        ForestKey: 3,
+        ForestKey: 4,
+        ForestKey: 5,
     };
 
     var r, c;
@@ -727,12 +727,12 @@ function gridItemClick(row, col, corner) {
     }
     if(questdungeons[item] !== undefined){
         if (quest == 'Mixed') {
-            if (corner == 3) {
+            if (corner == 1) {
                 questdungeons[item]++;
                 if (questdungeons[item] >=  2)
                     questdungeons[item] = 0;
             }
-            else if (corner == 2) {
+            else if (corner == 4) {
                 questdungeons[item]++;
                 if (questdungeons[item] >=  2)
                     questdungeons[item] = 0;
