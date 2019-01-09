@@ -914,7 +914,7 @@ var chests = [
     },
     {
         name: "Skulltula Grotto",
-        x: "59.0%",
+        x: "57.3.0%",
         y: "26.0%",
         isAvailable: function(){
             if ( ( (items.Bombs || items.Bombchu) && items.Boomerang) || ( (items.Bombs || items.Hammer || items.Bombchu) && items.Hookshot) )
