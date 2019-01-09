@@ -727,10 +727,10 @@ function gridItemClick(row, col, corner) {
             items[item] = !items[item];
         }
     }
-    if(questdungeons[item] !== undefined){
+    if(questimg[item] !== undefined){
         if (quest == 'Mixed') {
             if (corner == 1) {
-                questdungeons[item]++;
+                questimg[item]++;
                 if (questdungeons[item] >=  2)
                     questdungeons[item] = 0;
             }
@@ -740,8 +740,6 @@ function gridItemClick(row, col, corner) {
                     questimg[item] = 0;
             }
             else {
-                items['ForestKey']++;
-                items['FireKey']++;
                 if (questdungeons >= itemsMax)
                     questdungeons = 0;
                 items[item] = !items[item];
@@ -749,6 +747,7 @@ function gridItemClick(row, col, corner) {
         }
         else if (quest == 'Master') {
             questimg = 1;
+            questdungerions[item]++;
             if (questdungeons >= itemsMax)
                     questdungeon[item] = 0;
             questdungeons[item] = 1;
