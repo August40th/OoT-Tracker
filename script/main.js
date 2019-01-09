@@ -545,11 +545,11 @@ function updateGridItem(row, index) {
     }
     if (questdungeons[item] !== undefined){
         if (quest == 'Mixed')
-            itemGrid[row][index][4].style.backgroundImage = "url(images/" + questimg[questdungeons[item]] + ".png)";
+            itemGrid[row][index][0].style.backgroundImage = "url(images/" + questimg[questdungeons[item]] + ".png)";
         else if (quest == 'Master')
-            itemGrid[row][index][4].style.backgroundImage = "url(images/MQ.png)";
+            itemGrid[row][index][0].style.backgroundImage = "url(images/MQ.png)";
         else
-            itemGrid[row][index][4].style.backgroundImage = "";
+            itemGrid[row][index][0].style.backgroundImage = "";
     }            
     if (fortresskeys[item] !== undefined){
         if (gerudobridge == 'Shuffle')
