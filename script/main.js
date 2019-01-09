@@ -230,7 +230,7 @@ function setQuest(sender) {
     quest = sender.value;
     if (quest == 'Mixed') {
     }
-    else if (quest == 'Master') 
+    else if (quest == 'Master') {
     }
     updateMap();
 }
