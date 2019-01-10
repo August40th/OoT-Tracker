@@ -917,6 +917,7 @@ var chests = [
 			) 
 		 )
 		)
+		)
         return "available"; 
             return "unavailable";
         }
