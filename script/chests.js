@@ -907,17 +907,12 @@ var chests = [
         x: "36.1%",
         y: "42.0%",
         isAvailable: function(){
-    if (items.Magic && 
-		( 
-			( items.Dins && ( items.Bombs || items.Bombchu
-					) && items.Boomerang
-			) 
-			|| ( ( (items.Bow && items.Fire) || items.Dins) && items.Hokkshot && (items.Bombs || items.Hammer || items.Bombchu) 
+    if (items.Magic && ( (items.Dins && (items.Bombs || items.Bombchu) && items.Boomerang) 
+			|| ( ( (items.Bow && items.Fire) || items.Dins) 
+			       && items.Hokkshot && (items.Bombs || items.Hammer || items.Bombchu) 
 			   ) 
 			) 
-		 )
-		)
-		)
+	)
         return "available"; 
             return "unavailable";
         }
