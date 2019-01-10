@@ -197,7 +197,7 @@ var itemsMin = {
     Glove:0,
     Scale:0,
     Magic:0,
-    Wallet:1,
+    Wallet:0,
     Skulltula:0,
     Stick:1,
     Nuts:1,
