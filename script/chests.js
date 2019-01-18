@@ -797,7 +797,6 @@ var dungeons = [
         x: "8.4%",
         y: "15.9%",
         chestlist: {           
-            ['Haunted Wasteland Chest']: { isAvailable: function() {return (((items.EponasSong || isFortressOpen()) && items.HoverBoots) || items.Hookshot >= 2) && (items.Magic && (items.Dins || (items.Bow && items.Fire))) } },
             ['Requiem of Spirit']: { isAvailable: function() {return ((items.EponasSong || isFortressOpen()) && items.HoverBoots) || items.Hookshot >= 2 || (items.Ocarina && items.RequiemofSpirit)} },
             ['Desert Bean Heart Piece']: { isAvailable: function() {return items.Bean && items.Ocarina && items.RequiemofSpirit} },          
             ['Desert Fairy Fountain']: { isAvailable: function() {return (items.Ocarina && items.ZeldasLullaby && (items.Bombs || items.Bombchu)) && (((items.EponasSong || isFortressOpen()) && items.HoverBoots) || items.Hookshot >= 2 || items.RequiemofSpirit)} },
@@ -905,7 +904,7 @@ var chests = [
         x: "14.0%",
         y: "25.0%",
         isAvailable: function() {
-            if (((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2) && ((items.Dins || (items.Fire && items.Bow)) && items.Magic)) {
+		if (((items.EponasSong || isFortressOpen()) && items.HoverBoots) || items.Hookshot >= 2) && (items.Magic && (items.Dins || (items.Bow && items.Fire))) } }
                 return "available";
             }
             return "unavailable";
