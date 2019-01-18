@@ -904,7 +904,7 @@ var chests = [
         x: "14.0%",
         y: "25.0%",
         isAvailable: function() {
-		if (((items.EponasSong || isFortressOpen()) && items.HoverBoots) || items.Hookshot >= 2) && (items.Magic && (items.Dins || (items.Bow && items.Fire))) } }
+		if ((((items.EponasSong || isFortressOpen()) && items.HoverBoots) || items.Hookshot >= 2) && (items.Magic && (items.Dins || (items.Bow && items.Fire)))}) 
                 return "available";
             }
             return "unavailable";
