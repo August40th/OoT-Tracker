@@ -906,20 +906,15 @@ var chests = [
         isAvailable: function() {
 		if ((((items.EponasSong || isFortressOpen()) && items.HoverBoots) || items.Hookshot >= 2) && (items.Magic && (items.Dins || (items.Bow && items.Fire))))
                 return "available";
-            }
             return "unavailable";
-        },
+        }
     },
     {
         name: "Skulltula & Hint Grotto",
         x: "36.1%",
         y: "42.0%",
         isAvailable: function(){
-    if (items.Magic && ( (items.Dins && (items.Bombs || items.Bombchu) && items.Boomerang) 
-			|| ( ( (items.Bow && items.Fire) || items.Dins) 
-			       && items.Hookshot && (items.Bombs || items.Hammer || items.Bombchu) 
-			   ) 
-			) 
+    		if (items.Magic && ( (items.Dins && (items.Bombs || items.Bombchu) && items.Boomerang) || ( ( (items.Bow && items.Fire) || items.Dins) && items.Hookshot && (items.Bombs || items.Hammer || items.Bombchu) ) ) 
 	)
         return "available"; 
             return "unavailable";
