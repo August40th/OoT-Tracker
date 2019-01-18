@@ -746,8 +746,6 @@ var dungeons = [
         x: "40.0%",
         y: "81.0%",
         chestlist: {
-            ['Scarecrow Setup']: { isAvailable: function() { return items.Ocarina; } },
-            ['Scarecrow Song']: { isAvailable: function() { return items.Ocarina && items.Scarecrow && items.MasterSword; } },
             ['Child Fishing']: { isAvailable: function() {return true;} },
             ['Silver Scale item']: { isAvailable: function() {return items.Scale;} },
             ['Diving in the Lab']: { isAvailable: function() {return items.MasterSword && (items.Scale >= 2 || (items.IronBoots && items.Hookshot));} },
@@ -901,6 +899,17 @@ var chests = [
                 return "available";
             return "unavailable";
         }
+    },
+    {
+        name: "Haunted Wasteland Chest",
+        x: "14.0%",
+        y: "25.0%",
+        isAvailable: function() {
+            if (((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2) && ((items.Dins || (items.Fire && items.Bow)) && items.Magic)) {
+                return "available";
+            }
+            return "unavailable";
+        },
     },
     {
         name: "Skulltula & Hint Grotto",
