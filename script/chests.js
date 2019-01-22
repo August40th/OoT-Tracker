@@ -914,9 +914,8 @@ var chests = [
         x: "36.1%",
         y: "42.0%",
         isAvailable: function(){
-    		if (items.Magic && ( (items.Dins && (items.Bombs || items.Bombchu) && items.Boomerang) || ( ( (items.Bow && items.Fire) || items.Dins) && items.Hookshot && (items.Bombs || items.Hammer || items.Bombchu) ) ) 
-	)
-        return "available"; 
+    		if (items.Magic && ( (items.Dins && (items.Bombs || items.Bombchu) && items.Boomerang) || ( ( (items.Bow && items.Fire) || items.Dins) && items.Hookshot && (items.Bombs || items.Hammer || items.Bombchu) ) ) )
+	        return "available"; 
             return "unavailable";
         }
     },
@@ -925,9 +924,19 @@ var chests = [
         x: "57.3%",
         y: "26.0%",
         isAvailable: function(){
-            if ( ( (items.Bombs || items.Bombchu) && items.Boomerang) || ( (items.Bombs || items.Hammer || items.Bombchu) && items.Hookshot) )
-                return "available";
+        	if ( ( (items.Bombs || items.Bombchu) && items.Boomerang) || ( (items.Bombs || items.Hammer || items.Bombchu) && items.Hookshot) )
+        	return "available";
             return "unavailable";
         }
     },    
+    {
+	name: "Castle Moat Storms Grotto",
+	x:"54.3%",
+	y: "13.7%",
+	isAvailable: function(){
+		if (items.Ocarina && items.SongofStorms && items.Boomerang && (items.Bombs || items.Bombchu))
+		return "available";
+	    return "unavailable";
+	}
+    },
 ]
