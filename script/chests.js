@@ -929,14 +929,4 @@ var chests = [
             return "unavailable";
         }
     },    
-    {
-	name: "Castle Moat Storms Grotto",
-	x:"54.3%",
-	y: "13.7%",
-	isAvailable: function(){
-		if (items.Ocarina && items.SongofStorms && items.Boomerang && (items.Bombs || items.Bombchu))
-		return "available";
-	    return "unavailable";
-	}
-    },
 ]
