@@ -19,6 +19,9 @@ scrubs = 'Off';
 showprizes = false;
 quest = 'Vanilla';
 
+OcarinaShuffle = false;
+SongShuffle = false;
+
 var itemGrid = [];
 var itemLayout = [];
 
@@ -137,6 +140,18 @@ function loadCookie() {
             rbutton.click();
     }
 
+ for (rbuttonID in document.getElementsByName('OcarinaShuffle')) {
+        rbutton = document.getElementsByName('OcarinaShuffle')[rbuttonID]
+        if (rbutton.value == cookieobj.Ologic)
+            rbutton.click();
+    }
+    
+ for (rbuttonID in document.getElementsByName('SongShuffle')) {
+        rbutton = document.getElementsByName('SongShuffle')[rbuttonID]
+        if (rbutton.value == cookieobj.Songlogic)
+            rbutton.click();
+    }    
+    
     cookielock = false;
 }
 
@@ -402,6 +417,18 @@ function setSkulltula(sender) {
 }
 
 function setScrub(sender) {
+    scrubs = sender.value;
+    updateMap();
+    saveCookie();
+}
+
+function setOcarina(sender) {
+    scrubs = sender.value;
+    updateMap();
+    saveCookie();
+}
+
+function setSongs(sender) {
     scrubs = sender.value;
     updateMap();
     saveCookie();
