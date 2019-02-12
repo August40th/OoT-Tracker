@@ -467,7 +467,7 @@ function setEgg(sender) {
         itemsMin.Mask = 1;
     else {
         itemsMin.Mask = 0;
-        dungeons[13].chestlist[2] = 'isOpened';
+        dungeons[13].chestlist[2] = "opened";
     }
     items.Mask = itemsMin.Mask;
     updateGridItemAll();
