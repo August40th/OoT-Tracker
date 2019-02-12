@@ -21,6 +21,8 @@ quest = 'Vanilla';
 
 OcarinaShuffle = false;
 SongShuffle = false;
+WeirdEgg = false;
+BombchuLogic = false;
 
 var itemGrid = [];
 var itemLayout = [];
@@ -104,6 +106,12 @@ function loadCookie() {
     document.getElementsByName('SongShuffle')[0].checked = !!cookieobj.prize;
     document.getElementsByName('SongShuffle')[0].onchange();
 
+    document.getElementsByName('WeirdEgg')[0].checked = !!cookieobj.prize;
+    document.getElementsByName('WeirdEgg')[0].onchange();
+    
+    document.getElementsByName('BombchuLogic')[0].checked = !!cookieobj.prize;
+    document.getElementsByName('BombchuLogic')[0].onchange();
+    
     for (rbuttonID in document.getElementsByName('ganonlogic')) {
         rbutton = document.getElementsByName('ganonlogic')[rbuttonID]
         if (rbutton.value == cookieobj.glogic)
@@ -166,6 +174,8 @@ function saveCookie() {
 
     cookieobj.prize = document.getElementsByName('OcarinaShuffle')[0].checked ? 1 : 0;
     cookieobj.prize = document.getElementsByName('SongShuffle')[0].checked ? 1 : 0;
+    cookieobj.prize = document.getElementsByName('WeirdEgg')[0].checked ? 1 : 0;
+    cookieobj.prize = document.getElementsByName('BombchuLogic')[0].checked ? 1 : 0;
     
     for (rbuttonID in document.getElementsByName('ganonlogic')) {
         rbutton = document.getElementsByName('ganonlogic')[rbuttonID]
@@ -428,6 +438,18 @@ function setOcarina(sender) {
 function setSongs(sender) {
     SongShuffle = sender.checked;
     updateGridItemAll();
+    saveCookie();
+}
+
+function setEgg(sender) {
+    WeirdEgg = sender.checked;
+    updateMap();
+    saveCookie();
+}
+
+function setBombchu(sender) {
+    BombchuLogic = sender.checked;
+    updateMap();
     saveCookie();
 }
 
