@@ -661,6 +661,9 @@ function updateGridItem(row, index) {
             itemGrid[row][index][3].style.backgroundImage = "";           
     }
     if (songs[item] !== undefined) {
+        if (SongShuffle)
+          itemGrid[row][index][3].style.backgroundImage = "";
+        else
           itemGrid[row][index][3].style.backgroundImage = "url(images/" + songimg[songs[item]] + ".png)";
     }
 }
