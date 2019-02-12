@@ -451,7 +451,7 @@ function setOcarina(sender) {
             itemsMin.Ocarina = 1;
     else itemsMin.Ocarina = 0;
     items.Ocarina = itemsMin.Ocarina;
-    updateMap();
+    updateGridItemAll();
     saveCookie();
 }
 
@@ -467,7 +467,7 @@ function setEgg(sender) {
         itemsMin.Mask = 1;
     else itemsMin.Mask = 0;
     items.Mask = itemsMin.Mask;
-    updateMap();
+    updateGridItemAll();
     saveCookie();
 }
 
