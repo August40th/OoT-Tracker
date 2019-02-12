@@ -98,6 +98,12 @@ function loadCookie() {
     document.getElementsByName('showprizes')[0].checked = !!cookieobj.prize;
     document.getElementsByName('showprizes')[0].onchange();
 
+    document.getElementsByName('OcarinaShuffle')[0].checked = !!cookieobj.prize;
+    document.getElementsByName('OcarinaShuffle')[0].onchange();
+
+    document.getElementsByName('SongShuffle')[0].checked = !!cookieobj.prize;
+    document.getElementsByName('SongShuffle')[0].onchange();
+
     for (rbuttonID in document.getElementsByName('ganonlogic')) {
         rbutton = document.getElementsByName('ganonlogic')[rbuttonID]
         if (rbutton.value == cookieobj.glogic)
@@ -139,18 +145,6 @@ function loadCookie() {
         if (rbutton.value == cookieobj.sclogic)
             rbutton.click();
     }
-
- for (rbuttonID in document.getElementsByName('OcarinaShuffle')) {
-        rbutton = document.getElementsByName('OcarinaShuffle')[rbuttonID]
-        if (rbutton.value == cookieobj.Ologic)
-            rbutton.click();
-    }
-    
- for (rbuttonID in document.getElementsByName('SongShuffle')) {
-        rbutton = document.getElementsByName('SongShuffle')[rbuttonID]
-        if (rbutton.value == cookieobj.Songlogic)
-            rbutton.click();
-    }    
     
     cookielock = false;
 }
@@ -170,6 +164,9 @@ function saveCookie() {
 
     cookieobj.prize = document.getElementsByName('showprizes')[0].checked ? 1 : 0;
 
+    cookieobj.prize = document.getElementsByName('OcarinaShuffle')[0].checked ? 1 : 0;
+    cookieobj.prize = document.getElementsByName('SongShuffle')[0].checked ? 1 : 0;
+    
     for (rbuttonID in document.getElementsByName('ganonlogic')) {
         rbutton = document.getElementsByName('ganonlogic')[rbuttonID]
         if (rbutton.checked)
