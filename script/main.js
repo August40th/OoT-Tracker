@@ -447,6 +447,9 @@ function setScrub(sender) {
 
 function setOcarina(sender) {
     OcarinaShuffle = sender.checked;
+    if (OcarinaShuffle == false)
+            itemsMin.Ocarina = 1;
+    else itemsMin.Ocarina = 0;
     updateMap();
     saveCookie();
 }
@@ -459,6 +462,9 @@ function setSongs(sender) {
 
 function setEgg(sender) {
     WeirdEgg = sender.checked;
+    if (WeirdEgg == false)
+        itemsMin.Mask = 1;
+    else itemsMin.Mask = 0;
     updateMap();
     saveCookie();
 }
