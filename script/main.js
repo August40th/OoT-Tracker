@@ -927,7 +927,7 @@ function gridItemClick(row, col, corner) {
         if (smallkeys == "Keysanity") {
             if (corner == 3) {
                 fortresskeys[item]++;
-                 if (Rescue1){
+                 if (Rescue1 == true){
                     if (fortresskeys[item] >=  2){
                         fortresskeys[item] = 0;}
                 }
