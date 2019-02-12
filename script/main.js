@@ -934,11 +934,13 @@ function gridItemClick(row, col, corner) {
             else {
                 items[item] = !items[item];
             }
-            if (Rescue1 && fortresskeys[item] >=  2){
-                    fortresskeys[item] = 0;
+            if (Rescue1){
+                 if (fortresskeys[item] >=  2){
+                    fortresskeys[item] = 0;}
             }
-            else if (Rescue1 == false && fortresskeys[item] >=  5){
-                fortresskeys[item] = 0;
+            else {
+                if (fortresskeys[item] >=  5){
+                    fortresskeys[item] = 0;}
             }
         }
         else {
