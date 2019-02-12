@@ -465,10 +465,12 @@ function setEgg(sender) {
     WeirdEgg = sender.checked;
     if (WeirdEgg == false)
         itemsMin.Mask = 1;
-    else itemsMin.Mask = 0;
+    else {
+        itemsMin.Mask = 0;
+        dungeons[13].chestlist[2].isOpened
+    }
     items.Mask = itemsMin.Mask;
     updateGridItemAll();
-    dungeons[13].chestlist[2].isOpened
     updateMap();
     saveCookie();
 }
