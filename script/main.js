@@ -420,14 +420,14 @@ function setScrub(sender) {
 }
 
 function setOcarina(sender) {
-    scrubs = sender.value;
+    OcarinaShuffle = sender.checked;
     updateMap();
     saveCookie();
 }
 
 function setSongs(sender) {
-    scrubs = sender.value;
-    updateMap();
+    SongShuffle = sender.checked;
+    updateGridItemAll();
     saveCookie();
 }
 
