@@ -927,20 +927,28 @@ function gridItemClick(row, col, corner) {
         if (smallkeys == "Keysanity") {
             if (corner == 3) {
                 fortresskeys[item]++;
+                 if (Rescue1){
+                    if (fortresskeys[item] >=  2){
+                        fortresskeys[item] = 0;}
+                }
+                else if (Rescue1 == false){
+                    if (fortresskeys[item] >=  5){
+                        fortresskeys[item] = 0;}
+                }
             }
             else if (corner == 2) {
                 fortresskeys[item]++;
+                 if (Rescue1 == true){
+                    if (fortresskeys[item] >=  2){
+                        fortresskeys[item] = 0;}
+                }
+                else if (Rescue1 == false){
+                    if (fortresskeys[item] >=  5){
+                        fortresskeys[item] = 0;}
+                }
             }
             else {
                 items[item] = !items[item];
-            }
-            if (Rescue1 == true){
-                 if (fortresskeys[item] >=  2){
-                    fortresskeys[item] = 0;}
-            }
-            else if (Rescue1 == false){
-                if (fortresskeys[item] >=  5){
-                    fortresskeys[item] = 0;}
             }
         }
         else {
