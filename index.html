@@ -87,8 +87,12 @@
                     <fieldset> <legend>Scrub Salesmen</legend>
                         <input type='radio' name='scrubs' value='Major Item' checked='true' onclick="setScrub(this)">Off
                         <input type='radio' name='scrubs' value='All' onclick="setScrub(this)">Scrubsanity
-                        <input type='radio' name='scrubs' value='MinusWorst' onclick="setScrub(this)">Minus Worst<br>
                     </fieldset>
+                    <fieldset> <legend>Songs/Ocarina</legend>
+                        <input> type='checkbox' name='OcarinaShuffle' checked='false' onchange="setOcarina(this)">Shuffle Ocarina<br>
+                        <input> ype='checkbox' name='SongShuffle' checked='false' onchange="setSongs('mapdiv', this)">Shuffle Songs<br>
+                    </fieldset>
+                    
                 </fieldset>
         </fieldset>
         <table id='itemconfig' class='itemconfig' style='display:none'></table>
