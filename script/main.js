@@ -5,7 +5,7 @@ var fortresskeys = [];
 var keyimg = ['Membership0', 'Membership1', 'Membership2', 'Membership3', 'Membership4'];
 
 var songs = [];
-var songimg = ['Unknown', 'Impa', 'Malon', 'SariasSong2', 'Guru' , 'CompBro' , 'Forest' , 'Crater', 'TempleofTime', 'Desert', 'BurningKak', 'IceSong', 'Ocarina2'];
+var songimg = ['Unknown', 'Impa', 'Malon', 'SariasSong2', 'Guru' , 'CompBro', 'TempleofTime', 'Forest' , 'Crater', 'IceSong', 'Desert', 'BurningKak', 'Ocarina2'];
 
 var questdungeons = [];
 var questimg = ['', 'MQ' ];
