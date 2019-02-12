@@ -469,6 +469,7 @@ function setEgg(sender) {
     items.Mask = itemsMin.Mask;
     updateGridItemAll();
     dungeons[14].chestlist[3].DCopened
+    updateMap();
     saveCookie();
 }
 
