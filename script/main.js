@@ -12,6 +12,7 @@ var questimg = ['', 'MQ' ];
 
 ganonlogic = 'Open';
 gerudobridge ='Default';
+Rescue1 = true;
 smallkeys = 'Dungeons';
 bosskeys = 'Dungeons';
 skulltula = 'Off';
@@ -112,6 +113,9 @@ function loadCookie() {
     document.getElementsByName('BombchuLogic')[0].checked = !!cookieobj.prize;
     document.getElementsByName('BombchuLogic')[0].onchange();
     
+    document.getElementsByName('Rescue1')[0].checked = !!cookieobj.prize;
+    document.getElementsByName('Rescue1')[0].onchange();
+    
     for (rbuttonID in document.getElementsByName('ganonlogic')) {
         rbutton = document.getElementsByName('ganonlogic')[rbuttonID]
         if (rbutton.value == cookieobj.glogic)
@@ -176,6 +180,7 @@ function saveCookie() {
     cookieobj.prize = document.getElementsByName('SongShuffle')[0].checked ? 1 : 0;
     cookieobj.prize = document.getElementsByName('WeirdEgg')[0].checked ? 1 : 0;
     cookieobj.prize = document.getElementsByName('BombchuLogic')[0].checked ? 1 : 0;
+    cookieobj.prize = document.getElementsByName('Rescue1')[0].checked ? 1 : 0;
     
     for (rbuttonID in document.getElementsByName('ganonlogic')) {
         rbutton = document.getElementsByName('ganonlogic')[rbuttonID]
@@ -345,6 +350,12 @@ function setFortressLogic(sender) {
         items.Membership = true;
     }
     updateGridItemAll();
+    updateMap();
+    saveCookie();
+}
+
+function setCarpenter(sender) {
+    Rescue1 = sender.value;
     updateMap();
     saveCookie();
 }
