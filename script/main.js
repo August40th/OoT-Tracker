@@ -360,7 +360,7 @@ function setFortressLogic(sender) {
 }
 
 function setCarpenter(sender) {
-    Rescue1 = sender.value;
+    Rescue1 = sender.checked;
     updateMap();
     saveCookie();
 }
