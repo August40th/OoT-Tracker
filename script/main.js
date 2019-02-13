@@ -338,11 +338,11 @@ function setGanonLogic(sender) {
 
 function setQuest(sender) {
     quest = sender.value;
-    if (quest == 'Vanilla') {
-        questimg = 0;
-    }
-    else if (quest == 'Master') {
+    if (quest == 'Master') {
         questimg = 1;
+    }
+    else {
+        questimg = 0;
     }
     updateGridItemAll();
     updateMap();
@@ -693,7 +693,7 @@ function updateGridItem(row, index) {
     }
     if (questdungeons[item] !== undefined){
         if (quest == 'Mixed') {
-            itemGrid[row][index][3].style.backgroundImage = "url(images/" + questimg[questdungeons[item]] + ".png)";            
+            itemGrid[row][index][0].style.backgroundImage = "url(images/" + questimg[questdungeons[item]] + ".png)";            
         }
         else if (quest == 'Master') {
             questimg = 1;
