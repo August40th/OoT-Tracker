@@ -370,7 +370,7 @@ function setCarpenter(sender) {
 function setSmallKeys(sender) {
     smallkeys = sender.value;
     if (smallkeys == 'Remove') {
-        items.ForestKey = 5;
+        items.ForestKey = 0;
         items.FireKey = 8;
         items.WaterKey = 6;
         items.ShadowKey = 5;
@@ -764,7 +764,7 @@ function initGridRow(itemsets) {
         RequiemofSpirit: 0,
     };
     questdungeons = {
-        ForestKey:[],
+        ForestKey0:[],
         FireKey:[],
         WaterKey:[],
         SpiritKey:[],
