@@ -370,7 +370,7 @@ function setCarpenter(sender) {
 function setSmallKeys(sender) {
     smallkeys = sender.value;
     if (smallkeys == 'Remove') {
-        items.ForestKey = 0;
+        items.ForestKey = 5;
         items.FireKey = 8;
         items.WaterKey = 6;
         items.ShadowKey = 5;
