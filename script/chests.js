@@ -65,27 +65,27 @@ var dungeons = [
         y: "91.0%",
         chestlist: {
             ['Compass Chest']: { isAvailable: function () {
-                return items.IronBoots && items.Hookshot; } },
+                return (items.IronBoots && items.Hookshot) || (items.Scale >=2 && items.Hookshot >=2 && items.Ocarina && items.ZeldasLullaby); } },
             ['Map Chest']: { isAvailable: function () {
-                return items.IronBoots && items.Hookshot; } },
+                return (items.IronBoots && items.Hookshot) || (items.Scale >=2 && items.Hookshot >=2); } },
             ['Torches Chest']: { isAvailable: function () {
-                return (items.IronBoots && items.Hookshot) && (items.Bow || (items.Dins && items.Magic)) && items.Ocarina && items.ZeldasLullaby; } },
+                return ((items.IronBoots && items.Hookshot) || (items.Scale >=2 && items.Hookshot >=2)) && (items.Bow || (items.Dins && items.Magic)) && items.Ocarina && items.ZeldasLullaby; } },
             ['Dragon Chest']: { isAvailable: function () {
-                return (items.IronBoots && items.Hookshot) && items.Ocarina && (((items.SongofTime && items.Bow && items.WaterKey >= 2)) || (items.ZeldasLullaby && items.Glove)); } },
+                return ((items.IronBoots && items.Hookshot) || (items.Scale >=2 && items.Hookshot >=2)) && items.Ocarina && (((items.SongofTime && items.Bow && items.WaterKey >= 2)) || (items.ZeldasLullaby && items.Glove)); } },
             ['Central Pillar Basement']: { isAvailable: function () {
                 return (items.WaterKey || items.Bow) && items.IronBoots && items.Hookshot && items.Ocarina && items.ZeldasLullaby ; } },
             ['Cracked Wall']: { isAvailable: function () {
-                return (items.IronBoots && items.Hookshot) && (items.Bombs || (items.Bombchu && BombchuLogic)); } },
+                return ((items.IronBoots && items.Hookshot) && (items.Bombs || (items.Bombchu && BombchuLogic))) || ((items.Scale >=2 && items.Hookshot >=2) && items.Ocarina && items.ZeldasLullaby); } },
             ['Central Bow Target']: { isAvailable: function () {
-                return (items.IronBoots && items.Hookshot) && items.Bow && items.Glove && items.Ocarina && items.ZeldasLullaby && (items.HoverBoots || items.Hookshot >= 2); } },
+                return ((items.IronBoots && items.Hookshot) || (items.Scale >=2 && items.Hookshot >=2)) && items.Bow && items.Glove && items.Ocarina && items.ZeldasLullaby && (items.HoverBoots || items.Hookshot >= 2); } },
             ['Boss Key Chest']: { isAvailable:  function () {
-                return items.WaterKey >= 2 && items.IronBoots && items.Hookshot && (((items.Bombs || (items.Bombchu && BombchuLogic)) && items.Glove) || items.HoverBoots) && (items.Hookshot >= 2 || items.HoverBoots); } },
+                return items.WaterKey >= 2 && ((items.IronBoots && items.Hookshot) || (items.Scale >=2 && items.Hookshot >=2)) && (((items.Bombs || (items.Bombchu && BombchuLogic)) && items.Glove) || items.HoverBoots) && (items.Hookshot >= 2 || items.HoverBoots); } },
             ['Dark Link']: { isAvailable: function () {
-                return items.WaterKey >= 2 && items.IronBoots && items.Hookshot; } },
+                return items.WaterKey >= 2 && ((items.IronBoots && items.Hookshot) || (items.Scale >=2 && items.Hookshot >=2)); } },
             ['River Chest']: { isAvailable:  function () {
-                return items.WaterKey >= 2 && items.IronBoots && items.Hookshot && items.Ocarina && items.SongofTime && items.Bow; } },
+                return items.WaterKey >= 2 && ((items.IronBoots && items.Hookshot) || (items.Scale >=2 && items.Hookshot >=2)) && items.Ocarina && items.SongofTime && items.Bow; } },
             ['Morpha']: { isAvailable:  function () {
-                return (items.IronBoots && items.Hookshot >= 2 && items.BossWater); } },
+                return ((items.IronBoots && items.Hookshot >= 2) || (items.Scale >=2 && items.Hookshot >=2)) && items.BossWater); } },
         },
         isBeatable: function(){
             return this.canGetChest();
