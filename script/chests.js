@@ -85,7 +85,7 @@ var dungeons = [
             ['River Chest']: { isAvailable:  function () {
                 return items.WaterKey >= 2 && ((items.IronBoots && items.Hookshot) || (items.Scale >=2 && items.Hookshot >=2)) && items.Ocarina && items.SongofTime && items.Bow; } },
             ['Morpha']: { isAvailable:  function () {
-                return (((items.IronBoots && items.Hookshot >= 2) || (items.Scale >=2 && items.Hookshot >=2)) && items.BossWater); } },
+                return ((items.IronBoots && items.Hookshot >= 2) || (items.Scale >=2 && items.Hookshot >=2)) && items.BossWater; } },
         },
         isBeatable: function(){
             return this.canGetChest();
