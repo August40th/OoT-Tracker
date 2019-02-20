@@ -166,9 +166,12 @@ var dungeons = [
                  return items.SpiritKey && ((items.Ocarina && items.RequiemofSpirit && (items.Boomerang || items.Slingshot)) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && (items.Hookshot || items.Bow))); } },
             ['Large Torch Chest']: { isAvailable:  function () {
                 return items.SpiritKey && 
-			(	(items.Ocarina && items.RequiemofSpirit && (items.Slingshot || items.Boomerang || (items.Bombchu && BombchuLogic)} && (items.Bombs || (items.Bombchu && BombchuLogic)) )
-			 ||	( ((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2 || items.RequiemofSpirit)
-				 && items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic)) && (items.Magic && (items.Dins || (items.Fire && items.Bow))) ) ); } },
+			(	(items.Ocarina && items.RequiemofSpirit && 
+				 (items.Slingshot || items.Boomerang || (items.Bombchu && BombchuLogic)} && 
+				 (items.Bombs || (items.Bombchu && BombchuLogic)) 
+				)
+			 ||	( ((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2 || items.RequiemofSpirit) && 
+				  items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic)) && (items.Magic && (items.Dins || (items.Fire && items.Bow))) ) ); } },
             ['Sun Block Room Chest']: { isAvailable: function () {
                 return items.SpiritKey && ((items.Ocarina && items.RequiemofSpirit && (items.Bombs|| (items.Bombchu && BombchuLogic))) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic)) && (items.Dins || (items.Fire && items.Bow)) && items.Magic)) ; } },
             ['Colossus Right Hand Chest']: { isAvailable:  function () {
