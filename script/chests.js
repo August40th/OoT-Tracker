@@ -166,48 +166,42 @@ var dungeons = [
                  return items.SpiritKey && ((items.Ocarina && items.RequiemofSpirit && (items.Boomerang || items.Slingshot)) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && (items.Hookshot || items.Bow))); } },
             ['Large Torch Chest']: { isAvailable:  function () {
                 return items.SpiritKey && 
-			(	(items.Ocarina && items.RequiemofSpirit && (items.Bombs || (items.Bombchu && BombchuLogic)) )
+			(	(items.Ocarina && items.RequiemofSpirit && (items.Slingshot || items.Boomerang || (items.Bombchu && BombchuLogic)} && (items.Bombs || (items.Bombchu && BombchuLogic)) )
 			 ||	( ((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2 || items.RequiemofSpirit)
-				 && items.Glove >= 2 && (items.Magic && (items.Dins || (items.Fire && items.Bow))) ) ); } },
+				 && items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic)) && (items.Magic && (items.Dins || (items.Fire && items.Bow))) ) ); } },
             ['Sun Block Room Chest']: { isAvailable: function () {
-                return items.SpiritKey && ((items.Ocarina && items.RequiemofSpirit && items.Stick && (items.Bombs|| (items.Bombchu && BombchuLogic))) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && (items.Dins || (items.Fire && items.Bow)) && items.Magic)) ; } },
+                return items.SpiritKey && ((items.Ocarina && items.RequiemofSpirit && (items.Bombs|| (items.Bombchu && BombchuLogic))) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic)) && (items.Dins || (items.Fire && items.Bow)) && items.Magic)) ; } },
             ['Colossus Right Hand Chest']: { isAvailable:  function () {
-                return (items.RequiemofSpirit && items.SpiritKey >= 2 && items.Ocarina && (items.Bombs|| (items.Bombchu && BombchuLogic))) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && items.SpiritKey >= 2); } },            
+                return (items.RequiemofSpirit && items.SpiritKey >= 2 && items.Ocarina && (items.Bombs|| (items.Bombchu && BombchuLogic))) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic)) && items.SpiritKey >= 2); } },            
             ['Wolfos Lullaby Chest']: { isAvailable:  function () {
                 return ((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && items.Hookshot && items.Ocarina && items.ZeldasLullaby; } },
             ['Silver Rupee Halfpipe']: { isAvailable:  function () {
                 return ((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && (items.Bow || items.Hookshot || items.Bombs); } },
             ['Floormaster Left Chest']: { isAvailable:  function () {
-                return items.SpiritKey && ((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2; } },
+                return items.SpiritKey && ((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic)); } },
             ['Floormaster Right Chest']: { isAvailable:  function () {
-                return items.SpiritKey && ((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2; } },            
+                return items.SpiritKey && ((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic)); } },            
             ['Statue\'s Hand after Lullaby']: { isAvailable:  function () {
-                return items.SpiritKey && (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2) && items.Ocarina && items.ZeldasLullaby; } },
+                return items.SpiritKey && (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic))) && items.Ocarina && items.ZeldasLullaby; } },
             ['Top Right after Lullaby']: { isAvailable:  function () {
-                return items.SpiritKey && (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2) && items.Ocarina && items.ZeldasLullaby && (items.HoverBoots || items.Hookshot); } },
+                return items.SpiritKey && (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic))) && items.Ocarina && items.ZeldasLullaby && (items.HoverBoots || items.Hookshot); } },
             ['Four Armos Side Room']: { isAvailable:  function () {
-                return items.SpiritKey >= 2 && (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2) && items.MirrorShield; } },
+                return items.SpiritKey >= 2 && (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic))) && items.MirrorShield; } },
             ['Left Invisible Chest']: { isAvailable:  function () {
-                return items.SpiritKey >= 2 && (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2); } },
+                return items.SpiritKey >= 2 && (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic))); } },
             ['Right Invisible Chest']: { isAvailable: function () {
-                return items.SpiritKey >= 2 && (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2); } },
+                return items.SpiritKey >= 2 && (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic))); } },
             ['Colossus Left Hand Chest']: { isAvailable: function () {
-                return items.SpiritKey >= 2 && (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2); } },           
+                return items.SpiritKey >= 2 && (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic))); } },           
             ['Boss Key Chest']: { isAvailable: function () {
-                return items.SpiritKey >= 3 && (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2) && items.ZeldasLullaby && (items.Bombs || items.Hammer || (items.Bombchu && BombchuLogic)) ; } },
+                return items.SpiritKey >= 3 && (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic))) && items.ZeldasLullaby && (items.Bombs || items.Hammer || (items.Bombchu && BombchuLogic)) ; } },
             ['Adult Lizalfos Chest']: { isAvailable:  function () {
-                return items.SpiritKey >= 3 && (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2) && (items.Hookshot || items.Bow || items.Bombs || (items.Bombchu && BombchuLogic)) && items.MirrorShield; } },
+                return items.SpiritKey >= 3 && (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic))) && (items.Hookshot || items.Bow || items.Bombs || (items.Bombchu && BombchuLogic)) && items.MirrorShield; } },
             ['Twinrova']: { isAvailable:  function () {
-                return items.SpiritKey >= 3 &&(((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && items.MirrorShield && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Hookshot && items.BossSpirit); } },
+                return items.SpiritKey >= 3 &&(((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic)) && items.MirrorShield && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Hookshot && items.BossSpirit); } },
             },
         isBeatable: function(){
-            if(((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && items.MirrorShield && items.SpiritKey >= 3 && items.BossSpirit && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Hookshot) {
-                if (this.canGetChest() == 'available')
-                    return 'available';
-                return 'possible';
-            }
-            else
-                return "unavailable";
+            return this.canGetChest();
         },
         canGetChest: function(){
             return generalCanGetChest(this.chestlist);
@@ -427,11 +421,11 @@ var dungeons = [
             ['1st Floor Stalfos']: { isAvailable: function () {
                 return items.Hookshot; } },           
             ['Bubble Chest']: { isAvailable: function () {
-                return items.Hookshot && (items.Bow || (items.Ocarina && items.SongofTime) || (items.Forestkey && items.HoverBoots) || (items.ForestKey >=2 && items.Bow)); },  }, 
+                return items.Hookshot && (items.Bow || (items.Ocarina && items.SongofTime) || (items.ForestKey && items.HoverBoots) || (items.ForestKey >=2 && items.Bow && items.Glove)); },  }, 
             ['Courtyard Hookshot Chest']: { isAvailable: function () {
-                return items.Hookshot && (items.Bow || (items.Ocarina && items.SongofTime) || (items.Forestkey && items.HoverBoots) || (items.ForestKey >=2 && items.Bow)); },  }, 
+                return items.Hookshot && (items.Bow || (items.Ocarina && items.SongofTime) || (items.ForestKey && items.HoverBoots) || (items.ForestKey >=2 && items.Bow && items.Glove)); },  }, 
             ['Well Chest']: { isAvailable: function () {
-                return items.Hookshot && (items.Bow || (items.Ocarina && items.SongofTime) || (items.Forestkey && items.HoverBoots) || (items.ForestKey >=2 && items.Bow)); },  }, 
+                return items.Hookshot && (items.Bow || (items.Ocarina && items.SongofTime) || (items.ForestKey && items.HoverBoots) || (items.ForestKey >=2 && items.Bow && items.Glove)); },  }, 
             ['Push Block Room Chest']: { isAvailable: function () {
                 return items.ForestKey && items.Hookshot && items.Bow && items.Glove; } },
             ['Boss Key Chest']: { isAvailable: function () {
