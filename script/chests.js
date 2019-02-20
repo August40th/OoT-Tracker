@@ -165,7 +165,10 @@ var dungeons = [
             ['Child Lizalfos North Chest']: { isAvailable: function () {
                  return items.SpiritKey && ((items.Ocarina && items.RequiemofSpirit && (items.Boomerang || items.Slingshot)) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && (items.Hookshot || items.Bow))); } },
             ['Large Torch Chest']: { isAvailable:  function () {
-                return items.SpiritKey && ((items.Ocarina && items.RequiemofSpirit && (items.Bombs || (items.Bombchu && BombchuLogic))) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2)) && (items.Magic && (items.Dins || (items.Fire && items.Bow && items.Glove >= 2))); } },
+                return items.SpiritKey && 
+			(	(items.Ocarina && items.RequiemofSpirit && (items.Bombs || (items.Bombchu && BombchuLogic)) )
+			 ||	( ((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2 || items.RequiemofSpirit)
+				 && items.Glove >= 2 && (items.Magic && (items.Dins || (items.Fire && items.Bow))) ) ); } },
             ['Sun Block Room Chest']: { isAvailable: function () {
                 return items.SpiritKey && ((items.Ocarina && items.RequiemofSpirit && items.Stick && (items.Bombs|| (items.Bombchu && BombchuLogic))) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && (items.Dins || (items.Fire && items.Bow)) && items.Magic)) ; } },
             ['Colossus Right Hand Chest']: { isAvailable:  function () {
@@ -424,15 +427,15 @@ var dungeons = [
             ['1st Floor Stalfos']: { isAvailable: function () {
                 return items.Hookshot; } },           
             ['Bubble Chest']: { isAvailable: function () {
-                return items.Hookshot; } },
+                return items.Hookshot && (items.Bow || (items.Ocarina && items.SongofTime) || (items.Forestkey && items.HoverBoots) || (items.ForestKey >=2 && items.Bow)); },  }, 
             ['Courtyard Hookshot Chest']: { isAvailable: function () {
-                return items.Hookshot; },  }, 
+                return items.Hookshot && (items.Bow || (items.Ocarina && items.SongofTime) || (items.Forestkey && items.HoverBoots) || (items.ForestKey >=2 && items.Bow)); },  }, 
             ['Well Chest']: { isAvailable: function () {
-                return items.Hookshot; } },
+                return items.Hookshot && (items.Bow || (items.Ocarina && items.SongofTime) || (items.Forestkey && items.HoverBoots) || (items.ForestKey >=2 && items.Bow)); },  }, 
             ['Push Block Room Chest']: { isAvailable: function () {
-                return items.ForestKey && items.Hookshot && items.Bow; } },
+                return items.ForestKey && items.Hookshot && items.Bow && items.Glove; } },
             ['Boss Key Chest']: { isAvailable: function () {
-                return items.ForestKey >= 2 && items.Hookshot && items.Bow; } },
+                return items.ForestKey >= 2 && items.Hookshot && items.Bow && items.Glove; } },
             ['Floormaster Chest']: { isAvailable: function () {
                 return items.Hookshot && ((items.Bow && items.ForestKey >= 2 && items.Glove) || (items.HoverBoots && items.ForestKey)); },  },
             ['Red Poe Chest']: { isAvailable:  function () {
@@ -442,11 +445,11 @@ var dungeons = [
             ['Blue Poe Chest']: { isAvailable: function () {
                 return items.ForestKey >= 3 && items.Hookshot && items.Bow && items.Glove; } },
             ['Checkerboard Chest']: { isAvailable: function () {
-                return items.ForestKey >= 5 && items.Hookshot && items.Glove && (items.Bow || (items.Dins && items.Magic)); } },
+                return (items.ForestKey >= 5 || (items.ForestKey >=3 && items.HoverBoots)) && items.Hookshot && items.Glove && (items.Bow || (items.Dins && items.Magic)); } },
             ['Near Boss Chest']: { isAvailable: function () {
-                return items.ForestKey >= 5 && items.Hookshot && items.Bow && items.Glove; } },
+                return (items.ForestKey >= 5 || (items.ForestKey >=3 && items.HoverBoots)) && items.Hookshot && items.Bow && items.Glove; } },
             ['Phantom Ganon']: { isAvailable: function () {
-                return items.ForestKey >= 5 && items.BossForest && items.Hookshot && items.Bow && items.Glove; } },
+                return (items.ForestKey >= 5 || (items.ForestKey >=3 && items.HoverBoots)) && items.BossForest && items.Hookshot && items.Bow && items.Glove; } },
         },
         isBeatable: function(){
             if((items.SariasSong || items.MinuetofForest) && items.Hookshot && items.Bow) {
