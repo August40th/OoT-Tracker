@@ -167,7 +167,7 @@ var dungeons = [
             ['Large Torch Chest']: { isAvailable:  function () {
                 return items.SpiritKey && 
 			(	(items.Ocarina && items.RequiemofSpirit && 
-				 (items.Slingshot || items.Boomerang || (items.Bombchu && BombchuLogic)} && 
+				 (items.Slingshot || items.Boomerang || (items.Bombchu && BombchuLogic)) && 
 				 (items.Bombs || (items.Bombchu && BombchuLogic)) 
 				)
 			 ||	( ((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2 || items.RequiemofSpirit) && 
