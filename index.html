@@ -47,6 +47,14 @@
                 <input type='radio' name='mapposition' value='Side' onclick="setOrder(false)">Side<br>
             </fieldset>    
             <fieldset>
+                <legend>Access</legend>
+                        <input type='checkbox' name='OpenForest' checked='true' onchange="setForest(this)">Open Forest 
+                        <input type='checkbox' name='OpenGate' checked='true' onchange="setGate(this)">Open Gate 
+                        <input type='checkbox' name='OpenDoor' checked='true' onchange="setDoor(this)">Open Door 
+                        <input type='checkbox' name='OpenFountain' checked='true' onchange="setFountain(this)">Open Fountain
+                </legend>
+            </fieldset>
+            <fieldset>
                     <legend> Quest</legend>
                       <input type='radio' name='quest' value='Vanilla' checked='true' onclick="setQuest(this)">Vanilla
                       <input type='radio' name='quest' value='Master' onclick="setQuest(this)">Master
