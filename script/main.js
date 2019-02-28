@@ -496,6 +496,7 @@ function setDoor(sender) {
 
 function setFountain(sender) {
     OpenFountain = sender.value;
+    updateMap();
     saveCookie();
 }
 
