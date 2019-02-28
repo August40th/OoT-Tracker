@@ -219,6 +219,8 @@ var itemsMin = {
     BossShadow:0,
     BossCastle:0,
     BigPoe:0,
+    
+    MasterSword:0.
 };
 
 var itemsMax = {
@@ -253,4 +255,6 @@ var itemsMax = {
     BossShadow:1,
     BossCastle:1,
     BigPoe:10,
+    
+    MasterSword:1,
 };
