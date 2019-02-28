@@ -25,6 +25,11 @@ SongShuffle = false;
 WeirdEgg = false;
 BombchuLogic = false;
 
+OpenForest = true;
+OpenGate = true;
+OpenDoor = true;
+OpenFountain = true;
+
 var itemGrid = [];
 var itemLayout = [];
 
@@ -75,6 +80,11 @@ var cookieDefault = {
     sngShuff:0,
     eggShuff:0,
     chulogic:0,
+    forest:1,
+    gate:1,
+    door:1,
+    fountain:0,
+    
     items:defaultItemGrid
 }
 
@@ -106,6 +116,18 @@ function loadCookie() {
     document.getElementsByName('showprizes')[0].checked = !!cookieobj.prize;
     document.getElementsByName('showprizes')[0].onchange();
 
+    document.getElementsByName('OpenForest')[0].checked = !!cookieobj.forest;
+    document.getElementsByName('OpenForest')[0].onchange();
+
+    document.getElementsByName('OpenGate')[0].checked = !!cookieobj.gate;
+    document.getElementsByName('OpenGate')[0].onchange();
+    
+    document.getElementsByName('OpenDoor')[0].checked = !!cookieobj.door;
+    document.getElementsByName('OpenDoor')[0].onchange();
+    
+    document.getElementsByName('OpenFountain')[0].checked = !!cookieobj.fountain;
+    document.getElementsByName('OpenFountain')[0].onchange();
+    
     document.getElementsByName('OcarinaShuffle')[0].checked = !!cookieobj.ocShuff;
     document.getElementsByName('OcarinaShuffle')[0].onchange();
 
@@ -181,6 +203,11 @@ function saveCookie() {
 
     cookieobj.prize = document.getElementsByName('showprizes')[0].checked ? 1 : 0;
 
+    cookieobj.forest = document.getElementsByName('OpenForest')[1].checked ? 1 : 0;
+    cookieobj.gate = document.getElementsByName('OpenGate')[1].checked ? 1 : 0;
+    cookieobj.door = document.getElementsByName('OpenDoor')[1].checked ? 1 : 0;
+    cookieobj.fountain = document.getElementsByName('OpenFountain')[0].checked ? 1 : 0;
+    
     cookieobj.ocShuff = document.getElementsByName('OcarinaShuffle')[0].checked ? 1 : 0;
     cookieobj.sngShuff = document.getElementsByName('SongShuffle')[0].checked ? 1 : 0;
     cookieobj.eggShuff = document.getElementsByName('WeirdEgg')[0].checked ? 1 : 0;
@@ -444,6 +471,29 @@ function setSkulltula(sender) {
 function setScrub(sender) {
     scrubs = sender.value;
     updateMap();
+    saveCookie();
+}
+
+function setForest(sender) {
+    OpenForest = sender.value;
+    saveCookie();
+}
+
+function setGate(sender) {
+    OpenGate = sender.value;
+    saveCookie();
+}
+
+function setDoor(sender) {
+    OpenDoor = sender.value;
+    itemsMin.MasterSword = 1;
+    updateMap();
+    updateGridItemAll();
+    saveCookie();
+}
+
+function setFountain(sender) {
+    OpenFountain = sender.value;
     saveCookie();
 }
 
