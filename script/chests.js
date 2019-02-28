@@ -380,9 +380,9 @@ var dungeons = [
             ['Map Chest']: { isAvailable:  function () {
                 return (items.Bombs || (items.Bombchu && BombchuLogic)  || items.Scale) && (items.ZoraLetter || isFountainOpen()) && items.Boomerang; } },
             ['Compass Chest']: { isAvailable:  function () {
-                return (items.Bombs || (items.Bombchu && BombchuLogic)  || items.Scale) && (items.ZoraLetter || isFountainOpen()) && items.Boomerang; } },
+                return (items.Bombs || (items.Bombchu && BombchuLogic)  || items.Scale) && (items.ZoraLetter || OpenFountain) && items.Boomerang; } },
             ['Barinade']: { isAvailable:  function () {
-                return (items.Bombs || (items.Bombchu && BombchuLogic)  || items.Scale) && (items.ZoraLetter || isFountainOpen()) && items.Boomerang; } },
+                return (items.Bombs || (items.Bombchu && BombchuLogic)  || items.Scale) && (items.ZoraLetter || OpenFountain) && items.Boomerang; } },
         },
         isBeatable: function(){
             return this.canGetChest();
