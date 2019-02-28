@@ -489,7 +489,7 @@ function setDoor(sender) {
     if (OpenDoor == true)
         itemsMin.MasterSword = 1;
     else itemsMin.MasterSword = 0;
-    items.MasterSword = itemsMin.MasterSword;
+    //items.MasterSword = itemsMin.MasterSword;
     updateMap();
     updateGridItemAll();
     saveCookie();
