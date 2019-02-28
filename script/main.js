@@ -1298,7 +1298,7 @@ function isGateOpen() {
     switch (OpenGate) {
         case "true":
             return true;
-        case "false:
+        case "false":
             return false;
     }
     return false;
@@ -1308,7 +1308,7 @@ function isForestOpen() {
     switch (OpenForest) {
         case "true":
             return true;
-        case "false"
+        case "false":
             return false;
     }
     return false;
