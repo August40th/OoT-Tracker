@@ -486,12 +486,12 @@ function setGate(sender) {
 
 function setDoor(sender) {
     OpenDoor = sender.checked;
-    if (OpenDoor == false)
-        itemsMin.MasterSword = 0;
-    else itemsMin.MasterSword = 1;
+    if (OpenDoor)
+            itemsMin.MasterSword = 1;
+    else itemsMin.MasterSword = 0;
     items.MasterSword = itemsMin.MasterSword;
-    updateMap();
     updateGridItemAll();
+    updateMap();
     saveCookie();
 }
 
