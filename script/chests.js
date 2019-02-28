@@ -520,9 +520,9 @@ var dungeons = [
             ['Song from Impa']: { isAvailable: function () {
                 return (items.Mask >= 1); } },
             ['Bombchu Bowling 1']: { isAvailable: function () {
-                return (items.Bombs); } },
+                return (items.Bombs || (items.Bombchu && BombchuLogic)); } },
             ['Bombchu Bowling 2']: { isAvailable: function () {
-                return (items.Bombs); } },
+                return (items.Bombs || (items.Bombchu && BombchuLogic)); } },
             ['Treasure Chest Mini Game']: { isAvailable: function () {
                 return (items.Lens && items.Magic); } },                       
             ['Child Fairy Fountain']: { isAvailable: function () {
