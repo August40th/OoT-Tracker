@@ -487,8 +487,8 @@ function setGate(sender) {
 function setDoor(sender) {
     OpenDoor = sender.value;
     if (OpenDoor == false)
-        items.MasterSword = 0;
-    else items.MasterSword = 1;
+        items.MasterSword;
+    else !items.MasterSword;
     updateMap();
     updateGridItemAll();
     saveCookie();
