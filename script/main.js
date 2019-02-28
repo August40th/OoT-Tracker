@@ -28,7 +28,7 @@ BombchuLogic = false;
 OpenForest = true;
 OpenGate = true;
 OpenDoor = true;
-OpenFountain = true;
+OpenFountain = false;
 
 var itemGrid = [];
 var itemLayout = [];
@@ -487,8 +487,8 @@ function setGate(sender) {
 function setDoor(sender) {
     OpenDoor = sender.value;
     if (OpenDoor == true)
-        items.MasterSword = true;
-    else items.MasterSword = false;
+        items.MasterSword = 1;
+    else items.MasterSword = 0;
     updateMap();
     updateGridItemAll();
     saveCookie();
