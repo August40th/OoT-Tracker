@@ -116,14 +116,14 @@ function loadCookie() {
     document.getElementsByName('showprizes')[0].checked = !!cookieobj.prize;
     document.getElementsByName('showprizes')[0].onchange();
 
-    document.getElementsByName('OpenForest')[0].checked = !!cookieobj.forest;
-    document.getElementsByName('OpenForest')[0].onchange();
+    document.getElementsByName('OpenForest')[1].checked = !!cookieobj.forest;
+    document.getElementsByName('OpenForest')[1].onchange();
 
-    document.getElementsByName('OpenGate')[0].checked = !!cookieobj.gate;
-    document.getElementsByName('OpenGate')[0].onchange();
+    document.getElementsByName('OpenGate')[1].checked = !!cookieobj.gate;
+    document.getElementsByName('OpenGate')[1].onchange();
     
-    document.getElementsByName('OpenDoor')[0].checked = !!cookieobj.door;
-    document.getElementsByName('OpenDoor')[0].onchange();
+    document.getElementsByName('OpenDoor')[1].checked = !!cookieobj.door;
+    document.getElementsByName('OpenDoor')[1].onchange();
     
     document.getElementsByName('OpenFountain')[0].checked = !!cookieobj.fountain;
     document.getElementsByName('OpenFountain')[0].onchange();
