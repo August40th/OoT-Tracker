@@ -397,15 +397,15 @@ var dungeons = [
         y: "18.0%",
         chestlist: {
             ['1st Chest']: { isAvailable:  function () {
-                return (items.Bombs || items.Scale) && (items.ZoraLetter || OpenFountain) && (items.ZeldasLullaby || items.HoverBoots); } },
+                return (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots); } },
             ['Alcove Chest']: { isAvailable:  function () {
-                return (items.Bombs || items.Scale) && (items.ZoraLetter || OpenFountain) && (items.ZeldasLullaby || items.HoverBoots); } },
+                return (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots); } },
             ['Alcove Heart Piece']: { isAvailable:  function () {
-                return (items.Bombs || items.Scale) && (items.ZoraLetter || OpenFountain) && (items.ZeldasLullaby || items.HoverBoots); } },
+                return (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots); } },
             ['White Wolfos']: { isAvailable:  function () {
-                return (items.Bombs || items.Scale) && (items.ZoraLetter || OpenFountain) && (items.ZeldasLullaby || items.HoverBoots); } },
+                return (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots); } },
             ['Sheilk in Ice Cavern']: { isAvailable:  function () {
-                return (items.Bombs || items.Scale) && (items.ZoraLetter || OpenFountain) && (items.ZeldasLullaby || items.HoverBoots); } },
+                return (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots); } },
         },
         isBeatable: function(){
             return this.canGetChest();
