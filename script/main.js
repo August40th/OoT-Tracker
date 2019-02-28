@@ -1286,9 +1286,9 @@ function isKeysanity() {
 
 function isFountainOpen() {
     switch (OpenFountain) {
-        case "true":
+        case true:
             return true;
-        case "false":
+        case false:
             return false;
     }
     return false;
