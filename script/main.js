@@ -475,17 +475,17 @@ function setScrub(sender) {
 }
 
 function setForest(sender) {
-    OpenForest = sender.value;
+    OpenForest = sender.checked;
     saveCookie();
 }
 
 function setGate(sender) {
-    OpenGate = sender.value;
+    OpenGate = sender.checked;
     saveCookie();
 }
 
 function setDoor(sender) {
-    OpenDoor = sender.value;
+    OpenDoor = sender.checked;
     if (OpenDoor == false)
         items.MasterSword;
     else !items.MasterSword;
@@ -495,7 +495,7 @@ function setDoor(sender) {
 }
 
 function setFountain(sender) {
-    OpenFountain = sender.value;
+    OpenFountain = sender.checked;
     updateGridItemAll();
     updateMap();
     saveCookie();
