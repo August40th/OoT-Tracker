@@ -203,9 +203,9 @@ function saveCookie() {
 
     cookieobj.prize = document.getElementsByName('showprizes')[0].checked ? 1 : 0;
 
-    cookieobj.forest = document.getElementsByName('OpenForest')[1].checked ? 1 : 0;
-    cookieobj.gate = document.getElementsByName('OpenGate')[1].checked ? 1 : 0;
-    cookieobj.door = document.getElementsByName('OpenDoor')[1].checked ? 1 : 0;
+    //cookieobj.forest = document.getElementsByName('OpenForest')[1].checked ? 1 : 0;
+    cookieobj.gate = document.getElementsByName('OpenGate')[0].checked ? 1 : 0;
+    cookieobj.door = document.getElementsByName('OpenDoor')[0].checked ? 1 : 0;
     cookieobj.fountain = document.getElementsByName('OpenFountain')[0].checked ? 1 : 0;
     
     cookieobj.ocShuff = document.getElementsByName('OcarinaShuffle')[0].checked ? 1 : 0;
