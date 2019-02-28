@@ -376,13 +376,13 @@ var dungeons = [
         y: "18.0%",
         chestlist: {
             ['Boomerang Chest']: { isAvailable: function () {
-                return (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && items.ZoraLetter && (items.Slingshot || items.Boomerang || items.Bombs || (items.Bombchu && BombchuLogic) ); } },
+                return (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && (items.Slingshot || items.Boomerang || items.Bombs || (items.Bombchu && BombchuLogic) ); } },
             ['Map Chest']: { isAvailable:  function () {
-                return (items.Bombs || (items.Bombchu && BombchuLogic)  || items.Scale) && items.ZoraLetter && items.Boomerang; } },
+                return (items.Bombs || (items.Bombchu && BombchuLogic)  || items.Scale) && (items.ZoraLetter || OpenFountain) && items.Boomerang; } },
             ['Compass Chest']: { isAvailable:  function () {
-                return (items.Bombs || (items.Bombchu && BombchuLogic)  || items.Scale) && items.ZoraLetter && items.Boomerang; } },
+                return (items.Bombs || (items.Bombchu && BombchuLogic)  || items.Scale) && (items.ZoraLetter || OpenFountain) && items.Boomerang; } },
             ['Barinade']: { isAvailable:  function () {
-                return (items.Bombs || (items.Bombchu && BombchuLogic)  || items.Scale) && items.ZoraLetter && items.Boomerang; } },
+                return (items.Bombs || (items.Bombchu && BombchuLogic)  || items.Scale) && (items.ZoraLetter || OpenFountain) && items.Boomerang; } },
         },
         isBeatable: function(){
             return this.canGetChest();
@@ -397,15 +397,15 @@ var dungeons = [
         y: "18.0%",
         chestlist: {
             ['1st Chest']: { isAvailable:  function () {
-                return (items.Bombs || items.Scale) && items.ZoraLetter && (items.ZeldasLullaby || items.HoverBoots); } },
+                return (items.Bombs || items.Scale) && (items.ZoraLetter || OpenFountain) && (items.ZeldasLullaby || items.HoverBoots); } },
             ['Alcove Chest']: { isAvailable:  function () {
-                return (items.Bombs || items.Scale) && items.ZoraLetter && (items.ZeldasLullaby || items.HoverBoots); } },
+                return (items.Bombs || items.Scale) && (items.ZoraLetter || OpenFountain) && (items.ZeldasLullaby || items.HoverBoots); } },
             ['Alcove Heart Piece']: { isAvailable:  function () {
-                return (items.Bombs || items.Scale) && items.ZoraLetter && (items.ZeldasLullaby || items.HoverBoots); } },
+                return (items.Bombs || items.Scale) && (items.ZoraLetter || OpenFountain) && (items.ZeldasLullaby || items.HoverBoots); } },
             ['White Wolfos']: { isAvailable:  function () {
-                return (items.Bombs || items.Scale) && items.ZoraLetter && (items.ZeldasLullaby || items.HoverBoots); } },
+                return (items.Bombs || items.Scale) && (items.ZoraLetter || OpenFountain) && (items.ZeldasLullaby || items.HoverBoots); } },
             ['Sheilk in Ice Cavern']: { isAvailable:  function () {
-                return (items.Bombs || items.Scale) && items.ZoraLetter && (items.ZeldasLullaby || items.HoverBoots); } },
+                return (items.Bombs || items.Scale) && (items.ZoraLetter || OpenFountain) && (items.ZeldasLullaby || items.HoverBoots); } },
         },
         isBeatable: function(){
             return this.canGetChest();
@@ -658,13 +658,13 @@ var dungeons = [
             ['Torch Run']: { isAvailable: function () {
                 return items.Bombs || items.Scale || (items.Bombchu && BombchuLogic); } },
             ['Zora Fairy Fountain']: { isAvailable: function () {
-                return items.ZoraLetter && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Ocarina && items.ZeldasLullaby; } },
+                return (items.ZoraLetter || OpenFountain) && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Ocarina && items.ZeldasLullaby; } },
             ['Iceberg Heart Piece']: { isAvailable: function () {
-                return items.MasterSword && items.ZoraLetter && (items.Bombs || items.Scale || (items.Bombchu && BombchuLogic)) && ((items.Ocarina && items.ZeldasLullaby) || items.HoverBoots); } },
+                return items.MasterSword && (items.ZoraLetter || OpenFountain) && (items.Bombs || items.Scale || (items.Bombchu && BombchuLogic)) && ((items.Ocarina && items.ZeldasLullaby) || items.HoverBoots); } },
             ['Underwater Heart Piece']: { isAvailable: function () {
-                return items.MasterSword && (items.Bombs || items.Scale || (items.Bombchu && BombchuLogic)) && items.ZoraLetter && items.IronBoots && ((items.Ocarina && items.ZeldasLullaby) || items.HoverBoots); } },
+                return items.MasterSword && (items.Bombs || items.Scale || (items.Bombchu && BombchuLogic)) && (items.ZoraLetter || OpenFountain) && items.IronBoots && ((items.Ocarina && items.ZeldasLullaby) || items.HoverBoots); } },
             ['Thaw King Zora']: { isAvailable: function () {
-                return items.Bottle && items.MasterSword && ((items.Ocarina && items.ZeldasLullaby) || items.HoverBoots) && (((items.ZoraLetter && (items.Bombs || items.Scale || (items.Bombchu && BombchuLogic))) || isBridgeOpen() || items.Wallet >= 3)); } },
+                return items.Bottle && items.MasterSword && ((items.Ocarina && items.ZeldasLullaby) || items.HoverBoots) && ((((items.ZoraLetter || OpenFountain) && (items.Bombs || items.Scale || (items.Bombchu && BombchuLogic))) || isBridgeOpen() || items.Wallet >= 3)); } },
         },
         isBeatable: function(){
             return this.canGetChest();
@@ -697,7 +697,7 @@ var dungeons = [
             ['Summit Fairy Fountain']: { isAvailable: function () {
                 return ((items.Bombs || items.Hammer || (items.Bombchu && BombchuLogic)) && items.Ocarina && items.ZeldasLullaby); } },
             ['Biggoron\'s Finest Work']: { isAvailable: function () {
-                return (items.MasterSword && items.Trade >= 1 && items.ZoraLetter && (items.EponasSong || items.Hookshot >= 2)) || (items.Trade >= 6 && (items.EponasSong || items.Hookshot >= 2)) || items.Trade >= 9; } },
+                return (items.MasterSword && items.Trade >= 1 && (items.ZoraLetter || OpenFountain) && (items.EponasSong || items.Hookshot >= 2)) || (items.Trade >= 6 && (items.EponasSong || items.Hookshot >= 2)) || items.Trade >= 9; } },
         },
         isBeatable: function(){
             return this.canGetChest();
