@@ -1283,36 +1283,6 @@ function isKeysanity() {
     }
     return false;
 }
-
-function isFountainOpen() {
-    switch (OpenFountain) {
-        case true:
-            return true;
-        case false:
-            return false;
-    }
-    return false;
-}
-
-function isGateOpen() {
-    switch (OpenGate) {
-        case "true":
-            return true;
-        case "false":
-            return false;
-    }
-    return false;
-}
-
-function isForestOpen() {
-    switch (OpenForest) {
-        case "true":
-            return true;
-        case "false":
-            return false;
-    }
-    return false;
-}
             
 function init() {
     createItemTracker(document.getElementById('itemdiv'));
