@@ -124,7 +124,7 @@ var items = {
     Heart:false,
 
     KokiriSword:false,
-    MasterSword:true,
+    MasterSword:1,
     BiggoronSword:false,
     DekuShield:false,
     HylianShield:false,
