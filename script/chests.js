@@ -897,7 +897,7 @@ var chests = [
 		    )
 		   && (items.Scale >= 2 || (items.MasterSword && items.IronBoots)
 		      )
-	        ) )
+	        )
                 return "available";
             return "unavailable";
         }
