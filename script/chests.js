@@ -812,7 +812,7 @@ var dungeons = [
             ['Vanilla Shield Grave']: { isAvailable: function () {
                 return (true); } },
             ['Magic Bean Heart Piece']: { isAvailable: function () {
-                return (items.MasterSword && (items.Bean || items.Hookshot >= 2)) || items.Boomerang); } }, 
+                return (items.MasterSword && (items.Bean || items.Hookshot >= 2)) || items.Boomerang; } }, 
             ['Dampe Race 1']: { isAvailable: function () {
                 return (items.MasterSword); } },
             ['Dampe Race 2']: { isAvailable: function () {
