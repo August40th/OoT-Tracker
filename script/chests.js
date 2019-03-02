@@ -791,7 +791,7 @@ var dungeons = [
         x: "8.4%",
         y: "15.9%",
         chestlist: {           
-            ['Requiem of Spirit']: { isAvailable: function() {return (items.MasterSword && (((items.Ocarina && tems.EponasSong) || isFortressOpen()) && items.HoverBoots) || items.Hookshot >= 2) || (items.Ocarina && items.RequiemofSpirit); } },
+            ['Requiem of Spirit']: { isAvailable: function() {return (items.MasterSword && (((items.Ocarina && items.EponasSong) || isFortressOpen()) && items.HoverBoots) || items.Hookshot >= 2) || (items.Ocarina && items.RequiemofSpirit); } },
             ['Desert Bean Heart Piece']: { isAvailable: function() {return items.MasterSword && items.Bean && items.Ocarina && items.RequiemofSpirit} },          
             ['Desert Fairy Fountain']: { isAvailable: function() {return (items.Ocarina && items.ZeldasLullaby && (items.Bombs || (items.Bombchu && BombchuLogic))) && (items.MasterSword && (((items.EponasSong || isFortressOpen()) && items.HoverBoots) || items.Hookshot >= 2) || items.RequiemofSpirit)} },
         },
