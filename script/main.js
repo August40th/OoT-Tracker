@@ -476,6 +476,7 @@ function setScrub(sender) {
 
 function setForest(sender) {
     OpenForest = sender.checked;
+    updateGridItemAll();
     updateMap();
     saveCookie();
 }
