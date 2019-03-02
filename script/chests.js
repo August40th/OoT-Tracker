@@ -157,7 +157,7 @@ var dungeons = [
         y: "17.0%",
         chestlist: {
             ['Child Switch Room']: { isAvailable: function () {
-                return (OpenForest == 0 || (items.KokiriSword && items.DekuShield && OpenForest == 1)) && items.Ocarina && items.RequiemofSpirit && (items.Boomerang || items.Slingshot || (items.Bombchu && BombchuLogic)); } },
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.RequiemofSpirit && (items.Boomerang || items.Slingshot || (items.Bombchu && BombchuLogic)); } },
             ['Child 1st Floor Torches']: { isAvailable:  function () {
                 return (OpenForest == false || (items.KokiriSword && items.DekuShield && OpenForest)) && items.Ocarina && items.RequiemofSpirit && (items.Boomerang || items.Slingshot || (items.Bombchu && BombchuLogic)); } },
             ['Child Lizalfos East Chest']: { isAvailable:  function () {
