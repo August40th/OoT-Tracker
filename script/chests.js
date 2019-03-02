@@ -888,7 +888,16 @@ var chests = [
         x: "42.0%",
         y: "33.0%",
         isAvailable: function(){
-            if ( ((items.Bombs || (items.Bombchu && BombchuLogic)) || (items.Hammer && items.MasterSword)) && (items.Scale >= 2) || (items.MasterSword && items.IronBoots)) )
+            if ( 
+		    ( 
+			( (items.Bombs || (items.Bombchu && BombchuLogic)
+			  ) 
+			  || (items.Hammer && items.MasterSword)
+			)
+		    )
+		   && (items.Scale >= 2 || (items.MasterSword && items.IronBoots)
+		      )
+	        ) )
                 return "available";
             return "unavailable";
         }
