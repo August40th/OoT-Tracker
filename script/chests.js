@@ -157,9 +157,9 @@ var dungeons = [
         y: "17.0%",
         chestlist: {
             ['Child Switch Room']: { isAvailable: function () {
-                return items.Ocarina && items.RequiemofSpirit && (items.Boomerang || items.Slingshot || (items.Bombchu && BombchuLogic)); } },
+                return (!OpenForest || (items.KokiriSword && items.DekuSheild && OpenForest) && items.Ocarina && items.RequiemofSpirit && (items.Boomerang || items.Slingshot || (items.Bombchu && BombchuLogic)); } },
             ['Child 1st Floor Torches']: { isAvailable:  function () {
-                return items.Ocarina && items.RequiemofSpirit && (items.Boomerang || items.Slingshot || (items.Bombchu && BombchuLogic)); } },
+                return (!OpenForest || (items.KokiriSword && items.DekuSheild && OpenForest) && items.Ocarina && items.RequiemofSpirit && (items.Boomerang || items.Slingshot || (items.Bombchu && BombchuLogic)); } },
             ['Child Lizalfos East Chest']: { isAvailable:  function () {
                 return items.SpiritKey && ((items.Ocarina && items.RequiemofSpirit && (items.Boomerang || items.Slingshot || (items.Bombchu && BombchuLogic))) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && items.MasterSword && (items.Hookshot || items.Bow))); } },
             ['Child Lizalfos North Chest']: { isAvailable: function () {
