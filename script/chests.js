@@ -161,19 +161,19 @@ var dungeons = [
             ['Child 1st Floor Torches']: { isAvailable:  function () {
                 return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest ==0)) && items.Ocarina && items.RequiemofSpirit && (items.Boomerang || items.Slingshot || (items.Bombchu && BombchuLogic)); } },
             ['Child Lizalfos East Chest']: { isAvailable:  function () {
-                return items.SpiritKey && ((items.Ocarina && items.RequiemofSpirit) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && items.MasterSword && (items.Hookshot || items.Bow || (items.Bombs || (items.Bombchu && BombchuLogic))))); } },
+                return items.SpiritKey && (((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.RequiemofSpirit) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && items.MasterSword && (items.Hookshot || items.Bow || (items.Bombs || (items.Bombchu && BombchuLogic))))); } },
             ['Child Lizalfos North Chest']: { isAvailable: function () {
-                return items.SpiritKey && ((items.Ocarina && items.RequiemofSpirit) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && items.MasterSword && (items.Hookshot || items.Bow || (items.Bombs || (items.Bombchu && BombchuLogic))))); } },
+                return items.SpiritKey && (((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.RequiemofSpirit) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && items.MasterSword && (items.Hookshot || items.Bow || (items.Bombs || (items.Bombchu && BombchuLogic))))); } },
             ['Large Torch Chest']: { isAvailable:  function () {
                 return items.SpiritKey && 
-			(	(items.Ocarina && items.RequiemofSpirit && (items.Bombs || (items.Bombchu && BombchuLogic)) 
+			(	((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.RequiemofSpirit && (items.Bombs || (items.Bombchu && BombchuLogic)) 
 				)
 			 ||	( ((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2 || items.RequiemofSpirit) && 
 				  items.Glove >= 2 && items.MasterSword && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic)) && (items.Magic && (items.Dins || (items.Fire && items.Bow))) ) ); } },
             ['Sun Block Room Chest']: { isAvailable: function () {
-                return items.SpiritKey && ((items.Ocarina && items.RequiemofSpirit && (items.Bombs|| (items.Bombchu && BombchuLogic))) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && items.MasterSword && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic)) && (items.Dins || (items.Fire && items.Bow)) && items.Magic)) ; } },
+                return items.SpiritKey && (((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) &&items.Ocarina && items.RequiemofSpirit && (items.Bombs|| (items.Bombchu && BombchuLogic))) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && items.MasterSword && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic)) && (items.Dins || (items.Fire && items.Bow)) && items.Magic)) ; } },
             ['Colossus Right Hand Chest']: { isAvailable:  function () {
-                return (items.RequiemofSpirit && items.SpiritKey >= 2 && items.Ocarina && (items.Bombs|| (items.Bombchu && BombchuLogic))) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && items.MasterSword && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic)) && items.SpiritKey >= 2); } },            
+                return (items.RequiemofSpirit && items.SpiritKey >= 2 && items.Ocarina && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs|| (items.Bombchu && BombchuLogic))) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && items.MasterSword && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic)) && items.SpiritKey >= 2); } },            
             ['Wolfos Lullaby Chest']: { isAvailable:  function () {
                 return items.MasterSword && ((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && items.Hookshot && items.Ocarina && items.ZeldasLullaby; } },
             ['Silver Rupee Halfpipe']: { isAvailable:  function () {
@@ -214,33 +214,33 @@ var dungeons = [
         y: "23.4%",
         chestlist: {
             ['Front Left Hidden Wall']: { isAvailable:  function () {
-                return items.Ocarina && items.SongofStorms; } },
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.SongofStorms; } },
             ['Front Center Bombable']: { isAvailable:  function () {
-                return items.Ocarina && items.SongofStorms && (items.Bombs || (items.Bombchu && BombchuLogic)); } },
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.SongofStorms && (items.Bombs || (items.Bombchu && BombchuLogic)); } },
             ['Center Large Chest']: { isAvailable: function () {
-                return items.Ocarina && items.SongofStorms; } },
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.SongofStorms; } },
             ['Underwater Left Chest']: { isAvailable:  function () {
-                return items.SongofStorms && items.Ocarina && items.ZeldasLullaby; } },
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.SongofStorms && items.Ocarina && items.ZeldasLullaby; } },
             ['Coffin Key']: { isAvailable:  function () {
-                return items.Ocarina && items.SongofStorms && (items.Scale || items.ZeldasLullaby); } },
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.SongofStorms && (items.Scale || items.ZeldasLullaby); } },
             ['Center Small Chest']: { isAvailable:  function () {
-                return items.Ocarina && items.SongofStorms; } },
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.SongofStorms; } },
             ['Back Left Bombable']: { isAvailable:  function () {
-                return items.Ocarina && items.SongofStorms && (items.Bombs || (items.Bombchu && BombchuLogic)); } },
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.SongofStorms && (items.Bombs || (items.Bombchu && BombchuLogic)); } },
             ['Right Bottom Hidden Wall']: { isAvailable:  function () {
-                return items.Ocarina && items.SongofStorms; } },
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.SongofStorms; } },
             ['Locked Pits']: { isAvailable:  function () {
-                return items.Ocarina && items.SongofStorms && items.WellKey >= 1; } },
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.SongofStorms && items.WellKey >= 1; } },
             ['Like Like Chest']: { isAvailable:  function () {
-                return items.Ocarina && items.SongofStorms && items.WellKey >= 1; } },
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.SongofStorms && items.WellKey >= 1; } },
             ['Basement Chest']: { isAvailable:  function () {
-                return items.Ocarina && items.SongofStorms && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove); } },
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.SongofStorms && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove); } },
             ['Underwater Front Chest']: { isAvailable: function () {
-                return items.SongofStorms && items.Ocarina && items.ZeldasLullaby ; } },
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.SongofStorms && items.Ocarina && items.ZeldasLullaby ; } },
             ['Dead Hand']: { isAvailable:  function () {
-                return items.SongofStorms && items.Ocarina && items.ZeldasLullaby && (items.KokiriSword || items.Stick); } },
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.SongofStorms && items.Ocarina && items.ZeldasLullaby && (items.KokiriSword || items.Stick); } },
             ['Invisible Chest']: { isAvailable:  function () {
-                return items.SongofStorms && items.Ocarina && items.ZeldasLullaby; } },
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.SongofStorms && items.Ocarina && items.ZeldasLullaby; } },
         },
         isBeatable: function(){
             return this.canGetChest();
@@ -304,19 +304,19 @@ var dungeons = [
         y: "08.4%",
         chestlist: {
             ['Lobby Chest']: { isAvailable:  function () {
-                return items.Bombs || (items.MasterSword && items.Hammer) || items.Glove || (items.Bombchu && BombchuLogic) ; } },
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.MasterSword && items.Hammer) || items.Glove || (items.Bombchu && BombchuLogic)) ; } },
             ['Armos Chest']: { isAvailable:  function () {
-                return items.Bombs || (items.MasterSword && items.Hammer) || items.Glove || (items.Bombchu && BombchuLogic) ; } },
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.MasterSword && items.Hammer) || items.Glove || (items.Bombchu && BombchuLogic)) ; } },
             ['Bomb Flower Platform']: { isAvailable:  function () {
-                return items.Bombs || (items.MasterSword && items.Hammer && items.Bow) || items.Glove || (items.Bombchu && BombchuLogic) ; } },
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.MasterSword && items.Hammer && items.Bow) || items.Glove || (items.Bombchu && BombchuLogic)) ; } },
             ['Top Floor Big Chest']: { isAvailable:  function () {
-                return (items.MasterSword || items.Slingshot) && items.Bombs || (items.Hammer && items.Bow) || items.Glove || (items.Bombchu && BombchuLogic) ; } },
+                return (items.MasterSword || (items.Slingshot && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)))) && items.Bombs || (items.Hammer && items.Bow) || items.Glove || (items.Bombchu && BombchuLogic) ; } },
             ['End of Bridge Chest']: { isAvailable:  function () {
-                return (items.MasterSword || items.Slingshot) && items.Bombs || (items.Hammer && items.Bow) || (items.Bombchu && BombchuLogic) ; } },
+                return (items.MasterSword || (items.Slingshot && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)))) && items.Bombs || (items.Hammer && items.Bow) || (items.Bombchu && BombchuLogic) ; } },
             ['Chest Above King Dodongo']: { isAvailable: function () {
-                return (items.MasterSword || items.Slingshot) && items.Bombs || (items.Bombchu && BombchuLogic) ; } },
+                return (items.MasterSword || (items.Slingshot && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)))) && items.Bombs || (items.Bombchu && BombchuLogic) ; } },
             ['King Dodongo']: { isAvailable: function () {
-                return (items.MasterSword || items.Slingshot) && (items.Glove && (items.Bombchu && BombchuLogic)) || items.Bombs ; } },
+                return (items.MasterSword || (items.Slingshot && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)))) && (items.Glove && (items.Bombchu && BombchuLogic)) || items.Bombs ; } },
         },
         isBeatable: function(){
             return this.canGetChest();
@@ -374,13 +374,13 @@ var dungeons = [
         y: "18.0%",
         chestlist: {
             ['Boomerang Chest']: { isAvailable: function () {
-                return (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && (items.Slingshot || items.Boomerang || items.Bombs || (items.Bombchu && BombchuLogic) ); } },
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && (items.Slingshot || items.Boomerang || items.Bombs || (items.Bombchu && BombchuLogic) ); } },
             ['Map Chest']: { isAvailable:  function () {
-                return (items.Bombs || (items.Bombchu && BombchuLogic)  || items.Scale) && (items.ZoraLetter || OpenFountain) && items.Boomerang; } },
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.Bombchu && BombchuLogic)  || items.Scale) && (items.ZoraLetter || OpenFountain) && items.Boomerang; } },
             ['Compass Chest']: { isAvailable:  function () {
-                return (items.Bombs || (items.Bombchu && BombchuLogic)  || items.Scale) && (items.ZoraLetter || OpenFountain) && items.Boomerang; } },
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.Bombchu && BombchuLogic)  || items.Scale) && (items.ZoraLetter || OpenFountain) && items.Boomerang; } },
             ['Barinade']: { isAvailable:  function () {
-                return (items.Bombs || (items.Bombchu && BombchuLogic)  || items.Scale) && (items.ZoraLetter || OpenFountain) && items.Boomerang; } },
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.Bombchu && BombchuLogic)  || items.Scale) && (items.ZoraLetter || OpenFountain) && items.Boomerang; } },
         },
         isBeatable: function(){
             return this.canGetChest();
@@ -504,21 +504,21 @@ var dungeons = [
         y: "20.2%",
         chestlist: {            
             ['Slingshot Mini Game']: { isAvailable: function () {
-                return (true); } },
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ; } },
             ['Return Richard']: { isAvailable: function () {
-                return (true); } },
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ; } },
             ['Malon\s Weird Egg']: { isAvailable: function () {
-                return (true); } },
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ; } },
             ['Song from Impa']: { isAvailable: function () {
-                return (items.Mask >= 1); } },
+                return ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Mask >= 1); } },
             ['Bombchu Bowling 1']: { isAvailable: function () {
-                return (items.Bombs || (items.Bombchu && BombchuLogic)); } },
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.Bombchu && BombchuLogic)); } },
             ['Bombchu Bowling 2']: { isAvailable: function () {
-                return (items.Bombs || (items.Bombchu && BombchuLogic)); } },
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.Bombchu && BombchuLogic)); } },
             ['Treasure Chest Mini Game']: { isAvailable: function () {
-                return (items.Lens && items.Magic); } },                       
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Lens && items.Magic); } },                       
             ['Child Fairy Fountain']: { isAvailable: function () {
-                return (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Ocarina && items.ZeldasLullaby; } },
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Ocarina && items.ZeldasLullaby; } },
             ['Prelude of Light']: { isAvailable: function () {
                 return (items.MasterSword && items.ForestMedallion); } },
             ['Zelda\'s Secret Weapon']: { isAvailable: function () {
@@ -541,25 +541,25 @@ var dungeons = [
         y: "22.0%",
         chestlist: {
             ['Skulltula House 10']: { isAvailable: function () {
-                return (items.Skulltula >= 10); } },
+                return ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Skulltula >= 10); } },
             ['Skulltula House 20']: { isAvailable: function () {
-                return (items.Skulltula >= 20); } },
+                return ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Skulltula >= 20); } },
             ['Skulltula House 30']: { isAvailable: function () {
-                return (items.Skulltula >= 30); } },
+                return ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Skulltula >= 30); } },
             ['Skulltula House 40']: { isAvailable: function () {
-                return (items.Skulltula >= 40); } },
+                return ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Skulltula >= 40); } },
             ['Skulltula House 50']: { isAvailable: function () {
-                return (items.Skulltula >= 50); } },
+                return ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Skulltula >= 50); } },
             ['Anju\'s Chickens']: { isAvailable: function () {
-                return (true); } },
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)); } },
             ['Man on Roof']: { isAvailable: function () {
-                return true; } },
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)); } },
             ['Open Grotto']: { isAvailable: function () {
-                return (true); } },
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)); } },
             ['Kakariko Redead Grotto']: { isAvailable: function () {
-                return (items.Bombs || (items.MasterSword && items.Hammer) || (items.Bombchu && BombchuLogic)); } },
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.MasterSword && items.Hammer) || (items.Bombchu && BombchuLogic)); } },
             ['Cow Heart Piece']: { isAvailable: function () {
-                return (true); } },
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)); } },
             ['Anju\'s Adult item']: { isAvailable: function () {
                 return (items.MasterSword); } },            
             ['Windmill Song']: { isAvailable: function () {
@@ -592,11 +592,11 @@ var dungeons = [
             ['Right Boulder Maze Chest']: { isAvailable: function () {
                 return (items.Bombs || (items.MasterSword && (items.Hammer || items.Glove >= 2)) || (items.Bombchu && BombchuLogic)); } },
             ['Big Rolling Goron']: { isAvailable: function () {
-                return (items.Bombs); } },
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs); } },
             ['Spinning Pot Heart Piece']: { isAvailable: function () {
-                return ((items.Glove || items.Bombs) && ((items.Ocarina && items.ZeldasLullaby && items.Stick) || (items.Magic && items.Dins))); } },
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.Glove || items.Bombs) && ((items.Ocarina && items.ZeldasLullaby && items.Stick) || (items.Magic && items.Dins))); } },
             ['Darunia\'s Dance']: { isAvailable: function () {
-                return (items.Ocarina && items.ZeldasLullaby && items.SariasSong); } },         
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Ocarina && items.ZeldasLullaby && items.SariasSong); } },         
         },
         isBeatable: function(){
             return this.canGetChest();
@@ -646,9 +646,9 @@ var dungeons = [
         y: "34.5%",
         chestlist: {
             ['Diving Mini Game']: { isAvailable: function () {
-                return items.Bombs || items.Scale || (items.Bombchu && BombchuLogic); } },
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || items.Scale || (items.Bombchu && BombchuLogic)); } },
             ['Torch Run']: { isAvailable: function () {
-                return items.Bombs || items.Scale || (items.Bombchu && BombchuLogic); } },
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || items.Scale || (items.Bombchu && BombchuLogic)); } },
             ['Zora Fairy Fountain']: { isAvailable: function () {
                 return (items.ZoraLetter || OpenFountain) && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Ocarina && items.ZeldasLullaby; } },
             ['Iceberg Heart Piece']: { isAvailable: function () {
