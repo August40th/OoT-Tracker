@@ -166,9 +166,7 @@ var dungeons = [
                 return items.SpiritKey && ((items.Ocarina && items.RequiemofSpirit) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && items.MasterSword && (items.Hookshot || items.Bow || (items.Bombs || (items.Bombchu && BombchuLogic))))); } },
             ['Large Torch Chest']: { isAvailable:  function () {
                 return items.SpiritKey && 
-			(	(items.Ocarina && items.RequiemofSpirit && 
-				 (items.Slingshot || items.Boomerang || (items.Bombchu && BombchuLogic)) && 
-				 (items.Bombs || (items.Bombchu && BombchuLogic)) 
+			(	(items.Ocarina && items.RequiemofSpirit && (items.Bombs || (items.Bombchu && BombchuLogic)) 
 				)
 			 ||	( ((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2 || items.RequiemofSpirit) && 
 				  items.Glove >= 2 && items.MasterSword && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic)) && (items.Magic && (items.Dins || (items.Fire && items.Bow))) ) ); } },
@@ -687,7 +685,7 @@ var dungeons = [
             ['Crater Grotto']: { isAvailable: function () {
                 return (items.Bombs || (items.MasterSword && items.Hammer) || (items.Bombchu && BombchuLogic)); } },
             ['Crater Wall Heart Piece']: { isAvailable: function () {
-                return (items.Bombs || (items.Bombchu && BombchuLogic)) || (items.MasterSword && (items.BoleroofFire && (items.HoverBoots || items.Hookshot)) || items.Bow || items.Glove); } },
+                return (items.Bombs || (items.Bombchu && BombchuLogic)) || (items.MasterSword && ((items.BoleroofFire && (items.HoverBoots || items.Hookshot)) || items.Bow || items.Glove); } },
             ['Summit Fairy Fountain']: { isAvailable: function () {
                 return ((items.Bombs || (items.MasterSword && items.Hammer) || (items.Bombchu && BombchuLogic)) && items.Ocarina && items.ZeldasLullaby); } },
             ['Biggoron\'s Finest Work']: { isAvailable: function () {
