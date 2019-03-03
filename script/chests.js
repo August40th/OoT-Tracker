@@ -504,11 +504,11 @@ var dungeons = [
         y: "20.2%",
         chestlist: {            
             ['Slingshot Mini Game']: { isAvailable: function () {
-                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ; } },
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)); } },
             ['Return Richard']: { isAvailable: function () {
-                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ; } },
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)); } },
             ['Malon\s Weird Egg']: { isAvailable: function () {
-                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ; } },
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)); } },
             ['Song from Impa']: { isAvailable: function () {
                 return ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Mask >= 1); } },
             ['Bombchu Bowling 1']: { isAvailable: function () {
