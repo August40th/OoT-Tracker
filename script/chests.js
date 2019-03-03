@@ -161,9 +161,9 @@ var dungeons = [
             ['Child 1st Floor Torches']: { isAvailable:  function () {
                 return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest ==0)) && items.Ocarina && items.RequiemofSpirit && (items.Boomerang || items.Slingshot || (items.Bombchu && BombchuLogic)); } },
             ['Child Lizalfos East Chest']: { isAvailable:  function () {
-                return items.SpiritKey && ((items.Ocarina && items.RequiemofSpirit && (items.Boomerang || items.Slingshot || (items.Bombchu && BombchuLogic))) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && items.MasterSword && (items.Hookshot || items.Bow))); } },
+                return items.SpiritKey && ((items.Ocarina && items.RequiemofSpirit) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && items.MasterSword && (items.Hookshot || items.Bow || (items.Bombs || (items.Bombchu && BombchuLogic))))); } },
             ['Child Lizalfos North Chest']: { isAvailable: function () {
-                 return items.SpiritKey && ((items.Ocarina && items.RequiemofSpirit && (items.Boomerang || items.Slingshot || (items.Bombchu && BombchuLogic))) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && items.MasterSword && (items.Hookshot || items.Bow))); } },
+                return items.SpiritKey && ((items.Ocarina && items.RequiemofSpirit) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && items.MasterSword && (items.Hookshot || items.Bow || (items.Bombs || (items.Bombchu && BombchuLogic))))); } },
             ['Large Torch Chest']: { isAvailable:  function () {
                 return items.SpiritKey && 
 			(	(items.Ocarina && items.RequiemofSpirit && 
