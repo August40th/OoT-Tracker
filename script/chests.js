@@ -790,7 +790,7 @@ var dungeons = [
         x: "8.4%",
         y: "15.9%",
         chestlist: {           
-            ['Requiem of Spirit']: { isAvailable: function() {return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword && (((items.Ocarina && items.EponasSong) || isFortressOpen()) && items.HoverBoots) || items.Hookshot >= 2) || (items.Ocarina && items.RequiemofSpirit); } },
+            ['Requiem of Spirit']: { isAvailable: function() {return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.MasterSword && (((items.Ocarina && items.EponasSong) || isFortressOpen()) && items.HoverBoots) || items.Hookshot >= 2) || (items.Ocarina && items.RequiemofSpirit)); } },
             ['Desert Bean Heart Piece']: { isAvailable: function() {return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.Bean && items.Ocarina && items.RequiemofSpirit} },          
             ['Desert Fairy Fountain']: { isAvailable: function() {return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Ocarina && items.ZeldasLullaby && (items.Bombs || (items.Bombchu && BombchuLogic))) && (items.MasterSword && (((items.EponasSong || isFortressOpen()) && items.HoverBoots) || items.Hookshot >= 2) || items.RequiemofSpirit)} },
         },
@@ -918,7 +918,7 @@ var chests = [
         x: "36.1%",
         y: "42.0%",
         isAvailable: function(){
-    		if ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Magic && ( (items.Dins && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Boomerang) || ( ( (items.Bow && items.Fire) || items.Dins) && items.Hookshot && items.MasterSword && (items.Bombs || items.Hammer || (items.Bombchu && BombchuLogic)) ) ) ) )
+    		if ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.Magic && ( (items.Dins && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Boomerang) || ( ( (items.Bow && items.Fire) || items.Dins) && items.Hookshot && items.MasterSword && (items.Bombs || items.Hammer || (items.Bombchu && BombchuLogic)) ) ) ) ) )
 	        return "available"; 
             return "unavailable";
         }
