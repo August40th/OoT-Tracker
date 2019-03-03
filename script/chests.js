@@ -685,7 +685,8 @@ var dungeons = [
             ['Crater Grotto']: { isAvailable: function () {
                 return (items.Bombs || (items.MasterSword && items.Hammer) || (items.Bombchu && BombchuLogic)); } },
             ['Crater Wall Heart Piece']: { isAvailable: function () {
-                return (items.Bombs || (items.Bombchu && BombchuLogic)) || (items.MasterSword && ((items.BoleroofFire && (items.HoverBoots || items.Hookshot))) || items.Bow || items.Glove); } },
+                return (items.Bombs || (items.Bombchu && BombchuLogic)) || 
+			(items.MasterSword && ( (items.BoleroofFire && (items.HoverBoots || items.Hookshot)) || items.Bow || items.Glove)); } },
             ['Summit Fairy Fountain']: { isAvailable: function () {
                 return ((items.Bombs || (items.MasterSword && items.Hammer) || (items.Bombchu && BombchuLogic)) && items.Ocarina && items.ZeldasLullaby); } },
             ['Biggoron\'s Finest Work']: { isAvailable: function () {
