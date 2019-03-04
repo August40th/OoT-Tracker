@@ -488,6 +488,7 @@ function setForest(sender) {
 
 function setGate(sender) {
     OpenGate = sender.checked;
+    updateMap();
     saveCookie();
 }
 
