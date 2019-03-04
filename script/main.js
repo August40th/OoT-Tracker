@@ -943,16 +943,17 @@ function gridItemClick(row, col, corner) {
         }
     }
     else if(questimg[item] !== undefined){
-        if (quest == 'Mixed' && (corner == 1 || corner == 0)) {
+        if (quest == "Mixed") {
+            if (corner) {
                items.questdungeons[questimg]++;
                if (questdungeons[item] >=  2)
                     questdungeons[item] = 0;
             }
-            //else if (corner == 0) {
-              //  items.questdungeons[questimg]++;
-                //if (questdungeons[item] >=  2)
-                  //  questdungeons[item] = 0;
-            //}
+            else if (corner == 0) {
+                items.questdungeons[questimg]++;
+                if (questdungeons[item] >=  2)
+                    questdungeons[item] = 0;
+            }
             else {
                 items[item] = !items[item];
             }
@@ -964,7 +965,7 @@ function gridItemClick(row, col, corner) {
                     questdungeon[item] = 0;
             questdungeons[item] = 1;
         }
-         else { //if (quest == 'Vanilla') {
+         else if (quest == 'Vanilla') {
              questimg = 0;
              if (questdungeons[item] >= itemsMax)
                     questdungeons[item] = 0;
