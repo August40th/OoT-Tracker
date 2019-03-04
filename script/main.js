@@ -1317,7 +1317,7 @@ function preloader() {
     
     for (questdungeon in questimg) {
         var img = new Image();
-        imgsrc = "images/" + questimg[questdungeon] + ".png";
+        img.src = "images/" + questimg[questdungeon] + ".png";
     }
     
     for (fortresskey in keyimg) {
