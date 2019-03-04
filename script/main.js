@@ -964,7 +964,7 @@ function gridItemClick(row, col, corner) {
                     questdungeon[item] = 0;
             questdungeons[item] = 1;
         }
-         else if (quest == 'Vanilla') {
+         else { //if (quest == 'Vanilla') {
              questimg = 0;
              if (questdungeons[item] >= itemsMax)
                     questdungeons[item] = 0;
