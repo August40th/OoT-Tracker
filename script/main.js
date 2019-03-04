@@ -830,7 +830,7 @@ function initGridRow(itemsets) {
         WaterKey:[],
         SpiritKey:[],
         ShadowKey:[],
-        //CastleKey:[],
+        CastleKey:[],
         WellKey:[],
         GTGKey:[],
     };
