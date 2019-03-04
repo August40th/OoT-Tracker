@@ -679,7 +679,7 @@ var dungeons = [
             ['Bolero of Fire']: { isAvailable: function () {
                 return items.MasterSword && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.BoleroofFire || items.HoverBoots || items.Hookshot) && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Hammer || items.Bow || (items.Magic && items.Dins))); } },
             ['Crater Bean Heart Piece']: { isAvailable: function () {
-                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.Bean && items.BoleroofFire) || (items.MasterSword && items.HoverBoots)); } },            
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Glove || items.Bombs || items.Bow || (items.Bombchu && BombchuLogic)) && ((items.Bean && items.BoleroofFire) || items.HoverBoots); } },            
             ['Crater Fairy Fountain']: { isAvailable: function () {
                 return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword && items.Hammer && items.Ocarina && items.ZeldasLullaby); } },
             ['Crater Grotto']: { isAvailable: function () {
