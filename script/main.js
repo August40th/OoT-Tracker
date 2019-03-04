@@ -826,10 +826,8 @@ function initGridRow(itemsets) {
         WaterKey:[],
         SpiritKey:[],
         ShadowKey:[],
-        CastleKey0: 0,
-        CastleKey1: 0,
-        CastleKey2: 0,
-        WellKey:[],
+        CastleKey:[],
+        //WellKey:[],
         GTGKey:[],
     };
 
@@ -945,17 +943,16 @@ function gridItemClick(row, col, corner) {
         }
     }
     else if(questimg[item] !== undefined){
-        if (quest == 'Mixed') {
-            if (corner == 1) {
-                items.questdungeons[questimg]++;
-                if (questdungeons[item] >=  2)
+        if (quest == 'Mixed' && (corner == 1 || corner == 0)) {
+               items.questdungeons[questimg]++;
+               if (questdungeons[item] >=  2)
                     questdungeons[item] = 0;
             }
-            else if (corner == 0) {
-                items.questdungeons[questimg]++;
-                if (questdungeons[item] >=  2)
-                    questdungeons[item] = 0;
-            }
+            //else if (corner == 0) {
+              //  items.questdungeons[questimg]++;
+                //if (questdungeons[item] >=  2)
+                  //  questdungeons[item] = 0;
+            //}
             else {
                 items[item] = !items[item];
             }
