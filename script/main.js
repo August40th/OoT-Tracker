@@ -368,7 +368,7 @@ function setQuest(sender) {
     if (quest == 'Master') {
         questimg = 1;
     }
-    else if (quest == "Mixed") {
+    else if (quest == 'Mixed') {
         questimg = 1;
     }
     else {
