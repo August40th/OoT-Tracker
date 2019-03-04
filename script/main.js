@@ -368,6 +368,9 @@ function setQuest(sender) {
     if (quest == 'Master') {
         questimg = 1;
     }
+    else if (quest == "Mixed") {
+        questimg = 1;
+    }
     else {
         questimg = 0;
     }
@@ -751,10 +754,10 @@ function updateGridItem(row, index) {
             itemGrid[row][index][3].style.backgroundImage = "";           
     }
     if (questdungeons[item] !== undefined){
-        if (quest == 'Mixed') {
+        if (quest == "Mixed") {
             itemGrid[row][index][0].style.backgroundImage = "url(images/" + questimg[questdungeons[item]] + ".png)";            
         }
-        else if (quest == 'Master') {
+        else if (quest == "Master") {
             questimg = 1;
             itemGrid[row][index][0].style.backgroundImage = "url(images/MQ.png)";
         }
@@ -826,8 +829,8 @@ function initGridRow(itemsets) {
         WaterKey:[],
         SpiritKey:[],
         ShadowKey:[],
-        CastleKey:[],
-        //WellKey:[],
+        //CastleKey:[],
+        WellKey:[],
         GTGKey:[],
     };
 
