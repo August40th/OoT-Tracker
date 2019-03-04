@@ -391,6 +391,7 @@ function setFortressLogic(sender) {
 
 function setCarpenter(sender) {
     Rescue1 = sender.checked;
+    keyimg = 0;
     if (Rescue1 && keyimg >= 2) {
         keyimg = 0;}
     updateGridItemAll();
