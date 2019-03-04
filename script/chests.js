@@ -671,7 +671,10 @@ var dungeons = [
         y: "13.7%",
         chestlist: {
             ['Cavern Roof Heart Piece']: { isAvailable: function () {
-                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)); } },
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (OpenGate == 0 || (OpenGate == 1 && (items.Mask >= 1 || items.Bombs || (items.Dins && items.Magic) || (items.Bombchu && BombchuLogic)
+																	     )
+															   )
+													 ); } },
             ['Breakable Wall Chest']: { isAvailable: function () {
                 return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.MasterSword && items.Hammer) || (items.Bombchu && BombchuLogic) || items.Glove); } },
             ['Storms Grotto']: { isAvailable: function () {
