@@ -331,7 +331,7 @@ var dungeons = [
         y: "09.0%",
         chestlist: {
             ['Chest Near Boss']: { isAvailable:  function () {
-                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)); } },
+                return items.MasterSword && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.BoleroofFire || ((items.HoverBoots || items.Hookshot) && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Hammer || items.Bow || (items.Magic && items.Dins)))); } },
             ['Fire Dancer Chest']: { isAvailable: function () {
                 return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)) && items.Hammer ; } },
             ['Boss Key Chest']: { isAvailable:  function () {
