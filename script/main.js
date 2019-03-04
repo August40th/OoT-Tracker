@@ -755,6 +755,7 @@ function updateGridItem(row, index) {
     }
     if (questdungeons[item] !== undefined){
         if (quest == "Mixed") {
+            questimg = 1;
             itemGrid[row][index][0].style.backgroundImage = "url(images/" + questimg[questdungeons[item]] + ".png)";            
         }
         else if (quest == "Master") {
