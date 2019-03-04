@@ -367,12 +367,28 @@ function setQuest(sender) {
     quest = sender.value;
     if (quest == 'Master') {
         questimg = 1;
+        itemsMax.ForestKey = 6;
+        itemsMax.FireKey = 5;
+        itemsMax.WaterKey = 2;
+        itemsMax.SpiritKey = 7;
+        itemsMax.ShadowKey = 6;
+        itemsMax.GTGKey = 3;
+        itemsMax.CastleKey = 3;
+        itemsMax.WellKey = 2;
     }
     else if (quest == 'Mixed') {
         questimg = 1;
     }
     else {
         questimg = 0;
+        itemsMax.ForestKey = 5;
+        itemsMax.FireKey = 8;
+        itemsMax.WaterKey = 6;
+        itemsMax.SpiritKey = 5;
+        itemsMax.ShadowKey = 5;
+        itemsMax.GTGKey = 9;
+        itemsMax.CastleKey = 2;
+        itemsMax.WellKey = 3;
     }
     updateGridItemAll();
     updateMap();
