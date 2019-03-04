@@ -393,6 +393,7 @@ function setCarpenter(sender) {
     Rescue1 = sender.checked;
     if (Rescue1 && keyimg >= 2) {
         keyimg = 0;}
+    updateGridItemAll();
     updateMap();
     saveCookie();
 }
