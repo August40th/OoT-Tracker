@@ -69,7 +69,7 @@ var dungeons = [
     	    'Basement Bomb Wall Skulltula': { isAvailable: function () {return items.Boomerang && items.Bombs; }, },	
 	},
 	scrublist: { 'Basement Scrub ': { isAvailable: function() {return true; }, },
-	}
+	},
         isBeatable: function(){
             return this.canGetChest();
         },
