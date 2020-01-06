@@ -315,6 +315,7 @@ function clickDungeon(d){
 
     document.getElementById('submaparea').innerHTML = dungeons[dungeonSelect].name;
     document.getElementById('submaparea').className = "DC" + dungeons[dungeonSelect].isBeatable();
+    document.getElementById("submaparea").setAttribute("data-select-mode", null);
     drawDungeonList();
 }
 
