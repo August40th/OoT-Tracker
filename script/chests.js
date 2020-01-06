@@ -68,7 +68,11 @@ var dungeons = [
 	        'Basement 2nd Skulltula': { isAvailable: function () {return true; }, },
     	    'Basement Bomb Wall Skulltula': { isAvailable: function () {return items.Boomerang && items.Bombs; }, },	
 	},
-	scrublist: { 'Basement Scrub ': { isAvailable: function() {return true; }, },
+	MQlist: { 'Check 1 ': { isAvailable: function() {return true; }, },
+	},
+	MQskulllist: { 'Skull 1 ': { isAvailable: function() {return true; }, },
+	},
+	MQscrublist: { 'Basement Scrub ': { isAvailable: function() {return true; }, },
 	},
         isBeatable: function(){
             return this.canGetChest();
@@ -116,6 +120,10 @@ var dungeons = [
                     return items.WaterKey && items.Hookshot >= 2; }, }, 
             'River Room Skulltula': { isAvailable: function () {
                 return items.SongofTime && items.IronBoots && items.Hookshot; }, },        	
+	},
+	MQlist: { 'Check 1 ': { isAvailable: function() {return true; }, },
+	},
+	MQskulllist: { 'Skull 1 ': { isAvailable: function() {return true; }, },
 	},
         isBeatable: function(){
             return this.canGetChest();
@@ -174,6 +182,8 @@ var dungeons = [
             ['Maze Big Chest']: { isAvailable: function () {
                 return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.GTGKey >= 7 && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()); } },                                               
             },
+	MQlist: { 'Check 1 ': { isAvailable: function() {return true; }, },
+	    },
         isBeatable: function(){
             return this.canGetChest();
         },
@@ -243,6 +253,10 @@ var dungeons = [
             'Top Left Scarecrow Skulltula': { isAvailable: function () {
                 return items.SpiritKey && (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2) && items.Lens && items.Magic) || items.RequiemofSpirit) && items.Glove >= 2) && ((items.Ocarina && items.Hookshot) || items.Hookshot >= 2); }, },
 	},
+	MQlist: { 'Check 1 ': { isAvailable: function() {return true; }, },
+	},
+	MQskulllist: { 'Skull 1 ': { isAvailable: function() {return true; }, },
+	},
         isBeatable: function(){
             return this.canGetChest();
         },
@@ -288,6 +302,10 @@ var dungeons = [
 	    'West Key Door Skulltula': { isAvailable: function () {return items.Boomerang && items.Ocarina && items.SongofStorms && items.WellKey >= 3; }, },
 	    'East Key Door Skulltula': { isAvailable: function () {return items.Boomerang && items.Ocarina && items.SongofStorms && items.WellKey >= 3; }, },
             'Like Like Skulltula': { isAvailable: function () {return items.Boomerang && items.Ocarina && items.SongofStorms && items.WellKey >= 3; }, },
+	},
+	MQlist: { 'Check 1 ': { isAvailable: function() {return true; }, },
+	},
+	MQskulllist: { 'Skull 1 ': { isAvailable: function() {return true; }, },
 	},
         isBeatable: function(){
             return this.canGetChest();
@@ -350,6 +368,10 @@ var dungeons = [
             'Triple Skull Pot Skulltula': { isAvailable: function () {
                 return items.ShadowKey >= 4 && items.Ocarina && items.NocturneofShadow && items.Dins && items.Magic && items.Lens && items.HoverBoots && items.Bombs && items.Hookshot && items.Glove && items.ZeldasLullaby; }, },
 	},
+	MQlist: { 'Check 1 ': { isAvailable: function() {return true; }, },
+	},
+	MQskulllist: { 'Skull 1 ': { isAvailable: function() {return true; }, },
+	},
         isBeatable: function(){
             return this.canGetChest();
         },
@@ -397,6 +419,12 @@ var dungeons = [
             '2F Scrub Room': { isAvailable: function () {
                 return (items.Bombs || items.Glove) && (items.Slingshot || items.Bow || items.HoverBoots) && (items.Bow || (items.Magic && items.Dins)); }, },
         },
+	MQlist: { 'Check 1 ': { isAvailable: function() {return true; }, },
+	},
+	MQskulllist: { 'Skull 1 ': { isAvailable: function() {return true; }, },
+	},
+	MQscrublist: { 'Scrub 1 ': { isAvailable: function() {return true; }, },
+	},
 	gossiplist: {
 		'Lobby Gossip behind mud wall': { isAvailable: function() {return true} },
 	},
@@ -410,7 +438,7 @@ var dungeons = [
     {
         name: "Fire Temple",
         x: "65.4%",
-        y: "09.0%",
+        y: "02.0%",
         chestlist: {
             ['Chest Near Boss']: { isAvailable:  function () {
                 return items.MasterSword && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.BoleroofFire || ((items.HoverBoots || items.Hookshot) && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Hammer || items.Bow || (items.Magic && items.Dins)))); } },
@@ -450,6 +478,10 @@ var dungeons = [
 	    '1st Scarecrow Skulltula': { isAvailable: function () {return items.FireKey >= 5 && items.Glove && items.Hookshot && items.Ocarina} },
 	    '2nd Scarecrow Skulltula': { isAvailable: function () {return items.FireKey >= 5 && items.Glove && items.Hookshot && items.Ocarina} },
 	},
+	MQlist: { 'Check 1 ': { isAvailable: function() {return true; }, },
+	},
+	MQskulllist: { 'Skull 1 ': { isAvailable: function() {return true; }, },
+	},
         isBeatable: function(){
             return this.canGetChest();
         },
@@ -480,6 +512,10 @@ var dungeons = [
             'Basement Dive to Scrub': { isAvailable: function () {
                 return ((items.Bombs && items.ZeldasLullaby && items.Ocarina) || items.Scale) && items.ZoraLetter && (items.Slingshot || items.Bombs || items.Boomerang); }, },
 	},
+	MQlist: { 'Check 1 ': { isAvailable: function() {return true; }, },
+	},
+	MQskulllist: { 'Skull 1 ': { isAvailable: function() {return true; }, },
+	},
         isBeatable: function(){
             return this.canGetChest();
         },
@@ -507,6 +543,10 @@ var dungeons = [
 	    'Above Silver Rupee Skulltula': { isAvailable: function () {return items.Hookshot && (items.Bombs || items.Scale) && items.ZoraLetter && items.Ocarina && items.ZeldasLullaby; }, },
             'Above Heart Piece Skulltula': { isAvailable: function () {return items.Hookshot && (items.Bombs || items.Scale) && items.ZoraLetter && items.Ocarina && items.ZeldasLullaby; }, },
 	    'Ice Block Puzzle Skulltula': { isAvailable: function () {return items.Hookshot && (items.Bombs || items.Scale) && items.ZoraLetter && items.Ocarina && items.ZeldasLullaby; }, },
+	},
+	MQlist: { 'Check 1 ': { isAvailable: function() {return true; }, },
+	},
+	MQskulllist: { 'Skull 1 ': { isAvailable: function() {return true; }, },
 	},
         isBeatable: function(){
             return this.canGetChest();
@@ -561,6 +601,10 @@ var dungeons = [
             'Basement Skulltula': { isAvailable: function () {
                 return items.Hookshot && items.Ocarina && (items.SariasSong || items.MinuetofForest) && items.Bow && items.Glove; }, },
 	},
+	MQlist: { 'Check 1 ': { isAvailable: function() {return true; }, },
+	},
+	MQskulllist: { 'Skull 1 ': { isAvailable: function() {return true; }, },
+	},
         isBeatable: function(){
             return this.canGetChest();
         },
@@ -596,6 +640,10 @@ var dungeons = [
             'Lower Invisible Wall Scrubs x4': { isAvailable: function () {
                 return isBridgeOpen(); } },
 	},
+	MQlist: { 'Check 1 ': { isAvailable: function() {return true; }, },
+	},
+	MQscrublist: { 'Scrub 1 ': { isAvailable: function() {return true; }, },
+	},
         trials: {
             ['Forest Trial Clear']: { isAvailable:  function () {
                 return isBridgeOpen() && items.Magic && items.Bow && items.Light && (items.Fire || (items.Hookshot && items.Dins)); } },
@@ -626,18 +674,12 @@ var dungeons = [
                 return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)); } },
             ['Return Richard']: { isAvailable: function () {
                 return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)); } },
-            ['Malon\s Weird Egg']: { isAvailable: function () {
-                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)); } },
-            ['Song from Impa']: { isAvailable: function () {
-                return ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Mask >= 1); } },
             ['Bombchu Bowling 1']: { isAvailable: function () {
                 return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.Bombchu && BombchuLogic)); } },
             ['Bombchu Bowling 2']: { isAvailable: function () {
                 return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.Bombchu && BombchuLogic)); } },
             ['Treasure Chest Mini Game']: { isAvailable: function () {
                 return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Lens && items.Magic); } },                       
-            ['Child Fairy Fountain']: { isAvailable: function () {
-                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Ocarina && items.ZeldasLullaby; } },
             ['Prelude of Light']: { isAvailable: function () {
                 return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword && items.ForestMedallion); } },
             ['Zelda\'s Secret Weapon']: { isAvailable: function () {
@@ -649,6 +691,47 @@ var dungeons = [
         },
 	skulllist: {
 		'Pottery Crate Skulltula': { isAvailable: function () {return true} },
+        },
+	gossiplist: {
+		'Outside Temple of Time x4': { isAvailable: function() {return true} },
+	},
+        isBeatable: function(){
+            return this.canGetChest();
+        },
+        canGetChest: function(){
+            return generalCanGetChest(this.chestlist);
+        }
+    },
+    {
+        name: "Temple of Time",
+        x: "55.5%",
+        y: "18.2%",
+        chestlist: {            
+            ['Prelude of Light']: { isAvailable: function () {
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword && items.ForestMedallion); } },
+            ['Zelda\'s Secret Weapon']: { isAvailable: function () {
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword && items.ShadowMedallion && items.SpiritMedallion); } },
+            },
+        isBeatable: function(){
+            return this.canGetChest();
+        },
+        canGetChest: function(){
+            return generalCanGetChest(this.chestlist);
+        }
+    },
+    {
+        name: "Hyrule Castle",
+        x: "44.0%",
+        y: "14.0%",
+        chestlist: {            
+            ['Malon\s Weird Egg']: { isAvailable: function () {
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)); } },
+            ['Song from Impa']: { isAvailable: function () {
+                return ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Mask >= 1); } },
+            ['Dins Great Fairy Fountain']: { isAvailable: function () {
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Ocarina && items.ZeldasLullaby; } },
+            },
+	skulllist: {
 	        'Tree to Castle Skulltula': { isAvailable: function () {return true} },
 	        'Castle Moat Storms Grotto': { isAvailable: function () {return items.Ocarina && items.SongofStorms && items.Bombs} },
 	        'Gannon’s Castle Skulltula': { isAvailable: function () {return items.Hookshot} },
@@ -657,7 +740,6 @@ var dungeons = [
 		'Above Malon': { isAvailable: function() {return true} },
 		'Castle Moat Stone': { isAvailable: function() {return true} },
 		'Storms Grotto Stone': { isAvailable: function() {return true} },
-		'Outside Temple of Time x4': { isAvailable: function() {return true} },
 	},
         isBeatable: function(){
             return this.canGetChest();
@@ -761,8 +843,6 @@ var dungeons = [
         x: "75.3%",
         y: "47.0%",
         chestlist: {
-            ['Minuet of Forest']: { isAvailable: function () {
-                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword; } },           
             ['Deku Sale $40']: { isAvailable: function () {
                 return (items.DekuShield || items.Nuts || items.Stick || items.Bombs || (items.Bombchu && BombchuLogic) || items.KokiriSword || items.Boomerang); } },
             ['Skull Kid']: { isAvailable: function () {
@@ -775,10 +855,6 @@ var dungeons = [
                 return items.Bombs || (items.MasterSword && items.Hammer) || (items.Bombchu && BombchuLogic); } },
             ['Deku Sale Grotto $40']: { isAvailable: function () {
                 return (items.Bombs || (items.MasterSword && items.Hammer) || (items.Bombchu && BombchuLogic)) && (items.DekuShield || items.Nuts || items.Stick); } },
-            ['Wolfos Grotto']: { isAvailable: function () {
-                return items.Bombs || (items.MasterSword && items.Hammer) || (items.Bombchu && BombchuLogic); } },
-            ['Saria\'s Song']: { isAvailable: function () {
-                return items.Mask >= 2; } },            
             ['Deku Theater Skull Mask']: { isAvailable: function () {
                 return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Mask >= 6; } },
             ['Deku Theater Mask of Truth']: { isAvailable: function () {
@@ -788,19 +864,46 @@ var dungeons = [
 		'Bridge Soil Patch Skulltula': { isAvailable: function () {return items.Bottle; }, },
 	        'Theatre Soil Patch Skulltula': { isAvailable: function () {return items.Bottle; }, },
 	        'Bean Ride Skulltula': { isAvailable: function () {return items.Hookshot || items.Bombs || items.Scale; }, },
-	        'Meadow Maze Skulltula': { isAvailable: function () {return items.Hookshot; }, },
         },
         scrublist: {
             '2nd Scrub in Grotto': { isAvailable: function () {
                 return (items.Bombs || items.Hammer); }, },
             'Outside Deku Theatre x2': { isAvailable: function () {
                 return true; }, }, 
-	    'Storms Scrub Grotto by Temple': { isAvailable: function () {
+        },
+	gossiplist: {
+		'Bridge Stone': { isAvailable: function() {return true} },
+		'Grotto Stone': { isAvailable: function() {return true} },
+	},
+        isBeatable: function(){
+            return this.canGetChest();
+        },
+        canGetChest: function(){
+            return generalCanGetChest(this.chestlist);
+        }
+    },
+    {
+        name: "Sacred Forest Meadow",
+        x: "80.3%",
+        y: "47.0%",
+        chestlist: {
+            ['Minuet of Forest']: { isAvailable: function () {
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword; } },           
+            ['Wolfos Grotto']: { isAvailable: function () {
+                return items.Bombs || (items.MasterSword && items.Hammer) || (items.Bombchu && BombchuLogic); } },
+            ['Saria\'s Song']: { isAvailable: function () {
+                return items.Mask >= 2; } },            
+            },
+	skulllist: {
+	        'Meadow Maze Skulltula': { isAvailable: function () {return items.Hookshot; }, },
+        },
+        scrublist: { 
+	    'Storms Grotto by Temple': { isAvailable: function () {
 		return items.Ocarina && items.SongofStorms && (items.SariasSong || items.MinuetofForest); }, }, 
         },
 	gossiplist: {
-		'Meadow Temple Entrance': { isAvailable: function() {return true} },
-		'Meadow Maze x2': { isAvailable: function() {return true} },
+		'Temple Entrance': { isAvailable: function() {return true} },
+		'Ontop Maze x2': { isAvailable: function() {return true} },
 	},
         isBeatable: function(){
             return this.canGetChest();
@@ -818,22 +921,12 @@ var dungeons = [
                 return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || items.Scale || (items.Bombchu && BombchuLogic)); } },
             ['Torch Run']: { isAvailable: function () {
                 return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || items.Scale || (items.Bombchu && BombchuLogic)); } },
-            ['Zora Fairy Fountain']: { isAvailable: function () {
-                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.ZoraLetter || OpenFountain) && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Ocarina && items.ZeldasLullaby; } },
-            ['Iceberg Heart Piece']: { isAvailable: function () {
-                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.ZoraLetter || OpenFountain) && (items.Bombs || items.Scale || (items.Bombchu && BombchuLogic)) && ((items.Ocarina && items.ZeldasLullaby) || items.HoverBoots); } },
-            ['Underwater Heart Piece']: { isAvailable: function () {
-                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bombs || items.Scale || (items.Bombchu && BombchuLogic)) && (items.ZoraLetter || OpenFountain) && items.IronBoots && ((items.Ocarina && items.ZeldasLullaby) || items.HoverBoots); } },
             ['Thaw King Zora']: { isAvailable: function () {
                 return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Bottle && items.MasterSword && ((items.Ocarina && items.ZeldasLullaby) || items.HoverBoots) && ((((items.ZoraLetter || OpenFountain) && (items.Bombs || items.Scale || (items.Bombchu && BombchuLogic))) || isBridgeOpen() || items.Wallet >= 3)); } },
         },
 	skulllist: {
-		'Tree by Great Fairy Skulltula': { isAvailable: function () {
-			return items.ZoraLetter && ((items.Bombs && items.Ocarina && itemsZeldasLullaby) || items.Scale); }, },
-        	'Stand on the Log Skulltula': { isAvailable: function () {
-			return items.ZoraLetter && items.Boomerang && (items.Bombs || items.Scale); }, },
-        	'Silver Rock Skulltula': { isAvailable: function () {
-			return (items.MasterSword && items.Glove >= 2 && items.ZoraLetter && (items.Bombs || items.Scale) && items.ZeldasLullaby && items.Ocarina); }, },
+        	'Frozen Waterfall Skulltula': { isAvailable: function () {
+			return (items.MasterSword && items.Hookshot && items.ZoraLetter && (items.Bombs || items.Scale) && items.ZeldasLullaby && items.Ocarina); }, },
         },
 	gossiplist: {
 		'Infront King Zora': { isAvailable: function() {return true} },
@@ -846,7 +939,38 @@ var dungeons = [
         }
     },
     {
-        name: "Death Mountain",
+        name: "Zora's Fountain",
+        x: "92.9%",
+        y: "30.5%",
+        chestlist: {
+            ['Zora Fairy Fountain']: { isAvailable: function () {
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.ZoraLetter || OpenFountain) && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Ocarina && items.ZeldasLullaby; } },
+            ['Iceberg Heart Piece']: { isAvailable: function () {
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.ZoraLetter || OpenFountain) && (items.Bombs || items.Scale || (items.Bombchu && BombchuLogic)) && ((items.Ocarina && items.ZeldasLullaby) || items.HoverBoots); } },
+            ['Underwater Heart Piece']: { isAvailable: function () {
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bombs || items.Scale || (items.Bombchu && BombchuLogic)) && (items.ZoraLetter || OpenFountain) && items.IronBoots && ((items.Ocarina && items.ZeldasLullaby) || items.HoverBoots); } },
+        },
+	skulllist: {
+		'Tree by Great Fairy Skulltula': { isAvailable: function () {
+			return items.ZoraLetter && ((items.Bombs && items.Ocarina && itemsZeldasLullaby) || items.Scale); }, },
+        	'Stand on the Log Skulltula': { isAvailable: function () {
+			return items.ZoraLetter && items.Boomerang && (items.Bombs || items.Scale); }, },
+        	'Silver Rock Skulltula': { isAvailable: function () {
+			return (items.MasterSword && items.Glove >= 2 && items.ZoraLetter && (items.Bombs || items.Scale) && items.ZeldasLullaby && items.Ocarina); }, },
+        },
+	gossiplist: {
+		'West Fountain Stone': { isAvailable: function() {return true} },
+		'Great Fairy Stone': { isAvailable: function() {return true} },
+	},
+        isBeatable: function(){
+            return this.canGetChest();
+        },
+        canGetChest: function(){
+            return generalCanGetChest(this.chestlist);
+        }
+    },
+    {
+        name: "Death Mountain Trail",
         x: "62.0%",
         y: "13.7%",
         chestlist: {
@@ -856,17 +980,6 @@ var dungeons = [
                 return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (OpenGate == 1 || (OpenGate == 0 && (items.Mask >= 1 || items.MasterSword || items.Bombs || (items.Dins && items.Magic) || (items.Bombchu && BombchuLogic)))) && (items.Bombs || (items.MasterSword && items.Hammer) || (items.Bombchu && BombchuLogic) || items.Glove); } },
             ['Storms Grotto']: { isAvailable: function () {
                 return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (OpenGate == 1 || (OpenGate == 0 && (items.Mask >= 1 || items.MasterSword || items.Bombs || (items.Dins && items.Magic) || (items.Bombchu && BombchuLogic)))) && (items.Ocarina && items.SongofStorms); } },
-            ['Bolero of Fire']: { isAvailable: function () {
-                return items.MasterSword && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.BoleroofFire || ((items.HoverBoots || items.Hookshot) && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Hammer || items.Bow || (items.Magic && items.Dins)))); } },
-            ['Crater Bean Heart Piece']: { isAvailable: function () {
-                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Glove || items.Bombs || items.Bow || (items.Bombchu && BombchuLogic)) && ((items.Bean && items.BoleroofFire) || items.HoverBoots); } },            
-            ['Crater Fairy Fountain']: { isAvailable: function () {
-                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword && items.Hammer && items.Ocarina && items.ZeldasLullaby); } },
-            ['Crater Grotto']: { isAvailable: function () {
-                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (OpenGate == 1 || (OpenGate == 0 && (items.Mask >= 1 || items.MasterSword || items.Bombs || (items.Dins && items.Magic) || (items.Bombchu && BombchuLogic)))) && (items.Bombs || (items.MasterSword && items.Hammer) || (items.Bombchu && BombchuLogic)); } },
-            ['Crater Wall Heart Piece']: { isAvailable: function () {
-                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (OpenGate == 1 || (OpenGate == 0 && (items.Mask >= 1 || items.MasterSword || items.Bombs || (items.Dins && items.Magic) || (items.Bombchu && BombchuLogic)))) && ((items.Bombs || (items.Bombchu && BombchuLogic)) || 
-			(items.MasterSword && ( (items.BoleroofFire && (items.HoverBoots || items.Hookshot)) || items.Bow || items.Glove))); } },
             ['Summit Fairy Fountain']: { isAvailable: function () {
                 return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (OpenGate == 1 || (OpenGate == 0 && (items.Mask >= 1 || items.MasterSword || items.Bombs || (items.Dins && items.Magic) || (items.Bombchu && BombchuLogic)))) && ((items.Bombs || (items.MasterSword && items.Hammer) || (items.Bombchu && BombchuLogic)) && items.Ocarina && items.ZeldasLullaby); } },
             ['Biggoron\'s Finest Work']: { isAvailable: function () {
@@ -877,18 +990,46 @@ var dungeons = [
 	        'Cavern Soil Patch Skulltula': { isAvailable: function () {return items.Bottle } },
         	'Hammer Rock 1 Skulltula': { isAvailable: function () {return items.Hammer} },
         	'Hammer Rock 2 Skulltula': { isAvailable: function () {return items.Hammer} },
-	        'Crater Crate Skulltula': { isAvailable: function () {return items.Bombs; }, },
-	        'Crater Soil Patch Skulltula': { isAvailable: function () {return items.Ocarina && items.BoleroofFire && items.Bottle } },
+        },
+	gossiplist: {
+		'Under Summit Fairy': { isAvailable: function() {return true} },
+	},
+        isBeatable: function(){
+            return this.canGetChest();
+        },
+        canGetChest: function(){
+            return generalCanGetChest(this.chestlist);
+        }
+    },
+    {
+        name: "Death Mountain Crater",
+        x: "65.4%",
+        y: "09.0%",
+        chestlist: {
+            ['Bolero of Fire']: { isAvailable: function () {
+                return items.MasterSword && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.BoleroofFire || ((items.HoverBoots || items.Hookshot) && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Hammer || items.Bow || (items.Magic && items.Dins)))); } },
+            ['Bean Heart Piece']: { isAvailable: function () {
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Glove || items.Bombs || items.Bow || (items.Bombchu && BombchuLogic)) && ((items.Bean && items.BoleroofFire) || items.HoverBoots); } },            
+            ['Fairy Fountain']: { isAvailable: function () {
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword && items.Hammer && items.Ocarina && items.ZeldasLullaby); } },
+            ['Grotto']: { isAvailable: function () {
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (OpenGate == 1 || (OpenGate == 0 && (items.Mask >= 1 || items.MasterSword || items.Bombs || (items.Dins && items.Magic) || (items.Bombchu && BombchuLogic)))) && (items.Bombs || (items.MasterSword && items.Hammer) || (items.Bombchu && BombchuLogic)); } },
+            ['Wall Heart Piece']: { isAvailable: function () {
+                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (OpenGate == 1 || (OpenGate == 0 && (items.Mask >= 1 || items.MasterSword || items.Bombs || (items.Dins && items.Magic) || (items.Bombchu && BombchuLogic)))) && ((items.Bombs || (items.Bombchu && BombchuLogic)) || 
+			(items.MasterSword && ( (items.BoleroofFire && (items.HoverBoots || items.Hookshot)) || items.Bow || items.Glove))); } },
+        },
+	skulllist: {
+	        'Crate Skulltula': { isAvailable: function () {return items.Bombs; }, },
+	        'Soil Patch Skulltula': { isAvailable: function () {return items.Ocarina && items.BoleroofFire && items.Bottle } },
         },
         scrublist: {
             'Child Climb Summit to Crater Scrub': { isAvailable: function () {
                 return items.Bombs; }, },
-            'Hammer Rock Crater Grotto Scrubs x3': { isAvailable: function () {
+            'Hammer Rock Grotto Scrubs x3': { isAvailable: function () {
                 return items.Hammer && ((items.Glove || items.Bombs || items.Bow || (items.Magic && items.Dins)) || (items.BoleroofFire && items.Ocarina && (items.Hookshot || items.HoverBoots))); }, },
         },
 	gossiplist: {
-		'Under Summit Fairy': { isAvailable: function() {return true} },
-		'Crater Cracked wall': { isAvailable: function() {return true} },
+		'Cracked wall': { isAvailable: function() {return true} },
 	},
         isBeatable: function(){
             return this.canGetChest();
