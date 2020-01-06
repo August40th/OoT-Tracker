@@ -315,7 +315,7 @@ function clickDungeon(d){
     document.getElementById("dungeon"+dungeonSelect).style.backgroundImage = "url(images/highlighted.png)";
 
     document.getElementById('submaparea').innerHTML = dungeons[dungeonSelect].name;
-    document.getElementById('submaparea').className = "DC" + dungeons[dungeonSelect].isBeatable();
+    document.getElementById('submaparea').className = "DC" + getDungeonAvailability(dungeons[dungeonSelect]);
     drawDungeonList();
     updateMap();
 }
@@ -339,8 +339,46 @@ function drawDungeonList() {
         s.onmouseover = new Function('highlightDungeonChest(this)');
         s.onmouseout = new Function('unhighlightDungeonChest(this)');
         s.style.cursor = "pointer";
-
+        s.setAttribute("data-type", "chest");
         DClist.appendChild(s)
+    }
+    if (skulltula === "Dungeons" || skulltula === "All") {
+        for (let key in dungeons[dungeonSelect].skulllist) {
+            let li = document.createElement('li');
+            li.style.cursor = 'pointer';
+            li.innerText = key;
+            if (dungeons[dungeonSelect].skulllist[key].isOpened) {
+                li.className = "DCopened";
+            } else if (dungeons[dungeonSelect].skulllist[key].isAvailable()) {
+                li.className = "DCavailable";
+            } else {
+                li.className = "DCunavailable";
+            }
+            li.onclick = new Function('toggleDungeonChest(this,'+dungeonSelect+',"'+key+'")');
+            li.onmouseover = new Function('highlightDungeonChest(this)');
+            li.onmouseout = new Function('unhighlightDungeonChest(this)');
+            li.setAttribute("data-type", "skull");
+            DClist.appendChild(li);
+        }
+    }
+    if (scrubs === 'Scrubsanity' && dungeons[dungeonSelect].scrublist) {
+        for (let key in dungeons[dungeonSelect].scrublist) {
+            let li = document.createElement('li');
+            li.style.cursor = 'pointer';
+            li.innerText = key;
+            if (dungeons[dungeonSelect].scrublist[key].isOpened) {
+                li.className = "DCopened";
+            } else if (dungeons[dungeonSelect].scrublist[key].isAvailable()) {
+                li.className = "DCavailable";
+            } else {
+                li.className = "DCunavailable";
+            }
+            li.onclick = new Function('toggleDungeonChest(this,'+dungeonSelect+',"'+key+'")');
+            li.onmouseover = new Function('highlightDungeonChest(this)');
+            li.onmouseout = new Function('unhighlightDungeonChest(this)');
+            li.setAttribute("data-type", "scrub");
+            DClist.appendChild(li);
+        }
     }
 }
 
@@ -365,15 +403,18 @@ function bulkDCSelect() {
 
     if (mode === 'none') {
         document.querySelectorAll('#submaplist li').forEach(function(dungeon) {
-            dungeons[dungeonSelect].chestlist[dungeon.innerHTML].isOpened = false;
+            let itemType = dungeon.getAttribute("data-type") + "list";
+            dungeons[dungeonSelect][itemType][dungeon.innerHTML].isOpened = false;
         })
     } else if (mode === 'available') {
         document.querySelectorAll('#submaplist li.DCavailable').forEach(function(dungeon, index) {
-            dungeons[dungeonSelect].chestlist[dungeon.innerHTML].isOpened = true;
+            let itemType = dungeon.getAttribute("data-type") + "list";
+            dungeons[dungeonSelect][itemType][dungeon.innerHTML].isOpened = true;
         });
     } else if (mode === 'all') {
         document.querySelectorAll('#submaplist li').forEach(function(dungeon, index) {
-            dungeons[dungeonSelect].chestlist[dungeon.innerHTML].isOpened = true;
+            let itemType = dungeon.getAttribute("data-type") + "list";
+            dungeons[dungeonSelect][itemType][dungeon.innerHTML].isOpened = true;
         });
     }
     drawDungeonList();
@@ -381,15 +422,43 @@ function bulkDCSelect() {
 }
 
 function toggleDungeonChest(sender, d, c){
-    dungeons[d].chestlist[c].isOpened = !dungeons[d].chestlist[c].isOpened;
-    if(dungeons[d].chestlist[c].isOpened)
-        sender.className = "DCopened";
-    else if(dungeons[d].chestlist[c].isAvailable())
-        sender.className = "DCavailable";     
-    else
-        sender.className = "DCunavailable";
-
+    const chestType = sender.getAttribute('data-type');
+    if ( chestType === 'chest') {
+        dungeons[d].chestlist[c].isOpened = !dungeons[d].chestlist[c].isOpened;
+        if(dungeons[d].chestlist[c].isOpened)
+            sender.className = "DCopened";
+        else if(dungeons[d].chestlist[c].isAvailable())
+            sender.className = "DCavailable";
+        else
+            sender.className = "DCunavailable";
+    } else if (chestType === 'skull') {
+        toggleSkullChest(sender, d, c);
+    } else if (chestType === 'scrub') {
+        toggleScrubChest(sender, d, c);
+    }
     updateMap();
+}
+
+function toggleSkullChest(sender, d, c) {
+    dungeons[d].skulllist[c].isOpened = !dungeons[d].skulllist[c].isOpened;
+    if (dungeons[d].skulllist[c].isOpened) {
+        sender.className = "DCopened";
+    } else if (dungeons[d].skulllist[c].isAvailable()) {
+        sender.className = "DCavailable";
+    } else {
+        sender.className = "DCunavailable";
+    }
+}
+
+function toggleScrubChest (sender, d, c) {
+    dungeons[d].scrublist[c].isOpened = !dungeons[d].scrublist[c].isOpened;
+    if (dungeons[d].scrublist[c].isOpened) {
+        sender.className = "DCopened";
+    } else if (dungeons[d].scrublist[c].isAvailable()) {
+        sender.className = "DCavailable";
+    } else {
+        sender.className = "DCunavailable";
+    }
 }
 
 function highlightDungeonChest(x){
@@ -543,12 +612,14 @@ function setBossKeys(sender) {
 
 function setSkulltula(sender) {
     skulltula = sender.value;
+    drawDungeonList();
     updateMap();
     saveCookie();
 }
 
 function setScrub(sender) {
     scrubs = sender.value;
+    drawDungeonList();
     updateMap();
     saveCookie();
 }
@@ -1118,19 +1189,33 @@ function gridItemClick(row, col, corner) {
 function updateMap() {
     for(k=0; k<chests.length; k++){
         if(!chests[k].isOpened)
-            document.getElementById(k).className = "mapspan chest " + chests[k].isAvailable();
+            document.getElementById(k).className = "mapspan chest " + getDungeonAvailability(chests[k]);
     }
+
     for(k=0; k<dungeons.length; k++){
-        document.getElementById("dungeon"+k).className = "mapspan dungeon " + dungeons[k].canGetChest() + ((dungeonMarked.indexOf(k) > -1) ? " wayofhero" : " ");
+        document.getElementById("dungeon"+k).className = "mapspan dungeon " + getDungeonAvailability(dungeons[k]) + ((dungeonMarked.indexOf(k) > -1) ? " wayofhero" : " ");
 
         var DCcount = 0;
+
         for (var key in dungeons[k].chestlist) {
             if (dungeons[k].chestlist.hasOwnProperty(key)) {
                 if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable())
                     DCcount++;
             }
         }
+        if (skulltula === "Dungeons" || skulltula === "All") {
+            for (var key in dungeons[k].skulllist) {
+                if (!dungeons[k].skulllist[key].isOpened && dungeons[k].skulllist[key].isAvailable())
+                    DCcount++;
+            }
+        }
 
+        if (scrubs === "Scrubsanity") {
+            for (var key in dungeons[k].scrublist) {
+                if (!dungeons[k].scrublist[key].isOpened && dungeons[k].scrublist[key].isAvailable())
+                    DCcount++;
+            }
+        }
         var child = document.getElementById("dungeon"+k).firstChild;
         while (child) {
             if (child.className == "chestCount") {
@@ -1144,68 +1229,20 @@ function updateMap() {
         }
     }
 
-    document.getElementById('submaparea').className = "DC" + dungeons[dungeonSelect].isBeatable();
+    document.getElementById('submaparea').className = "DC" + getDungeonAvailability(dungeons[dungeonSelect]);
     var itemlist = document.getElementById('submaplist').children
     for (var item in itemlist) {
         if (itemlist.hasOwnProperty(item)) {
-            if ( dungeons[dungeonSelect].chestlist[itemlist[item].innerHTML].isOpened)
+            let itemType = itemlist[item].getAttribute("data-type") + "list";
+            if ( dungeons[dungeonSelect][itemType][itemlist[item].innerHTML].isOpened)
                 itemlist[item].className = "DCopened";            
-            else if ( dungeons[dungeonSelect].chestlist[itemlist[item].innerHTML].isAvailable())
+            else if ( dungeons[dungeonSelect][itemType][itemlist[item].innerHTML].isAvailable())
                 itemlist[item].className = "DCavailable";        
             else
                 itemlist[item].className = "DCunavailable";                
         }
     }
-    drawDCSkullList();
-    drawSrubList();
 
-}
-
-function drawDCSkullList() {
-    const skullContainer = document.getElementById('skullContainer');
-    skullContainer.classList.add('d-none');
-    const skulllist = document.getElementById('skulllist');
-    skulllist.innerHTML = '';
-    if (skulltula === "Dungeons" || skulltula === "All") {
-        if (dungeons[dungeonSelect].skulllist) {
-            console.log(dungeons[dungeonSelect].skulllist)
-            let total = 0;
-            for (let key in dungeons[dungeonSelect].skulllist) {
-                if (dungeons[dungeonSelect].skulllist[key].isAvailable && dungeons[dungeonSelect].skulllist[key].isAvailable()) {
-                    total++;
-                    let li = document.createElement('li');
-                    li.style.cursor = 'pointer';
-                    li.innerText = key;
-                    skulllist.appendChild(li);
-                }
-            }
-            if (total) {
-                skullContainer.classList.remove('d-none');
-            }
-        }
-    }
-}
-
-function drawSrubList() {
-    const scrubContainer = document.getElementById('scrubContainer');
-    scrubContainer.classList.add('d-none');
-    const scrublist = document.getElementById('scrublist');
-    scrublist.innerHTML = '';
-    if (scrubs === 'Scrubsanity' && dungeons[dungeonSelect].scrublist) {
-        let total = 0;
-        for (let key in dungeons[dungeonSelect].scrublist) {
-            if (dungeons[dungeonSelect].scrublist[key].isAvailable && dungeons[dungeonSelect].scrublist[key].isAvailable()) {
-                total++;
-                let li = document.createElement('li');
-                li.style.cursor = 'pointer';
-                li.innerText = key;
-                scrublist.appendChild(li);
-            }
-        }
-        if (total) {
-            scrubContainer.classList.remove('d-none');
-        }
-    }
 }
 
 function itemConfigClick (sender) {
@@ -1295,7 +1332,9 @@ function populateMapdiv() {
         s.oncontextmenu = new Function('toggleMarkDungeon(' + k + ')')
         s.style.left = dungeons[k].x;
         s.style.top = dungeons[k].y;
-        s.className = "mapspan dungeon " + dungeons[k].canGetChest();
+        let className = 'unavailable';
+
+        s.className = "mapspan dungeon " + getDungeonAvailability(dungeons[k]);
         if (dungeonMarked.indexOf(k) > -1) {
             s.className += " wayofhero";
         }
@@ -1307,7 +1346,22 @@ function populateMapdiv() {
                     DCcount++;
             }
         }
-
+        if (skulltula === "Dungeons" || skulltula === "All") {
+            for (var key in dungeons[k].skulllist) {
+                if (dungeons[k].chestlist.hasOwnProperty(key)) {
+                    if (!dungeons[k].skulllist[key].isOpened && dungeons[k].skulllist[key].isAvailable())
+                        DCcount++;
+                }
+            }
+        }
+        if (scrubs === "Scrubsanity") {
+            for (var key in dungeons[k].scrublist) {
+                if (dungeons[k].chestlist.hasOwnProperty(key)) {
+                    if (!dungeons[k].scrublist[key].isOpened && dungeons[k].scrublist[key].isAvailable())
+                        DCcount++;
+                }
+            }
+        }
         var ss = document.createElement('span');
         ss.className = "chestCount";
         if (DCcount == 0)
@@ -1329,26 +1383,69 @@ function populateMapdiv() {
     }
 
     document.getElementById('submaparea').innerHTML = dungeons[dungeonSelect].name;
-    document.getElementById('submaparea').className = "DC" + dungeons[dungeonSelect].isBeatable();
+    document.getElementById('submaparea').className = "DC" + getDungeonAvailability(dungeons[dungeonSelect]);
     document.getElementById("dungeon"+dungeonSelect).style.backgroundImage = "url(images/highlighted.png)";
-    for (var key in dungeons[dungeonSelect].chestlist) {
-        var s = document.createElement('li');
-        s.innerHTML = key
+    // for (var key in dungeons[dungeonSelect].chestlist) {
+    //     var s = document.createElement('li');
+    //     s.innerHTML = key
+    //
+    //     if ( dungeons[dungeonSelect].chestlist[key].isOpened)
+    //         s.className = "DCopened";
+    //     else if ( dungeons[dungeonSelect].chestlist[key].isAvailable())
+    //         s.className = "DCavailable";
+    //     else
+    //         s.className = "DCunavailable";
+    //
+    //     s.onclick = new Function('toggleDungeonChest(this,'+dungeonSelect+',"'+key+'")');
+    //     s.onmouseover = new Function('highlightDungeonChest(this)');
+    //     s.onmouseout = new Function('unhighlightDungeonChest(this)');
+    //     s.style.cursor = "pointer";
+    //
+    //     document.getElementById('submaplist').appendChild(s)
+    // }
+    drawDungeonList();
+}
 
-        if ( dungeons[dungeonSelect].chestlist[key].isOpened)
-            s.className = "DCopened";               
-        else if ( dungeons[dungeonSelect].chestlist[key].isAvailable())
-            s.className = "DCavailable";               
-        else
-            s.className = "DCunavailable";               
-
-        s.onclick = new Function('toggleDungeonChest(this,'+dungeonSelect+',"'+key+'")');
-        s.onmouseover = new Function('highlightDungeonChest(this)');
-        s.onmouseout = new Function('unhighlightDungeonChest(this)');
-        s.style.cursor = "pointer";
-
-        document.getElementById('submaplist').appendChild(s)
+function getDungeonAvailability(dungeon) {
+    var canGet = 0;
+    var unopened = 0
+    checklist = {
+        chestlist: {},
+        skulllist: {},
+        scrublist: {}
+    };
+    for (let key in dungeon.chestlist) {
+        checklist.chestlist[key] = dungeon.chestlist[key];
     }
+    if (skulltula === "Dungeons" || skulltula === "All") {
+        for (let key in dungeon.skulllist) {
+            checklist.skulllist[key] = dungeon.skulllist[key];
+        }
+    }
+    if (scrubs === "Scrubsanity") {
+        for (let key in dungeon.scrublist) {
+            checklist.scrublist[key] = dungeon.scrublist[key];
+        }
+    }
+    ['chestlist', 'skulllist', 'scrublist'].forEach(function(key) {
+        let list = checklist[key];
+        for (let key in list) {
+            if (!list[key].isOpened) {
+                unopened++;
+            }
+            if (!list[key].isOpened && list[key].isAvailable()) {
+                canGet++;
+            }
+        }
+    });
+    let availability = "possible";
+    if (unopened == 0)
+        availability =  "opened"
+    if (canGet == unopened)
+        availability =  "available";
+    if (canGet == 0)
+        availability =  "unavailable"
+    return availability;
 }
 
 function populateItemconfig() {
