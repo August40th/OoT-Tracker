@@ -37,6 +37,7 @@ var editmode = false;
 var selected = {};
 
 var dungeonSelect = 0;
+var dungeonMarked = -1;
 
 function setCookie(obj) {
     var d = new Date();
@@ -291,6 +292,22 @@ function unhighlightDungeon(x){
         document.getElementById("dungeon"+x).style.backgroundImage = "url(images/poi.png)";
 }
 
+// mark dungeon as
+function toggleMarkDungeon(x) {
+    window.event.preventDefault()
+    var elem = document.getElementById("dungeon"+x);
+
+    if (elem) {
+        if (elem.classList.contains('wayofhero')) {
+            elem.classList.remove('wayofhero');
+            dungeonMarked = -1
+        } else {
+            elem.className += " " + 'wayofhero';
+            dungeonMarked = x
+        }
+    }
+}
+
 function clickDungeon(d){
     document.getElementById("dungeon"+dungeonSelect).style.backgroundImage = "url(images/poi.png)";
     dungeonSelect = d;
@@ -298,6 +315,10 @@ function clickDungeon(d){
 
     document.getElementById('submaparea').innerHTML = dungeons[dungeonSelect].name;
     document.getElementById('submaparea').className = "DC" + dungeons[dungeonSelect].isBeatable();
+    drawDungeonList();
+}
+
+function drawDungeonList() {
     var DClist = document.getElementById('submaplist');
     DClist.innerHTML = ""
 
@@ -306,11 +327,11 @@ function clickDungeon(d){
         s.innerHTML = key
 
         if ( dungeons[dungeonSelect].chestlist[key].isOpened)
-            s.className = "DCopened";               
+            s.className = "DCopened";
         else if ( dungeons[dungeonSelect].chestlist[key].isAvailable())
-            s.className = "DCavailable";               
+            s.className = "DCavailable";
         else
-            s.className = "DCunavailable";               
+            s.className = "DCunavailable";
 
         s.onclick = new Function('toggleDungeonChest(this,'+dungeonSelect+',"'+key+'")');
         s.onmouseover = new Function('highlightDungeonChest(this)');
@@ -321,8 +342,41 @@ function clickDungeon(d){
     }
 }
 
+function bulkDCSelect() {
+    const modes = ['available', 'all', 'none'];
+    const titleElem = document.getElementById('submaparea');
+    let mode = titleElem.getAttribute('data-select-mode');
+    let idx = modes.indexOf(mode);
+    idx = (idx + 1) % (modes.length)
+
+    mode = modes[idx];
+
+    console.log(mode)
+
+    document.querySelectorAll('#submaplist li').forEach(function(dungeon) {
+        dungeons[dungeonSelect].chestlist[dungeon.innerHTML].isOpened = false;
+    })
+    drawDungeonList();
+
+    if (mode === 'none') {
+
+    } else if (mode === 'available') {
+        document.querySelectorAll('#submaplist li.DCavailable').forEach(function(dungeon, index) {
+            dungeons[dungeonSelect].chestlist[dungeon.innerHTML].isOpened = true;
+        });
+    } else if (mode === 'all') {
+        document.querySelectorAll('#submaplist li').forEach(function(dungeon, index) {
+            dungeons[dungeonSelect].chestlist[dungeon.innerHTML].isOpened = true;
+        });
+    }
+    titleElem.setAttribute('data-select-mode', mode);
+    drawDungeonList();
+    updateMap();
+}
+
 function toggleDungeonChest(sender, d, c){
     dungeons[d].chestlist[c].isOpened = !dungeons[d].chestlist[c].isOpened;
+    document.getElementById("submaparea").setAttribute("data-select-mode", null);
     if(dungeons[d].chestlist[c].isOpened)
         sender.className = "DCopened";
     else if(dungeons[d].chestlist[c].isAvailable())
@@ -1062,7 +1116,7 @@ function updateMap() {
             document.getElementById(k).className = "mapspan chest " + chests[k].isAvailable();
     }
     for(k=0; k<dungeons.length; k++){
-        document.getElementById("dungeon"+k).className = "mapspan dungeon " + dungeons[k].canGetChest();
+        document.getElementById("dungeon"+k).className = "mapspan dungeon " + dungeons[k].canGetChest() + ((k === dungeonMarked) ? " wayofhero" : " ");
 
         var DCcount = 0;
         for (var key in dungeons[k].chestlist) {
@@ -1183,9 +1237,13 @@ function populateMapdiv() {
         s.onclick = new Function('clickDungeon('+k+')');
         s.onmouseover = new Function('highlightDungeon('+k+')');
         s.onmouseout = new Function('unhighlightDungeon('+k+')');
+        s.oncontextmenu = new Function('toggleMarkDungeon(' + k + ')')
         s.style.left = dungeons[k].x;
         s.style.top = dungeons[k].y;
         s.className = "mapspan dungeon " + dungeons[k].canGetChest();
+        if (k === dungeonMarked) {
+            s.className += " wayofhero";
+        }
 
         var DCcount = 0;
         for (var key in dungeons[k].chestlist) {

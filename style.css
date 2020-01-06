@@ -190,6 +190,10 @@ label {
     background-color: rgb(255,0,0);
 }
 
+.unavailable.wayofhero {
+    background-color: blue;
+}
+
 .available{
     background-color: rgb(0,255,0);
 }
@@ -198,10 +202,16 @@ label {
     background-color: rgb(255,255,0);
 }
 
+.possible.wayofhero {
+    background-color: purple;
+}
+
 .opened{
     background-color: rgb(200,200,200);
 }
-
+.opened.wayofhero {
+    background-color: blue;
+}
 
 .DCunavailable{
     color: rgb(255,0,0);
@@ -518,4 +528,8 @@ label {
 
 .mapspan:hover .tooltip {
     visibility: visible;
+}
+
+#submaparea {
+    cursor: pointer;
 }
