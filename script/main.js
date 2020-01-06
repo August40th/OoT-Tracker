@@ -307,7 +307,6 @@ function toggleMarkDungeon(x) {
             dungeonMarked.push(x);
         }
     }
-    console.log(dungeonMarked)
 }
 
 function clickDungeon(d){
@@ -317,7 +316,6 @@ function clickDungeon(d){
 
     document.getElementById('submaparea').innerHTML = dungeons[dungeonSelect].name;
     document.getElementById('submaparea').className = "DC" + dungeons[dungeonSelect].isBeatable();
-    document.getElementById("submaparea").setAttribute("data-select-mode", null);
     drawDungeonList();
 }
 
@@ -345,22 +343,29 @@ function drawDungeonList() {
     }
 }
 
+
 function bulkDCSelect() {
-    const modes = ['available', 'all', 'none'];
-    const titleElem = document.getElementById('submaparea');
-    let mode = titleElem.getAttribute('data-select-mode');
-    let idx = modes.indexOf(mode);
-    idx = (idx + 1) % (modes.length)
 
-    mode = modes[idx];
-
-    document.querySelectorAll('#submaplist li').forEach(function(dungeon) {
-        dungeons[dungeonSelect].chestlist[dungeon.innerHTML].isOpened = false;
-    })
+    const total = document.querySelectorAll('#submaplist li').length;
+    const available = document.querySelectorAll('#submaplist li.DCavailable').length;
+    const unavailable =document.querySelectorAll('#submaplist li.DCunavailable').length;
+    const opened = document.querySelectorAll('#submaplist li.DCopened').length;
+    let mode = 'none';
+    if (available > 0) {
+        mode = 'available';
+    } else if (total === unavailable) {
+        mode = 'all';
+    } else if (total === opened) {
+        mode = 'none';
+    } else if (opened === total - available) {
+        mode = 'none';
+    }
     drawDungeonList();
 
     if (mode === 'none') {
-
+        document.querySelectorAll('#submaplist li').forEach(function(dungeon) {
+            dungeons[dungeonSelect].chestlist[dungeon.innerHTML].isOpened = false;
+        })
     } else if (mode === 'available') {
         document.querySelectorAll('#submaplist li.DCavailable').forEach(function(dungeon, index) {
             dungeons[dungeonSelect].chestlist[dungeon.innerHTML].isOpened = true;
@@ -370,14 +375,12 @@ function bulkDCSelect() {
             dungeons[dungeonSelect].chestlist[dungeon.innerHTML].isOpened = true;
         });
     }
-    titleElem.setAttribute('data-select-mode', mode);
     drawDungeonList();
     updateMap();
 }
 
 function toggleDungeonChest(sender, d, c){
     dungeons[d].chestlist[c].isOpened = !dungeons[d].chestlist[c].isOpened;
-    document.getElementById("submaparea").setAttribute("data-select-mode", null);
     if(dungeons[d].chestlist[c].isOpened)
         sender.className = "DCopened";
     else if(dungeons[d].chestlist[c].isAvailable())
