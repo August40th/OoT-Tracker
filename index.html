@@ -15,11 +15,29 @@
             <div id='itemdiv' class='itemdiv'>
             </div>
             <div id='mapdiv' class='mapdiv'>
-                <div id='submapdiv' class='submapdiv'>
+                <div id='submapdiv' class='submapdiv' style="overflow-y: scroll">
+                    <hr style="margin-top: 2px; margin-bottom: 4px">
                     <div align='center'><span id='submaparea' style="font-size:20px" onclick="bulkDCSelect(this)">Hyrule</span></div>
                     <hr style="margin-top: 4px; margin-bottom: 4px">
-                    <ul onselectstart="return false" id='submaplist' style="margin-top: 4px; margin-bottom: 4px; overflow-y: auto; height: 232px;">
+                    <ul onselectstart="return false" id='submaplist' style="margin-top: 4px; margin-bottom: 8px; overflow-y: auto; min-height: 50px;">
                     </ul>
+                    <div id="skullContainer" class="d-none">
+                        <hr style="margin-top: 4px; margin-bottom: 4px">
+                        <div align="center"><span id="skulltula" style="font-size:20px">Skulltula</span></div>
+                        <hr style="margin-top: 4px; margin-bottom: 4px">
+                        <ul id="skulllist" style="margin-top: 4px; margin-bottom: 8px; overflow-y: auto; min-height: 50px;">
+
+                        </ul>
+                    </div>
+                    <div id="scrubContainer" class="d-none">
+                        <hr style="margin-top: 4px; margin-bottom: 4px">
+                        <div align="center"><span id="scrub" style="font-size:20px">Scrub Salesman</span></div>
+                        <hr style="margin-top: 4px; margin-bottom: 4px">
+                        <ul id="scrublist" style="margin-top: 4px; overflow-y: auto; min-height: 50px;">
+
+                        </ul>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -96,8 +114,8 @@
                         <input type='radio' name='skulltula' value='All' onclick="setSkulltula(this)">All<br>
                     </fieldset>
                     <fieldset> <legend>Scrub Salesmen</legend>
-                        <input type='radio' name='scrubs' value='Major Item' checked='true' onclick="setScrub(this)">Off
-                        <input type='radio' name='scrubs' value='All' onclick="setScrub(this)">Scrubsanity
+                        <input type='radio' name='scrubs' value='Off' checked='true' onclick="setScrub(this)">Off
+                        <input type='radio' name='scrubs' value='Scrubsanity' onclick="setScrub(this)">Scrubsanity
                     </fieldset>
                     <fieldset> <legend>Getting Crazy</legend>
                         <input type='checkbox' name='OcarinaShuffle' checked='false' onchange="setOcarina(this)">Shuffle Ocarina

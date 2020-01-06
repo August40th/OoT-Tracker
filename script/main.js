@@ -317,6 +317,7 @@ function clickDungeon(d){
     document.getElementById('submaparea').innerHTML = dungeons[dungeonSelect].name;
     document.getElementById('submaparea').className = "DC" + dungeons[dungeonSelect].isBeatable();
     drawDungeonList();
+    updateMap();
 }
 
 function drawDungeonList() {
@@ -1153,6 +1154,56 @@ function updateMap() {
                 itemlist[item].className = "DCavailable";        
             else
                 itemlist[item].className = "DCunavailable";                
+        }
+    }
+    drawDCSkullList();
+    drawSrubList();
+
+}
+
+function drawDCSkullList() {
+    const skullContainer = document.getElementById('skullContainer');
+    skullContainer.classList.add('d-none');
+    const skulllist = document.getElementById('skulllist');
+    skulllist.innerHTML = '';
+    if (skulltula === "Dungeons" || skulltula === "All") {
+        if (dungeons[dungeonSelect].skulllist) {
+            console.log(dungeons[dungeonSelect].skulllist)
+            let total = 0;
+            for (let key in dungeons[dungeonSelect].skulllist) {
+                if (dungeons[dungeonSelect].skulllist[key].isAvailable && dungeons[dungeonSelect].skulllist[key].isAvailable()) {
+                    total++;
+                    let li = document.createElement('li');
+                    li.style.cursor = 'pointer';
+                    li.innerText = key;
+                    skulllist.appendChild(li);
+                }
+            }
+            if (total) {
+                skullContainer.classList.remove('d-none');
+            }
+        }
+    }
+}
+
+function drawSrubList() {
+    const scrubContainer = document.getElementById('scrubContainer');
+    scrubContainer.classList.add('d-none');
+    const scrublist = document.getElementById('scrublist');
+    scrublist.innerHTML = '';
+    if (scrubs === 'Scrubsanity' && dungeons[dungeonSelect].scrublist) {
+        let total = 0;
+        for (let key in dungeons[dungeonSelect].scrublist) {
+            if (dungeons[dungeonSelect].scrublist[key].isAvailable && dungeons[dungeonSelect].scrublist[key].isAvailable()) {
+                total++;
+                let li = document.createElement('li');
+                li.style.cursor = 'pointer';
+                li.innerText = key;
+                scrublist.appendChild(li);
+            }
+        }
+        if (total) {
+            scrubContainer.classList.remove('d-none');
         }
     }
 }
