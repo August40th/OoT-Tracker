@@ -352,8 +352,6 @@ function bulkDCSelect() {
 
     mode = modes[idx];
 
-    console.log(mode)
-
     document.querySelectorAll('#submaplist li').forEach(function(dungeon) {
         dungeons[dungeonSelect].chestlist[dungeon.innerHTML].isOpened = false;
     })
