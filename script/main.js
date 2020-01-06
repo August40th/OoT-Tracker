@@ -37,7 +37,7 @@ var editmode = false;
 var selected = {};
 
 var dungeonSelect = 0;
-var dungeonMarked = -1;
+var dungeonMarked = [];
 
 function setCookie(obj) {
     var d = new Date();
@@ -296,16 +296,18 @@ function unhighlightDungeon(x){
 function toggleMarkDungeon(x) {
     window.event.preventDefault()
     var elem = document.getElementById("dungeon"+x);
-
+    if (dungeonMarked.indexOf(x) > -1) {
+        dungeonMarked.splice(dungeonMarked.indexOf(x), 1);
+    }
     if (elem) {
         if (elem.classList.contains('wayofhero')) {
             elem.classList.remove('wayofhero');
-            dungeonMarked = -1
         } else {
             elem.className += " " + 'wayofhero';
-            dungeonMarked = x
+            dungeonMarked.push(x);
         }
     }
+    console.log(dungeonMarked)
 }
 
 function clickDungeon(d){
@@ -1115,7 +1117,7 @@ function updateMap() {
             document.getElementById(k).className = "mapspan chest " + chests[k].isAvailable();
     }
     for(k=0; k<dungeons.length; k++){
-        document.getElementById("dungeon"+k).className = "mapspan dungeon " + dungeons[k].canGetChest() + ((k === dungeonMarked) ? " wayofhero" : " ");
+        document.getElementById("dungeon"+k).className = "mapspan dungeon " + dungeons[k].canGetChest() + ((dungeonMarked.indexOf(k) > -1) ? " wayofhero" : " ");
 
         var DCcount = 0;
         for (var key in dungeons[k].chestlist) {
@@ -1240,7 +1242,7 @@ function populateMapdiv() {
         s.style.left = dungeons[k].x;
         s.style.top = dungeons[k].y;
         s.className = "mapspan dungeon " + dungeons[k].canGetChest();
-        if (k === dungeonMarked) {
+        if (dungeonMarked.indexOf(k) > -1) {
             s.className += " wayofhero";
         }
 
