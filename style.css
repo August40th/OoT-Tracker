@@ -191,11 +191,15 @@ label {
 }
 
 .unavailable.wayofhero {
-    background-color: blue;
+    background-color: rgb(248,24,148);
 }
 
 .available{
     background-color: rgb(0,255,0);
+}
+
+.available.wayofhero {
+    background-color: rgb(0,255,255);
 }
 
 .possible{
@@ -203,7 +207,7 @@ label {
 }
 
 .possible.wayofhero {
-    background-color: purple;
+    background-color: rgb(230, 230, 230);
 }
 
 .opened{
