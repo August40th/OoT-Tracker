@@ -267,6 +267,7 @@ function saveCookie() {
 
 // Event of clicking a chest on the map
 function toggleChest(x) {
+   console.log(chests[x].isOpened)
    chests[x].isOpened = !chests[x].isOpened;
    if (chests[x].isOpened)
       document.getElementById(x).className = "mapspan chest opened";
@@ -498,7 +499,6 @@ function bulkDCSelect() {
    const available = document.querySelectorAll('#submaplist li.DCavailable:not(.d-none)').length;
    const unavailable = document.querySelectorAll('#submaplist li.DCunavailable:not(.d-none)').length;
    const opened = document.querySelectorAll('#submaplist li.DCopened:not(.d-none)').length;
-
    let mode = 'none';
    if (available > 0) {
       mode = 'available';
@@ -508,6 +508,8 @@ function bulkDCSelect() {
       mode = 'none';
    } else if (opened === total - available) {
       mode = 'none';
+   } else if (unavailable === total - opened) {
+      mode = 'all';
    }
    // drawDungeonList();
    let selector = "#thisisinvalidselectornoonemayneverusethisasid";
@@ -649,7 +651,7 @@ function setGanonLogic(sender) {
 
 function setQuest(sender) {
    quest = sender.value;
-   if (quest == 'Master') {
+   if (quest == 'Master' || quest == 'Mixed') {
       questimg = 1;
       itemsMax.ForestKey = 6;
       itemsMax.FireKey = 5;
@@ -1056,10 +1058,10 @@ function updateGridItem(row, index) {
          itemGrid[row][index][3].style.backgroundImage = "";
    }
    if (questdungeons[item] !== undefined) {
-      if (quest == "Mixed") {
+      /*if (quest == "Mixed") {
          questimg = 1;
          itemGrid[row][index][0].style.backgroundImage = "url(images/" + questimg[questdungeons[item]] + ".png)";
-      } else if (quest == "Master") {
+      } else*/ if (quest == "Master" || quest == "Mixed") {
          itemGrid[row][index][0].style.backgroundImage = "url(images/MQ.png)";
       } else {
          questimg = 0;
@@ -1326,7 +1328,7 @@ function gridItemClick(row, col, corner) {
 function updateMap() {
    for (k = 0; k < chests.length; k++) {
       if (!chests[k].isOpened)
-         document.getElementById(k).className = "mapspan chest " + getDungeonAvailability(chests[k]);
+         document.getElementById(k).className = "mapspan chest " + checkChestAvailablity(chests[k]);
       if (chests[k].name.startsWith("Skulltula")) {
          if (skulltula === "Overworld" || skulltula === "All") {
             document.getElementById(k).classList.remove("d-none");
@@ -1358,7 +1360,7 @@ function updateMap() {
          }
          if (scrubs === "Scrubsanity") {
             for (var key in dungeons[k].scrublist) {
-               if (dungeons[k].chestlist.hasOwnProperty(key)) {
+               if (dungeons[k].scrublist.hasOwnProperty(key)) {
                   if (!dungeons[k].scrublist[key].isOpened && dungeons[k].scrublist[key].isAvailable())
                      DCcount++;
                }
@@ -1473,6 +1475,13 @@ function itemConfigClick(sender) {
    }
 }
 
+function checkChestAvailablity(chest) {
+   if (chest.isOpened) {
+      return "opened";
+   }
+   return chest.isAvailable();
+}
+
 function populateMapdiv() {
    var mapdiv = document.getElementById('mapdiv');
 
@@ -1487,8 +1496,9 @@ function populateMapdiv() {
       s.onmouseout = new Function('unhighlight(' + k + ')');
       s.style.left = chests[k].x;
       s.style.top = chests[k].y;
-      if (chests[k].isOpened)
+      if (chests[k].isOpened) {
          s.className = "mapspan chest opened";
+      }
       else
          s.className = "mapspan chest " + chests[k].isAvailable();
       if (chests[k].name.startsWith("Skulltula")) {
@@ -1685,12 +1695,13 @@ function getDungeonAvailability(dungeon) {
    }
 
    let availability = "possible";
-   if (unopened == 0)
+   if (unopened == 0) {
       availability = "opened"
-   if (canGet == unopened)
+   } else if(canGet == unopened) {
       availability = "available";
-   if (canGet == 0)
+   } else if(canGet == 0) {
       availability = "unavailable"
+   }
    return availability;
 }
 
