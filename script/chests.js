@@ -26,6 +26,7 @@ var dungeons = [
       name: "Kokiri Forest",
       x: "78.9%",
       y: "63.9%",
+      type: "overworld",
       chestlist: {
          ['Kokiri Sword Chest']: {
             isAvailable: function () {
@@ -93,6 +94,7 @@ var dungeons = [
       name: "Deku Tree",
       x: "88.0%",
       y: "48.5%",
+      type: "dungeon",
       chestlist: {
          ['Lobby Chest']: {
             isAvailable: function () {
@@ -184,6 +186,7 @@ var dungeons = [
       name: "Water Temple",
       x: "36.1%",
       y: "91.0%",
+      type: "dungeon",
       chestlist: {
          ['Compass Chest']: {
             isAvailable: function () {
@@ -293,6 +296,7 @@ var dungeons = [
       name: "Gerudo Training Ground",
       x: "20.7%",
       y: "16.4%",
+      type: "dungeon",
       chestlist: {
          ['Lobby Right Chest']: {
             isAvailable: function () {
@@ -423,6 +427,7 @@ var dungeons = [
       name: "Spirit Temple",
       x: "02.5%",
       y: "17.0%",
+      type: "dungeon",
       chestlist: {
          ['Child Switch Room']: {
             isAvailable: function () {
@@ -581,6 +586,7 @@ var dungeons = [
       name: "Bottom of the Well",
       x: "69.3%",
       y: "23.4%",
+      type: "dungeon",
       chestlist: {
          ['Front Left Hidden Wall']: {
             isAvailable: function () {
@@ -695,6 +701,7 @@ var dungeons = [
       name: "Shadow Temple",
       x: "79.7%",
       y: "19.5%",
+      type: "dungeon",
       chestlist: {
          ['Keese and Redead Room']: {
             isAvailable: function () {
@@ -839,6 +846,7 @@ var dungeons = [
       name: "Dodongo's Cavern",
       x: "60.6%",
       y: "08.4%",
+      type: "dungeon",
       chestlist: {
          ['Lobby Chest']: {
             isAvailable: function () {
@@ -959,6 +967,7 @@ var dungeons = [
       name: "Fire Temple",
       x: "65.4%",
       y: "02.0%",
+      type: "dungeon",
       chestlist: {
          ['Chest Near Boss']: {
             isAvailable: function () {
@@ -1088,6 +1097,7 @@ var dungeons = [
       name: "Jabu Jabu's Belly",
       x: "88.4%",
       y: "18.0%",
+      type: "dungeon",
       chestlist: {
          ['Boomerang Chest']: {
             isAvailable: function () {
@@ -1159,6 +1169,7 @@ var dungeons = [
       name: "Ice Cavern",
       x: "93.5%",
       y: "18.0%",
+      type: "dungeon",
       chestlist: {
          ['1st Chest']: {
             isAvailable: function () {
@@ -1228,6 +1239,7 @@ var dungeons = [
       name: "Forest Temple",
       x: "78.5%",
       y: "39.0%",
+      type: "dungeon",
       chestlist: {
          ['Lobby Chest']: {
             isAvailable: function () {
@@ -1352,6 +1364,7 @@ var dungeons = [
       name: "Ganon's Tower",
       x: "49.0%",
       y: "14.0%",
+      type: "dungeon",
       chestlist: {
          ['Forest Chest']: {
             isAvailable: function () {
@@ -1463,6 +1476,7 @@ var dungeons = [
       name: "The Market",
       x: "50.5%",
       y: "20.2%",
+      type: "overworld",
       chestlist: {
          ['Slingshot Mini Game']: {
             isAvailable: function () {
@@ -1535,6 +1549,7 @@ var dungeons = [
       name: "Temple of Time",
       x: "55.5%",
       y: "18.2%",
+      type: "overworld",
       chestlist: {
          ['Prelude of Light']: {
             isAvailable: function () {
@@ -1558,6 +1573,7 @@ var dungeons = [
       name: "Hyrule Castle",
       x: "44.0%",
       y: "14.0%",
+      type: "overworld",
       chestlist: {
          ['Malon\s Weird Egg']: {
             isAvailable: function () {
@@ -1620,6 +1636,7 @@ var dungeons = [
       name: "Kakariko Village",
       x: "65.4%",
       y: "22.0%",
+      type: "overworld",
       chestlist: {
          ['Skulltula House 10']: {
             isAvailable: function () {
@@ -1740,6 +1757,7 @@ var dungeons = [
       name: "Goron City",
       x: "70.0%",
       y: "06.3%",
+      type: "overworld",
       chestlist: {
          ['Link the Goron']: {
             isAvailable: function () {
@@ -1819,6 +1837,7 @@ var dungeons = [
       name: "Lost Woods",
       x: "75.3%",
       y: "47.0%",
+      type: "overworld",
       chestlist: {
          ['Deku Sale $40']: {
             isAvailable: function () {
@@ -1913,6 +1932,7 @@ var dungeons = [
       name: "Sacred Forest Meadow",
       x: "80.3%",
       y: "47.0%",
+      type: "overworld",
       chestlist: {
          ['Minuet of Forest']: {
             isAvailable: function () {
@@ -1967,6 +1987,7 @@ var dungeons = [
       name: "Zora's Domain",
       x: "92.9%",
       y: "34.5%",
+      type: "overworld",
       chestlist: {
          ['Diving Mini Game']: {
             isAvailable: function () {
@@ -2009,6 +2030,7 @@ var dungeons = [
       name: "Zora's Fountain",
       x: "92.9%",
       y: "30.5%",
+      type: "overworld",
       chestlist: {
          ['Zora Fairy Fountain']: {
             isAvailable: function () {
@@ -2066,6 +2088,7 @@ var dungeons = [
       name: "Death Mountain Trail",
       x: "62.0%",
       y: "13.7%",
+      type: "overworld",
       chestlist: {
          ['Cavern Roof Heart Piece']: {
             isAvailable: function () {
@@ -2133,6 +2156,7 @@ var dungeons = [
       name: "Death Mountain Crater",
       x: "65.4%",
       y: "09.0%",
+      type: "overworld",
       chestlist: {
          ['Bolero of Fire']: {
             isAvailable: function () {
@@ -2203,6 +2227,7 @@ var dungeons = [
       name: "Lon Lon Ranch",
       x: "47.4%",
       y: "45.6%",
+      type: "overworld",
       chestlist: {
          ['Talon\'s Cucco game']: {
             isAvailable: function () {
@@ -2265,6 +2290,7 @@ var dungeons = [
       name: "Zora's River",
       x: "78.7%",
       y: "29.5%",
+      type: "overworld",
       chestlist: {
          ['River Heart Piece 1']: {
             isAvailable: function () {
@@ -2344,6 +2370,7 @@ var dungeons = [
       name: "Lake Hylia",
       x: "40.0%",
       y: "81.0%",
+      type: "overworld",
       chestlist: {
          ['Child Fishing']: {
             isAvailable: function () {
@@ -2433,6 +2460,7 @@ var dungeons = [
       name: "Gerudo Valley",
       x: "19.0%",
       y: "31.5%",
+      type: "overworld",
       chestlist: {
          ['Crate Heart Piece']: {
             isAvailable: function () {
@@ -2497,6 +2525,7 @@ var dungeons = [
       name: "Gerudo Fortress",
       x: "15.5%",
       y: "16.4%",
+      type: "overworld",
       chestlist: {
          ['Fortress Rooftop Chest']: {
             isAvailable: function () {
@@ -2559,6 +2588,7 @@ var dungeons = [
       name: "Desert Colossus",
       x: "8.4%",
       y: "15.9%",
+      type: "overworld",
       chestlist: {
          ['Requiem of Spirit']: {
             isAvailable: function () {
@@ -2618,6 +2648,7 @@ var dungeons = [
       name: "Graveyard",
       x: "73.7%",
       y: "19.5%",
+      type: "overworld",
       chestlist: {
          ['Dampe Digging']: {
             isAvailable: function () {

@@ -39,6 +39,7 @@ var selected = {};
 var dungeonSelect = 0;
 var dungeonMarked = [];
 
+
 function setCookie(obj) {
    var d = new Date();
    d.setTime(d.getTime() + (365 * 24 * 60 * 60 * 1000));
@@ -352,7 +353,27 @@ function drawDungeonList() {
          if (dNone) s.classList.add("d-none");
          DClist.appendChild(s)
       }
-      if (skulltula === "Dungeons" || skulltula === "All") {
+      if ((skulltula === "Dungeons" || skulltula === "All") &&  dungeons[dungeonSelect].type === "dungeon"){
+         for (let key in dungeons[dungeonSelect].skulllist) {
+            let li = document.createElement('li');
+            li.style.cursor = 'pointer';
+            li.innerText = key;
+            if (dungeons[dungeonSelect].skulllist[key].isOpened) {
+               li.className = "DCopened";
+            } else if (dungeons[dungeonSelect].skulllist[key].isAvailable()) {
+               li.className = "DCavailable";
+            } else {
+               li.className = "DCunavailable";
+            }
+            li.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
+            li.onmouseover = new Function('highlightDungeonChest(this)');
+            li.onmouseout = new Function('unhighlightDungeonChest(this)');
+            li.setAttribute("data-type", "skull");
+            if (dNone) li.classList.add("d-none");
+            DClist.appendChild(li);
+         }
+      }
+      if ((skulltula === "Overworld" || skulltula === "All") &&  dungeons[dungeonSelect].type === "overworld"){
          for (let key in dungeons[dungeonSelect].skulllist) {
             let li = document.createElement('li');
             li.style.cursor = 'pointer';
@@ -416,7 +437,27 @@ function drawDungeonList() {
          s.setAttribute("data-type", "MQ");
          DClist.appendChild(s)
       }
-      if (skulltula === "Dungeons" || skulltula === "All") {
+      if ((skulltula === "Dungeons" || skulltula === "All") &&  dungeons[dungeonSelect].type === "dungeon"){
+         for (let key in dungeons[dungeonSelect].MQskulllist) {
+            let li = document.createElement('li');
+            li.style.cursor = 'pointer';
+            li.innerText = key;
+            if (dungeons[dungeonSelect].MQskulllist[key].isOpened) {
+               li.className = "DCopened";
+            } else if (dungeons[dungeonSelect].MQskulllist[key].isAvailable()) {
+               li.className = "DCavailable";
+            } else {
+               li.className = "DCunavailable";
+            }
+            li.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
+            li.onmouseover = new Function('highlightDungeonChest(this)');
+            li.onmouseout = new Function('unhighlightDungeonChest(this)');
+            li.setAttribute("data-type", "MQskull");
+            if (dNone) li.classList.add("d-none");
+            DClist.appendChild(li);
+         }
+      }
+      if ((skulltula === "Overworld" || skulltula === "All") && dungeons[dungeonSelect].type === "overworld" ) {
          for (let key in dungeons[dungeonSelect].MQskulllist) {
             let li = document.createElement('li');
             li.style.cursor = 'pointer';
@@ -573,6 +614,39 @@ function toggleSkullChest(sender, d, c) {
       sender.className = "DCavailable";
    } else {
       sender.className = "DCunavailable";
+   }
+   updateSkullIcon()
+
+}
+
+function getSelectedSkullsOnMap() {
+   let count = 0;
+   if (quest !== "Mixed") {
+      dungeons.forEach(function(dungeon) {
+         if (dungeon.skulllist) {
+            for (var key in dungeon.skulllist) {
+               if (dungeon.skulllist[key].isOpened) count++;
+            }
+         }
+         if (dungeon.MQskulllist) {
+            for (var key in dungeon.MQskulllist) {
+               if (dungeon.MQskulllist[key].isOpened) count++;
+            }
+         }
+      })
+   }
+   return count;
+}
+
+function updateSkullIcon() {
+   skullcount = (items["Skulltula"] + getSelectedSkullsOnMap()) % itemsMax.Skulltula;
+   itemGrid[7][8].item.style.backgroundImage = `url("images/Skulltula${skullcount}.png")`;
+   if (skullcount === 0) {
+      itemGrid[7][8].item.classList.remove("true")
+      itemGrid[7][8].item.classList.add("false")
+   } else {
+      itemGrid[7][8].item.classList.remove("false")
+      itemGrid[7][8].item.classList.add("true")
    }
 }
 
@@ -1080,6 +1154,9 @@ function updateGridItem(row, index) {
       else
          itemGrid[row][index][3].style.backgroundImage = "url(images/" + songimg[songs[item]] + ".png)";
    }
+   if (item === "Skulltula") {
+      updateSkullIcon()
+   }
 }
 
 function updateGridItemAll() {
@@ -1088,6 +1165,7 @@ function updateGridItemAll() {
          updateGridItem(r, c);
       }
    }
+
 }
 
 function setGridItem(item, row, index) {
@@ -1227,6 +1305,7 @@ function gridItemClick(row, col, corner) {
          itemGrid[row][col]['item'].style.border = '3px solid yellow';
          selected = {row: row, col: col};
       }
+
       return;
    }
 
@@ -1350,7 +1429,15 @@ function updateMap() {
                   DCcount++;
             }
          }
-         if (skulltula === "Dungeons" || skulltula === "All") {
+         if ((skulltula === "Dungeons" || skulltula === "All") && dungeons[k].type === "dungeon") {
+            for (var key in dungeons[k].skulllist) {
+               if (dungeons[k].skulllist.hasOwnProperty(key)) {
+                  if (!dungeons[k].skulllist[key].isOpened && dungeons[k].skulllist[key].isAvailable())
+                     DCcount++;
+               }
+            }
+         }
+         if ((skulltula === "Overworld" || skulltula === "All") && dungeons[k].type === "overworld") {
             for (var key in dungeons[k].skulllist) {
                if (dungeons[k].skulllist.hasOwnProperty(key)) {
                   if (!dungeons[k].skulllist[key].isOpened && dungeons[k].skulllist[key].isAvailable())
@@ -1402,6 +1489,7 @@ function updateMap() {
          }
          child = child.nextSibling;
       }
+      updateSkullIcon()
    }
 
    document.getElementById('submaparea').className = "DC" + getDungeonAvailability(dungeons[dungeonSelect]);
@@ -1546,7 +1634,15 @@ function populateMapdiv() {
          }
          if (skulltula === "Dungeons" || skulltula === "All") {
             for (var key in dungeons[k].skulllist) {
-               if (dungeons[k].skulllist.hasOwnProperty(key)) {
+               if (dungeons[k].type === "dungeon" &&dungeons[k].skulllist.hasOwnProperty(key)) {
+                  if (!dungeons[k].skulllist[key].isOpened && dungeons[k].skulllist[key].isAvailable())
+                     DCcount++;
+               }
+            }
+         }
+         if (skulltula === "Overworld" || skulltula === "All") {
+            for (var key in dungeons[k].skulllist) {
+               if (dungeons[k].type === "overworld" &&dungeons[k].skulllist.hasOwnProperty(key)) {
                   if (!dungeons[k].skulllist[key].isOpened && dungeons[k].skulllist[key].isAvailable())
                      DCcount++;
                }
@@ -1570,7 +1666,15 @@ function populateMapdiv() {
          }
          if (skulltula === "Dungeons" || skulltula === "All") {
             for (var key in dungeons[k].MQskulllist) {
-               if (dungeons[k].MQskulllist.hasOwnProperty(key)) {
+               if (dungeons[k].type === "dungeon" &&dungeons[k].MQskulllist.hasOwnProperty(key)) {
+                  if (!dungeons[k].MQskulllist[key].isOpened && dungeons[k].MQskulllist[key].isAvailable())
+                     DCcount++;
+               }
+            }
+         }
+         if (skulltula === "Overworld" || skulltula === "All") {
+            for (var key in dungeons[k].MQskulllist) {
+               if (dungeons[k].type === "overworld" &&dungeons[k].MQskulllist.hasOwnProperty(key)) {
                   if (!dungeons[k].MQskulllist[key].isOpened && dungeons[k].MQskulllist[key].isAvailable())
                      DCcount++;
                }
@@ -1645,11 +1749,16 @@ function getDungeonAvailability(dungeon) {
        for (let key in dungeon.chestlist) {
            checklist.chestlist[key] = dungeon.chestlist[key];
        }
-       if (skulltula === "Dungeons" || skulltula === "All") {
+       if ((skulltula === "Dungeons" || skulltula === "All") && dungeon.type === "dungeon") {
            for (let key in dungeon.skulllist) {
                checklist.skulllist[key] = dungeon.skulllist[key];
            }
        }
+      if ((skulltula === "Overworld" || skulltula === "All") && dungeon.type === "overworld") {
+         for (let key in dungeon.skulllist) {
+            checklist.skulllist[key] = dungeon.skulllist[key];
+         }
+      }
        if (scrubs === "Scrubsanity") {
            for (let key in dungeon.scrublist) {
                checklist.scrublist[key] = dungeon.scrublist[key];
@@ -1671,11 +1780,16 @@ function getDungeonAvailability(dungeon) {
        for (let key in dungeon.MQlist) {
            checklist.MQlist[key] = dungeon.MQlist[key];
        }
-       if (skulltula === "Dungeons" || skulltula === "All") {
+       if ((skulltula === "Dungeons" || skulltula === "All") && dungeon.type === "dungeon") {
            for (let key in dungeon.MQskulllist) {
                checklist.MQskulllist[key] = dungeon.MQskulllist[key];
            }
        }
+      if ((skulltula === "Overworld" || skulltula === "All") && dungeon.type === "overworld") {
+         for (let key in dungeon.MQskulllist) {
+            checklist.MQskulllist[key] = dungeon.MQskulllist[key];
+         }
+      }
        if (scrubs === "Scrubsanity") {
            for (let key in dungeon.MQscrublist) {
                checklist.MQscrublist[key] = dungeon.MQscrublist[key];
@@ -1730,6 +1844,7 @@ function populateItemconfig() {
          rowitem.style.backgroundImage = "url(images/" + key + itemsMax[key] + ".png)";
 
       }
+      rowitem.setAttribute("data-item-name", key)
       row.appendChild(rowitem);
    }
 }
