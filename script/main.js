@@ -529,6 +529,7 @@ function drawDungeonList() {
                })
             }
          }
+         updateGridItemAll();
       }
    }
 }
@@ -736,7 +737,7 @@ function setQuest(sender) {
       itemsMax.CastleKey = 3;
       itemsMax.WellKey = 2;
    } else if (quest == 'Mixed') {
-      questimg = 1;
+
    } else {
       questimg = 0;
       itemsMax.ForestKey = 5;
@@ -1132,10 +1133,14 @@ function updateGridItem(row, index) {
          itemGrid[row][index][3].style.backgroundImage = "";
    }
    if (questdungeons[item] !== undefined) {
-      /*if (quest == "Mixed") {
-         questimg = 1;
-         itemGrid[row][index][0].style.backgroundImage = "url(images/" + questimg[questdungeons[item]] + ".png)";
-      } else*/ if (quest == "Master" || quest == "Mixed") {
+      if (quest == "Mixed") {
+         const filter = document.getElementById('submaparea').getAttribute('data-filter');
+         if (filter === "master") {
+            itemGrid[row][index][0].style.backgroundImage = "url(images/MQ.png)";
+         } else {
+            itemGrid[row][index][0].style.backgroundImage = "";
+         }
+      } else if (quest == "Master") {
          itemGrid[row][index][0].style.backgroundImage = "url(images/MQ.png)";
       } else {
          questimg = 0;
@@ -1158,6 +1163,8 @@ function updateGridItem(row, index) {
       updateSkullIcon()
    }
 }
+
+
 
 function updateGridItemAll() {
    for (r = 0; r < 8; r++) {

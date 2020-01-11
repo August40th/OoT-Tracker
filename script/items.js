@@ -255,6 +255,8 @@ var itemsMax = {
     BossShadow:1,
     BossCastle:1,
     BigPoe:10,
-    
     MasterSword:1,
+};
+var itemsMaxMQ = {
+    ForestKey: 6,
 };
