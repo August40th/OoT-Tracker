@@ -1135,7 +1135,7 @@ function updateGridItem(row, index) {
    if (questdungeons[item] !== undefined) {
       if (quest == "Mixed") {
          const filter = document.getElementById('submaparea').getAttribute('data-filter');
-         if (filter === "master") {
+         if (filter === "master" && dungeons[dungeonSelect].requiredKey === item) {
             itemGrid[row][index][0].style.backgroundImage = "url(images/MQ.png)";
          } else {
             itemGrid[row][index][0].style.backgroundImage = "";

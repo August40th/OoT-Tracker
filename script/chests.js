@@ -290,7 +290,8 @@ var dungeons = [
       },
       canGetChest: function () {
          return generalCanGetChest(this.chestlist);
-      }
+      },
+      requiredKey: "WaterKey"
    },
    {
       name: "Gerudo Training Ground",
@@ -421,7 +422,8 @@ var dungeons = [
       },
       canGetChest: function () {
          return generalCanGetChest(this.chestlist);
-      }
+      },
+      requiredKey: "GTGKey"
    },
    {
       name: "Spirit Temple",
@@ -580,7 +582,8 @@ var dungeons = [
       },
       canGetChest: function () {
          return generalCanGetChest(this.chestlist);
-      }
+      },
+      requiredKey: "SpiritKey"
    },
    {
       name: "Bottom of the Well",
@@ -695,7 +698,8 @@ var dungeons = [
       },
       canGetChest: function () {
          return generalCanGetChest(this.chestlist);
-      }
+      },
+      requiredKey: "WellKey"
    },
    {
       name: "Shadow Temple",
@@ -840,7 +844,8 @@ var dungeons = [
       },
       canGetChest: function () {
          return generalCanGetChest(this.chestlist);
-      }
+      },
+      requiredKey: "ShadowKey"
    },
    {
       name: "Dodongo's Cavern",
@@ -961,7 +966,7 @@ var dungeons = [
       },
       canGetChest: function () {
          return generalCanGetChest(this.chestlist);
-      }
+      },
    },
    {
       name: "Fire Temple",
@@ -1091,7 +1096,8 @@ var dungeons = [
       },
       canGetChest: function () {
          return generalCanGetChest(this.chestlist);
-      }
+      },
+      requiredKey: "FireKey"
    },
    {
       name: "Jabu Jabu's Belly",
@@ -1358,7 +1364,8 @@ var dungeons = [
       },
       canGetChest: function () {
          return generalCanGetChest(this.chestlist);
-      }
+      },
+      requiredKey: "ForestKey"
    },
    {
       name: "Ganon's Tower",
@@ -1470,7 +1477,8 @@ var dungeons = [
       },
       canGetChest: function () {
          return generalCanGetChest(this.chestlist);
-      }
+      },
+      requiredKey: "CastleKey"
    },
    {
       name: "The Market",
