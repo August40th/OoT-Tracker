@@ -1369,7 +1369,7 @@ var dungeons = [
    },
    {
       name: "Ganon's Tower",
-      x: "49.0%",
+      x: "50.5%",
       y: "14.0%",
       type: "dungeon",
       chestlist: {
@@ -1482,7 +1482,7 @@ var dungeons = [
    },
    {
       name: "The Market",
-      x: "50.5%",
+      x: "49.0%",
       y: "20.2%",
       type: "overworld",
       chestlist: {
@@ -2027,7 +2027,7 @@ var dungeons = [
    {
       name: "Zora's Fountain",
       x: "92.9%",
-      y: "30.5%",
+      y: "32.0%",
       type: "overworld",
       chestlist: {
          ['Zora Fairy Fountain']: {
