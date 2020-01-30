@@ -2796,7 +2796,7 @@ var chests = [
    {
       name: "Gold Gauntlets Fairy",
       x: "55.5%",
-      y: "16.0%",
+      y: "13.5%",
       isAvailable: function () {
          if ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword && items.Glove >= 3 && items.Ocarina && items.ZeldasLullaby))
             return "available";
