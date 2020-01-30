@@ -2793,7 +2793,7 @@ var chests = [
          return "unavailable";
       }
    },
-   [
+   {
       name: "Gold Gauntlets Fairy",
       x: "55.5%",
       y: "16.0%",
