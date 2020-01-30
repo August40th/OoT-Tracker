@@ -1511,11 +1511,6 @@ var dungeons = [
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Lens && items.Magic);
             }
          },
-         ['Gold Gauntlets Fairy']: {
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword && items.Glove >= 3 && items.Ocarina && items.ZeldasLullaby);
-            }
-         },
          ['10 Big Poes']: {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword && items.Bow && items.EponasSong && items.Bottle);
@@ -2794,6 +2789,16 @@ var chests = [
       y: "25.0%",
       isAvailable: function () {
          if ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword && (((items.EponasSong || isFortressOpen()) && items.HoverBoots) || items.Hookshot >= 2) && (items.Magic && (items.Dins || (items.Bow && items.Fire)))))
+            return "available";
+         return "unavailable";
+      }
+   },
+   ['
+      name: "Gold Gauntlets Fairy",
+      x: "55.5%",
+      y: "16.0%",
+      isAvailable: function () {
+         if (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword && items.Glove >= 3 && items.Ocarina && items.ZeldasLullaby)
             return "available";
          return "unavailable";
       }
