@@ -726,7 +726,7 @@ function setGanonLogic(sender) {
 
 function setQuest(sender) {
    quest = sender.value;
-   if (quest == 'Master' || quest == 'Mixed') {
+   if (quest == 'Master') {
       questimg = 1;
       itemsMax.ForestKey = 6;
       itemsMax.FireKey = 5;
@@ -737,7 +737,14 @@ function setQuest(sender) {
       itemsMax.CastleKey = 3;
       itemsMax.WellKey = 2;
    } else if (quest == 'Mixed') {
-
+      itemsMax.ForestKey = 6;
+      itemsMax.FireKey = 8;
+      itemsMax.WaterKey = 6;
+      itemsMax.SpiritKey = 7;
+      itemsMax.ShadowKey = 6;
+      itemsMax.GTGKey = 9;
+      itemsMax.CastleKey = 3;
+      itemsMax.WellKey = 3;
    } else {
       questimg = 0;
       itemsMax.ForestKey = 5;
