@@ -971,7 +971,7 @@ var dungeons = [
    {
       name: "Fire Temple",
       x: "65.4%",
-      y: "02.0%",
+      y: "04.0%",
       type: "dungeon",
       chestlist: {
          ['Chest Near Boss']: {
