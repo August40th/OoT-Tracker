@@ -1948,10 +1948,10 @@ function isKeysanity() {
 }
 
 function init() {
+   createItemTracker(document.getElementById('itemdiv'));
    loadCookie();
    saveCookie();
    
-   createItemTracker(document.getElementById('itemdiv'));
    populateMapdiv();
    populateItemconfig();
 
