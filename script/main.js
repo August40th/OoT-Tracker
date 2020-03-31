@@ -335,7 +335,6 @@ function drawDungeonList() {
       if (quest === "Mixed" && listFilter === "master") {
          dNone = true;
       }
-      if (quest === "Vanilla"){
          for (var key in dungeons[dungeonSelect].chestlist) {
             var s = document.createElement('li');
             s.innerHTML = key
@@ -354,7 +353,6 @@ function drawDungeonList() {
             if (dNone) s.classList.add("d-none");
             DClist.appendChild(s)
          }
-      }
       if ((skulltula === "Dungeons" || skulltula === "All") &&  dungeons[dungeonSelect].type === "dungeon"){
          for (let key in dungeons[dungeonSelect].skulllist) {
             let li = document.createElement('li');
