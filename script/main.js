@@ -482,7 +482,7 @@ function drawDungeonList() {
             DClist.appendChild(li);
          }
       }
-      if ((skulltula === "Overworld" || skulltula === "All") && dungeons[dungeonSelect].type === "overworld" ) {
+      if ((skulltula === "Overworld" || skulltula === "All") && dungeons[dungeonSelect].type === "overworld"  && quest === "Master") {
          for (let key in dungeons[dungeonSelect].skulllist) {
             let li = document.createElement('li');
             li.style.cursor = 'pointer';
