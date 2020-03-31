@@ -157,7 +157,7 @@ var dungeons = [
       MQlist: {
          'Check 1 ': {
             isAvailable: function () {
-               return 'possible';
+               return "possible";
             },
          },
       },
