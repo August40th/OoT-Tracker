@@ -417,7 +417,7 @@ function drawDungeonList() {
    if (quest === "Master" || quest === "Mixed") {
       dNone = false;
       if (quest === "Mixed" && listFilter === "vanilla") {
-         dNone = true;
+         dNone = false;
       }
       for (var key in dungeons[dungeonSelect].MQlist) {
          var s = document.createElement('li');
@@ -1792,9 +1792,7 @@ function getDungeonAvailability(dungeon) {
    }
    if (quest === "Master" || quest === "Mixed") {
        for (let key in dungeon.MQlist) {
-          if (dungeon.type === "dungeon") {
-               checklist.MQlist[key] = dungeon.MQlist[key];
-          }
+           checklist.MQlist[key] = dungeon.MQlist[key];
        }
        if ((skulltula === "Dungeons" || skulltula === "All") && dungeon.type === "dungeon") {
            for (let key in dungeon.MQskulllist) {
