@@ -1948,12 +1948,13 @@ function isKeysanity() {
 }
 
 function init() {
+   loadCookie();
+   saveCookie();
+   
    createItemTracker(document.getElementById('itemdiv'));
    populateMapdiv();
    populateItemconfig();
 
-   loadCookie();
-   saveCookie();
 }
 
 function preloader() {
