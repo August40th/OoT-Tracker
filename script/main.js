@@ -1792,7 +1792,9 @@ function getDungeonAvailability(dungeon) {
    }
    if (quest === "Master" || quest === "Mixed") {
        for (let key in dungeon.MQlist) {
-           checklist.MQlist[key] = dungeon.MQlist[key];
+          if (dungeon.type === "dungeon") {
+               checklist.MQlist[key] = dungeon.MQlist[key];
+          }
        }
        if ((skulltula === "Dungeons" || skulltula === "All") && dungeon.type === "dungeon") {
            for (let key in dungeon.MQskulllist) {
