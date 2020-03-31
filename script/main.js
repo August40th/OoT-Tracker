@@ -419,7 +419,6 @@ function drawDungeonList() {
       if (quest === "Mixed" && listFilter === "vanilla") {
          dNone = true;
       }
-      }
       if (dungeons[dungeonSelect].type === "overworld"){
          for (var key in dungeons[dungeonSelect].chestlist) {
             var s = document.createElement('li');
