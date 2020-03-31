@@ -1497,6 +1497,12 @@ function updateMap() {
                   DCcount++;
             }
          }
+         for (var key in dungeons[k].chestlist) {
+            if (dungeons[k].chestlist.hasOwnProperty(key)) {
+               if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable())
+                  DCcount++;
+            }
+         }
          if (skulltula === "Dungeons" || skulltula === "All") {
             for (var key in dungeons[k].MQskulllist) {
                if (dungeons[k].MQskulllist.hasOwnProperty(key)) {
