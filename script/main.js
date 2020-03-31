@@ -335,7 +335,7 @@ function drawDungeonList() {
       if (quest === "Mixed" && listFilter === "master") {
          dNone = true;
       }
-      if (quest === "Vanilla" && dungeons[dungeonSelect].type === "overworld"){
+      if (quest === "Vanilla"){
          for (var key in dungeons[dungeonSelect].chestlist) {
             var s = document.createElement('li');
             s.innerHTML = key
