@@ -418,10 +418,10 @@ function drawDungeonList() {
    }
    if (quest === "Master" || quest === "Mixed") {
       dNone = false;
-      if (quest === "Mixed" && listFilter === "vanilla") {
-         dNone = true;
-      }
       if (dungeons[dungeonSelect].type === "overworld"){
+         if (quest === "Mixed" && listFilter === "master") {
+         dNone = true;
+         }
          for (var key in dungeons[dungeonSelect].chestlist) {
             var s = document.createElement('li');
             s.innerHTML = key
@@ -442,6 +442,9 @@ function drawDungeonList() {
          }
       }
       if (dungeons[dungeonSelect].type === "dungeon"){
+         if (quest === "Mixed" && listFilter === "vanilla") {
+         dNone = true;
+         }
          for (var key in dungeons[dungeonSelect].MQlist) {
             var s = document.createElement('li');
             s.innerHTML = key
@@ -482,13 +485,13 @@ function drawDungeonList() {
          }
       }
       if ((skulltula === "Overworld" || skulltula === "All") && dungeons[dungeonSelect].type === "overworld" ) {
-         for (let key in dungeons[dungeonSelect].MQskulllist) {
+         for (let key in dungeons[dungeonSelect].skulllist) {
             let li = document.createElement('li');
             li.style.cursor = 'pointer';
             li.innerText = key;
-            if (dungeons[dungeonSelect].MQskulllist[key].isOpened) {
+            if (dungeons[dungeonSelect].skulllist[key].isOpened) {
                li.className = "DCopened";
-            } else if (dungeons[dungeonSelect].MQskulllist[key].isAvailable()) {
+            } else if (dungeons[dungeonSelect].skulllist[key].isAvailable()) {
                li.className = "DCavailable";
             } else {
                li.className = "DCunavailable";
@@ -496,7 +499,7 @@ function drawDungeonList() {
             li.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
             li.onmouseover = new Function('highlightDungeonChest(this)');
             li.onmouseout = new Function('unhighlightDungeonChest(this)');
-            li.setAttribute("data-type", "MQskull");
+            li.setAttribute("data-type", "skull");
             if (dNone) li.classList.add("d-none");
             DClist.appendChild(li);
          }
