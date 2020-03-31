@@ -1949,12 +1949,12 @@ function isKeysanity() {
 
 function init() {
    createItemTracker(document.getElementById('itemdiv'));
-   loadCookie();
-   saveCookie();
-   
+   quest == null;
    populateMapdiv();
    populateItemconfig();
-
+   
+   loadCookie();
+   saveCookie();
 }
 
 function preloader() {
