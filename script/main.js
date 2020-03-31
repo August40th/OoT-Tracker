@@ -1508,7 +1508,7 @@ function updateMap() {
                }
             }
          }
-         if (skulltula === "Overworld" || skulltula === "All") {
+         if ((skulltula === "Overworld" || skulltula === "All") && quest === "Master") {
             for (var key in dungeons[k].skulllist) {
                if (dungeons[k].skulllist.hasOwnProperty(key)) {
                   if (!dungeons[k].skulllist[key].isOpened && dungeons[k].skulllist[key].isAvailable())
