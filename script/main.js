@@ -417,7 +417,10 @@ function drawDungeonList() {
    if (quest === "Master" || quest === "Mixed") {
       dNone = false;
       if (quest === "Mixed" && listFilter === "vanilla") {
-         dNone = false;
+         dNone = true;
+      }
+      if (quest === "Master" && listFilter === "vanilla") {
+         dNone = true;
       }
       for (var key in dungeons[dungeonSelect].MQlist) {
          var s = document.createElement('li');
