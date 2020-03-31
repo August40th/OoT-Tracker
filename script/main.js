@@ -1500,10 +1500,20 @@ function updateMap() {
                   DCcount++;
             }
          }
-         for (var key in dungeons[k].chestlist) {
-            if (dungeons[k].chestlist.hasOwnProperty(key)) {
-               if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable())
-                  DCcount++;
+         if (quest === "Master"){
+            for (var key in dungeons[k].chestlist) {
+               if (dungeons[k].chestlist.hasOwnProperty(key)) {
+                  if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable())
+                     DCcount++;
+               }
+            }
+         }
+         if (skulltula === "Overworld" || skulltula === "All") {
+            for (var key in dungeons[k].skulllist) {
+               if (dungeons[k].skulllist.hasOwnProperty(key)) {
+                  if (!dungeons[k].skulllist[key].isOpened && dungeons[k].skulllist[key].isAvailable())
+                     DCcount++;
+               }
             }
          }
          if (skulltula === "Dungeons" || skulltula === "All") {
