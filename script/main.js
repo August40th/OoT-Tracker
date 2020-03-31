@@ -335,23 +335,25 @@ function drawDungeonList() {
       if (quest === "Mixed" && listFilter === "master") {
          dNone = true;
       }
-      for (var key in dungeons[dungeonSelect].chestlist) {
-         var s = document.createElement('li');
-         s.innerHTML = key
-         if (dungeons[dungeonSelect].chestlist[key].isOpened)
-            s.className = "DCopened";
-         else if (dungeons[dungeonSelect].chestlist[key].isAvailable())
-            s.className = "DCavailable";
-         else
-            s.className = "DCunavailable";
+      if (quest === "Vanilla" && dungeons[dungeonSelect].type === "overworld"){
+         for (var key in dungeons[dungeonSelect].chestlist) {
+            var s = document.createElement('li');
+            s.innerHTML = key
+            if (dungeons[dungeonSelect].chestlist[key].isOpened)
+               s.className = "DCopened";
+            else if (dungeons[dungeonSelect].chestlist[key].isAvailable())
+               s.className = "DCavailable";
+            else
+               s.className = "DCunavailable";
 
-         s.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
-         s.onmouseover = new Function('highlightDungeonChest(this)');
-         s.onmouseout = new Function('unhighlightDungeonChest(this)');
-         s.style.cursor = "pointer";
-         s.setAttribute("data-type", "chest");
-         if (dNone) s.classList.add("d-none");
-         DClist.appendChild(s)
+            s.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
+            s.onmouseover = new Function('highlightDungeonChest(this)');
+            s.onmouseout = new Function('unhighlightDungeonChest(this)');
+            s.style.cursor = "pointer";
+            s.setAttribute("data-type", "chest");
+            if (dNone) s.classList.add("d-none");
+            DClist.appendChild(s)
+         }
       }
       if ((skulltula === "Dungeons" || skulltula === "All") &&  dungeons[dungeonSelect].type === "dungeon"){
          for (let key in dungeons[dungeonSelect].skulllist) {
