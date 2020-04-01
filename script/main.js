@@ -327,6 +327,7 @@ function clickDungeon(d) {
 }
 
 function drawDungeonList() {
+   DCcount = 0;
    var DClist = document.getElementById('submaplist');
    DClist.innerHTML = "";
    listFilter = document.getElementById('submaparea').getAttribute('data-filter');
