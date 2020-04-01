@@ -1043,122 +1043,177 @@ var dungeons = [
       y: "16.4%",
       type: "dungeon",
       chestlist: {
-         ['Lobby Right Chest']: {
+         'Lobby Right Chest': {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Bow;
             }
          },
-         ['Lobby Left Chest']: {
+         'Lobby Left Chest': {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Bow;
             }
          },
-         ['Stalfos Room']: {
+         'Stalfos Room': {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen());
             }
          },
-         ['Wolfos Room']: {
+         'Wolfos Room': {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Hookshot;
             }
          },
-         ['Like Like Open Chest']: {
+         'Like Like Open Chest': {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Hookshot && items.Glove >= 2;
             }
          },
-         ['Like Like Room 1st Chest']: {
+         'Like Like Room 1st Chest': {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Hookshot && items.Glove >= 2;
             }
          },
-         ['Like Like Room 2nd Chest']: {
+         'Like Like Room 2nd Chest': {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Hookshot && items.Glove >= 2;
             }
          },
-         ['Like Like Invisible Chest']: {
+         'Like Like Invisible Chest': {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Hookshot && items.Glove >= 2;
             }
          },
-         ['Cyclops Statue Eyes']: {
+         'Cyclops Statue Eyes': {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Hookshot && items.Bow && (items.SongofTime || items.HoverBoots || items.Hookshot >= 2 || (items.Hookshot));
             }
          },
-         ['Cyclops Room Top Room']: {
+         'Cyclops Room Top Room': {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Hookshot && items.Bow;
             }
          },
-         ['Fire Enemies Clear']: {
+         'Fire Enemies Clear': {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Hookshot;
             }
          },
-         ['Fire Enemies Fire Chest']: {
+         'Fire Enemies Fire Chest': {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Hookshot;
             }
          },
-         ['Maze Right Open Key']: {
+         'Maze Right Freestanding': {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && ((items.Ocarina && items.SongofTime) || items.GTGKey >= 2);
             }
          },
-         ['Maze Right Central Chest']: {
+         'Maze Right Central Chest': {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && ((items.Ocarina && items.SongofTime) || items.GTGKey >= 2);
             }
          },
-         ['Maze Right Side Chest']: {
+         'Maze Right Side Chest': {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && ((items.Ocarina && items.SongofTime) || items.GTGKey >= 2);
             }
          },
-         ['Underwater Silver Rupees']: {
+         'Underwater Silver Rupees': {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Hookshot && items.Ocarina && items.SongofTime && items.IronBoots;
             }
          },
-         ['Beamos Room']: {
+         'Beamos Room': {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && (items.Bombs || (items.Bombchu && BombchuLogic));
             }
          },
-         ['Hidden Ceiling Chest']: {
+         'Hidden Ceiling Chest': {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.GTGKey && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen());
             }
          },
-         ['Maze Left First Chest']: {
+         'Maze Left First Chest': {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.GTGKey >= 2 && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen());
             }
          },
-         ['Maze Left Second Chest']: {
+         'Maze Left Second Chest': {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.GTGKey >= 4 && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen());
             }
          },
-         ['Maze Left Third Chest']: {
+         'Maze Left Third Chest': {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.GTGKey >= 5 && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen());
             }
          },
-         ['Maze Big Chest']: {
+         'Maze Big Chest': {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.GTGKey >= 7 && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen());
             }
          },
       },
       MQlist: {
-         'Check 1 ': {
+         'Lobby Left': {
             isAvailable: function () {
-               return true;
-            },
+               return items.Membership; }
+         },
+         'Lobby Right': {
+            isAvailable: function () {
+               return items.Membership; }
+         },
+         'White Iron Knuckle': {
+            isAvailable: function () {
+               return items.Membership; }
+         },
+         'Skulltula and Stalfos': {
+            isAvailable: function () {
+               return items.Membership; }
+         },
+         'Silver Block Chest': {
+            isAvailable: function () {
+               return items.Membership; }
+         },
+         'Crystal Switch Chest': {
+            isAvailable: function () {
+               return items.Membership; }
+         },
+         'Black Iron Knuckle': {
+            isAvailable: function () {
+               return items.Membership; }
+         },
+         'Fire Circle Chest': {
+            isAvailable: function () {
+               return items.Membership; }
+         },
+         'Underwater Silver Rupees': {
+            isAvailable: function () {
+               return items.Membership; }
+         },
+         'Maze Right Chest x2': {
+            isAvailable: function () {
+               return items.Membership; }
+         },
+         'Dinosaur Room': {
+            isAvailable: function () {
+               return items.Membership; }
+         },
+         'Maze Left Hidden Ceiling': {
+            isAvailable: function () {
+               return items.Membership; }
+         },
+         'Maze Left Unlocked Chests x2': {
+            isAvailable: function () {
+               return items.Membership; }
+         },
+         'Maze Left Locked Chest': {
+            isAvailable: function () {
+               return items.Membership items.GTGKey >= 1; }
+         },
+         'Maze Left Final Chest': {
+            isAvailable: function () {
+               return items.Membership && items.Hammer && items.GTGKey >= 3; }
          },
       },
       isBeatable: function () {
