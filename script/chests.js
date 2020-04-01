@@ -86,31 +86,31 @@ var dungeons = [
       y: "48.5%",
       type: "dungeon",
       chestlist: {
-         ['Lobby Chest']: {
+         'Lobby Chest': {
             isAvailable: function () {
                return true; }
          },
-         ['2nd Floor Big Chest']: {
+         '2nd Floor Big Chest': {
             isAvailable: function () {
                return items.DekuShield; }
          },
-         ['2nd Floor Side Chest']: {
+         '2nd Floor Side Chest': {
             isAvailable: function () {
                return items.DekuShield; }
          },
-         ['Top Floor Big Chest']: {
+         'Top Floor Big Chest': {
             isAvailable: function () {
                return true; }
          },
-         ['Top Floor Side Chest']: {
+         'Top Floor Side Chest': {
             isAvailable: function () {
                return true; }
          },
-         ['Basement Chest']: {
+         'Basement Chest': {
             isAvailable: function () {
                return true; }
          },
-         ['Queen Gohma']: {
+         'Queen Gohma': {
             isAvailable: function () {
                return items.DekuShield && (items.Slingshot || (items.Stick && items.Nuts));
             }
@@ -131,7 +131,7 @@ var dungeons = [
          },
          'Basement Bomb Wall Skulltula': {
             isAvailable: function () {
-               return items.Boomerang && items.Bombs; },
+               return items.Boomerang && items.Bombs; }
          },
       },
       MQlist: {
@@ -167,6 +167,7 @@ var dungeons = [
          'Queen Gohma': {
             isAvailable: function () {
                return items.DekuShield; }
+         },
       },
       MQskulllist: {
          'Lobby Skull in Crate': {
@@ -193,7 +194,6 @@ var dungeons = [
                return items.Slingshot; }
          },
       },
-      }
       isBeatable: function () {
          return this.canGetChest();
       },
