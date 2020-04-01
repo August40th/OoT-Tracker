@@ -1209,7 +1209,7 @@ var dungeons = [
          },
          'Maze Left Locked Chest': {
             isAvailable: function () {
-               return items.Membership items.GTGKey >= 1; }
+               return items.Membership && items.GTGKey >= 1; }
          },
          'Maze Left Final Chest': {
             isAvailable: function () {
