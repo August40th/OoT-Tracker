@@ -1842,8 +1842,8 @@ function getDungeonAvailability(dungeon) {
            }
        }
       if ((skulltula === "Overworld" || skulltula === "All") && dungeon.type === "overworld") {
-         for (let key in dungeon.MQskulllist) {
-            checklist.MQskulllist[key] = dungeon.MQskulllist[key];
+         for (let key in dungeon.skulllist) {
+            checklist.MQskulllist[key] = dungeon.skulllist[key];
          }
       }
        if (scrubs === "Scrubsanity") {
