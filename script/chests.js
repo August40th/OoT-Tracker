@@ -425,7 +425,7 @@ var dungeons = [
          },
          'Lobby Cow Chest': {
             isAvailable: function () {
-               return (items.Bombs || items.Scale) && items.ZoraLetter && items.SlingShot; 
+               return (items.Bombs || items.Scale) && items.ZoraLetter && items.Slingshot; 
             }
          },
          'Underwater Cow Chest': {
@@ -434,7 +434,7 @@ var dungeons = [
          },
          'Elevator Room Lower Chest': {
             isAvailable: function () {
-               return (items.Bombs || items.Scale) && items.ZoraLetter && items.SlingShot; 
+               return (items.Bombs || items.Scale) && items.ZoraLetter && items.Slingshot; 
             }
          },
          'Basement Chest x2': {
