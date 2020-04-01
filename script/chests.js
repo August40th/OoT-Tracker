@@ -28,59 +28,49 @@ var dungeons = [
       y: "63.9%",
       type: "overworld",
       chestlist: {
-         ['Kokiri Sword Chest']: {
+         'Kokiri Sword Chest': {
             isAvailable: function () {
-               return true
-            }
+               return true; }
          },
-         ['Mido\'s House x4 Chests']: {
+         'Mido\'s House x4 Chests': {
             isAvailable: function () {
-               return true
-            }
+               return true; }
          },
-         ['Fairy Ocarina']: {
+         'Fairy Ocarina': {
             isAvailable: function () {
-               return true
-            }
+               return true; }
          },
-         ['Song of Storms Grotto']: {
+         'Song of Storms Grotto': {
             isAvailable: function () {
-               return items.Ocarina && items.SongofStorms;
-            }
+               return items.Ocarina && items.SongofStorms; }
          },
       },
       skulllist: {
          'Soil Patch Skulltula': {
             isAvailable: function () {
-               return items.Bottle;
-            },
+               return items.Bottle; }
          },
          'Child Know it All Bros Skulltula': {
             isAvailable: function () {
-               return true;
-            },
+               return true; }
          },
          'Adult Twin House Roof Skulltula': {
             isAvailable: function () {
-               return items.Hookshot;
-            },
+               return items.Hookshot; }
          },
       },
       gossiplist: {
          'Infront Storms Grotto': {
             isAvailable: function () {
-               return true
-            }
+               return true; }
          },
          'Left of Deku Tree': {
             isAvailable: function () {
-               return true
-            }
+               return true; }
          },
          'Behind Deku Tree': {
             isAvailable: function () {
-               return true
-            }
+               return true; }
          },
       },
       isBeatable: function () {
@@ -98,33 +88,27 @@ var dungeons = [
       chestlist: {
          ['Lobby Chest']: {
             isAvailable: function () {
-               return true
-            }
+               return true; }
          },
          ['2nd Floor Big Chest']: {
             isAvailable: function () {
-               return items.DekuShield;
-            }
+               return items.DekuShield; }
          },
          ['2nd Floor Side Chest']: {
             isAvailable: function () {
-               return items.DekuShield;
-            }
+               return items.DekuShield; }
          },
          ['Top Floor Big Chest']: {
             isAvailable: function () {
-               return true
-            }
+               return true; }
          },
          ['Top Floor Side Chest']: {
             isAvailable: function () {
-               return true
-            }
+               return true; }
          },
          ['Basement Chest']: {
             isAvailable: function () {
-               return true
-            }
+               return true; }
          },
          ['Queen Gohma']: {
             isAvailable: function () {
@@ -135,43 +119,78 @@ var dungeons = [
       skulllist: {
          'Top Floor Skulltula': {
             isAvailable: function () {
-               return true;
-            },
+               return true; }
          },
          'Basement 1st Skulltula': {
             isAvailable: function () {
-               return true;
-            },
+               return true; }
          },
          'Basement 2nd Skulltula': {
             isAvailable: function () {
-               return true;
-            },
+               return true; }
          },
          'Basement Bomb Wall Skulltula': {
             isAvailable: function () {
-               return items.Boomerang && items.Bombs;
-            },
+               return items.Boomerang && items.Bombs; },
          },
       },
       MQlist: {
-         'Check 1 ': {
+         'Lobby Chest': {
             isAvailable: function () {
-               return "possible";
-            },
+               return true; }
          },
+         'Top Floor Torch chest': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Top Floor Larva kill': {
+            isAvailable: function () {
+               return true; }
+         },
+         '2nd Floor Chest': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Basement Chest 1': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Spiked Log Open Chest': {
+            isAvailable: function () {
+               return items.Slingshot; }
+         },
+         'Song of Time Chest': {
+            isAvailable: function () {
+               return items.SlingShot && items.Ocarina && items.SongofTime; 
+            }
+         },
+         'Queen Gohma': {
+            isAvailable: function () {
+               return items.DekuShield; }
       },
       MQskulllist: {
-         'Skull 1 ': {
+         'Lobby Skull in Crate': {
             isAvailable: function () {
-               return true;
-            },
+               return true; }
+         },
+         '2nd Floor Skulltule': {
+            isAvailable: function () {
+               return items.Bombchu; }
+         },
+         'Basement Ceiling Skulltule': {
+            isAvailable:function () {
+               return items.Boomerang && items.Ocarina && items.SongofTime;
+            }
+         },
+         'Back Room Skulltula': {
+            isAvailable: function () {
+               return items.Bombs; }
          },
       },
       MQscrublist: {
-         'Basement Scrub ': {
+         'Basement Scrub': {
             isAvailable: function () {
-               return true;
+               return items.Slingshot;
             },
          },
       },
