@@ -190,16 +190,16 @@ var dungeons = [
       MQscrublist: {
          'Basement Scrub': {
             isAvailable: function () {
-               return items.Slingshot;
-            },
+               return items.Slingshot; }
          },
       },
+      }
       isBeatable: function () {
          return this.canGetChest();
       },
       canGetChest: function () {
          return generalCanGetChest(this.chestlist);
-      }
+      },
    },
    {
       name: "Water Temple",
