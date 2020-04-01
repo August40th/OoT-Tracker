@@ -18,7 +18,7 @@ bosskeys = 'Dungeons';
 skulltula = 'Off';
 scrubs = 'Off';
 showprizes = false;
-quest = 'null;
+quest = null;
 
 OcarinaShuffle = false;
 SongShuffle = false;
