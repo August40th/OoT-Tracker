@@ -1894,6 +1894,7 @@ function getDungeonAvailability(dungeon) {
                }
            }
        });
+   }
       if (quest === "Master") {
          if (dungeon.type === "overworld"){
             for (let key in dungeon.chestlist) {
