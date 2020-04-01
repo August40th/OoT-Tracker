@@ -417,8 +417,11 @@ function drawDungeonList() {
    }
    if (quest === "Master" || quest === "Mixed") {
       dNone = false;
-      if (quest === "Mixed" && listFilter === "master") {
+      if (quest === "Mixed" && listFilter === "master" && dungeons[dungeonSelect].type === "overworld") {
          dNone = true;
+         }
+      if (quest === "Mixed" && listFilter === "master" && dungeons[dungeonSelect].type === "dungeon") {
+         dNone = false;
          }
       if (quest === "Master" && dungeons[dungeonSelect].type === "overworld"){
          for (var key in dungeons[dungeonSelect].chestlist) {
