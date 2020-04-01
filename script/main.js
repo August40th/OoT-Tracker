@@ -503,7 +503,7 @@ function drawDungeonList() {
             DClist.appendChild(li);
          }
       }
-      if (scrubs === 'Scrubsanity' && dungeons[dungeonSelect].MQscrublist) {
+      if (scrubs === 'Scrubsanity' && dungeons[dungeonSelect].MQscrublist && dungeons[dungeonSelect].type === "dungeon") {
          for (let key in dungeons[dungeonSelect].MQscrublist) {
             let li = document.createElement('li');
             li.style.cursor = 'pointer';
@@ -519,6 +519,26 @@ function drawDungeonList() {
             li.onmouseover = new Function('highlightDungeonChest(this)');
             li.onmouseout = new Function('unhighlightDungeonChest(this)');
             li.setAttribute("data-type", "MQscrub");
+            if (dNone) li.classList.add("d-none");
+            DClist.appendChild(li);
+         }
+      }
+      if (scrubs === 'Scrubsanity' && dungeons[dungeonSelect].scrublist && dungeons[dungeonSelect].type === "overworld") {
+         for (let key in dungeons[dungeonSelect].scrublist) {
+            let li = document.createElement('li');
+            li.style.cursor = 'pointer';
+            li.innerText = key;
+            if (dungeons[dungeonSelect].scrublist[key].isOpened) {
+               li.className = "DCopened";
+            } else if (dungeons[dungeonSelect].scrublist[key].isAvailable()) {
+               li.className = "DCavailable";
+            } else {
+               li.className = "DCunavailable";
+            }
+            li.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
+            li.onmouseover = new Function('highlightDungeonChest(this)');
+            li.onmouseout = new Function('unhighlightDungeonChest(this)');
+            li.setAttribute("data-type", "scrub");
             if (dNone) li.classList.add("d-none");
             DClist.appendChild(li);
          }
@@ -1511,7 +1531,7 @@ function updateMap() {
          }
          if ((skulltula === "Overworld" || skulltula === "All") && quest === "Master") {
             for (var key in dungeons[k].skulllist) {
-               if (dungeons[k].skulllist.hasOwnProperty(key)) {
+               if (dungeons[k].skulllist.hasOwnProperty(key) && dungeons[k].type === "overworld") {
                   if (!dungeons[k].skulllist[key].isOpened && dungeons[k].skulllist[key].isAvailable())
                      DCcount++;
                }
@@ -1529,6 +1549,12 @@ function updateMap() {
             for (var key in dungeons[k].MQscrublist) {
                if (dungeons[k].MQscrublist.hasOwnProperty(key)) {
                   if (!dungeons[k].MQscrublist[key].isOpened && dungeons[k].MQscrublist[key].isAvailable())
+                     DCcount++;
+               }
+            }
+            for (var key in dungeons[k].scrublist) {
+               if (dungeons[k].scrublist.hasOwnProperty(key) && dungeons[k].type === "overworld") {
+                  if (!dungeons[k].scrublist[key].isOpened && dungeons[k].scrublist[key].isAvailable())
                      DCcount++;
                }
             }
@@ -1678,9 +1704,9 @@ function populateMapdiv() {
       if (dungeonMarked.indexOf(k) > -1) {
          s.className += " wayofhero";
       }
-      drawDungeonList();
+
       var DCcount = 0;
-      drawDungeonList();
+
       if (quest === "Vanilla" || quest === "Mixed") {
          for (var key in dungeons[k].chestlist) {
             if (dungeons[k].chestlist.hasOwnProperty(key)) {
@@ -1730,7 +1756,7 @@ function populateMapdiv() {
          }
          if (skulltula === "Overworld" || skulltula === "All") {
             for (var key in dungeons[k].MQskulllist) {
-               if (dungeons[k].type === "overworld" &&dungeons[k].MQskulllist.hasOwnProperty(key)) {
+               if (dungeons[k].type === "overworld" && dungeons[k].MQskulllist.hasOwnProperty(key)) {
                   if (!dungeons[k].MQskulllist[key].isOpened && dungeons[k].MQskulllist[key].isAvailable())
                      DCcount++;
                }
@@ -1740,6 +1766,12 @@ function populateMapdiv() {
             for (var key in dungeons[k].MQscrublist) {
                if (dungeons[k].MQscrublist.hasOwnProperty(key)) {
                   if (!dungeons[k].MQscrublist[key].isOpened && dungeons[k].MQscrublist[key].isAvailable())
+                     DCcount++;
+               }
+            }
+            for (var key in dungeons[k].scrublist) {
+               if (dungeons[k].scrublist.hasOwnProperty(key) && dungeons[k].type === "overworld") {
+                  if (!dungeons[k].scrublist[key].isOpened && dungeons[k].scrublist[key].isAvailable())
                      DCcount++;
                }
             }
@@ -1846,7 +1878,7 @@ function getDungeonAvailability(dungeon) {
             checklist.skulllist[key] = dungeon.skulllist[key];
          }
       }
-       if (scrubs === "Scrubsanity") {
+       if (scrubs === "Scrubsanity" && dungeon.type === "dungeon) {
            for (let key in dungeon.MQscrublist) {
                checklist.MQscrublist[key] = dungeon.MQscrublist[key];
            }
@@ -1863,6 +1895,10 @@ function getDungeonAvailability(dungeon) {
            }
        });
       if (quest === "Master") {
+         if (dungeon.type === "overworld"){
+            for (let key in dungeon.chestlist) {
+               checklist.chestlist[key] = dungeon.chestlist[key];
+            }
          ['chestlist', 'skulllist', 'scrublist'].forEach(function (key) {
            let list = checklist[key];
            for (let key in list) {
