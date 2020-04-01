@@ -827,6 +827,96 @@ var dungeons = [
       requiredKey: "ForestKey"
    },
    {
+      name: "Ice Cavern",
+      x: "93.5%",
+      y: "18.0%",
+      type: "dungeon",
+      chestlist: {
+         ['1st Chest']: {
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots);
+            }
+         },
+         ['Alcove Chest']: {
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots);
+            }
+         },
+         ['Alcove Heart Piece']: {
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots);
+            }
+         },
+         ['White Wolfos']: {
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots);
+            }
+         },
+         ['Song from Sheik']: {
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots);
+            }
+         },
+      },
+      skulllist: {
+         'Above Silver Rupee Skulltula': {
+            isAvailable: function () {
+               return items.Hookshot && (items.Bombs || items.Scale) && items.ZoraLetter && items.Ocarina && items.ZeldasLullaby;
+            },
+         },
+         'Above Heart Piece Skulltula': {
+            isAvailable: function () {
+               return items.Hookshot && (items.Bombs || items.Scale) && items.ZoraLetter && items.Ocarina && items.ZeldasLullaby;
+            },
+         },
+         'Ice Block Puzzle Skulltula': {
+            isAvailable: function () {
+               return items.Hookshot && (items.Bombs || items.Scale) && items.ZoraLetter && items.Ocarina && items.ZeldasLullaby;
+            },
+         },
+      },
+      MQlist: {
+         'Alcove Switch Chest': {
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots);
+            }
+         },
+         'Pilar Chest': {
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots);
+            }
+         },
+         'Frozen Freestanding': {
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots);
+            }
+         },
+         'Stalfos Chest': {
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots);
+            }
+         },
+         'Song from Sheik': {
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots);
+            }
+         },
+      },
+      MQskulllist: {
+         'Skull 1 ': {
+            isAvailable: function () {
+               return true;
+            },
+         },
+      },
+      isBeatable: function () {
+         return this.canGetChest();
+      },
+      canGetChest: function () {
+         return generalCanGetChest(this.chestlist);
+      }
+   },
+   {
       name: "Water Temple",
       x: "36.1%",
       y: "91.0%",
@@ -1505,76 +1595,6 @@ var dungeons = [
          return generalCanGetChest(this.chestlist);
       },
       requiredKey: "FireKey"
-   },
-   {
-      name: "Ice Cavern",
-      x: "93.5%",
-      y: "18.0%",
-      type: "dungeon",
-      chestlist: {
-         ['1st Chest']: {
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots);
-            }
-         },
-         ['Alcove Chest']: {
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots);
-            }
-         },
-         ['Alcove Heart Piece']: {
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots);
-            }
-         },
-         ['White Wolfos']: {
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots);
-            }
-         },
-         ['Sheilk in Ice Cavern']: {
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots);
-            }
-         },
-      },
-      skulllist: {
-         'Above Silver Rupee Skulltula': {
-            isAvailable: function () {
-               return items.Hookshot && (items.Bombs || items.Scale) && items.ZoraLetter && items.Ocarina && items.ZeldasLullaby;
-            },
-         },
-         'Above Heart Piece Skulltula': {
-            isAvailable: function () {
-               return items.Hookshot && (items.Bombs || items.Scale) && items.ZoraLetter && items.Ocarina && items.ZeldasLullaby;
-            },
-         },
-         'Ice Block Puzzle Skulltula': {
-            isAvailable: function () {
-               return items.Hookshot && (items.Bombs || items.Scale) && items.ZoraLetter && items.Ocarina && items.ZeldasLullaby;
-            },
-         },
-      },
-      MQlist: {
-         'Check 1 ': {
-            isAvailable: function () {
-               return true;
-            },
-         },
-      },
-      MQskulllist: {
-         'Skull 1 ': {
-            isAvailable: function () {
-               return true;
-            },
-         },
-      },
-      isBeatable: function () {
-         return this.canGetChest();
-      },
-      canGetChest: function () {
-         return generalCanGetChest(this.chestlist);
-      }
    },
    {
       name: "Ganon's Tower",
