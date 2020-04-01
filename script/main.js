@@ -620,16 +620,8 @@ function bulkDCSelect() {
       const filter = document.getElementById("submaparea").getAttribute("data-filter");
       if (filter === 'vanilla') {
          selector = selector + ':not([data-type^=MQ])';
-         if (dungeons[dungeonSelect] === dungeons[2]){
-            itemsMax.WaterKey = 6;
-            items.WaterKey.[questimg] = 0;
-         }
       }  else if (filter === 'master') {
          selector = selector + '[data-type^=MQ]';
-         if (dungeons[dungeonSelect] === dungeons[2]){
-            itemsMax.WaterKey = 2;
-            items.WaterKey.[questimg] = 1;
-         }
       }
    }
    document.querySelectorAll(selector).forEach(function (dungeon) {
@@ -796,7 +788,7 @@ function setQuest(sender) {
    } else if (quest == 'Mixed') {
       itemsMax.ForestKey = 6;
       itemsMax.FireKey = 8;
-      //itemsMax.WaterKey = 6;
+      itemsMax.WaterKey = 6;
       itemsMax.SpiritKey = 7;
       itemsMax.ShadowKey = 6;
       itemsMax.GTGKey = 9;
