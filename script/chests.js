@@ -368,6 +368,130 @@ var dungeons = [
          return generalCanGetChest(this.chestlist);
       },
    },
+   { name: "Jabu Jabu's Belly",
+      x: "88.4%",
+      y: "18.0%",
+      type: "dungeon",
+      chestlist: {
+         'StingRay Chest': {
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && (items.Slingshot || items.Boomerang || items.Bombs || (items.Bombchu && BombchuLogic));
+            }
+         },
+         'Tentacle Chest': {
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && items.Boomerang;
+            }
+         },
+         'Bubble Pop Chest': {
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && items.Boomerang;
+            }
+         },
+         'Barinade': {
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && items.Boomerang;
+            }
+         },
+      },
+      skulllist: {
+         'Water Switch Skulltula': {
+            isAvailable: function () {
+               return (items.Bombs || items.Scale) && items.ZoraLetter; }
+         },
+         'Before Big Octo x2 Skulltula': {
+            isAvailable: function () {
+               return (items.Bombs || items.Scale) && items.ZoraLetter && items.Boomerang;
+            }
+         },
+         'Before Brainade Skulltula': {
+            isAvailable: function () {
+               return (items.Bombs || items.Scale) && items.ZoraLetter && items.Boomerang;
+            }
+         },
+      },
+      scrublist: {
+         'Basement Dive to Scrub': {
+            isAvailable: function () {
+               return ((items.Bombs && items.ZeldasLullaby && items.Ocarina) || items.Scale) && items.ZoraLetter && (items.Slingshot || items.Bombs || items.Boomerang);
+            }
+         },
+      },
+      MQlist: {
+         'Lobby Switch Chest': {
+            isAvailable: function () {
+               return (items.Bombs || items.Scale) && items.ZoraLetter && items.Bombs;
+            },
+         },
+         'Lobby Cow Chest': {
+            isAvailable: function () {
+               return (items.Bombs || items.Scale) && items.ZoraLetter && items.SlingShot; 
+            }
+         },
+         'Underwater Cow Chest': {
+            isAvailable: function () {
+               return (items.Bombs || items.Scale) && items.ZoraLetter && items.Slingshot; }
+         },
+         'Elevator Room Lower Chest': {
+            isAvailable: function () {
+               return (items.Bombs || items.Scale) && items.ZoraLetter && items.SlingShot; 
+            }
+         },
+         'Basement Chest x2': {
+            isAvailable: function () {
+               return (items.Bombs || items.Scale) && items.ZoraLetter && items.Slingshot; }
+         },
+         'Basement Open Chest': {
+            isAvailable: function () {
+               return (items.Bombs || items.Scale) && items.ZoraLetter; }
+         },
+         'Basement Battle Chest': {
+            isAvailable: function () {
+               return (items.Bombs || items.Scale) && items.ZoraLetter; }
+         },
+         'Falling Like Like Chest': {
+            isAvailable: function () {
+               return (items.Bombs || items.Scale) && items.ZoraLetter && items.Slingshot && items.Boomerang; }
+         },
+         'Elevator Room Upper Chest': {
+            isAvailable: function () {
+               return (items.Bombs || items.Scale) && items.ZoraLetter && items.Slingshot && items.Boomerang; }
+         },
+         'Chest Near Boss Door': {
+            isAvailable: function () {
+               return (items.Bombs || items.Scale) && items.ZoraLetter && items.Slingshot && items.Boomerang; }
+         },
+         'Barinade': {
+            isAvailable: function () {
+               return (items.Bombs || items.Scale) && items.ZoraLetter && items.Slingshot && items.Boomerang; }
+         },
+      },
+      MQskulllist: {
+         'Song of Time Skulltula': {
+            isAvailable: function () {
+               return (items.Bombs || items.Scale) && items.ZoraLetter && items.Slingshot && items.Ocarina && items.SongofTime;
+            },
+         },
+         'Bubble Battle Skulltule': {
+            isAvailable: function () {
+               return (items.Bombs || items.Scale) && items.ZoraLetter && items.Slingshot && items.Boomerang; }
+         },
+         'Invisible Enemies Skulltula': {
+            isAvailable: function () {
+               return (items.Bombs || items.Scale) && items.ZoraLetter && items.Slingshot && items.Boomerang; }
+         },
+         'Skulltula Near Boos Door': {
+            isAvailable: function () {
+               return (items.Bombs || items.Scale) && items.ZoraLetter && items.Slingshot && items.Boomerang; }
+         },
+      },
+      isBeatable: function () {
+         return this.canGetChest();
+      },
+      canGetChest: function () {
+         return generalCanGetChest(this.chestlist);
+      }
+   },
    {
       name: "Water Temple",
       x: "36.1%",
@@ -1163,78 +1287,6 @@ var dungeons = [
          return generalCanGetChest(this.chestlist);
       },
       requiredKey: "FireKey"
-   },
-   {
-      name: "Jabu Jabu's Belly",
-      x: "88.4%",
-      y: "18.0%",
-      type: "dungeon",
-      chestlist: {
-         ['Boomerang Chest']: {
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && (items.Slingshot || items.Boomerang || items.Bombs || (items.Bombchu && BombchuLogic));
-            }
-         },
-         ['Map Chest']: {
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && items.Boomerang;
-            }
-         },
-         ['Compass Chest']: {
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && items.Boomerang;
-            }
-         },
-         ['Barinade']: {
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && items.Boomerang;
-            }
-         },
-      },
-      skulllist: {
-         'Water Switch Skulltula': {
-            isAvailable: function () {
-               return (items.Bombs || items.Scale) && items.ZoraLetter
-            }
-         },
-         'Before Big Octo x2 Skulltula': {
-            isAvailable: function () {
-               return (items.Bombs || items.Scale) && items.ZoraLetter && items.Boomerang
-            }
-         },
-         'Before Brainade Skulltula': {
-            isAvailable: function () {
-               return (items.Bombs || items.Scale) && items.ZoraLetter && items.Boomerang
-            }
-         },
-      },
-      scrublist: {
-         'Basement Dive to Scrub': {
-            isAvailable: function () {
-               return ((items.Bombs && items.ZeldasLullaby && items.Ocarina) || items.Scale) && items.ZoraLetter && (items.Slingshot || items.Bombs || items.Boomerang);
-            },
-         },
-      },
-      MQlist: {
-         'Check 1 ': {
-            isAvailable: function () {
-               return true;
-            },
-         },
-      },
-      MQskulllist: {
-         'Skull 1 ': {
-            isAvailable: function () {
-               return true;
-            },
-         },
-      },
-      isBeatable: function () {
-         return this.canGetChest();
-      },
-      canGetChest: function () {
-         return generalCanGetChest(this.chestlist);
-      }
    },
    {
       name: "Ice Cavern",
