@@ -161,7 +161,7 @@ var dungeons = [
          },
          'Song of Time Chest': {
             isAvailable: function () {
-               return items.SlingShot && items.Ocarina && items.SongofTime; 
+               return items.Slingshot && items.Ocarina && items.SongofTime; 
             }
          },
          'Queen Gohma': {
