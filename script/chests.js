@@ -2161,7 +2161,7 @@ var dungeons = [
       skulllist: {
          'Tree by Great Fairy Skulltula': {
             isAvailable: function () {
-               return items.ZoraLetter && ((items.Bombs && items.Ocarina && itemsZeldasLullaby) || items.Scale);
+               return items.ZoraLetter && ((items.Bombs && items.Ocarina && items.ZeldasLullaby) || items.Scale);
             },
          },
          'Stand on the Log Skulltula': {
