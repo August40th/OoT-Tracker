@@ -1900,6 +1900,9 @@ function getDungeonAvailability(dungeon) {
             for (let key in dungeon.chestlist) {
                checklist.chestlist[key] = dungeon.chestlist[key];
             }
+            for (let key in dungeon.scrublist) {
+               checklist.scrublist[key] = dungeon.scrublist[key];
+            }
          ['chestlist', 'skulllist', 'scrublist'].forEach(function (key) {
            let list = checklist[key];
            for (let key in list) {
