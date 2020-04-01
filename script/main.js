@@ -622,13 +622,13 @@ function bulkDCSelect() {
          selector = selector + ':not([data-type^=MQ])';
          if (dungeons[dungeonSelect] === dungeons[2]){
             itemsMax.WaterKey = 6;
-            items.questdungeons[3][questimg] = 0;
+            items.questdungeons[3].[questimg] = 0;
          }
       }  else if (filter === 'master') {
          selector = selector + '[data-type^=MQ]';
          if (dungeons[dungeonSelect] === dungeons[2]){
             itemsMax.WaterKey = 2;
-            items.questdungeons[3][questimg] = 1;
+            items.questdungeons[3].[questimg] = 1;
          }
       }
    }
