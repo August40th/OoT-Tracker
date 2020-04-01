@@ -523,7 +523,7 @@ function drawDungeonList() {
             DClist.appendChild(li);
          }
       }
-      if (scrubs === 'Scrubsanity' && dungeons[dungeonSelect].scrublist && dungeons[dungeonSelect].type === "overworld") {
+      if (scrubs === 'Scrubsanity' && dungeons[dungeonSelect].scrublist && dungeons[dungeonSelect].type === "overworld"  && quest === "Master") {
          for (let key in dungeons[dungeonSelect].scrublist) {
             let li = document.createElement('li');
             li.style.cursor = 'pointer';
