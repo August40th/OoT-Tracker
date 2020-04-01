@@ -257,7 +257,7 @@ var dungeons = [
          },
          'Top of Central Pillar Skulltula': {
             isAvailable: function () {
-               return items.IronBoots && (items.WaterKey && items.Ocarina && itmes.ZeldasLullaby) || (items.Bow && items.Ocarina && items.ZeldasLullaby) && items.Hookshot >= 2;
+               return items.IronBoots && (items.WaterKey && items.Ocarina && items.ZeldasLullaby) || (items.Bow && items.Ocarina && items.ZeldasLullaby) && items.Hookshot >= 2;
             }
          },
          'Platform Room to Dark Link': {
