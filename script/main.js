@@ -1523,7 +1523,7 @@ function updateMap() {
          }
          if (quest === "Master"){
             for (var key in dungeons[k].chestlist) {
-               if (dungeons[k].chestlist.hasOwnProperty(key)) {
+               if (dungeons[k].chestlist.hasOwnProperty(key) && dungepms[k].type === "overworld") {
                   if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable())
                      DCcount++;
                }
@@ -1743,6 +1743,12 @@ function populateMapdiv() {
          for (var key in dungeons[k].MQlist) {
             if (dungeons[k].MQlist.hasOwnProperty(key)) {
                if (!dungeons[k].MQlist[key].isOpened && dungeons[k].MQlist[key].isAvailable())
+                  DCcount++;
+            }
+         }
+         for (var key in dungeons[k].chestlist) {
+            if (dungeons[k].chestlist.hasOwnProperty(key) && dungeons[k].type === "overworld" && quest === "Master") {
+               if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable())
                   DCcount++;
             }
          }
