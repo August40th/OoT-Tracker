@@ -1843,7 +1843,7 @@ function getDungeonAvailability(dungeon) {
        }
       if ((skulltula === "Overworld" || skulltula === "All") && dungeon.type === "overworld") {
          for (let key in dungeon.skulllist) {
-            checklist.MQskulllist[key] = dungeon.skulllist[key];
+            checklist.skulllist[key] = dungeon.skulllist[key];
          }
       }
        if (scrubs === "Scrubsanity") {
@@ -1862,6 +1862,19 @@ function getDungeonAvailability(dungeon) {
                }
            }
        });
+      if (quest === "Master") {
+         ['chestlist', 'skulllist', 'scrublist'].forEach(function (key) {
+           let list = checklist[key];
+           for (let key in list) {
+               if (!list[key].isOpened) {
+                   unopened++;
+               }
+               if (!list[key].isOpened && list[key].isAvailable()) {
+                   canGet++;
+               }
+           }
+       });
+         )
    }
 
    let availability = "possible";
