@@ -791,7 +791,7 @@ var dungeons = [
          },
          'Phantom Ganon': {
             isAvailable: function () {
-               return items.Hookshot && items.Glove && items.ForestKey >= 6 && items.Bow && items.ForestBoss; }
+               return items.Hookshot && items.Glove && items.ForestKey >= 6 && items.Bow && items.BossForest; }
          },
       },
       MQskulllist: {
