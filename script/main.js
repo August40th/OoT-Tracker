@@ -631,6 +631,7 @@ function bulkDCSelect() {
             items.questdungeons[3].[questimg] = 1;
          }
       }
+      }
    }
    document.querySelectorAll(selector).forEach(function (dungeon) {
       let itemType = dungeon.getAttribute("data-type") + "list";
