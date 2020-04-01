@@ -1878,7 +1878,7 @@ function getDungeonAvailability(dungeon) {
             checklist.skulllist[key] = dungeon.skulllist[key];
          }
       }
-       if (scrubs === "Scrubsanity" && dungeon.type === "dungeon) {
+       if (scrubs === "Scrubsanity" && dungeon.type === "dungeon") {
            for (let key in dungeon.MQscrublist) {
                checklist.MQscrublist[key] = dungeon.MQscrublist[key];
            }
