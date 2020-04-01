@@ -903,10 +903,20 @@ var dungeons = [
          },
       },
       MQskulllist: {
-         'Skull 1 ': {
+         'Red Ice Skulltula': {
             isAvailable: function () {
-               return true;
-            },
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots) && items.SongofTime;
+            }
+         },
+         'Scarecrow Skulltula': {
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots);
+            }
+         },
+         'Crystal Switch Skulltula': {
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots);
+            }
          },
       },
       isBeatable: function () {
