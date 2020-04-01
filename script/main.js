@@ -18,7 +18,7 @@ bosskeys = 'Dungeons';
 skulltula = 'Off';
 scrubs = 'Off';
 showprizes = false;
-quest = null;
+quest = 'Vanilla';
 
 OcarinaShuffle = false;
 SongShuffle = false;
@@ -70,7 +70,7 @@ var cookieDefault = {
    mZoom: 100,
    mPos: 0,
    glogic: 'Open',
-   qlogic: null,
+   qlogic: 'Vanilla',
    flogic: 'Default',
    carp: 1,
    smallk: 'Dungeons',
