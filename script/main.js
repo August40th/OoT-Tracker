@@ -1874,7 +1874,7 @@ function getDungeonAvailability(dungeon) {
                }
            }
        });
-         )
+      }
    }
 
    let availability = "possible";
