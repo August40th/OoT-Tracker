@@ -1678,9 +1678,9 @@ function populateMapdiv() {
       if (dungeonMarked.indexOf(k) > -1) {
          s.className += " wayofhero";
       }
-      DrawDungeonList();
+      drawDungeonList();
       var DCcount = 0;
-      DrawDungeonList();
+      drawDungeonList();
       if (quest === "Vanilla" || quest === "Mixed") {
          for (var key in dungeons[k].chestlist) {
             if (dungeons[k].chestlist.hasOwnProperty(key)) {
