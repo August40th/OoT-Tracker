@@ -1523,7 +1523,7 @@ function updateMap() {
          }
          if (quest === "Master"){
             for (var key in dungeons[k].chestlist) {
-               if (dungeons[k].chestlist.hasOwnProperty(key) && dungepms[k].type === "overworld") {
+               if (dungeons[k].chestlist.hasOwnProperty(key) && dungeons[k].type === "overworld") {
                   if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable())
                      DCcount++;
                }
