@@ -319,9 +319,7 @@ function clickDungeon(d) {
 
    document.getElementById('submaparea').innerHTML = dungeons[dungeonSelect].name;
    document.getElementById('submaparea').className = "DC" + getDungeonAvailability(dungeons[dungeonSelect]);
-   if (quest === "Mixed") {
-      document.getElementById('submaparea').setAttribute('data-filter', "vanilla");
-   }
+   
    drawDungeonList();
    updateMap();
 }
