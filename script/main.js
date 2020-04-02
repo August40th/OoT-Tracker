@@ -549,7 +549,7 @@ function drawDungeonList() {
       const submaparea = document.getElementById("submaparea");
       const submaplist = document.getElementById("submaplist");
       const selected = document.getElementById("dungeonSelect")
-      var sellectedaray = document.getElementById("dungeons");
+      var sellectedarray = document.getElementById("dungeons");
       if (!submaparea.getAttribute("data-filter")) {
          submaparea.setAttribute("data-filter", "vanilla");
       }
@@ -559,7 +559,7 @@ function drawDungeonList() {
             if (submaparea.getAttribute("data-filter") === "vanilla") {
                submaparea.setAttribute("data-filter", "master");
                
-               dungeons[dungeonSelect].setAttribute("data-filter", "master");
+               selectedarray[selected].setAttribute("data-filter", "master");
                submaparea.name = submaparea.name + " MQ";
                
                submaplist.childNodes.forEach(function(item, index) {
