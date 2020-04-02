@@ -29,7 +29,7 @@ var dungeons = [
       chestlist: {
          'Kokiri Sword Chest': {
             isAvailable: function () {
-               return true; }
+               return "possible"; }
          },
          'Mido\'s House x4 Chests': {
             isAvailable: function () {
