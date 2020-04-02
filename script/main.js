@@ -548,8 +548,6 @@ function drawDungeonList() {
    if (quest === "Mixed") {
       const submaparea = document.getElementById("submaparea");
       const submaplist = document.getElementById("submaplist");
-      const selected = document.getElementById("dungeonSelect")
-      var sellectedarray = document.getElementById("dungeons");
       if (!submaparea.getAttribute("data-filter")) {
          submaparea.setAttribute("data-filter", "vanilla");
       }
@@ -558,8 +556,8 @@ function drawDungeonList() {
          if (document.querySelectorAll("#submaplist .d-none").length) {
             if (submaparea.getAttribute("data-filter") === "vanilla") {
                submaparea.setAttribute("data-filter", "master");
-               
-               selectedarray[selected].setAttribute("data-filter", "master");
+               if (dungeons[dungeonSelect].getAttribute("data-filter") === "master"); {
+                  dungeons[dungeonSelect].setAttribute("data-filter", "master");}
                submaparea.name = submaparea.name + " MQ";
                
                submaplist.childNodes.forEach(function(item, index) {
