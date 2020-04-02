@@ -548,8 +548,8 @@ function drawDungeonList() {
    if (quest === "Mixed") {
       const submaparea = document.getElementById("submaparea");
       const submaplist = document.getElementById("submaplist");
-      const dungeonSelect = document.getElementById("dungeonSelect")
-      var dungeons = document.getElementById("dungeons");
+      const selected = document.getElementById("dungeonSelect")
+      var sellectedaray = document.getElementById("dungeons");
       if (!submaparea.getAttribute("data-filter")) {
          submaparea.setAttribute("data-filter", "vanilla");
       }
