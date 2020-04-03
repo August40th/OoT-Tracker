@@ -55,7 +55,7 @@ var dungeons = [
          },
          'Adult Twin House Roof Skulltula': {
             isAvailable: function () {
-               return items.Hookshot; }
+               return items.MasterSword items.Hookshot; }
          },
       },
       gossiplist: {
@@ -539,12 +539,12 @@ var dungeons = [
          },
          'Locked Pits': {
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.SongofStorms && items.WellKey >= 1;
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.SongofStorms && (items.WellKey >= 1 || smallkeys === "Remove");
             }
          },
          'Like Like Chest': {
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.SongofStorms && items.WellKey >= 1;
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.SongofStorms && (items.WellKey >= 1 || smallkeys === "Remove");
             }
          },
          'Basement Chest': {
@@ -571,17 +571,17 @@ var dungeons = [
       skulllist: {
          'West Key Door Skulltula': {
             isAvailable: function () {
-               return items.Boomerang && items.Ocarina && items.SongofStorms && items.WellKey >= 3;
+               return items.Boomerang && items.Ocarina && items.SongofStorms && (items.WellKey >= 3 || smallkeys === "Remove");
             },
          },
          'East Key Door Skulltula': {
             isAvailable: function () {
-               return items.Boomerang && items.Ocarina && items.SongofStorms && items.WellKey >= 3;
+               return items.Boomerang && items.Ocarina && items.SongofStorms && (items.WellKey >= 3 || smallkeys === "Remove");
             },
          },
          'Like Like Skulltula': {
             isAvailable: function () {
-               return items.Boomerang && items.Ocarina && items.SongofStorms && items.WellKey >= 3;
+               return items.Boomerang && items.Ocarina && items.SongofStorms && (items.WellKey >= 3 || smallkeys === "Remove");
             },
          },
       },
@@ -604,7 +604,7 @@ var dungeons = [
          },
          'Basement Chest': {
             isAvailable: function () {
-               return items.Ocarina && items.SongofStorms && items.ZeldasLullaby && items.Bombs && items.Slingshot && items.WellKey >= 1; }
+               return items.Ocarina && items.SongofStorms && items.ZeldasLullaby && items.Bombs && items.Slingshot && (items.WellKey >= 1 || smallkeys === "Remove"); }
          },
       },
       MQskulllist: {
@@ -614,11 +614,11 @@ var dungeons = [
          },
          'Coffin Room Skulltula': {
             isAvailable: function () {
-               return items.Ocarina && items.SongofStorms && items.ZeldasLullaby && items.Bombs && items.WellKey >= 1; }
+               return items.Ocarina && items.SongofStorms && items.ZeldasLullaby && items.Bombs && (items.WellKey >= 3 || smallkeys === "Remove"); }
          },
          'Basement Skulltula': {
             isAvailable: function () {
-               return items.Ocarina && items.SongofStorms && items.ZeldasLullaby && items.Bombs && items.Slingshot && items.WellKey >= 1; }
+               return items.Ocarina && items.SongofStorms && items.ZeldasLullaby && items.Bombs && items.Slingshot && (items.WellKey >= 3 || smallkeys === "Remove"); }
          },
       },
       isBeatable: function () {
