@@ -826,6 +826,148 @@ var dungeons = [
       },
       requiredKey: "ForestKey"
    },
+   { name: "Fire Temple",
+      x: "65.4%",
+      y: "04.0%",
+      type: "dungeon",
+      chestlist: {
+         'Chest Near Boss': {
+            isAvailable: function () {
+               return items.MasterSword && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.BoleroofFire || ((items.HoverBoots || items.Hookshot) && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Hammer || items.Bow || (items.Magic && items.Dins))));
+            }
+         },
+         'Flare Dancer Chest': {
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)) && items.Hammer;
+            }
+         },
+         'Gilded Chest': {
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)) && items.Hammer;
+            }
+         },
+         'Lava Room Open Chest': {
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.FireKey && (items.BoleroofFire || (items.HoverBoots || items.Hookshot));
+            }
+         },
+         'Lava Room Bombable Wall': {
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.FireKey && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)) && (items.Bombs || (items.Bombchu && BombchuLogic));
+            }
+         },
+         'Maze Lower Chest': {
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.FireKey >= 3 && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)) && items.Glove;
+            }
+         },
+         'Maze Side Room': {
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.FireKey >= 3 && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)) && items.Glove;
+            }
+         },
+         'Eye Switch Chest': {
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && ((items.FireKey >= 4 && items.Bow) || items.FireKey >= 5) && (items.BoleroofFire || items.HoverBoots || items.Hookshot) && items.Glove;
+            }
+         },
+         'Maze Upper Chest': {
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.FireKey >= 5 && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)) && items.Glove;
+            }
+         },
+         'Maze Bombable Pit': {
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.FireKey >= 5 && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)) && items.Glove && (items.Bombs || (items.Bombchu && BombchuLogic));
+            }
+         },
+         'Scarecrow Chest': {
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.FireKey >= 5 && items.Glove && items.Hookshot && items.Ocarina && items.Scarecrow >= 2;
+            }
+         },
+         'Flame Maze Side Room': {
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.FireKey >= 6 && (items.BoleroofFire || items.HoverBoots || items.Hookshot) && items.Glove;
+            }
+         },
+         'Song of Time Chest': {
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.FireKey >= 7 || (items.FireKey >= 6 && items.HoverBoots)) && (items.BoleroofFire || items.HoverBoots || items.Hookshot) && items.Glove && items.Hammer;
+            }
+         },
+         'Topmost Chest': {
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.FireKey >= 6 && (items.BoleroofFire || items.HoverBoots || items.Hooksho) && items.Glove && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Hammer);
+            }
+         },
+         'Volvagia': {
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.BossFire && ((items.GoronTunic || items.Bottle) && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)) && items.Hammer && (items.HoverBoots || (items.Glove && (items.Bombs || items.Hookshot) && items.Bombs)));
+            }
+         },
+      },
+      skulllist: {
+         'Before 1st Fire Dancer Skulltula': {
+            isAvailable: function () {
+               return items.Hammer && (items.Hookshot || items.HoverBoots || items.BoleroofFire)
+            }
+         },
+         'Song of Time Lava Room Skulltula': {
+            isAvailable: function () {
+               return items.Ocarina && items.SongofTime && items.FireKey && (items.BoleroofFire || (items.HoverBoots || items.Hookshot))
+            }
+         },
+         'Maze Bombable Wall Skulltula': {
+            isAvailable: function () {
+               return (items.Bombs || items.Bombchu) && items.FireKey >= 3 && (items.BoleroofFire || (items.HoverBoots || items.Hookshot))
+            }
+         },
+         '1st Scarecrow Skulltula': {
+            isAvailable: function () {
+               return items.FireKey >= 5 && items.Glove && items.Hookshot && items.Ocarina
+            }
+         },
+         '2nd Scarecrow Skulltula': {
+            isAvailable: function () {
+               return items.FireKey >= 5 && items.Glove && items.Hookshot && items.Ocarina
+            }
+         },
+      },
+      MQlist: {
+         'Like Like Chest': {
+            isAvailable: function () {
+               return ((items.BoleroofFire && items.Ocarina) //Warp
+                       || ((items.HoverBoots || items.Hookshot) //Cross Crater Bridge
+                           && (items.Hammer //Summit Climb
+                               || items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Bow || (items.Magic && items.Dins)))); //Link the Goron
+            }
+         },
+         'Chest Near Boss Door': {
+            isAvailable: function () {
+               return ((items.BoleroofFire && items.Ocarina) //Warp
+                       || ((items.HoverBoots || items.Hookshot) //Cross Crater Bridge
+                           && (items.Hammer //Summit Climb
+                               || items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Bow || (items.Magic && items.Dins) )) 
+                      && items.Magic && (items.Dins || (items.Bow && items.Fire)) ); //Boss Door access
+            }
+         },
+      },
+      MQskulllist: {
+         'Skull 1 ': {
+            isAvailable: function () {
+               return true;
+            }
+         },
+      },
+      isBeatable: function () {
+         return this.canGetChest();
+      },
+      canGetChest: function () {
+         return generalCanGetChest(this.chestlist);
+      },
+      requiredKey: "FireKey"
+   },
    {
       name: "Ice Cavern",
       x: "93.5%",
@@ -1530,137 +1672,7 @@ var dungeons = [
       },
       requiredKey: "ShadowKey"
    },
-   {
-      name: "Fire Temple",
-      x: "65.4%",
-      y: "04.0%",
-      type: "dungeon",
-      chestlist: {
-         ['Chest Near Boss']: {
-            isAvailable: function () {
-               return items.MasterSword && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.BoleroofFire || ((items.HoverBoots || items.Hookshot) && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Hammer || items.Bow || (items.Magic && items.Dins))));
-            }
-         },
-         ['Fire Dancer Chest']: {
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)) && items.Hammer;
-            }
-         },
-         ['Boss Key Chest']: {
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)) && items.Hammer;
-            }
-         },
-         ['Lava Room Open Chest']: {
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.FireKey && (items.BoleroofFire || (items.HoverBoots || items.Hookshot));
-            }
-         },
-         ['Lava Room Bombable Wall']: {
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.FireKey && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)) && (items.Bombs || (items.Bombchu && BombchuLogic));
-            }
-         },
-         ['Maze Lower Chest']: {
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.FireKey >= 3 && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)) && items.Glove;
-            }
-         },
-         ['Maze Side Room']: {
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.FireKey >= 3 && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)) && items.Glove;
-            }
-         },
-         ['Map Chest']: {
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && ((items.FireKey >= 4 && items.Bow) || items.FireKey >= 5) && (items.BoleroofFire || items.HoverBoots || items.Hookshot) && items.Glove;
-            }
-         },
-         ['Maze Upper Chest']: {
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.FireKey >= 5 && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)) && items.Glove;
-            }
-         },
-         ['Maze Bombable Pit']: {
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.FireKey >= 5 && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)) && items.Glove && (items.Bombs || (items.Bombchu && BombchuLogic));
-            }
-         },
-         ['Scarecrow Chest']: {
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.FireKey >= 5 && items.Glove && items.Hookshot && items.Ocarina && items.Scarecrow >= 2;
-            }
-         },
-         ['Flame Maze Side Room']: {
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.FireKey >= 6 && (items.BoleroofFire || items.HoverBoots || items.Hookshot) && items.Glove;
-            }
-         },
-         ['Song of Time Block']: {
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.FireKey >= 7 || (items.FireKey >= 6 && items.HoverBoots)) && (items.BoleroofFire || items.HoverBoots || items.Hookshot) && items.Glove && items.Hammer;
-            }
-         },
-         ['Megaton Hammer Chest']: {
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.FireKey >= 6 && (items.BoleroofFire || items.HoverBoots || items.Hooksho) && items.Glove && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Hammer);
-            }
-         },
-         ['Volvagia']: {
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.BossFire && ((items.GoronTunic || items.Bottle) && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)) && items.Hammer && (items.HoverBoots || (items.Glove && (items.Bombs || items.Hookshot) && items.Bombs)));
-            }
-         },
-      },
-      skulllist: {
-         'Before 1st Fire Dancer Skulltula': {
-            isAvailable: function () {
-               return items.Hammer && (items.Hookshot || items.HoverBoots || items.BoleroofFire)
-            }
-         },
-         'Song of Time Lava Room Skulltula': {
-            isAvailable: function () {
-               return items.Ocarina && items.SongofTime && items.FireKey && (items.BoleroofFire || (items.HoverBoots || items.Hookshot))
-            }
-         },
-         'Maze Bombable Wall Skulltula': {
-            isAvailable: function () {
-               return (items.Bombs || items.Bombchu) && items.FireKey >= 3 && (items.BoleroofFire || (items.HoverBoots || items.Hookshot))
-            }
-         },
-         '1st Scarecrow Skulltula': {
-            isAvailable: function () {
-               return items.FireKey >= 5 && items.Glove && items.Hookshot && items.Ocarina
-            }
-         },
-         '2nd Scarecrow Skulltula': {
-            isAvailable: function () {
-               return items.FireKey >= 5 && items.Glove && items.Hookshot && items.Ocarina
-            }
-         },
-      },
-      MQlist: {
-         'Check 1 ': {
-            isAvailable: function () {
-               return true;
-            },
-         },
-      },
-      MQskulllist: {
-         'Skull 1 ': {
-            isAvailable: function () {
-               return true;
-            },
-         },
-      },
-      isBeatable: function () {
-         return this.canGetChest();
-      },
-      canGetChest: function () {
-         return generalCanGetChest(this.chestlist);
-      },
-      requiredKey: "FireKey"
-   },
+
    {
       name: "Ganon's Tower",
       x: "44.0%",
