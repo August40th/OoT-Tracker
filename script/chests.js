@@ -55,7 +55,7 @@ var dungeons = [
          },
          'Adult Twin House Roof Skulltula': {
             isAvailable: function () {
-               return items.MasterSword items.Hookshot; }
+               return items.MasterSword && items.Hookshot; }
          },
       },
       gossiplist: {
