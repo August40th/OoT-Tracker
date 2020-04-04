@@ -990,7 +990,7 @@ var dungeons = [
                               && (items.Hammer //Summit Climb
                                   || items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Bow || (items.Magic && items.Dins)) //:ink the Goron
                             ) 
-                        && items.Hammer && itmes.Hookshot && (items.Bombs || (items.Bombchu && BombchuLogic) ) //Bombwall
+                        && items.Hammer && items.Hookshot && (items.Bombs || (items.Bombchu && BombchuLogic) ) //Bombwall
                         && items.Magic && (items.Dins || (items.Bow && items.Fire)) //Torch
                       );
             }
@@ -1139,7 +1139,7 @@ var dungeons = [
                             ) 
                       && items.Hammer && items.Hookshot && items.Magic && (items.Dins || (items.Bow && items.Fire))//Lava Room and Torch
                         && items.Bow && items.Ocarina && items.SongofTime //2nd Key door, arrow torch, Block of Time
-                        && itesm.FireKey >= 5);
+                        && items.FireKey >= 5);
             }
          },
       },
