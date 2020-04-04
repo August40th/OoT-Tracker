@@ -1000,7 +1000,7 @@ var dungeons = [
                                || items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Bow || (items.Magic && items.Dins) ) //Link the Goron
                            ) 
                         && items.Hammer && items.Hookshot && items.Magic && (items.Dins || (items.Bow && items.Fire))//Lava Room and Torch
-                        && items.FireKey >= 1 && (items.Bombs || (BombchuLogic && items.Bombchu() //Keydoor, bombwall to rusted switch
+                        && items.FireKey >= 1 && (items.Bombs || (BombchuLogic && items.Bombchu)) //Keydoor, bombwall to rusted switch
                       );
             }
          },
