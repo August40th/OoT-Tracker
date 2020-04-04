@@ -1078,7 +1078,7 @@ var dungeons = [
                         && items.BossFire && items.Hammer && (items.Hoverboots //Boss Key, Hammer, and Hovers...
                                                              || (items.Hammer && items.Hookshot && items.Magic && (items.Dins || (items.Bow && items.Fire))//Lava Room and Torch
                                                              && items.Bow && items.Ocarina && items.SongofTime //2nd Key door, arrow torch, Block of Time
-                                                             && itesm.FireKey >= 4)) ); //or Deep Fire
+                                                             && items.FireKey >= 4)) ); //or Deep Fire
             }
          },
       },
