@@ -1060,7 +1060,7 @@ var dungeons = [
                            ) 
                         && items.Hammer && items.Hookshot && items.Magic && (items.Dins || (items.Bow && items.Fire))//Lava Room and Torch
                         && items.Bow && items.Ocarina && items.SongofTime //2nd Key door, arrow torch, Block of Time
-                        && items FireKey >= 3 //Amother KeyDoor
+                        && items.FireKey >= 3 //Amother KeyDoor
                       );
             }
          },
@@ -1109,7 +1109,7 @@ var dungeons = [
                                || items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Bow || (items.Magic && items.Dins) ) //Link the Goron
                            ) 
                       && items.Hammer && items.Hookshot && items.Magic && (items.Dins || (items.Bow && items.Fire))//Lava Room and Torch
-                        && items.FireKey>= 2 && items.Bow && items.Ocarina && items.SongofTime //2nd Key door, arrow torch, Block of Time
+                        && items.FireKey >= 2 && items.Bow && items.Ocarina && items.SongofTime //2nd Key door, arrow torch, Block of Time
                       );
             }
          },
@@ -1121,7 +1121,7 @@ var dungeons = [
                                || items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Bow || (items.Magic && items.Dins) ) //Link the Goron
                            ) 
                       && items.Hammer && items.Hookshot && items.Magic && (items.Dins || (items.Bow && items.Fire))//Lava Room and Torch
-                        && items.FireKey>= 2 && items.Bow && items.Ocarina && items.SongofTime //2nd Key door, arrow torch, Block of Time
+                        && items.FireKey >= 2 && items.Bow && items.Ocarina && items.SongofTime //2nd Key door, arrow torch, Block of Time
                       && items.Bombs || (BombchuLogic && items.Bombchu) //Bombwall
                       );
             }
