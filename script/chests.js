@@ -1368,7 +1368,7 @@ var dungeons = [
          'Central Pillar Basement': {
             isAvailable: function () {
                return (items.IronBoots && items.Hookshot >= 1 //Temple Access
-                       && items.Nagic && ((items.Bow && items.Fire) || (items.Dins && items.Ocarina && items.SongofTime) ) //Torches at the top of Pillar
+                       && items.Magic && ( (items.Bow && items.Fire) || (items.Dins && items.Ocarina && items.SongofTime) ) //Torches at the top of Pillar
                        );
             }
          },
