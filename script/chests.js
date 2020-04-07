@@ -1346,7 +1346,7 @@ var dungeons = [
          'Stalfos Chest': {
             isAvailable: function () {
                return ((items.IronBoots && items.Hookshot >= 1) || (items.Scale >= 2 && items. Hookshot >= 2) //Temple Access
-                       && items.Nagic && ((items.Bow && items.Fire) || items.Dins) //Torches to enter room
+                       && items.Magic && ((items.Bow && items.Fire) || items.Dins) //Torches to enter room
                        );
             }
          },
@@ -1361,7 +1361,7 @@ var dungeons = [
          'Lizalfos Chest': {
             isAvailable: function () {
                return ((items.IronBoots && items.Hookshot >= 1) || (items.Scale >= 2 && items. Hookshot >= 2)
-                       && items.Nagic && ((items.Bow && items.Fire) || items.Dins) //Torches
+                       && items.Magic && ((items.Bow && items.Fire) || items.Dins) //Torches
                        );
             }
          },
@@ -1375,7 +1375,7 @@ var dungeons = [
          'Dins Ontop Water Jet': {
             isAvailable: function () {
                return ((items.IronBoots && items.Hookshot >= 1) || (items.Scale >= 2 && items. Hookshot >= 2) //Temple Access
-                       && items.Nagic && items.Dins && items.FireKey >= 1 //Jet room access
+                       && items.Magic && items.Dins && items.FireKey >= 1 //Jet room access
                        );
             }
          },
@@ -1403,7 +1403,7 @@ var dungeons = [
          'Lizalfos Hallway Skulltula': {
             isAvailable: function () {
                return ((items.IronBoots && items.Hookshot >= 1) || (items.Scale >= 2 && items. Hookshot >= 2 && items.Ocarina && items.ZeldasLullaby) //Temple Access
-                       && items.Nagic && items.Dins //Torches to enter room
+                       && items.Magic && items.Dins //Torches to enter room
                        );
             }
          },
@@ -1422,7 +1422,7 @@ var dungeons = [
          'Dodongo Skulltula': {
             isAvailable: function () {
                return ((items.IronBoots && items.Hookshot >= 1) || (items.Scale >= 2 && items. Hookshot >= 2 && items.Ocarina && items.ZeldasLullaby) //Temple Access
-                       && items.Nagic && ((items.Bow && items.Fire) || items.Dins) //Torches to enter room
+                       && items.Magic && ((items.Bow && items.Fire) || items.Dins) //Torches to enter room
                        );
             }
          },
