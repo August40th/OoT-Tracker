@@ -963,7 +963,7 @@ var dungeons = [
                          || ( (items.HoverBoots || items.Hookshot) //Cross Crater Bridge
                               && (items.Hammer //Summit Climb
                                   || items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Bow || (items.Magic && items.Dins)) //:ink the Goron
-                            ) && items.FireKey >= 1 ); //Iron Knuckle Access
+                            )) && items.FireKey >= 1 ; //Iron Knuckle Access
             }
          },
          'Rusted Switch Chest': {
@@ -972,7 +972,7 @@ var dungeons = [
                          || ( (items.HoverBoots || items.Hookshot) //Cross Crater Bridge
                               && (items.Hammer //Summit Climb
                                   || items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Bow || (items.Magic && items.Dins)) //:ink the Goron
-                            ) && items.FireKey >=1 && items.Hammer); //Switch
+                            )) && items.FireKey >=1 && items.Hammer; //Switch
             }
          },
          'Lava Green Side Room Chest': {
@@ -981,8 +981,8 @@ var dungeons = [
                          || ( (items.HoverBoots || items.Hookshot) //Cross Crater Bridge
                               && (items.Hammer //Summit Climb
                                   || items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Bow || (items.Magic && items.Dins)) //:ink the Goron
-                            ) 
-                       && items.Hammer && items.Hookshot && items.Magic && (items.Dins || (items.Bow && items.Fire)) ); //Lava Room and Torch
+                            ) )
+                       && items.Hammer && items.Hookshot && items.Magic && (items.Dins || (items.Bow && items.Fire)) ; //Lava Room and Torch
             }
          },
          'Lava Bombable Side Room': {
@@ -991,10 +991,10 @@ var dungeons = [
                          || ( (items.HoverBoots || items.Hookshot) //Cross Crater Bridge
                               && (items.Hammer //Summit Climb
                                   || items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Bow || (items.Magic && items.Dins)) //:ink the Goron
-                            ) 
+                            ) )
                         && items.Hammer && items.Hookshot && (items.Bombs || (items.Bombchu && BombchuLogic) ) //Bombwall
                         && items.Magic && (items.Dins || (items.Bow && items.Fire)) //Torch
-                      );
+                      ;
             }
          },
          'Bombable Shortcut Chest': {
@@ -1003,10 +1003,10 @@ var dungeons = [
                          || ( (items.HoverBoots || items.Hookshot) //Cross Crater Bridge
                               && (items.Hammer //Summit Climb
                                   || items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Bow || (items.Magic && items.Dins)) //:ink the Goron
-                            ) 
+                            ) )
                         && items.Hammer && items.Hookshot && items.Magic && (items.Dins || (items.Bow && items.Fire))//Lava Room and Torch
                         && items.FireKey >= 1 && (items.Bombs || (BombchuLogic && items.Bombchu)) //Keydoor, bombwall to rusted switch
-                      );
+                      ;
             }
          },
          'Maze Upper Gate': {
@@ -1015,10 +1015,10 @@ var dungeons = [
                          || ( (items.HoverBoots || items.Hookshot) //Cross Crater Bridge
                               && (items.Hammer //Summit Climb
                                   || items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Bow || (items.Magic && items.Dins)) //:ink the Goron
-                            ) 
+                            ) )
                         && items.Hammer && items.Hookshot && items.Magic && (items.Dins || (items.Bow && items.Fire)) && items.FireKey >= 1 //Lava Room and Torch
                         && (items.Bombs || (BombchuLogic && items.Bombchu)) //Bombwall to rusted switch
-                      );
+                      ;
             }
          },
          'Maze Lower Gate': {
@@ -1027,9 +1027,9 @@ var dungeons = [
                          || ( (items.HoverBoots || items.Hookshot) //Cross Crater Bridge
                               && (items.Hammer //Summit Climb
                                   || items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Bow || (items.Magic && items.Dins)) //:ink the Goron
-                            ) 
+                            ) )
                         && items.Hammer && items.Magic && (items.Dins || (items.Bow && items.Fire)) && items.FireKey >= 1 //No Hookshot needed
-                       );
+                       ;
             }
          },
          'Maze Side Room': {
@@ -1038,22 +1038,22 @@ var dungeons = [
                          || ( (items.HoverBoots || items.Hookshot) //Cross Crater Bridge
                               && (items.Hammer //Summit Climb
                                   || items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Bow || (items.Magic && items.Dins)) //:ink the Goron
-                            ) 
+                            ) )
                        && items.Hammer && items.Hookshot && items.Magic && (items.Dins || (items.Bow && items.Fire)) && items.FireKey >= 1 //Lava Room and Torch
                        && (items.Bombs || (BombchuLogic && items.Bombchu)) //Bombwall to rusted switch
-                      );
+                      ;
             }
          },
-         'Flar Dancer Freestanding': {
+         'Flare Dancer Freestanding': {
             isAvailable: function () {
                return ( (items.BoleroofFire && items.Ocarina) //Warp
                          || ( (items.HoverBoots || items.Hookshot) //Cross Crater Bridge
                               && (items.Hammer //Summit Climb
                                   || items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Bow || (items.Magic && items.Dins)) //:ink the Goron
-                            ) 
+                            ) )
                         && items.Hammer && items.Hookshot && items.Magic && (items.Dins || (items.Bow && items.Fire))//Lava Room and Torch
                         && items.FireKey>= 2 && items.Bow && items.Ocarina && items.SongofTime //2nd Key door, arrow torch, Block of Time
-                      );
+                      ;
             }
          },
          'Highest Chest': {
@@ -1062,11 +1062,11 @@ var dungeons = [
                          || ( (items.HoverBoots || items.Hookshot) //Cross Crater Bridge
                               && (items.Hammer //Summit Climb
                                   || items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Bow || (items.Magic && items.Dins)) //:ink the Goron
-                            ) 
+                            ) )
                         && items.Hammer && items.Hookshot && items.Magic && (items.Dins || (items.Bow && items.Fire))//Lava Room and Torch
                         && items.Bow && items.Ocarina && items.SongofTime //2nd Key door, arrow torch, Block of Time
                         && items.FireKey >= 3 //Amother KeyDoor
-                      );
+                      ;
             }
          },
          'Volvagia': {
@@ -1075,12 +1075,12 @@ var dungeons = [
                          || ( (items.HoverBoots || items.Hookshot) //Cross Crater Bridge
                               && (items.Hammer //Summit Climb
                                   || items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Bow || (items.Magic && items.Dins)) //:ink the Goron
-                            )
+                            ))
                         && items.Magic && (items.Dins || (items.Bow && items.Fire)) //Boss Door access
                         && items.BossFire && items.Hammer && (items.Hoverboots //Boss Key, Hammer, and Hovers...
                                                              || (items.Hammer && items.Hookshot && items.Magic && (items.Dins || (items.Bow && items.Fire))//Lava Room and Torch
                                                              && items.Bow && items.Ocarina && items.SongofTime //2nd Key door, arrow torch, Block of Time
-                                                             && items.FireKey >= 4)) ); //or Deep Fire
+                                                             && items.FireKey >= 4)) ; //or Deep Fire
             }
          },
       },
@@ -1091,7 +1091,7 @@ var dungeons = [
                          || ( (items.HoverBoots || items.Hookshot) //Cross Crater Bridge
                               && (items.Hammer //Summit Climb
                                   || items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Bow || (items.Magic && items.Dins)) //:ink the Goron
-                            ) && items.Hammer); //Lava Room
+                            )) && items.Hammer; //Lava Room
             }
          },
          'Song of Time Climb Skulltula': {
@@ -1100,11 +1100,11 @@ var dungeons = [
                          || ( (items.HoverBoots || items.Hookshot) //Cross Crater Bridge
                               && (items.Hammer //Summit Climb
                                   || items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Bow || (items.Magic && items.Dins)) //:ink the Goron
-                            ) 
+                            ) )
                       && items.Hammer && items.Hookshot && items.Magic && (items.Dins || (items.Bow && items.Fire)) && items.FireKey >= 1 //Lava Room and Torch
                       && (items.Bombs || (BombchuLogic && items.Bombchu)) //Bombwall to rusted switch
                       && items.SongofTime && items.Ocarina && items.Glove //Block of Time climb, strength for push block
-                      );
+                      ;
             }
          },
          'Flame Maze Side Room': {
@@ -1113,10 +1113,10 @@ var dungeons = [
                          || ( (items.HoverBoots || items.Hookshot) //Cross Crater Bridge
                               && (items.Hammer //Summit Climb
                                   || items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Bow || (items.Magic && items.Dins)) //:ink the Goron
-                            ) 
+                            ) )
                       && items.Hammer && items.Hookshot && items.Magic && (items.Dins || (items.Bow && items.Fire))//Lava Room and Torch
                         && items.FireKey >= 2 && items.Bow && items.Ocarina && items.SongofTime //2nd Key door, arrow torch, Block of Time
-                      );
+                      ;
             }
          },
          'Bombwall Skulltula': {
@@ -1125,11 +1125,11 @@ var dungeons = [
                          || ( (items.HoverBoots || items.Hookshot) //Cross Crater Bridge
                               && (items.Hammer //Summit Climb
                                   || items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Bow || (items.Magic && items.Dins)) //:ink the Goron
-                            ) 
+                            ) )
                       && items.Hammer && items.Hookshot && items.Magic && (items.Dins || (items.Bow && items.Fire))//Lava Room and Torch
                         && items.FireKey >= 2 && items.Bow && items.Ocarina && items.SongofTime //2nd Key door, arrow torch, Block of Time
                       && items.Bombs || (BombchuLogic && items.Bombchu) //Bombwall
-                      );
+                      ;
             }
          },
          'Highest Skulltula': {
@@ -1138,10 +1138,10 @@ var dungeons = [
                          || ( (items.HoverBoots || items.Hookshot) //Cross Crater Bridge
                               && (items.Hammer //Summit Climb
                                   || items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Bow || (items.Magic && items.Dins)) //:ink the Goron
-                            ) 
+                            ) )
                       && items.Hammer && items.Hookshot && items.Magic && (items.Dins || (items.Bow && items.Fire))//Lava Room and Torch
                         && items.Bow && items.Ocarina && items.SongofTime //2nd Key door, arrow torch, Block of Time
-                        && items.FireKey >= 5);
+                        && items.FireKey >= 5;
             }
          },
       },
@@ -1345,9 +1345,9 @@ var dungeons = [
       MQlist: {
          'Stalfos Chest': {
             isAvailable: function () {
-               return ((items.IronBoots && items.Hookshot >= 1) || (items.Scale >= 2 && items. Hookshot >= 2) //Temple Access
+               return ((items.IronBoots && items.Hookshot >= 1) || (items.Scale >= 2 && items. Hookshot >= 2)) //Temple Access
                        && items.Magic && ((items.Bow && items.Fire) || items.Dins) //Torches to enter room
-                       );
+                       ;
             }
          },
          'Open Wall Chest': {
@@ -1360,9 +1360,9 @@ var dungeons = [
          },
          'Lizalfos Chest': {
             isAvailable: function () {
-               return ((items.IronBoots && items.Hookshot >= 1) || (items.Scale >= 2 && items. Hookshot >= 2)
+               return ((items.IronBoots && items.Hookshot >= 1) || (items.Scale >= 2 && items. Hookshot >= 2))
                        && items.Magic && ((items.Bow && items.Fire) || items.Dins) //Torches
-                       );
+                       ;
             }
          },
          'Central Pillar Basement': {
@@ -1374,23 +1374,23 @@ var dungeons = [
          },
          'Dins Ontop Water Jet': {
             isAvailable: function () {
-               return ((items.IronBoots && items.Hookshot >= 1) || (items.Scale >= 2 && items. Hookshot >= 2) //Temple Access
-                       && items.Magic && items.Dins && items.FireKey >= 1 //Jet room access
-                       );
+               return ((items.IronBoots && items.Hookshot >= 1) || (items.Scale >= 2 && items. Hookshot >= 2)) //Temple Access
+                       && items.Magic && items.Dins && items.WaterKey >= 1 //Jet room access
+                       ;
             }
          },
          'Basement Crate Freestanding': {
             isAvailable: function () {
-               return ((items.IronBoots && items.Hookshot >= 1) || (items.Scale >= 2 && items. Hookshot >= 2 && items.Ocarina && items.ZeldasLullaby) //Temple Access
+               return ((items.IronBoots && items.Hookshot >= 1) || (items.Scale >= 2 && items. Hookshot >= 2 && items.Ocarina && items.ZeldasLullaby)) //Temple Access
                        && (items.Hookshot >= 2 || items.HoverBoots) //Get over the spikes
-                       );
+                       ;
             }
          },
          'Morpha': {
             isAvailable: function () {
-               return ((items.IronBoots && items.Hookshot >= 1) || (items.Scale >= 2 && items. Hookshot >= 2 && items.Ocarina && items.ZeldasLullaby) //Temple Access
+               return ((items.IronBoots && items.Hookshot >= 1) || (items.Scale >= 2 && items. Hookshot >= 2 && items.Ocarina && items.ZeldasLullaby)) //Temple Access
                        && items.BossWater && items.Hookshot >= 2 //Boos door access
-                       );
+                       ;
             }
          },
       },
@@ -1402,9 +1402,9 @@ var dungeons = [
          },
          'Lizalfos Hallway Skulltula': {
             isAvailable: function () {
-               return ((items.IronBoots && items.Hookshot >= 1) || (items.Scale >= 2 && items. Hookshot >= 2 && items.Ocarina && items.ZeldasLullaby) //Temple Access
+               return ((items.IronBoots && items.Hookshot >= 1) || (items.Scale >= 2 && items. Hookshot >= 2 && items.Ocarina && items.ZeldasLullaby)) //Temple Access
                        && items.Magic && items.Dins //Torches to enter room
-                       );
+                       ;
             }
          },
          'Blue Switch Skulltula': {
@@ -1414,16 +1414,16 @@ var dungeons = [
          },
          'River Skulltula': {
             isAvailable: function () {
-               return ((items.IronBoots && items.Hookshot >= 1) || (items.Scale >= 2 && items. Hookshot >= 2) //Temple Access
+               return ((items.IronBoots && items.Hookshot >= 1) || (items.Scale >= 2 && items. Hookshot >= 2)) //Temple Access
                        && items.WaterKey >= 1 //Fight Stalfos and Dark Link
-                       );
+                       ;
             }
          },
          'Dodongo Skulltula': {
             isAvailable: function () {
-               return ((items.IronBoots && items.Hookshot >= 1) || (items.Scale >= 2 && items. Hookshot >= 2 && items.Ocarina && items.ZeldasLullaby) //Temple Access
+               return ((items.IronBoots && items.Hookshot >= 1) || (items.Scale >= 2 && items. Hookshot >= 2 && items.Ocarina && items.ZeldasLullaby)) //Temple Access
                        && items.Magic && ((items.Bow && items.Fire) || items.Dins) //Torches to enter room
-                       );
+                       ;
             }
          },
       },
