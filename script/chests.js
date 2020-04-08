@@ -1828,11 +1828,11 @@ var dungeons = [
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.Ocarina && items.SongofTime && items.SpiritKey >= 1; //As Asult
             }
          },
-         'Temple\'s Right Hand': {
+         'Colossus Right Hand': {
             isAvailable: function () {
                return (items.Ocarina && items.RequiemofSpirit && items.Bombchu && items.SpiritKey >= 3 && items.SongofTime)
                || items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2
-               && items.Bombchu && items.Hookshot >=  && items.Glove >= 2 && items.Ocarina && items.SongofTime && items.SpiritKey >= 2; //As Adult
+               && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.Ocarina && items.SongofTime && items.SpiritKey >= 2; //As Adult
             }
          },
          'Dodongo Room Adult Chest': {
@@ -1892,7 +1892,7 @@ var dungeons = [
                && items.Ocarina && items.SongofTime && items.MirrorShield;
             }
          },
-         'Temple\'s Left Hand': {
+         'Colossus Left Hand': {
             isAvailable: function () {
                return items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2 // Adult Temple access
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.SpiritKey >= 1;
