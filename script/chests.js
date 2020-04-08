@@ -1761,17 +1761,182 @@ var dungeons = [
          },
       },
       MQlist: {
-         'Check 1 ': {
+         'Lobby Bottom Left': {
             isAvailable: function () {
-               return true;
-            },
+               return (items.Ocarina && items.RequiemofSpirit) //Child Temple access
+               || items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2; // Adult Temple access
+            }
+         },
+         'Lobby Top Left': {
+            isAvailable: function () {
+               return (items.Ocarina && items.RequiemofSpirit 
+               && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Slingshot) //Boulder and eye switch
+               || items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2 // Adult Temple access
+               && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Bow; //Boulder and eye switch
+            }
+         },
+         'Lobby Top Right': {
+            isAvailable: function () {
+               return (items.Ocarina && items.RequiemofSpirit 
+               && items.Slingshot) //Eye switch
+               || items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2 // Adult Temple access
+               && items.Bow; //Eye Switch
+            }
+         },
+         'Slug Room Chest': {
+            isAvailable: function () {
+               return items.Ocarina && items.RequiemofSpirit && items.Glove >= 2 && items.Hammer;
+            }
+         },
+         'Anubis Free Chest': {
+            isAvailable: function () {
+               return items.Ocarina && items.RequiemofSpirit;
+            }
+         },
+         'Anubis Chest': {
+            isAvailable: function () {
+               return items.Ocarina && items.RequiemofSpirit && items.Bombchu && items.Slingshot && items.Magic && items.Dins; //Kill Anubis and long way around
+            }
+         },
+         'Dodongo Chest': {
+            isAvailable: function () {
+               return (items.Ocarina && items.RequiemofSpirit && items.Bombchu && items.SpiritKey >= 1) //Child climb
+               || items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2
+               && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2; //Adult statue room access
+            }
+         },
+         'Statue Room Eye Switch': {
+            isAvailable: function () {
+               return (items.Ocarina && items.RequiemofSpirit && items.Bombchu && items.SpiritKey >= 2) //Child Statue Room
+               || items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2
+               && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.Bow;
+            }
+         },
+         'Shortcut Hallway Eye Switch': {
+            isAvailable: function () {
+               return (items.Ocarina && items.RequiemofSpirit && items.Bombchu && items.SpiritKey >= 2 
+               && items.Magic && items.Dins && (items.Slingshot || items.Bow) ) //Child opens shortcut hallway
+               || items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2
+               && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 
+               && ((items.Slingshot && items.Ocarina && items.RequiemofSpirit) || items.Bow) && items.Magic && (items.Dins || (items.Bow && items.Fire)); //Adult opens
+            }
+         },
+         'Sunblock Chest': {
+            isAvailable: function () {
+               return (items.Ocarina && items.RequiemofSpirit && items.Bombchu && items.SpiritKey >= 2 && items.SongofTime) //Blue switch on statue hand
+               || items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2
+               && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.Ocarina && items.SongofTime && items.SpiritKey >= 1; //As Asult
+            }
+         },
+         'Temple\'s Right Hand': {
+            isAvailable: function () {
+               return (items.Ocarina && items.RequiemofSpirit && items.Bombchu && items.SpiritKey >= 3 && items.SongofTime)
+               || items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2
+               && items.Bombchu && items.Hookshot >=  && items.Glove >= 2 && items.Ocarina && items.SongofTime && items.SpiritKey >= 2; //As Adult
+            }
+         },
+         'Dodongo Room Adult Chest': {
+            isAvailable: function () {
+               return items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2 // Adult Temple access
+               && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.SpiritKey >= 1;
+            }
+         },
+         'Statue Room Lower Chest': {
+            isAvailable: function () {
+               return items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2 // Adult Temple access
+               && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.Ocarina && items.ZeldasLullaby; 
+            }
+         },
+         'Statue Room Upper Chest': {
+            isAvailable: function () {
+               return items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2 // Adult Temple access
+               && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.Ocarina && items.ZeldasLullaby; 
+            }
+         },
+         'Leever Room Chest': {
+            isAvailable: function () {
+               return items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2 // Adult Temple access
+               && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.Bow && items.Magic && items.Fire; //Stalfos Room access
+            }
+         },
+         'Child Songs Halfpipe': {
+            isAvailable: function () {
+               return items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2 // Adult Temple access
+               && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.Bow && items.Magic && items.Fire
+               && items.Ocarina && items.ZeldasLullaby && items.EponasSong && items.SunSong && items.SongofStorms && items.SongofTime; 
+            }
+         },
+         'Lobby Bottom Right': {
+            isAvailable: function () {
+               return items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2 // Adult Temple access
+               && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.Bow && items.Magic && items.Fire && items.Hammer; 
+            }
+         },
+         'Beamos Room Chest': {
+            isAvailable: function () {
+               return items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2 // Adult Temple access
+               && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.SpiritKey >= 1 && items.Bombs || items.Bombchu; 
+            }
+         },
+         'Dinalfos Chest': {
+            isAvailable: function () {
+               return items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2 // Adult Temple access
+               && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.SpiritKey >= 1 
+               && items.Ocarina && items.SongofTime; //SOT puzzle in Beamos Room
+            }
+         },
+         'Gibdo Room Chest': {
+            isAvailable: function () {
+               return items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2 // Adult Temple access
+               && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.SpiritKey >= 1 
+               && items.Ocarina && items.SongofTime && items.MirrorShield;
+            }
+         },
+         'Temple\'s Left Hand': {
+            isAvailable: function () {
+               return items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2 // Adult Temple access
+               && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.SpiritKey >= 1;
+            }
+         },
+         'Highest Chest': {
+            isAvailable: function () {
+               return items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2 // Adult Temple access
+               && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.SpiritKey >= 2;
+            }
+         },
+         'TwinRova': {
+            isAvailable: function () {
+               return items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2 // Adult Temple access
+               && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.MirrorShield && items.SpiritKey >= 2 && items.SpiritBoss;
+            }
          },
       },
       MQskulllist: {
-         'Skull 1 ': {
+         'Sunblock Room Skulltula': {
             isAvailable: function () {
-               return true;
-            },
+               return (items.Ocarina && items.RequiemofSpirit && items.Bombchu && items.SpiritKey >= 2 && items.SongofTime && items.Boomerang) //Blue switch on statue hand
+               || items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2
+               && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.Ocarina && items.SongofTime && items.SpiritKey >= 1; //As Asult
+            }
+         },
+         'Leever Room Skulltula': {
+            isAvailable: function () {
+               return items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2 // Adult Temple access
+               && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.Bow && items.Magic && items.Fire; //Stalfos Room access
+            }
+         },
+         'Songs Halfpipe Skulltula': {
+            isAvailable: function () {
+               return items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2 // Adult Temple access
+               && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.Bow && items.Magic && items.Fire
+               && items.Ocarina && items.ZeldasLullaby && items.EponasSong && items.SunSong && items.SongofStorms && items.SongofTime; 
+            }
+         },
+         'Iron Knuckle Skulltula x2': {
+            isAvailable: function () {
+               return items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2 // Adult Temple access
+               && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.SpiritKey >= 3;
+            }
          },
       },
       isBeatable: function () {
