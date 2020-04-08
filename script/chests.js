@@ -1863,7 +1863,7 @@ var dungeons = [
             isAvailable: function () {
                return (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.Bow && items.Magic && items.Fire
-               && items.Ocarina && items.ZeldasLullaby && items.EponasSong && items.SunSong && items.SongofStorms && items.SongofTime; 
+               && items.Ocarina && items.ZeldasLullaby && items.EponasSong && items.SunsSong && items.SongofStorms && items.SongofTime; 
             }
          },
          'Lobby Bottom Right': {
@@ -1907,7 +1907,8 @@ var dungeons = [
          'TwinRova': {
             isAvailable: function () {
                return (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
-               && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.MirrorShield && items.SpiritKey >= 2 && items.SpiritBoss;
+               && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 
+               && items.MirrorShield && items.SpiritKey >= 2 && items.BossSpirit;
             }
          },
       },
@@ -1929,7 +1930,7 @@ var dungeons = [
             isAvailable: function () {
                return (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.Bow && items.Magic && items.Fire
-               && items.Ocarina && items.ZeldasLullaby && items.EponasSong && items.SunSong && items.SongofStorms && items.SongofTime; 
+               && items.Ocarina && items.ZeldasLullaby && items.EponasSong && items.SunsSong && items.SongofStorms && items.SongofTime; 
             }
          },
          'Iron Knuckle Skulltula x2': {
