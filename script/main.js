@@ -274,6 +274,7 @@ function toggleChest(x) {
       document.getElementById(x).className = "mapspan chest opened";
    else
       document.getElementById(x).className = "mapspan chest " + chests[x].isAvailable();
+   updateMap();
 }
 
 function toggleMarkedChest(x) {
