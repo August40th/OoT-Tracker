@@ -578,10 +578,12 @@ function drawDungeonList() {
       }
       submaparea.oncontextmenu = function(e) {
          e.preventDefault();
-         let setMQ = 1;
-         bulkDCSelect(setMQ);
+         var setMQ ;
+         
          if (document.querySelectorAll("#submaplist .d-none").length) {
             if (submaparea.getAttribute("data-filter") === "vanilla") {
+               setMQ = 1;
+               bulkDCSelect(setMQ);
                submaparea.setAttribute("data-filter", "master");
                submaparea.innerHTML = submaparea.innerText + " MQ";
                
@@ -594,6 +596,8 @@ function drawDungeonList() {
                   }
                })
             } else if (submaparea.getAttribute("data-filter") === "master") {
+               setMQ = 2;
+               bulkDCSelect(setMQ);
                submaparea.setAttribute("data-filter", "vanilla");
                submaparea.innerHTML = dungeons[dungeonSelect].name;
                submaplist.childNodes.forEach(function(item, index) {
@@ -621,6 +625,8 @@ function bulkDCSelect(x) {
    
    if (x = 1)
       var mode = 'all';
+   else if (x = 2)
+      var mode = 'none'
    else {
       var mode = 'none';
       if (available > 0) {
