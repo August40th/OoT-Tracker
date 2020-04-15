@@ -270,8 +270,12 @@ function saveCookie() {
 function toggleChest(x) {
    console.log(chests[x].isOpened)
    chests[x].isOpened = !chests[x].isOpened;
-   if (chests[x].isOpened)
-      document.getElementById(x).className = "mapspan chest opened" + ((chestMarked.indexOf(k) > -1) ? " wayofhero" : " ");
+   if (chests[x].isOpened){
+      if (document.getElementById(x).classList.contains('wayofhero'))
+         document.getElementById(x).className = "mapspan chest opened wayofhero";
+      else
+         document.getElementById(x).className = "mapspan chest opened";
+   }
    else
       document.getElementById(x).className = "mapspan chest " + chests[x].isAvailable();
    updateMap();
