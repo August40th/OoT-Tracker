@@ -577,7 +577,7 @@ function drawDungeonList() {
          if (document.querySelectorAll("#submaplist .d-none").length) {
             if (submaparea.getAttribute("data-filter") === "vanilla") {
                submaparea.setAttribute("data-filter", "master");
-               submaparea.name = submaparea.textContent + " MQ ";
+               submaparea.name = submaparea.innerHTML + " MQ ";
                
                submaplist.childNodes.forEach(function(item, index) {
                   let itemType = item.getAttribute("data-type");
