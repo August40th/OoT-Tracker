@@ -579,7 +579,7 @@ function drawDungeonList() {
       submaparea.oncontextmenu = function(e) {
          e.preventDefault();
          let mode = 'all';
-         bulkDCSelect();
+         bulkDCSelect(mode);
          if (document.querySelectorAll("#submaplist .d-none").length) {
             if (submaparea.getAttribute("data-filter") === "vanilla") {
                submaparea.setAttribute("data-filter", "master");
@@ -612,13 +612,13 @@ function drawDungeonList() {
 }
 
 
-function bulkDCSelect() {
+function bulkDCSelect(mode) {
 
    const total = document.querySelectorAll('#submaplist li:not(.d-none)').length;
    const available = document.querySelectorAll('#submaplist li.DCavailable:not(.d-none)').length;
    const unavailable = document.querySelectorAll('#submaplist li.DCunavailable:not(.d-none)').length;
    const opened = document.querySelectorAll('#submaplist li.DCopened:not(.d-none)').length;
-   var mode;
+   //var mode;
    if (available > 0) {
       mode = 'available';
    } else if (total === unavailable) {
