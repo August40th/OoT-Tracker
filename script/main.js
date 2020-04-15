@@ -589,7 +589,7 @@ function drawDungeonList() {
                })
             } else if (submaparea.getAttribute("data-filter") === "master") {
                submaparea.setAttribute("data-filter", "vanilla");
-               submaparea.innerHTML = dungeon[dungeonSelect].name;
+               submaparea.innerHTML = dungeons[dungeonSelect].name;
                submaplist.childNodes.forEach(function(item, index) {
                   let itemType = item.getAttribute("data-type");
                   if (itemType && itemType.startsWith("MQ")) {
