@@ -612,7 +612,7 @@ function drawDungeonList() {
 }
 
 
-function bulkDCSelect(mode) {
+function bulkDCSelect(x) {
 
    const total = document.querySelectorAll('#submaplist li:not(.d-none)').length;
    const available = document.querySelectorAll('#submaplist li.DCavailable:not(.d-none)').length;
@@ -620,27 +620,27 @@ function bulkDCSelect(mode) {
    const opened = document.querySelectorAll('#submaplist li.DCopened:not(.d-none)').length;
    //var mode;
    if (available > 0) {
-      mode = 'available';
+      x = 'available';
    } else if (total === unavailable) {
-      mode = 'all';
+      x = 'all';
    } else if (total === opened) {
-      mode = 'none';
+      x = 'none';
    } else if (opened === total - available) {
-      mode = 'none';
+      x = 'none';
    } else if (unavailable === total - opened) {
-      mode = 'all';
+      x = 'all';
    }
-   // drawDungeonList();
+
    let selector = "#thisisinvalidselectornoonemayneverusethisasid";
    let opening = false;
-   if (mode === 'none') {
+   if (x === 'none') {
       selector = '#submaplist li';
       opening = false;
-   } else if (mode === 'available') {
+   } else if (x === 'available') {
       selector = '#submaplist li.DCavailable';
       opening = true;
 
-   } else if (mode === 'all') {
+   } else if (x === 'all') {
       selector = '#submaplist li';
       opening = true;
    }
