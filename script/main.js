@@ -577,7 +577,7 @@ function drawDungeonList() {
          if (document.querySelectorAll("#submaplist .d-none").length) {
             if (submaparea.getAttribute("data-filter") === "vanilla") {
                submaparea.setAttribute("data-filter", "master");
-               submaparea.name = submaparea.innerHTML + " MQ ";
+               submaparea.innerHTML = submaparea.name + " MQ";
                
                submaplist.childNodes.forEach(function(item, index) {
                   let itemType = item.getAttribute("data-type");
@@ -589,6 +589,7 @@ function drawDungeonList() {
                })
             } else if (submaparea.getAttribute("data-filter") === "master") {
                submaparea.setAttribute("data-filter", "vanilla");
+               submaparea.innerHTML = submaparea.name;
                submaplist.childNodes.forEach(function(item, index) {
                   let itemType = item.getAttribute("data-type");
                   if (itemType && itemType.startsWith("MQ")) {
