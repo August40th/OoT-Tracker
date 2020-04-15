@@ -618,7 +618,7 @@ function bulkDCSelect() {
    const available = document.querySelectorAll('#submaplist li.DCavailable:not(.d-none)').length;
    const unavailable = document.querySelectorAll('#submaplist li.DCunavailable:not(.d-none)').length;
    const opened = document.querySelectorAll('#submaplist li.DCopened:not(.d-none)').length;
-   let mode = 'none';
+   var mode;
    if (available > 0) {
       mode = 'available';
    } else if (total === unavailable) {
