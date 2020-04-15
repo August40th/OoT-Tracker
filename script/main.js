@@ -620,9 +620,9 @@ function bulkDCSelect(x) {
    const opened = document.querySelectorAll('#submaplist li.DCopened:not(.d-none)').length;
    
    if (x = 1)
-      let mode = 'all';
+      var mode = 'all';
    else {
-      let mode = 'none';
+      var mode = 'none';
       if (available > 0) {
          mode = 'available';
       } else if (total === unavailable) {
