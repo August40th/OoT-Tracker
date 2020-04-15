@@ -38,7 +38,7 @@ var selected = {};
 
 var dungeonSelect = 0;
 var dungeonMarked = [];
-
+var chestMarked = [];
 
 function setCookie(obj) {
    var d = new Date();
@@ -274,6 +274,20 @@ function toggleChest(x) {
       document.getElementById(x).className = "mapspan chest opened";
    else
       document.getElementById(x).className = "mapspan chest " + chests[x].isAvailable();
+   
+   window.event.preventDefault()
+   var elem = document.getElementById(x);
+   if (chestMarked.indexOf(x) > -1) {
+      chestMarked.splice(chestMarked.indexOf(x), 1);
+   }
+   if (elem) {
+      if (elem.classList.contains('wayofhero')) {
+         elem.classList.remove('wayofhero');
+      } else {
+         elem.className += " " + 'wayofhero';
+         chestMarked.push(x);
+      }
+   }
 }
 
 // Highlights a chest location
@@ -1469,7 +1483,7 @@ function gridItemClick(row, col, corner) {
 function updateMap() {
    for (k = 0; k < chests.length; k++) {
       if (!chests[k].isOpened)
-         document.getElementById(k).className = "mapspan chest " + checkChestAvailablity(chests[k]);
+         document.getElementById(k).className = "mapspan chest " + checkChestAvailablity(chests[k]) + ((chestMarked.indexOf(k) > -1) ? " wayofhero" : " ");;
       if (chests[k].name.startsWith("Skulltula")) {
          if (skulltula === "Overworld" || skulltula === "All") {
             document.getElementById(k).classList.remove("d-none");
@@ -1666,6 +1680,7 @@ function populateMapdiv() {
       s.onclick = new Function('toggleChest(' + k + ')');
       s.onmouseover = new Function('highlight(' + k + ')');
       s.onmouseout = new Function('unhighlight(' + k + ')');
+      s.oncontextmenu = new Function('toggleChest(' + k + ')')      
       s.style.left = chests[k].x;
       s.style.top = chests[k].y;
       if (chests[k].isOpened) {
@@ -1673,6 +1688,9 @@ function populateMapdiv() {
       }
       else
          s.className = "mapspan chest " + chests[k].isAvailable();
+      if (chestMarked.indexOf(k) > -1) {
+         s.className += " wayofhero";
+      }
       if (chests[k].name.startsWith("Skulltula")) {
          if (skulltula === "Overworld" || skulltula === "All") {
             s.classList.remove("d-none");
