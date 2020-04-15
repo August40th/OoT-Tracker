@@ -271,9 +271,9 @@ function toggleChest(x) {
    console.log(chests[x].isOpened)
    chests[x].isOpened = !chests[x].isOpened;
    if (chests[x].isOpened)
-      document.getElementById(x).className = "mapspan chest opened";
+      document.getElementById(x).className = "mapspan chest opened" + ((chestMarked.indexOf(k) > -1) ? " wayofhero" : " ");
    else
-      document.getElementById(x).className = "mapspan chest " + chests[x].isAvailable();
+      document.getElementById(x).className = "mapspan chest " + chests[x].isAvailable() + ((chestMarked.indexOf(k) > -1) ? " wayofhero" : " ");
    updateMap();
 }
 
