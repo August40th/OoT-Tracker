@@ -338,7 +338,11 @@ function clickDungeon(d) {
    dungeonSelect = d;
    document.getElementById("dungeon" + dungeonSelect).style.backgroundImage = "url(images/highlighted.png)";
 
-   document.getElementById('submaparea').innerHTML = dungeons[dungeonSelect].name;
+   listFilter = document.getElementById('submaparea').getAttribute('data-filter');
+   if (quest === "mixed" && listfilter === "master" && dungeons[dungeonSelect].type === "dungeon")
+      document.getElementById('submaparea').innerHTML = dungeons[dungeonSelect].name + " MQ";
+   else
+      document.getElementById('submaparea').innerHTML = dungeons[dungeonSelect].name
    document.getElementById('submaparea').className = "DC" + getDungeonAvailability(dungeons[dungeonSelect]);
    
    drawDungeonList();
