@@ -339,7 +339,7 @@ function clickDungeon(d) {
    document.getElementById("dungeon" + dungeonSelect).style.backgroundImage = "url(images/highlighted.png)";
 
    listFilter = document.getElementById('submaparea').getAttribute('data-filter');
-   if (quest === "mixed" && listfilter === "master" && dungeons[dungeonSelect].type === "dungeon")
+   if (quest === "mixed" && listFilter === "master" && dungeons[dungeonSelect].type === "dungeon")
       document.getElementById('submaparea').innerHTML = dungeons[dungeonSelect].name + " MQ";
    else
       document.getElementById('submaparea').innerHTML = dungeons[dungeonSelect].name
