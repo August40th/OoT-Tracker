@@ -613,6 +613,7 @@ function drawDungeonList() {
          updateGridItemAll();
       }
    }
+   setMQ = 0;
 }
 
 
