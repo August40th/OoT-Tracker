@@ -356,7 +356,7 @@ function drawDungeonList() {
    listFilter = document.getElementById('submaparea').getAttribute('data-filter');
    if (quest === "Vanilla" || quest === "Mixed") {
       let dNone = false;
-      if (quest === "Mixed" && listFilter === "master") {
+      if (quest === "Mixed" && listFilter === "master" && dungeons[dungeonSelect].type === "dungeon") {
          dNone = true;
       }
          for (var key in dungeons[dungeonSelect].chestlist) {
