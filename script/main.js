@@ -578,8 +578,8 @@ function drawDungeonList() {
       }
       submaparea.oncontextmenu = function(e) {
          e.preventDefault();
-         let mode = 'all';
-         bulkDCSelect(mode);
+         let setMQ = 1;
+         bulkDCSelect(setMQ);
          if (document.querySelectorAll("#submaplist .d-none").length) {
             if (submaparea.getAttribute("data-filter") === "vanilla") {
                submaparea.setAttribute("data-filter", "master");
@@ -618,29 +618,34 @@ function bulkDCSelect(x) {
    const available = document.querySelectorAll('#submaplist li.DCavailable:not(.d-none)').length;
    const unavailable = document.querySelectorAll('#submaplist li.DCunavailable:not(.d-none)').length;
    const opened = document.querySelectorAll('#submaplist li.DCopened:not(.d-none)').length;
-   //var mode;
-   if (available > 0) {
-      x = 'available';
-   } else if (total === unavailable) {
-      x = 'all';
-   } else if (total === opened) {
-      x = 'none';
-   } else if (opened === total - available) {
-      x = 'none';
-   } else if (unavailable === total - opened) {
-      x = 'all';
+   
+   if (x = 1)
+      let mode = 'all';
+   else {
+      let mode = 'none';
+      if (available > 0) {
+         mode = 'available';
+      } else if (total === unavailable) {
+         mode = 'all';
+      } else if (total === opened) {
+         mode = 'none';
+      } else if (opened === total - available) {
+         mode = 'none';
+      } else if (unavailable === total - opened) {
+         mode = 'all';
+      }
    }
 
    let selector = "#thisisinvalidselectornoonemayneverusethisasid";
    let opening = false;
-   if (x === 'none') {
+   if (mode === 'none') {
       selector = '#submaplist li';
       opening = false;
-   } else if (x === 'available') {
+   } else if (mode === 'available') {
       selector = '#submaplist li.DCavailable';
       opening = true;
 
-   } else if (x === 'all') {
+   } else if (mode === 'all') {
       selector = '#submaplist li';
       opening = true;
    }
