@@ -274,7 +274,9 @@ function toggleChest(x) {
       document.getElementById(x).className = "mapspan chest opened";
    else
       document.getElementById(x).className = "mapspan chest " + chests[x].isAvailable();
-   
+}
+
+function toggleMarkedChest(x) {
    window.event.preventDefault()
    var elem = document.getElementById(x);
    if (chestMarked.indexOf(x) > -1) {
@@ -1680,7 +1682,7 @@ function populateMapdiv() {
       s.onclick = new Function('toggleChest(' + k + ')');
       s.onmouseover = new Function('highlight(' + k + ')');
       s.onmouseout = new Function('unhighlight(' + k + ')');
-      s.oncontextmenu = new Function('toggleChest(' + k + ')')      
+      s.oncontextmenu = new Function('toggleMarkedChest(' + k + ')')      
       s.style.left = chests[k].x;
       s.style.top = chests[k].y;
       if (chests[k].isOpened) {
