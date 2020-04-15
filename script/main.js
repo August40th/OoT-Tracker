@@ -578,6 +578,8 @@ function drawDungeonList() {
       }
       submaparea.oncontextmenu = function(e) {
          e.preventDefault();
+         let mode = 'all';
+         bulkDCSelect();
          if (document.querySelectorAll("#submaplist .d-none").length) {
             if (submaparea.getAttribute("data-filter") === "vanilla") {
                submaparea.setAttribute("data-filter", "master");
