@@ -1486,7 +1486,7 @@ function gridItemClick(row, col, corner) {
 function updateMap() {
    for (k = 0; k < chests.length; k++) {
       if (!chests[k].isOpened)
-         document.getElementById(k).className = "mapspan chest " + checkChestAvailablity(chests[k]) + ((chestMarked.indexOf(k) > -1) ? " wayofhero" : " ");;
+         document.getElementById(k).className = "mapspan chest " + checkChestAvailablity(chests[k]) + ((chestMarked.indexOf(k) > -1) ? " wayofhero" : " ");
       if (chests[k].name.startsWith("Skulltula")) {
          if (skulltula === "Overworld" || skulltula === "All") {
             document.getElementById(k).classList.remove("d-none");
