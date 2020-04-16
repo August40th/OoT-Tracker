@@ -582,7 +582,7 @@ function drawDungeonList() {
          
          if (document.querySelectorAll("#submaplist .d-none").length) {
             if (submaparea.getAttribute("data-filter") === "vanilla") {
-               setMQ = 1;
+               setMQ = 'clear';
                bulkDCSelect(submaparea.DCpossible, setMQ);
                submaparea.setAttribute("data-filter", "master");
                submaparea.innerHTML = submaparea.innerText + " MQ";
@@ -596,7 +596,7 @@ function drawDungeonList() {
                   }
                })
             } else if (submaparea.getAttribute("data-filter") === "master") {
-               setMQ = 2;
+               setMQ = 'fill';
                bulkDCSelect(submaparea.DCpossible, setMQ);
                submaparea.setAttribute("data-filter", "vanilla");
                submaparea.innerHTML = dungeons[dungeonSelect].name;
@@ -617,16 +617,16 @@ function drawDungeonList() {
 }
 
 
-function bulkDCSelect(y, x) {
+function bulkDCSelect(y, mode) {
 
    const total = document.querySelectorAll('#submaplist li:not(.d-none)').length;
    const available = document.querySelectorAll('#submaplist li.DCavailable:not(.d-none)').length;
    const unavailable = document.querySelectorAll('#submaplist li.DCunavailable:not(.d-none)').length;
    const opened = document.querySelectorAll('#submaplist li.DCopened:not(.d-none)').length;
    
-   if (x = 1)
+   if (mode = 'clear')
       var mode = 'all';
-   else if (x = 2)
+   else if (mode = 'fill')
       var mode = 'none'
    else {
       var mode = 'none';
