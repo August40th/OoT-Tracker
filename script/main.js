@@ -382,10 +382,7 @@ function drawDungeonList() {
             s.onmouseout = new Function('unhighlightDungeonChest(this)');
             s.style.cursor = "pointer";
             s.setAttribute("data-type", "chest");
-            if (dNone) {
-               s.className = "DCopened";
-               s.classList.add("d-none");
-            }
+            if (dNone) s.classList.add("d-none");
             DClist.appendChild(s)
          }
       if ((skulltula === "Dungeons" || skulltula === "All") &&  dungeons[dungeonSelect].type === "dungeon"){
