@@ -595,13 +595,8 @@ function drawDungeonList() {
                submaplist.childNodes.forEach(function(item, index) {
                   let itemType = item.getAttribute("data-type");
                   if (itemType && itemType.startsWith("MQ")) {
-                     if (item.isAvailable())
-                        item.className = "DCavailable";
-                     else { item.className ="DCunavailable";
-                          }
                      item.classList.remove("d-none");
                   } else { 
-                     item.className = "DCopened";
                      item.classList.add("d-none");
                   }
                })
@@ -611,13 +606,8 @@ function drawDungeonList() {
                submaplist.childNodes.forEach(function(item, index) {
                   let itemType = item.getAttribute("data-type");
                   if (itemType && itemType.startsWith("MQ")) {
-                     item.className = "DCopened";
                      item.classList.add("d-none");
                   } else {
-                     if (item.isAvailable())
-                        item.className = "DCavailable";
-                     else { item.className ="DCunavailable";
-                          }
                      item.classList.remove("d-none");
                   }
                })
