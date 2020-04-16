@@ -578,12 +578,9 @@ function drawDungeonList() {
       }
       submaparea.oncontextmenu = function(e) {
          e.preventDefault();
-         var setMQ ;
          
          if (document.querySelectorAll("#submaplist .d-none").length) {
             if (submaparea.getAttribute("data-filter") === "vanilla") {
-               setMQ = 'clear';
-               bulkDCSelect(submaparea.DCpossible, setMQ);
                submaparea.setAttribute("data-filter", "master");
                submaparea.innerHTML = submaparea.innerText + " MQ";
                
@@ -596,8 +593,6 @@ function drawDungeonList() {
                   }
                })
             } else if (submaparea.getAttribute("data-filter") === "master") {
-               setMQ = 'fill';
-               bulkDCSelect(submaparea.DCpossible, setMQ);
                submaparea.setAttribute("data-filter", "vanilla");
                submaparea.innerHTML = dungeons[dungeonSelect].name;
                submaplist.childNodes.forEach(function(item, index) {
@@ -611,36 +606,29 @@ function drawDungeonList() {
             }
          }
          updateGridItemAll();
-         setMQ = 0;
       }
    }
 }
 
 
-function bulkDCSelect(y, mode) {
+function bulkDCSelect() {
 
    const total = document.querySelectorAll('#submaplist li:not(.d-none)').length;
    const available = document.querySelectorAll('#submaplist li.DCavailable:not(.d-none)').length;
    const unavailable = document.querySelectorAll('#submaplist li.DCunavailable:not(.d-none)').length;
    const opened = document.querySelectorAll('#submaplist li.DCopened:not(.d-none)').length;
    
-   if (mode = 'clear')
-      var mode = 'all';
-   else if (mode = 'fill')
-      var mode = 'none'
-   else {
-      var mode = 'none';
-      if (available > 0) {
-         mode = 'available';
-      } else if (total === unavailable) {
-         mode = 'all';
-      } else if (total === opened) {
-         mode = 'none';
-      } else if (opened === total - available) {
-         mode = 'none';
-      } else if (unavailable === total - opened) {
-         mode = 'all';
-      }
+   let mode = 'none';
+   if (available > 0) {
+      mode = 'available';
+   } else if (total === unavailable) {
+      mode = 'all';
+   } else if (total === opened) {
+      mode = 'none';
+   } else if (opened === total - available) {
+      mode = 'none';
+   } else if (unavailable === total - opened) {
+      mode = 'all';
    }
 
    let selector = "#thisisinvalidselectornoonemayneverusethisasid";
