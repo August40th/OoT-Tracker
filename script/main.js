@@ -598,7 +598,7 @@ function drawDungeonList() {
                      item.classList.remove("d-none");
                   } else {
                      item.classList.add("d-none");
-                     item.classList.isOpened();
+                     item.className = "DCopened";
                   }
                })
             } else if (submaparea.getAttribute("data-filter") === "master") {
