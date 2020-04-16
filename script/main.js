@@ -357,12 +357,19 @@ function drawDungeonList() {
    if (quest === "Vanilla" || quest === "Mixed") {
       let dNone = false;
       if (quest === "Mixed" && listFilter === "master" && dungeons[dungeonSelect].type === "dungeon") {
-         dungeons[dungeonSelect].chestlist.isAvailable() = false;
          dNone = true;
       }
          for (var key in dungeons[dungeonSelect].chestlist) {
             var s = document.createElement('li');
             s.innerHTML = key
+            if (listFilter === "master")
+                s.className = "DCopened";
+            else {
+               if (dungeons[dungeonSelect].chestlist[key].isAvailable())
+                  s.className = "DCavailable";
+               else
+                  s.className = "DCunavailable";
+            }
             if (dungeons[dungeonSelect].chestlist[key].isOpened)
                s.className = "DCopened";
             else if (dungeons[dungeonSelect].chestlist[key].isAvailable())
