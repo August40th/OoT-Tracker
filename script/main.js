@@ -362,9 +362,9 @@ function drawDungeonList() {
          for (var key in dungeons[dungeonSelect].chestlist) {
             var s = document.createElement('li');
             s.innerHTML = key
-            if (dungeons[dungeonSelect].chestlist[key].isOpened)
+            if (dungeons[dungeonSelect].chestlist[key].isOpened || listFilter === "master")
                s.className = "DCopened";
-            else if (dungeons[dungeonSelect].chestlist[key].isAvailable())
+            else if (dungeons[dungeonSelect].chestlist[key].isAvailable() || listFilter === "vanilla")
                s.className = "DCavailable";
             else
                s.className = "DCunavailable";
