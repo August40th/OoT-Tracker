@@ -357,14 +357,15 @@ function drawDungeonList() {
    if (quest === "Vanilla" || quest === "Mixed") {
       let dNone = false;
       if (quest === "Mixed" && listFilter === "master" && dungeons[dungeonSelect].type === "dungeon") {
+         dungeons[dungeonSelect].chestlist.isOpened;
          dNone = true;
       }
          for (var key in dungeons[dungeonSelect].chestlist) {
             var s = document.createElement('li');
             s.innerHTML = key
-            if (dungeons[dungeonSelect].chestlist[key].isOpened || listFilter === "master")
+            if (dungeons[dungeonSelect].chestlist[key].isOpened)
                s.className = "DCopened";
-            else if (dungeons[dungeonSelect].chestlist[key].isAvailable() || listFilter === "vanilla")
+            else if (dungeons[dungeonSelect].chestlist[key].isAvailable())
                s.className = "DCavailable";
             else
                s.className = "DCunavailable";
@@ -468,7 +469,8 @@ function drawDungeonList() {
       }
       if (dungeons[dungeonSelect].type === "dungeon"){
          if (quest === "Mixed" && listFilter === "vanilla") {
-         dNone = true;
+            dungeons[dungeonSelect].MQlist.isOpened;
+            dNone = true;
          }
          for (var key in dungeons[dungeonSelect].MQlist) {
             var s = document.createElement('li');
