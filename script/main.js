@@ -39,6 +39,7 @@ var selected = {};
 var dungeonSelect = 0;
 var dungeonMarked = [];
 var chestMarked = [];
+var DungeonLayout = null;
 
 function setCookie(obj) {
    var d = new Date();
@@ -589,6 +590,15 @@ function drawDungeonList() {
          
          if (document.querySelectorAll("#submaplist .d-none").length) {
             if (submaparea.getAttribute("data-filter") === "vanilla") {
+               
+               if (dungeons.[dungeonSelect].isAvailable() ) {
+                  bulkDCSelect();
+                  bulkDCSelect();
+               } 
+               else {
+                  bulkDCSelect();
+               }
+               
                submaparea.setAttribute("data-filter", "master");
                submaparea.innerHTML = submaparea.innerText + " MQ";
                
@@ -601,8 +611,18 @@ function drawDungeonList() {
                   }
                })
             } else if (submaparea.getAttribute("data-filter") === "master") {
+               
+               if (dungeons.[dungeonSelect].isAvailable() ) {
+                  bulkDCSelect();
+                  bulkDCSelect();
+               } 
+               else {
+                  bulkDCSelect();
+               }
+               
                submaparea.setAttribute("data-filter", "vanilla");
                submaparea.innerHTML = dungeons[dungeonSelect].name;
+               
                submaplist.childNodes.forEach(function(item, index) {
                   let itemType = item.getAttribute("data-type");
                   if (itemType && itemType.startsWith("MQ")) {
