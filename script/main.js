@@ -590,7 +590,7 @@ function drawDungeonList() {
          if (document.querySelectorAll("#submaplist .d-none").length) {
             if (submaparea.getAttribute("data-filter") === "vanilla") {
                
-               if (submaparea.className == "DCpossible" ) {
+               if (submaplist.className == "DCavailable" ) {
                   bulkDCSelect();
                   bulkDCSelect();
                } 
@@ -611,7 +611,7 @@ function drawDungeonList() {
                })
             } else if (submaparea.getAttribute("data-filter") === "master") {
                
-               if (submaparea.className == "DCpossible" ) {
+               if (submaplist.className == "DCavailable" ) {
                   bulkDCSelect();
                   bulkDCSelect();
                } 
