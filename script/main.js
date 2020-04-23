@@ -590,8 +590,7 @@ function drawDungeonList() {
          if (document.querySelectorAll("#submaplist .d-none").length) {
             if (submaparea.getAttribute("data-filter") === "vanilla") {
                
-               let key = dungeons[dungeonSelect].chestlist ;
-               if (dungeons[dungeonSelect].chestlist[key].isAvailable() ) {
+               if (submaparea.className == "DCpossible" ) {
                   bulkDCSelect();
                   bulkDCSelect();
                } 
@@ -612,8 +611,7 @@ function drawDungeonList() {
                })
             } else if (submaparea.getAttribute("data-filter") === "master") {
                
-               let key = dungeons[dungeonSelect].MQlist;
-               if (dungeons[dungeonSelect].MQlist[key].isAvailable() ) {
+               if (submaparea.className == "DCpossible" ) {
                   bulkDCSelect();
                   bulkDCSelect();
                } 
