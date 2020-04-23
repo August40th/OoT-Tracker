@@ -39,7 +39,6 @@ var selected = {};
 var dungeonSelect = 0;
 var dungeonMarked = [];
 var chestMarked = [];
-var DungeonLayout = null;
 
 function setCookie(obj) {
    var d = new Date();
@@ -591,7 +590,7 @@ function drawDungeonList() {
          if (document.querySelectorAll("#submaplist .d-none").length) {
             if (submaparea.getAttribute("data-filter") === "vanilla") {
                
-               if (dungeons.[dungeonSelect].chestlist[].isAvailable() ) {
+               if (submaplist.isAvailable() ) {
                   bulkDCSelect();
                   bulkDCSelect();
                } 
@@ -612,7 +611,7 @@ function drawDungeonList() {
                })
             } else if (submaparea.getAttribute("data-filter") === "master") {
                
-               if (dungeons.[dungeonSelect].MQlist[].isAvailable() ) {
+               if (submaplist.isAvailable() ) {
                   bulkDCSelect();
                   bulkDCSelect();
                } 
