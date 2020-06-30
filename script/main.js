@@ -432,7 +432,6 @@ function drawDungeonList() {
             s.innerHTML = key
             
             if (OcarinaShuffle == false && key == "Fairy Ocarina") {
-               toggleDungeonChest(s,' + dungeonSelect + ',"' + key + '");
                s.classList.add("d-none"); }
             if (WeirdEgg == false && key == "Malons Weird Egg") {
                s.classList.add("d-none"); }
