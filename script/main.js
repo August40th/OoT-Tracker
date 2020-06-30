@@ -447,13 +447,13 @@ function drawDungeonList() {
             
             if (OcarinaShuffle == false && key == "Fairy Ocarina") {
                s.classList.add("d-none");
-               s.className = "DCopened"; }
+               toggleDungeonChest(); }
             if (WeirdEgg == false && key == "Malons Weird Egg") {
                s.classList.add("d-none");
-               s.className = "DCopened"; }
+               toggleDungeonChest(); }
             if (BeanShuffle == false && key == "Bean Salesman") {
                s.classList.add("d-none"); 
-               s.className = "DCopened"; }
+               toggleDungeonChest(); }
 
             s.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
             s.onmouseover = new Function('highlightDungeonChest(this)');
@@ -543,15 +543,12 @@ function drawDungeonList() {
             else
                s.className = "DCunavailable";
             
-            if (OcarinaShuffle == false && key == "Fairy Ocarina") {
+            if (OcarinaShuffle == false && key == "Fairy Ocarina") 
                s.classList.add("d-none");
-               s.className = "DCopened"; }
-            if (WeirdEgg == false && key == "Malons Weird Egg") {
+            if (WeirdEgg == false && key == "Malons Weird Egg") 
                s.classList.add("d-none");
-               s.className = "DCopened"; }
-            if (BeanShuffle == false && key == "Bean Salesman") {
+            if (BeanShuffle == false && key == "Bean Salesman") 
                s.classList.add("d-none");
-               s.className = "DCopened"; }
 
             s.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
             s.onmouseover = new Function('highlightDungeonChest(this)');
