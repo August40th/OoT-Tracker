@@ -429,14 +429,6 @@ function drawDungeonList() {
       }
          for (var key in dungeons[dungeonSelect].chestlist) {
             var s = document.createElement('li');
-            
-            if (OcarinaShuffle == false && key == "Fairy Ocarina") {
-               s.classList.add("d-none"); }
-            if (WeirdEgg == false && key == "Malons Weird Egg") {
-               s.classList.add("d-none"); }
-            if (BeanShuffle == false && key == "Bean Salesman") {
-               s.classList.add("d-none"); }
-            
             s.innerHTML = key
             
             if (listFilter === "master")
@@ -536,14 +528,7 @@ function drawDungeonList() {
          for (var key in dungeons[dungeonSelect].chestlist) {
             var s = document.createElement('li');
             s.innerHTML = key
-//            if (quest === "Master") {
-  //             if (OcarinaShuffle == false && key == "Fairy Ocarina") 
-    //              s.classList.add("d-none");
-      //         if (WeirdEgg == false && key == "Malons Weird Egg") 
-        //          s.classList.add("d-none");
-          //     if (BeanShuffle == false && key == "Bean Salesman") 
-            //      s.classList.add("d-none");
-            //}
+
             if (dungeons[dungeonSelect].chestlist[key].isOpened)
                s.className = "DCopened";
             else if (dungeons[dungeonSelect].chestlist[key].isAvailable())
@@ -719,6 +704,7 @@ function drawDungeonList() {
             }
          }
          updateGridItemAll();
+         updateMap();
       }
    }
 }
