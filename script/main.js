@@ -446,7 +446,7 @@ function drawDungeonList() {
                s.className = "DCunavailable";
             
             if (OcarinaShuffle == false && key == "Fairy Ocarina") {
-                toggleDungeonChest((s,' + dungeonSelect + ',"' + key + '");
+                toggleDungeonChest(s,' + dungeonSelect + ',"' + key + '");
                 s.classList.add("d-none"); }
             if (WeirdEgg == false && key == "Malons Weird Egg") {
                 toggleDungeonChest(s,' + dungeonSelect + ',"' + key + '");
