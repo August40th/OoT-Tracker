@@ -65,7 +65,7 @@
                 <input type='radio' name='mapposition' value='Side' onclick="setOrder(false)">Side<br>
             </fieldset>    
             <fieldset>
-                <legend>Access</legend>
+                <legend>World</legend>
                         <input type='checkbox' name='OpenForest' checked='true' onchange="setForest(this)">Open Forest 
                         <input type='checkbox' name='OpenGate' checked='true' onchange="setGate(this)">Open Gate 
                         <input type='checkbox' name='OpenDoor' checked='true' onchange="setDoor(this)">Open Door 
@@ -89,11 +89,25 @@
             </fieldset>
             <fieldset>
                     <legend>Rainbow Bridge Logic</legend>
-                    <input type='radio' name='ganonlogic' value='Open' checked='true' onclick="setGanonLogic(this)">Open
-                    <input type='radio' name='ganonlogic' value='Vanilla' onclick="setGanonLogic(this)">Vanilla
-                    <input type='radio' name='ganonlogic' value='Medallions' onclick="setGanonLogic(this)">Medallions
-                    <input type='radio' name='ganonlogic' value='Dungeons' onclick="setGanonLogic(this)">Dungeons<br>
-            </fieldset>
+                        <input type='radio' name='bridgelogic' value='Open' checked='true' onclick="setBridge(this)">Open
+                        <input type='radio' name='bridgelogic' value='Vanilla' onclick="setBridge(this)">Vanilla
+                        <input type='radio' name='bridgelogic' value='Medallions' onclick="setBridge(this)">Medallions
+                        <input type='radio' name='bridgelogic' value='Dungeons' onclick="setBridge(this)">Dungeons<br>
+                        <input type='radio' name='bridgelogic' value='Skulltulas' onclick="setBridge(this)">Skulltulas<br>
+                    <legend>Castle Trials</legend>
+                            <input type='checkbox' name='trials' checked='false' onchange="setTrials(this)">Trials On ?<br>                            
+                            Number of Trials: <input type="range" name='trialsize' value='0' max='6' min='0' onchange="setTrials(this)">
+                            <span id='trialsize'>100%</span><br>
+                    <legend>Ganon's Boss Key</legend>
+                        <input type='radio' name='castlelogic' value='Vanilla' onclick="setCastle(this)">Vanilla
+                        <input type='radio' name='castlelogic' value='Castle' onclick="setCastle(this)">Ganons Castle<br>
+                        <input type='radio' name='castlelogic' value='Removed' onclick="setCastle(this)">Removed
+                        <input type='radio' name='castlelogic' value='Anywhere' onclick="setCastle(this)">Anywhere<br>
+                        <input type='radio' name='castlelogic' value='LACSVan' onclick="setCastle(this)">LACS Vanilla
+                        <input type='radio' name='castlelogic' value='LACSStones' onclick="setCastle(this)">LACS Stones<br>
+                        <input type='radio' name='castlelogic' value='LACSMeds' onclick="setCastle(this)">LACS Medallions
+                        <input type='radio' name='castlelogic' value='LACSAD' onclick="setCastle(this)">LACS All Dungeons<br>
+        </fieldset>
                 <fieldset>
                     <legend>Sanity</legend>
                     <fieldset>
@@ -118,9 +132,14 @@
                         <input type='radio' name='scrubs' value='Scrubsanity' onclick="setScrub(this)">Scrubsanity
                     </fieldset>
                     <fieldset> <legend>Getting Crazy</legend>
-                        <input type='checkbox' name='OcarinaShuffle' checked='false' onchange="setOcarina(this)">Shuffle Ocarina
+                        <input type='checkbox' name='Shopsanity' checked='false' onchange="setShops(this)">Shuffle Shop Item(s)
+                        Shop Size<input type="range" name='shopsize' value='4' max='4' min='1' onchange="setShops(this)">
+                        <span id='shopsize'>100%</span><br>
+                        <input type='checkbox' name='Cowsanity' checked='false' onchange="setCows(this)">Shuffle Cow Milk <br>
                         <input type='checkbox' name='SongShuffle' checked='false' onchange="setSongs(this)">Shuffle Songs into Pool<br>
+                        <input type='checkbox' name='OcarinaShuffle' checked='false' onchange="setOcarina(this)">Shuffle Ocarina
                         <input type='checkbox' name='WeirdEgg' checked='false' onchange="setEgg(this)">Shuffle Weird Egg
+                        <input type='checkbox' name='BeanShuffle' checked='false' onchange="setBean(this)">Shuffle Bean Pack <br>
                         <input type='checkbox' name='BombchuLogic' checked='false' onchange="setBombchu(this)">Bombchu IN Logic<br>            
                     </fieldset>
                     
