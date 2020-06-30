@@ -95,8 +95,8 @@
                         <input type='radio' name='rainbowbridge' value='Dungeons' onclick="setRainbow(this)">Dungeons<br>
                         <input type='radio' name='rainbowbridge' value='Skulltulas' onclick="setRainbow(this)">Skulltulas<br>
                     <legend>Castle Trials</legend>
-                            <input type='checkbox' name='trials' checked='false' onchange="setTrials(this, trialsize)">Trials On ?<br>                            
-                            Number of Trials: <input type="range" name='trialsize' value='0' max='6' min='0' onchange="setTrials(trials, this)">
+                            <input type='checkbox' name='trials' checked='false' onchange="setTrials(this)">Trials On ?<br>                            
+                            Number of Trials: <input type="range" name='trialsize' value='0' max='6' min='0' onchange="setTrialSize(this)">
                             <span id='trialsize'>100%</span><br>
                     <legend>Ganon's Boss Key</legend>
                         <input type='radio' name='castlelogic' value='Vanilla' onclick="setCastle(this)">Vanilla
