@@ -23,7 +23,7 @@ quest = 'Vanilla';
 OcarinaShuffle = false;
 SongShuffle = false;
 WeirdEgg = false;
-Bean Shuffle = false;
+BeanShuffle = false;
 
 BombchuLogic = false;
 
