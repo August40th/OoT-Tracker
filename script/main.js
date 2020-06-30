@@ -448,8 +448,7 @@ function drawDungeonList() {
             
             if (OcarinaShuffle == false && key == "Fairy Ocarina") {
                s.className = "DCopened";               
-               s.classList.add("d-none");
-               DCcount--;}
+               s.classList.add("d-none");}
             if (WeirdEgg == false && key == "Malons Weird Egg") {
                s.className = "DCopened";               
                s.classList.add("d-none"); }
@@ -1678,6 +1677,12 @@ function updateMap() {
       if (quest === "Vanilla" || quest === "Mixed") {
          for (var key in dungeons[k].chestlist) {
             if (dungeons[k].chestlist.hasOwnProperty(key)) {
+               if (OcarinaShuffle == true && key == "Fairy Ocarina")
+                  DCcount--;
+               if (WeirdEgg == true && key == "Malons Weird Egg")
+                  DCcount--;
+               if (BeanShuffle == true && key == "Bean Salesman")
+                  DCcount--;
                if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable())
                   DCcount++;
             }
@@ -1717,6 +1722,12 @@ function updateMap() {
          if (quest === "Master"){
             for (var key in dungeons[k].chestlist) {
                if (dungeons[k].chestlist.hasOwnProperty(key) && dungeons[k].type === "overworld") {
+                  if (OcarinaShuffle == true && key == "Fairy Ocarina")
+                     DCcount--;
+                  if (WeirdEgg == true && key == "Malons Weird Egg")
+                     DCcount--;
+                  if (BeanShuffle == true && key == "Bean Salesman")
+                     DCcount--;
                   if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable())
                      DCcount++;
                }
