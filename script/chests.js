@@ -58,6 +58,24 @@ var dungeons = [
                return items.MasterSword && items.Hookshot; }
          },
       },
+      shoplist: {
+         'Kokiri Shop': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Kokiri Shop 2': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Kokiri Shop 3': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Kokiri Shop 4': {
+            isAvailable: function () {
+               return true; }
+         },
+      },
       gossiplist: {
          'Infront Storms Grotto': {
             isAvailable: function () {
@@ -2386,6 +2404,56 @@ var dungeons = [
             }
          },
       },
+      shoplist: {
+         'Potion Shop': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Potion Shop 2': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Potion Shop 3': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Potion Shop 4': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Bazaar Shop': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Bazaar Shop 2': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Bazaar Shop 3': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Bazaar Shop 4': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Bombchu Shop': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Bombchu Shop 2': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Bombchu Shop 3': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Bombchu Shop 4': {
+            isAvailable: function () {
+               return true; }
+         },
+      },
       gossiplist: {
          'Outside Temple of Time x4': {
             isAvailable: function () {
@@ -2601,6 +2669,40 @@ var dungeons = [
             },
          },
       },
+      shoplist: {
+         'Potion Shop': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Potion Shop 2': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Potion Shop 3': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Potion Shop 4': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Bazaar Shop': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Bazaar Shop 2': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Bazaar Shop 3': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Bazaar Shop 4': {
+            isAvailable: function () {
+               return true; }
+         },
+      },
       isBeatable: function () {
          return this.canGetChest();
       },
@@ -2667,6 +2769,24 @@ var dungeons = [
             isAvailable: function () {
                return (items.Ocarina && items.SongofTime) || (items.Hookshot && items.GoronTunic);
             },
+         },
+      },
+      shoplist: {
+         'Goron Shop': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Goron Shop 2': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Goron Shop 3': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Goron Shop 4': {
+            isAvailable: function () {
+               return true; }
          },
       },
       gossiplist: {
@@ -2865,6 +2985,24 @@ var dungeons = [
             isAvailable: function () {
                return (items.MasterSword && items.Hookshot && items.ZoraLetter && (items.Bombs || items.Scale) && items.ZeldasLullaby && items.Ocarina);
             },
+         },
+      },
+      shoplist: {
+         'Zora Shop': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Zora Shop 2': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Zora Shop 3': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Potion Shop 4': {
+            isAvailable: function () {
+               return true; }
          },
       },
       gossiplist: {
@@ -3147,31 +3285,34 @@ var dungeons = [
       y: "29.5%",
       type: "overworld",
       chestlist: {
-         ['River Heart Piece 1']: {
+         'River Heart Piece 1': {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword || (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale));
             }
          },
-         ['River Open Grotto']: {
+         'River Open Grotto': {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword || (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale));
             }
          },
-         ['River Heart Piece 2']: {
+         'River Heart Piece 2': {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.MasterSword && items.HoverBoots) || (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale));
             }
          },
-         ['Frogs in the Rain']: {
+         'Frogs in the Rain': {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.Ocarina && items.SongofStorms && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale)));
             }
          },
-         ['Frogs Mini Game']: {
+         'Frogs Mini Game': {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.Ocarina && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && items.ZeldasLullaby && items.EponasSong && items.SariasSong && items.SunsSong && items.SongofTime && items.SongofStorms));
             }
          },
+         'Bean Salesman': {
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale));
       },
       skulllist: {
          'Tree by entrance Skulltula': {
