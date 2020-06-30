@@ -3313,6 +3313,8 @@ var dungeons = [
          'Bean Salesman': {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale));
+            }
+         }
       },
       skulllist: {
          'Tree by entrance Skulltula': {
