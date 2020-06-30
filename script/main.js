@@ -1022,6 +1022,7 @@ function setOcarina(sender) {
    items.Ocarina = itemsMin.Ocarina;
    updateGridItemAll();
    updateMap();
+   drawDungeonList();
    saveCookie();
 }
 
@@ -1042,6 +1043,7 @@ function setEgg(sender) {
    items.Mask = itemsMin.Mask;
    updateGridItemAll();
    updateMap();
+   drawDungeonList();
    saveCookie();
 }
 
