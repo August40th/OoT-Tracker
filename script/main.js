@@ -23,6 +23,8 @@ quest = 'Vanilla';
 OcarinaShuffle = false;
 SongShuffle = false;
 WeirdEgg = false;
+Bean Shuffle = false;
+
 BombchuLogic = false;
 
 OpenForest = true;
@@ -63,7 +65,7 @@ function getCookie() {
    return {};
 }
 
-var cookiekeys = ['map', 'iZoom', 'mZoom', 'mOrien', 'mPos', 'glogic', 'prize', 'items', 'qlogic', 'flogic', 'carp', 'smallk', 'bossk', 'sclogic', 'sklogic', 'ocShuff', 'sngShuff', 'eggShuff', 'chulogic', 'forest', 'gate', 'door', 'fountain'];
+var cookiekeys = ['map', 'iZoom', 'mZoom', 'mOrien', 'mPos', 'glogic', 'prize', 'items', 'qlogic', 'flogic', 'carp', 'smallk', 'bossk', 'sclogic', 'sklogic', 'ocShuff', 'sngShuff', 'eggShuff', 'beanShuff', 'chulogic', 'forest', 'gate', 'door', 'fountain'];
 var cookieDefault = {
    map: 1,
    iZoom: 100,
@@ -81,6 +83,7 @@ var cookieDefault = {
    ocShuff: 0,
    sngShuff: 0,
    eggShuff: 0,
+   beanShuff: 0,
    chulogic: 0,
    forest: 1,
    gate: 1,
@@ -139,6 +142,9 @@ function loadCookie() {
 
    document.getElementsByName('WeirdEgg')[0].checked = !!cookieobj.eggShuff;
    document.getElementsByName('WeirdEgg')[0].onchange();
+   
+   document.getElementsByName('BeanShuffle')[0].checked = !!cookieobj.beanShuff;
+   document.getElementsByName('BeanShuffle')[0].onchange();
 
    document.getElementsByName('BombchuLogic')[0].checked = !!cookieobj.chulogic;
    document.getElementsByName('BombchuLogic')[0].onchange();
@@ -214,6 +220,7 @@ function saveCookie() {
    cookieobj.ocShuff = document.getElementsByName('OcarinaShuffle')[0].checked ? 1 : 0;
    cookieobj.sngShuff = document.getElementsByName('SongShuffle')[0].checked ? 1 : 0;
    cookieobj.eggShuff = document.getElementsByName('WeirdEgg')[0].checked ? 1 : 0;
+   cookieobj.beanShuff = document.getElementsByName('BeanShuffle')[0].checked ? 1 : 0;
    cookieobj.chulogic = document.getElementsByName('BombchuLogic')[0].checked ? 1 : 0;
    cookieobj.carp = document.getElementsByName('Rescue1')[0].checked ? 1 : 0;
 
