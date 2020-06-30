@@ -447,7 +447,8 @@ function drawDungeonList() {
                s.className = "DCunavailable";
             
             if (OcarinaShuffle == false && key == "Fairy Ocarina") {
-               s.classList.add("d-none"); }
+               s.classList.add("d-none");
+               s.className = "DCopened";}
             if (WeirdEgg == false && key == "Malons Weird Egg") {
                s.classList.add("d-none"); }
             if (BeanShuffle == false && key == "Bean Salesman") {
