@@ -10,13 +10,18 @@ var songimg = ['Unknown', 'Impa', 'Malon', 'SariasSong2', 'Guru', 'CompBro', 'Te
 var questdungeons = [];
 var questimg = ['', 'MQ'];
 
-ganonlogic = 'Open';
+rainbowbridge = 'Open';
+castlelogic = 'Removed';
+trials = false;
+trialsize = 0;
 gerudobridge = 'Default';
 Rescue1 = true;
 smallkeys = 'Dungeons';
 bosskeys = 'Dungeons';
 skulltula = 'Off';
 scrubs = 'Off';
+Shopsanity = false;
+Cowsanity = false;
 showprizes = false;
 quest = 'Vanilla';
 
@@ -65,13 +70,13 @@ function getCookie() {
    return {};
 }
 
-var cookiekeys = ['map', 'iZoom', 'mZoom', 'mOrien', 'mPos', 'glogic', 'prize', 'items', 'qlogic', 'flogic', 'carp', 'smallk', 'bossk', 'sclogic', 'sklogic', 'ocShuff', 'sngShuff', 'eggShuff', 'beanShuff', 'chulogic', 'forest', 'gate', 'door', 'fountain'];
+var cookiekeys = ['map', 'iZoom', 'mZoom', 'mOrien', 'mPos', 'rainlogic', 'prize', 'items', 'qlogic', 'flogic', 'carp', 'smallk', 'bossk', 'sclogic', 'sklogic', 'ocShuff', 'sngShuff', 'eggShuff', 'beanShuff', 'chulogic', 'forest', 'gate', 'door', 'fountain', 'shopShuff', 'cowShuff', 'trials', 'numtrials', 'pigBK'];
 var cookieDefault = {
    map: 1,
    iZoom: 100,
    mZoom: 100,
    mPos: 0,
-   glogic: 'Open',
+   rainlogic: 'Open',
    qlogic: 'Vanilla',
    flogic: 'Default',
    carp: 1,
@@ -89,6 +94,11 @@ var cookieDefault = {
    gate: 1,
    door: 1,
    fountain: 0,
+   shopShuff: 0,
+   cowShuff: 0,
+   trials: 0,
+   numtrials: 0,
+   pigBK: 'Removed',
 
    items: defaultItemGrid
 }
@@ -145,6 +155,12 @@ function loadCookie() {
    
    document.getElementsByName('BeanShuffle')[0].checked = !!cookieobj.beanShuff;
    document.getElementsByName('BeanShuffle')[0].onchange();
+   
+   document.getElementsByName('Shopsanity')[0].checked = !!cookieobj.shopShuff;
+   document.getElementsByName('Shopsanity')[0].onchange();
+   
+   document.getElementsByName('Cowsanity')[0].checked = !!cookieobj.cowShuff;
+   document.getElementsByName('Cowsanity')[0].onchange();
 
    document.getElementsByName('BombchuLogic')[0].checked = !!cookieobj.chulogic;
    document.getElementsByName('BombchuLogic')[0].onchange();
@@ -152,9 +168,33 @@ function loadCookie() {
    document.getElementsByName('Rescue1')[0].checked = !!cookieobj.carp;
    document.getElementsByName('Rescue1')[0].onchange();
 
-   for (rbuttonID in document.getElementsByName('ganonlogic')) {
-      rbutton = document.getElementsByName('ganonlogic')[rbuttonID]
-      if (rbutton.value == cookieobj.glogic)
+   for (rbuttonID in document.getElementsByName('rainbowbridge')) {
+      rbutton = document.getElementsByName('rainbowbridge')[rbuttonID]
+      if (rbutton.value == cookieobj.rainlogic)
+         rbutton.click();
+   }
+   
+   for (rbuttonID in document.getElementsByName('rainbowbridge')) {
+      rbutton = document.getElementsByName('rainbowbridge')[rbuttonID]
+      if (rbutton.value == cookieobj.rainlogic)
+         rbutton.click();
+   }
+   
+   for (rbuttonID in document.getElementsByName('castlelogic')) {
+      rbutton = document.getElementsByName('castlelogic')[rbuttonID]
+      if (rbutton.value == cookieobj.pigBK)
+         rbutton.click();
+   }
+   
+   for (rbuttonID in document.getElementsByName('trials')) {
+      rbutton = document.getElementsByName('trials')[rbuttonID]
+      if (rbutton.value == cookieobj.trials)
+         rbutton.click();
+   }
+   
+   for (rbuttonID in document.getElementsByName('trialsize')) {
+      rbutton = document.getElementsByName('trialsize')[rbuttonID]
+      if (rbutton.value == cookieobj.numtrials)
          rbutton.click();
    }
 
@@ -221,13 +261,34 @@ function saveCookie() {
    cookieobj.sngShuff = document.getElementsByName('SongShuffle')[0].checked ? 1 : 0;
    cookieobj.eggShuff = document.getElementsByName('WeirdEgg')[0].checked ? 1 : 0;
    cookieobj.beanShuff = document.getElementsByName('BeanShuffle')[0].checked ? 1 : 0;
+   cookieobj.shopShuff = document.getElementsByName('Shopsanity')[0].checked ? 1 : 0;
+   cookieobj.cowShuff = document.getElementsByName('Cowsanity')[0].checked ? 1 : 0;
+
    cookieobj.chulogic = document.getElementsByName('BombchuLogic')[0].checked ? 1 : 0;
    cookieobj.carp = document.getElementsByName('Rescue1')[0].checked ? 1 : 0;
 
-   for (rbuttonID in document.getElementsByName('ganonlogic')) {
-      rbutton = document.getElementsByName('ganonlogic')[rbuttonID]
+   for (rbuttonID in document.getElementsByName('rainbowbridge')) {
+      rbutton = document.getElementsByName('rainbowbridge')[rbuttonID]
       if (rbutton.checked)
-         cookieobj.glogic = rbutton.value;
+         cookieobj.rainlogic = rbutton.value;
+   }
+   
+   for (rbuttonID in document.getElementsByName('castlelogic')) {
+      rbutton = document.getElementsByName('castlelogic')[rbuttonID]
+      if (rbutton.checked)
+         cookieobj.pigBK = rbutton.value;
+   }
+   
+   for (rbuttonID in document.getElementsByName('trials')) {
+      rbutton = document.getElementsByName('trials')[rbuttonID]
+      if (rbutton.checked)
+         cookieobj.trials = rbutton.value;
+   }
+   
+   for (rbuttonID in document.getElementsByName('trialsize')) {
+      rbutton = document.getElementsByName('trialsize')[rbuttonID]
+      if (rbutton.checked)
+         cookieobj.numtrials = rbutton.value;
    }
 
    for (rbuttonID in document.getElementsByName('quest')) {
@@ -843,8 +904,28 @@ function showPrizes(sender) {
    saveCookie();
 }
 
-function setGanonLogic(sender) {
-   ganonlogic = sender.value;
+function setRainbow(sender) {
+   rainbowbridge = sender.value;
+   updateMap();
+   saveCookie();
+}
+
+function setCastle(sender) {
+   castlelogic = sender.value;
+   if (castlelogic == 'Removed')
+      itemsMin.BossCastle = 1;
+   updateMap();
+   saveCookie();
+}
+
+function setTrials(sender) {
+   trials = sender.value;
+   updateMap();
+   saveCookie();
+}
+
+function setTrialSize(sender) {
+   trialsize = sender.value;
    updateMap();
    saveCookie();
 }
@@ -1045,10 +1126,39 @@ function setEgg(sender) {
       itemsMin.Mask = 1;
    else {
       itemsMin.Mask = 0;
-      //dungeons[13].chestlist[2] = "opened";
    }
    items.Mask = itemsMin.Mask;
    updateGridItemAll();
+   updateMap();
+   drawDungeonList();
+   saveCookie();
+}
+
+function setBean(sender) {
+   BeanShuffle = sender.checked;
+   updateMap();
+   drawDungeonList();
+   saveCookie();
+}
+
+
+function setShops(sender) {
+   Shopsanity = sender.checked;
+   updateMap();
+   drawDungeonList();
+   saveCookie();
+}
+
+
+function setShopSize(sender) {
+   BeanShuffle = sender.checked;
+   updateMap();
+   drawDungeonList();
+   saveCookie();
+}
+
+function setCows(sender) {
+   Cowsanity = sender.checked;
    updateMap();
    drawDungeonList();
    saveCookie();
@@ -1923,7 +2033,7 @@ function getDungeonAvailability(dungeon) {
       scrublist: {},
       MQlist: {},
       MQskulllist: {},
-      MQscrublist: {}
+      MQscrublist: {},
    };
    if (quest === "Vanilla" || quest === "Mixed") {
        for (let key in dungeon.chestlist) {
@@ -2051,7 +2161,7 @@ function populateItemconfig() {
 }
 
 function isBridgeOpen() {
-   switch (ganonlogic) {
+   switch (rainbowbridge) {
       case "Open":
          return true;
       case "Vanilla":
