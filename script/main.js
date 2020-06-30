@@ -453,13 +453,6 @@ function drawDungeonList() {
                s.className = "DCavailable";
             else
                s.className = "DCunavailable";
-            
-            if (OcarinaShuffle == false && key == "Fairy Ocarina") {
-               s.className = "DCopened";}
-            if (WeirdEgg == false && key == "Malons Weird Egg") {
-               s.className = "DCopened";}
-            if (BeanShuffle == false && key == "Bean Salesman") {
-               s.className = "DCopened";}
 
             s.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
             s.onmouseover = new Function('highlightDungeonChest(this)');
