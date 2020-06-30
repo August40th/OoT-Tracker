@@ -100,13 +100,13 @@
                             <span id='trialsize'>100%</span><br>
                     <legend>Ganon's Boss Key</legend>
                         <input type='radio' name='castlelogic' value='Vanilla' onclick="setCastle(this)">Vanilla
-                        <input type='radio' name='castlelogic' value='Castle' onclick="setCastle(this)">Ganons Castle<br>
+                        <input type='radio' name='castlelogic' value='Castle' onclick="setCastle(this)">Ganons Castle
                         <input type='radio' name='castlelogic' value='Removed' onclick="setCastle(this)">Removed
                         <input type='radio' name='castlelogic' value='Anywhere' onclick="setCastle(this)">Anywhere<br>
                         <input type='radio' name='castlelogic' value='LACSVan' onclick="setCastle(this)">LACS Vanilla
-                        <input type='radio' name='castlelogic' value='LACSStones' onclick="setCastle(this)">LACS Stones<br>
-                        <input type='radio' name='castlelogic' value='LACSMeds' onclick="setCastle(this)">LACS Medallions
-                        <input type='radio' name='castlelogic' value='LACSAD' onclick="setCastle(this)">LACS All Dungeons<br>
+                        <input type='radio' name='castlelogic' value='LACSStones' onclick="setCastle(this)">LACS Stones
+                        <input type='radio' name='castlelogic' value='LACSMeds' onclick="setCastle(this)">LACS Medallions<br>
+                        <input type='radio' name='castlelogic' value='LACSAD' onclick="setCastle(this)">LACS All Dungeons
         </fieldset>
                 <fieldset>
                     <legend>Sanity</legend>
@@ -133,9 +133,9 @@
                     </fieldset>
                     <fieldset> <legend>Getting Crazy</legend>
                         <input type='checkbox' name='Shopsanity' checked='false' onchange="setShops(this)">Shuffle Shop Item(s)
-                        Shop Size<input type="range" name='shopsize' value='4' max='4' min='1' onchange="setShops(this)">
+                        Shop Size<input type="range" name='shopsize' value='4' max='4' min='1' onchange="setShopSize(this)">
                         <span id='shopsize'>100%</span><br>
-                        <input type='checkbox' name='Cowsanity' checked='false' onchange="setCows(this)">Shuffle Cow Milk <br>
+                        <input type='checkbox' name='Cowsanity' checked='false' onchange="setCows(this)">Shuffle Cow Milk
                         <input type='checkbox' name='SongShuffle' checked='false' onchange="setSongs(this)">Shuffle Songs into Pool<br>
                         <input type='checkbox' name='OcarinaShuffle' checked='false' onchange="setOcarina(this)">Shuffle Ocarina
                         <input type='checkbox' name='WeirdEgg' checked='false' onchange="setEgg(this)">Shuffle Weird Egg
