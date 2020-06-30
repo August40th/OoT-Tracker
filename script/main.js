@@ -448,10 +448,13 @@ function drawDungeonList() {
             
             if (OcarinaShuffle == false && key == "Fairy Ocarina") {
                s.className = "DCopened";               
-               s.classList.add("d-none");}
+               s.classList.add("d-none");
+               DCcount--;}
             if (WeirdEgg == false && key == "Malons Weird Egg") {
+               s.className = "DCopened";               
                s.classList.add("d-none"); }
             if (BeanShuffle == false && key == "Bean Salesman") {
+               s.className = "DCopened";               
                s.classList.add("d-none"); }
 
             s.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
