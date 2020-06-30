@@ -446,14 +446,14 @@ function drawDungeonList() {
                s.className = "DCunavailable";
             
             if (OcarinaShuffle == false && key == "Fairy Ocarina") {
-               s.classList.add("d-none");
-               toggleDungeonChest(); }
+                toggleDungeonChest();
+                s.classList.add("d-none"); }
             if (WeirdEgg == false && key == "Malons Weird Egg") {
-               s.classList.add("d-none");
-               toggleDungeonChest(); }
+                toggleDungeonChest();
+                s.classList.add("d-none"); }
             if (BeanShuffle == false && key == "Bean Salesman") {
-               s.classList.add("d-none"); 
-               toggleDungeonChest(); }
+                toggleDungeonChest();
+                s.classList.add("d-none"); }
 
             s.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
             s.onmouseover = new Function('highlightDungeonChest(this)');
