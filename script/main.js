@@ -1149,9 +1149,9 @@ function setEgg(sender) {
 function setBean(sender) {
    BeanShuffle = sender.checked;
    if (BeanShuffle == true)
-      dungeons[25].chestlist['Bean Salesman'].isOpened = true;
-   else (BeanShuffle == false)
       dungeons[25].chestlist['Bean Salesman'].isOpened = false;
+   else (BeanShuffle == false)
+      dungeons[25].chestlist['Bean Salesman'].isOpened = true;
    updateMap();
    drawDungeonList();
    saveCookie();
