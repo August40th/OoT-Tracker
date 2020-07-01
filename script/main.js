@@ -767,7 +767,11 @@ function bulkDCSelect() {
    }
    document.querySelectorAll(selector).forEach(function (dungeon) {
       let itemType = dungeon.getAttribute("data-type") + "list";
-      dungeons[dungeonSelect][itemType][dungeon.innerHTML].isOpened = opening;
+      for (let key in dungeons[dungeonSelect][itemType]) {
+         if (!(BeanShuffle == false && dungeons[dungeonSelect].chestlist[key] == "Bean Salesman")) {
+            dungeons[dungeonSelect][itemType][dungeon.innerHTML].isOpened = opening; 
+         }
+      }
    });
    drawDungeonList();
    updateMap();
