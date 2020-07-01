@@ -1142,6 +1142,7 @@ function setBean(sender) {
    BeanShuffle = sender.checked;
    if (BeanShuffle == true)
       dungeons[25].chestlist['Bean Salesman'].isOpened = true;
+   else dungeons[25].chestlist['Bean Salesman'].isOpened = false;
    updateMap();
    drawDungeonList();
    saveCookie();
