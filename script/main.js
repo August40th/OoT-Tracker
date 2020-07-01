@@ -909,6 +909,7 @@ function setCastle(sender) {
    if (castlelogic == 'Removed')
       itemsMin.BossCastle = 1;
    else itemsMin.BossCastle = 0;
+   items.BossCastle = itemsMin.BossCastle;
    updateGridItemAll();   
    updateMap();
    saveCookie();
