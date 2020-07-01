@@ -1029,7 +1029,6 @@ function setBossKeys(sender) {
       items.BossWater = 1;
       items.BossShadow = 1;
       items.BossSpirit = 1;
-      items.BossCastle = 1;
    }
    if (bosskeys == 'Dungeons') {
       items.BossForest = 1;
@@ -1037,7 +1036,6 @@ function setBossKeys(sender) {
       items.BossWater = 1;
       items.BossShadow = 1;
       items.BossSpirit = 1;
-      items.BossCastle = 1;
    }
    if (bosskeys == 'Keysanity') {
       items.BossForest = 0;
@@ -1045,7 +1043,6 @@ function setBossKeys(sender) {
       items.BossWater = 0;
       items.BossShadow = 0;
       items.BossSpirit = 0;
-      items.BossCastle = 0;
    }
    updateGridItemAll();
    updateMap();
