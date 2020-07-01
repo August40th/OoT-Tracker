@@ -1140,7 +1140,7 @@ function setEgg(sender) {
 
 function setBean(sender) {
    BeanShuffle = sender.checked;
-   dungeons[25].chestlist[6].className = "DCopened";
+   dungeons[25].chestlist[5].className = "DCopened";
    updateMap();
    drawDungeonList();
    saveCookie();
