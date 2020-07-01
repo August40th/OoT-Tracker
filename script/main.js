@@ -1954,7 +1954,7 @@ function populateMapdiv() {
                   DCcount++;
             }
          }
-         if (quest === "Master) {
+         if (quest === "Master") {
             for (var key in dungeons[k].chestlist) {
                if (dungeons[k].chestlist.hasOwnProperty(key) && dungeons[k].type === "overworld" && quest === "Master") {
                   if (OcarinaShuffle == false && key == "Fairy Ocarina")
