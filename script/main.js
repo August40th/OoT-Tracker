@@ -1671,11 +1671,11 @@ function updateMap() {
       if (quest === "Vanilla" || quest === "Mixed") {
          for (var key in dungeons[k].chestlist) {
             if (dungeons[k].chestlist.hasOwnProperty(key)) {
-               if (OcarinaShuffle == true && key == "Fairy Ocarina")
+               if (OcarinaShuffle == false && key == "Fairy Ocarina")
                   DCcount--;
-               if (WeirdEgg == true && key == "Malons Weird Egg")
+               if (WeirdEgg == false && key == "Malons Weird Egg")
                   DCcount--;
-               if (BeanShuffle == true && key == "Bean Salesman")
+               if (BeanShuffle == false && key == "Bean Salesman")
                   DCcount--;
                if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable())
                   DCcount++;
@@ -1716,11 +1716,11 @@ function updateMap() {
          if (quest === "Master"){
             for (var key in dungeons[k].chestlist) {
                if (dungeons[k].chestlist.hasOwnProperty(key) && dungeons[k].type === "overworld") {
-                  if (OcarinaShuffle == true && key == "Fairy Ocarina")
+                  if (OcarinaShuffle == false && key == "Fairy Ocarina")
                      DCcount--;
-                  if (WeirdEgg == true && key == "Malons Weird Egg")
+                  if (WeirdEgg == false && key == "Malons Weird Egg")
                      DCcount--;
-                  if (BeanShuffle == true && key == "Bean Salesman")
+                  if (BeanShuffle == false && key == "Bean Salesman")
                      DCcount--;
                   if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable())
                      DCcount++;
