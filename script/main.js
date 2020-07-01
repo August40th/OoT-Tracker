@@ -930,6 +930,7 @@ function setTrials(sender) {
    if (trials == true)
       trialsize = 6;
    else trialsize = 0;
+   loadCookie();
    updateMap();
    saveCookie();
 }
@@ -939,6 +940,7 @@ function setTrialSize(sender) {
    if (trialsize == 0)
       trials = false;
    else trials = true;
+   loadCookie();
    updateMap();
    saveCookie();
 }
