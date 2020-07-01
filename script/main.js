@@ -1720,7 +1720,7 @@ function updateMap() {
                      DCcount--;
                   if (WeirdEgg == false && key == "Malons Weird Egg")
                      DCcount--;
-                  if (BeanShuffle == false && key == "Bean Salesman")
+               if (BeanShuffle == false && key == "Bean Salesman" && key.className == "DCunavailable")
                   DCcount--;
                   if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable())
                      DCcount++;
