@@ -675,13 +675,13 @@ function drawDungeonList() {
          if (document.querySelectorAll("#submaplist .d-none").length) {
             if (submaparea.getAttribute("data-filter") === "vanilla") {
                
-               if (submaparea.classList.value == "DCpossible" ) {
-                  bulkDCSelect();
-                  bulkDCSelect();
-               } 
-               else {
-                  bulkDCSelect();
-               }
+//               if (submaparea.classList.value == "DCpossible" ) {
+  //                bulkDCSelect();
+    //              bulkDCSelect();
+      //         } 
+        //       else {
+          //        bulkDCSelect();
+            //   }
                
                submaparea.setAttribute("data-filter", "master");
                submaparea.innerHTML = submaparea.innerText + " MQ";
