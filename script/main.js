@@ -1693,12 +1693,12 @@ function updateMap() {
       if (quest === "Vanilla" || quest === "Mixed") {
          for (var key in dungeons[k].chestlist) {
             if (dungeons[k].chestlist.hasOwnProperty(key)) {
+               var s = document.createElement('li');
+               s.innerHTML = key;
                if (OcarinaShuffle == false && key == "Fairy Ocarina")
-                  DCcount--;
+                  toggleDungeonChest(s,' + dungeonSelect + ',"' + key + '");
                if (WeirdEgg == false && key == "Malons Weird Egg")
-                  DCcount--;
-               if (BeanShuffle == false && key == "Bean Salesman")
-                  DCcount--;
+                  toggleDungeonChest(s,' + dungeonSelect + ',"' + key + '");
                if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable())
                   DCcount++;
             }
@@ -1738,10 +1738,12 @@ function updateMap() {
          if (quest === "Master"){
             for (var key in dungeons[k].chestlist) {
                if (dungeons[k].chestlist.hasOwnProperty(key) && dungeons[k].type === "overworld") {
+                  var s = document.createElement('li');
+                  s.innerHTML = key;
                   if (OcarinaShuffle == false && key == "Fairy Ocarina")
-                     DCcount--;
+                     toggleDungeonChest(s,' + dungeonSelect + ',"' + key + '");
                   if (WeirdEgg == false && key == "Malons Weird Egg")
-                     DCcount--;
+                     toggleDungeonChest(s,' + dungeonSelect + ',"' + key + '");
                   if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable())
                      DCcount++;
                }
@@ -1932,10 +1934,12 @@ function populateMapdiv() {
       if (quest === "Vanilla" || quest === "Mixed") {
          for (var key in dungeons[k].chestlist) {
             if (dungeons[k].chestlist.hasOwnProperty(key)) {
+               var s = document.createElement('li');
+               s.innerHTML = key;
                if (OcarinaShuffle == false && key == "Fairy Ocarina")
-                  DCcount--;
+                  toggleDungeonChest(s,' + dungeonSelect + ',"' + key + '");
                if (WeirdEgg == false && key == "Malons Weird Egg")
-                  DCcount--;
+                  toggleDungeonChest(s,' + dungeonSelect + ',"' + key + '");
                if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable())
                   DCcount++;
             }
@@ -1975,10 +1979,12 @@ function populateMapdiv() {
          if (quest === "Master") {
             for (var key in dungeons[k].chestlist) {
                if (dungeons[k].chestlist.hasOwnProperty(key) && dungeons[k].type === "overworld" && quest === "Master") {
+                  var s = document.createElement('li');
+                  s.innerHTML = key;
                   if (OcarinaShuffle == false && key == "Fairy Ocarina")
-                     DCcount--;
+                     toggleDungeonChest(s,' + dungeonSelect + ',"' + key + '");
                   if (WeirdEgg == false && key == "Malons Weird Egg")
-                     DCcount--;
+                     toggleDungeonChest(s,' + dungeonSelect + ',"' + key + '");
                   if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable())
                      DCcount++;
                }
@@ -2039,24 +2045,7 @@ function populateMapdiv() {
    document.getElementById('submaparea').innerHTML = dungeons[dungeonSelect].name;
    document.getElementById('submaparea').className = "DC" + getDungeonAvailability(dungeons[dungeonSelect]);
    document.getElementById("dungeon" + dungeonSelect).style.backgroundImage = "url(images/highlighted.png)";
-   // for (var key in dungeons[dungeonSelect].chestlist) {
-   //     var s = document.createElement('li');
-   //     s.innerHTML = key
-   //
-   //     if ( dungeons[dungeonSelect].chestlist[key].isOpened)
-   //         s.className = "DCopened";
-   //     else if ( dungeons[dungeonSelect].chestlist[key].isAvailable())
-   //         s.className = "DCavailable";
-   //     else
-   //         s.className = "DCunavailable";
-   //
-   //     s.onclick = new Function('toggleDungeonChest(this,'+dungeonSelect+',"'+key+'")');
-   //     s.onmouseover = new Function('highlightDungeonChest(this)');
-   //     s.onmouseout = new Function('unhighlightDungeonChest(this)');
-   //     s.style.cursor = "pointer";
-   //
-   //     document.getElementById('submaplist').appendChild(s)
-   // }
+
    drawDungeonList();
 }
 
