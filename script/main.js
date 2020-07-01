@@ -927,12 +927,18 @@ function setCastle(sender) {
 
 function setTrials(sender) {
    trials = sender.value;
+   if (trials == true)
+      trialsize = 6;
+   else trialsize = 0;
    updateMap();
    saveCookie();
 }
 
 function setTrialSize(sender) {
    trialsize = sender.value;
+   if (trialsize == 0)
+      trials = false;
+   else trials = true;
    updateMap();
    saveCookie();
 }
