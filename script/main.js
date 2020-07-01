@@ -1675,8 +1675,8 @@ function updateMap() {
                   DCcount--;
                if (WeirdEgg == false && key == "Malons Weird Egg")
                   DCcount--;
-               if (BeanShuffle == false && key == "Bean Salesman" && key.className == "DCunavailable")
-                  DCcount--;
+               if (BeanShuffle == false && key == "Bean Salesman")
+                  dungeons[k].chestlist[key].className = "DCopened";
                if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable())
                   DCcount++;
             }
@@ -1720,8 +1720,8 @@ function updateMap() {
                      DCcount--;
                   if (WeirdEgg == false && key == "Malons Weird Egg")
                      DCcount--;
-               if (BeanShuffle == false && key == "Bean Salesman" && key.className == "DCunavailable")
-                  DCcount--;
+                  if (BeanShuffle == false && key == "Bean Salesman")
+                     dungeons[k].chestlist[key].className = "DCopened";
                   if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable())
                      DCcount++;
                }
@@ -1916,8 +1916,8 @@ function populateMapdiv() {
                   DCcount--;
                if (WeirdEgg == false && key == "Malons Weird Egg")
                   DCcount--;
-               if (BeanShuffle == false && key == "Bean Salesman" && key.className == "DCunavailable")
-                  DCcount--;
+               if (BeanShuffle == false && key == "Bean Salesman")
+                  dungeons[k].chestlist[key].className = "DCopened";
                if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable())
                   DCcount++;
             }
