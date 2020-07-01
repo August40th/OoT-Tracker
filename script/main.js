@@ -167,12 +167,6 @@ function loadCookie() {
 
    document.getElementsByName('Rescue1')[0].checked = !!cookieobj.carp;
    document.getElementsByName('Rescue1')[0].onchange();
-
-   for (rbuttonID in document.getElementsByName('rainbowbridge')) {
-      rbutton = document.getElementsByName('rainbowbridge')[rbuttonID]
-      if (rbutton.value == cookieobj.rainlogic)
-         rbutton.click();
-   }
    
    for (rbuttonID in document.getElementsByName('rainbowbridge')) {
       rbutton = document.getElementsByName('rainbowbridge')[rbuttonID]
@@ -914,9 +908,6 @@ function setCastle(sender) {
    castlelogic = sender.value;
    if (castlelogic == 'Removed')
       itemsMin.BossCastle = 1;
-   else
-      itemsMin.BossCastle = 0;
-   updateGridItemAll();   
    updateMap();
    saveCookie();
 }
@@ -1036,6 +1027,7 @@ function setBossKeys(sender) {
       items.BossWater = 1;
       items.BossShadow = 1;
       items.BossSpirit = 1;
+      items.BossCastle = 1;
    }
    if (bosskeys == 'Dungeons') {
       items.BossForest = 1;
@@ -1043,6 +1035,7 @@ function setBossKeys(sender) {
       items.BossWater = 1;
       items.BossShadow = 1;
       items.BossSpirit = 1;
+      items.BossCastle = 1;
    }
    if (bosskeys == 'Keysanity') {
       items.BossForest = 0;
@@ -1050,6 +1043,7 @@ function setBossKeys(sender) {
       items.BossWater = 0;
       items.BossShadow = 0;
       items.BossSpirit = 0;
+      items.BossCastle = 0;
    }
    updateGridItemAll();
    updateMap();
@@ -1677,11 +1671,11 @@ function updateMap() {
       if (quest === "Vanilla" || quest === "Mixed") {
          for (var key in dungeons[k].chestlist) {
             if (dungeons[k].chestlist.hasOwnProperty(key)) {
-               if (OcarinaShuffle == false && key == "Fairy Ocarina")
+               if (OcarinaShuffle == true && key == "Fairy Ocarina")
                   DCcount--;
-               if (WeirdEgg == false && key == "Malons Weird Egg")
+               if (WeirdEgg == true && key == "Malons Weird Egg")
                   DCcount--;
-               if (BeanShuffle == false && key == "Bean Salesman")
+               if (BeanShuffle == true && key == "Bean Salesman")
                   DCcount--;
                if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable())
                   DCcount++;
@@ -1722,11 +1716,11 @@ function updateMap() {
          if (quest === "Master"){
             for (var key in dungeons[k].chestlist) {
                if (dungeons[k].chestlist.hasOwnProperty(key) && dungeons[k].type === "overworld") {
-                  if (OcarinaShuffle == false && key == "Fairy Ocarina")
+                  if (OcarinaShuffle == true && key == "Fairy Ocarina")
                      DCcount--;
-                  if (WeirdEgg == false && key == "Malons Weird Egg")
+                  if (WeirdEgg == true && key == "Malons Weird Egg")
                      DCcount--;
-                  if (BeanShuffle == false && key == "Bean Salesman")
+                  if (BeanShuffle == true && key == "Bean Salesman")
                      DCcount--;
                   if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable())
                      DCcount++;
