@@ -2320,7 +2320,7 @@ var dungeons = [
             },
          },
       },
-      trials: {
+      triallist: {
          ['Forest Trial Clear']: {
             isAvailable: function () {
                return isBridgeOpen() && items.Magic && items.Bow && items.Light && (items.Fire || (items.Hookshot && items.Dins));
