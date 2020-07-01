@@ -539,6 +539,16 @@ function drawDungeonList() {
                s.className = "DCavailable";
             else
                s.className = "DCunavailable";
+            
+            if (OcarinaShuffle == false && key == "Fairy Ocarina") {
+               s.className = "DCopened";               
+               s.classList.add("d-none");}
+            if (WeirdEgg == false && key == "Malons Weird Egg") {
+               s.className = "DCopened";               
+               s.classList.add("d-none"); }
+            if (BeanShuffle == false && key == "Bean Salesman") {
+               s.className = "DCopened";               
+               s.classList.add("d-none"); }
  
             s.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
             s.onmouseover = new Function('highlightDungeonChest(this)');
@@ -1130,6 +1140,7 @@ function setEgg(sender) {
 
 function setBean(sender) {
    BeanShuffle = sender.checked;
+   dungeons[25].chestlist.'Bean Salesman'.className = "DCopened";
    updateMap();
    drawDungeonList();
    saveCookie();
@@ -1675,7 +1686,7 @@ function updateMap() {
                   DCcount--;
                if (WeirdEgg == false && key == "Malons Weird Egg")
                   DCcount--;
-               if (BeanShuffle == false && key == "Bean Salesman" && key.className == "DCavailable")
+               if (BeanShuffle == false && key == "Bean Salesman")
                   DCcount--;
                if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable())
                   DCcount++;
@@ -1720,7 +1731,7 @@ function updateMap() {
                      DCcount--;
                   if (WeirdEgg == false && key == "Malons Weird Egg")
                      DCcount--;
-               if (BeanShuffle == false && key == "Bean Salesman" && key.className == "DCavailable")
+               if (BeanShuffle == false && key == "Bean Salesman")
                      DCcount--;
                   if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable())
                      DCcount++;
@@ -1916,7 +1927,7 @@ function populateMapdiv() {
                   DCcount--;
                if (WeirdEgg == false && key == "Malons Weird Egg")
                   DCcount--;
-               if (BeanShuffle == false && key == "Bean Salesman" && key.className == "DCavailable")
+               if (BeanShuffle == false && key == "Bean Salesman")
                   DCcount--;
                if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable())
                   DCcount++;
@@ -1961,7 +1972,7 @@ function populateMapdiv() {
                      DCcount--;
                   if (WeirdEgg == false && key == "Malons Weird Egg")
                      DCcount--;
-               if (BeanShuffle == false && key == "Bean Salesman" && key.className == "DCavailable")
+               if (BeanShuffle == false && key == "Bean Salesman")
                      DCcount--;
                   if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable())
                      DCcount++;
