@@ -1675,6 +1675,8 @@ function updateMap() {
                   DCcount--;
                if (WeirdEgg == false && key == "Malons Weird Egg")
                   DCcount--;
+               if (BeanShuffle == false && key == "Bean Salesman")
+                  DCcount--;
                if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable())
                   DCcount++;
             }
@@ -1718,6 +1720,8 @@ function updateMap() {
                      DCcount--;
                   if (WeirdEgg == false && key == "Malons Weird Egg")
                      DCcount--;
+                  if (BeanShuffle == false && key == "Bean Salesman")
+                  DCcount--;
                   if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable())
                      DCcount++;
                }
@@ -1908,6 +1912,12 @@ function populateMapdiv() {
       if (quest === "Vanilla" || quest === "Mixed") {
          for (var key in dungeons[k].chestlist) {
             if (dungeons[k].chestlist.hasOwnProperty(key)) {
+               if (OcarinaShuffle == false && key == "Fairy Ocarina")
+                  DCcount--;
+               if (WeirdEgg == false && key == "Malons Weird Egg")
+                  DCcount--;
+               if (BeanShuffle == false && key == "Bean Salesman")
+                  DCcount--;
                if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable())
                   DCcount++;
             }
@@ -1944,10 +1954,18 @@ function populateMapdiv() {
                   DCcount++;
             }
          }
-         for (var key in dungeons[k].chestlist) {
-            if (dungeons[k].chestlist.hasOwnProperty(key) && dungeons[k].type === "overworld" && quest === "Master") {
-               if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable())
-                  DCcount++;
+         if (quest === "Master) {
+            for (var key in dungeons[k].chestlist) {
+               if (dungeons[k].chestlist.hasOwnProperty(key) && dungeons[k].type === "overworld" && quest === "Master") {
+                  if (OcarinaShuffle == false && key == "Fairy Ocarina")
+                     DCcount--;
+                  if (WeirdEgg == false && key == "Malons Weird Egg")
+                     DCcount--;
+                  if (BeanShuffle == false && key == "Bean Salesman")
+                     DCcount--;
+                  if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable())
+                     DCcount++;
+               }
             }
          }
          if (skulltula === "Dungeons" || skulltula === "All") {
