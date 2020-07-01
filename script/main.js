@@ -930,19 +930,20 @@ function setTrials(sender) {
    if (trials == true)
       trialsize = 6;
    else trialsize = 0;
-   loadCookie();
    updateMap();
    saveCookie();
+   loadCookie();
 }
 
 function setTrialSize(sender) {
    trialsize = sender.value;
-   if (trialsize == 0)
+   if (trialsize > 0)
+      trials = true;
+   else if (trialsize = 0)
       trials = false;
-   else trials = true;
-   loadCookie();
    updateMap();
    saveCookie();
+   loadCookie();
 }
 
 function setQuest(sender) {
