@@ -890,12 +890,6 @@ function setOrder(H) {
    saveCookie();
 }
 
-function showPrizes(sender) {
-   showprizes = sender.checked;
-   updateGridItemAll();
-   saveCookie();
-}
-
 function setRainbow(sender) {
    rainbowbridge = sender.value;
    updateMap();
