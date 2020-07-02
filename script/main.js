@@ -1375,12 +1375,6 @@ function updateGridItem(row, index) {
 
    itemGrid[row][index]['item'].className = "griditem " + (!!items[item]);
 
-   if (medallions[item] !== undefined) {
-      if (showprizes)
-         itemGrid[row][index][3].style.backgroundImage = "url(images/" + dungeonImg[medallions[item]] + ".png)";
-      else
-         itemGrid[row][index][3].style.backgroundImage = "";
-   }
    if (questdungeons[item] !== undefined) {
       if (quest == "Mixed") {
          const filter = document.getElementById('submaparea').getAttribute('data-filter');
