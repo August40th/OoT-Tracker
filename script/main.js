@@ -22,7 +22,6 @@ skulltula = 'Off';
 scrubs = 'Off';
 Shopsanity = false;
 Cowsanity = false;
-showprizes = false;
 quest = 'Vanilla';
 
 OcarinaShuffle = false;
@@ -70,12 +69,10 @@ function getCookie() {
    return {};
 }
 
-var cookiekeys = ['map', 'iZoom', 'mZoom', 'mOrien', 'mPos', 'rainlogic', 'prize', 'items', 'qlogic', 'flogic', 'carp', 'smallk', 'bossk', 'sclogic', 'sklogic', 'ocShuff', 'sngShuff', 'eggShuff', 'beanShuff', 'chulogic', 'forest', 'gate', 'door', 'fountain', 'shopShuff', 'cowShuff', 'trials', 'numtrials', 'pigBK'];
+var cookiekeys = ['iZoom', 'mZoom', 'rainlogic', 'items', 'qlogic', 'flogic', 'carp', 'smallk', 'bossk', 'sclogic', 'sklogic', 'ocShuff', 'sngShuff', 'eggShuff', 'beanShuff', 'chulogic', 'forest', 'gate', 'door', 'fountain', 'shopShuff', 'cowShuff', 'trials', 'numtrials', 'pigBK'];
 var cookieDefault = {
-   map: 1,
    iZoom: 100,
    mZoom: 100,
-   mPos: 0,
    rainlogic: 'Open',
    qlogic: 'Vanilla',
    flogic: 'Default',
@@ -84,7 +81,6 @@ var cookieDefault = {
    bossk: 'Dungeons',
    sclogic: 'Major Item',
    sklogic: 'Off',
-   prize: 1,
    ocShuff: 0,
    sngShuff: 0,
    eggShuff: 0,
@@ -120,17 +116,10 @@ function loadCookie() {
 
    initGridRow(JSON.parse(JSON.stringify(cookieobj.items)));
 
-   document.getElementsByName('showmap')[0].checked = !!cookieobj.map;
-   document.getElementsByName('showmap')[0].onchange();
    document.getElementsByName('itemdivsize')[0].value = cookieobj.iZoom;
    document.getElementsByName('itemdivsize')[0].onchange();
    document.getElementsByName('mapdivsize')[0].value = cookieobj.mZoom;
    document.getElementsByName('mapdivsize')[0].onchange();
-
-   document.getElementsByName('mapposition')[cookieobj.mPos].click();
-
-   document.getElementsByName('showprizes')[0].checked = !!cookieobj.prize;
-   document.getElementsByName('showprizes')[0].onchange();
 
    document.getElementsByName('OpenForest')[0].checked = !!cookieobj.forest;
    document.getElementsByName('OpenForest')[0].onchange();
@@ -238,13 +227,8 @@ function saveCookie() {
 
    cookieobj = {};
 
-   cookieobj.map = document.getElementsByName('showmap')[0].checked ? 1 : 0;
    cookieobj.iZoom = document.getElementsByName('itemdivsize')[0].value;
    cookieobj.mZoom = document.getElementsByName('mapdivsize')[0].value;
-
-   cookieobj.mPos = document.getElementsByName('mapposition')[1].checked ? 1 : 0;
-
-   cookieobj.prize = document.getElementsByName('showprizes')[0].checked ? 1 : 0;
 
    cookieobj.forest = document.getElementsByName('OpenForest')[0].checked ? 1 : 0;
    cookieobj.gate = document.getElementsByName('OpenGate')[0].checked ? 1 : 0;
