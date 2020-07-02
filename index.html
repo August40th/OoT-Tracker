@@ -51,10 +51,9 @@
                     <legend>Settings</legend>
                     <fieldset>
                         <legend>Item Tracker</legend>
-                        <button type="button" onclick="EditMode()">Edit Mode</button>
                         Size<input type="range" name='itemdivsize' value='100' max='200' min='1' onchange="setZoom('itemdiv', this)">
                         <span id='itemdivsize'>100%</span><br>
-                        
+                        <button type="button" onclick="EditMode()">Edit Mode</button> <br>                        
                         <legend>Map Tracker</legend>
                         Size<input type="range" name='mapdivsize' value='100' max='200' min='1' onchange="setZoom('mapdiv', this)">
                         <span id='mapdivsize'>100%</span> <br>
@@ -93,12 +92,12 @@
                             <span id='trialsize'> 6 </span><br>
                     <legend>Ganon's Boss Key</legend>
                         <input type='radio' name='castlelogic' value='Vanilla' onclick="setCastle(this)">Vanilla
-                        <input type='radio' name='castlelogic' value='Castle' onclick="setCastle(this)">Ganons Castle
-                        <input type='radio' name='castlelogic' value='Removed' onclick="setCastle(this)">Removed <br>
-                        <input type='radio' name='castlelogic' value='Anywhere' onclick="setCastle(this)">Anywhere
+                        <input type='radio' name='castlelogic' value='Castle' onclick="setCastle(this)">Ganons Castle<br>
+                        <input type='radio' name='castlelogic' value='Removed' onclick="setCastle(this)">Removed 
+                        <input type='radio' name='castlelogic' value='Anywhere' onclick="setCastle(this)">Anywhere<br>
                         <input type='radio' name='castlelogic' value='LACSVan' onclick="setCastle(this)">LACS Vanilla
                         <input type='radio' name='castlelogic' value='LACSStones' onclick="setCastle(this)">LACS Stones <br>
-                        <input type='radio' name='castlelogic' value='LACSMeds' onclick="setCastle(this)">LACS Medallions<br>
+                        <input type='radio' name='castlelogic' value='LACSMeds' onclick="setCastle(this)">LACS Medallions
                         <input type='radio' name='castlelogic' value='LACSAD' onclick="setCastle(this)">LACS All Dungeons
         </fieldset>
                 </div>
@@ -108,12 +107,12 @@
                     <fieldset>
                         <legend>Keys</legend>
                         Small Keys: 
+                            <input type='radio' name='smallkeys' value='Dungeons' checked='true' onclick="setSmallKeys(this)">Dungeons <br>
                             <input type='radio' name='smallkeys' value='Remove' onclick="setSmallKeys(this)">Remove
-                            <input type='radio' name='smallkeys' value='Dungeons' checked='true' onclick="setSmallKeys(this)">Dungeons
                             <input type='radio' name='smallkeys' value='Keysanity' onclick="setSmallKeys(this)">Keysanity<br>
                         Boss Keys: 
+                            <input type='radio' name='bosskeys' value='Dungeons' checked='true' onclick="setBossKeys(this)">Dungeons <br>
                             <input type='radio' name='bosskeys' value='Remove' onclick="setBossKeys(this)">Remove
-                            <input type='radio' name='bosskeys' value='Dungeons' checked='true' onclick="setBossKeys(this)">Dungeons
                             <input type='radio' name='bosskeys' value='Keysanity' onclick="setBossKeys(this)">Keysanity<br>
                     </fieldset>
                     <fieldset><legend>Skulltula</legend>
