@@ -16,7 +16,6 @@ body{
     bottom: 0;
     z-index : 10;
     display: none;
-    width:999;
 }
 
 #settingsbutton{
@@ -29,7 +28,7 @@ body{
 }
 
 .column {
-  float: right;
+  float: left;
   width: 50%;
 }
 
