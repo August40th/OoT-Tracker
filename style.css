@@ -27,6 +27,18 @@ body{
     color: red;
 }
 
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .tracker{
     background-color: rgba(0,0,0,0);
     position: relative;
