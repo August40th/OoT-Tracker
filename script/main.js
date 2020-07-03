@@ -1207,14 +1207,35 @@ function setBean(sender) {
    saveCookie();
 }
 
-function setShops(x, y) {
-   Shopsanity = x.checked;
-   shopsize = y.value
+function setShops(sender) {
+   Shopsanity = sender.checked;
+   if (Shopsanity == true && shopsize == 0) {
+      shopsize = 1;
+      cookieobj.shpsize.value = 1;
+   }
+   else if (Shopsanity == false && showprizes > 0) {
+      shopsize = 0;
+      cookieobj.shpsize.value = 0;
+   }
    drawDungeonList();
    updateMap();
-   saveCookie(cookieobj.shopShuff);
-   saveCookie(cookieobj.shpsize);
+   saveCookie();
 }
+
+function setShopsize(sender) {
+   shopsize = sender.value;
+   if (shopsize > 0) {
+      Shopsanity = true;
+      cookieobj.shopShuff.checked = true;
+   }
+   else if (shopsize == 0) {
+      Shopsanity = false;
+      cookieobj.shopShuff.checked = false;
+   }
+   drawDungeonList();
+   updateMap();
+   saveCookie();
+} 
 
 function setCows(sender) {
    Cowsanity = sender.checked;
