@@ -501,9 +501,9 @@ function drawDungeonList() {
          }
       }
       var shopitem = shopsize;
-      if (shopsizes == 0)
+      if (shopsize == 0)
          dNone = true;
-      else if (shopsizes = 0 ){
+      else if (shopsize = 0 ){
          for (let key in dungeons[dungeonSelect].shoplist) {
             if (shopitem == 0) dNone = true;
             if (shopitem > 0) {
@@ -677,9 +677,9 @@ function drawDungeonList() {
          }
       }
       var shopitem = shopsize;
-      if (shopsizes == 0)
+      if (shopsize == 0)
          dNone = true;
-      else if (shopsizes > 0 && quest === "Master"){
+      else if (shopsize > 0 && quest === "Master"){
          for (let key in dungeons[dungeonSelect].shoplist) {
             if (shopitem == 0) dNone = true;
             if (shopitem > 0) {
