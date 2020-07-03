@@ -507,15 +507,15 @@ function drawDungeonList() {
          dNone = true;
       else if (shopsize > 0 && (quest === "Mixed" || quest === "Vanilla")) {
          do {
-            do {
-            if (document.dungeons[dungeonSelect] == dungeons[13])
-               shopnum = 3;
-            else if (document.dungeons[dungeonSelect] == dungeons[15])
-               shopnum = 2;
-            else
-               shopnum = 1;
-            } while (started == true);
             for (let key in dungeons[dungeonSelect].shoplist) {
+               do {
+                  if (dungeons[dungeonSelect] == dungeons[13])
+                     shopnum = 3;
+                  else if (dungeons[dungeonSelect] == dungeons[15])
+                     shopnum = 2;
+                  else
+                     shopnum = 1;
+               } while (started == true);
                if (shopitem == 0) dNone = true;
                if (shopitem > 0) {
                   let li = document.createElement('li');
