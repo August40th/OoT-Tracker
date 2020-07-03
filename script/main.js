@@ -542,7 +542,7 @@ function drawDungeonList() {
             }
             shopnum--;
             started = false;
-         } while {shopnum > 0};
+         } while (shopnum > 0);
       }
    }
    if (quest === "Master" || quest === "Mixed") {
