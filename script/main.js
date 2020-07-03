@@ -504,9 +504,9 @@ function drawDungeonList() {
       if (shopsize == 0)
          dNone = true;
       else if (shopsize > 0 && (quest === "Mixed" || quest === "Vanilla")) {
-         if (dungeon[dungeonSelect] == dungeon[13])
+         if (document.dungeon[dungeonSelect] == dungeon[13])
             shopitem = shopitem * 3;
-         else if (dungeon[dungeonSelect] == dungeon[15])
+         else if (document.dungeon[dungeonSelect] == dungeon[15])
             shopitem = shopitem * 2;
          else
             shopitem = shopsize;
