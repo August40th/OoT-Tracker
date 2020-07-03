@@ -1683,9 +1683,9 @@ function updateMap() {
       }
       if (Cowsanity == true && chests[k].name.includes("Cow Milk"))
          document.getElementById(k).classList.remove("d-none");
-      else if (Cowsanity == false && chests[k].name.includes("Cow Milk") && ((skulltula === "Overworld" || skulltula === "All") )
+      else if (Cowsanity == false && chests[k].name.includes("Cow Milk") && ((skulltula === "Overworld" || skulltula === "All") ) )
          document.getElementById(k).classList.remove("d-none");
-      else if (Cowsanity == false && chests[k].name.includes("Cow Milk"))
+      else if (Cowsanity == false && chests[k].name.includes("Cow Milk") )
          document.getElementById(k).classList.add("d-none");   
    }
 
