@@ -1171,7 +1171,7 @@ function setShops(sender) {
 
 
 function setShopSize(sender) {
-   BeanShuffle = sender.checked;
+   shopsize = sender.value;
    updateMap();
    drawDungeonList();
    saveCookie();
