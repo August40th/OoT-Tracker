@@ -650,9 +650,8 @@ function drawDungeonList() {
       }
    }
    
-   var shopitem;
+   var shopitem = 0;
    if (Shopsanity == true && shopitem <= shopsize){
-      shopitem =0;
          for (let key in dungeons[dungeonSelect].Shoplist) {
             let li = document.createElement('li');
             li.style.cursor = 'pointer';
@@ -1167,8 +1166,8 @@ function setBean(sender) {
 function setShops(sender) {
    Shopsanity = sender.checked;
    if (Shopsanity == false)
-      shopsize = 0;
-   else shopsize = 1;
+      setShopSize(0);
+   else setShopSize(1);
    updateMap();
    drawDungeonList();
    saveCookie();
@@ -1178,7 +1177,8 @@ function setShops(sender) {
 function setShopSize(sender) {
    shopsize = sender.value;
    if (shopsize > 0)
-      Shopsanity = true;
+      setShops(true);
+   else setShops(false);
    updateMap();
    drawDungeonList();
    saveCookie();
