@@ -671,6 +671,7 @@ function drawDungeonList() {
             if (dNone) li.classList.add("d-none");
             DClist.appendChild(li);
          }
+   }
    
    if (quest === "Mixed") {
       const submaparea = document.getElementById("submaparea");
