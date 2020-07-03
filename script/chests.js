@@ -3903,7 +3903,7 @@ var chests = [
    },
    {
       name: "Fairy Fountain Grotto",
-      x: "45.0%",
+      x: "44.0%",
       y: "25.0%",
       isAvailable: function () {
          if ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.MasterSword && items.Hammer) || (items.Bombchu && BombchuLogic)))
