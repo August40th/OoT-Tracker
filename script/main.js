@@ -731,6 +731,9 @@ function drawDungeonList() {
                
                submaparea.setAttribute("data-filter", "master");
                submaparea.innerHTML = submaparea.innerText + " MQ";
+               clean = getDungeonAvailability(dungeons[dungeonSelect]);
+               if (clean === "opened")
+                  bulkDCSelect();
                
                submaplist.childNodes.forEach(function(item, index) {
                   let itemType = item.getAttribute("data-type");
@@ -747,12 +750,15 @@ function drawDungeonList() {
                   bulkDCSelect()
                   bulkDCSelect()
                }
-               else if (clean === "unavailable" || clean === "available" || clean === "opened")
+               else if (clean === "unavailable" || clean === "available")
                   bulkDCSelect();
                
                
                submaparea.setAttribute("data-filter", "vanilla");
                submaparea.innerHTML = dungeons[dungeonSelect].name;
+               clean = getDungeonAvailability(dungeons[dungeonSelect]);
+               if (clean === "opened")
+                  bulkDCSelect();
                
                submaplist.childNodes.forEach(function(item, index) {
                   let itemType = item.getAttribute("data-type");
