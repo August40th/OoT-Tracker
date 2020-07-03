@@ -785,11 +785,8 @@ function drawDungeonList() {
          }
          updateGridItemAll();
          updateMap();
-            }
-         }
-      }
    }
-}
+
 
 function bulkDCSelect() {
 
