@@ -241,8 +241,8 @@ function saveCookie() {
    cookieobj.eggShuff = document.getElementsByName('WeirdEgg')[0].checked ? 1 : 0;
    cookieobj.beanShuff = document.getElementsByName('BeanShuffle')[0].checked ? 1 : 0;
    cookieobj.shopShuff = document.getElementsByName('Shopsanity')[0].checked ? 1 : 0;
-   cookieobj.shpsize = document.getElementsByName('shopsize')[0].value;
-   cookieobj.numtrials = document.getElementsByName('numtrials')[0].value;
+   //cookieobj.shpsize = document.getElementsByName('shopsize')[0].value;
+   //cookieobj.numtrials = document.getElementsByName('numtrials')[0].value;
 
    cookieobj.cowShuff = document.getElementsByName('Cowsanity')[0].checked ? 1 : 0;
 
@@ -429,7 +429,7 @@ function drawDungeonList() {
                s.classList.add("d-none"); }
             if (BeanShuffle == false && key == "Bean Salesman") {
                s.classList.add("d-none"); }
-            if (Cowsanity == false && key.contains("Cow Milk")) {
+            if (Cowsanity == false && s.classList.contains("Cow Milk")) {
                s.classList.add("d-none"); }
 
             s.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
@@ -528,7 +528,7 @@ function drawDungeonList() {
                s.classList.add("d-none"); }
             if (BeanShuffle == false && key == "Bean Salesman") {
                s.classList.add("d-none"); }
-            if (Cowsanity == false && key.contains("Cow Milk")) {
+            if (Cowsanity == false && s.classList.contains("Cow Milk")) {
                s.classList.add("d-none"); }
  
             s.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
@@ -554,7 +554,7 @@ function drawDungeonList() {
             else
                s.className = "DCunavailable";
             
-            if (Cowsanity == false && key.contains("Cow Milk")) {
+            if (Cowsanity == false && s.classList.contains("Cow Milk")) {
                s.classList.add("d-none"); }
 
             s.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
