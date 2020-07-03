@@ -1195,6 +1195,7 @@ function setShopSize(sender) {
    else {
       Shopsanity = true;
       shopShuff = 1;
+   }
    updateMap();
    drawDungeonList();
    saveCookie();
