@@ -516,6 +516,11 @@ function drawDungeonList() {
                   else
                      shopnum = 1;
                }
+               else {
+                  if (shopitem == 0) shopitem = shopsize;
+               }
+               started = false;
+
                if (shopitem == 0) dNone = true;
                if (shopitem === undefined)
                   shopitem = shopsize;
@@ -543,7 +548,6 @@ function drawDungeonList() {
                }
             }
             shopnum--;
-            started = false;
          } while (shopnum > 0);
       }
    }
