@@ -43,6 +43,10 @@ var dungeons = [
             isAvailable: function () {
                return items.Ocarina && items.SongofStorms; }
          },
+         'Link\'s House Cow Milk': {
+            isAvailable: function () {
+               return items.Ocarina && items.SongofStorms; }
+         },
       },
       skulllist: {
          'Soil Patch Skulltula': {
@@ -474,6 +478,10 @@ var dungeons = [
          'Elevator Room Upper Chest': {
             isAvailable: function () {
                return (items.Bombs || items.Scale) && items.ZoraLetter && items.Slingshot && items.Boomerang; }
+         },
+         'Cow Milk': {
+            isAvailable: function () {
+               return (items.Bombs || items.Scale) && items.ZoraLetter && items.Slingshot && items.Boomerang && items.Ocarina && items.EponasSong; }
          },
          'Chest Near Boss Door': {
             isAvailable: function () {
@@ -2606,9 +2614,14 @@ var dungeons = [
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.MasterSword && items.Hammer) || (items.Bombchu && BombchuLogic));
             }
          },
-         ['Cow Heart Piece']: {
+         ['Impa\'s House Freestanding']: {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0));
+            }
+         },
+         ['Impa\'s House Cow Milk']: {
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.EponasSong;
             }
          },
          ['Anju\'s Adult item']: {
@@ -3108,6 +3121,11 @@ var dungeons = [
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword && (items.Trade >= 1 && (items.ZoraLetter || OpenFountain) && (items.EponasSong || items.Hookshot >= 2)) || (items.Trade >= 6 && (items.EponasSong || items.Hookshot >= 2)) || items.Trade >= 9);
             }
          },
+         ['Cow Milk Grotto']: {
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (OpenGate == 1 || (OpenGate == 0 && (items.Mask >= 1 || items.MasterSword || items.Bombs || (items.Dins && items.Magic) || (items.Bombchu && BombchuLogic)))) && (items.Bombs || (items.MasterSword && items.Hammer) || (items.Bombchu && BombchuLogic)) && items.Ocarina && items.EponasSong;
+            }
+         },
       },
       skulllist: {
          'Bombable Wall Skulltula': {
@@ -3227,6 +3245,16 @@ var dungeons = [
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Mask >= 2;
             }
          },
+         ['Stable Cow Milk 1']: {
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.EponasSong;
+            }
+         },
+         ['Stable Cow Milk 2']: {
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.EponasSong;
+            }
+         },
          ['Song from Malon']: {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Mask >= 2 && items.Ocarina;
@@ -3235,6 +3263,16 @@ var dungeons = [
          ['Silo Heart Piece']: {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0));
+            }
+         },
+         ['Silo Cow Milk 1']: {
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.EponasSong;
+            }
+         },
+         ['Silo Cow Milk 2']: {
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.EponasSong;
             }
          },
          ['Race Ingo']: {
@@ -3468,6 +3506,16 @@ var dungeons = [
          ['Waterfall Heart Piece']: {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0));
+            }
+         },
+         ['Valley Cow Milk 1']: {
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.EponasSong;
+            }
+         },
+         ['Stable Cow Milk 2']: {
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.EponasSong;
             }
          },
          ['Hammer Rocks Chest']: {
