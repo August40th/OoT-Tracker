@@ -1171,8 +1171,8 @@ function setEgg(sender) {
 
 function setBean(sender) {
    BeanShuffle = sender.checked;
-   updateMap();
    drawDungeonList();
+   updateMap();
    saveCookie();
 }
 
@@ -1181,8 +1181,8 @@ function setShops(sender) {
    Shopsanity = sender.checked;
    if (Shopsanity == true)
       shopsize =1;
-   updateMap();
    drawDungeonList();
+   updateMap();
    saveCookie();
 }
 
@@ -1808,14 +1808,14 @@ function updateMap() {
                }
             }
          }
-         if (Shopsanity == true){
-            for (var key in dungeons[k].shoplist) {
-               if (dungeons[k].shoplist.hasOwnProperty(key)) {
-                  if (!dungeons[k].scrublist[key].isOpened && dungeons[k].shoplist[key].isAvailable())
-                     DCcount++;
+      }
+      if (Shopsanity == true){
+         for (var key in dungeons[k].shoplist) {
+            if (dungeons[k].shoplist.hasOwnProperty(key)) {
+               if (!dungeons[k].scrublist[key].isOpened && dungeons[k].shoplist[key].isAvailable())
+                  DCcount++;
                }
             }
-         }
       }
       var child = document.getElementById("dungeon" + k).firstChild;
       while (child) {
@@ -2063,16 +2063,15 @@ function populateMapdiv() {
                }
             }
          }
-         if (Shopsanity == true) {
-            for (var key in dungeons[k].shoplist) {
-               if (dungeons[k].shoplist.hasOwnProperty(key) ) {
-                  if (!dungeons[k].shoplist[key].isOpened && dungeons[k].shoplist[key].isAvailable())
-                     DCcount++;
-               }
+      }
+      if (Shopsanity == true) {
+         for (var key in dungeons[k].shoplist) {
+            if (dungeons[k].shoplist.hasOwnProperty(key) ) {
+               if (!dungeons[k].shoplist[key].isOpened && dungeons[k].shoplist[key].isAvailable())
+                  DCcount++;
             }
          }
       }
-
       var ss = document.createElement('span');
       ss.className = "chestCount";
       if (DCcount == 0)
@@ -2148,8 +2147,8 @@ function getDungeonAvailability(dungeon) {
                {}
                else if (BeanShuffle == false && key == "Bean Salesman")
                {}
-              else if (Cowsanity == true && key.includes("Cow Milk"))
-              {}
+               else if (Cowsanity == true && key.includes("Cow Milk"))
+               {}
                else if (!list[key].isOpened && list[key].isAvailable()) {
                    canGet++;
                }
