@@ -719,45 +719,46 @@ function drawDungeonList() {
          
          if (document.querySelectorAll("#submaplist .d-none").length) {
             if (submaparea.getAttribute("data-filter") === "vanilla") {
-               ['chestlist', 'skulllist', 'scrublist', 'shoplist'].forEach(function (key) {
-                  let list = checklist[key];
-                     for (let key in dungeons[dungeonSelect].list) {                  
-                        let li = document.createElement('li');
-                        li.style.cursor = 'pointer';
-                        li.innerText = key;
-                        li.classList.add("d-none");
-                     }
-               });
-             }
-          }
-               
-               submaparea.setAttribute("data-filter", "master");
-               submaparea.innerHTML = submaparea.innerText + " MQ";
-               
-               submaplist.childNodes.forEach(function(item, index) {
-                  let itemType = item.getAttribute("data-type");
-                  if (itemType && itemType.startsWith("MQ")) {
-                     item.classList.remove("d-none");
-                  } else { 
-                     item.classList.add("d-none");
-                  }
-               })
-      } } else if (submaparea.getAttribute("data-filter") === "master") {
-               
-               if (submaparea.getAttribute("data-filter") === "vanilla") {
-               ['MQchestlist', 'MQskulllist', 'MQscrublist', 'shoplist'].forEach
-               (function (key) {
-                  let list = checklist[key];
-                     for (let key in dungeons[dungeonSelect].list) {                  
-                        let li = document.createElement('li');
-                        li.style.cursor = 'pointer';
-                        li.innerText = key;
-                        li.classList.add("d-none");
-                     }
-                  }
-               );
                ['chestlist', 'skulllist', 'scrublist', 'shoplist'].forEach
                (function (key) {
+                  let list = checklist[key];
+                  for (let key in dungeons[dungeonSelect].list) {
+                     let li = document.createElement('li');
+                     li.style.cursor = 'pointer';
+                     li.innerText = key;
+                     li.classList.add("d-none");
+                  }
+               }
+               );
+            }
+            
+            submaparea.setAttribute("data-filter", "master");
+            submaparea.innerHTML = submaparea.innerText + " MQ";
+               
+            submaplist.childNodes.forEach(function(item, index) {
+               let itemType = item.getAttribute("data-type");
+               if (itemType && itemType.startsWith("MQ")) {
+                  item.classList.remove("d-none");
+               } else { 
+                     item.classList.add("d-none");
+               }
+            }
+                  
+         else if (submaparea.getAttribute("data-filter") === "master") {
+               if (submaparea.getAttribute("data-filter") === "vanilla") {
+                  ['MQchestlist', 'MQskulllist', 'MQscrublist', 'shoplist'].forEach
+                  (function (key) {
+                     let list = checklist[key];
+                     for (let key in dungeons[dungeonSelect].list) {                  
+                        let li = document.createElement('li');
+                        li.style.cursor = 'pointer';
+                        li.innerText = key;
+                        li.classList.add("d-none");
+                     }
+                  }
+                  );
+                  ['chestlist', 'skulllist', 'scrublist', 'shoplist'].forEach
+                  (function (key) {
                   let list = checklist[key];
                      for (let key in dungeons[dungeonSelect].list) {                  
                         let li = document.createElement('li');
@@ -766,8 +767,8 @@ function drawDungeonList() {
                         li.classList.remove("d-none");
                      }
                   }
-               );
-             }
+                  );
+               }
                
                submaparea.setAttribute("data-filter", "vanilla");
                submaparea.innerHTML = dungeons[dungeonSelect].name;
@@ -779,15 +780,16 @@ function drawDungeonList() {
                   } else {
                      item.classList.remove("d-none");
                   }
-               })
+               }
             }
          }
          updateGridItemAll();
          updateMap();
+            }
+         }
       }
    }
 }
-
 
 function bulkDCSelect() {
 
