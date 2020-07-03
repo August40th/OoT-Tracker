@@ -743,11 +743,11 @@ function drawDungeonList() {
             } else if (submaparea.getAttribute("data-filter") === "master") {
                
                var clean = getDungeonAvailability(dungeons[dungeonSelect]);
-               else if (clean === "possible") {
+               if (clean === "possible") {
                   bulkDCSelect()
                   bulkDCSelect()
                }
-               if (clean === "unavailable" || clean === "available" || clean === "opened")
+               else if (clean === "unavailable" || clean === "available" || clean === "opened")
                   bulkDCSelect();
                
                
