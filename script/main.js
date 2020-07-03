@@ -501,9 +501,9 @@ function drawDungeonList() {
          }
       }
       var shopitem = shopsize;
-      if (Shopsanity == false)
+      if (shopsizes == 0)
          dNone = true;
-      else if (Shopsanity == true ){
+      else if (shopsizes = 0 ){
          for (let key in dungeons[dungeonSelect].shoplist) {
             if (shopitem == 0) dNone = true;
             if (shopitem > 0) {
@@ -677,9 +677,9 @@ function drawDungeonList() {
          }
       }
       var shopitem = shopsize;
-      if (Shopsanity == false)
+      if (shopsizes == 0)
          dNone = true;
-      else if (Shopsanity == true && quest === "Master"){
+      else if (shopsizes > 0 && quest === "Master"){
          for (let key in dungeons[dungeonSelect].shoplist) {
             if (shopitem == 0) dNone = true;
             if (shopitem > 0) {
@@ -1772,7 +1772,7 @@ function updateMap() {
                }
             }
          }
-         if (Shopsanity == true){
+         if (shopsize > 0){
             var size = shopsize;
             for (var key in dungeons[k].shoplist) {
                if (dungeons[k].shoplist.hasOwnProperty(key)) {
@@ -1809,7 +1809,7 @@ function updateMap() {
                      DCcount++;
                }
             }
-            if (Shopsanity == true){
+            if (shopsize > 0 ){
             var size = shopsize;
                for (var key in dungeons[k].shoplist) {
                   if (dungeons[k].shoplist.hasOwnProperty(key)) {
@@ -2044,7 +2044,7 @@ function populateMapdiv() {
                }
             }
          }
-         if (Shopsanity == true) {
+         if (shopsize > 0) {
             for (var key in dungeons[k].shoplist) {
                if (dungeons[k].shoplist.hasOwnProperty(key) ) {
                   var size = shopsize;
@@ -2089,7 +2089,7 @@ function populateMapdiv() {
                   }
                }
             }
-            if (Shopsanity == true) {
+            if (shopsize > 0) {
                for (var key in dungeons[k].shoplist) {
                   if (dungeons[k].shoplist.hasOwnProperty(key) ) {
                      var size = shopsize;
