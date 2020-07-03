@@ -2147,7 +2147,7 @@ function getDungeonAvailability(dungeon) {
                {}
                else if (BeanShuffle == false && key == "Bean Salesman")
                {}
-               else if (Cowsanity == true && key.includes("Cow Milk"))
+               else if (Cowsanity == false && s.innerHTML.includes("Cow Milk"))
                {}
                else if (!list[key].isOpened && list[key].isAvailable()) {
                    canGet++;
@@ -2180,7 +2180,9 @@ function getDungeonAvailability(dungeon) {
                if (!list[key].isOpened) {
                    unopened++;
                }
-               if (!list[key].isOpened && list[key].isAvailable()) {
+               if (Cowsanity == false && s.innerHTML.includes("Cow Milk"))
+               {}
+               else if (!list[key].isOpened && list[key].isAvailable()) {
                    canGet++;
                }
            }
@@ -2210,6 +2212,8 @@ function getDungeonAvailability(dungeon) {
                else if (WeirdEgg == false && key == "Malons Weird Egg")
                {}
                else if (BeanShuffle == false && key == "Bean Salesman")
+               {}
+               else if (Cowsanity == false && s.innerHTML.includes("Cow Milk"))
                {}
                else if (!list[key].isOpened && list[key].isAvailable()) {
                    canGet++;
