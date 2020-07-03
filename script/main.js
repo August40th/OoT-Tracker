@@ -500,10 +500,16 @@ function drawDungeonList() {
             DClist.appendChild(li);
          }
       }
-      var shopitem = shopsize;
+      var shopitem;
       if (shopsize == 0)
          dNone = true;
       else if (shopsize > 0 && (quest === "Mixed" || quest === "Vanilla")) {
+         if (dungeon[dungeonSelect] == dungeon[13])
+            shopitem = shopitem * 3;
+         else if (dungeon[dungeonSelect] == dungeon[15])
+            shopitem = shopitem * 2;
+         else
+            shopitem = shopsize;
          for (let key in dungeons[dungeonSelect].shoplist) {
             if (shopitem == 0) dNone = true;
             if (shopitem > 0) {
