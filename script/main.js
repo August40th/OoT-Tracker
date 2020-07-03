@@ -742,7 +742,7 @@ function drawDungeonList() {
                      item.classList.add("d-none");
                   }
                })
-            } else if (submaparea.getAttribute("data-filter") === "master") {
+               else if (submaparea.getAttribute("data-filter") === "master") {
                
                if (submaparea.classList.value == "DCpossible" ) {
                   bulkDCSelect();
