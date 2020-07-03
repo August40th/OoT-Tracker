@@ -708,7 +708,7 @@ function drawDungeonList() {
       }
    }
      
-   if (quest === "Mixed") {
+   if (quest === "Mixed" && dungeons[dungeonSelect].type === "dungeon") {
       const submaparea = document.getElementById("submaparea");
       const submaplist = document.getElementById("submaplist");
       if (!submaparea.getAttribute("data-filter")) {
@@ -752,7 +752,7 @@ function drawDungeonList() {
                
                
                submaparea.setAttribute("data-filter", "vanilla");
-               submaparea.innerHTML = dungeons[dungeonSelect].name - " MQ";
+               submaparea.innerHTML = dungeons[dungeonSelect].name;
                
                submaplist.childNodes.forEach(function(item, index) {
                   let itemType = item.getAttribute("data-type");
