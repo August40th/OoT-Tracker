@@ -652,7 +652,7 @@ function drawDungeonList() {
    
    var shopitem = 0;
    if (Shopsanity == true && shopitem <= shopsize){
-         for (let key in dungeons[dungeonSelect].Shoplist) {
+         for (var key in dungeons[dungeonSelect].Shoplist) {
             let li = document.createElement('li');
             li.style.cursor = 'pointer';
             li.innerText = key;
