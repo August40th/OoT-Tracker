@@ -721,12 +721,13 @@ function drawDungeonList() {
             if (submaparea.getAttribute("data-filter") === "vanilla") {
                
                var clean = getDungeonAvailability(dungeons[dungeonSelect]);
-               if (clean === "unavailable" || clean === "available" || clean === "opened")
-                  bulkDCSelect();
-               else if (clean === "possible") {
+               if (clean === "possible") {
                   bulkDCSelect()
                   bulkDCSelect()
                }
+               else if (clean === "unavailable" || clean === "available" || clean === "opened")
+                  bulkDCSelect();
+               
                
                submaparea.setAttribute("data-filter", "master");
                submaparea.innerHTML = submaparea.innerText + " MQ";
@@ -742,12 +743,13 @@ function drawDungeonList() {
             } else if (submaparea.getAttribute("data-filter") === "master") {
                
                var clean = getDungeonAvailability(dungeons[dungeonSelect]);
-               if (clean === "unavailable" || clean === "available" || clean === "opened")
-                  bulkDCSelect();
                else if (clean === "possible") {
                   bulkDCSelect()
                   bulkDCSelect()
                }
+               if (clean === "unavailable" || clean === "available" || clean === "opened")
+                  bulkDCSelect();
+               
                
                submaparea.setAttribute("data-filter", "vanilla");
                submaparea.innerHTML = dungeons[dungeonSelect].name - " MQ";
