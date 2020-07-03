@@ -727,7 +727,7 @@ function drawDungeonList() {
                         li.innerText = key;
                         li.classList.add("d-none");
                      }
-               }
+               });
              }
           }
                
