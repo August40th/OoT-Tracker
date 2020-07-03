@@ -1681,6 +1681,8 @@ function updateMap() {
             document.getElementById(k).classList.add("d-none");
          }
       }
+      else if (Cowsanity == true)
+         document.getElementById(k).classList.remove("d-none");
    }
 
    for (k = 0; k < dungeons.length; k++) {
