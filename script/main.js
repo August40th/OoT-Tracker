@@ -2130,7 +2130,7 @@ function getDungeonAvailability(dungeon) {
                checklist.scrublist[key] = dungeon.scrublist[key];
            }
        }
-      if (shops === "Shopsanity") {
+      if (shopShuff === "Shopsanity") {
            for (let key in dungeon.shoplist) {
                checklist.shoplist[key] = dungeon.shoplist[key];
            }
@@ -2194,7 +2194,7 @@ function getDungeonAvailability(dungeon) {
             for (let key in dungeon.scrublist) {
                checklist.scrublist[key] = dungeon.scrublist[key];
             }
-            if (shops === "Shopsanity") {
+            if (shopShuff === "Shopsanity") {
                for (let key in dungeon.shoplist) {
                   checklist.shoplist[key] = dungeon.shoplist[key];
                }
