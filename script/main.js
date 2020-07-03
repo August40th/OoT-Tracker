@@ -1181,25 +1181,11 @@ function setBean(sender) {
    saveCookie();
 }
 
-function setShops(sender) {
-   Shopsanity = sender.checked;
-   if (Shopsanity == true)
-      setShopSize(1);
+function setShops(x, y) {
+   Shopsanity = x.checked;
+   shopsize = y.value
    drawDungeonList();
    updateMap();
-   saveCookie();
-}
-
-function setShopSize(sender) {
-   shopsize = sender.value;
-   if (shopsize == 0)
-      setShops(false);
-   else {
-      Shopsanity = true;
-      shopShuff = 1;
-   }
-   updateMap();
-   drawDungeonList();
    saveCookie();
 }
 
@@ -1759,6 +1745,18 @@ function updateMap() {
                }
             }
          }
+         if (Shopsanity == true){
+            var size = shopsize;
+            for (var key in dungeons[k].shoplist) {
+               if (dungeons[k].shoplist.hasOwnProperty(key)) {
+                  if (size <= 0)
+                  {}
+                  else if (!dungeons[k].shoplist[key].isOpened && dungeons[k].shoplist[key].isAvailable() )
+                     DCcount++;
+               }
+               size--;
+            }
+         }
       }
       if (quest === "Master" || quest === "Mixed") {
          for (var key in dungeons[k].MQlist) {
@@ -1782,6 +1780,18 @@ function updateMap() {
                   {}
                   else if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable() && !(BeanShuffle == false && key == "BeanSalseman") )
                      DCcount++;
+               }
+            }
+            if (Shopsanity == true){
+            var size = shopsize;
+               for (var key in dungeons[k].shoplist) {
+                  if (dungeons[k].shoplist.hasOwnProperty(key)) {
+                     if (size <= 0)
+                     {}
+                     else if (!dungeons[k].shoplist[key].isOpened && dungeons[k].shoplist[key].isAvailable() )
+                        DCcount++;
+                  }
+                     size--;
                }
             }
          }
@@ -1813,18 +1823,6 @@ function updateMap() {
                   if (!dungeons[k].scrublist[key].isOpened && dungeons[k].scrublist[key].isAvailable())
                      DCcount++;
                }
-            }
-         }
-         if (Shopsanity == true){
-            var size = shopsize;
-            for (var key in dungeons[k].shoplist) {
-               if (dungeons[k].shoplist.hasOwnProperty(key)) {
-                  if (size <= 0)
-                  {}
-                  else if (!dungeons[k].shoplist[key].isOpened && dungeons[k].shoplist[key].isAvailable() )
-                     DCcount++;
-               }
-               size--;
             }
          }      
       }
@@ -2019,6 +2017,18 @@ function populateMapdiv() {
                }
             }
          }
+         if (Shopsanity == true) {
+            for (var key in dungeons[k].shoplist) {
+               if (dungeons[k].shoplist.hasOwnProperty(key) ) {
+                  var size = shopsize;
+                  if (size <= 0)
+                  {}
+                  else if (!dungeons[k].shoplist[key].isOpened && dungeons[k].shoplist[key].isAvailable())
+                     DCcount++;
+               }
+               size--;
+            }
+         }
       }
       if (quest === "Master" || quest === "Mixed") {
          for (var key in dungeons[k].MQlist) {
@@ -2044,18 +2054,30 @@ function populateMapdiv() {
                      DCcount++;
                }
             }
-         }
+            if (skulltula === "Overworld" || skulltula === "All") {
+               for (var key in dungeons[k].skulllist) {
+                  if (dungeons[k].type === "overworld" && dungeons[k].skulllist.hasOwnProperty(key)) {
+                     if (!dungeons[k].skulllist[key].isOpened && dungeons[k].skulllist[key].isAvailable())
+                        DCcount++;
+                  }
+               }
+            }
+            if (Shopsanity == true) {
+               for (var key in dungeons[k].shoplist) {
+                  if (dungeons[k].shoplist.hasOwnProperty(key) ) {
+                     var size = shopsize;
+                     if (size <= 0)
+                     {}
+                     else if (!dungeons[k].shoplist[key].isOpened && dungeons[k].shoplist[key].isAvailable())
+                        DCcount++;
+                  }
+                  size--;
+               }
+            }
+         }  
          if (skulltula === "Dungeons" || skulltula === "All") {
             for (var key in dungeons[k].MQskulllist) {
                if (dungeons[k].type === "dungeon" &&dungeons[k].MQskulllist.hasOwnProperty(key)) {
-                  if (!dungeons[k].MQskulllist[key].isOpened && dungeons[k].MQskulllist[key].isAvailable())
-                     DCcount++;
-               }
-            }
-         }
-         if (skulltula === "Overworld" || skulltula === "All") {
-            for (var key in dungeons[k].MQskulllist) {
-               if (dungeons[k].type === "overworld" && dungeons[k].MQskulllist.hasOwnProperty(key)) {
                   if (!dungeons[k].MQskulllist[key].isOpened && dungeons[k].MQskulllist[key].isAvailable())
                      DCcount++;
                }
@@ -2073,18 +2095,6 @@ function populateMapdiv() {
                   if (!dungeons[k].scrublist[key].isOpened && dungeons[k].scrublist[key].isAvailable())
                      DCcount++;
                }
-            }
-         }
-         if (Shopsanity == true) {
-            for (var key in dungeons[k].shoplist) {
-               if (dungeons[k].shoplist.hasOwnProperty(key) ) {
-                  var size = shopsize;
-                  if (size <= 0)
-                  {}
-                  else if (!dungeons[k].shoplist[key].isOpened && dungeons[k].shoplist[key].isAvailable())
-                     DCcount++;
-               }
-               size--;
             }
          }
       }
@@ -2213,8 +2223,10 @@ function getDungeonAvailability(dungeon) {
             for (let key in dungeon.chestlist) {
                checklist.chestlist[key] = dungeon.chestlist[key];
             }
-            for (let key in dungeon.scrublist) {
-               checklist.scrublist[key] = dungeon.scrublist[key];
+            if (scrubs === "Scrubsanity") {
+               for (let key in dungeon.scrublist) {
+                  checklist.scrublist[key] = dungeon.scrublist[key];
+               }
             }
             if (Shopsanity == true) {
                size = shopsize;
@@ -2224,7 +2236,7 @@ function getDungeonAvailability(dungeon) {
                   size--;
                }
             }
-         ['chestlist', 'skulllist', 'scrublist', 'shopkist'].forEach(function (key) {
+         ['chestlist', 'skulllist', 'scrublist', 'shoplist'].forEach(function (key) {
            let list = checklist[key];
            for (let key in list) {
                if (!list[key].isOpened) {
