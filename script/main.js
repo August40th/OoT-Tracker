@@ -1947,7 +1947,7 @@ function populateMapdiv() {
                if (dungeons[k].chestlist.hasOwnProperty(key) && dungeons[k].type === "overworld" && quest === "Master") {
                   if (OcarinaShuffle == false && key == "Fairy Ocarina")
                   {}
-                  elseif (WeirdEgg == false && key == "Malons Weird Egg")
+                  else if (WeirdEgg == false && key == "Malons Weird Egg")
                   {}
                   else if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable() && !(BeanShuffle == false && key == "BeanSalseman") )
                      DCcount++;
