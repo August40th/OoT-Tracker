@@ -45,7 +45,7 @@ var dungeons = [
          },
          'Link\'s House Cow Milk': {
             isAvailable: function () {
-               return items.Ocarina && items.SongofStorms; }
+               return items.Ocarina && items.EponasSong; }
          },
       },
       skulllist: {
@@ -2937,6 +2937,11 @@ var dungeons = [
                return items.Mask >= 2;
             }
          },
+         ['Fairy Fountain Grotto']: {
+            isAvailable: function () {
+               return items.Mask >= 2;
+            }
+         },
       },
       skulllist: {
          'Meadow Maze Skulltula': {
@@ -2985,6 +2990,11 @@ var dungeons = [
          ['Torch Run']: {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || items.Scale || (items.Bombchu && BombchuLogic));
+            }
+         },
+         ['Storms Fairy Fountain Grotto']: {
+            isAvailable: function () {
+               return items.Ocarina && items.SongofStorms && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || items.Scale || (items.Bombchu && BombchuLogic)) || (items.MasterSword && (items.HoverBoots || (items.Ocarina && items.ZeldasLullaby)));
             }
          },
          ['Thaw King Zora']: {
@@ -3333,6 +3343,11 @@ var dungeons = [
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword || (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale));
             }
          },
+         'Fairy Fountain Grotto': {
+            isAvailable: function () {
+               return (items.MasterSword && items.Hammer) || items.Bombs || (items.Bombchu && BombchuLogic);
+            }
+         },
          'River Heart Piece 2': {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.MasterSword && items.HoverBoots) || (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale));
@@ -3513,14 +3528,14 @@ var dungeons = [
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.EponasSong;
             }
          },
-         ['Stable Cow Milk 2']: {
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.EponasSong;
-            }
-         },
          ['Hammer Rocks Chest']: {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.Ocarina && items.EponasSong) || items.Hookshot >= 2 || isFortressOpen()) && items.MasterSword && items.Hammer;
+            }
+         },
+         ['Octorok Grotto']: {
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.Glove >= 2;
             }
          },
       },
@@ -3573,9 +3588,14 @@ var dungeons = [
       y: "16.4%",
       type: "overworld",
       chestlist: {
-         ['Fortress Rooftop Chest']: {
+         ['Rooftop Chest']: {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.Ocarina && items.EponasSong) || items.Hookshot >= 2 || isFortressOpen()) && items.MasterSword && (items.HoverBoots || (items.Scarecrow >= 2 && items.Hookshot) || items.Hookshot >= 2);
+            }
+         },
+         ['Storms Fairy Fountain Grotto']: {
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.Ocarina && items.EponasSong) || items.Hookshot >= 2 || isFortressOpen()) && items.MasterSword && (items.HoverBoots || (items.Scarecrow >= 2 && items.Hookshot) || items.Hookshot >= 2) && items.Ocarina && items.SongofStorms;
             }
          },
          ['Horseback Archery 1000 pts']: {
@@ -3857,7 +3877,7 @@ var chests = [
       }
    },
    {
-      name: "Skulltula & Hint Grotto",
+      name: "Skulltula, Hint, Cow Milk Grotto",
       x: "36.1%",
       y: "42.0%",
       isAvailable: function () {
@@ -3877,6 +3897,16 @@ var chests = [
                ) && items.MasterSword && items.Hookshot
             )
          ))
+            return "available";
+         return "unavailable";
+      }
+   },
+   {
+      name: "Fairy Fountain Grotto",
+      x: "43.0%",
+      y: "30.0%",
+      isAvailable: function () {
+         if ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.MasterSword && items.Hammer) || (items.Bombchu && BombchuLogic)))
             return "available";
          return "unavailable";
       }
