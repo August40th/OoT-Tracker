@@ -500,6 +500,36 @@ function drawDungeonList() {
             DClist.appendChild(li);
          }
       }
+      var shopitem = shopsize;
+      if (Shopsanity == false)
+         dNone = true;
+      else if (Shopsanity == true ){
+         for (let key in dungeons[dungeonSelect].shoplist) {
+            if (shopitem == 0) dNone = true;
+            if (shopitem > 0) {
+               let li = document.createElement('li');
+               li.style.cursor = 'pointer';
+               li.innerText = key;
+                  if (dungeons[dungeonSelect].shoplist[key].isOpened) {
+                     li.className = "DCopened";
+                  } 
+                  else if (dungeons[dungeonSelect].shoplist[key].isAvailable()) {
+                     li.className = "DCavailable";
+                  } 
+                  else li.className = "DCunavailable";
+
+               li.onclick = new Function('toggleShopChest(this,' + dungeonSelect + ',"' + key + '")');
+               li.onmouseover = new Function('highlightDungeonChest(this)');
+               li.onmouseout = new Function('unhighlightDungeonChest(this)');
+               li.setAttribute("data-type", "shop");
+               if (dNone) li.classList.add("d-none");
+
+               shopitem--;
+
+               DClist.appendChild(li);
+            }
+         }
+      }
    }
    if (quest === "Master" || quest === "Mixed") {
       dNone = false;
@@ -646,7 +676,36 @@ function drawDungeonList() {
             DClist.appendChild(li);
          }
       }
-      
+      var shopitem = shopsize;
+      if (Shopsanity == false)
+         dNone = true;
+      else if (Shopsanity == true && quest === "Master"){
+         for (let key in dungeons[dungeonSelect].shoplist) {
+            if (shopitem == 0) dNone = true;
+            if (shopitem > 0) {
+               let li = document.createElement('li');
+               li.style.cursor = 'pointer';
+               li.innerText = key;
+                  if (dungeons[dungeonSelect].shoplist[key].isOpened) {
+                     li.className = "DCopened";
+                  } 
+                  else if (dungeons[dungeonSelect].shoplist[key].isAvailable()) {
+                     li.className = "DCavailable";
+                  } 
+                  else li.className = "DCunavailable";
+
+               li.onclick = new Function('toggleShopChest(this,' + dungeonSelect + ',"' + key + '")');
+               li.onmouseover = new Function('highlightDungeonChest(this)');
+               li.onmouseout = new Function('unhighlightDungeonChest(this)');
+               li.setAttribute("data-type", "shop");
+               if (dNone) li.classList.add("d-none");
+
+               shopitem--;
+
+               DClist.appendChild(li);
+            }
+         }
+      }
    }
      
    if (quest === "Mixed") {
@@ -707,37 +766,6 @@ function drawDungeonList() {
          updateMap();
       }
    }
-   var shopitem = shopsize;
-   if (Shopsanity == false)
-      dNone = true;
-   else if (Shopsanity == true ){
-      for (let key in dungeons[dungeonSelect].shoplist) {
-         if (shopitem == 0) dNone = true;
-         if (shopitem > 0) {
-            let li = document.createElement('li');
-            li.style.cursor = 'pointer';
-            li.innerText = key;
-               if (dungeons[dungeonSelect].shoplist[key].isOpened) {
-                  li.className = "DCopened";
-               } 
-               else if (dungeons[dungeonSelect].shoplist[key].isAvailable()) {
-                  li.className = "DCavailable";
-               } 
-               else li.className = "DCunavailable";
-
-            li.onclick = new Function('toggleShopChest(this,' + dungeonSelect + ',"' + key + '")');
-            li.onmouseover = new Function('highlightDungeonChest(this)');
-            li.onmouseout = new Function('unhighlightDungeonChest(this)');
-            li.setAttribute("data-type", "shop");
-            if (dNone) li.classList.add("d-none");
-            
-            shopitem--;
-        
-            DClist.appendChild(li);
-         }
-      }
-   } 
-   updateMap();
 }
 
 
