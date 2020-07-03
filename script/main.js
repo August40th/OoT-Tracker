@@ -21,6 +21,7 @@ bosskeys = 'Dungeons';
 skulltula = 'Off';
 scrubs = 'Off';
 Shopsanity = false;
+shopsize = 0;
 Cowsanity = false;
 quest = 'Vanilla';
 
@@ -69,7 +70,7 @@ function getCookie() {
    return {};
 }
 
-var cookiekeys = ['iZoom', 'mZoom', 'rainlogic', 'items', 'qlogic', 'flogic', 'carp', 'smallk', 'bossk', 'sclogic', 'sklogic', 'ocShuff', 'sngShuff', 'eggShuff', 'beanShuff', 'chulogic', 'forest', 'gate', 'door', 'fountain', 'shopShuff', 'cowShuff', 'trials', 'numtrials', 'pigBK'];
+var cookiekeys = ['iZoom', 'mZoom', 'rainlogic', 'items', 'qlogic', 'flogic', 'carp', 'smallk', 'bossk', 'sclogic', 'sklogic', 'ocShuff', 'sngShuff', 'eggShuff', 'beanShuff', 'chulogic', 'forest', 'gate', 'door', 'fountain', 'shopShuff', , 'shpsize', 'cowShuff', 'trials', 'numtrials', 'pigBK'];
 var cookieDefault = {
    iZoom: 100,
    mZoom: 100,
@@ -91,6 +92,7 @@ var cookieDefault = {
    door: 1,
    fountain: 0,
    shopShuff: 0,
+   shpsize: 0,
    cowShuff: 0,
    trials: 0,
    numtrials: 0,
@@ -148,6 +150,11 @@ function loadCookie() {
    document.getElementsByName('Shopsanity')[0].checked = !!cookieobj.shopShuff;
    document.getElementsByName('Shopsanity')[0].onchange();
    
+   document.getElementsByName('shopzize')[0].value = cookieobj.shpsize;
+   document.getElementsByName('shopsize')[0].onchange();
+   document.getElementsByName('trialsize')[0].value = cookieobj.numtrials;
+   document.getElementsByName('trialsize')[0].onchange();
+   
    document.getElementsByName('Cowsanity')[0].checked = !!cookieobj.cowShuff;
    document.getElementsByName('Cowsanity')[0].onchange();
 
@@ -172,12 +179,6 @@ function loadCookie() {
    for (rbuttonID in document.getElementsByName('trials')) {
       rbutton = document.getElementsByName('trials')[rbuttonID]
       if (rbutton.value == cookieobj.trials)
-         rbutton.click();
-   }
-   
-   for (rbuttonID in document.getElementsByName('trialsize')) {
-      rbutton = document.getElementsByName('trialsize')[rbuttonID]
-      if (rbutton.value == cookieobj.numtrials)
          rbutton.click();
    }
 
@@ -240,6 +241,9 @@ function saveCookie() {
    cookieobj.eggShuff = document.getElementsByName('WeirdEgg')[0].checked ? 1 : 0;
    cookieobj.beanShuff = document.getElementsByName('BeanShuffle')[0].checked ? 1 : 0;
    cookieobj.shopShuff = document.getElementsByName('Shopsanity')[0].checked ? 1 : 0;
+   cookieobj.shpsize = document.getElementsByName('shopsize')[0].value;
+   cookieobj.numtrials = document.getElementsByName('numtrials')[0].value;
+
    cookieobj.cowShuff = document.getElementsByName('Cowsanity')[0].checked ? 1 : 0;
 
    cookieobj.chulogic = document.getElementsByName('BombchuLogic')[0].checked ? 1 : 0;
@@ -263,11 +267,6 @@ function saveCookie() {
          cookieobj.trials = rbutton.value;
    }
    
-   for (rbuttonID in document.getElementsByName('trialsize')) {
-      rbutton = document.getElementsByName('trialsize')[rbuttonID]
-      if (rbutton.checked)
-         cookieobj.numtrials = rbutton.value;
-   }
 
    for (rbuttonID in document.getElementsByName('quest')) {
       rbutton = document.getElementsByName('quest')[rbuttonID]
@@ -425,13 +424,12 @@ function drawDungeonList() {
                s.className = "DCunavailable";
             
             if (OcarinaShuffle == false && key == "Fairy Ocarina") {
-               s.className = "DCopened";               
                s.classList.add("d-none");}
             if (WeirdEgg == false && key == "Malons Weird Egg") {
-               s.className = "DCopened";               
                s.classList.add("d-none"); }
             if (BeanShuffle == false && key == "Bean Salesman") {
-               s.className = "DCopened";               
+               s.classList.add("d-none"); }
+            if (Cowsanity == false && key.Contain("Cow Milk")) {
                s.classList.add("d-none"); }
 
             s.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
@@ -525,13 +523,12 @@ function drawDungeonList() {
                s.className = "DCunavailable";
             
             if (OcarinaShuffle == false && key == "Fairy Ocarina") {
-               s.className = "DCopened";               
                s.classList.add("d-none");}
             if (WeirdEgg == false && key == "Malons Weird Egg") {
-               s.className = "DCopened";               
                s.classList.add("d-none"); }
             if (BeanShuffle == false && key == "Bean Salesman") {
-               s.className = "DCopened";               
+               s.classList.add("d-none"); }
+            if (Cowsanity == false && key.Contain("Cow Milk")) {
                s.classList.add("d-none"); }
  
             s.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
@@ -556,6 +553,9 @@ function drawDungeonList() {
                s.className = "DCavailable";
             else
                s.className = "DCunavailable";
+            
+            if (Cowsanity == false && key.Contain("Cow Milk")) {
+               s.classList.add("d-none"); }
 
             s.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
             s.onmouseover = new Function('highlightDungeonChest(this)');
@@ -647,6 +647,31 @@ function drawDungeonList() {
          }
       }
    }
+   
+   var shopitem;
+   if (Shopsanity == true && shopitem =< shopsize){
+      shopitem =0;
+         for (let key in dungeons[dungeonSelect].Shoplist) {
+            let li = document.createElement('li');
+            li.style.cursor = 'pointer';
+            li.innerText = key;
+            if (dungeons[dungeonSelect].Shoplist[key].isOpened) {
+               li.className = "DCopened";
+            } else if (dungeons[dungeonSelect].Shoplist[key].isAvailable()) {
+               li.className = "DCavailable";
+            } else {
+               li.className = "DCunavailable";
+            }
+            shopitem++;
+            
+            li.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
+            li.onmouseover = new Function('highlightDungeonChest(this)');
+            li.onmouseout = new Function('unhighlightDungeonChest(this)');
+            li.setAttribute("data-type", "shop");
+            if (dNone) li.classList.add("d-none");
+            DClist.appendChild(li);
+         }
+   
    if (quest === "Mixed") {
       const submaparea = document.getElementById("submaparea");
       const submaplist = document.getElementById("submaplist");
