@@ -150,10 +150,10 @@ function loadCookie() {
    document.getElementsByName('Shopsanity')[0].checked = !!cookieobj.shopShuff;
    document.getElementsByName('Shopsanity')[0].onchange();
    
-   document.getElementsByName('shopzize')[0].value = cookieobj.shpsize;
-   document.getElementsByName('shopsize')[0].onchange();
-   document.getElementsByName('trialsize')[0].value = cookieobj.numtrials;
-   document.getElementsByName('trialsize')[0].onchange();
+   //document.getElementsByName('shopzize')[0].value = cookieobj.shpsize;
+   //document.getElementsByName('shopsize')[0].onchange();
+   //document.getElementsByName('trialsize')[0].value = cookieobj.numtrials;
+   //document.getElementsByName('trialsize')[0].onchange();
    
    document.getElementsByName('Cowsanity')[0].checked = !!cookieobj.cowShuff;
    document.getElementsByName('Cowsanity')[0].onchange();
