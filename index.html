@@ -127,7 +127,7 @@
                     </fieldset>
                     <fieldset> <legend>Getting Crazy</legend>
                         <input type='checkbox' name='Shopsanity' checked='false' onchange="setShops(this, shopsize)">Shuffle Shop Item(s)<br>
-                        Shop Size: 0 <input type="range" name='shopsize' value='4' max='4' min='0' onchange="setShops(Shopsanity, this)">
+                        Shop Size: 0 <input type="range" name='shopsize' value='4' max='4' min='0' onchange="setShops(this, Shopsanity)">
                         <span id='shopsize'> 4 </span><br>
                         <input type='checkbox' name='Cowsanity' checked='false' onchange="setCows(this)">Shuffle Cow Milk
                         <input type='checkbox' name='SongShuffle' checked='false' onchange="setSongs(this)">Shuffle Songs into Pool<br>
