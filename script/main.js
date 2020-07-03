@@ -719,14 +719,17 @@ function drawDungeonList() {
          
          if (document.querySelectorAll("#submaplist .d-none").length) {
             if (submaparea.getAttribute("data-filter") === "vanilla") {
-               
-//               if (submaparea.classList.value == "DCpossible" ) {
-  //                bulkDCSelect();
-    //              bulkDCSelect();
-      //         } 
-        //       else {
-          //        bulkDCSelect();
-            //   }
+               ['chestlist', 'skulllist', 'scrublist', 'shoplist'].forEach(function (key) {
+                  let list = checklist[key];
+                     for (let key in dungeons[dungeonSelect].list) {                  
+                        let li = document.createElement('li');
+                        li.style.cursor = 'pointer';
+                        li.innerText = key;
+                        li.classList.add("d-none");
+                     }
+               }
+             }
+          }
                
                submaparea.setAttribute("data-filter", "master");
                submaparea.innerHTML = submaparea.innerText + " MQ";
