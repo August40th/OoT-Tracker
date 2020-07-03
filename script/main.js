@@ -649,7 +649,7 @@ function drawDungeonList() {
    }
    
    var shopitem;
-   if (Shopsanity == true && shopitem =< shopsize){
+   if (Shopsanity == true && shopitem <= shopsize){
       shopitem =0;
          for (let key in dungeons[dungeonSelect].Shoplist) {
             let li = document.createElement('li');
