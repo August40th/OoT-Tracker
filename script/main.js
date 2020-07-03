@@ -1184,8 +1184,8 @@ function setShops(x, y) {
    shopsize = y.value
    drawDungeonList();
    updateMap();
-   saveCookie(shopShuff);
-   saveCookie(shpsize);
+   saveCookie(cookieobj.shopShuff);
+   saveCookie(cookieobj.shpsize);
 }
 
 function setCows(sender) {
