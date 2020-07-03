@@ -149,6 +149,8 @@ function loadCookie() {
    
    document.getElementsByName('Shopsanity')[0].checked = !!cookieobj.shopShuff;
    document.getElementsByName('Shopsanity')[0].onchange();
+   document.getElementsByName('shopsize')[0].value = cookieobj.shpsize;
+   document.getElementsByName('shopsize')[0].onchange();
    
    //document.getElementsByName('shopzize')[0].value = cookieobj.shpsize;
    //document.getElementsByName('shopsize')[0].onchange();
@@ -241,7 +243,7 @@ function saveCookie() {
    cookieobj.eggShuff = document.getElementsByName('WeirdEgg')[0].checked ? 1 : 0;
    cookieobj.beanShuff = document.getElementsByName('BeanShuffle')[0].checked ? 1 : 0;
    cookieobj.shopShuff = document.getElementsByName('Shopsanity')[0].checked ? 1 : 0;
-   //cookieobj.shpsize = document.getElementsByName('shopsize')[0].value;
+   cookieobj.shpsize = document.getElementsByName('shopsize')[0].value;
    //cookieobj.numtrials = document.getElementsByName('numtrials')[0].value;
 
    cookieobj.cowShuff = document.getElementsByName('Cowsanity')[0].checked ? 1 : 0;
@@ -1164,6 +1166,9 @@ function setBean(sender) {
 
 function setShops(sender) {
    Shopsanity = sender.checked;
+   if (Shopsanity == false)
+      shopsize = 0;
+   else shopsize = 1;
    updateMap();
    drawDungeonList();
    saveCookie();
@@ -1172,6 +1177,8 @@ function setShops(sender) {
 
 function setShopSize(sender) {
    shopsize = sender.value;
+   if (shopsize > 0)
+      Shopsanity = true;
    updateMap();
    drawDungeonList();
    saveCookie();
