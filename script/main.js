@@ -503,7 +503,7 @@ function drawDungeonList() {
       var shopitem = shopsize;
       if (shopsize == 0)
          dNone = true;
-      else if (shopsize = 0 ){
+      else if (shopsize == 0 ){
          for (let key in dungeons[dungeonSelect].shoplist) {
             if (shopitem == 0) dNone = true;
             if (shopitem > 0) {
