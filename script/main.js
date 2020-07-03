@@ -652,13 +652,13 @@ function drawDungeonList() {
    
    var shopitem = 0;
    if (Shopsanity == true && shopitem <= shopsize){
-         for (var key in dungeons[dungeonSelect].Shoplist) {
+         for (var key in dungeons[dungeonSelect].shoplist) {
             let li = document.createElement('li');
             li.style.cursor = 'pointer';
             li.innerText = key;
-            if (dungeons[dungeonSelect].Shoplist[key].isOpened) {
+            if (dungeons[dungeonSelect].shoplist[key].isOpened) {
                li.className = "DCopened";
-            } else if (dungeons[dungeonSelect].Shoplist[key].isAvailable()) {
+            } else if (dungeons[dungeonSelect].shoplist[key].isAvailable()) {
                li.className = "DCavailable";
             } else {
                li.className = "DCunavailable";
