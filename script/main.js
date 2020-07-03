@@ -2280,7 +2280,7 @@ function getDungeonAvailability(dungeon) {
             if (Shopsanity == true) {
                size = shopsize;
                for (let key in dungeon.shoplist) {
-                  if (size >=0)
+                  if (size > 0)
                      checklist.shoplist[key] = dungeon.shoplist[key];
                   size--;
                }
