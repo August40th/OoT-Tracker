@@ -152,8 +152,6 @@ function loadCookie() {
    document.getElementsByName('shopsize')[0].value = cookieobj.shpsize;
    document.getElementsByName('shopsize')[0].onchange();
    
-   //document.getElementsByName('shopzize')[0].value = cookieobj.shpsize;
-   //document.getElementsByName('shopsize')[0].onchange();
    //document.getElementsByName('trialsize')[0].value = cookieobj.numtrials;
    //document.getElementsByName('trialsize')[0].onchange();
    
@@ -1186,7 +1184,8 @@ function setShops(x, y) {
    shopsize = y.value
    drawDungeonList();
    updateMap();
-   saveCookie();
+   saveCookie(shopShuff);
+   saveCookie(shpsize);
 }
 
 function setCows(sender) {
