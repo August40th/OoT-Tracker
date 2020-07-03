@@ -910,6 +910,7 @@ function toggleShopChest(sender, d, c) {
    } else {
       sender.className = "DCunavailable";
    }
+   updateMap();
 }
 
 function toggleMQChest(sender, d, c) {
