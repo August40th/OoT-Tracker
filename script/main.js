@@ -1681,7 +1681,7 @@ function updateMap() {
             document.getElementById(k).classList.add("d-none");
          }
       }
-      if (Cowsanity == true && chests[k].name.includes("Cow Milk") && chests[k].name.includes("d-none"))
+      if (Cowsanity == true && chests[k].name.includes("Cow Milk") && chests[k].classList.contains("d-none"))
          document.getElementById(k).classList.remove("d-none");
    }
 
