@@ -1165,9 +1165,8 @@ function setBean(sender) {
 
 function setShops(sender) {
    Shopsanity = sender.checked;
-   if (Shopsanity == false)
-      setShopSize(0);
-   else setShopSize(1);
+   if (Shopsanity == true)
+      shopsize =1;
    updateMap();
    drawDungeonList();
    saveCookie();
@@ -1176,9 +1175,8 @@ function setShops(sender) {
 
 function setShopSize(sender) {
    shopsize = sender.value;
-   if (shopsize > 0)
-      setShops(true);
-   else setShops(false);
+   if (shopsize == 0)
+      setShops(false);
    updateMap();
    drawDungeonList();
    saveCookie();
