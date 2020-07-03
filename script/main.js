@@ -517,6 +517,8 @@ function drawDungeonList() {
                      shopnum = 1;
                }
                if (shopitem == 0) dNone = true;
+               if (shopitem === undefined)
+                  shopitem = shopsize;
                if (shopitem > 0) {
                   let li = document.createElement('li');
                   li.style.cursor = 'pointer';
