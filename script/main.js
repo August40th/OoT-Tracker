@@ -721,13 +721,11 @@ function drawDungeonList() {
             if (submaparea.getAttribute("data-filter") === "vanilla") {
                
                var clean = getDungeonAvailability(dungeons[dungeonSelect]);
-               if (clean === "unavailable")
+               if (clean === "unavailable" || clean === "available" || clean === "opened")
                   bulkDCSelect();
-               else if (clean === "available") {
+               else if (clean === "possible") {
                   bulkDCSelect()
-                  clean = getDungeonAvailability(dungeons[dungeonSelect]);
-                  if (clean === "unavailable")
-                     bulkDCSelect()
+                  bulkDCSelect()
                }
                
                submaparea.setAttribute("data-filter", "master");
@@ -744,13 +742,11 @@ function drawDungeonList() {
             } else if (submaparea.getAttribute("data-filter") === "master") {
                
                var clean = getDungeonAvailability(dungeons[dungeonSelect]);
-               if (clean === "unavailable")
+               if (clean === "unavailable" || clean === "available" || clean === "opened")
                   bulkDCSelect();
-               else if (clean === "available") {
+               else if (clean === "possible") {
                   bulkDCSelect()
-                  clean = getDungeonAvailability(dungeons[dungeonSelect]);
-                  if (clean === "unavailable")
-                     bulkDCSelect()
+                  bulkDCSelect()
                }
                
                submaparea.setAttribute("data-filter", "vanilla");
