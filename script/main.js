@@ -429,7 +429,7 @@ function drawDungeonList() {
                s.classList.add("d-none"); }
             if (BeanShuffle == false && key == "Bean Salesman") {
                s.classList.add("d-none"); }
-            if (Cowsanity == false && s.classList.contains("Cow Milk")) {
+            if (Cowsanity == false && s.innerHTML.contains("Cow Milk")) {
                s.classList.add("d-none"); }
 
             s.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
@@ -528,7 +528,7 @@ function drawDungeonList() {
                s.classList.add("d-none"); }
             if (BeanShuffle == false && key == "Bean Salesman") {
                s.classList.add("d-none"); }
-            if (Cowsanity == false && s.classList.contains("Cow Milk")) {
+            if (Cowsanity == false && s.innerHTML.contains("Cow Milk")) {
                s.classList.add("d-none"); }
  
             s.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
@@ -554,7 +554,7 @@ function drawDungeonList() {
             else
                s.className = "DCunavailable";
             
-            if (Cowsanity == false && s.classList.contains("Cow Milk")) {
+            if (Cowsanity == false && s.innerHTML.contains("Cow Milk")) {
                s.classList.add("d-none"); }
 
             s.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
