@@ -1681,8 +1681,10 @@ function updateMap() {
             document.getElementById(k).classList.add("d-none");
          }
       }
-      if (Cowsanity == true && chests[k].name.includes("Cow Milk") && chests[k].classList.contains("d-none"))
+      if (Cowsanity == true && chests[k].name.includes("Cow Milk"))
          document.getElementById(k).classList.remove("d-none");
+      else if (Cowsanity == false && chests[k].name.includes("Cow Milk"))
+         document.getElementById(k).classList.add("d-none");
    }
 
    for (k = 0; k < dungeons.length; k++) {
