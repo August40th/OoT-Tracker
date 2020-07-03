@@ -781,7 +781,7 @@ function drawDungeonList() {
                      item.classList.remove("d-none");
                   }
                }
-            }
+            ) }
          }
          updateGridItemAll();
          updateMap();
