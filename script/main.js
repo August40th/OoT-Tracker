@@ -1812,7 +1812,7 @@ function updateMap() {
       if (Shopsanity == true){
          for (var key in dungeons[k].shoplist) {
             if (dungeons[k].shoplist.hasOwnProperty(key)) {
-               if (!dungeons[k].scrublist[key].isOpened && dungeons[k].shoplist[key].isAvailable())
+               if (!dungeons[k].shoplist[key].isOpened && dungeons[k].shoplist[key].isAvailable())
                   DCcount++;
                }
             }
