@@ -720,6 +720,15 @@ function drawDungeonList() {
          if (document.querySelectorAll("#submaplist .d-none").length) {
             if (submaparea.getAttribute("data-filter") === "vanilla") {
                
+               var clean = getDungeonAvailability(dungeons[dungeonSelect]);
+               if (clean === "unavailable")
+                  bulkDCSelect();
+               else if (clean === "available") {
+                  bulkDCSelect()
+                  clean = getDungeonAvailability(dungeons[dungeonSelect]);
+                  if (clean === "unavailable")
+                     bulkDCSelect()
+               }
                
                submaparea.setAttribute("data-filter", "master");
                submaparea.innerHTML = submaparea.innerText + " MQ";
@@ -734,16 +743,18 @@ function drawDungeonList() {
                })
             } else if (submaparea.getAttribute("data-filter") === "master") {
                
-               if (submaparea.classList.value == "DCpossible" ) {
+               var clean = getDungeonAvailability(dungeons[dungeonSelect]);
+               if (clean === "unavailable")
                   bulkDCSelect();
-                  bulkDCSelect();
-               } 
-               else {
-                  bulkDCSelect();
+               else if (clean === "available") {
+                  bulkDCSelect()
+                  clean = getDungeonAvailability(dungeons[dungeonSelect]);
+                  if (clean === "unavailable")
+                     bulkDCSelect()
                }
                
                submaparea.setAttribute("data-filter", "vanilla");
-               submaparea.innerHTML = dungeons[dungeonSelect].name;
+               submaparea.innerHTML = dungeons[dungeonSelect].name - " MQ";
                
                submaplist.childNodes.forEach(function(item, index) {
                   let itemType = item.getAttribute("data-type");
