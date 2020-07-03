@@ -745,7 +745,7 @@ function drawDungeonList() {
       } } else if (submaparea.getAttribute("data-filter") === "master") {
                
                if (submaparea.getAttribute("data-filter") === "vanilla") {
-               ['chestlist', 'skulllist', 'scrublist', 'shoplist'].forEach
+               ['MQchestlist', 'MQskulllist', 'MQscrublist', 'shoplist'].forEach
                (function (key) {
                   let list = checklist[key];
                      for (let key in dungeons[dungeonSelect].list) {                  
@@ -753,6 +753,17 @@ function drawDungeonList() {
                         li.style.cursor = 'pointer';
                         li.innerText = key;
                         li.classList.add("d-none");
+                     }
+                  }
+               );
+               ['chestlist', 'skulllist', 'scrublist', 'shoplist'].forEach
+               (function (key) {
+                  let list = checklist[key];
+                     for (let key in dungeons[dungeonSelect].list) {                  
+                        let li = document.createElement('li');
+                        li.style.cursor = 'pointer';
+                        li.innerText = key;
+                        li.classList.remove("d-none");
                      }
                   }
                );
