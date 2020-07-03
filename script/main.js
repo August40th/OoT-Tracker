@@ -1180,7 +1180,7 @@ function setBean(sender) {
 function setShops(sender) {
    Shopsanity = sender.checked;
    if (Shopsanity == true)
-      shopsize =1;
+      setShopSize(1);
    drawDungeonList();
    updateMap();
    saveCookie();
@@ -1808,15 +1808,16 @@ function updateMap() {
                }
             }
          }
+         if (Shopsanity == true){
+                  for (var key in dungeons[k].shoplist) {
+                     if (dungeons[k].shoplist.hasOwnProperty(key)) {
+                        if (!dungeons[k].shoplist[key].isOpened && dungeons[k].shoplist[key].isAvailable())
+                           DCcount++;
+                        }
+                     }
+         }      
       }
-      if (Shopsanity == true){
-         for (var key in dungeons[k].shoplist) {
-            if (dungeons[k].shoplist.hasOwnProperty(key)) {
-               if (!dungeons[k].shoplist[key].isOpened && dungeons[k].shoplist[key].isAvailable())
-                  DCcount++;
-               }
-            }
-      }
+      
       var child = document.getElementById("dungeon" + k).firstChild;
       while (child) {
          if (child.className == "chestCount") {
@@ -2063,15 +2064,16 @@ function populateMapdiv() {
                }
             }
          }
-      }
-      if (Shopsanity == true) {
-         for (var key in dungeons[k].shoplist) {
-            if (dungeons[k].shoplist.hasOwnProperty(key) ) {
-               if (!dungeons[k].shoplist[key].isOpened && dungeons[k].shoplist[key].isAvailable())
-                  DCcount++;
+         if (Shopsanity == true) {
+            for (var key in dungeons[k].shoplist) {
+               if (dungeons[k].shoplist.hasOwnProperty(key) ) {
+                  if (!dungeons[k].shoplist[key].isOpened && dungeons[k].shoplist[key].isAvailable())
+                     DCcount++;
+               }
             }
          }
       }
+      
       var ss = document.createElement('span');
       ss.className = "chestCount";
       if (DCcount == 0)
