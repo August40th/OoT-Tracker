@@ -739,6 +739,7 @@ function drawDungeonList() {
          }
       }
    } 
+   updateMap();
 }
 
 
