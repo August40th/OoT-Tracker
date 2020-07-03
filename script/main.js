@@ -1130,10 +1130,6 @@ function setEgg(sender) {
 
 function setBean(sender) {
    BeanShuffle = sender.checked;
-   if (BeanShuffle == true)
-      dungeons[25].chestlist['Bean Salesman'].isOpened = false;
-   else (BeanShuffle == false)
-      dungeons[25].chestlist['Bean Salesman'].isOpened = true;
    updateMap();
    drawDungeonList();
    saveCookie();
@@ -1670,10 +1666,10 @@ function updateMap() {
          for (var key in dungeons[k].chestlist) {
             if (dungeons[k].chestlist.hasOwnProperty(key)) {
                if (OcarinaShuffle == false && key == "Fairy Ocarina")
-                  DCcount--;
-               if (WeirdEgg == false && key == "Malons Weird Egg")
-                  DCcount--;
-               if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable() && !(BeanShuffle == false && key == "BeanSalseman") )
+               {}
+               else if (WeirdEgg == false && key == "Malons Weird Egg")
+               {}
+               else if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable() && !(BeanShuffle == false && key == "BeanSalseman") )
                   DCcount++;
             }
          }
@@ -1713,10 +1709,10 @@ function updateMap() {
             for (var key in dungeons[k].chestlist) {
                if (dungeons[k].chestlist.hasOwnProperty(key) && dungeons[k].type === "overworld") {
                   if (OcarinaShuffle == false && key == "Fairy Ocarina")
-                     DCcount--;
-                  if (WeirdEgg == false && key == "Malons Weird Egg")
-                     DCcount--;
-                  if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable() && !(BeanShuffle == false && key == "BeanSalseman") )
+                  {}
+                  else if (WeirdEgg == false && key == "Malons Weird Egg")
+                  {}
+                  else if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable() && !(BeanShuffle == false && key == "BeanSalseman") )
                      DCcount++;
                }
             }
@@ -1907,10 +1903,10 @@ function populateMapdiv() {
          for (var key in dungeons[k].chestlist) {
             if (dungeons[k].chestlist.hasOwnProperty(key)) {
                if (OcarinaShuffle == false && key == "Fairy Ocarina")
-                  DCcount--;
-               if (WeirdEgg == false && key == "Malons Weird Egg")
-                  DCcount--;
-               if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable() && !(BeanShuffle == false && key == "BeanSalseman") )
+               {}
+               else if (WeirdEgg == false && key == "Malons Weird Egg")
+               {}
+               else if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable() && !(BeanShuffle == false && key == "BeanSalseman") )
                   DCcount++;
             }
          }
@@ -1950,10 +1946,10 @@ function populateMapdiv() {
             for (var key in dungeons[k].chestlist) {
                if (dungeons[k].chestlist.hasOwnProperty(key) && dungeons[k].type === "overworld" && quest === "Master") {
                   if (OcarinaShuffle == false && key == "Fairy Ocarina")
-                     DCcount--;
-                  if (WeirdEgg == false && key == "Malons Weird Egg")
-                     DCcount--;
-                  if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable() && !(BeanShuffle == false && key == "BeanSalseman") )
+                  {}
+                  elseif (WeirdEgg == false && key == "Malons Weird Egg")
+                  {}
+                  else if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable() && !(BeanShuffle == false && key == "BeanSalseman") )
                      DCcount++;
                }
             }
@@ -2053,7 +2049,11 @@ function getDungeonAvailability(dungeon) {
                if (!list[key].isOpened) {
                    unopened++;
                }
-               if (!list[key].isOpened && list[key].isAvailable()) {
+               if (OcarinaShuffle == false && key == "Fairy Ocarina")
+               {}
+               else if (WeirdEgg == false && key == "Malons Weird Egg")
+               {}
+               else if (!list[key].isOpened && list[key].isAvailable()) {
                    canGet++;
                }
            }
@@ -2104,7 +2104,11 @@ function getDungeonAvailability(dungeon) {
                if (!list[key].isOpened) {
                    unopened++;
                }
-               if (!list[key].isOpened && list[key].isAvailable()) {
+               if (OcarinaShuffle == false && key == "Fairy Ocarina")
+               {}
+               else if (WeirdEgg == false && key == "Malons Weird Egg")
+               {}
+               else if (!list[key].isOpened && list[key].isAvailable()) {
                    canGet++;
                }
            }
