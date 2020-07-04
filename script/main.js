@@ -32,6 +32,13 @@ BeanShuffle = false;
 
 BombchuLogic = false;
 
+GrottoER = false;
+OWER = false;
+IndoorER = 'Off';
+
+Age = Child;
+Start = Off;
+
 OpenForest = true;
 OpenGate = true;
 OpenDoor = true;
@@ -70,7 +77,12 @@ function getCookie() {
    return {};
 }
 
-var cookiekeys = ['iZoom', 'mZoom', 'rainlogic', 'items', 'qlogic', 'flogic', 'carp', 'smallk', 'bossk', 'sclogic', 'sklogic', 'ocShuff', 'sngShuff', 'eggShuff', 'beanShuff', 'chulogic', 'forest', 'gate', 'door', 'fountain', 'shopShuff', 'shpsize', 'cowShuff', 'trials', 'numtrials', 'pigBK'];
+var cookiekeys = [
+   'iZoom', 'mZoom', 'rainlogic', 'items', 'qlogic', 'flogic', 'carp', 
+   'smallk', 'bossk', 'sclogic', 'sklogic', 'ocShuff', 'sngShuff', 'eggShuff', 
+   'beanShuff', 'chulogic', 'forest', 'gate', 'door', 'fountain', 
+   'shopShuff', 'shpsize', 'cowShuff', 'trials', 'numtrials', 'pigBK'
+   'gER', 'iER', 'owER', 'xMarks', 'RndStrt'];
 var cookieDefault = {
    iZoom: 100,
    mZoom: 100,
@@ -80,7 +92,7 @@ var cookieDefault = {
    carp: 1,
    smallk: 'Dungeons',
    bossk: 'Dungeons',
-   sclogic: 'Major Item',
+   sclogic: 'Off',
    sklogic: 'Off',
    ocShuff: 0,
    sngShuff: 0,
@@ -97,6 +109,11 @@ var cookieDefault = {
    trials: 0,
    numtrials: 0,
    pigBK: 'Removed',
+   gER: 0,
+   iER: 'Off',
+   owER: 0,
+   xMrks: 'Child',
+   RndStrt: 'Off',
 
    items: defaultItemGrid
 }
@@ -164,6 +181,15 @@ function loadCookie() {
    document.getElementsByName('Rescue1')[0].checked = !!cookieobj.carp;
    document.getElementsByName('Rescue1')[0].onchange();
    
+   document.getElementsByName('GrottoER')[0].checked = !!cookieobj.gER;
+   document.getElementsByName('GrottoER')[0].onchange();
+   
+   document.getElementsByName('Start')[0].checked = !!cookieobj.RndStrt;
+   document.getElementsByName('Start')[0].onchange();
+   
+   document.getElementsByName('OWER')[0].checked = !!cookieobj.owER;
+   document.getElementsByName('OWER')[0].onchange();   
+   
    for (rbuttonID in document.getElementsByName('rainbowbridge')) {
       rbutton = document.getElementsByName('rainbowbridge')[rbuttonID]
       if (rbutton.value == cookieobj.rainlogic)
@@ -217,6 +243,18 @@ function loadCookie() {
       if (rbutton.value == cookieobj.sclogic)
          rbutton.click();
    }
+   
+   for (rbuttonID in document.getElementsByName('Age')) {
+      rbutton = document.getElementsByName('Age')[rbuttonID]
+      if (rbutton.value == cookieobj.xMrks)
+         rbutton.click();
+   }
+   
+   for (rbuttonID in document.getElementsByName('IndoorER')) {
+      rbutton = document.getElementsByName('Indoor')[rbuttonID]
+      if (rbutton.value == cookieobj.iER)
+         rbutton.click();
+   }
 
    cookielock = false;
 }
@@ -249,6 +287,10 @@ function saveCookie() {
    cookieobj.chulogic = document.getElementsByName('BombchuLogic')[0].checked ? 1 : 0;
    cookieobj.carp = document.getElementsByName('Rescue1')[0].checked ? 1 : 0;
 
+   cookieobj.xMrks = document.getElementsByName('Age')[0].checked ? 1 : 0;
+   cookieobj.iER = document.getElementsByName('IndoorER')[0].checked ? 1 : 0;
+
+   
    for (rbuttonID in document.getElementsByName('rainbowbridge')) {
       rbutton = document.getElementsByName('rainbowbridge')[rbuttonID]
       if (rbutton.checked)
@@ -302,6 +344,18 @@ function saveCookie() {
       rbutton = document.getElementsByName('scrubs')[rbuttonID]
       if (rbutton.checked)
          cookieobj.sclogic = rbutton.value;
+   }
+   
+   for (rbuttonID in document.getElementsByName('OWER')) {
+      rbutton = document.getElementsByName('OWER')[rbuttonID]
+      if (rbutton.checked)
+         cookieobj.owER = rbutton.value;
+   }
+   
+   for (rbuttonID in document.getElementsByName('GrottoER')) {
+      rbutton = document.getElementsByName('GrottoER')[rbuttonID]
+      if (rbutton.checked)
+         cookieobj.gER = rbutton.value;
    }
 
    cookieobj.items = JSON.parse(JSON.stringify(itemLayout));
@@ -1344,9 +1398,36 @@ function setGrottoER(sender) {
    updateMap();
    drawDungeonList();
    saveCookie();
+}
 
-function setBombchu(sender) {
-   BombchuLogic = sender.checked;
+function setOWER(sender) {
+   OWER = sender.checked
+   updateMap();
+   saveCookie();
+}
+
+function setIndoorER(sender) {
+   IndoorER = sender.checked
+   updateMap();
+   saveCookie();
+}
+
+function setAge(sender) {
+   Age = sender.checked
+   updateMap();
+   drawDungeonList();
+   saveCookie();
+}
+
+function setGrottoER(sender) {
+   GrottoER = sender.checked
+   updateMap();
+   drawDungeonList();
+   saveCookie();
+}
+
+function setERTracker(sender) {
+   Start = sender.checked;
    updateMap();
    saveCookie();
 }
