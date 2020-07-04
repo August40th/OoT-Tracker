@@ -517,13 +517,13 @@ function drawDungeonList() {
                      shopnum = 1;
                }
                else {
-                  if (shopsize == 3 && shopitem > 0) 
+                  if (shopsize == 3 && shopitem <= 0) 
                   {}
                   else if (shopsize == 2 && shopitem <= 0)
                   {}
                   else if (shopsize == 1 && shopitem <= 0)
                   {}
-                  else if (shopitem == 0 && shopnum < 0) shopitem = shopsize;
+                  else if (shopitem == 0 && shopnum > 1) shopitem = shopsize;
                }
                started = false;
 
