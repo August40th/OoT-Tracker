@@ -1947,9 +1947,11 @@ function updateMap() {
                {}
                else if (Cowsanity == false && key.includes("Cow Milk"))
                {}
-               else if (GrottoER == false && (s.innerHTML.includes("Storms Fairy Fountain") || s.innerHTML.includes("Fairy Fountain Grotto") || s.innerHTML.includes("Octorok Grotto") ) 
+               else if (GrottoER == false && (s.innerHTML.includes("Storms Fairy Fountain") || s.innerHTML.includes("Fairy Fountain Grotto") || s.innerHTML.includes("Octorok Grotto") ) ) 
                {}
-               else if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable() && !(BeanShuffle == false && key == "BeanSalseman") )
+               else if (
+                        !dungeons[k].chestlist[key].isOpened && 
+                        dungeons[k].chestlist[key].isAvailable() )
                   DCcount++;
             
                if (Cowsanity == false && GrottoER == true && s.innerHTML.includes("Cow Milk Grotto")) 
