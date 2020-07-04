@@ -2097,10 +2097,10 @@ function updateMap() {
             itemlist[item].className = "DCavailable";
          else
             itemlist[item].className = "DCunavailable";
-         if (dNone) {
+         if (dNone)
             itemlist[item].classList.add("d-none");
-         }
-      }
+      } 
+      var x = 21;
    }
 }
 
