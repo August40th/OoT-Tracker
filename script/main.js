@@ -542,10 +542,10 @@ function drawDungeonList() {
                   li.onmouseover = new Function('highlightDungeonChest(this)');
                   li.onmouseout = new Function('unhighlightDungeonChest(this)');
                   li.setAttribute("data-type", "shop");
-                  if (dNone) li.classList.add("d-none");
 
                   DClist.appendChild(li);
                }
+               if (dNone) li.classList.add("d-none");
                if (shopitem < 0 && shopnum > 1) {
                      if (shopsize == 1 && shopitem <= -3) {
                         shopitem = shopsize;
