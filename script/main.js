@@ -506,7 +506,6 @@ function drawDungeonList() {
       if (shopsize == 0)
          dNone = true;
       else if (shopsize > 0 && (quest === "Mixed" || quest === "Vanilla")) {
-         //do {
             for (let key in dungeons[dungeonSelect].shoplist) {
                if (started == true) {
                   if (dungeons[dungeonSelect] == dungeons[13])
@@ -564,9 +563,7 @@ function drawDungeonList() {
                         shopnum--;
                      }
                }
-            }
-            
-         //} while (shopnum > 0);
+            }           
       }
    }
    
@@ -716,34 +713,69 @@ function drawDungeonList() {
          }
       }
       var shopitem = shopsize;
+      var shopnum;
+      var started = true;
       if (shopsize == 0)
          dNone = true;
-      else if (shopsize > 0 && quest === "Master"){
-         for (let key in dungeons[dungeonSelect].shoplist) {
-            if (shopitem == 0) dNone = true;
-            if (shopitem > 0) {
-               let li = document.createElement('li');
-               li.style.cursor = 'pointer';
-               li.innerText = key;
-                  if (dungeons[dungeonSelect].shoplist[key].isOpened) {
-                     li.className = "DCopened";
-                  } 
-                  else if (dungeons[dungeonSelect].shoplist[key].isAvailable()) {
-                     li.className = "DCavailable";
-                  } 
-                  else li.className = "DCunavailable";
+      else if (shopsize > 0 && (quest === "Master")) {
+            for (let key in dungeons[dungeonSelect].shoplist) {
+               if (started == true) {
+                  if (dungeons[dungeonSelect] == dungeons[13])
+                     shopnum = 3;
+                  else if (dungeons[dungeonSelect] == dungeons[15])
+                     shopnum = 2;
+                  else
+                     shopnum = 1;
+               }
+               else {
+                  if (shopitem === undefined)
+                     shopitem = shopsize;
+                  else if (shopitem <= 0) {
+                     dNone = true;
+                     shopitem--; 
+                  }
+               }
+               started = false;
+               
+               if (shopitem > 0) {
+                  shopitem--;
+                  let li = document.createElement('li');
+                  li.style.cursor = 'pointer';
+                  li.innerText = key;
+                     if (dungeons[dungeonSelect].shoplist[key].isOpened) {
+                        li.className = "DCopened";
+                     } 
+                     else if (dungeons[dungeonSelect].shoplist[key].isAvailable()) {
+                        li.className = "DCavailable";
+                     } 
+                     else li.className = "DCunavailable";
 
-               li.onclick = new Function('toggleShopChest(this,' + dungeonSelect + ',"' + key + '")');
-               li.onmouseover = new Function('highlightDungeonChest(this)');
-               li.onmouseout = new Function('unhighlightDungeonChest(this)');
-               li.setAttribute("data-type", "shop");
-               if (dNone) li.classList.add("d-none");
+                  li.onclick = new Function('toggleShopChest(this,' + dungeonSelect + ',"' + key + '")');
+                  li.onmouseover = new Function('highlightDungeonChest(this)');
+                  li.onmouseout = new Function('unhighlightDungeonChest(this)');
+                  li.setAttribute("data-type", "shop");
+                  if (dNone) li.classList.add("d-none");
 
-               shopitem--;
-
-               DClist.appendChild(li);
-            }
-         }
+                  DClist.appendChild(li);
+               }
+               if (shopitem < 0 && shopnum > 1) {
+                     if (shopsize == 1 && shopitem <= -3) {
+                        shopitem = shopsize;
+                        dNone = false;
+                        shopnum--;
+                     }
+                     else if (shopsize == 2 && shopitem <= -2) {
+                        shopitem = shopsize;
+                        dNone = false;
+                        shopnum--;
+                     }
+                     else if (shopsize == 3 && shopitem <= -1) {
+                        shopitem = shopsize;
+                        dNone = false;
+                        shopnum--;
+                     }
+               }
+            }           
       }
    }
      
@@ -1842,17 +1874,13 @@ function updateMap() {
             }
          }
          if (shopsize > 0){
-            var size = shopsize;
             for (var key in dungeons[k].shoplist) {
                if (dungeons[k].shoplist.hasOwnProperty(key)) {
-                  //if (size <= 0)
-                  {}
-                  //else 
-                     if (!dungeons[k].shoplist[key].isOpened && dungeons[k].shoplist[key].isAvailable() )
+                  if (!dungeons[k].shoplist[key].isOpened && dungeons[k].shoplist[key].isAvailable() )
                      DCcount++;
                }
-               size--;
             }
+            DCCount = DCCount - 4 + shopsize;
          }
       }
       if (quest === "Master" || quest === "Mixed") {
