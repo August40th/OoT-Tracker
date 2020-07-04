@@ -547,20 +547,20 @@ function drawDungeonList() {
 
                   DClist.appendChild(li);
                }
-            }
-            if (shopitem < 0 && shopnum > 1) {
-                  if (shopsize == 1 && shopitem <= -2) {
-                     shopitem = shopsize;
-                     dNone = false;
-                  }
-                  else if (shopsize == 2 && shopitem <= -1) {
-                     shopitem = shopsize;
-                     dNone = false;
-                  }
-                  else if (shopsize == 3 && shopitem <= 0) {
-                     shopitem = shopsize;
-                     dNone = false;
-                  }
+               if (shopitem < 0 && shopnum > 1) {
+                     if (shopsize == 1 && shopitem <= -2) {
+                        shopitem = shopsize;
+                        dNone = false;
+                     }
+                     else if (shopsize == 2 && shopitem <= -1) {
+                        shopitem = shopsize;
+                        dNone = false;
+                     }
+                     else if (shopsize == 3 && shopitem <= 0) {
+                        shopitem = shopsize;
+                        dNone = false;
+                     }
+               }
             }
             shopnum--;
          } while (shopnum > 0);
