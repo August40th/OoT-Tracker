@@ -2080,7 +2080,7 @@ function updateMap() {
          child = child.nextSibling;
       }
       updateSkullIcon()
-   //}
+   }
 
    document.getElementById('submaparea').className = "DC" + getDungeonAvailability(dungeons[dungeonSelect]);
    var itemlist = document.getElementById('submaplist').children
