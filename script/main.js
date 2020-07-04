@@ -1879,15 +1879,15 @@ function updateMap() {
                if (dungeons[k].shoplist.hasOwnProperty(key)) {
                   if (!dungeons[k].shoplist[key].isOpened && dungeons[k].shoplist[key].isAvailable()  )
                      DCcount++;
-                  if ((!dungeons{k} == dungeons[13] || !dungeons{k} == dungeons[13]) && size > 0){
+                  if ((!dungeons[k] == dungeons[13] || !dungeons{k} == dungeons[16]) && size > 0){
                      DCcount--;
                      size--;
                   }
-                  else if (dungeons{k} == dungeons[13] && size > 0) {
+                  else if (dungeons[k] == dungeons[13] && size > 0) {
                      DCcount = DCcount - (3*shopsize);
                      size--;
                   }
-                  else if (dungeons{k} == dungeons[16] && size > 0) {
+                  else if (dungeons[k] == dungeons[16] && size > 0) {
                      DCcount = DCcount - (2*shopsize);
                      size--;
                   }
