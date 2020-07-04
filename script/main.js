@@ -431,6 +431,11 @@ function drawDungeonList() {
                s.classList.add("d-none"); }
             if (Cowsanity == false && s.innerHTML.includes("Cow Milk")) {
                s.classList.add("d-none"); }
+            else if (Cowsanity == false && GrottoER == true && s.innerHTML.includes("Cow Milk Grotto")) {
+               s.classList.remove("d-none"); }
+            if (GrottoER == false && (s.innerHTML.includes("Storms Fairy Fountain") || s.innerHTML.includes("Fairy Fountain Grotto") || s.innerHTML.includes("Octorok Grotto") ) 
+                {
+               s.classList.add("d-none"); }
 
             s.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
             s.onmouseover = new Function('highlightDungeonChest(this)');
@@ -600,6 +605,11 @@ function drawDungeonList() {
             if (BeanShuffle == false && key == "Bean Salesman") {
                s.classList.add("d-none"); }
             if (Cowsanity == false && s.innerHTML.includes("Cow Milk")) {
+               s.classList.add("d-none"); }
+            else if (Cowsanity == false && GrottoER == true && s.innerHTML.includes("Cow Milk Grotto")) {
+               s.classList.remove("d-none"); }
+            if (GrottoER == false && (s.innerHTML.includes("Storms Fairy Fountain") || s.innerHTML.includes("Fairy Fountain Grotto") || s.innerHTML.includes("Octorok Grotto") ) 
+                {
                s.classList.add("d-none"); }
  
             s.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
@@ -1329,6 +1339,12 @@ function setCows(sender) {
    saveCookie();
 }
 
+function setGrottoER(sender) {
+   GrottoER = sender.checked
+   updateMap();
+   drawDungeonList();
+   saveCookie();
+
 function setBombchu(sender) {
    BombchuLogic = sender.checked;
    updateMap();
@@ -1826,12 +1842,16 @@ function updateMap() {
             document.getElementById(k).classList.add("d-none");
          }
       }
-      if (Cowsanity == true && chests[k].name.includes("Cow Milk"))
-         document.getElementById(k).classList.remove("d-none");
-      else if (Cowsanity == false && chests[k].name.includes("Cow Milk") && ((skulltula === "Overworld" || skulltula === "All") ) )
+      if (chests[k].name.includes("Cow Milk") && (skulltula === "Overworld" || skulltula === "All" || Cowsanity == true || GrottoER == true;) )
          document.getElementById(k).classList.remove("d-none");
       else if (Cowsanity == false && chests[k].name.includes("Cow Milk") )
-         document.getElementById(k).classList.add("d-none");   
+         document.getElementById(k).classList.add("d-none");
+      else if (chests[k].name.includes("Cow Milk") && !(skulltula === "Overworld" || !skulltula === "All") && !Cowsanity == true && GrottoER == true;) ) {
+         document.getElementById(k).classList.remove("d-none"); }
+      if (GrottoER == true && chests[k].name.includes("Fountain Grotto")
+          document.getElementById(k).classList.remove("d-none");
+      if (GrottoER == false && chests[k].name.includes("Fountain Grotto")
+          document.getElementById(k).classList.add("d-none");
    }
 
    for (k = 0; k < dungeons.length; k++) {
@@ -1850,9 +1870,13 @@ function updateMap() {
                {}
                else if (Cowsanity == false && key.includes("Cow Milk"))
                {}
+               else if (GrottoER == false && (s.innerHTML.includes("Storms Fairy Fountain") || s.innerHTML.includes("Fairy Fountain Grotto") || s.innerHTML.includes("Octorok Grotto") ) 
+               {}
                else if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable() && !(BeanShuffle == false && key == "BeanSalseman") )
                   DCcount++;
-            }
+            
+               if (Cowsanity == false && GrottoER == true && s.innerHTML.includes("Cow Milk Grotto")) 
+               {DCcount++;}}
          }
          if ((skulltula === "Dungeons" || skulltula === "All") && dungeons[k].type === "dungeon") {
             for (var key in dungeons[k].skulllist) {
@@ -1911,8 +1935,13 @@ function updateMap() {
                   {}
                   else if (Cowsanity == false && key.includes("Cow Milk"))
                   {}
+                  else if (GrottoER == false && (s.innerHTML.includes("Storms Fairy Fountain") || s.innerHTML.includes("Fairy Fountain Grotto") || s.innerHTML.includes("Octorok Grotto") ) 
+                  {}
                   else if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable() && !(BeanShuffle == false && key == "BeanSalseman") )
                      DCcount++;
+
+                  if (Cowsanity == false && GrottoER == true && s.innerHTML.includes("Cow Milk Grotto")) 
+                  {DCcount++;}}
                }
             }
             if (shopsize > 0){
@@ -2082,6 +2111,16 @@ function populateMapdiv() {
             s.classList.add("d-none");
          }
       }
+      if (chests[k].name.includes("Cow Milk") && (skulltula === "Overworld" || skulltula === "All" || Cowsanity == true || GrottoER == true;) )
+         s.classList.remove("d-none");
+      else if (Cowsanity == false && chests[k].name.includes("Cow Milk") )
+         s.classList.add("d-none");
+      else if (chests[k].name.includes("Cow Milk") && !(skulltula === "Overworld" || !skulltula === "All") && !Cowsanity == true && GrottoER == true;) ) {
+         s.classList.remove("d-none"); }
+      if (GrottoER == true && chests[k].name.includes("Fountain Grotto")
+          s.classList.remove("d-none");
+      if (GrottoER == false && chests[k].name.includes("Fountain Grotto")
+          s.classList.add("d-none");
       var ss = document.createElement('span');
       ss.className = "tooltip";
       ss.innerHTML = chests[k].name;
@@ -2122,9 +2161,13 @@ function populateMapdiv() {
                {}
                else if (Cowsanity == false && key.includes("Cow Milk"))
                {}
+               else if (GrottoER == false && (s.innerHTML.includes("Storms Fairy Fountain") || s.innerHTML.includes("Fairy Fountain Grotto") || s.innerHTML.includes("Octorok Grotto") ) 
+               {}
                else if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable() && !(BeanShuffle == false && key == "BeanSalseman") )
                   DCcount++;
-            }
+            
+               if (Cowsanity == false && GrottoER == true && s.innerHTML.includes("Cow Milk Grotto")) 
+               {DCcount++;}}
          }
          if (skulltula === "Dungeons" || skulltula === "All") {
             for (var key in dungeons[k].skulllist) {
@@ -2183,9 +2226,13 @@ function populateMapdiv() {
                   {}
                   else if (Cowsanity == false && key.includes("Cow Milk"))
                   {}
+                  else if (GrottoER == false && (s.innerHTML.includes("Storms Fairy Fountain") || s.innerHTML.includes("Fairy Fountain Grotto") || s.innerHTML.includes("Octorok Grotto") ) 
+                  {}
                   else if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable() && !(BeanShuffle == false && key == "BeanSalseman") )
                      DCcount++;
-               }
+
+                  if (Cowsanity == false && GrottoER == true && s.innerHTML.includes("Cow Milk Grotto")) 
+                  {DCcount++;}}
             }
             if (skulltula === "Overworld" || skulltula === "All") {
                for (var key in dungeons[k].skulllist) {
@@ -2309,9 +2356,13 @@ function getDungeonAvailability(dungeon) {
                {}
                else if (Cowsanity == false && key.includes("Cow Milk"))
                {}
-               else if (!list[key].isOpened && list[key].isAvailable()) {
-                   canGet++;
-               }
+               else if (GrottoER == false && (s.innerHTML.includes("Storms Fairy Fountain") || s.innerHTML.includes("Fairy Fountain Grotto") || s.innerHTML.includes("Octorok Grotto") ) 
+               {}
+               else if (!list[key].isOpened && list[key].isAvailable() )
+                  canGet++;
+            
+               if (Cowsanity == false && GrottoER == true && s.innerHTML.includes("Cow Milk Grotto")) 
+               {canGet++;}}
            }
        });
    }
@@ -2379,9 +2430,13 @@ function getDungeonAvailability(dungeon) {
                {}
                else if (Cowsanity == false && key.includes("Cow Milk"))
                {}
-               else if (!list[key].isOpened && list[key].isAvailable()) {
-                   canGet++;
-               }
+               else if (GrottoER == false && (s.innerHTML.includes("Storms Fairy Fountain") || s.innerHTML.includes("Fairy Fountain Grotto") || s.innerHTML.includes("Octorok Grotto") ) 
+               {}
+               else if (!list[key].isOpened && list[key].isAvailable()) )
+                  canGet++;
+            
+               if (Cowsanity == false && GrottoER == true && s.innerHTML.includes("Cow Milk Grotto")) 
+               {canGet++;}}
            }
          }
          );
