@@ -2399,6 +2399,7 @@ function getDungeonAvailability(dungeon) {
                        {list.key.isOpened}
                      }
                   }
+              }
             }
        });
       }
