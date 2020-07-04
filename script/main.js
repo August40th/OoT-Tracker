@@ -36,8 +36,8 @@ GrottoER = false;
 OWER = false;
 IndoorER = 'Off';
 
-Age = Child;
-Start = Off;
+Age = "Child";
+Start = "Off";
 
 OpenForest = true;
 OpenGate = true;
