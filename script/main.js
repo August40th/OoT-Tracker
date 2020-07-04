@@ -248,7 +248,7 @@ function loadCookie() {
  //     rbutton = document.getElementsByName('Age')[rbuttonID]
   //    if (rbutton.value == cookieobj.xMrks)
    //      rbutton.click();
-   /}
+   //}
    
    for (rbuttonID in document.getElementsByName('IndoorER')) {
       rbutton = document.getElementsByName('Indoor')[rbuttonID]
