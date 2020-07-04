@@ -560,6 +560,7 @@ function drawDungeonList() {
          } while (shopnum > 0);
       }
    }
+   updateMap();
    if (quest === "Master" || quest === "Mixed") {
       dNone = false;
       if (quest === "Mixed" && listFilter === "master" && dungeons[dungeonSelect].type === "overworld") {
