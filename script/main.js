@@ -661,8 +661,7 @@ function drawDungeonList() {
                s.classList.add("d-none"); }
             else if (Cowsanity == false && GrottoER == true && s.innerHTML.includes("Cow Milk Grotto")) {
                s.classList.remove("d-none"); }
-            if (GrottoER == false && (s.innerHTML.includes("Storms Fairy Fountain") || s.innerHTML.includes("Fairy Fountain Grotto") || s.innerHTML.includes("Octorok Grotto") ) 
-                {
+            if (GrottoER == false && (s.innerHTML.includes("Storms Fairy Fountain") || s.innerHTML.includes("Fairy Fountain Grotto") || s.innerHTML.includes("Octorok Grotto") ) ) {
                s.classList.add("d-none"); }
  
             s.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
