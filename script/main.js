@@ -81,7 +81,7 @@ var cookiekeys = [
    'iZoom', 'mZoom', 'rainlogic', 'items', 'qlogic', 'flogic', 'carp', 
    'smallk', 'bossk', 'sclogic', 'sklogic', 'ocShuff', 'sngShuff', 'eggShuff', 
    'beanShuff', 'chulogic', 'forest', 'gate', 'door', 'fountain', 
-   'shopShuff', 'shpsize', 'cowShuff', 'trials', 'numtrials', 'pigBK'
+   'shopShuff', 'shpsize', 'cowShuff', 'trials', 'numtrials', 'pigBK',
    'gER', 'iER', 'owER', 'xMarks', 'RndStrt'];
 var cookieDefault = {
    iZoom: 100,
