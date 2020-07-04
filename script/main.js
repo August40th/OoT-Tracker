@@ -2294,7 +2294,7 @@ function getDungeonAvailability(dungeon) {
             for (let key in dungeons[k].shoplist) {
                for (var step = 1; step <= 4; step++) {
                   if (step <= shopsize)
-                     checklist.scrublist[key] = dungeon.scrublist[key];
+                     checklist.shoplist[key] = dungeon.shoplist[key];
                   else //if(key.includes("Shop " + step) && step > shopsize)
                   {}
                }
@@ -2363,14 +2363,16 @@ function getDungeonAvailability(dungeon) {
                   checklist.scrublist[key] = dungeon.scrublist[key];
                }
             }
-            if (Shopsanity == true) {
-               size = shopsize;
-               for (let key in dungeon.shoplist) {
-                  if (size > 0)
+            if (shopsize > 0){
+            for (let key in dungeons[k].shoplist) {
+               for (var step = 1; step <= 4; step++) {
+                  if (step <= shopsize)
                      checklist.shoplist[key] = dungeon.shoplist[key];
-                  size--;
+                  else //if(key.includes("Shop " + step) && step > shopsize)
+                  {}
                }
             }
+         }
          ['chestlist', 'skulllist', 'scrublist', 'shoplist'].forEach(function (key) {
            let list = checklist[key];
            for (let key in list) {
