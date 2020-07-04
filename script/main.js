@@ -1430,6 +1430,12 @@ function setERTracker(sender) {
    saveCookie();
 }
 
+function setBombchu(sender) {
+   BombchuLogic = sender.checked;
+   updateMap();
+   saveCookie();
+}
+
 function setZoom(target, sender) {
    document.getElementById(target).style.zoom = sender.value / 100;
    document.getElementById(target).style.zoom = sender.value / 100;
