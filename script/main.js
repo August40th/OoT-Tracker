@@ -510,7 +510,7 @@ function drawDungeonList() {
                if (started == true) {
                   if (dungeons[dungeonSelect] == dungeons[13])
                      shopnum = 3;
-                  else if (dungeons[dungeonSelect] == dungeons[15])
+                  else if (dungeons[dungeonSelect] == dungeons[16])
                      shopnum = 2;
                   else
                      shopnum = 1;
@@ -722,7 +722,7 @@ function drawDungeonList() {
                if (started == true) {
                   if (dungeons[dungeonSelect] == dungeons[13])
                      shopnum = 3;
-                  else if (dungeons[dungeonSelect] == dungeons[15])
+                  else if (dungeons[dungeonSelect] == dungeons[16])
                      shopnum = 2;
                   else
                      shopnum = 1;
