@@ -244,11 +244,11 @@ function loadCookie() {
          rbutton.click();
    }
    
-   for (rbuttonID in document.getElementsByName('Age')) {
-      rbutton = document.getElementsByName('Age')[rbuttonID]
-      if (rbutton.value == cookieobj.xMrks)
-         rbutton.click();
-   }
+//   for (rbuttonID in document.getElementsByName('Age')) {
+ //     rbutton = document.getElementsByName('Age')[rbuttonID]
+  //    if (rbutton.value == cookieobj.xMrks)
+   //      rbutton.click();
+   /}
    
    for (rbuttonID in document.getElementsByName('IndoorER')) {
       rbutton = document.getElementsByName('Indoor')[rbuttonID]
