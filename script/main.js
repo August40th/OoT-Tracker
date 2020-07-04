@@ -523,8 +523,14 @@ function drawDungeonList() {
                      dNone = true;
                      shopitem--; 
                   }
-                  else if (shopitem < 0 && shopnum > 1) 
-                     shopitem = shopsize;
+                  else if (shopitem < 0 && shopnum > 1) {
+                     if (shopsize == 1 && shopitem == -3)
+                        shopitem = shopsize;
+                     if (shopsize == 2 && shopitem == -2)
+                        shopitem = shopsize;
+                     if (shopsize == 3 && shopitem == -1)
+                        shopitem = shopsize;
+                  }
                }
                started = false;
                
