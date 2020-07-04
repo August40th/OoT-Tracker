@@ -2451,9 +2451,9 @@ function getDungeonAvailability(dungeon) {
                else if (Cowsanity == false && key.includes("Cow Milk") )
                {}
                else if (GrottoER == false && 
-                        (s.innerHTML.includes("Storms Fairy Fountain") || 
-                         s.innerHTML.includes("Fairy Fountain Grotto") || 
-                         s.innerHTML.includes("Octorok Grotto") ) )
+                        (key.includes("Storms Fairy Fountain") || 
+                         key.includes("Fairy Fountain Grotto") || 
+                         key.includes("Octorok Grotto") ) )
                {}
                else if (!list[key].isOpened && list[key].isAvailable() )
                   canGet++;
