@@ -1880,6 +1880,12 @@ function updateMap() {
                      DCcount++;
                }
             }
+            if (shopsize == 1)
+               DCcount = DCcount - 3;
+            else if (shopsize == 2)
+               DCcount = DCcount - 2;
+            else if (shopsize == 3)
+               DCcount = DCcount - 1;
          }
       }
       if (quest === "Master" || quest === "Mixed") {
