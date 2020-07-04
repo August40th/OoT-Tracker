@@ -500,7 +500,7 @@ function drawDungeonList() {
             DClist.appendChild(li);
          }
       }
-      var shopitem;
+      var shopitem = shopsize;
       var shopnum;
       var started = true;
       if (shopsize == 0)
