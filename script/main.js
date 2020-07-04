@@ -2100,8 +2100,9 @@ function updateMap() {
          if (dNone)
             itemlist[item].classList.add("d-none");
       } 
-      var x = 21;
    }
+)
+;
 }
 
 function itemConfigClick(sender) {
