@@ -2098,12 +2098,13 @@ function updateMap() {
               itemlist[item].className = 'DCopened';
            else if (dungeons[dungeonSelect][itemType][itemlist[item].innerHTML].isAvailable())
               itemlist[item].className = 'DCavailable';
-        }
-       else {
-             itemlist[item].className = 'DCunavailable';
-       }
-    }  
-}
+           else {
+              itemlist[item].className = 'DCunavailable';
+
+           }
+        }  
+    }
+   }
 }
 
 function itemConfigClick(sender) {
