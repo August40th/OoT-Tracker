@@ -2101,8 +2101,8 @@ function updateMap() {
             itemlist[item].classList.add("d-none");
          }
       }
-      )
       ;
+      )
    }
 }
 
