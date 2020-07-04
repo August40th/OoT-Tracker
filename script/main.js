@@ -2068,7 +2068,7 @@ function updateMap() {
          }      
       }
       
-      var child = document.getElementById('dungeons' + k).firstChild;
+      var child = dungeons[k].firstChild;
         while (child) {
             if (child.className == 'chestCount') {
                 if (DCcount === 0) {
