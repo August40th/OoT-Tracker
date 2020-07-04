@@ -1884,7 +1884,7 @@ function updateMap() {
                   if (!dungeons[k].shoplist[key].isOpened && dungeons[k].shoplist[key].isAvailable()  )
                      DCcount++;
                   for (var step = 2; step <= 4; step++) {
-                     if(key.includes(" " + step) && step < shopsize)
+                     if(key.includes("Shop " + step) && step > shopsize)
                         DCcount--;
                   }
                }
