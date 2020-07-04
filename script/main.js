@@ -2451,9 +2451,10 @@ function getDungeonAvailability(dungeon) {
                   canGet++;
             
                if (Cowsanity == false && GrottoER == true && s.innerHTML.includes("Cow Milk Grotto")) 
-               {canGet++;}}
+               {canGet++;}
            }
-       });
+       }
+                                                       );
    }
    if (quest === "Master" || quest === "Mixed") {
        for (let key in dungeon.MQlist) {
