@@ -519,7 +519,7 @@ function drawDungeonList() {
                else {
                   if (shopitem === undefined)
                      shopitem = shopsize;
-                  else if (shopitem == 0) {
+                  else if (shopitem <= 0) {
                      dNone = true;
                      shopitem--; 
                   }
@@ -536,6 +536,7 @@ function drawDungeonList() {
                started = false;
                
                if (shopitem > 0) {
+                  shopitem--;
                   let li = document.createElement('li');
                   li.style.cursor = 'pointer';
                   li.innerText = key;
@@ -552,8 +553,6 @@ function drawDungeonList() {
                   li.onmouseout = new Function('unhighlightDungeonChest(this)');
                   li.setAttribute("data-type", "shop");
                   if (dNone) li.classList.add("d-none");
-
-                  shopitem--;
 
                   DClist.appendChild(li);
                }
