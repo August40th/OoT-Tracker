@@ -1879,17 +1879,13 @@ function updateMap() {
             }
          }
          if (shopsize > 0){
-            var size = shopsize;
             for (var key in dungeons[k].shoplist) {
                if (dungeons[k].shoplist.hasOwnProperty(key)) {
                   if (!dungeons[k].shoplist[key].isOpened && dungeons[k].shoplist[key].isAvailable()  )
                      DCcount++;
-                  if (dungeons[k] == dungeons[13]) {
-                     DCcount++;
-                     DCcount++;
-                  }
-                  else if (dungeons[k] == dungeons[16]) {
-                     DCcount++;
+                  for (var step = "2"; step <= 4; stepp++) {
+                     if(key.includes(" " + step) && step < shopsize)
+                        DCcount--;
                   }
                }
             }
