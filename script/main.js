@@ -2087,23 +2087,24 @@ function updateMap() {
     for (var item in itemlist) {
         if (itemlist.hasOwnProperty(item)) {
            let dNone = false;
-           if (itemlist[item].classList.contains("d-none")) { 
+           if (itemlist[item].classList.contains("d-none") )
               dNone = true;
-           }
+           if (dNone)
+              itemlist[item].classList.add("d-none");
+           else
+              itemlist[item].classList.remove("d-none");
            let itemType = itemlist[item].getAttribute("data-type") + "list";
            if (dungeons[dungeonSelect][itemType][itemlist[item].innerHTML].isOpened)
               itemlist[item].className = 'DCopened';
            else if (dungeons[dungeonSelect][itemType][itemlist[item].innerHTML].isAvailable())
               itemlist[item].className = 'DCavailable';
-        } 
-        else {
-             itemlist[item].className = 'DCunavailable';
         }
-        if (dNone)
-            itemlist[item].classList.add("d-none");
+       else {
+             itemlist[item].className = 'DCunavailable';
+       }
+       item++;
     }
-      item++;
-    }
+   }
 }
 
 function itemConfigClick(sender) {
