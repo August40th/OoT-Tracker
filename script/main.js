@@ -2101,6 +2101,7 @@ function updateMap() {
       } 
    }
 }
+}
 
 function itemConfigClick(sender) {
    var item = sender.id;
