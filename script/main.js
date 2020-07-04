@@ -2369,7 +2369,7 @@ function getDungeonAvailability(dungeon) {
                   if (step <= shopsize)
                      checklist.shoplist[key] = dungeon.shoplist[key];
                   else if(key.includes("Shop " + step) && step > shopsize)
-                  {checklist.shoplist.isOpened;}
+                  {checklist.shoplist[key].isOpened;}
                }
             }
          }
