@@ -2309,7 +2309,10 @@ function populateMapdiv() {
                   {}
                   else if (Cowsanity == false && key.includes("Cow Milk"))
                   {}
-                  else if (GrottoER == false && (s.innerHTML.includes("Storms Fairy Fountain") || s.innerHTML.includes("Fairy Fountain Grotto") || s.innerHTML.includes("Octorok Grotto") ) )
+                  else if (GrottoER == false && 
+                           (s.innerHTML.includes("Storms Fairy Fountain") || 
+                            s.innerHTML.includes("Fairy Fountain Grotto") || 
+                            s.innerHTML.includes("Octorok Grotto") ) )
                   {}
                   else if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable() && !(BeanShuffle == false && key == "BeanSalseman") )
                      DCcount++;
@@ -2437,9 +2440,12 @@ function getDungeonAvailability(dungeon) {
                {}
                else if (BeanShuffle == false && key == "Bean Salesman")
                {}
-               else if (Cowsanity == false && key.includes("Cow Milk"))
+               else if (Cowsanity == false && key.includes("Cow Milk") )
                {}
-               else if (GrottoER == false && (s.innerHTML.includes("Storms Fairy Fountain") || s.innerHTML.includes("Fairy Fountain Grotto") || s.innerHTML.includes("Octorok Grotto") ) 
+               else if (GrottoER == false && 
+                        (s.innerHTML.includes("Storms Fairy Fountain") || 
+                         s.innerHTML.includes("Fairy Fountain Grotto") || 
+                         s.innerHTML.includes("Octorok Grotto") ) )
                {}
                else if (!list[key].isOpened && list[key].isAvailable() )
                   canGet++;
@@ -2513,7 +2519,10 @@ function getDungeonAvailability(dungeon) {
                {}
                else if (Cowsanity == false && key.includes("Cow Milk"))
                {}
-               else if (GrottoER == false && (s.innerHTML.includes("Storms Fairy Fountain") || s.innerHTML.includes("Fairy Fountain Grotto") || s.innerHTML.includes("Octorok Grotto") ) 
+               else if (GrottoER == false && 
+                        (s.innerHTML.includes("Storms Fairy Fountain") || 
+                         s.innerHTML.includes("Fairy Fountain Grotto") || 
+                         s.innerHTML.includes("Octorok Grotto") ) )
                {}
                else if (!list[key].isOpened && list[key].isAvailable()) )
                   canGet++;
