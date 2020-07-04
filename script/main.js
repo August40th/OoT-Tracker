@@ -2087,7 +2087,7 @@ function updateMap() {
    for (var item in itemlist) {
       if (itemlist.hasOwnProperty(item)) {
          let dNone = false;
-         if(itemlist[item].classList.contains("d-none")) {
+         if(itemlist[item].classList.contains("d-none") ) {
             dNone = true;
          }
          let itemType = itemlist[item].getAttribute("data-type") + "list";
@@ -2097,12 +2097,10 @@ function updateMap() {
             itemlist[item].className = "DCavailable";
          else
             itemlist[item].className = "DCunavailable";
-         if (dNone) {
+         if (dNone) 
             itemlist[item].classList.add("d-none");
-         }
       }
    }
-
 }
 
 function itemConfigClick(sender) {
