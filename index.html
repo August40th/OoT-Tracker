@@ -140,8 +140,7 @@
                         <fieldset><legend>Starting Age</legend>
                             <input type='radio' name='Age' value='Child' onclick="setAge(this)">Scrubsanity
                             <input type='radio' name='Age' value='Adult' onclick="setAge(this)">Scrubsanity <br>
-                            <input type='radio' name='Start' value='Random' onclick="setStart(this)">Random location
-                        </fieldset>
+                            <input type='checkbox' name='Start' checked='false' onchange="setERTracker(this)">Random location                        </fieldset>
                         <fieldset><legend>Entrance Randomizer</legend>
                             <input type='radio' name='IndoorER' value='Simple' onclick="setIndoorER(this)">Simple Indoors
                             <input type='radio' name='IndoorER' value='Full' onclick="setIndoorER(this)">All Indoors<br>
