@@ -2368,8 +2368,8 @@ function getDungeonAvailability(dungeon) {
                for (var step = 1; step <= 4; step++) {
                   if (step <= shopsize)
                      checklist.shoplist[key] = dungeon.shoplist[key];
-                  else //if(key.includes("Shop " + step) && step > shopsize)
-                  {}
+                  else if(key.includes("Shop " + step) && step > shopsize)
+                  {checklist.shoplist,isOpened;}
                }
             }
          }
