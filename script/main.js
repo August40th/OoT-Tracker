@@ -1925,9 +1925,9 @@ function updateMap() {
          document.getElementById(k).classList.add("d-none");
       else if (chests[k].name.includes("Cow Milk") && ((skulltula === "Overworld" || skulltula === "All") || Cowsanity == true || GrottoER == true) )  {
          document.getElementById(k).classList.remove("d-none"); }
-      if (GrottoER == true && chests[k].name.includes("Fountain Grotto")
+      if (GrottoER == true && chests[k].name.includes("Fountain Grotto"))
           document.getElementById(k).classList.remove("d-none");
-      if (GrottoER == false && chests[k].name.includes("Fountain Grotto")
+      if (GrottoER == false && chests[k].name.includes("Fountain Grotto"))
           document.getElementById(k).classList.add("d-none");
    }
 
