@@ -2364,7 +2364,8 @@ function getDungeonAvailability(dungeon) {
                }
             }
          }
-         ['chestlist', 'skulllist', 'scrublist', 'shoplist'].forEach(function (key) {
+         ['chestlist', 'skulllist', 'scrublist', 'shoplist'].forEach
+         (function (key) {
            let list = checklist[key];
            for (let key in list) {
                if (!list[key].isOpened) {
@@ -2381,20 +2382,10 @@ function getDungeonAvailability(dungeon) {
                else if (!list[key].isOpened && list[key].isAvailable()) {
                    canGet++;
                }
-              if (shopsize > 0) {
-                 for (let x in dungeon.shoplist) {
-                    for (var step = 1; step <= 4; step++) {
-                       if (step > shopsize)
-                       {canGet--;}
-                       else if(x.includes("Shop " + step) && step > shopsize)
-                       {list.key.isOpened}
-                     }
-                  }
-              }
-            }
-       });
+           }
+         }
+         );
       }
-   }
 
    let availability = "possible";
    if (unopened == 0) {
