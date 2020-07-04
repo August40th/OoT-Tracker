@@ -2082,7 +2082,7 @@ function updateMap() {
         }
     }
 
-    document.getElementById('submaparea').className = 'DC' + getDungeonAvailability(dungeons[dungeonSelect]);dungeonSelect].isBeatable();
+    document.getElementById('submaparea').className = 'DC' + getDungeonAvailability(dungeons[dungeonSelect]);
     var itemlist = document.getElementById('submaplist').children;
     for (var item in itemlist) {
         if (itemlist.hasOwnProperty(item)) {
