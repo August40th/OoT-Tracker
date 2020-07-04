@@ -519,17 +519,15 @@ function drawDungeonList() {
                else {
                   if (shopitem === undefined)
                      shopitem = shopsize;
-                  if (shopsize == 3 && shopitem <= 0) 
-                  {}
-                  else if (shopsize == 2 && shopitem <= 0)
-                  {}
-                  else if (shopsize == 1 && shopitem <= 0)
-                  {}
-                  else if (shopitem < 0 && shopnum > 1) shopitem = shopsize;
+                  else if (shopitem == 0) {
+                     dNone = true;
+                     shopitem--; 
+                  }
+                  else if (shopitem < 0 && shopnum > 1) 
+                     shopitem = shopsize;
                }
                started = false;
-
-               if (shopitem == 0) dNone = true;
+               
                if (shopitem > 0) {
                   let li = document.createElement('li');
                   li.style.cursor = 'pointer';
