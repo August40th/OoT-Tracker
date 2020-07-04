@@ -548,15 +548,15 @@ function drawDungeonList() {
                   DClist.appendChild(li);
                }
                if (shopitem < 0 && shopnum > 1) {
-                     if (shopsize == 1 && shopitem <= -2) {
+                     if (shopsize == 1 && shopitem <= -3) {
                         shopitem = shopsize;
                         dNone = false;
                      }
-                     else if (shopsize == 2 && shopitem <= -1) {
+                     else if (shopsize == 2 && shopitem <= -2) {
                         shopitem = shopsize;
                         dNone = false;
                      }
-                     else if (shopsize == 3 && shopitem <= 0) {
+                     else if (shopsize == 3 && shopitem <= -1) {
                         shopitem = shopsize;
                         dNone = false;
                      }
