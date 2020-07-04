@@ -1923,7 +1923,7 @@ function updateMap() {
          document.getElementById(k).classList.remove("d-none");
       else if (Cowsanity == false && chests[k].name.includes("Cow Milk") )
          document.getElementById(k).classList.add("d-none");
-      else if (chests[k].name.includes("Cow Milk") && ((skulltula === "Overworld" || skulltula === "All") || Cowsanity == true || GrottoER == true;) )  {
+      else if (chests[k].name.includes("Cow Milk") && ((skulltula === "Overworld" || skulltula === "All") || Cowsanity == true || GrottoER == true) )  {
          document.getElementById(k).classList.remove("d-none"); }
       if (GrottoER == true && chests[k].name.includes("Fountain Grotto")
           document.getElementById(k).classList.remove("d-none");
@@ -2192,7 +2192,7 @@ function populateMapdiv() {
          s.classList.remove("d-none");
       else if (Cowsanity == false && chests[k].name.includes("Cow Milk") )
          s.classList.add("d-none");
-      else if (chests[k].name.includes("Cow Milk") && !(skulltula === "Overworld" || !skulltula === "All") && !Cowsanity == true && GrottoER == true;) ) {
+      else if (chests[k].name.includes("Cow Milk") && !(skulltula === "Overworld" || !skulltula === "All") && !Cowsanity == true && GrottoER == true) ) {
          s.classList.remove("d-none"); }
       if (GrottoER == true && chests[k].name.includes("Fountain Grotto")
           s.classList.remove("d-none");
