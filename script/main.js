@@ -2066,7 +2066,7 @@ function updateMap() {
                }
             }
          }      
-      }
+      
       
       var child = dungeons[k].firstChild;
         while (child) {
