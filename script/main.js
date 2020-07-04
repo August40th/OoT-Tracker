@@ -2390,7 +2390,16 @@ function getDungeonAvailability(dungeon) {
                else if (!list[key].isOpened && list[key].isAvailable()) {
                    canGet++;
                }
-           }
+              if (shoplist > 0) {
+                 for (let x in dungeon.shoplist) {
+                    for (var step = 1; step <= 4; step++) {
+                       if (step > shopsize)
+                       {canGet--;}
+                       else if(x.includes("Shop " + step) && step > shopsize)
+                       {list.key.isOpened}
+                     }
+                  }
+            }
        });
       }
    }
