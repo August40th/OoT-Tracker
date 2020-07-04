@@ -525,7 +525,7 @@ function drawDungeonList() {
                   {}
                   else if (shopsize == 1 && shopitem <= 0)
                   {}
-                  else if (shopitem <= 0 && shopnum > 1) shopitem = shopsize;
+                  else if (shopitem < 0 && shopnum > 1) shopitem = shopsize;
                }
                started = false;
 
