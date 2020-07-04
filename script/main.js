@@ -250,11 +250,11 @@ function loadCookie() {
    //      rbutton.click();
    //}
    
-   for (rbuttonID in document.getElementsByName('IndoorER')) {
-      rbutton = document.getElementsByName('Indoor')[rbuttonID]
-      if (rbutton.value == cookieobj.iER)
-         rbutton.click();
-   }
+//   for (rbuttonID in document.getElementsByName('IndoorER')) {
+  //    rbutton = document.getElementsByName('Indoor')[rbuttonID]
+    //  if (rbutton.value == cookieobj.iER)
+      //   rbutton.click();
+   //}
 
    cookielock = false;
 }
