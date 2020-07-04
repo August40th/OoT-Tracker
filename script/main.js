@@ -2291,7 +2291,7 @@ function getDungeonAvailability(dungeon) {
            }
        }
       if (shopsize > 0){
-            for (let key in dungeons[k].shoplist) {
+            for (let key in dungeon.shoplist) {
                for (var step = 1; step <= 4; step++) {
                   if (step <= shopsize)
                      checklist.shoplist[key] = dungeon.shoplist[key];
@@ -2364,7 +2364,7 @@ function getDungeonAvailability(dungeon) {
                }
             }
             if (shopsize > 0){
-            for (let key in dungeons[k].shoplist) {
+            for (let key in dungeon.shoplist) {
                for (var step = 1; step <= 4; step++) {
                   if (step <= shopsize)
                      checklist.shoplist[key] = dungeon.shoplist[key];
