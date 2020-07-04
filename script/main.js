@@ -2068,39 +2068,41 @@ function updateMap() {
          }      
       }
       
-      var child = document.getElementById("dungeon" + k).firstChild;
-      while (child) {
-         if (child.className == "chestCount") {
-            if (DCcount == 0)
-               child.innerHTML = "";
-            else
-               child.innerHTML = DCcount;
-            break;
-         }
-         child = child.nextSibling;
-      }
+      var child = document.getElementById('dungeon' + k).firstChild;
+        while (child) {
+            if (child.className == 'chestCount') {
+                if (DCcount == 0) {
+                    child.innerHTML = '';
+                } else {
+                    child.innerHTML = DCcount;
+                }
+                break;
+            }
+            child = child.nextSibling;
+        }
+    }
 
-   document.getElementById('submaparea').className = "DC" + getDungeonAvailability(dungeons[dungeonSelect]);
-   var itemlist = document.getElementById('submaplist').children;
-   for (var item in itemlist) {
-      if (itemlist.hasOwnProperty(item)) {
-         let dNone = false;
-         if(itemlist[item].classList.contains("d-none")) {
-            dNone = true;
-         }
+    document.getElementById('submaparea').className = 'DC' + getDungeonAvailability(dungeons[dungeonSelect]);dungeonSelect].isBeatable();
+    var itemlist = document.getElementById('submaplist').children;
+    for (var item in itemlist) {
+        if (itemlist.hasOwnProperty(item)) {
+           let dNone = false;
+           if(itemlist[item].classList.contains("d-none")) { 
+              dNone = true;
+           }
          let itemType = itemlist[item].getAttribute("data-type") + "list";
          if (dungeons[dungeonSelect][itemType][itemlist[item].innerHTML].isOpened)
-            itemlist[item].className = "DCopened";
+              itemlist[item].className = 'DCopened';
          else if (dungeons[dungeonSelect][itemType][itemlist[item].innerHTML].isAvailable())
-            itemlist[item].className = "DCavailable";
-         else
-            itemlist[item].className = "DCunavailable";
-         if (dNone)
+              itemlist[item].className = 'DCavailable';
+        } 
+        else {
+             itemlist[item].className = 'DCunavailable';
+        }
+        if (dNone)
             itemlist[item].classList.add("d-none");
-      } 
-   }
-;
-}
+        }
+    }
 }
 
 function itemConfigClick(sender) {
