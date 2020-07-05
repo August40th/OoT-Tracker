@@ -2078,9 +2078,9 @@ function updateMap() {
        // while (child) {
         //    if (child.className == 'chestCount') {
                 if (DCcount === 0) {
-                    child.innerHTML = '';
+                    dungeons[k].innerHTML = '';
                 } else {
-                    child.innerHTML = DCcount;
+                    dungeons[k].innerHTML = DCcount;
                 }
          //       break;
         //    }
