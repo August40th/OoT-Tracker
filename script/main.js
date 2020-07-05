@@ -2071,7 +2071,7 @@ function updateMap() {
                      DCcount++;
                }
             }
-         }      
+               
       
       
       var child = dungeons[k].firstChild;
@@ -2086,7 +2086,7 @@ function updateMap() {
             }
             child = child.nextSibling;
         }
-    
+         }
 
     document.getElementById('submaparea').className = 'DC' + getDungeonAvailability(dungeons[dungeonSelect]);
     var itemlist = document.getElementById('submaplist').children;
