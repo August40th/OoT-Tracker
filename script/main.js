@@ -2071,22 +2071,21 @@ function updateMap() {
                      DCcount++;
                }
             }
-               
+         }
       
       
-      var child = dungeons[k].firstChild;
-        while (child) {
-            if (child.className == 'chestCount') {
+     // var child = dungeons[k].firstChild;
+       // while (child) {
+        //    if (child.className == 'chestCount') {
                 if (DCcount === 0) {
                     child.innerHTML = '';
                 } else {
                     child.innerHTML = DCcount;
                 }
-                break;
-            }
-            child = child.nextSibling;
-        }
-         }
+         //       break;
+        //    }
+      //      child = child.nextSibling;
+       // }
 
     document.getElementById('submaparea').className = 'DC' + getDungeonAvailability(dungeons[dungeonSelect]);
     var itemlist = document.getElementById('submaplist').children;
