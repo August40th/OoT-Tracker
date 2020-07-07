@@ -1292,30 +1292,13 @@ function setBean(sender) {
    saveCookie();
 }
 
-function setShops(sender) {
-   Shopsanity = sender.checked;
-   if (Shopsanity == true && shopsize == 0) {
-      shopsize = 1;
-      cookieobj.shpsize.value = 1;
-   }
-   else if (Shopsanity == false && shopsize > 0) {
-      shopsize = 0;
-      cookieobj.shpsize.value = 0;
-   }
-   drawDungeonList();
-   updateMap();
-   saveCookie();
-}
-
 function setShopsize(sender) {
    shopsize = sender.value;
    if (shopsize > 0) {
       Shopsanity = true;
-      cookieobj.shopShuff.checked = true;
    }
    else if (shopsize == 0) {
       Shopsanity = false;
-      cookieobj.shopShuff.checked = false;
    }
    drawDungeonList();
    updateMap();
