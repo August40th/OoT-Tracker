@@ -2272,12 +2272,14 @@ function getDungeonAvailability(dungeon) {
                {}
                else if (Cowsanity == false && key.includes("Cow Milk"))
                {}
-               else if (
-                  for (var x = 2; x < 5; x++) {
-                     {shopsize != 4 && list.key.includes("Shop " + x))
-                  }
-                     {}
-               )
+               else if {
+                  if (shopsize == 1 && list.key.includes("Shop 2") )
+                  {}
+                  if (shopsize <= 2 && list.key.includes("Shop 3") )
+                  {}
+                  if (shopsize <= 3 && list.key.includes("Shop 4") )
+                  {}
+               }
                else if (!list[key].isOpened && list[key].isAvailable()) {
                    canGet++;
                }
@@ -2350,12 +2352,14 @@ function getDungeonAvailability(dungeon) {
                {}
                else if (Cowsanity == false && key.includes("Cow Milk"))
                {}
-               else if (
-                  for (var x = 2; x < 5; x++) {
-                     {shopsize != 4 && list.key.includes("Shop " + x))
-                  }
-                     {}
-               )
+               else if {
+                  if (shopsize == 1 && list.key.includes("Shop 2") )
+                  {}
+                  if (shopsize <= 2 && list.key.includes("Shop 3") )
+                  {}
+                  if (shopsize <= 3 && list.key.includes("Shop 4") )
+                  {}
+               }
                else if (!list[key].isOpened && list[key].isAvailable()) {
                    canGet++;
                }
