@@ -50,12 +50,11 @@
                 <div class="column">
                     <legend>Settings</legend>
                     <fieldset>
-                        <legend>Item Tracker</legend>
+                        <legend>Item Tracker: </legend>
                         Size<input type="range" name='itemdivsize' value='100' max='200' min='1' onchange="setZoom('itemdiv', this)">
-                        <span id='itemdivsize'>100%</span><br>
+                        <span id='itemdivsize'>100%</span> 
                         <button type="button" onclick="EditMode()">Edit Mode</button> <br>                        
-                        <legend>Map 
-                        Size<input type="range" name='mapdivsize' value='100' max='200' min='1' onchange="setZoom('mapdiv', this)">
+                        <legend>Map: <input type="range" name='mapdivsize' value='100' max='200' min='1' onchange="setZoom('mapdiv', this)">
                         <span id='mapdivsize'>100%</span> </legend>
                     </fieldset>    
                     <fieldset>
@@ -88,8 +87,7 @@
                         <input type='radio' name='rainbowbridge' value='Dungeons' onclick="setRainbow(this)">Dungeons
                         <input type='radio' name='rainbowbridge' value='Skulltulas' onclick="setRainbow(this)">Skulltulas
                     <hr>
-                        <legend>Castle Trials:
-                        Number of Trials: 0 <input type="range" name='trialsize' value='0' max='6' min='0' onchange="setTrialSize(this)">
+                        <legend>Castle Trials: 0 <input type="range" name='trialsize' value='0' max='6' min='0' onchange="setTrialSize(this)">
                         <span id='trialsize'> 6 </span> </legend>
                     <legend>Ganon's Boss Key 
                         <input type='radio' name='castlelogic' value='Removed' onclick="setCastle(this)">Removed </legend>
