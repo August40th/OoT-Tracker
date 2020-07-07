@@ -502,7 +502,6 @@ function drawDungeonList() {
                      shopitem = shopsize;
                   else if (shopitem <= 0) {
                      if (shopsize != 4) dNone = true;
-                        key.classname = "DCopened";
                         shopitem--; 
                   }
                }
@@ -717,7 +716,6 @@ function drawDungeonList() {
                   else if (shopitem <= 0) {
                      if (shopsize != 4) dNone = true;
                      shopitem--; 
-                     key.classname = "DCopened";
                   }
                }
                started = false;
@@ -2274,6 +2272,10 @@ function getDungeonAvailability(dungeon) {
                {}
                else if (Cowsanity == false && key.includes("Cow Milk"))
                {}
+              for (var x = 2; x < 5; x++) {
+                  else if {shopsize != 4 && list.key.includes("Shop " + x))
+                  {}
+               }
                else if (!list[key].isOpened && list[key].isAvailable()) {
                    canGet++;
                }
@@ -2346,6 +2348,10 @@ function getDungeonAvailability(dungeon) {
                {}
                else if (Cowsanity == false && key.includes("Cow Milk"))
                {}
+               for (var x = 2; x < 5; x++) {
+                  else if {shopsize != 4 && list.key.includes("Shop " + x))
+                  {}
+               }
                else if (!list[key].isOpened && list[key].isAvailable()) {
                    canGet++;
                }
