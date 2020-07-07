@@ -1881,7 +1881,7 @@ function updateMap() {
          if (shopsize > 0){
             for (var key in dungeons[k].shoplist) {
                if (dungeons[k].shoplist.hasOwnProperty(key)) {
-                  if (!dungeons[k].shoplist[key].isOpened && dungeons[k].shoplist[key].isAvailable()  )
+                  if (!dungeons[k].shoplist[key].isOpened && dungeons[k].shoplist[key].isAvailable() && !key.includes("d-none") )
                      DCcount++;
                   for (var step = 2; step <= 4; step++) {
                      if(key.includes("Shop " + step) && step > shopsize)
