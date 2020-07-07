@@ -2257,9 +2257,9 @@ function getDungeonAvailability(dungeon) {
        }
       if (shopsize > 0){
             for (let key in dungeon.shoplist) {
-               if (!key.includes("d-none"))
-                  checklist.shoplist[key] = dungeon.shoplist[key];
-               else dungeon.shoplist[key].isOpened;
+               if (key.includes("d-none"))
+                  dungeon.shoplist[key].isOpened;
+               else checklist.shoplist[key] = dungeon.shoplist[key];
             }
       }
        ['chestlist', 'skulllist', 'scrublist', 'shoplist'].forEach(function (key) {
@@ -2327,9 +2327,9 @@ function getDungeonAvailability(dungeon) {
             }
             if (shopsize > 0){
                for (let key in dungeon.shoplist) {
-                  if (!key.includes("d-none"))
-                     checklist.shoplist[key] = dungeon.shoplist[key];
-                  else dungeon.shoplist[key].isOpened;
+                  if (key.includes("d-none"))
+                     dungeon.shoplist[key].isOpened;
+                  else checklist.shoplist[key] = dungeon.shoplist[key];
                }
             }
          }
