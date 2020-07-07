@@ -501,10 +501,9 @@ function drawDungeonList() {
                   if (shopitem === undefined)
                      shopitem = shopsize;
                   else if (shopitem <= 0) {
-                     if (shopsize != 4) dNone = true; {
+                     if (shopsize != 4) dNone = true;
                         key.classname = "DCopened";
                         shopitem--; 
-                     }
                   }
                }
                started = false;
@@ -716,10 +715,9 @@ function drawDungeonList() {
                   if (shopitem === undefined)
                      shopitem = shopsize;
                   else if (shopitem <= 0) {
-                     if (shopsize != 4) dNone = true; (
-                        shopitem--; 
-                        key.classname = "DCopened";
-                     }
+                     if (shopsize != 4) dNone = true;
+                     shopitem--; 
+                     key.classname = "DCopened";
                   }
                }
                started = false;
