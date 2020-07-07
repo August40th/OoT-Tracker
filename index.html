@@ -50,7 +50,7 @@
                 <div class="column">
                     <legend>Settings <button type="button" onclick="EditMode()">Edit Mode</button> </legend>
                     <fieldset> <center>
-                        <legend>Item Tracker: </legend>
+                        <legend>Items: </legend>
                         Size<input type="range" name='itemdivsize' value='100' max='200' min='1' onchange="setZoom('itemdiv', this)">
                         <span id='itemdivsize'>100%</span> <br>
                         <legend>Map: <input type="range" name='mapdivsize' value='100' max='200' min='1' onchange="setZoom('mapdiv', this)">
@@ -68,7 +68,7 @@
                         <input type='radio' name='quest' value='Master' onclick="setQuest(this)">Master 
                         <input type='radio' name='quest' value='Mixed' onclick="setQuest(this)">Mixed </legend>
                         </center> </fieldset>
-                    <fieldset> 
+                        <fieldset> <Legend>Ganon's Castle</legend>
                         <legend>Rainbow Bridge Logic</legend>
                             <center><input type='radio' name='rainbowbridge' value='Open' checked='true' onclick="setRainbow(this)">Open
                             <input type='radio' name='rainbowbridge' value='Vanilla' onclick="setRainbow(this)">Vanilla
@@ -106,11 +106,11 @@
                     <legend>Sanity</legend>
                     <fieldset>
                         <legend>Keys</legend>
-                        Small: 
+                        Small:
                             <input type='radio' name='smallkeys' value='Remove' onclick="setSmallKeys(this)">Remove
                             <input type='radio' name='smallkeys' value='Dungeons' checked='true' onclick="setSmallKeys(this)">Dungeons
                             <input type='radio' name='smallkeys' value='Keysanity' onclick="setSmallKeys(this)">Keysanity <br>
-                        Boss: 
+                        Boss:
                             <input type='radio' name='bosskeys' value='Remove' onclick="setBossKeys(this)">Remove
                             <input type='radio' name='bosskeys' value='Dungeons' checked='true' onclick="setBossKeys(this)">Dungeons 
                             <input type='radio' name='bosskeys' value='Keysanity' onclick="setBossKeys(this)">Keysanity
@@ -127,7 +127,7 @@
                         <input type='radio' name='scrubs' value='Scrubsanity' onclick="setScrub(this)">On
                         </center> </fieldset>
                     <fieldset> <legend>Getting Crazy</legend>
-                        Shops Size: 0 <input type="range" name='shopsize' value='4' max='4' min='0' onchange="setShopsize(this)">
+                        Shop Size: 0 <input type="range" name='shopsize' value='4' max='4' min='0' onchange="setShopsize(this)">
                         <span id='shopsize'> 4 </span><br>
                         <input type='checkbox' name='Cowsanity' checked='false' onchange="setCows(this)">Shuffle Cow Milk
                         <input type='checkbox' name='SongShuffle' checked='false' onchange="setSongs(this)">Songs Shuffle<br>
