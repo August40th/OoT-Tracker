@@ -2259,6 +2259,7 @@ function getDungeonAvailability(dungeon) {
             for (let key in dungeon.shoplist) {
                if (!key.includes("d-none"))
                   checklist.shoplist[key] = dungeon.shoplist[key];
+               else dungeon.shoplist[key].isOpened;
             }
       }
        ['chestlist', 'skulllist', 'scrublist', 'shoplist'].forEach(function (key) {
@@ -2328,6 +2329,7 @@ function getDungeonAvailability(dungeon) {
                for (let key in dungeon.shoplist) {
                   if (!key.includes("d-none"))
                      checklist.shoplist[key] = dungeon.shoplist[key];
+                  else dungeon.shoplist[key].isOpened;
                }
             }
          }
