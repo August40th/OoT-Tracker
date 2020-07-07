@@ -519,7 +519,7 @@ function drawDungeonList() {
                   if (shopitem === undefined)
                      shopitem = shopsize;
                   else if (shopitem <= 0) {
-                     dNone = true;
+                     if (shopsize != 4) dNone = true;
                      let li = document.createElement('li');
                      li.style.cursor = 'pointer';
                      li.innerText = key;
