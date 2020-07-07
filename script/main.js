@@ -2241,7 +2241,7 @@ function getDungeonAvailability(dungeon) {
        }
       if (shopsize > 0){
             for (let key in dungeon.shoplist) {
-               if (!key.includes('d-none') {
+               if (!key.includes("d-none")) {
                   checklist.shoplist[key] = dungeon.shoplist[key];
                }
             }
@@ -2311,7 +2311,7 @@ function getDungeonAvailability(dungeon) {
             }
             if (shopsize > 0){
                for (let key in dungeon.shoplist) {
-                  if (!key.includes('d-none) {
+                  if (!key.includes("d-none")) {
                      checklist.shoplist[key] = dungeon.shoplist[key];
                   }
                }
