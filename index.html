@@ -45,10 +45,10 @@
         <!-- Setting panel-->
         
         <button id='settingsbutton' type='button' onclick='showSettings(this)'>🔧</button>
-        <fieldset id='settings' class='settings'> <button type="button" onclick="EditMode()">Edit Mode</button> <br>
+        <fieldset id='settings' class='settings'> 
             <div class="row">
                 <div class="column">
-                    <legend>Settings</legend>
+                    <legend>Settings <button type="button" onclick="EditMode()">Edit Mode</button> </legend>
                     <fieldset>
                         <legend>Item Tracker: </legend>
                         Size<input type="range" name='itemdivsize' value='100' max='200' min='1' onchange="setZoom('itemdiv', this)">
