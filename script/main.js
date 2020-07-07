@@ -2272,7 +2272,7 @@ function getDungeonAvailability(dungeon) {
                {}
                else if (Cowsanity == false && key.includes("Cow Milk"))
                {}
-               else if (shopsize > 0) {
+               else if (shopsize > 0 && key.includes("Shop") ) {
                   if (shopsize == 1 && key.includes("Shop 2") )
                   {}
                   if (shopsize <= 2 && key.includes("Shop 3") )
@@ -2352,7 +2352,7 @@ function getDungeonAvailability(dungeon) {
                {}
                else if (Cowsanity == false && key.includes("Cow Milk"))
                {}
-               else if (shopsize > 0) {
+               else if (shopsize > 0 && key.includes("Shop") ) {
                   if (shopsize == 1 && key.includes("Shop 2") )
                   {}
                   if (shopsize <= 2 && key.includes("Shop 3") )
