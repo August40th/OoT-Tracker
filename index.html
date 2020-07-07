@@ -64,6 +64,7 @@
                                 <input type='checkbox' name='OpenGate' checked='true' onchange="setGate(this)">Open Gate <br>
                                 <input type='checkbox' name='OpenDoor' checked='true' onchange="setDoor(this)">Open Door 
                                 <input type='checkbox' name='OpenFountain' checked='false' onchange="setFountain(this)">Open Fountain <br>
+                        <fieldset></fieldset>
                         <legend> Quest 
                         <input type='radio' name='quest' value='Vanilla' checked='true' onclick="setQuest(this)">Vanilla 
                         <input type='radio' name='quest' value='Master' onclick="setQuest(this)">Master 
@@ -86,7 +87,7 @@
                         <input type='radio' name='rainbowbridge' value='Stones' onclick="setRainbow(this)">Spiritual Stones
                         <input type='radio' name='rainbowbridge' value='Dungeons' onclick="setRainbow(this)">Dungeons
                         <input type='radio' name='rainbowbridge' value='Skulltulas' onclick="setRainbow(this)">Skulltulas<br>
-                    <legend>Castle Trials </legend>                           
+                    <fieldset><legend>Castle Trials </legend>                           
                         Number of Trials: 0 <input type="range" name='trialsize' value='0' max='6' min='0' onchange="setTrialSize(this)">
                         <span id='trialsize'> 6 </span> </fieldset> <br>
                     <legend>Ganon's Boss Key 
@@ -140,7 +141,6 @@
                             <input type='radio' name='Age' value='Child' onclick="setAge(this)">Child
                             <input type='radio' name='Age' value='Adult' onclick="setAge(this)">Adult
                             <input type='checkbox' name='Start' checked='false' onchange="setERTracker(this)">Random Start                        
-                        <hr></hr>
                         <legend>Entrance Randomizer</legend>
                             <input type='radio' name='IndoorER' value='Simple' onclick="setIndoorER(this)">Simple Indoors
                             <input type='radio' name='IndoorER' value='Full' onclick="setIndoorER(this)">All Indoors<br>
