@@ -86,10 +86,10 @@
                         <input type='radio' name='rainbowbridge' value='Stones' onclick="setRainbow(this)">Spiritual Stones
                         <input type='radio' name='rainbowbridge' value='Dungeons' onclick="setRainbow(this)">Dungeons
                         <input type='radio' name='rainbowbridge' value='Skulltulas' onclick="setRainbow(this)">Skulltulas<br>
-                    <legend>Castle Trials
+                    <fieldset><legend>Castle Trials
                             <input type='checkbox' name='trials' checked='false' onchange="setTrials(this)">Trials On ? </legend>                           
                             Number of Trials: 0 <input type="range" name='trialsize' value='0' max='6' min='0' onchange="setTrialSize(this)">
-                            <span id='trialsize'> 6 </span><br>
+                        <span id='trialsize'> 6 </span><br> </fieldset>
                     <legend>Ganon's Boss Key</legend>
                         <input type='radio' name='castlelogic' value='Vanilla' onclick="setCastle(this)">Vanilla
                         <input type='radio' name='castlelogic' value='Castle' onclick="setCastle(this)">Ganons Castle<br>
@@ -109,11 +109,11 @@
                         Small Keys: 
                             <input type='radio' name='smallkeys' value='Dungeons' checked='true' onclick="setSmallKeys(this)">Dungeons <br>
                             <input type='radio' name='smallkeys' value='Remove' onclick="setSmallKeys(this)">Remove
-                            <input type='radio' name='smallkeys' value='Keysanity' onclick="setSmallKeys(this)">Keysanity<br>
+                            <input type='radio' name='smallkeys' value='Keysanity' onclick="setSmallKeys(this)">Keysanity
                         Boss Keys: 
                             <input type='radio' name='bosskeys' value='Dungeons' checked='true' onclick="setBossKeys(this)">Dungeons <br>
                             <input type='radio' name='bosskeys' value='Remove' onclick="setBossKeys(this)">Remove
-                            <input type='radio' name='bosskeys' value='Keysanity' onclick="setBossKeys(this)">Keysanity<br>
+                            <input type='radio' name='bosskeys' value='Keysanity' onclick="setBossKeys(this)">Keysanity
                     </fieldset>
                     <fieldset><legend>Skulltula</legend>
                         <input type='radio' name='skulltula' value='Off' checked='true' onclick="setSkulltula(this)">Off
@@ -130,7 +130,7 @@
                         Shop Size: 0 <input type="range" name='shopsize' value='4' max='4' min='0' onchange="setShopsize(this)">
                         <span id='shopsize'> 4 </span><br>
                         <input type='checkbox' name='Cowsanity' checked='false' onchange="setCows(this)">Shuffle Cow Milk
-                        <input type='checkbox' name='SongShuffle' checked='false' onchange="setSongs(this)">Shuffle Songs into Pool<br>
+                        <input type='checkbox' name='SongShuffle' checked='false' onchange="setSongs(this)">Songs Shuffle<br>
                         <input type='checkbox' name='OcarinaShuffle' checked='false' onchange="setOcarina(this)">Shuffle Ocarina
                         <input type='checkbox' name='WeirdEgg' checked='false' onchange="setEgg(this)">Shuffle Weird Egg <br>
                         <input type='checkbox' name='BeanShuffle' checked='false' onchange="setBean(this)">Shuffle Bean Pack <br>
