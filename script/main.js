@@ -2260,7 +2260,7 @@ function getDungeonAvailability(dungeon) {
                checklist.shoplist[key] = dungeon.shoplist[key];
             }
       }
-       ['chestlist', 'skulllist', 'scrublist'].forEach(function (key) {
+       ['chestlist', 'skulllist', 'scrublist', 'shoplist'].forEach(function (key) {
            let list = checklist[key];
            for (let key in list) {
                if (!list[key].isOpened) {
@@ -2329,7 +2329,7 @@ function getDungeonAvailability(dungeon) {
                }
             }
          }
-         ['chestlist', 'skulllist', 'scrublist'].forEach
+         ['chestlist', 'skulllist', 'scrublist', 'shoplist'].forEach
          (function (key) {
            let list = checklist[key];
            for (let key in list) {
