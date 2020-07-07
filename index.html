@@ -49,7 +49,7 @@
             <div class="row">
                 <div class="column">
                     <legend>Settings <button type="button" onclick="EditMode()">Edit Mode</button> </legend>
-                    <fieldset>
+                    <center><fieldset>
                         <legend>Item Tracker: </legend>
                         Size<input type="range" name='itemdivsize' value='100' max='200' min='1' onchange="setZoom('itemdiv', this)">
                         <span id='itemdivsize'>100%</span> <br>
@@ -125,7 +125,7 @@
                         <input type='radio' name='scrubs' value='Scrubsanity' onclick="setScrub(this)">On
                     </fieldset>
                     <fieldset> <legend>Getting Crazy</legend>
-                        Shopsanity Size: 0 <input type="range" name='shopsize' value='4' max='4' min='0' onchange="setShopsize(this)">
+                        Shops Size: 0 <input type="range" name='shopsize' value='4' max='4' min='0' onchange="setShopsize(this)">
                         <span id='shopsize'> 4 </span><br>
                         <input type='checkbox' name='Cowsanity' checked='false' onchange="setCows(this)">Shuffle Cow Milk
                         <input type='checkbox' name='SongShuffle' checked='false' onchange="setSongs(this)">Songs Shuffle<br>
@@ -147,10 +147,10 @@
                             <input type='checkbox' name='OWER' checked='false' onchange="setOWER(this)">Overworld ER<br>
                     </fieldset>    
                     </fieldset>
-                    </fieldset>
+                    </fieldset> </center>
                 </div>
             </div>
-        </fieldset>
+        </fieldset> 
         <table id='itemconfig' class='itemconfig' style='display:none'></table>
         
         <script>
