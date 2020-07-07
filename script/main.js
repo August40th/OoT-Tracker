@@ -32,13 +32,6 @@ BeanShuffle = false;
 
 BombchuLogic = false;
 
-GrottoER = false;
-OWER = false;
-IndoorER = 'Off';
-
-Age = Child;
-Start = Off;
-
 OpenForest = true;
 OpenGate = true;
 OpenDoor = true;
@@ -77,12 +70,7 @@ function getCookie() {
    return {};
 }
 
-var cookiekeys = [
-   'iZoom', 'mZoom', 'rainlogic', 'items', 'qlogic', 'flogic', 'carp', 
-   'smallk', 'bossk', 'sclogic', 'sklogic', 'ocShuff', 'sngShuff', 'eggShuff', 
-   'beanShuff', 'chulogic', 'forest', 'gate', 'door', 'fountain', 
-   'shopShuff', 'shpsize', 'cowShuff', 'trials', 'numtrials', 'pigBK',
-   'gER', 'iER', 'owER', 'xMarks', 'RndStrt'];
+var cookiekeys = ['iZoom', 'mZoom', 'rainlogic', 'items', 'qlogic', 'flogic', 'carp', 'smallk', 'bossk', 'sclogic', 'sklogic', 'ocShuff', 'sngShuff', 'eggShuff', 'beanShuff', 'chulogic', 'forest', 'gate', 'door', 'fountain', 'shopShuff', 'shpsize', 'cowShuff', 'trials', 'numtrials', 'pigBK'];
 var cookieDefault = {
    iZoom: 100,
    mZoom: 100,
@@ -92,7 +80,7 @@ var cookieDefault = {
    carp: 1,
    smallk: 'Dungeons',
    bossk: 'Dungeons',
-   sclogic: 'Off',
+   sclogic: 'Major Item',
    sklogic: 'Off',
    ocShuff: 0,
    sngShuff: 0,
@@ -109,11 +97,6 @@ var cookieDefault = {
    trials: 0,
    numtrials: 0,
    pigBK: 'Removed',
-   gER: 0,
-   iER: 'Off',
-   owER: 0,
-   xMrks: 'Child',
-   RndStrt: 'Off',
 
    items: defaultItemGrid
 }
@@ -181,15 +164,6 @@ function loadCookie() {
    document.getElementsByName('Rescue1')[0].checked = !!cookieobj.carp;
    document.getElementsByName('Rescue1')[0].onchange();
    
-   document.getElementsByName('GrottoER')[0].checked = !!cookieobj.gER;
-   document.getElementsByName('GrottoER')[0].onchange();
-   
-   document.getElementsByName('Start')[0].checked = !!cookieobj.RndStrt;
-   document.getElementsByName('Start')[0].onchange();
-   
-   document.getElementsByName('OWER')[0].checked = !!cookieobj.owER;
-   document.getElementsByName('OWER')[0].onchange();   
-   
    for (rbuttonID in document.getElementsByName('rainbowbridge')) {
       rbutton = document.getElementsByName('rainbowbridge')[rbuttonID]
       if (rbutton.value == cookieobj.rainlogic)
@@ -243,18 +217,6 @@ function loadCookie() {
       if (rbutton.value == cookieobj.sclogic)
          rbutton.click();
    }
-   
-   for (rbuttonID in document.getElementsByName('Age')) {
-      rbutton = document.getElementsByName('Age')[rbuttonID]
-      if (rbutton.value == cookieobj.xMrks)
-         rbutton.click();
-   }
-   
-   for (rbuttonID in document.getElementsByName('IndoorER')) {
-      rbutton = document.getElementsByName('Indoor')[rbuttonID]
-      if (rbutton.value == cookieobj.iER)
-         rbutton.click();
-   }
 
    cookielock = false;
 }
@@ -287,10 +249,6 @@ function saveCookie() {
    cookieobj.chulogic = document.getElementsByName('BombchuLogic')[0].checked ? 1 : 0;
    cookieobj.carp = document.getElementsByName('Rescue1')[0].checked ? 1 : 0;
 
-   cookieobj.xMrks = document.getElementsByName('Age')[0].checked ? 1 : 0;
-   cookieobj.iER = document.getElementsByName('IndoorER')[0].checked ? 1 : 0;
-
-   
    for (rbuttonID in document.getElementsByName('rainbowbridge')) {
       rbutton = document.getElementsByName('rainbowbridge')[rbuttonID]
       if (rbutton.checked)
@@ -344,18 +302,6 @@ function saveCookie() {
       rbutton = document.getElementsByName('scrubs')[rbuttonID]
       if (rbutton.checked)
          cookieobj.sclogic = rbutton.value;
-   }
-   
-   for (rbuttonID in document.getElementsByName('OWER')) {
-      rbutton = document.getElementsByName('OWER')[rbuttonID]
-      if (rbutton.checked)
-         cookieobj.owER = rbutton.value;
-   }
-   
-   for (rbuttonID in document.getElementsByName('GrottoER')) {
-      rbutton = document.getElementsByName('GrottoER')[rbuttonID]
-      if (rbutton.checked)
-         cookieobj.gER = rbutton.value;
    }
 
    cookieobj.items = JSON.parse(JSON.stringify(itemLayout));
@@ -484,10 +430,6 @@ function drawDungeonList() {
             if (BeanShuffle == false && key == "Bean Salesman") {
                s.classList.add("d-none"); }
             if (Cowsanity == false && s.innerHTML.includes("Cow Milk")) {
-               s.classList.add("d-none"); }
-            else if (Cowsanity == false && GrottoER == true && s.innerHTML.includes("Cow Milk Grotto")) {
-               s.classList.remove("d-none"); }
-            if (GrottoER == false && (s.innerHTML.includes("Storms Fairy Fountain") || s.innerHTML.includes("Fairy Fountain Grotto") || s.innerHTML.includes("Octorok Grotto") ) ) {
                s.classList.add("d-none"); }
 
             s.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
@@ -658,10 +600,6 @@ function drawDungeonList() {
             if (BeanShuffle == false && key == "Bean Salesman") {
                s.classList.add("d-none"); }
             if (Cowsanity == false && s.innerHTML.includes("Cow Milk")) {
-               s.classList.add("d-none"); }
-            else if (Cowsanity == false && GrottoER == true && s.innerHTML.includes("Cow Milk Grotto")) {
-               s.classList.remove("d-none"); }
-            if (GrottoER == false && (s.innerHTML.includes("Storms Fairy Fountain") || s.innerHTML.includes("Fairy Fountain Grotto") || s.innerHTML.includes("Octorok Grotto") ) ) {
                s.classList.add("d-none"); }
  
             s.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
@@ -1391,41 +1329,8 @@ function setCows(sender) {
    saveCookie();
 }
 
-function setGrottoER(sender) {
-   GrottoER = sender.checked
-   updateMap();
-   drawDungeonList();
-   saveCookie();
-}
-
-function setOWER(sender) {
-   OWER = sender.checked
-   updateMap();
-   saveCookie();
-}
-
-function setIndoorER(sender) {
-   IndoorER = sender.checked
-   updateMap();
-   saveCookie();
-}
-
-function setAge(sender) {
-   Age = sender.checked
-   updateMap();
-   drawDungeonList();
-   saveCookie();
-}
-
-function setGrottoER(sender) {
-   GrottoER = sender.checked
-   updateMap();
-   drawDungeonList();
-   saveCookie();
-}
-
-function setERTracker(sender) {
-   Start = sender.checked;
+function setBombchu(sender) {
+   BombchuLogic = sender.checked;
    updateMap();
    saveCookie();
 }
@@ -1921,16 +1826,12 @@ function updateMap() {
             document.getElementById(k).classList.add("d-none");
          }
       }
-      if (chests[k].name.includes("Cow Milk") && (skulltula === "Overworld" || skulltula === "All" || Cowsanity == true || GrottoER == true;) )
+      if (Cowsanity == true && chests[k].name.includes("Cow Milk"))
+         document.getElementById(k).classList.remove("d-none");
+      else if (Cowsanity == false && chests[k].name.includes("Cow Milk") && ((skulltula === "Overworld" || skulltula === "All") ) )
          document.getElementById(k).classList.remove("d-none");
       else if (Cowsanity == false && chests[k].name.includes("Cow Milk") )
-         document.getElementById(k).classList.add("d-none");
-      else if (chests[k].name.includes("Cow Milk") && !(skulltula === "Overworld" || !skulltula === "All") && !Cowsanity == true && GrottoER == true;) ) {
-         document.getElementById(k).classList.remove("d-none"); }
-      if (GrottoER == true && chests[k].name.includes("Fountain Grotto")
-          document.getElementById(k).classList.remove("d-none");
-      if (GrottoER == false && chests[k].name.includes("Fountain Grotto")
-          document.getElementById(k).classList.add("d-none");
+         document.getElementById(k).classList.add("d-none");   
    }
 
    for (k = 0; k < dungeons.length; k++) {
@@ -1949,13 +1850,9 @@ function updateMap() {
                {}
                else if (Cowsanity == false && key.includes("Cow Milk"))
                {}
-               else if (GrottoER == false && (s.innerHTML.includes("Storms Fairy Fountain") || s.innerHTML.includes("Fairy Fountain Grotto") || s.innerHTML.includes("Octorok Grotto") ) 
-               {}
                else if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable() && !(BeanShuffle == false && key == "BeanSalseman") )
                   DCcount++;
-            
-               if (Cowsanity == false && GrottoER == true && s.innerHTML.includes("Cow Milk Grotto")) 
-               {DCcount++;}}
+            }
          }
          if ((skulltula === "Dungeons" || skulltula === "All") && dungeons[k].type === "dungeon") {
             for (var key in dungeons[k].skulllist) {
@@ -2014,27 +1911,22 @@ function updateMap() {
                   {}
                   else if (Cowsanity == false && key.includes("Cow Milk"))
                   {}
-                  else if (GrottoER == false && (s.innerHTML.includes("Storms Fairy Fountain") || s.innerHTML.includes("Fairy Fountain Grotto") || s.innerHTML.includes("Octorok Grotto") ) 
-                  {}
                   else if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable() && !(BeanShuffle == false && key == "BeanSalseman") )
                      DCcount++;
-
-                  if (Cowsanity == false && GrottoER == true && s.innerHTML.includes("Cow Milk Grotto")) 
-                  {DCcount++;}}
                }
             }
-            if (shopsize > 0){
-            for (var key in dungeons[k].shoplist) {
-               if (dungeons[k].shoplist.hasOwnProperty(key)) {
-                  if (!dungeons[k].shoplist[key].isOpened && dungeons[k].shoplist[key].isAvailable()  )
-                     DCcount++;
-                  for (var step = 2; step <= 4; step++) {
-                     if(key.includes("Shop " + step) && step > shopsize)
-                        DCcount--;
+            if (shopsize > 0 ){
+            var size = shopsize;
+               for (var key in dungeons[k].shoplist) {
+                  if (dungeons[k].shoplist.hasOwnProperty(key)) {
+                     if (size <= 0)
+                     {}
+                     else if (!dungeons[k].shoplist[key].isOpened && dungeons[k].shoplist[key].isAvailable() )
+                        DCcount++;
                   }
+                     size--;
                }
             }
-         }
          }
          if ((skulltula === "Overworld" || skulltula === "All") && quest === "Master") {
             for (var key in dungeons[k].skulllist) {
@@ -2190,16 +2082,6 @@ function populateMapdiv() {
             s.classList.add("d-none");
          }
       }
-      if (chests[k].name.includes("Cow Milk") && (skulltula === "Overworld" || skulltula === "All" || Cowsanity == true || GrottoER == true;) )
-         s.classList.remove("d-none");
-      else if (Cowsanity == false && chests[k].name.includes("Cow Milk") )
-         s.classList.add("d-none");
-      else if (chests[k].name.includes("Cow Milk") && !(skulltula === "Overworld" || !skulltula === "All") && !Cowsanity == true && GrottoER == true;) ) {
-         s.classList.remove("d-none"); }
-      if (GrottoER == true && chests[k].name.includes("Fountain Grotto")
-          s.classList.remove("d-none");
-      if (GrottoER == false && chests[k].name.includes("Fountain Grotto")
-          s.classList.add("d-none");
       var ss = document.createElement('span');
       ss.className = "tooltip";
       ss.innerHTML = chests[k].name;
@@ -2240,13 +2122,9 @@ function populateMapdiv() {
                {}
                else if (Cowsanity == false && key.includes("Cow Milk"))
                {}
-               else if (GrottoER == false && (s.innerHTML.includes("Storms Fairy Fountain") || s.innerHTML.includes("Fairy Fountain Grotto") || s.innerHTML.includes("Octorok Grotto") ) 
-               {}
                else if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable() && !(BeanShuffle == false && key == "BeanSalseman") )
                   DCcount++;
-            
-               if (Cowsanity == false && GrottoER == true && s.innerHTML.includes("Cow Milk Grotto")) 
-               {DCcount++;}}
+            }
          }
          if (skulltula === "Dungeons" || skulltula === "All") {
             for (var key in dungeons[k].skulllist) {
@@ -2272,16 +2150,16 @@ function populateMapdiv() {
                }
             }
          }
-         if (shopsize > 0){
+         if (shopsize > 0) {
             for (var key in dungeons[k].shoplist) {
-               if (dungeons[k].shoplist.hasOwnProperty(key)) {
-                  if (!dungeons[k].shoplist[key].isOpened && dungeons[k].shoplist[key].isAvailable()  )
+               if (dungeons[k].shoplist.hasOwnProperty(key) ) {
+                  var size = shopsize;
+                  if (size <= 0)
+                  {}
+                  else if (!dungeons[k].shoplist[key].isOpened && dungeons[k].shoplist[key].isAvailable())
                      DCcount++;
-                  for (var step = 2; step <= 4; step++) {
-                     if(key.includes("Shop " + step) && step > shopsize)
-                        DCcount--;
-                  }
                }
+               size--;
             }
          }
       }
@@ -2305,13 +2183,9 @@ function populateMapdiv() {
                   {}
                   else if (Cowsanity == false && key.includes("Cow Milk"))
                   {}
-                  else if (GrottoER == false && (s.innerHTML.includes("Storms Fairy Fountain") || s.innerHTML.includes("Fairy Fountain Grotto") || s.innerHTML.includes("Octorok Grotto") ) 
-                  {}
                   else if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable() && !(BeanShuffle == false && key == "BeanSalseman") )
                      DCcount++;
-
-                  if (Cowsanity == false && GrottoER == true && s.innerHTML.includes("Cow Milk Grotto")) 
-                  {DCcount++;}}
+               }
             }
             if (skulltula === "Overworld" || skulltula === "All") {
                for (var key in dungeons[k].skulllist) {
@@ -2321,18 +2195,18 @@ function populateMapdiv() {
                   }
                }
             }
-            if (shopsize > 0){
-            for (var key in dungeons[k].shoplist) {
-               if (dungeons[k].shoplist.hasOwnProperty(key)) {
-                  if (!dungeons[k].shoplist[key].isOpened && dungeons[k].shoplist[key].isAvailable()  )
-                     DCcount++;
-                  for (var step = 2; step <= 4; step++) {
-                     if(key.includes("Shop " + step) && step > shopsize)
-                        DCcount--;
+            if (shopsize > 0) {
+               for (var key in dungeons[k].shoplist) {
+                  if (dungeons[k].shoplist.hasOwnProperty(key) ) {
+                     var size = shopsize;
+                     if (size <= 0)
+                     {}
+                     else if (!dungeons[k].shoplist[key].isOpened && dungeons[k].shoplist[key].isAvailable())
+                        DCcount++;
                   }
+                  size--;
                }
             }
-         }
          }  
          if (skulltula === "Dungeons" || skulltula === "All") {
             for (var key in dungeons[k].MQskulllist) {
@@ -2416,12 +2290,15 @@ function getDungeonAvailability(dungeon) {
                checklist.scrublist[key] = dungeon.scrublist[key];
            }
        }
-      if (shopsize > 0){
-            for (let key in dungeon.shoplist) {
-               checklist.shoplist[key] = dungeon.shoplist[key];
-            }
-      }
-       ['chestlist', 'skulllist', 'scrublist'].forEach(function (key) {
+      if (Shopsanity == true) {
+         var size = shopsize;
+           for (let key in dungeon.shoplist) {
+              if (size > 0) 
+                 checklist.shoplist[key] = dungeon.shoplist[key];
+              size--;
+           }
+       }
+       ['chestlist', 'skulllist', 'scrublist', 'shoplist'].forEach(function (key) {
            let list = checklist[key];
            for (let key in list) {
                if (!list[key].isOpened) {
@@ -2435,13 +2312,9 @@ function getDungeonAvailability(dungeon) {
                {}
                else if (Cowsanity == false && key.includes("Cow Milk"))
                {}
-               else if (GrottoER == false && (s.innerHTML.includes("Storms Fairy Fountain") || s.innerHTML.includes("Fairy Fountain Grotto") || s.innerHTML.includes("Octorok Grotto") ) 
-               {}
-               else if (!list[key].isOpened && list[key].isAvailable() )
-                  canGet++;
-            
-               if (Cowsanity == false && GrottoER == true && s.innerHTML.includes("Cow Milk Grotto")) 
-               {canGet++;}}
+               else if (!list[key].isOpened && list[key].isAvailable()) {
+                   canGet++;
+               }
            }
        });
    }
@@ -2488,14 +2361,15 @@ function getDungeonAvailability(dungeon) {
                   checklist.scrublist[key] = dungeon.scrublist[key];
                }
             }
-            if (shopsize > 0){
+            if (Shopsanity == true) {
+               size = shopsize;
                for (let key in dungeon.shoplist) {
-                  checklist.shoplist[key] = dungeon.shoplist[key];
+                  if (size > 0)
+                     checklist.shoplist[key] = dungeon.shoplist[key];
+                  size--;
                }
             }
-         }
-         ['chestlist', 'skulllist', 'scrublist'].forEach
-         (function (key) {
+         ['chestlist', 'skulllist', 'scrublist', 'shoplist'].forEach(function (key) {
            let list = checklist[key];
            for (let key in list) {
                if (!list[key].isOpened) {
@@ -2509,17 +2383,13 @@ function getDungeonAvailability(dungeon) {
                {}
                else if (Cowsanity == false && key.includes("Cow Milk"))
                {}
-               else if (GrottoER == false && (s.innerHTML.includes("Storms Fairy Fountain") || s.innerHTML.includes("Fairy Fountain Grotto") || s.innerHTML.includes("Octorok Grotto") ) 
-               {}
-               else if (!list[key].isOpened && list[key].isAvailable()) )
-                  canGet++;
-            
-               if (Cowsanity == false && GrottoER == true && s.innerHTML.includes("Cow Milk Grotto")) 
-               {canGet++;}}
+               else if (!list[key].isOpened && list[key].isAvailable()) {
+                   canGet++;
+               }
            }
-         }
-         );
+       });
       }
+   }
 
    let availability = "possible";
    if (unopened == 0) {
