@@ -36,6 +36,8 @@ OpenGate = true;
 OpenDoor = true;
 OpenFountain = false;
 
+GrottoER = false;
+
 var itemGrid = [];
 var itemLayout = [];
 
@@ -69,7 +71,7 @@ function getCookie() {
    return {};
 }
 
-var cookiekeys = ['iZoom', 'mZoom', 'rainlogic', 'items', 'qlogic', 'flogic', 'carp', 'smallk', 'bossk', 'sclogic', 'sklogic', 'ocShuff', 'sngShuff', 'eggShuff', 'beanShuff', 'chulogic', 'forest', 'gate', 'door', 'fountain', 'shpsize', 'cowShuff', 'numtrials', 'pigBK'];
+var cookiekeys = ['iZoom', 'mZoom', 'rainlogic', 'items', 'qlogic', 'flogic', 'carp', 'smallk', 'bossk', 'sclogic', 'sklogic', 'ocShuff', 'sngShuff', 'eggShuff', 'beanShuff', 'chulogic', 'forest', 'gate', 'door', 'fountain', 'shpsize', 'cowShuff', 'numtrials', 'pigBK', 'gER'];
 var cookieDefault = {
    iZoom: 100,
    mZoom: 100,
@@ -94,7 +96,8 @@ var cookieDefault = {
    cowShuff: 0,
    numtrials: 0,
    pigBK: 'Removed',
-
+   gER: 0,
+   
    items: defaultItemGrid
 }
 
@@ -144,6 +147,8 @@ function loadCookie() {
    document.getElementsByName('BeanShuffle')[0].checked = !!cookieobj.beanShuff;
    document.getElementsByName('BeanShuffle')[0].onchange();
    
+   document.getElementsByName('GrottoER')[0].checked = !!cookieobj.gER;
+   document.getElementsByName('GrottoER')[0].onchange();
 
    document.getElementsByName('shopsize')[0].value = cookieobj.shpsize;
    document.getElementsByName('shopsize')[0].onchange();
@@ -230,6 +235,9 @@ function saveCookie() {
    cookieobj.sngShuff = document.getElementsByName('SongShuffle')[0].checked ? 1 : 0;
    cookieobj.eggShuff = document.getElementsByName('WeirdEgg')[0].checked ? 1 : 0;
    cookieobj.beanShuff = document.getElementsByName('BeanShuffle')[0].checked ? 1 : 0;
+   
+   cookieobj.gER = document.getElementsByName('GrottoER')[0].checked ? 1 : 0;
+   
    cookieobj.shpsize = document.getElementsByName('shopsize')[0].value;
    //cookieobj.numtrials = document.getElementsByName('numtrials')[0].value;
 
@@ -413,6 +421,8 @@ function drawDungeonList() {
                s.classList.add("d-none"); }
             if (Cowsanity == false && s.innerHTML.includes("Cow Milk")) {
                s.classList.add("d-none"); }
+            if (GrottoER == false && (s.innerHTML.includes("Octorok Grotto") || s.innerHTML.includes("Fountain Grotto") )) {
+               s.classList.add("d-none"); }
 
             s.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
             s.onmouseover = new Function('highlightDungeonChest(this)');
@@ -578,6 +588,8 @@ function drawDungeonList() {
             if (BeanShuffle == false && key == "Bean Salesman") {
                s.classList.add("d-none"); }
             if (Cowsanity == false && s.innerHTML.includes("Cow Milk")) {
+               s.classList.add("d-none"); }
+            if (GrottoER == false && (s.innerHTML.includes("Octorok Grotto") || s.innerHTML.includes("Fountain Grotto") )) {
                s.classList.add("d-none"); }
  
             s.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
@@ -1279,9 +1291,17 @@ function setShopsize(sender) {
       Shopsanity = false;
    }
    drawDungeonList();
+   populateMapdiv()
    updateMap();
    saveCookie();
 } 
+
+function setGrottoER(sender) {
+   GrottoER = sender.checked;
+   updateMap();
+   drawDungeonList();
+   saveCookie();
+}
 
 function setCows(sender) {
    Cowsanity = sender.checked;
