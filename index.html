@@ -64,10 +64,10 @@
                                 <input type='checkbox' name='OpenGate' checked='true' onchange="setGate(this)">Open Gate <br>
                                 <input type='checkbox' name='OpenDoor' checked='true' onchange="setDoor(this)">Open Door 
                                 <input type='checkbox' name='OpenFountain' checked='false' onchange="setFountain(this)">Open Fountain
-                         <legend> Quest</legend>
-                            <input type='radio' name='quest' value='Vanilla' checked='true' onclick="setQuest(this)">Vanilla
-                            <input type='radio' name='quest' value='Master' onclick="setQuest(this)">Master
-                            <input type='radio' name='quest' value='Mixed' onclick="setQuest(this)">Mixed
+                         <legend> Quest 
+                        <input type='radio' name='quest' value='Vanilla' checked='true' onclick="setQuest(this)">Vanilla 
+                        <input type='radio' name='quest' value='Master' onclick="setQuest(this)">Master 
+                        <input type='radio' name='quest' value='Mixed' onclick="setQuest(this)">Mixed </legend>
                     </fieldset>
                     <fieldset>
                             <legend>Fortress Logic</legend>
@@ -90,10 +90,10 @@
                             <input type='checkbox' name='trials' checked='false' onchange="setTrials(this)">Trials On ? </legend>                           
                             Number of Trials: 0 <input type="range" name='trialsize' value='0' max='6' min='0' onchange="setTrialSize(this)">
                         <span id='trialsize'> 6 </span><br> </fieldset>
-                    <legend>Ganon's Boss Key</legend>
+                    <legend>Ganon's Boss Key 
+                        <input type='radio' name='castlelogic' value='Removed' onclick="setCastle(this)">Removed </legend>
                         <input type='radio' name='castlelogic' value='Vanilla' onclick="setCastle(this)">Vanilla
-                        <input type='radio' name='castlelogic' value='Castle' onclick="setCastle(this)">Ganons Castle<br>
-                        <input type='radio' name='castlelogic' value='Removed' onclick="setCastle(this)">Removed 
+                        <input type='radio' name='castlelogic' value='Castle' onclick="setCastle(this)">Ganons Castle
                         <input type='radio' name='castlelogic' value='Anywhere' onclick="setCastle(this)">Anywhere<br>
                         <input type='radio' name='castlelogic' value='LACSVan' onclick="setCastle(this)">LACS Vanilla
                         <input type='radio' name='castlelogic' value='LACSStones' onclick="setCastle(this)">LACS Stones <br>
@@ -109,7 +109,7 @@
                         Small Keys: 
                             <input type='radio' name='smallkeys' value='Dungeons' checked='true' onclick="setSmallKeys(this)">Dungeons <br>
                             <input type='radio' name='smallkeys' value='Remove' onclick="setSmallKeys(this)">Remove
-                            <input type='radio' name='smallkeys' value='Keysanity' onclick="setSmallKeys(this)">Keysanity
+                            <input type='radio' name='smallkeys' value='Keysanity' onclick="setSmallKeys(this)">Keysanity <br>
                         Boss Keys: 
                             <input type='radio' name='bosskeys' value='Dungeons' checked='true' onclick="setBossKeys(this)">Dungeons <br>
                             <input type='radio' name='bosskeys' value='Remove' onclick="setBossKeys(this)">Remove
@@ -122,12 +122,12 @@
                         <input type='radio' name='skulltula' value='All' onclick="setSkulltula(this)">All<br>
                     </fieldset>
                     <fieldset> <legend>Scrub Salesmen</legend>
+                        Scrubsanity:  
                         <input type='radio' name='scrubs' value='Off' checked='true' onclick="setScrub(this)">Off
-                        <input type='radio' name='scrubs' value='Scrubsanity' onclick="setScrub(this)">Scrubsanity
+                        <input type='radio' name='scrubs' value='Scrubsanity' onclick="setScrub(this)">On
                     </fieldset>
                     <fieldset> <legend>Getting Crazy</legend>
-                        <input type='checkbox' name='Shopsanity' checked='false' onchange="setShops(this)">Shuffle Shop Item(s)<br>
-                        Shop Size: 0 <input type="range" name='shopsize' value='4' max='4' min='0' onchange="setShopsize(this)">
+                        Shopsanity Size: 0 <input type="range" name='shopsize' value='4' max='4' min='0' onchange="setShopsize(this)">
                         <span id='shopsize'> 4 </span><br>
                         <input type='checkbox' name='Cowsanity' checked='false' onchange="setCows(this)">Shuffle Cow Milk
                         <input type='checkbox' name='SongShuffle' checked='false' onchange="setSongs(this)">Songs Shuffle<br>
