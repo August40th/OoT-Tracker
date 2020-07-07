@@ -529,7 +529,7 @@ function drawDungeonList() {
                }
                started = false;
                
-               if (shopitem > 0) {
+               if (shopitem > 0 || shopsize == 4) {
                   shopitem--;
                   let li = document.createElement('li');
                   li.style.cursor = 'pointer';
@@ -563,11 +563,6 @@ function drawDungeonList() {
                         shopnum--;
                      }
                      else if (shopsize == 3 && shopitem <= -1) {
-                        shopitem = shopsize;
-                        dNone = false;
-                        shopnum--;
-                     }
-                     else if (shopsize == 4 && shopitem <= 1) {
                         shopitem = shopsize;
                         dNone = false;
                         shopnum--;
@@ -747,7 +742,7 @@ function drawDungeonList() {
                }
                started = false;
                
-               if (shopitem > 0) {
+               if (shopitem > 0 || shopsize == 4) {
                   shopitem--;
                   let li = document.createElement('li');
                   li.style.cursor = 'pointer';
@@ -780,11 +775,6 @@ function drawDungeonList() {
                         shopnum--;
                      }
                      else if (shopsize == 3 && shopitem <= -1) {
-                        shopitem = shopsize;
-                        dNone = false;
-                        shopnum--;
-                     }
-                     else if (shopsize == 4 && shopitem <= 0) {
                         shopitem = shopsize;
                         dNone = false;
                         shopnum--;
