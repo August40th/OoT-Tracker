@@ -36,8 +36,8 @@ GrottoER = false;
 OWER = false;
 IndoorER = 'Off';
 
-Age = "Child";
-Start = "Off";
+Age = Child;
+Start = Off;
 
 OpenForest = true;
 OpenGate = true;
@@ -244,17 +244,17 @@ function loadCookie() {
          rbutton.click();
    }
    
-//   for (rbuttonID in document.getElementsByName('Age')) {
- //     rbutton = document.getElementsByName('Age')[rbuttonID]
-  //    if (rbutton.value == cookieobj.xMrks)
-   //      rbutton.click();
-   //}
+   for (rbuttonID in document.getElementsByName('Age')) {
+      rbutton = document.getElementsByName('Age')[rbuttonID]
+      if (rbutton.value == cookieobj.xMrks)
+         rbutton.click();
+   }
    
-//   for (rbuttonID in document.getElementsByName('IndoorER')) {
-  //    rbutton = document.getElementsByName('Indoor')[rbuttonID]
-    //  if (rbutton.value == cookieobj.iER)
-      //   rbutton.click();
-   //}
+   for (rbuttonID in document.getElementsByName('IndoorER')) {
+      rbutton = document.getElementsByName('Indoor')[rbuttonID]
+      if (rbutton.value == cookieobj.iER)
+         rbutton.click();
+   }
 
    cookielock = false;
 }
@@ -1430,12 +1430,6 @@ function setERTracker(sender) {
    saveCookie();
 }
 
-function setBombchu(sender) {
-   BombchuLogic = sender.checked;
-   updateMap();
-   saveCookie();
-}
-
 function setZoom(target, sender) {
    document.getElementById(target).style.zoom = sender.value / 100;
    document.getElementById(target).style.zoom = sender.value / 100;
@@ -1922,18 +1916,20 @@ function updateMap() {
          document.getElementById(k).className = "mapspan chest " + checkChestAvailablity(chests[k]) + ((chestMarked.indexOf(k) > -1) ? " wayofhero" : " ");
       if (chests[k].name.startsWith("Skulltula")) {
          if (skulltula === "Overworld" || skulltula === "All") {
-            document.getElementById(k).classList.remove("d-none");} 
-         else document.getElementById(k).classList.add("d-none");
+            document.getElementById(k).classList.remove("d-none");
+         } else {
+            document.getElementById(k).classList.add("d-none");
+         }
       }
-      if (chests[k].name.includes("Cow Milk") && (skulltula === "Overworld" || skulltula === "All" || Cowsanity === true || GrottoER === true) )
+      if (chests[k].name.includes("Cow Milk") && (skulltula === "Overworld" || skulltula === "All" || Cowsanity == true || GrottoER == true;) )
          document.getElementById(k).classList.remove("d-none");
-      else if (Cowsanity === false && chests[k].name.includes("Cow Milk") )
+      else if (Cowsanity == false && chests[k].name.includes("Cow Milk") )
          document.getElementById(k).classList.add("d-none");
-      else if (chests[k].name.includes("Cow Milk") && ((skulltula === "Overworld" || skulltula === "All") || Cowsanity === true || GrottoER === true) )  {
+      else if (chests[k].name.includes("Cow Milk") && !(skulltula === "Overworld" || !skulltula === "All") && !Cowsanity == true && GrottoER == true;) ) {
          document.getElementById(k).classList.remove("d-none"); }
-      if (GrottoER === true && chests[k].name.includes("Fountain Grotto"))
+      if (GrottoER == true && chests[k].name.includes("Fountain Grotto")
           document.getElementById(k).classList.remove("d-none");
-      if (GrottoER === false && chests[k].name.includes("Fountain Grotto"))
+      if (GrottoER == false && chests[k].name.includes("Fountain Grotto")
           document.getElementById(k).classList.add("d-none");
    }
 
@@ -1945,26 +1941,24 @@ function updateMap() {
       if (quest === "Vanilla" || quest === "Mixed") {
          for (var key in dungeons[k].chestlist) {
             if (dungeons[k].chestlist.hasOwnProperty(key)) {
-               if (OcarinaShuffle === false && key === "Fairy Ocarina")
+               if (OcarinaShuffle == false && key == "Fairy Ocarina")
                {}
-               else if (WeirdEgg === false && key === "Malons Weird Egg")
+               else if (WeirdEgg == false && key == "Malons Weird Egg")
                {}
-               else if (BeanShuffle === false && key == "Bean Salesman")
+               else if (BeanShuffle == false && key == "Bean Salesman")
                {}
-               else if (Cowsanity === false && key.includes("Cow Milk"))
+               else if (Cowsanity == false && key.includes("Cow Milk"))
                {}
-               else if (GrottoER === false && (key.includes("Storms Fairy Fountain") || key.includes("Fairy Fountain Grotto") || key.includes("Octorok Grotto") ) ) 
+               else if (GrottoER == false && (s.innerHTML.includes("Storms Fairy Fountain") || s.innerHTML.includes("Fairy Fountain Grotto") || s.innerHTML.includes("Octorok Grotto") ) 
                {}
-               else if (
-                        !dungeons[k].chestlist[key].isOpened && 
-                        dungeons[k].chestlist[key].isAvailable() )
+               else if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable() && !(BeanShuffle == false && key == "BeanSalseman") )
                   DCcount++;
             
-               if (Cowsanity === false && GrottoER === true && s.innerHTML.includes("Cow Milk Grotto")) 
+               if (Cowsanity == false && GrottoER == true && s.innerHTML.includes("Cow Milk Grotto")) 
                {DCcount++;}}
          }
          if ((skulltula === "Dungeons" || skulltula === "All") && dungeons[k].type === "dungeon") {
-            for (key in dungeons[k].skulllist) {
+            for (var key in dungeons[k].skulllist) {
                if (dungeons[k].skulllist.hasOwnProperty(key)) {
                   if (!dungeons[k].skulllist[key].isOpened && dungeons[k].skulllist[key].isAvailable())
                      DCcount++;
@@ -1972,7 +1966,7 @@ function updateMap() {
             }
          }
          if ((skulltula === "Overworld" || skulltula === "All") && dungeons[k].type === "overworld") {
-            for (key in dungeons[k].skulllist) {
+            for (var key in dungeons[k].skulllist) {
                if (dungeons[k].skulllist.hasOwnProperty(key)) {
                   if (!dungeons[k].skulllist[key].isOpened && dungeons[k].skulllist[key].isAvailable())
                      DCcount++;
@@ -1980,7 +1974,7 @@ function updateMap() {
             }
          }
          if (scrubs === "Scrubsanity") {
-            for (key in dungeons[k].scrublist) {
+            for (var key in dungeons[k].scrublist) {
                if (dungeons[k].scrublist.hasOwnProperty(key)) {
                   if (!dungeons[k].scrublist[key].isOpened && dungeons[k].scrublist[key].isAvailable())
                      DCcount++;
@@ -1988,7 +1982,7 @@ function updateMap() {
             }
          }
          if (shopsize > 0){
-            for (key in dungeons[k].shoplist) {
+            for (var key in dungeons[k].shoplist) {
                if (dungeons[k].shoplist.hasOwnProperty(key)) {
                   if (!dungeons[k].shoplist[key].isOpened && dungeons[k].shoplist[key].isAvailable()  )
                      DCcount++;
@@ -2001,40 +1995,40 @@ function updateMap() {
          }
       }
       if (quest === "Master" || quest === "Mixed") {
-         for (key in dungeons[k].MQlist) {
+         for (var key in dungeons[k].MQlist) {
             if (dungeons[k].MQlist.hasOwnProperty(key)) {
-               if (Cowsanity === false && key.includes("Cow Milk"))
+               if (Cowsanity == false && key.includes("Cow Milk"))
                {}
                else if (!dungeons[k].MQlist[key].isOpened && dungeons[k].MQlist[key].isAvailable())
                   DCcount++;
             }
          }
          if (quest === "Master"){
-            for (key in dungeons[k].chestlist) {
+            for (var key in dungeons[k].chestlist) {
                if (dungeons[k].chestlist.hasOwnProperty(key) && dungeons[k].type === "overworld") {
-                  if (OcarinaShuffle === false && key == "Fairy Ocarina")
+                  if (OcarinaShuffle == false && key == "Fairy Ocarina")
                   {}
-                  else if (WeirdEgg === false && key == "Malons Weird Egg")
+                  else if (WeirdEgg == false && key == "Malons Weird Egg")
                   {}
-                  else if (BeanShuffle === false && key == "Bean Salesman")
+                  else if (BeanShuffle == false && key == "Bean Salesman")
                   {}
-                  else if (Cowsanity === false && key.includes("Cow Milk"))
+                  else if (Cowsanity == false && key.includes("Cow Milk"))
                   {}
-                  else if (GrottoER === false && (s.innerHTML.includes("Storms Fairy Fountain") || s.innerHTML.includes("Fairy Fountain Grotto") || s.innerHTML.includes("Octorok Grotto") ) )
+                  else if (GrottoER == false && (s.innerHTML.includes("Storms Fairy Fountain") || s.innerHTML.includes("Fairy Fountain Grotto") || s.innerHTML.includes("Octorok Grotto") ) 
                   {}
-                  else if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable() && !(BeanShuffle === false && key == "BeanSalseman") )
+                  else if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable() && !(BeanShuffle == false && key == "BeanSalseman") )
                      DCcount++;
 
-                  if (Cowsanity === false && GrottoER === true && s.innerHTML.includes("Cow Milk Grotto")) 
+                  if (Cowsanity == false && GrottoER == true && s.innerHTML.includes("Cow Milk Grotto")) 
                   {DCcount++;}}
                }
             }
             if (shopsize > 0){
-            for (key in dungeons[k].shoplist) {
+            for (var key in dungeons[k].shoplist) {
                if (dungeons[k].shoplist.hasOwnProperty(key)) {
                   if (!dungeons[k].shoplist[key].isOpened && dungeons[k].shoplist[key].isAvailable()  )
                      DCcount++;
-                  for (step = 2; step <= 4; step++) {
+                  for (var step = 2; step <= 4; step++) {
                      if(key.includes("Shop " + step) && step > shopsize)
                         DCcount--;
                   }
@@ -2043,7 +2037,7 @@ function updateMap() {
          }
          }
          if ((skulltula === "Overworld" || skulltula === "All") && quest === "Master") {
-            for (key in dungeons[k].skulllist) {
+            for (var key in dungeons[k].skulllist) {
                if (dungeons[k].skulllist.hasOwnProperty(key) && dungeons[k].type === "overworld") {
                   if (!dungeons[k].skulllist[key].isOpened && dungeons[k].skulllist[key].isAvailable())
                      DCcount++;
@@ -2051,7 +2045,7 @@ function updateMap() {
             }
          }
          if (skulltula === "Dungeons" || skulltula === "All") {
-            for (key in dungeons[k].MQskulllist) {
+            for (var key in dungeons[k].MQskulllist) {
                if (dungeons[k].MQskulllist.hasOwnProperty(key)) {
                   if (!dungeons[k].MQskulllist[key].isOpened && dungeons[k].MQskulllist[key].isAvailable())
                      DCcount++;
@@ -2059,57 +2053,56 @@ function updateMap() {
             }
          }
          if (scrubs === "Scrubsanity") {
-            for (key in dungeons[k].MQscrublist) {
+            for (var key in dungeons[k].MQscrublist) {
                if (dungeons[k].MQscrublist.hasOwnProperty(key)) {
                   if (!dungeons[k].MQscrublist[key].isOpened && dungeons[k].MQscrublist[key].isAvailable())
                      DCcount++;
                }
             }
-            for (key in dungeons[k].scrublist) {
+            for (var key in dungeons[k].scrublist) {
                if (dungeons[k].scrublist.hasOwnProperty(key) && dungeons[k].type === "overworld" && quest === "Master") {
                   if (!dungeons[k].scrublist[key].isOpened && dungeons[k].scrublist[key].isAvailable())
                      DCcount++;
                }
             }
+         }      
+      }
+      
+      var child = document.getElementById("dungeon" + k).firstChild;
+      while (child) {
+         if (child.className == "chestCount") {
+            if (DCcount == 0)
+               child.innerHTML = "";
+            else
+               child.innerHTML = DCcount;
+            break;
          }
-      
-      
-     // var child = dungeons[k].firstChild;
-       // while (child) {
-        //    if (child.className == 'chestCount') {
-                if (DCcount === 0) {
-                    dungeons[k].innerHTML = '';
-                } else {
-                    dungeons[k].innerHTML = DCcount;
-                }
-         //       break;
-        //    }
-      //      child = child.nextSibling;
-       // }
-
-    document.getElementById('submaparea').className = 'DC' + getDungeonAvailability(dungeons[dungeonSelect]);
-    var itemlist = document.getElementById('submaplist').children;
-    for (var item in itemlist) item++; {
-        if (itemlist.hasOwnProperty(item)) {
-           let dNone = false;
-           if (itemlist[item].classList.contains("d-none") )
-              dNone = true;
-           if (dNone)
-              itemlist[item].classList.add("d-none");
-           else
-              itemlist[item].classList.remove("d-none");
-           let itemType = itemlist[item].getAttribute("data-type") + "list";
-           if (dungeons[dungeonSelect][itemType][itemlist[item].innerHTML].isOpened)
-              itemlist[item].className = 'DCopened';
-           else if (dungeons[dungeonSelect][itemType][itemlist[item].innerHTML].isAvailable())
-              itemlist[item].className = 'DCavailable';
-           else {
-              itemlist[item].className = 'DCunavailable';
-
-           }
-        }  
-    }
+         child = child.nextSibling;
+      }
+      updateSkullIcon()
    }
+
+   document.getElementById('submaparea').className = "DC" + getDungeonAvailability(dungeons[dungeonSelect]);
+   var itemlist = document.getElementById('submaplist').children
+   for (var item in itemlist) {
+      if (itemlist.hasOwnProperty(item)) {
+         let dNone = false;
+         if(itemlist[item].classList.contains("d-none")) {
+            dNone = true;
+         }
+         let itemType = itemlist[item].getAttribute("data-type") + "list";
+         if (dungeons[dungeonSelect][itemType][itemlist[item].innerHTML].isOpened)
+            itemlist[item].className = "DCopened";
+         else if (dungeons[dungeonSelect][itemType][itemlist[item].innerHTML].isAvailable())
+            itemlist[item].className = "DCavailable";
+         else
+            itemlist[item].className = "DCunavailable";
+         if (dNone) {
+            itemlist[item].classList.add("d-none");
+         }
+      }
+   }
+
 }
 
 function itemConfigClick(sender) {
@@ -2197,16 +2190,15 @@ function populateMapdiv() {
             s.classList.add("d-none");
          }
       }
-      if (chests[k].name.includes("Cow Milk") && (skulltula === "Overworld" || skulltula === "All" || Cowsanity == true || GrottoER == true) )
+      if (chests[k].name.includes("Cow Milk") && (skulltula === "Overworld" || skulltula === "All" || Cowsanity == true || GrottoER == true;) )
          s.classList.remove("d-none");
       else if (Cowsanity == false && chests[k].name.includes("Cow Milk") )
          s.classList.add("d-none");
-      else if (chests[k].name.includes("Cow Milk") && !(skulltula === "Overworld" || !skulltula === "All") && !Cowsanity == true && GrottoER == true )
-         {
+      else if (chests[k].name.includes("Cow Milk") && !(skulltula === "Overworld" || !skulltula === "All") && !Cowsanity == true && GrottoER == true;) ) {
          s.classList.remove("d-none"); }
-      if (GrottoER == true && chests[k].name.includes("Fountain Grotto"))
+      if (GrottoER == true && chests[k].name.includes("Fountain Grotto")
           s.classList.remove("d-none");
-      if (GrottoER == false && chests[k].name.includes("Fountain Grotto"))
+      if (GrottoER == false && chests[k].name.includes("Fountain Grotto")
           s.classList.add("d-none");
       var ss = document.createElement('span');
       ss.className = "tooltip";
@@ -2248,10 +2240,7 @@ function populateMapdiv() {
                {}
                else if (Cowsanity == false && key.includes("Cow Milk"))
                {}
-               else if (GrottoER == false && 
-                        (s.innerHTML.includes("Storms Fairy Fountain") || 
-                         s.innerHTML.includes("Fairy Fountain Grotto") || 
-                         s.innerHTML.includes("Octorok Grotto") ) )
+               else if (GrottoER == false && (s.innerHTML.includes("Storms Fairy Fountain") || s.innerHTML.includes("Fairy Fountain Grotto") || s.innerHTML.includes("Octorok Grotto") ) 
                {}
                else if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable() && !(BeanShuffle == false && key == "BeanSalseman") )
                   DCcount++;
@@ -2316,10 +2305,7 @@ function populateMapdiv() {
                   {}
                   else if (Cowsanity == false && key.includes("Cow Milk"))
                   {}
-                  else if (GrottoER == false && 
-                           (s.innerHTML.includes("Storms Fairy Fountain") || 
-                            s.innerHTML.includes("Fairy Fountain Grotto") || 
-                            s.innerHTML.includes("Octorok Grotto") ) )
+                  else if (GrottoER == false && (s.innerHTML.includes("Storms Fairy Fountain") || s.innerHTML.includes("Fairy Fountain Grotto") || s.innerHTML.includes("Octorok Grotto") ) 
                   {}
                   else if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable() && !(BeanShuffle == false && key == "BeanSalseman") )
                      DCcount++;
@@ -2447,21 +2433,17 @@ function getDungeonAvailability(dungeon) {
                {}
                else if (BeanShuffle == false && key == "Bean Salesman")
                {}
-               else if (Cowsanity == false && key.includes("Cow Milk") )
+               else if (Cowsanity == false && key.includes("Cow Milk"))
                {}
-               else if (GrottoER == false && 
-                        (key.includes("Storms Fairy Fountain") || 
-                         key.includes("Fairy Fountain Grotto") || 
-                         key.includes("Octorok Grotto") ) )
+               else if (GrottoER == false && (s.innerHTML.includes("Storms Fairy Fountain") || s.innerHTML.includes("Fairy Fountain Grotto") || s.innerHTML.includes("Octorok Grotto") ) 
                {}
                else if (!list[key].isOpened && list[key].isAvailable() )
                   canGet++;
             
                if (Cowsanity == false && GrottoER == true && s.innerHTML.includes("Cow Milk Grotto")) 
-               {canGet++;}
+               {canGet++;}}
            }
-       }
-                                                       );
+       });
    }
    if (quest === "Master" || quest === "Mixed") {
        for (let key in dungeon.MQlist) {
@@ -2527,16 +2509,13 @@ function getDungeonAvailability(dungeon) {
                {}
                else if (Cowsanity == false && key.includes("Cow Milk"))
                {}
-               else if (GrottoER == false && 
-                        (s.innerHTML.includes("Storms Fairy Fountain") || 
-                         s.innerHTML.includes("Fairy Fountain Grotto") || 
-                         s.innerHTML.includes("Octorok Grotto") ) )
+               else if (GrottoER == false && (s.innerHTML.includes("Storms Fairy Fountain") || s.innerHTML.includes("Fairy Fountain Grotto") || s.innerHTML.includes("Octorok Grotto") ) 
                {}
-               else if (!list[key].isOpened && list[key].isAvailable() )
+               else if (!list[key].isOpened && list[key].isAvailable()) )
                   canGet++;
             
                if (Cowsanity == false && GrottoER == true && s.innerHTML.includes("Cow Milk Grotto")) 
-               {canGet++;}
+               {canGet++;}}
            }
          }
          );
