@@ -56,9 +56,9 @@
                         <legend>Map: <input type="range" name='mapdivsize' value='100' max='200' min='1' onchange="setZoom('mapdiv', this)">
                         <span id='mapdivsize'>100%</span> </legend>
                     </fieldset>    
-                    <fieldset> <center>
+                    <fieldset> 
                         <legend>World</legend>
-                                <input type='checkbox' name='OpenForest' checked='true' onchange="setForest(this)">Open Forest 
+                                <center> <input type='checkbox' name='OpenForest' checked='true' onchange="setForest(this)">Open Forest 
                                 <input type='checkbox' name='OpenGate' checked='true' onchange="setGate(this)">Open Gate <br>
                                 <input type='checkbox' name='OpenDoor' checked='true' onchange="setDoor(this)">Open Door 
                                 <input type='checkbox' name='OpenFountain' checked='false' onchange="setFountain(this)">Open Fountain
@@ -67,7 +67,7 @@
                         <input type='radio' name='quest' value='Vanilla' checked='true' onclick="setQuest(this)">Vanilla 
                         <input type='radio' name='quest' value='Master' onclick="setQuest(this)">Master 
                         <input type='radio' name='quest' value='Mixed' onclick="setQuest(this)">Mixed </legend>
-                    </fieldset>
+                        </center> </fieldset>
                     <fieldset> <center>
                         <legend>Rainbow Bridge Logic</legend>
                             <input type='radio' name='rainbowbridge' value='Open' checked='true' onclick="setRainbow(this)">Open
