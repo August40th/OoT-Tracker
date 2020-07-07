@@ -1807,7 +1807,15 @@ function updateMap() {
       if (quest === "Vanilla" || quest === "Mixed") {
          for (var key in dungeons[k].chestlist) {
             if (dungeons[k].chestlist.hasOwnProperty(key)) {
-               if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable() && !key.includes("d-none") )
+               if (OcarinaShuffle == false && key == "Fairy Ocarina")
+               {}
+               else if (WeirdEgg == false && key == "Malons Weird Egg")
+               {}
+               else if (BeanShuffle == false && key == "Bean Salesman")
+               {}
+               else if (Cowsanity == false && key.includes("Cow Milk"))
+               {}
+               else if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable() && !(BeanShuffle == false && key == "BeanSalseman") )
                   DCcount++;
             }
          }
@@ -1840,6 +1848,10 @@ function updateMap() {
                if (dungeons[k].shoplist.hasOwnProperty(key)) {
                   if (!dungeons[k].shoplist[key].isOpened && dungeons[k].shoplist[key].isAvailable() && !key.includes("d-none") )
                      DCcount++;
+                  for (var step = 2; step <= 4; step++) {
+                     if(key.includes("Shop " + step) && step > shopsize)
+                        DCcount--;
+                  }
                }
             }
          }
@@ -1871,8 +1883,12 @@ function updateMap() {
             if (shopsize > 0){
             for (var key in dungeons[k].shoplist) {
                if (dungeons[k].shoplist.hasOwnProperty(key)) {
-                  if (!dungeons[k].shoplist[key].isOpened && dungeons[k].shoplist[key].isAvailable() && !key.includes("d-none") )
+                  if (!dungeons[k].shoplist[key].isOpened && dungeons[k].shoplist[key].isAvailable()  )
                      DCcount++;
+                  for (var step = 2; step <= 4; step++) {
+                     if(key.includes("Shop " + step) && step > shopsize)
+                        DCcount--;
+                  }
                }
             }
          }
@@ -2241,9 +2257,8 @@ function getDungeonAvailability(dungeon) {
        }
       if (shopsize > 0){
             for (let key in dungeon.shoplist) {
-               if (!key.includes("d-none")) {
+               if (!key.includes("d-none"))
                   checklist.shoplist[key] = dungeon.shoplist[key];
-               }
             }
       }
        ['chestlist', 'skulllist', 'scrublist', 'shoplist'].forEach(function (key) {
@@ -2311,9 +2326,8 @@ function getDungeonAvailability(dungeon) {
             }
             if (shopsize > 0){
                for (let key in dungeon.shoplist) {
-                  if (!key.includes("d-none")) {
+                  if (!key.includes("d-none"))
                      checklist.shoplist[key] = dungeon.shoplist[key];
-                  }
                }
             }
          }
