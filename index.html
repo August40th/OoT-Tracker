@@ -70,6 +70,27 @@
                         <input type='radio' name='quest' value='Mixed' onclick="setQuest(this)">Mixed </legend>
                     </fieldset>
                     <fieldset>
+                        <legend>Rainbow Bridge Logic</legend>
+                            <input type='radio' name='rainbowbridge' value='Open' checked='true' onclick="setRainbow(this)">Open
+                            <input type='radio' name='rainbowbridge' value='Vanilla' onclick="setRainbow(this)">Vanilla
+                            <input type='radio' name='rainbowbridge' value='Skulltulas' onclick="setRainbow(this)">Skulltulas
+                            <input type='radio' name='rainbowbridge' value='Stones' onclick="setRainbow(this)">Spiritual Stones
+                            <input type='radio' name='rainbowbridge' value='Medallions' onclick="setRainbow(this)">Medallions <br>
+                            <input type='radio' name='rainbowbridge' value='Dungeons' onclick="setRainbow(this)">Dungeons
+                        <hr>
+                        <legend>Castle Trials: 0 <input type="range" name='trialsize' value='0' max='6' min='0' onchange="setTrialSize(this)">
+                        <span id='trialsize'> 6 </span> </legend>
+                        <legend>Ganon's Boss Key 
+                            <input type='radio' name='castlelogic' value='Removed' onclick="setCastle(this)">Removed </legend>
+                            <input type='radio' name='castlelogic' value='Vanilla' onclick="setCastle(this)">Vanilla
+                            <input type='radio' name='castlelogic' value='Castle' onclick="setCastle(this)">Ganons Castle
+                            <input type='radio' name='castlelogic' value='Anywhere' onclick="setCastle(this)">Anywhere<br>
+                            <input type='radio' name='castlelogic' value='LACSVan' onclick="setCastle(this)">LACS Vanilla
+                            <input type='radio' name='castlelogic' value='LACSStones' onclick="setCastle(this)">LACS Stones <br>
+                            <input type='radio' name='castlelogic' value='LACSMeds' onclick="setCastle(this)">LACS Medallions
+                            <input type='radio' name='castlelogic' value='LACSAD' onclick="setCastle(this)">LACS All Dungeons
+                    </fieldset>
+                    <fieldset>
                             <legend>Fortress Logic</legend>
                                 Gerudo Membership:
                                     <input type='radio' name='gerudobridge' value='Default' checked='true' onclick="setFortressLogic(this)">Guard Fight <br>
@@ -78,27 +99,6 @@
                             Carpenters: 
                                     <input type='checkbox' name='Rescue1' checked='false' onchange="setCarpenter(this)">Rescue 1 Carpenter<br>                            
                     </fieldset>
-                    <fieldset>
-                    <legend>Rainbow Bridge Logic</legend>
-                        <input type='radio' name='rainbowbridge' value='Open' checked='true' onclick="setRainbow(this)">Open
-                        <input type='radio' name='rainbowbridge' value='Vanilla' onclick="setRainbow(this)">Vanilla
-                        <input type='radio' name='rainbowbridge' value='Medallions' onclick="setRainbow(this)">Medallions <br>
-                        <input type='radio' name='rainbowbridge' value='Stones' onclick="setRainbow(this)">Spiritual Stones
-                        <input type='radio' name='rainbowbridge' value='Dungeons' onclick="setRainbow(this)">Dungeons
-                        <input type='radio' name='rainbowbridge' value='Skulltulas' onclick="setRainbow(this)">Skulltulas
-                    <hr>
-                        <legend>Castle Trials: 0 <input type="range" name='trialsize' value='0' max='6' min='0' onchange="setTrialSize(this)">
-                        <span id='trialsize'> 6 </span> </legend>
-                    <legend>Ganon's Boss Key 
-                        <input type='radio' name='castlelogic' value='Removed' onclick="setCastle(this)">Removed </legend>
-                        <input type='radio' name='castlelogic' value='Vanilla' onclick="setCastle(this)">Vanilla
-                        <input type='radio' name='castlelogic' value='Castle' onclick="setCastle(this)">Ganons Castle
-                        <input type='radio' name='castlelogic' value='Anywhere' onclick="setCastle(this)">Anywhere<br>
-                        <input type='radio' name='castlelogic' value='LACSVan' onclick="setCastle(this)">LACS Vanilla
-                        <input type='radio' name='castlelogic' value='LACSStones' onclick="setCastle(this)">LACS Stones <br>
-                        <input type='radio' name='castlelogic' value='LACSMeds' onclick="setCastle(this)">LACS Medallions
-                        <input type='radio' name='castlelogic' value='LACSAD' onclick="setCastle(this)">LACS All Dungeons
-        </fieldset>
                 </div>
                 <div class="column">
                 <fieldset>
