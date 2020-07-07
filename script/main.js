@@ -501,12 +501,10 @@ function drawDungeonList() {
                   if (shopitem === undefined)
                      shopitem = shopsize;
                   else if (shopitem <= 0) {
-                     if (shopsize != 4) dNone = true;
-                     let li = document.createElement('li');
-                     li.style.cursor = 'pointer';
-                     li.innerText = key;
-                     if (dNone) li.classList.add("d-none");
-                     shopitem--; 
+                     if (shopsize != 4) dNone = true; {
+                        key.classname = "DCopened";
+                        shopitem--; 
+                     }
                   }
                }
                started = false;
@@ -718,8 +716,10 @@ function drawDungeonList() {
                   if (shopitem === undefined)
                      shopitem = shopsize;
                   else if (shopitem <= 0) {
-                     if (shopsize != 4) dNone = true;
-                     shopitem--; 
+                     if (shopsize != 4) dNone = true; (
+                        shopitem--; 
+                        key.classname = "DCopened";
+                     }
                   }
                }
                started = false;
@@ -2258,7 +2258,7 @@ function getDungeonAvailability(dungeon) {
       if (shopsize > 0){
             for (let key in dungeon.shoplist) {
                if (key.includes("d-none"))
-                  dungeon.shoplist[key].isOpened;
+               {}
                else checklist.shoplist[key] = dungeon.shoplist[key];
             }
       }
@@ -2328,7 +2328,7 @@ function getDungeonAvailability(dungeon) {
             if (shopsize > 0){
                for (let key in dungeon.shoplist) {
                   if (key.includes("d-none"))
-                     dungeon.shoplist[key].isOpened;
+                  {}
                   else checklist.shoplist[key] = dungeon.shoplist[key];
                }
             }
