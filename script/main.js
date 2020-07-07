@@ -12,7 +12,6 @@ var questimg = ['', 'MQ'];
 
 rainbowbridge = 'Open';
 castlelogic = 'Removed';
-trials = false;
 trialsize = 0;
 gerudobridge = 'Default';
 Rescue1 = true;
@@ -70,7 +69,7 @@ function getCookie() {
    return {};
 }
 
-var cookiekeys = ['iZoom', 'mZoom', 'rainlogic', 'items', 'qlogic', 'flogic', 'carp', 'smallk', 'bossk', 'sclogic', 'sklogic', 'ocShuff', 'sngShuff', 'eggShuff', 'beanShuff', 'chulogic', 'forest', 'gate', 'door', 'fountain', 'shopShuff', 'shpsize', 'cowShuff', 'trials', 'numtrials', 'pigBK'];
+var cookiekeys = ['iZoom', 'mZoom', 'rainlogic', 'items', 'qlogic', 'flogic', 'carp', 'smallk', 'bossk', 'sclogic', 'sklogic', 'ocShuff', 'sngShuff', 'eggShuff', 'beanShuff', 'chulogic', 'forest', 'gate', 'door', 'fountain', 'shpsize', 'cowShuff', 'numtrials', 'pigBK'];
 var cookieDefault = {
    iZoom: 100,
    mZoom: 100,
@@ -91,10 +90,8 @@ var cookieDefault = {
    gate: 1,
    door: 1,
    fountain: 0,
-   shopShuff: 0,
    shpsize: 0,
    cowShuff: 0,
-   trials: 0,
    numtrials: 0,
    pigBK: 'Removed',
 
@@ -147,8 +144,7 @@ function loadCookie() {
    document.getElementsByName('BeanShuffle')[0].checked = !!cookieobj.beanShuff;
    document.getElementsByName('BeanShuffle')[0].onchange();
    
-   document.getElementsByName('Shopsanity')[0].checked = !!cookieobj.shopShuff;
-   document.getElementsByName('Shopsanity')[0].onchange();
+
    document.getElementsByName('shopsize')[0].value = cookieobj.shpsize;
    document.getElementsByName('shopsize')[0].onchange();
    
@@ -173,12 +169,6 @@ function loadCookie() {
    for (rbuttonID in document.getElementsByName('castlelogic')) {
       rbutton = document.getElementsByName('castlelogic')[rbuttonID]
       if (rbutton.value == cookieobj.pigBK)
-         rbutton.click();
-   }
-   
-   for (rbuttonID in document.getElementsByName('trials')) {
-      rbutton = document.getElementsByName('trials')[rbuttonID]
-      if (rbutton.value == cookieobj.trials)
          rbutton.click();
    }
 
@@ -240,7 +230,6 @@ function saveCookie() {
    cookieobj.sngShuff = document.getElementsByName('SongShuffle')[0].checked ? 1 : 0;
    cookieobj.eggShuff = document.getElementsByName('WeirdEgg')[0].checked ? 1 : 0;
    cookieobj.beanShuff = document.getElementsByName('BeanShuffle')[0].checked ? 1 : 0;
-   cookieobj.shopShuff = document.getElementsByName('Shopsanity')[0].checked ? 1 : 0;
    cookieobj.shpsize = document.getElementsByName('shopsize')[0].value;
    //cookieobj.numtrials = document.getElementsByName('numtrials')[0].value;
 
@@ -259,14 +248,7 @@ function saveCookie() {
       rbutton = document.getElementsByName('castlelogic')[rbuttonID]
       if (rbutton.checked)
          cookieobj.pigBK = rbutton.value;
-   }
-   
-   for (rbuttonID in document.getElementsByName('trials')) {
-      rbutton = document.getElementsByName('trials')[rbuttonID]
-      if (rbutton.checked)
-         cookieobj.trials = rbutton.value;
-   }
-   
+   } 
 
    for (rbuttonID in document.getElementsByName('quest')) {
       rbutton = document.getElementsByName('quest')[rbuttonID]
