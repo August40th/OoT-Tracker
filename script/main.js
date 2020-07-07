@@ -567,6 +567,11 @@ function drawDungeonList() {
                         dNone = false;
                         shopnum--;
                      }
+                     else if (shopsize == 4 && shopitem <= 0) {
+                        shopitem = shopsize;
+                        dNone = false;
+                        shopnum--;
+                     }
                }
             }           
       }
@@ -775,6 +780,11 @@ function drawDungeonList() {
                         shopnum--;
                      }
                      else if (shopsize == 3 && shopitem <= -1) {
+                        shopitem = shopsize;
+                        dNone = false;
+                        shopnum--;
+                     }
+                     else if (shopsize == 4 && shopitem <= 0) {
                         shopitem = shopsize;
                         dNone = false;
                         shopnum--;
@@ -1298,7 +1308,7 @@ function setShops(sender) {
       shopsize = 1;
       cookieobj.shpsize.value = 1;
    }
-   else if (Shopsanity == false && showprizes > 0) {
+   else if (Shopsanity == false && shopsize > 0) {
       shopsize = 0;
       cookieobj.shpsize.value = 0;
    }
