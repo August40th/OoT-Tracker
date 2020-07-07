@@ -45,15 +45,14 @@
         <!-- Setting panel-->
         
         <button id='settingsbutton' type='button' onclick='showSettings(this)'>🔧</button>
-        <fieldset id='settings' class='settings'>
+        <fieldset id='settings' class='settings'> <button type="button" onclick="EditMode()">Edit Mode</button> <br>
             <div class="row">
                 <div class="column">
                     <legend>Settings</legend>
                     <fieldset>
                         <legend>Item Tracker: </legend>
                         Size<input type="range" name='itemdivsize' value='100' max='200' min='1' onchange="setZoom('itemdiv', this)">
-                        <span id='itemdivsize'>100%</span> 
-                        <button type="button" onclick="EditMode()">Edit Mode</button> <br>                        
+                        <span id='itemdivsize'>100%</span> <br>
                         <legend>Map: <input type="range" name='mapdivsize' value='100' max='200' min='1' onchange="setZoom('mapdiv', this)">
                         <span id='mapdivsize'>100%</span> </legend>
                     </fieldset>    
@@ -73,9 +72,9 @@
                         <legend>Rainbow Bridge Logic</legend>
                             <input type='radio' name='rainbowbridge' value='Open' checked='true' onclick="setRainbow(this)">Open
                             <input type='radio' name='rainbowbridge' value='Vanilla' onclick="setRainbow(this)">Vanilla
-                            <input type='radio' name='rainbowbridge' value='Skulltulas' onclick="setRainbow(this)">Skulltulas
+                            <input type='radio' name='rainbowbridge' value='Skulltulas' onclick="setRainbow(this)">Skulltulas <br>
                             <input type='radio' name='rainbowbridge' value='Stones' onclick="setRainbow(this)">Spiritual Stones
-                            <input type='radio' name='rainbowbridge' value='Medallions' onclick="setRainbow(this)">Medallions <br>
+                            <input type='radio' name='rainbowbridge' value='Medallions' onclick="setRainbow(this)">Medallions
                             <input type='radio' name='rainbowbridge' value='Dungeons' onclick="setRainbow(this)">Dungeons
                         <hr>
                         <legend>Castle Trials: 0 <input type="range" name='trialsize' value='0' max='6' min='0' onchange="setTrialSize(this)">
