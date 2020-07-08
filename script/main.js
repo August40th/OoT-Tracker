@@ -1073,10 +1073,10 @@ function toggleTrial(sender, d, c) {
 
 function toggleGossip(sender, d, c) {
    dungeons[d].gossiplist[c].isOpened = !dungeons[d].gossiplist[c].isOpened;
-   var prompt = document.createElement("prompt"); 
+   var gossip = document.getElementById('gossip'); 
    if (dungeons[d].gossiplist[c].isOpened) {
       sender.className = "DCgossip";
-      sender.innerHTML = prompt("Useful hint?")
+      sender.innerHTML = gossip;
    } else {
       sender.className = "DCgossip";
    }
