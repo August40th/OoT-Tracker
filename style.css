@@ -171,11 +171,10 @@ label {
     background-repeat: no-repeat;
 
     position: relative;
-    width: 828px;
-    height: 400;
-    right: 0px;
+    width: 700px;
+    height: 420;
+    left: 830px;
 }
-
 
 .submapdiv{
     background-color: black;
