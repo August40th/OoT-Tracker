@@ -530,7 +530,7 @@ function drawDungeonList() {
       var shopitem = shopsize;
       var shopnum;
       var started = true;
-      If (shopsize > 0 && (quest === "Mixed" || quest === "Vanilla")) {
+      if (shopsize > 0 && (quest === "Mixed" || quest === "Vanilla")) {
             for (let key in dungeons[dungeonSelect].shoplist) {
                if (started == true) {
                   if (dungeons[dungeonSelect] == dungeons[13])
