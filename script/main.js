@@ -597,16 +597,16 @@ function drawDungeonList() {
          }
       }
       if (items.StoneofAgony && dungeons[dungeonSelect].gossiplist) {
-         for (var key in dungeons[dungeonSelect].gossiplist) {
+         for (var gossip in dungeons[dungeonSelect].gossiplist) {
             let li = document.createElement('li');
             li.style.cursor = 'pointer';
-            li.innerText = key;
+            li.innerText = gossip;
             if (dungeons[dungeonSelect].gossiplist[key].isOpened) {
                li.className = "DCopened";
             } else {
                li.className = "DCgossip";
             }
-            li.onclick = new Function('toggleGossip(this,' + dungeonSelect + ',"' + key + '")');
+            li.onclick = new Function('toggleGossip(this,' + dungeonSelect + ',"' + gossip + '")');
             li.onmouseover = new Function('highlightDungeonChest(this)');
             li.onmouseout = new Function('unhighlightDungeonChest(this)');
             li.setAttribute("data-type", "gossip");
