@@ -392,16 +392,16 @@ function clickDungeon(d) {
 }
 
 function drawERList(){
-   var ERlist = document.getElementById('inlist');
+   var ERlist = document.getElementById('indoorlist');
    ERlist.innerHTML = "";
-   for (var key in dungeons[0].chestlist) {
+   for (var key in dungeons[dungeonSelect].gossiplist) {
       var s = document.createElement('li');
       s.innerHTML = key
       s.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
       s.onmouseover = new Function('highlightDungeonChest(this)');
       s.onmouseout = new Function('unhighlightDungeonChest(this)');
       s.style.cursor = "pointer";
-      s.setAttribute("data-type", "chest");
+      s.setAttribute("data-type", "gossip");
       //if (dNone) s.classList.add("d-none");
       ERlist.appendChild(s)
    }
