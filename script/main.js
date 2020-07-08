@@ -2520,7 +2520,24 @@ function getDungeonAvailability(dungeon) {
                if (!list[key].isOpened) {
                    unopened++;
                }
-               
+               if (OcarinaShuffle == false && key == "Fairy Ocarina")
+               {}
+               else if (WeirdEgg == false && key == "Malons Weird Egg")
+               {}
+               else if (BeanShuffle == false && key == "Bean Salesman")
+               {}
+               else if (Medigoron == false && key == "Medigoron")
+               {}
+               else if (smallkeys != 'Keysanity' && key == "Guard Fight")
+               {}
+               else if (key.includes("Guard Fight ") && Rescue1 == true)
+               {}
+               else if (Cowsanity == false && key.includes("Cow Milk") && key != "Cow Milk Grotto") 
+               {}
+               else if (Cowsanity == false && GrottoER == false && key == "Cow Milk Grotto" ) 
+               {}
+               else if (GrottoER == false && (key.includes("Octorok Grotto") || key.includes("Fountain Grotto") ))
+               {}
                else if (shopsize > 0 && key.includes("Shop ") ) {
                   if (shopsize == 1 && key.includes("Shop 2") )
                   {}
