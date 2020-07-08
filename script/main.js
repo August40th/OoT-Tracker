@@ -530,9 +530,7 @@ function drawDungeonList() {
       var shopitem = shopsize;
       var shopnum;
       var started = true;
-      if (shopsize == 0)
-         dNone = true;
-      else if (shopsize > 0 && (quest === "Mixed" || quest === "Vanilla")) {
+      If (shopsize > 0 && (quest === "Mixed" || quest === "Vanilla")) {
             for (let key in dungeons[dungeonSelect].shoplist) {
                if (started == true) {
                   if (dungeons[dungeonSelect] == dungeons[13])
@@ -593,25 +591,29 @@ function drawDungeonList() {
                }
             }           
       }
-   }
-      if (items.StoneofAgony) {
-         for (let key in dungeons[dungeonSelect].gossiplist) {
-            let li = document.createElement('li');
-            li.style.cursor = 'pointer';
-            li.innerText = key;
-            if (dungeons[dungeonSelect].gossiplist[key].isOpened) {
-               li.className = "DCopened";
-            } else {
-               li.className = "DCgossip";
-            }
-            li.onclick = new Function('toggleGossip(this,' + dungeonSelect + ',"' + key + '")');
-            li.onmouseover = new Function('highlightDungeonChest(this)');
-            li.onmouseout = new Function('unhighlightDungeonChest(this)');
-            li.setAttribute("data-type", "gossip");
-            if (dNone) li.classList.add("d-none");
-            DClist.appendChild(li);
-         }
+      else if (shopsize == 0) {
+         dNone = true;
+         if (dNone) li.classList.add("d-none"); 
       }
+         if (items.StoneofAgony) {
+            for (let key in dungeons[dungeonSelect].gossiplist) {
+               let li = document.createElement('li');
+               li.style.cursor = 'pointer';
+               li.innerText = key;
+               if (dungeons[dungeonSelect].gossiplist[key].isOpened) {
+                  li.className = "DCopened";
+               } else {
+                  li.className = "DCgossip";
+               }
+               li.onclick = new Function('toggleGossip(this,' + dungeonSelect + ',"' + key + '")');
+               li.onmouseover = new Function('highlightDungeonChest(this)');
+               li.onmouseout = new Function('unhighlightDungeonChest(this)');
+               li.setAttribute("data-type", "gossip");
+               if (dNone) li.classList.add("d-none");
+               DClist.appendChild(li);
+            }
+         }
+      //}
    }
    if (quest === "Master" || quest === "Mixed") {
       dNone = false;
