@@ -2124,7 +2124,7 @@ function populateMapdiv() {
          document.getElementById(k).classList.add("d-none");
       else if (GrottoER == true && (chests[k].name.includes("Fountain")||chests[k].name.startsWith("Skulltula") ) )
          document.getElementById(k).classList.remove("d-none");
-   }
+
       var ss = document.createElement('span');
       ss.className = "tooltip";
       ss.innerHTML = chests[k].name;
