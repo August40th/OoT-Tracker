@@ -153,8 +153,8 @@ function loadCookie() {
    document.getElementsByName('shopsize')[0].value = cookieobj.shpsize;
    document.getElementsByName('shopsize')[0].onchange();
    
-   //document.getElementsByName('trialsize')[0].value = cookieobj.numtrials;
-   //document.getElementsByName('trialsize')[0].onchange();
+   document.getElementsByName('trialsize')[0].value = cookieobj.numtrials;
+   document.getElementsByName('trialsize')[0].onchange();
    
    document.getElementsByName('Cowsanity')[0].checked = !!cookieobj.cowShuff;
    document.getElementsByName('Cowsanity')[0].onchange();
@@ -239,7 +239,7 @@ function saveCookie() {
    cookieobj.gER = document.getElementsByName('GrottoER')[0].checked ? 1 : 0;
    
    cookieobj.shpsize = document.getElementsByName('shopsize')[0].value;
-   //cookieobj.numtrials = document.getElementsByName('numtrials')[0].value;
+   cookieobj.numtrials = document.getElementsByName('numtrials')[0].value;
 
    cookieobj.cowShuff = document.getElementsByName('Cowsanity')[0].checked ? 1 : 0;
 
@@ -560,6 +560,26 @@ function drawDungeonList() {
                }
             }           
       }
+      if (trialsize > 0 && dungeons[dungeonSelect].triallist) {
+         for (let key in dungeons[dungeonSelect].triallist) {
+            let li = document.createElement('li');
+            li.style.cursor = 'pointer';
+            li.innerText = key;
+            if (dungeons[dungeonSelect].triallist[key].isOpened) {
+               li.className = "DCopened";
+            } else if (dungeons[dungeonSelect].triallist[key].isAvailable()) {
+               li.className = "DCavailable";
+            } else {
+               li.className = "DCunavailable";
+            }
+            li.onclick = new Function('toggleTrial(this,' + dungeonSelect + ',"' + key + '")');
+            li.onmouseover = new Function('highlightDungeonChest(this)');
+            li.onmouseout = new Function('unhighlightDungeonChest(this)');
+            li.setAttribute("data-type", "trial");
+            if (dNone) li.classList.add("d-none");
+            DClist.appendChild(li);
+         }
+      }         
    }
    
    if (quest === "Master" || quest === "Mixed") {
@@ -776,6 +796,26 @@ function drawDungeonList() {
                }
             }           
       }
+      if (trialsize > 0 && dungeons[dungeonSelect].triallist) {
+         for (let key in dungeons[dungeonSelect].triallist) {
+            let li = document.createElement('li');
+            li.style.cursor = 'pointer';
+            li.innerText = key;
+            if (dungeons[dungeonSelect].triallist[key].isOpened) {
+               li.className = "DCopened";
+            } else if (dungeons[dungeonSelect].triallist[key].isAvailable()) {
+               li.className = "DCavailable";
+            } else {
+               li.className = "DCunavailable";
+            }
+            li.onclick = new Function('toggleTrial(this,' + dungeonSelect + ',"' + key + '")');
+            li.onmouseover = new Function('highlightDungeonChest(this)');
+            li.onmouseout = new Function('unhighlightDungeonChest(this)');
+            li.setAttribute("data-type", "trial");
+            if (dNone) li.classList.add("d-none");
+            DClist.appendChild(li);
+         }
+      }
    }
      
    if (quest === "Mixed" && dungeons[dungeonSelect].type === "dungeon") {
@@ -920,7 +960,10 @@ function toggleDungeonChest(sender, d, c) {
       toggleMQSkullChest(sender, d, c);
    } else if (chestType === 'MQscrub') {
       toggleMQScrubChest(sender, d, c);
+   }  else if (chestType === 'trial') {
+      toggleTrial(sender, d, c);
    }
+   
    updateMap();
 }
 
@@ -973,6 +1016,17 @@ function toggleScrubChest(sender, d, c) {
    if (dungeons[d].scrublist[c].isOpened) {
       sender.className = "DCopened";
    } else if (dungeons[d].scrublist[c].isAvailable()) {
+      sender.className = "DCavailable";
+   } else {
+      sender.className = "DCunavailable";
+   }
+}
+
+function toggleTrial(sender, d, c) {
+   dungeons[d].triallist[c].isOpened = !dungeons[d].triallist[c].isOpened;
+   if (dungeons[d].triallist[c].isOpened) {
+      sender.className = "DCopened";
+   } else if (dungeons[d].triallist[c].isAvailable()) {
       sender.className = "DCavailable";
    } else {
       sender.className = "DCunavailable";
@@ -1058,22 +1112,8 @@ function setCastle(sender) {
    saveCookie();
 }
 
-function setTrials(sender) {
-   trials = sender.value;
-   if (trials == true)
-      trialsize = 6;
-   else if ( trials == false)
-      trialsize = 0;
-   updateMap();
-   saveCookie();
-}
-
 function setTrialSize(sender) {
    trialsize = sender.value;
-   if (trialsize > 0)
-      trials = true;
-   else if (trialsize = 0)
-      trials = false;
    updateMap();
    saveCookie();
 }
