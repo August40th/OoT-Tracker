@@ -1854,7 +1854,7 @@ function updateMap() {
          document.getElementById(k).classList.add("d-none");
       else if (GrottoER == false && chests[k].name.includes("Fountain") )
          document.getElementById(k).classList.add("d-none");
-      else if (GrottoER == true && (chests[k].name.includes("Fountain") || chests[k].name.includes("Cow Milk") ||chests[k].name.includes("Skulltula") ) )
+      else if (GrottoER == true && (chests[k].name.includes("Fountain")||chests[k].name.includes("Skulltula") ) )
          document.getElementById(k).classList.remove("d-none");
    }
 
