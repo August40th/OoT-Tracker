@@ -419,6 +419,10 @@ function drawDungeonList() {
                s.classList.add("d-none"); }
             if (BeanShuffle == false && key == "Bean Salesman") {
                s.classList.add("d-none"); }
+            if (Keysanity == false && key == "Guard Fight") {
+               s.classList.add("d-none"); }
+            if (Keysanity == false && key.includes("Guard Fight ")) && Rescue1 == true {
+               s.classList.add("d-none"); }
             if (Cowsanity == false && s.innerHTML.includes("Cow Milk") && key != "Cow Milk Grotto") {
                s.classList.add("d-none"); }
             if (Cowsanity == false && GrottoER == false && key == "Cow Milk Grotto" ) {
@@ -607,6 +611,10 @@ function drawDungeonList() {
             if (WeirdEgg == false && key == "Malons Weird Egg") {
                s.classList.add("d-none"); }
             if (BeanShuffle == false && key == "Bean Salesman") {
+               s.classList.add("d-none"); }
+            if (Keysanity == false && key == "Guard Fight") {
+               s.classList.add("d-none"); }
+            if (Keysanity == false && key.includes("Guard Fight ")) && Rescue1 == true {
                s.classList.add("d-none"); }
             if (Cowsanity == false && s.innerHTML.includes("Cow Milk") && key != "Cow Milk Grotto") {
                s.classList.add("d-none"); }
@@ -1872,6 +1880,10 @@ function updateMap() {
                {}
                else if (BeanShuffle == false && key == "Bean Salesman")
                {}
+               else if (Keysanity == false && key == "Guard Fight")
+               {}
+               else if (Keysanity == false && key.includes("Guard Fight ")) && Rescue1 == true 
+               {}
                else if (Cowsanity == false && key.includes("Cow Milk") && key != "Cow Milk Grotto") 
                {}
                else if (Cowsanity == false && GrottoER == false && key == "Cow Milk Grotto" ) 
@@ -1936,6 +1948,10 @@ function updateMap() {
                   else if (WeirdEgg == false && key == "Malons Weird Egg")
                   {}
                   else if (BeanShuffle == false && key == "Bean Salesman")
+                  {}
+                  else if (Keysanity == false && key == "Guard Fight")
+                  {}
+                  else if (Keysanity == false && key.includes("Guard Fight ")) && Rescue1 == true 
                   {}
                   else if (Cowsanity == false && key.includes("Cow Milk") && key != "Cow Milk Grotto") 
                   {}
@@ -2163,6 +2179,10 @@ function populateMapdiv() {
                {}
                else if (BeanShuffle == false && key == "Bean Salesman")
                {}
+               else if (Keysanity == false && key == "Guard Fight")
+               {}
+               else if (Keysanity == false && key.includes("Guard Fight ")) && Rescue1 == true 
+               {}
                else if (Cowsanity == false && key.includes("Cow Milk") && key != "Cow Milk Grotto") 
                {}
                else if (Cowsanity == false && GrottoER == false && key == "Cow Milk Grotto" ) 
@@ -2227,6 +2247,10 @@ function populateMapdiv() {
                   else if (WeirdEgg == false && key == "Malons Weird Egg")
                   {}
                   else if (BeanShuffle == false && key == "Bean Salesman")
+                  {}
+                  else if (Keysanity == false && key == "Guard Fight")
+                  {}
+                  else if (Keysanity == false && key.includes("Guard Fight ")) && Rescue1 == true 
                   {}
                   else if (Cowsanity == false && key.includes("Cow Milk") && key != "Cow Milk Grotto") 
                   {}
@@ -2360,6 +2384,10 @@ function getDungeonAvailability(dungeon) {
                {}
                else if (BeanShuffle == false && key == "Bean Salesman")
                {}
+               else if (Keysanity == false && key == "Guard Fight")
+               {}
+               else if (Keysanity == false && key.includes("Guard Fight ")) && Rescue1 == true 
+               {}
                else if (Cowsanity == false && key.includes("Cow Milk") && key != "Cow Milk Grotto") 
                {}
                else if (Cowsanity == false && GrottoER == false && key == "Cow Milk Grotto" ) 
@@ -2443,6 +2471,10 @@ function getDungeonAvailability(dungeon) {
                else if (WeirdEgg == false && key == "Malons Weird Egg")
                {}
                else if (BeanShuffle == false && key == "Bean Salesman")
+               {}
+               else if (Keysanity == false && key == "Guard Fight")
+               {}
+               else if (Keysanity == false && key.includes("Guard Fight ")) && Rescue1 == true 
                {}
                else if (Cowsanity == false && key.includes("Cow Milk") && key != "Cow Milk Grotto") 
                {}
