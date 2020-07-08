@@ -2533,11 +2533,6 @@ var dungeons = [
                return items.Ocarina && items.SongofStorms && items.Bombs
             }
          },
-         'Gannon’s Castle Skulltula': {
-            isAvailable: function () {
-               return items.Hookshot
-            }
-         },
       },
       gossiplist: {
          'Above Malon': {
@@ -2732,6 +2727,11 @@ var dungeons = [
          ['Link the Goron']: {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Glove || items.Bombs || items.Bow || (items.Bombchu && BombchuLogic));
+            }
+         },
+         ['Medigoron']: {
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Glove || items.Bombs || (items.Bombchu && BombchuLogic));
             }
          },
          ['Left Boulder Maze Chest']: {
@@ -3588,6 +3588,26 @@ var dungeons = [
       y: "16.4%",
       type: "overworld",
       chestlist: {
+         ['Guard Fight']: {
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.Ocarina && items.EponasSong) || items.Hookshot >= 2 || isFortressOpen()) && items.MasterSword && Keysanity;
+            }
+         },
+         ['Guard Fight 2']: {
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.Ocarina && items.EponasSong) || items.Hookshot >= 2 || isFortressOpen()) && items.MasterSword && Keysanity;
+            }
+         },
+         ['Guard Fight 3']: {
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.Ocarina && items.EponasSong) || items.Hookshot >= 2 || isFortressOpen()) && items.MasterSword && Keysanity;
+            }
+         },
+         ['Guard Fight 4']: {
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.Ocarina && items.EponasSong) || items.Hookshot >= 2 || isFortressOpen()) && items.MasterSword && Keysanity;
+            }
+         },
          ['Rooftop Chest']: {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.Ocarina && items.EponasSong) || items.Hookshot >= 2 || isFortressOpen()) && items.MasterSword && (items.HoverBoots || (items.Scarecrow >= 2 && items.Hookshot) || items.Hookshot >= 2);
@@ -3907,6 +3927,16 @@ var chests = [
       y: "25.0%",
       isAvailable: function () {
          if ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.MasterSword && items.Hammer) || (items.Bombchu && BombchuLogic)))
+            return "available";
+         return "unavailable";
+      }
+   },
+   {
+      name: "Ganon\'s Castle Skulltula",
+      x: "52.0%",
+      y: "15.0%",
+      isAvailable: function () {
+         if (items.MasterSword)
             return "available";
          return "unavailable";
       }
