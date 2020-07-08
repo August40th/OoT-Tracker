@@ -391,6 +391,22 @@ function clickDungeon(d) {
    updateMap();
 }
 
+function drawERList(){
+   var ERlist = document.getElementById('inlist');
+   ERlist.innerHTML = "";
+   for (var key in dungeons[0].chestlist) {
+      var s = document.createElement('li');
+      s.innerHTML = key
+      s.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
+      s.onmouseover = new Function('highlightDungeonChest(this)');
+      s.onmouseout = new Function('unhighlightDungeonChest(this)');
+      s.style.cursor = "pointer";
+      s.setAttribute("data-type", "chest");
+      //if (dNone) s.classList.add("d-none");
+      ERlist.appendChild(s)
+   }
+}
+
 function drawDungeonList() {
    DCcount = 0;
    var DClist = document.getElementById('submaplist');
@@ -2394,6 +2410,7 @@ function populateMapdiv() {
    document.getElementById("dungeon" + dungeonSelect).style.backgroundImage = "url(images/highlighted.png)";
 
    drawDungeonList();
+   drawERList();
 }
 
 function getDungeonAvailability(dungeon) {
