@@ -2100,6 +2100,8 @@ function updateMap() {
             dNone = true;
          }
          let itemType = itemlist[item].getAttribute("data-type") + "list";
+         if (dungeons[dungeonSelect][itemType][itemlist[item].innerHTML].isOpened = undefined)
+            itemlist[item].className = "DCgossip";
          if (dungeons[dungeonSelect][itemType][itemlist[item].innerHTML].isOpened)
             itemlist[item].className = "DCopened";
          else if (dungeons[dungeonSelect][itemType][itemlist[item].innerHTML].isAvailable())
