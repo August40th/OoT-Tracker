@@ -601,11 +601,7 @@ function drawDungeonList() {
             let li = document.createElement('li');
             li.style.cursor = 'pointer';
             li.innerText = gossip;
-            if (dungeons[dungeonSelect].gossiplist[gossip].isOpened) {
-               li.innerHTML = prompt("Usefule hint?");
-            } else {
-               li.className = "DCgossip";
-            }
+            li.className = "DCgossip";
             li.onclick = new Function('toggleGossip(this,' + dungeonSelect + ',"' + gossip + '")');
             li.onmouseover = new Function('highlightDungeonChest(this)');
             li.onmouseout = new Function('unhighlightDungeonChest(this)');
@@ -1077,8 +1073,10 @@ function toggleTrial(sender, d, c) {
 
 function toggleGossip(sender, d, c) {
    dungeons[d].gossiplist[c].isOpened = !dungeons[d].gossiplist[c].isOpened;
+   var prompt = document.createElement("prompt"); 
    if (dungeons[d].gossiplist[c].isOpened) {
-      sender.className = "DCopened";
+      sender.className = "DCgossip";
+      sender.innerHTML = prompt("Useful hint?")
    } else {
       sender.className = "DCgossip";
    }
