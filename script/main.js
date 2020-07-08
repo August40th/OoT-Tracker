@@ -1295,7 +1295,6 @@ function setShopsize(sender) {
       Shopsanity = false;
    }
    drawDungeonList();
-   populateMapdiv()
    updateMap();
    saveCookie();
 } 
