@@ -1771,7 +1771,7 @@ function gridItemClick(row, col, corner) {
 
    var item = itemLayout[row][col];
 
-   if (medallions[item] !== undefined) {
+   if (medallions[item]) {
       if (corner == 3) {
          medallions[item]++;
          if (medallions[item] >= 10)
