@@ -30,6 +30,7 @@ WeirdEgg = false;
 BeanShuffle = false;
 
 BombchuLogic = false;
+Medigoron = false;
 
 OpenForest = true;
 OpenGate = true;
@@ -71,7 +72,7 @@ function getCookie() {
    return {};
 }
 
-var cookiekeys = ['iZoom', 'mZoom', 'rainlogic', 'items', 'qlogic', 'flogic', 'carp', 'smallk', 'bossk', 'sclogic', 'sklogic', 'ocShuff', 'sngShuff', 'eggShuff', 'beanShuff', 'chulogic', 'forest', 'gate', 'door', 'fountain', 'shpsize', 'cowShuff', 'numtrials', 'pigBK', 'gER'];
+var cookiekeys = ['iZoom', 'mZoom', 'rainlogic', 'items', 'qlogic', 'flogic', 'carp', 'smallk', 'bossk', 'sclogic', 'sklogic', 'ocShuff', 'sngShuff', 'eggShuff', 'beanShuff', 'chulogic', 'forest', 'gate', 'door', 'fountain', 'shpsize', 'cowShuff', 'numtrials', 'pigBK', 'gER', 'medi'];
 var cookieDefault = {
    iZoom: 100,
    mZoom: 100,
@@ -97,6 +98,7 @@ var cookieDefault = {
    numtrials: 0,
    pigBK: 'Removed',
    gER: 0,
+   medi: 0,
    
    items: defaultItemGrid
 }
@@ -161,6 +163,9 @@ function loadCookie() {
 
    document.getElementsByName('BombchuLogic')[0].checked = !!cookieobj.chulogic;
    document.getElementsByName('BombchuLogic')[0].onchange();
+   
+   document.getElementsByName('Medigoron')[0].checked = !!cookieobj.medi;
+   document.getElementsByName('Medigoron')[0].onchange();
 
    document.getElementsByName('Rescue1')[0].checked = !!cookieobj.carp;
    document.getElementsByName('Rescue1')[0].onchange();
@@ -244,6 +249,8 @@ function saveCookie() {
    cookieobj.cowShuff = document.getElementsByName('Cowsanity')[0].checked ? 1 : 0;
 
    cookieobj.chulogic = document.getElementsByName('BombchuLogic')[0].checked ? 1 : 0;
+   cookieobj.medi = document.getElementsByName('Medigoron')[0].checked ? 1 : 0;
+   
    cookieobj.carp = document.getElementsByName('Rescue1')[0].checked ? 1 : 0;
 
    for (rbuttonID in document.getElementsByName('rainbowbridge')) {
@@ -1170,6 +1177,7 @@ function setFortressLogic(sender) {
       items.Membership = true;
    }
    updateGridItemAll();
+   drawDungeonList();
    updateMap();
    saveCookie();
 }
@@ -1180,6 +1188,7 @@ function setCarpenter(sender) {
       keyimg = 0;
    }
    updateGridItemAll();
+   drawDungeonList();
    updateMap();
    saveCookie();
 }
@@ -1217,6 +1226,7 @@ function setSmallKeys(sender) {
       items.WellKey = 0;
    }
    updateGridItemAll();
+   drawDungeonList();
    updateMap();
    saveCookie();
 }
@@ -1358,6 +1368,13 @@ function setCows(sender) {
    Cowsanity = sender.checked;
    updateMap();
    drawDungeonList();
+   saveCookie();
+}
+
+function setMedigoron(sender) {
+   Medigoron = sender.checked;
+   drawDungeonList();
+   updateMap();
    saveCookie();
 }
 
