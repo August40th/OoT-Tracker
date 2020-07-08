@@ -2459,7 +2459,6 @@ function getDungeonAvailability(dungeon) {
       }
        ['chestlist', 'skulllist', 'scrublist', 'shoplist'].forEach(function (key) {
            let list = checklist[key];
-           if (list != gossiplist[key]){
               for (let key in list) {
                   if (!list[key].isOpened) {
                       unopened++;
@@ -2494,7 +2493,6 @@ function getDungeonAvailability(dungeon) {
                       canGet++;
                   }
               }
-           }
        });
    }
    if (quest === "Master" || quest === "Mixed") {
