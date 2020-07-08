@@ -1612,6 +1612,10 @@ function updateGridItem(row, index) {
       else
          itemGrid[row][index][3].style.backgroundImage = "url(images/" + songimg[songs[item]] + ".png)";
    }
+   if (medallions[item] !== undefined) {
+         itemGrid[row][index][3].style.backgroundImage = "url(images/" + dungeonimg[medallions[item]] + ".png)";
+   }
+   
    if (item === "Skulltula") {
       updateSkullIcon()
    }
@@ -1771,7 +1775,7 @@ function gridItemClick(row, col, corner) {
 
    var item = itemLayout[row][col];
 
-   if (medallions[item]) {
+   if (medallions[item] !== undefined) {
       if (corner == 3) {
          medallions[item]++;
          if (medallions[item] >= 10)
