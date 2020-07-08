@@ -1073,11 +1073,8 @@ function toggleTrial(sender, d, c) {
 
 function toggleGossip(sender, d, c) {
    dungeons[d].gossiplist[c].isOpened = !dungeons[d].gossiplist[c].isOpened;
-   var gossip = document.getElementById('gossip'); 
    if (dungeons[d].gossiplist[c].isOpened) {
       sender.className = "DCgossip";
-      sender.innerHTML = gossip.value;
-      dungeons[d].gossiplist[c] = gossip.value;
    } else {
       sender.className = "DCgossip";
    }
