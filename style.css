@@ -176,6 +176,15 @@ label {
     left: 830px;
 }
 
+.submindoorlistapdiv{
+    background-color: black;
+    top: 0px;
+    left: 420px;
+    width: 232px;
+    height: 240px;
+    margin-top: 160px;
+}
+
 .submapdiv{
     background-color: black;
 
