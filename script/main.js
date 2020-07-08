@@ -597,7 +597,7 @@ function drawDungeonList() {
          }
       }
       if (items.StoneofAgony && dungeons[dungeonSelect].gossiplist) {
-         for (let key in dungeons[dungeonSelect].gossiplist) {
+         for (var key in dungeons[dungeonSelect].gossiplist) {
             let li = document.createElement('li');
             li.style.cursor = 'pointer';
             li.innerText = key;
