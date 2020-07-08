@@ -419,7 +419,9 @@ function drawDungeonList() {
                s.classList.add("d-none"); }
             if (BeanShuffle == false && key == "Bean Salesman") {
                s.classList.add("d-none"); }
-            if (Cowsanity == false && s.innerHTML.includes("Cow Milk")) {
+            if (Cowsanity == false && s.innerHTML.includes("Cow Milk") && key != "Cow Milk Grotto") {
+               s.classList.add("d-none"); }
+            if (Cowsanity == false && GrottoER == false && key == "Cow Milk Grotto" ) {
                s.classList.add("d-none"); }
             if (GrottoER == false && (s.innerHTML.includes("Octorok Grotto") || s.innerHTML.includes("Fountain Grotto") )) {
                s.classList.add("d-none"); }
@@ -587,7 +589,9 @@ function drawDungeonList() {
                s.classList.add("d-none"); }
             if (BeanShuffle == false && key == "Bean Salesman") {
                s.classList.add("d-none"); }
-            if (Cowsanity == false && s.innerHTML.includes("Cow Milk")) {
+            if (Cowsanity == false && s.innerHTML.includes("Cow Milk") && key != "Cow Milk Grotto") {
+               s.classList.add("d-none"); }
+            if (Cowsanity == false && GrottoER == false && key == "Cow Milk Grotto" ) {
                s.classList.add("d-none"); }
             if (GrottoER == false && (s.innerHTML.includes("Octorok Grotto") || s.innerHTML.includes("Fountain Grotto") )) {
                s.classList.add("d-none"); }
