@@ -583,18 +583,18 @@ function drawDungeonList() {
                shopnum--;
             }
          }
-      } 
-      else if (shopsize == 0) {
-         dNone = true;
-         let li = document.createElement('li');
-         li.style.cursor = 'pointer';
-         li.innerText = key;
-         li.onclick = new Function('toggleShopChest(this,' + dungeonSelect + ',"' + key + '")');
-         li.onmouseover = new Function('highlightDungeonChest(this)');
-         li.onmouseout = new Function('unhighlightDungeonChest(this)');
-         li.setAttribute("data-type", "shop");
-         if (dNone) li.classList.add("d-none"); 
-         DClist.appendChild(li);
+         else if (shopsize == 0) {
+            dNone = true;
+            let li = document.createElement('li');
+            li.style.cursor = 'pointer';
+            li.innerText = key;
+            li.onclick = new Function('toggleShopChest(this,' + dungeonSelect + ',"' + key + '")');
+            li.onmouseover = new Function('highlightDungeonChest(this)');
+            li.onmouseout = new Function('unhighlightDungeonChest(this)');
+            li.setAttribute("data-type", "shop");
+            if (dNone) li.classList.add("d-none"); 
+            DClist.appendChild(li);
+         }
       }
       if (items.StoneofAgony && dungeons[dungeonSelect].gossiplist) {
          for (let key in dungeons[dungeonSelect].gossiplist) {
