@@ -557,3 +557,10 @@ label {
 .d-none {
     display:none!important;
 }
+
+.prompt  {
+    width: 300px;
+    height: 500px;
+    background: white;
+    color: #FFA500;
+}
