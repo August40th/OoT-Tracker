@@ -1076,7 +1076,9 @@ function toggleGossip(sender, d, c) {
    var gossip = document.getElementById('gossip'); 
    if (dungeons[d].gossiplist[c].isOpened) {
       sender.className = "DCgossip";
+      sender.innerHTML = gossip.value;
       dungeons[d].gossiplist[c].innerHTML = gossip.value;
+      dungeons[d].gossiplist[c].className = gossip.value;
    } else {
       sender.className = "DCgossip";
    }
