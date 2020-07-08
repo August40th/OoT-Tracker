@@ -573,6 +573,10 @@ label {
     cursor: pointer;
 }
 
+#inlist {
+    cursor: pointer;
+}
+
 .d-none {
     display:none!important;
 }
