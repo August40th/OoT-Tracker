@@ -592,7 +592,25 @@ function drawDungeonList() {
                      }
                }
             }           
-      }         
+      }  
+      if (items.StoneofAgony) {
+         for (let key in dungeons[dungeonSelect].gossiplist) {
+            let li = document.createElement('li');
+            li.style.cursor = 'pointer';
+            li.innerText = key;
+            if (dungeons[dungeonSelect].gossiplist[key].isOpened) {
+               li.className = "DCopened";
+            } else {
+               li.className = "DCgossip";
+            }
+            li.onclick = new Function('toggleGossip(this,' + dungeonSelect + ',"' + key + '")');
+            li.onmouseover = new Function('highlightDungeonChest(this)');
+            li.onmouseout = new Function('unhighlightDungeonChest(this)');
+            li.setAttribute("data-type", "gossip");
+            if (dNone) li.classList.add("d-none");
+            DClist.appendChild(li);
+         }
+      }
    }
    if (quest === "Master" || quest === "Mixed") {
       dNone = false;
@@ -980,6 +998,8 @@ function toggleDungeonChest(sender, d, c) {
       toggleMQScrubChest(sender, d, c);
    }  else if (chestType === 'trial') {
       toggleTrial(sender, d, c);
+   } else if (chestType === 'gossip') {
+      toggleTrial(sender, d, c);
    }
    
    updateMap();
@@ -1048,6 +1068,15 @@ function toggleTrial(sender, d, c) {
       sender.className = "DCavailable";
    } else {
       sender.className = "DCunavailable";
+   }
+}
+
+function toggleGossip(sender, d, c) {
+   dungeons[d].gossiplist[c].isOpened = !dungeons[d].gossiplist[c].isOpened;
+   if (dungeons[d].gossiplist[c].isOpened) {
+      sender.className = "DCopened";
+   } else {
+      sender.className = "DCgossip";
    }
 }
 
