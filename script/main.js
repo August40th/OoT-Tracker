@@ -1114,6 +1114,7 @@ function setCastle(sender) {
 function setTrialSize(sender) {
    trialsize = sender.value;
    updateMap();
+   drawDungeonList();
    saveCookie();
 }
 
