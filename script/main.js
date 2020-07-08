@@ -1890,6 +1890,10 @@ function gridItemClick(row, col, corner) {
       }
    } else if ((typeof items[item]) == "boolean") {
       items[item] = !items[item];
+      if (items[item] == items.StoneofAgony) {
+         drawDungeonList();
+         updateMap(); 
+      }
    } else {
       items[item]++;
       if (items[item] > itemsMax[item]) {
