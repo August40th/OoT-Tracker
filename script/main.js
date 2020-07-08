@@ -1613,7 +1613,7 @@ function updateGridItem(row, index) {
          itemGrid[row][index][3].style.backgroundImage = "url(images/" + songimg[songs[item]] + ".png)";
    }
    if (medallions[item] !== undefined) {
-         itemGrid[row][index][3].style.backgroundImage = "url(images/" + dungeonimg[medallions[item]] + ".png)";
+         itemGrid[row][index][3].style.backgroundImage = "url(images/" + dungeonImg[medallions[item]] + ".png)";
    }
    
    if (item === "Skulltula") {
