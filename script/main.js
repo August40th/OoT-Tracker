@@ -602,7 +602,7 @@ function drawDungeonList() {
             li.style.cursor = 'pointer';
             li.innerText = gossip;
             if (dungeons[dungeonSelect].gossiplist[gossip].isOpened) {
-               li.className = prompt("Usefule hint?");
+               li.innerHTML = prompt("Usefule hint?");
             } else {
                li.className = "DCgossip";
             }
