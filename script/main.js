@@ -1851,7 +1851,11 @@ function updateMap() {
       else if (Cowsanity == false && chests[k].name.includes("Cow Milk") && ((skulltula === "Overworld" || skulltula === "All") ) )
          document.getElementById(k).classList.remove("d-none");
       else if (Cowsanity == false && chests[k].name.includes("Cow Milk") )
-         document.getElementById(k).classList.add("d-none");   
+         document.getElementById(k).classList.add("d-none");
+      else if (GrottoER == false && chests[k].name.includes("Fountain") )
+         document.getElementById(k).classList.add("d-none");
+      else if (GrottoER == true && (chests[k].name.includes("Fountain") || chests[k].name.includes("Cow Milk") ||chests[k].name.includes("Skulltula") )
+         document.getElementById(k).classList.remove("d-none");
    }
 
    for (k = 0; k < dungeons.length; k++) {
@@ -1868,9 +1872,13 @@ function updateMap() {
                {}
                else if (BeanShuffle == false && key == "Bean Salesman")
                {}
-               else if (Cowsanity == false && key.includes("Cow Milk"))
+               else if (Cowsanity == false && key.includes("Cow Milk") && key != "Cow Milk Grotto") 
                {}
-               else if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable() && !(BeanShuffle == false && key == "BeanSalseman") )
+               else if (Cowsanity == false && GrottoER == false && key == "Cow Milk Grotto" ) 
+               {}
+               else if (GrottoER == false && (key.includes("Octorok Grotto") || key.includes("Fountain Grotto") ))
+               {}
+               else if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable() )
                   DCcount++;
             }
          }
@@ -1929,7 +1937,11 @@ function updateMap() {
                   {}
                   else if (BeanShuffle == false && key == "Bean Salesman")
                   {}
-                  else if (Cowsanity == false && key.includes("Cow Milk"))
+                  else if (Cowsanity == false && key.includes("Cow Milk") && key != "Cow Milk Grotto") 
+                  {}
+                  else if (Cowsanity == false && GrottoER == false && key == "Cow Milk Grotto" ) 
+                  {}
+                  else if (GrottoER == false && (key.includes("Octorok Grotto") || key.includes("Fountain Grotto") ))
                   {}
                   else if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable() && !(BeanShuffle == false && key == "BeanSalseman") )
                      DCcount++;
@@ -2140,7 +2152,11 @@ function populateMapdiv() {
                {}
                else if (BeanShuffle == false && key == "Bean Salesman")
                {}
-               else if (Cowsanity == false && key.includes("Cow Milk"))
+               else if (Cowsanity == false && key.includes("Cow Milk") && key != "Cow Milk Grotto") 
+               {}
+               else if (Cowsanity == false && GrottoER == false && key == "Cow Milk Grotto" ) 
+               {}
+               else if (GrottoER == false && (key.includes("Octorok Grotto") || key.includes("Fountain Grotto") ))
                {}
                else if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable() && !(BeanShuffle == false && key == "BeanSalseman") )
                   DCcount++;
@@ -2201,7 +2217,11 @@ function populateMapdiv() {
                   {}
                   else if (BeanShuffle == false && key == "Bean Salesman")
                   {}
-                  else if (Cowsanity == false && key.includes("Cow Milk"))
+                  else if (Cowsanity == false && key.includes("Cow Milk") && key != "Cow Milk Grotto") 
+                  {}
+                  else if (Cowsanity == false && GrottoER == false && key == "Cow Milk Grotto" ) 
+                  {}
+                  else if (GrottoER == false && (key.includes("Octorok Grotto") || key.includes("Fountain Grotto") ))
                   {}
                   else if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable() && !(BeanShuffle == false && key == "BeanSalseman") )
                      DCcount++;
@@ -2329,7 +2349,11 @@ function getDungeonAvailability(dungeon) {
                {}
                else if (BeanShuffle == false && key == "Bean Salesman")
                {}
-               else if (Cowsanity == false && key.includes("Cow Milk"))
+               else if (Cowsanity == false && key.includes("Cow Milk") && key != "Cow Milk Grotto") 
+               {}
+               else if (Cowsanity == false && GrottoER == false && key == "Cow Milk Grotto" ) 
+               {}
+               else if (GrottoER == false && (key.includes("Octorok Grotto") || key.includes("Fountain Grotto") ))
                {}
                else if (shopsize > 0 && key.includes("Shop ") ) {
                   if (shopsize == 1 && key.includes("Shop 2") )
@@ -2409,7 +2433,11 @@ function getDungeonAvailability(dungeon) {
                {}
                else if (BeanShuffle == false && key == "Bean Salesman")
                {}
-               else if (Cowsanity == false && key.includes("Cow Milk"))
+               else if (Cowsanity == false && key.includes("Cow Milk") && key != "Cow Milk Grotto") 
+               {}
+               else if (Cowsanity == false && GrottoER == false && key == "Cow Milk Grotto" ) 
+               {}
+               else if (GrottoER == false && (key.includes("Octorok Grotto") || key.includes("Fountain Grotto") ))
                {}
                else if (shopsize > 0 && key.includes("Shop ") ) {
                   if (shopsize == 1 && key.includes("Shop 2") )
