@@ -1839,7 +1839,7 @@ function updateMap() {
    for (k = 0; k < chests.length; k++) {
       if (!chests[k].isOpened)
          document.getElementById(k).className = "mapspan chest " + checkChestAvailablity(chests[k]) + ((chestMarked.indexOf(k) > -1) ? " wayofhero" : " ");
-      if (chests[k].name.startsWith("Skulltula")) {
+      if (chests[k].name.includes("Skulltula")) {
          if (skulltula === "Overworld" || skulltula === "All") {
             document.getElementById(k).classList.remove("d-none");
          } else {
@@ -2107,7 +2107,7 @@ function populateMapdiv() {
       if (chestMarked.indexOf(k) > -1) {
          s.className += " wayofhero";
       }
-      if (chests[k].name.startsWith("Skulltula")) {
+      if (chests[k].name.includes("Skulltula")) {
          if (skulltula === "Overworld" || skulltula === "All") {
             s.classList.remove("d-none");
          } else {
