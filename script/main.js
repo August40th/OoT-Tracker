@@ -239,7 +239,7 @@ function saveCookie() {
    cookieobj.gER = document.getElementsByName('GrottoER')[0].checked ? 1 : 0;
    
    cookieobj.shpsize = document.getElementsByName('shopsize')[0].value;
-   cookieobj.numtrials = document.getElementsByName('numtrials')[0].value;
+   cookieobj.numtrials = document.getElementsByName('trialsize')[0].value;
 
    cookieobj.cowShuff = document.getElementsByName('Cowsanity')[0].checked ? 1 : 0;
 
