@@ -1378,11 +1378,7 @@ function showSettings(sender) {
 }
 
 function showTracker(target, sender) {
-   if (sender.checked) {
       document.getElementById(target).style.display = '';
-   } else {
-      document.getElementById(target).style.display = 'none';
-   }
 }
 
 function clickRowButton(row) {
