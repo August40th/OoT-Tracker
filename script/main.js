@@ -601,7 +601,7 @@ function drawDungeonList() {
             let li = document.createElement('li');
             li.style.cursor = 'pointer';
             li.innerText = gossip;
-            if (dungeons[dungeonSelect].gossiplist[key].isOpened) {
+            if (dungeons[dungeonSelect].gossiplist[gossip].isOpened) {
                li.className = "DCopened";
             } else {
                li.className = "DCgossip";
