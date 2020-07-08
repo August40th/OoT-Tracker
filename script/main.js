@@ -602,6 +602,7 @@ function drawDungeonList() {
             li.style.cursor = 'pointer';
             li.innerText = gossip;
             li.className = "DCgossip";
+            toggleGossip(li,' + dungeonSelect + ',"' + gossip + '")
             li.onclick = new Function('toggleGossip(this,' + dungeonSelect + ',"' + gossip + '")');
             li.onmouseover = new Function('highlightDungeonChest(this)');
             li.onmouseout = new Function('unhighlightDungeonChest(this)');
@@ -1074,6 +1075,8 @@ function toggleTrial(sender, d, c) {
 function toggleGossip(sender, d, c) {
    dungeons[d].gossiplist[c].isOpened = !dungeons[d].gossiplist[c].isOpened;
    if (dungeons[d].gossiplist[c].isOpened) {
+      sender.className = "DCgossip";
+   } else if (dungeons[d].gossiplist[c].isAvailable()) {
       sender.className = "DCgossip";
    } else {
       sender.className = "DCgossip";
