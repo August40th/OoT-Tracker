@@ -2115,15 +2115,15 @@ function populateMapdiv() {
          }
       }
       if (Cowsanity == true && chests[k].name.includes("Cow Milk"))
-         document.getElementById(k).classList.remove("d-none");
+         s.classList.remove("d-none");
       else if (Cowsanity == false && chests[k].name.includes("Cow Milk") && ((skulltula === "Overworld" || skulltula === "All") ) )
-         document.getElementById(k).classList.remove("d-none");
+         s.classList.remove("d-none");
       else if (Cowsanity == false && chests[k].name.includes("Cow Milk") )
-         document.getElementById(k).classList.add("d-none");
+         s.classList.add("d-none");
       if (GrottoER == false && chests[k].name.includes("Fountain") )
-         document.getElementById(k).classList.add("d-none");
+         s.classList.add("d-none");
       else if (GrottoER == true && (chests[k].name.includes("Fountain")||chests[k].name.startsWith("Skulltula") ) )
-         document.getElementById(k).classList.remove("d-none");
+         s.classList.remove("d-none");
 
       var ss = document.createElement('span');
       ss.className = "tooltip";
