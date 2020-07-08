@@ -176,15 +176,6 @@ label {
     left: 830px;
 }
 
-.indoorlist{
-    background-color: red;
-    top: 0px;
-    left: 420px;
-    width: 232px;
-    height: 240px;
-    margin-top: 160px;
-}
-
 .submapdiv{
     background-color: black;
 
@@ -573,7 +564,12 @@ label {
     cursor: pointer;
 }
 
-#inlist {
+#indoorlist {
+    background-color: black;
+    top: -136px;
+    left:0px;
+    position: absolute;
+    width: 400px;
     cursor: pointer;
 }
 
