@@ -1073,7 +1073,7 @@ function toggleTrial(sender, d, c) {
 }
 
 function toggleGossip(sender, d, c) {
-   dungeons[d].gossiplist[c].isOpened = !dungeons[d].gossiplist[c].isOpened;
+   dungeons[d].gossiplist[c].isOpened;
    if (dungeons[d].gossiplist[c].isOpened) {
       sender.className = "DCgossip";
    } else if (dungeons[d].gossiplist[c].isAvailable()) {
