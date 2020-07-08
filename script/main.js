@@ -560,6 +560,7 @@ function drawDungeonList() {
                }
             }           
       }
+   }
       if (trialsize > 0 && dungeons[dungeonSelect].triallist) {
          for (let key in dungeons[dungeonSelect].triallist) {
             let li = document.createElement('li');
@@ -580,7 +581,6 @@ function drawDungeonList() {
             DClist.appendChild(li);
          }
       }         
-   }
    
    if (quest === "Master" || quest === "Mixed") {
       dNone = false;
@@ -796,6 +796,7 @@ function drawDungeonList() {
                }
             }           
       }
+   }
       if (trialsize > 0 && dungeons[dungeonSelect].triallist) {
          for (let key in dungeons[dungeonSelect].triallist) {
             let li = document.createElement('li');
@@ -816,7 +817,6 @@ function drawDungeonList() {
             DClist.appendChild(li);
          }
       }
-   }
      
    if (quest === "Mixed" && dungeons[dungeonSelect].type === "dungeon") {
       const submaparea = document.getElementById("submaparea");
