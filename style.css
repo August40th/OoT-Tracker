@@ -493,7 +493,7 @@ label {
 }
 
 .DCgossip{
-    color: rgn (0,200,200);
+    color: rgn (0,255,255);
 }
 
 .DChighlight{
@@ -566,10 +566,11 @@ label {
 
 #indoorlist {
     background-color: black;
-    top: -136px;
+    top: -515px;
     left:0px;
     position: absolute;
     width: 400px;
+    height: 515px;
     cursor: pointer;
 }
 
