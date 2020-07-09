@@ -396,16 +396,18 @@ function drawERList(){
    ERlist.innerHTML = "";
    for (var e = 0; e < 32; e++){
       if (dungeons[e].indoorlist != undefined){
-         var l = document.createElement('hr');
-         ERlist.appendChild(l)
-         var t = document.createElement('li');
-         t.innerHTML = dungeons[e].name;
-         ERlist.appendChild(t)
-         ERlist.appendChild(l)
          for (var key in dungeons[e].indoorlist) {
             if (key.includes("Grotto") || key.includes("Fountain"))
             {}
             else {
+               if (key == dungeons[e].firstChild.innerHTML) {
+                  var l = document.createElement('hr');
+                  ERlist.appendChild(l)
+                  var t = document.createElement('li');
+                  t.innerHTML = dungeons[e].name;
+                  ERlist.appendChild(t)
+                  ERlist.appendChild(l)
+               }
                var s = document.createElement('li');
                s.innerHTML = key
                s.onclick = new Function('toggleIndoor(this,' + e + ',"' + key + '")');
@@ -421,12 +423,16 @@ function drawERList(){
    var gERlist = document.getElementById('INDOORLIST2');
    gERlist.innerHTML = "";
    for (var e = 0; e < 32; e++){
-      if (dungeons[e].indoorlist != undefined){
+      if (dungeons[e].indoorlist != undefined && (dungeons[e].indoorlist.includes("Grotto") || dungeons[e].indoorlist.includes("Fountain") ) {
+         var l = document.createElement('hr');
+         gERlist.appendChild(l)
          var t = document.createElement('li');
          t.innerHTML = dungeons[e].name;
          gERlist.appendChild(t)
+         gERlist.appendChild(l)
          for (var key in dungeons[e].indoorlist) {
             if (key.includes("Grotto") || key.includes("Fountain")) {
+               
                var s = document.createElement('li');
                s.innerHTML = key
                s.onclick = new Function('toggleIndoor(this,' + e + ',"' + key + '")');
