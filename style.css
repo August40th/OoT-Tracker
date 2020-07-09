@@ -575,6 +575,17 @@ label {
     cursor: pointer;
 }
 
+#indoorlist2 {
+    background-color: black;
+    top: -515px;
+    left: 360px;
+    width: 360px;
+    height: 515px;
+    overflow-y: auto;
+    position: absolute;
+    cursor: pointer;
+}
+
 .d-none {
     display:none!important;
 }
