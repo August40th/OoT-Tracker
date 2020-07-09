@@ -105,8 +105,7 @@ var dungeons = [
       x: "88.0%",
       y: "48.5%",
       type: "dungeon",
-      if (OpenForest == 1 || (items.DekuShield && items.KokiriSword)) {
-         access: true},
+      access: if (OpenForest == 1 || (items.DekuShield && items.KokiriSword)),
       chestlist: {
          'Lobby Chest': {
             isAvailable: function () {
