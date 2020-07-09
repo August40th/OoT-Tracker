@@ -409,7 +409,7 @@ function drawERList(){
                s.setAttribute("data-type", "indoor");
                //if (dNone) s.classList.add("d-none");
             ERlist.appendChild(s) }
-            if (key.lastChild){
+            if (key != dungeons[e].indoorlist.lastChild){
                var l = document.createElement('hr');
                ERlist.appendChild(l)
                var t = document.createElement('li');
@@ -423,7 +423,7 @@ function drawERList(){
    var gERlist = document.getElementById('INDOORLIST2');
    gERlist.innerHTML = "";
    for (var e = 0; e < 32; e++){
-      if (dungeons[e].indoorlist != undefined && (dungeons[e].indoorlist.includes("Grotto") || dungeons[e].indoorlist.includes("Fountain") ) ) {
+      if (dungeons[e].indoorlist != undefined) {
          var l = document.createElement('hr');
          gERlist.appendChild(l)
          var t = document.createElement('li');
