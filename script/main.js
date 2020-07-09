@@ -412,7 +412,8 @@ function drawERList(){
          }
       }
    }
-   var gERlist = document.getElementById('indoorlist2');
+   var gERlist = document.createElement('indoorlist2');
+   gERlist.innerHTML = "";
    for (var e = 0; e < 32; e++){
       if (dungeons[e].indoorlist != undefined){
          for (var key in dungeons[e].indoorlist) {
