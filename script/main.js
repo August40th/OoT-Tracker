@@ -395,15 +395,15 @@ function drawERList(){
    var ERlist = document.getElementById('indoorlist');
    ERlist.innerHTML = "";
    for (var e = 0; e < 31; e++){
-      if (dungeons[e].gossiplist != undefined){
-         for (var key in dungeons[e].gossiplist) {
+      if (dungeons[e].indoorlist != undefined){
+         for (var key in dungeons[e].indoorlist) {
             var s = document.createElement('li');
             s.innerHTML = key
-            s.onclick = new Function('toggleDungeonChest(this,' + e + ',"' + key + '")');
+            s.onclick = new Function('toggleIndoor(this,' + e + ',"' + key + '")');
             s.onmouseover = new Function('highlightDungeonChest(this)');
             s.onmouseout = new Function('unhighlightDungeonChest(this)');
             s.style.cursor = "pointer";
-            s.setAttribute("data-type", "gossip");
+            s.setAttribute("data-type", "indoor");
             //if (dNone) s.classList.add("d-none");
             ERlist.appendChild(s)
          }
@@ -1101,6 +1101,18 @@ function toggleShopChest(sender, d, c) {
    if (dungeons[d].shoplist[c].isOpened) {
       sender.className = "DCopened";
    } else if (dungeons[d].shoplist[c].isAvailable()) {
+      sender.className = "DCavailable";
+   } else {
+      sender.className = "DCunavailable";
+   }
+   updateMap();
+}
+
+function toggleIndoor(sender, d, c) {
+   dungeons[d].indoorlist[c].isOpened = !dungeons[d].indoorlist[c].isOpened;
+   if (dungeons[d].indoorlist[c].isOpened) {
+      sender.className = "DCopened";
+   } else if (dungeons[d].indoorlist[c].isAvailable()) {
       sender.className = "DCavailable";
    } else {
       sender.className = "DCunavailable";
