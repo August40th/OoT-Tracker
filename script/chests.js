@@ -101,14 +101,11 @@ var dungeons = [
             isAvailable: function () {
                return true; }
          },
+         'Storms Grotto': {
+            isAvailable: function () {
+               return true; }
+         },
       },
-      isBeatable: function () {
-         return this.canGetChest();
-      },
-      canGetChest: function () {
-         return generalCanGetChest(this.chestlist);
-      }
-   },
       gossiplist: {
          'Infront Storms Grotto': {
             isAvailable: function () {
