@@ -395,6 +395,8 @@ function drawERList(){
    var ERlist = document.getElementById('indoorlist');
    ERlist.innerHTML = "";
    for (var e = 0; e < 32; e++){
+      ERlist.innerHTML = dungeons[e].name;
+      ERlist.appendChild(s)
       if (dungeons[e].indoorlist != undefined){
          for (var key in dungeons[e].indoorlist) {
             if (key.includes("Grotto") || key.includes("Fountain"))
@@ -415,6 +417,8 @@ function drawERList(){
    var gERlist = document.getElementById('INDOORLIST2');
    gERlist.innerHTML = "";
    for (var e = 0; e < 32; e++){
+      gERlist.innerHTML = dungeons[e].name;
+      gERlist.appendChild(s)
       if (dungeons[e].indoorlist != undefined){
          for (var key in dungeons[e].indoorlist) {
             if (key.includes("Grotto") || key.includes("Fountain")) {
