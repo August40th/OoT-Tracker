@@ -80,6 +80,35 @@ var dungeons = [
                return true; }
          },
       },
+      indoorlist: {
+         'Mido\'s House': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Know It All Bro\'s': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Link\'s House': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Twin\'s House': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Kokiri Shop': {
+            isAvailable: function () {
+               return true; }
+         },
+      },
+      isBeatable: function () {
+         return this.canGetChest();
+      },
+      canGetChest: function () {
+         return generalCanGetChest(this.chestlist);
+      }
+   },
       gossiplist: {
          'Infront Storms Grotto': {
             isAvailable: function () {
@@ -2467,6 +2496,48 @@ var dungeons = [
                return true; }
          },
       },
+      indoorlist: {
+         'Guard/Ghostbuster House': {
+               isAvailable: function () {
+                  return true; }
+         },
+         'Treasure game': {
+               isAvailable: function () {
+                  return true; }
+         },
+         'Bombchu Shop': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Back Alley House': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Slingshot Shooting': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Bowling': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Bazar': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Potion Shop': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Happy Mask Shop': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Temple of Time': {
+            isAvailable: function () {
+               return true; }
+         },
+      },
       gossiplist: {
          'Outside Temple of Time x4': {
             isAvailable: function () {
@@ -2537,6 +2608,12 @@ var dungeons = [
             isAvailable: function () {
                return items.Ocarina && items.SongofStorms && items.Bombs
             }
+         },
+      },
+      indoorlist: {
+         'Din\'s Great Fairy Fountain': {
+               isAvailable: function () {
+                  return true; }
          },
       },
       gossiplist: {
@@ -2716,6 +2793,56 @@ var dungeons = [
                return true; }
          },
       },
+      indoorlist: {
+         'Redead Grotto': {
+               isAvailable: function () {
+                  return true; }
+         },
+         'Tower House': {
+               isAvailable: function () {
+                  return true; }
+         },
+         'Kakariko Bazar': {
+               isAvailable: function () {
+                  return true; }
+         },
+         'Potion Shop front': {
+               isAvailable: function () {
+                  return true; }
+         },
+         'Potion Shop back': {
+               isAvailable: function () {
+                  return true; }
+         },
+         'Granny\'s Shop': {
+               isAvailable: function () {
+                  return true; }
+         },
+         'Kakariko Open Grotto': {
+               isAvailable: function () {
+                  return true; }
+         },
+         'Windmill': {
+               isAvailable: function () {
+                  return true; }
+         },
+         'Archery': {
+               isAvailable: function () {
+                  return true; }
+         },
+         'Impa\'s House back': {
+               isAvailable: function () {
+                  return true; }
+         },
+         'Impa\'s House front': {
+               isAvailable: function () {
+                  return true; }
+         },
+         'Skulltula House': {
+               isAvailable: function () {
+                  return true; }
+         },
+      },
       isBeatable: function () {
          return this.canGetChest();
       },
@@ -2805,6 +2932,12 @@ var dungeons = [
          'Goron Shop 4': {
             isAvailable: function () {
                return true; }
+         },
+      },
+      indoorlist: {
+         'Goron Shop': {
+               isAvailable: function () {
+                  return true; }
          },
       },
       gossiplist: {
@@ -2902,6 +3035,20 @@ var dungeons = [
             },
          },
       },
+      indoorlist: {
+         'Woods by City Grotto': {
+               isAvailable: function () {
+                  return true; }
+         },
+         'Deku Theatre Grotto': {
+               isAvailable: function () {
+                  return true; }
+         },
+         'Wood by Meadow Grotto': {
+               isAvailable: function () {
+                  return true; }
+         },
+      },
       gossiplist: {
          'Bridge Stone': {
             isAvailable: function () {
@@ -2960,6 +3107,20 @@ var dungeons = [
             isAvailable: function () {
                return items.Ocarina && items.SongofStorms && (items.SariasSong || items.MinuetofForest);
             },
+         },
+      },
+      indoorlist: {
+         'Wolfos Grotto': {
+               isAvailable: function () {
+                  return true; }
+         },
+         'Meadow Open Grotto': {
+               isAvailable: function () {
+                  return true; }
+         },
+         'Meadow Storms Grotto': {
+               isAvailable: function () {
+                  return true; }
          },
       },
       gossiplist: {
@@ -3033,6 +3194,16 @@ var dungeons = [
                return true; }
          },
       },
+      indoorlist: {
+         'Zora Shop': {
+               isAvailable: function () {
+                  return true; }
+         },
+         'Storms Grotto': {
+               isAvailable: function () {
+                  return true; }
+         },
+      },
       gossiplist: {
          'Infront King Zora': {
             isAvailable: function () {
@@ -3084,6 +3255,12 @@ var dungeons = [
             isAvailable: function () {
                return (items.MasterSword && items.Glove >= 2 && items.ZoraLetter && (items.Bombs || items.Scale) && items.ZeldasLullaby && items.Ocarina);
             },
+         },
+      },
+      indoorlist: {
+         'Farore\'s Great Fairy Fountain': {
+               isAvailable: function () {
+                  return true; }
          },
       },
       gossiplist: {
@@ -3164,6 +3341,20 @@ var dungeons = [
             }
          },
       },
+      indoorlist: {
+         'Storms Grotto': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Cow Grotto': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Sumit Fairy Fountain': {
+            isAvailable: function () {
+               return true; }
+         },
+      }
       gossiplist: {
          'Under Summit Fairy': {
             isAvailable: function () {
@@ -3233,6 +3424,20 @@ var dungeons = [
             isAvailable: function () {
                return items.Hammer && ((items.Glove || items.Bombs || items.Bow || (items.Magic && items.Dins)) || (items.BoleroofFire && items.Ocarina && (items.Hookshot || items.HoverBoots)));
             },
+         },
+      },
+      indoorlist: {
+         'Hammer Grotto': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Crater Fairy Fountain': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Crater Bomb Grotto': {
+            isAvailable: function () {
+               return true; }
          },
       },
       gossiplist: {
@@ -3325,6 +3530,23 @@ var dungeons = [
             }
          },
       },
+      indoorlist: {
+         'Talon\'s House': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Ranch Stables': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Ranch Open Grotto': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Ranch Silo': {
+            isAvailable: function () {
+               return true; }
+         },
       isBeatable: function () {
          return this.canGetChest();
       },
@@ -3401,6 +3623,16 @@ var dungeons = [
             isAvailable: function () {
                return items.Ocarina && items.SongofStorms && (items.Bombs || items.Bombchu || items.Scale);
             }
+         },
+      },
+      indoorlist: {
+         'Open Grotto': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Boulder Grotto': {
+            isAvailable: function () {
+               return true; }
          },
       },
       gossiplist: {
@@ -3493,6 +3725,20 @@ var dungeons = [
             },
          },
       },
+      indoorlist: {
+         'Laboratory': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Fishing Pond': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Lake Hylia Grave': {
+            isAvailable: function () {
+               return true; }
+         },
+      },
       gossiplist: {
          'Beside Lab Stone': {
             isAvailable: function () {
@@ -3573,6 +3819,20 @@ var dungeons = [
             },
          },
       },
+      indoorlist: {
+         'Carpenter Tent': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Valley Storms Grotto': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Octorok Grotto': {
+            isAvailable: function () {
+               return true; }
+         },
+      },
       gossiplist: {
          'Base of the Waterfall': {
             isAvailable: function () {
@@ -3634,28 +3894,6 @@ var dungeons = [
             }
          },
       },
-      keysanity: {
-         'Fortress Guard 1': {
-            isAvailable: function () {
-               return (items.Ocarina && items.EponasSong) || items.Hookshot >= 2;
-            },
-         },
-         'Fortress Guard 2': {
-            isAvailable: function () {
-               return (items.Ocarina && items.EponasSong) || items.Hookshot >= 2;
-            },
-         },
-         'Fortress Guard 3': {
-            isAvailable: function () {
-               return (items.Ocarina && items.EponasSong) || items.Hookshot >= 2;
-            },
-         },
-         'Fortress Guard 4': {
-            isAvailable: function () {
-               return (items.Ocarina && items.EponasSong) || items.Hookshot >= 2;
-            },
-         },
-      },
       skulllist: {
          'Gerudo Fortress Skulltula': {
             isAvailable: function () {
@@ -3666,6 +3904,12 @@ var dungeons = [
             isAvailable: function () {
                return items.Hookshot && ((items.Ocarina && items.EponasSong) || items.Hookshot >= 2);
             },
+         },
+      },
+      indoorlist: {
+         'Fortress Storms Grotto': {
+            isAvailable: function () {
+               return true; }
          },
       },
       isBeatable: function () {
@@ -3719,6 +3963,16 @@ var dungeons = [
             isAvailable: function () {
                return items.Glove >= 2 && ((items.Membership >= 5 && (items.HoverBoots || items.Hookshot >= 2)) || (items.Ocarina && items.RequiemofSpirit));
             },
+         },
+      },
+      indoorlist: {
+         'Nayru\'s Great Fairy Fountain': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Desert Strength Grotto': {
+            isAvailable: function () {
+               return true; }
          },
       },
       gossiplist: {
@@ -3794,8 +4048,106 @@ var dungeons = [
             },
          },
       },
+      indoorlist: {
+         'Dampe\'s Hut': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Shield Grave': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Dampe\'s Grave': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Redead Grave': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Royal Tomb': {
+            isAvailable: function () {
+               return true; }
+         },
+      },
       gossiplist: {
          'Shadow Temple Entrance': {
+            isAvailable: function () {
+               return true
+            }
+         },
+      },
+      isBeatable: function () {
+         return this.canGetChest();
+      },
+      canGetChest: function () {
+         return generalCanGetChest(this.chestlist);
+      }
+   },
+   {
+      name: "Haunted Wasteland",
+      x: "16.0%",
+      y: "25.0%",
+      type: "overworld",
+      chestlist: {
+         ['Torch Chest']: {
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword && (((items.EponasSong || isFortressOpen()) && items.HoverBoots) || items.Hookshot >= 2) && (items.Magic && (items.Dins || (items.Bow && items.Fire))))
+            }
+         },
+         ['Carpet Salesman']: {
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword && (((items.EponasSong || isFortressOpen()) && items.HoverBoots) || items.Hookshot >= 2))
+            }
+         },
+      },
+      skulllist: {
+         'Structure Skulltula': {
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword && (((items.EponasSong || isFortressOpen()) && items.HoverBoots) || items.Hookshot >= 2))
+            }
+         },
+      },
+      indoorlist: {
+         'Hyrule Field Cow Grotto': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Tektite Grotto': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Field Fairy Fountain Grotto': {
+            isAvailable: function () {
+               return true; }
+         },
+         'West of Castle Grotto': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Field Skulltula Grotto': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Field South East Grotto': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Field Open Grotto': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Field Scrub Grotto': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Double Defense Fairy Fountain': {
+            isAvailable: function () {
+               return true; }
+         },
+      },
+      gossiplist: {
+         'Northwest Desert Stone': {
             isAvailable: function () {
                return true
             }
