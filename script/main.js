@@ -400,14 +400,6 @@ function drawERList(){
             if (key.includes("Grotto") || key.includes("Fountain"))
             {}
             else {
-               if (dungeons[e].includes("indoorlist") && (!key.includes("Grotto") || !key.includes("Fountain") ) ) {
-                  var l = document.createElement('hr');
-                  ERlist.appendChild(l)
-                  var t = document.createElement('li');
-                  t.innerHTML = dungeons[e].name;
-                  ERlist.appendChild(t)
-                  ERlist.appendChild(l)
-               }
                var s = document.createElement('li');
                s.innerHTML = key
                s.onclick = new Function('toggleIndoor(this,' + e + ',"' + key + '")');
@@ -417,6 +409,14 @@ function drawERList(){
                s.setAttribute("data-type", "indoor");
                //if (dNone) s.classList.add("d-none");
             ERlist.appendChild(s) }
+            if (key.lastChild){
+               var l = document.createElement('hr');
+               ERlist.appendChild(l)
+               var t = document.createElement('li');
+               t.innerHTML = dungeons[e+1].name;
+               ERlist.appendChild(t)
+               ERlist.appendChild(l)
+            }
          }
       }
    }
