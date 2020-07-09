@@ -412,6 +412,25 @@ function drawERList(){
          }
       }
    }
+   var gERlist = document.getElementById('indoorlist2');
+   gERlist.innerHTML = "";
+   for (var e = 0; e < 32; e++){
+      if (dungeons[e].indoorlist != undefined){
+         for (var key in dungeons[e].indoorlist) {
+            if (key.includes("Grotto") || key.includes("Fountain")) {
+               var s = document.createElement('li');
+               s.innerHTML = key
+               s.onclick = new Function('toggleIndoor(this,' + e + ',"' + key + '")');
+               s.onmouseover = new Function('highlightDungeonChest(this)');
+               s.onmouseout = new Function('unhighlightDungeonChest(this)');
+               s.style.cursor = "pointer";
+               s.setAttribute("data-type", "indoor grotto");
+               //if (dNone) s.classList.add("d-none");
+               gERlist.appendChild(s) 
+            }
+         }
+      }
+   }
 }
 
 function drawDungeonList() {
