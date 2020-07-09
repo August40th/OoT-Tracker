@@ -421,7 +421,7 @@ function drawERList(){
       if (dungeons[e].indoorlist != undefined){
          var t = document.createElement('li');
          t.innerHTML = dungeons[e].name;
-         ERlist.appendChild(t)
+         gERlist.appendChild(t)
          for (var key in dungeons[e].indoorlist) {
             if (key.includes("Grotto") || key.includes("Fountain")) {
                var s = document.createElement('li');
