@@ -394,7 +394,7 @@ function clickDungeon(d) {
 function drawERList(){
    var ERlist = document.getElementById('indoorlist');
    ERlist.innerHTML = "";
-   for (var e = 0; e < 32; e++){
+   for (var e = 0; e < 31; e++){
       if (dungeons[e].gossiplist != undefined){
          for (var key in dungeons[e].gossiplist) {
             var s = document.createElement('li');
