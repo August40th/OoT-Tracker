@@ -409,7 +409,7 @@ function drawERList(){
                s.setAttribute("data-type", "indoor");
                //if (dNone) s.classList.add("d-none");
             ERlist.appendChild(s) }
-            if (key != dungeons[e].indoorlist.lastChild){
+            if (key != dungeons[e].indoorlist.slice([1]) ) {
                var l = document.createElement('hr');
                ERlist.appendChild(l)
                var t = document.createElement('li');
