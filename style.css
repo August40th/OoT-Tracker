@@ -568,19 +568,13 @@ label {
     background-color: black;
     top: -515px;
     left:0px;
-    position: absolute;
-    width: 400px;
+    width: 360px;
     height: 515px;
+    overflow-y: auto;
+    position: absolute;
     cursor: pointer;
 }
 
 .d-none {
     display:none!important;
-}
-
-.gossip  {
-    width: 300px;
-    height: 500px;
-    background: white;
-    color: #FFA500;
 }
