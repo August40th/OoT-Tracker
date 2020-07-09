@@ -397,6 +397,9 @@ function drawERList(){
    for (var e = 0; e < 32; e++){
       if (dungeons[e].indoorlist != undefined){
          for (var key in dungeons[e].indoorlist) {
+            if (key.includes("Grotto") || key.includes("Fountain"))
+            {}
+            else {
             var s = document.createElement('li');
             s.innerHTML = key
             s.onclick = new Function('toggleIndoor(this,' + e + ',"' + key + '")');
@@ -405,7 +408,7 @@ function drawERList(){
             s.style.cursor = "pointer";
             s.setAttribute("data-type", "indoor");
             //if (dNone) s.classList.add("d-none");
-            ERlist.appendChild(s)
+            ERlist.appendChild(s) }
          }
       }
    }
