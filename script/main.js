@@ -412,8 +412,8 @@ function drawERList(){
          }
       }
    }
-   var gERlist = document.getElementById('indoorlist2');
-   gERlist.innerHTML = "";
+   let ERlist = document.getElementById('indoorlist2');
+   ERlist.innerHTML = "";
    for (var e = 0; e < 32; e++){
       if (dungeons[e].indoorlist != undefined){
          for (var key in dungeons[e].indoorlist) {
@@ -426,7 +426,7 @@ function drawERList(){
                s.style.cursor = "pointer";
                s.setAttribute("data-type", "indoor grotto");
                //if (dNone) s.classList.add("d-none");
-               gERlist.appendChild(s) 
+               ERlist.appendChild(s) 
             }
          }
       }
