@@ -400,7 +400,7 @@ function drawERList(){
             if (key.includes("Grotto") || key.includes("Fountain"))
             {}
             else {
-               if (dungeons[e].includes("indoorlist && (!key.includes("Grotto") || !key.includes("Fountain") ) ) {
+               if (dungeons[e].includes("indoorlist") && (!key.includes("Grotto") || !key.includes("Fountain") ) ) {
                   var l = document.createElement('hr');
                   ERlist.appendChild(l)
                   var t = document.createElement('li');
