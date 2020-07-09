@@ -393,6 +393,7 @@ function clickDungeon(d) {
 
 function drawERList(){
    var ERlist = document.getElementById('indoorlist');
+   let gERlist = document.getElementById('indoorlist2');
    ERlist.innerHTML = "";
    for (var e = 0; e < 32; e++){
       if (dungeons[e].indoorlist != undefined){
@@ -400,20 +401,19 @@ function drawERList(){
             if (key.includes("Grotto") || key.includes("Fountain"))
             {}
             else {
-            var s = document.createElement('li');
-            s.innerHTML = key
-            s.onclick = new Function('toggleIndoor(this,' + e + ',"' + key + '")');
-            s.onmouseover = new Function('highlightDungeonChest(this)');
-            s.onmouseout = new Function('unhighlightDungeonChest(this)');
-            s.style.cursor = "pointer";
-            s.setAttribute("data-type", "indoor");
-            //if (dNone) s.classList.add("d-none");
+               var s = document.createElement('li');
+               s.innerHTML = key
+               s.onclick = new Function('toggleIndoor(this,' + e + ',"' + key + '")');
+               s.onmouseover = new Function('highlightDungeonChest(this)');
+               s.onmouseout = new Function('unhighlightDungeonChest(this)');
+               s.style.cursor = "pointer";
+               s.setAttribute("data-type", "indoor");
+               //if (dNone) s.classList.add("d-none");
             ERlist.appendChild(s) }
          }
       }
    }
-   let ERlist = document.getElementById('indoorlist2');
-   ERlist.innerHTML = "";
+   var gERlist = document.getElementById('indoorlist2');
    for (var e = 0; e < 32; e++){
       if (dungeons[e].indoorlist != undefined){
          for (var key in dungeons[e].indoorlist) {
@@ -426,7 +426,7 @@ function drawERList(){
                s.style.cursor = "pointer";
                s.setAttribute("data-type", "indoor grotto");
                //if (dNone) s.classList.add("d-none");
-               ERlist.appendChild(s) 
+               gERlist.appendChild(s) 
             }
          }
       }
