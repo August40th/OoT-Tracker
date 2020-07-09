@@ -3351,7 +3351,7 @@ var dungeons = [
             isAvailable: function () {
                return true; }
          },
-      }
+      },
       gossiplist: {
          'Under Summit Fairy': {
             isAvailable: function () {
@@ -3544,6 +3544,7 @@ var dungeons = [
             isAvailable: function () {
                return true; }
          },
+      },
       isBeatable: function () {
          return this.canGetChest();
       },
