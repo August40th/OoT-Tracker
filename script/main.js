@@ -394,8 +394,7 @@ function clickDungeon(d) {
 function drawERList(){
    var ERlist = document.getElementById('indoorlist');
    ERlist.innerHTML = "";
-   var e = 0;
-   do {
+   for (var e = 0; e < 32; e++){
    for (var key in dungeons[e].gossiplist) {
       var s = document.createElement('li');
       s.innerHTML = key
@@ -406,9 +405,8 @@ function drawERList(){
       s.setAttribute("data-type", "gossip");
       //if (dNone) s.classList.add("d-none");
       ERlist.appendChild(s)
-      e++;
    }
-   }while (e < 31);
+   }
 }
 
 function drawDungeonList() {
