@@ -38,6 +38,8 @@ OpenDoor = true;
 OpenFountain = false;
 
 GrottoER = false;
+IndoorER = false;
+OWER = false;
 
 var itemGrid = [];
 var itemLayout = [];
@@ -2468,7 +2470,8 @@ function populateMapdiv() {
    document.getElementById("dungeon" + dungeonSelect).style.backgroundImage = "url(images/highlighted.png)";
 
    drawDungeonList();
-   drawERList();
+   if (IndoorER = true)
+      drawERList();
 }
 
 function getDungeonAvailability(dungeon) {
