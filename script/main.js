@@ -430,7 +430,7 @@ function drawERList(){
    for (var e = 0; e < 32; e++){
       if (dungeons[e].indoorlist != undefined) {
          for (var key in dungeons[e].indoorlist) {
-            if (saveE != e && (key.includes("Grotto") || key.includes("Fountain") || key.includes("Grave") || key.includes("Tomb") ) {
+            if (saveE != e && (key.includes("Grotto") || key.includes("Fountain") || key.includes("Grave") || key.includes("Tomb") ) ) {
                var l = document.createElement('hr');
                gERlist.appendChild(l)
                var t = document.createElement('li');
