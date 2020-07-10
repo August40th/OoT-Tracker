@@ -438,7 +438,7 @@ function drawERList(){
                gERlist.appendChild(t)
                gERlist.appendChild(l)
             }
-            if (key.includes("Grotto") || key.includes("Fountain") || key.includes("Grave") || key.includes("Tomb"))
+            if (key.includes("Grotto") || key.includes("Fountain") || key.includes("Grave") || key.includes("Tomb") ) {
                var s = document.createElement('li');
                s.innerHTML = key
                s.onclick = new Function('toggleIndoor(this,' + e + ',"' + key + '")');
