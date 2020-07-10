@@ -417,9 +417,9 @@ function drawERList(){
                s.style.cursor = "pointer";
                s.setAttribute("data-type", "indoor");
                //if (dNone) s.classList.add("d-none");
-            ERlist.appendChild(s) }
-            saveE = e;
+               ERlist.appendChild(s)
             }
+            saveE = e;
          }
       }
    }
@@ -446,8 +446,8 @@ function drawERList(){
                s.setAttribute("data-type", "indoor");
                //if (dNone) s.classList.add("d-none");
                gERlist.appendChild(s)
-               saveE = e;
             }
+            saveE = e;
          }
       }
    }
