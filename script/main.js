@@ -400,7 +400,7 @@ function drawERList(){
       var saveE;
       if (dungeons[e].indoorlist != undefined){
          for (var key in dungeons[e].indoorlist) {
-            if (saveE != e) {
+            if (saveE != e  && !(key.includes("Grotto") || key.includes("Fountain") || key.includes("Grave") || key.includes("Tomb") ) ) {
                var l = document.createElement('hr');
                ERlist.appendChild(l)
                var t = document.createElement('li');
@@ -408,7 +408,7 @@ function drawERList(){
                ERlist.appendChild(t)
                ERlist.appendChild(l)
             }
-            else if (key.includes("Grotto") || key.includes("Fountain") || key.includes("Grave") || key.includes("Tomb"))
+            if (key.includes("Grotto") || key.includes("Fountain") || key.includes("Grave") || key.includes("Tomb"))
             {}
             else {
                var s = document.createElement('li');
@@ -430,7 +430,7 @@ function drawERList(){
    for (var e = 0; e < 32; e++){
       if (dungeons[e].indoorlist != undefined) {
          for (var key in dungeons[e].indoorlist) {
-            if (saveE != e) {
+            if (saveE != e && dungeons[e].indoorlist)  && (key.includes("Grotto") || key.includes("Fountain") || key.includes("Grave") || key.includes("Tomb") ) {
                var l = document.createElement('hr');
                gERlist.appendChild(l)
                var t = document.createElement('li');
@@ -438,7 +438,7 @@ function drawERList(){
                gERlist.appendChild(t)
                gERlist.appendChild(l)
             }
-            else if (key.includes("Grotto") || key.includes("Fountain")) {
+            if (key.includes("Grotto") || key.includes("Fountain") || key.includes("Grave") || key.includes("Tomb"))
                var s = document.createElement('li');
                s.innerHTML = key
                s.onclick = new Function('toggleIndoor(this,' + e + ',"' + key + '")');
