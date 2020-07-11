@@ -2474,7 +2474,7 @@ function populateMapdiv() {
 
    drawDungeonList();
    //if (IndoorER = true)
-   //   drawERList();
+      drawERList();
 }
 
 function getDungeonAvailability(dungeon) {
