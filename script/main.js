@@ -401,12 +401,13 @@ function drawERList(){
       if (dungeons[e].indoorlist != undefined){
          for (var key in dungeons[e].indoorlist) {
             if (saveE != e  && !(key.includes("Grotto") || key.includes("Fountain") || key.includes("Grave") || key.includes("Tomb") ) ) {
-               var l = document.createElement('hr');
-               ERlist.appendChild(l)
+               var l1 = document.createElement('hr');
+               var l2 = l1;
+               ERlist.appendChild(l1)
                var t = document.createElement('li');
                t.innerHTML = dungeons[e].name;
                ERlist.appendChild(t)
-               ERlist.appendChild(l)
+               ERlist.appendChild(l2)
             }
             if (key.includes("Grotto") || key.includes("Fountain") || key.includes("Grave") || key.includes("Tomb"))
             {}
