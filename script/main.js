@@ -428,16 +428,18 @@ function drawERList(){
    }
    var gERlist = document.getElementById('INDOORLIST2');
    gERlist.innerHTML = "";
+   saveE=0;
    for (var e = 0; e < 32; e++){
       if (dungeons[e].indoorlist != undefined) {
          for (var key in dungeons[e].indoorlist) {
             if (saveE != e && (key.includes("Grotto") || key.includes("Fountain") || key.includes("Grave") || key.includes("Tomb") ) ) {
-               var l = document.createElement('hr');
+               var l1 = document.createElement('hr');
+               var l2 = l1
                gERlist.appendChild(l)
-               var t = document.createElement('li');
+               var t = document.createElement('l1');
                t.innerHTML = dungeons[e].name;
                gERlist.appendChild(t)
-               gERlist.appendChild(l)
+               gERlist.appendChild(l2)
             }
             if (key.includes("Grotto") || key.includes("Fountain") || key.includes("Grave") || key.includes("Tomb") ) {
                var s = document.createElement('li');
