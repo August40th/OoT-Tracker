@@ -435,8 +435,8 @@ function drawERList(){
             if (saveE != e && (key.includes("Grotto") || key.includes("Fountain") || key.includes("Grave") || key.includes("Tomb") ) ) {
                var l1 = document.createElement('hr');
                var l2 = l1
-               gERlist.appendChild(l)
-               var t = document.createElement('l1');
+               gERlist.appendChild(l1)
+               var t = document.createElement('li');
                t.innerHTML = dungeons[e].name;
                gERlist.appendChild(t)
                gERlist.appendChild(l2)
