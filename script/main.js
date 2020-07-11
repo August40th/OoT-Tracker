@@ -2473,8 +2473,8 @@ function populateMapdiv() {
    document.getElementById("dungeon" + dungeonSelect).style.backgroundImage = "url(images/highlighted.png)";
 
    drawDungeonList();
-   if (IndoorER = true)
-      drawERList();
+   //if (IndoorER = true)
+   //   drawERList();
 }
 
 function getDungeonAvailability(dungeon) {
