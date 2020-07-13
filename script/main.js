@@ -389,6 +389,8 @@ function clickDungeon(d) {
       document.getElementById('submaparea').innerHTML = dungeons[dungeonSelect].name
    document.getElementById('submaparea').className = "DC" + getDungeonAvailability(dungeons[dungeonSelect]);
    
+   if (IndoorER != false)
+      drawERList();
    drawDungeonList();
    updateMap();
 }
