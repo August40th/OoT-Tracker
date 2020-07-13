@@ -398,7 +398,7 @@ function drawERList(){
       for (var key in dungeons[dungeonSelect].indoorlist) {
          var s = document.createElement('li');
          s.innerHTML = key
-         s.onclick = new Function('toggleIndoor(this,' + e + ',"' + key + '")');
+         s.onclick = new Function('toggleIndoor(this,' + dungeonSelect + ',"' + key + '")');
          s.onmouseover = new Function('highlightDungeonChest(this)');
          s.onmouseout = new Function('unhighlightDungeonChest(this)');
          s.style.cursor = "pointer";
