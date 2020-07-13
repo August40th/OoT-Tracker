@@ -14,6 +14,8 @@ Keysanity Fortress checks
 List for trials
 Grotto ER
 Medigoron
+List Gossip Stones (does not count available or opened gossip stones)
+Indoor ER
 
 Right click a colored box to mark it WOTH/POG (Triforce counter coming)
 Click the title of an area (e.g. "Kokiri Forest") to clear any available checks, if none are available all checks in the area are marked opened (barren/foolish)
@@ -27,8 +29,6 @@ If you notice any bugs in logic please message me on Discord: August 40th#4864
 
 ****ToDo List****
 Logic tweaks
-List Gossip Stones
-Indoor ER
 MQ trials
 MQ letters keys, clear layout after right click
 Mark MQ by clicking small key
