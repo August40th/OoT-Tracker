@@ -1150,7 +1150,7 @@ function toggleIndoor(sender, d, c) {
       sender.className = "DCopened";
    } else if (dungeons[d].indoorlist[c].isAvailable()) {
       sender.className = "DCavailable";
-      var place = document.createElements('li');
+      var place = document.createElement('li');
       place.innerHTML = sender
       document.getElementById('indoorlist').appendChild(place)
    } else {
