@@ -398,6 +398,13 @@ function clickDungeon(d) {
       document.getElementById('submaparea').innerHTML = dungeons[dungeonSelect].name
    document.getElementById('submaparea').className = "DC" + getDungeonAvailability(dungeons[dungeonSelect]);
    
+   if (OWERmap == true) {
+      var owlist =document.getElementById('entrancelist');
+      var nm = createElement('li');
+      nm.innerHTML = dungeons[dungeonSelect].name
+      owlist.appendChild(nm)
+   }
+   
    drawERList();
    drawDungeonList();
    updateMap();
