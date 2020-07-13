@@ -400,7 +400,7 @@ function clickDungeon(d) {
    
    if (OWERmap == true) {
       var ERlist = document.getElementById('entrancelist');
-      ERlist.appendChild(dungeons[dungeonSelect].name)
+      ERlist.appendChild(dungeons[dungeonSelect])
    }
    
    drawERList();
