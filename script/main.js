@@ -1474,6 +1474,14 @@ function setGrottoER(sender) {
 
 function setIndoorER(sender) {
    IndoorER = sender.checked;
+   if (IndoorER = false) {
+      document.getElementById('selectedindoors').display = none;
+      document.getElementById('indoorlist').display = none;
+   }
+   else {
+      document.getElementById('selectedindoors').display = initial;
+      document.getElementById('indoorlist').display = initial;
+   }
    drawERList();
    updateMap();
    drawDungeonList();
@@ -1482,6 +1490,9 @@ function setIndoorER(sender) {
 
 function setOWER(sender) {
    OWERmap = sender.checked;
+   if (OWERmap = false)
+      document.getElementById('ermapdiv').'background-image' = none;
+   wlse document.getElementById('ermapdiv').'background-image' = initial;
    drawERList();
    updateMap();
    drawDungeonList();
