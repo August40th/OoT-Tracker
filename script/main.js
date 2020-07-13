@@ -394,6 +394,18 @@ function clickDungeon(d) {
 }
 
 function drawERList(){
+   var selected = document.getElementById('selectindoorlist');
+      for (var key in dungeons[dungeonSelect].indoorlist) {
+         var s = document.createElement('li');
+         s.innerHTML = key
+         s.onclick = new Function('toggleIndoor(this,' + e + ',"' + key + '")');
+         s.onmouseover = new Function('highlightDungeonChest(this)');
+         s.onmouseout = new Function('unhighlightDungeonChest(this)');
+         s.style.cursor = "pointer";
+         s.setAttribute("data-type", "indoor");
+         //if (dNone) s.classList.add("d-none");
+         selected.appendChild(s)
+      }
    var ERlist = document.getElementById('indoorlist');
    ERlist.innerHTML = "";
    for (var e = 0; e < 32; e++){
@@ -426,7 +438,7 @@ function drawERList(){
          }
       }
    }
-   var gERlist = document.getElementById('INDOORLIST2');
+   var gERlist = document.getElementById('entrancelist');
    gERlist.innerHTML = "";
    saveE=0;
    for (var e = 0; e < 32; e++){
