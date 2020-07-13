@@ -129,7 +129,7 @@ var dungeons = [
           isAvailable: function () {
                return true; }
        },
-    }
+    },
       isBeatable: function () {
          return this.canGetChest();
       },
