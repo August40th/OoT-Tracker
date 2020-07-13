@@ -1146,7 +1146,7 @@ function toggleShopChest(sender, d, c) {
 
 function toggleIndoor(sender, d, c) {
    dungeons[d].indoorlist[c].isOpened = !dungeons[d].indoorlist[c].isOpened;
-   if (sender.className = "DCavailable";)
+   if (sender.className = "DCavailable")
       sender.className = "DCopened";
    else sender.className = "DCavailable";
    document.getElementById('indoorlist').appendChild(sender)
