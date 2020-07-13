@@ -4332,6 +4332,44 @@ var dungeons = [
          return generalCanGetChest(this.chestlist);
       }
    },
+   {
+      name: "Hyrule Field",
+      x: "50.0%",
+      y: "50.0%",
+      type: "overworld",
+      entrancelist: {
+         'Field to Forest': {
+             isAvailable: function () {
+                  return true; }
+         },
+         'Field to River': {
+             isAvailable: function () {
+                  return true; }
+         },
+         'Field to Village': {
+             isAvailable: function () {
+                  return true; }
+         },
+         'Field to Market': {
+             isAvailable: function () {
+                  return true; }
+         },
+         'Field to Valley': {
+             isAvailable: function () {
+                  return true; }
+         },
+         'Field to Lake': {
+             isAvailable: function () {
+                  return true; }
+         },
+      },
+      isBeatable: function () {
+         return this.canGetChest();
+      },
+      canGetChest: function () {
+         return generalCanGetChest(this.chestlist);
+      }
+   },
 ];
 
 //define overworld chests
