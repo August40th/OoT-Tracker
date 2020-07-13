@@ -1165,7 +1165,7 @@ function toggleEntrance(sender, d, c) {
    } else if (dungeons[d].entrancelist[c].isAvailable()) {
       sender.className = "DCavailable";
       var owlist = document.getElementById('entrancelist');
-      owlist.appendChild(document.getElementById('dungeons[dungeonSelect].name'))
+      owlist.appendChild(document.getElementById('dungeonSelect'))
       owlist.appendChild(sender)
    } else {
       sender.className = "DCunavailable";
