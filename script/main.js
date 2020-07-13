@@ -1492,7 +1492,7 @@ function setOWER(sender) {
    OWERmap = sender.checked;
    if (OWERmap = false)
       document.getElementById('ermapdiv').display = none;
-   else document.getElementById('ermapdiv').background-image = initial;
+   else document.getElementById('ermapdiv').display = initial;
    drawERList();
    updateMap();
    drawDungeonList();
