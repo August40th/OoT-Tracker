@@ -435,6 +435,15 @@ label {
     margin-top: 160px;
 }
 
+.selectedindoors{
+    background-color: black;
+
+    position: absolute;
+    left: 500px;
+    width: 230px;
+    height: 260px;
+    margin-top: 160px;
+}
 
 .mapvdiv{
     background-image: url("images/mapv.png");
