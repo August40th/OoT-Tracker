@@ -1163,10 +1163,10 @@ function toggleEntrance(sender, d, c) {
    dungeons[d].entrancelist[c].isOpened = !dungeons[d].entrancelist[c].isOpened;
    if (dungeons[d].entrancelist[c].isOpened) {
       sender.className = "DCopened";
-   } else if (dungeons[d].entrancelist[c].isAvailable()) {
-      sender.className = "DCavailable";
       var owlist = document.getElementById('entrancelist');
       owlist.appendChild(sender)
+   } else if (dungeons[d].entrancelist[c].isAvailable()) {
+      sender.className = "DCavailable";
    } else {
       sender.className = "DCunavailable";
    }
