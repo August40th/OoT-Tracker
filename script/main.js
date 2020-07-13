@@ -74,7 +74,7 @@ function getCookie() {
    return {};
 }
 
-var cookiekeys = ['iZoom', 'mZoom', 'rainlogic', 'items', 'qlogic', 'flogic', 'carp', 'smallk', 'bossk', 'sclogic', 'sklogic', 'ocShuff', 'sngShuff', 'eggShuff', 'beanShuff', 'chulogic', 'forest', 'gate', 'door', 'fountain', 'shpsize', 'cowShuff', 'numtrials', 'pigBK', 'gER', 'medi'];
+var cookiekeys = ['iZoom', 'mZoom', 'rainlogic', 'items', 'qlogic', 'flogic', 'carp', 'smallk', 'bossk', 'sclogic', 'sklogic', 'ocShuff', 'sngShuff', 'eggShuff', 'beanShuff', 'chulogic', 'forest', 'gate', 'door', 'fountain', 'shpsize', 'cowShuff', 'numtrials', 'pigBK', 'gER', 'oER', 'iER', 'medi'];
 var cookieDefault = {
    iZoom: 100,
    mZoom: 100,
@@ -100,6 +100,8 @@ var cookieDefault = {
    numtrials: 0,
    pigBK: 'Removed',
    gER: 0,
+   oER: 0,
+   iER: 0,
    medi: 0,
    
    items: defaultItemGrid
@@ -153,6 +155,10 @@ function loadCookie() {
    
    document.getElementsByName('GrottoER')[0].checked = !!cookieobj.gER;
    document.getElementsByName('GrottoER')[0].onchange();
+   document.getElementsByName('OWERmap')[0].checked = !!cookieobj.oER;
+   document.getElementsByName('OWERmap')[0].onchange();
+   document.getElementsByName('IndoorER')[0].value = !!cookieobj.iER;
+   document.getElementsByName('IndoorER')[0].onchange();
 
    document.getElementsByName('shopsize')[0].value = cookieobj.shpsize;
    document.getElementsByName('shopsize')[0].onchange();
@@ -244,6 +250,9 @@ function saveCookie() {
    cookieobj.beanShuff = document.getElementsByName('BeanShuffle')[0].checked ? 1 : 0;
    
    cookieobj.gER = document.getElementsByName('GrottoER')[0].checked ? 1 : 0;
+   cookieobj.oER = document.getElementsByName('OWERmap')[0].checked ? 1 : 0;
+   cookieobj.iER = document.getElementsByName('IndoorER')[0].value ? 1 : 0;
+
    
    cookieobj.shpsize = document.getElementsByName('shopsize')[0].value;
    cookieobj.numtrials = document.getElementsByName('trialsize')[0].value;
