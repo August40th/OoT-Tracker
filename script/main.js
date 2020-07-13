@@ -38,7 +38,7 @@ OpenDoor = true;
 OpenFountain = false;
 
 GrottoER = false;
-IndoorER = false;
+IndoorER = 'Off';
 OWERmap = false;
 
 var itemGrid = [];
@@ -155,10 +155,10 @@ function loadCookie() {
    
    document.getElementsByName('GrottoER')[0].checked = !!cookieobj.gER;
    document.getElementsByName('GrottoER')[0].onchange();
-   //document.getElementsByName('OWERmap')[0].checked = !!cookieobj.oER;
-   //document.getElementsByName('OWERmap')[0].onchange();
-   //document.getElementsByName('IndoorER')[0].value = !!cookieobj.iER;
-   //document.getElementsByName('IndoorER')[0].onchange();
+   document.getElementsByName('OWERmap')[0].checked = !!cookieobj.oER;
+   document.getElementsByName('OWERmap')[0].onchange();
+   document.getElementsByName('IndoorER')[0].value = !!cookieobj.iER;
+   document.getElementsByName('IndoorER')[0].onchange();
 
    document.getElementsByName('shopsize')[0].value = cookieobj.shpsize;
    document.getElementsByName('shopsize')[0].onchange();
@@ -1467,6 +1467,7 @@ function setShopsize(sender) {
 
 function setGrottoER(sender) {
    GrottoER = sender.checked;
+   drawERList();
    updateMap();
    drawDungeonList();
    saveCookie();
@@ -1474,14 +1475,6 @@ function setGrottoER(sender) {
 
 function setIndoorER(sender) {
    IndoorER = sender.value;
-   if (IndoorER == "Off") {
-      document.getElementById('selectedindoors').display = none;
-      document.getElementById('indoorlist').display = none;
-   }
-   else {
-      document.getElementById('selectedindoors').display = "";
-      document.getElementById('indoorlist').display = "";
-   }
    drawERList();
    updateMap();
    drawDungeonList();
@@ -1490,9 +1483,6 @@ function setIndoorER(sender) {
 
 function setOWER(sender) {
    OWERmap = sender.checked;
-   if (OWERmap == 'false')
-      document.getElementById('ermapdiv').display = none;
-   else document.getElementById('ermapdiv').display = "";
    drawERList();
    updateMap();
    drawDungeonList();
