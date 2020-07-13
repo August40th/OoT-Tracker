@@ -1479,8 +1479,8 @@ function setIndoorER(sender) {
       document.getElementById('indoorlist').display = none;
    }
    else {
-      document.getElementById('selectedindoors').display = initial;
-      document.getElementById('indoorlist').display = initial;
+      document.getElementById('selectedindoors').display = visible;
+      document.getElementById('indoorlist').display = visible;
    }
    drawERList();
    updateMap();
@@ -1492,7 +1492,7 @@ function setOWER(sender) {
    OWERmap = sender.checked;
    if (OWERmap = false)
       document.getElementById('ermapdiv').display = none;
-   else document.getElementById('ermapdiv').display = initial;
+   else document.getElementById('ermapdiv').display = visible;
    drawERList();
    updateMap();
    drawDungeonList();
