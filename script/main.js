@@ -1474,7 +1474,7 @@ function setGrottoER(sender) {
 
 function setIndoorER(sender) {
    IndoorER = sender.value;
-   if (IndoorER == false) {
+   if (IndoorER === false) {
       document.getElementById('selectedindoors').style.display = none;
       document.getElementById('indoorlist').style.display = none;
    }
