@@ -2013,7 +2013,7 @@ function updateMap() {
          document.getElementById(k).classList.remove("d-none");
    }
 
-   for (k = 0; k < 33 ; k++) {
+   for (k = 0; k < dungeons.length ; k++) {
       document.getElementById("dungeon" + k).className = "mapspan dungeon " + getDungeonAvailability(dungeons[k]) + ((dungeonMarked.indexOf(k) > -1) ? " wayofhero" : " ");
 
       var DCcount = 0;
