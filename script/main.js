@@ -420,7 +420,7 @@ function drawERList(){
          for (var key in dungeons[dungeonSelect].entrancelist) {
             var s = document.createElement('li');
             s.innerHTML = key
-            s.onclick = new Function('toggleIndoor(this,' + dungeonSelect + ',"' + key + '")');
+            s.onclick = new Function('toggleEntrance(this,' + dungeonSelect + ',"' + key + '")');
             s.onmouseover = new Function('highlightDungeonChest(this)');
             s.onmouseout = new Function('unhighlightDungeonChest(this)');
             s.style.cursor = "pointer";
@@ -1136,6 +1136,21 @@ function toggleIndoor(sender, d, c) {
       sender.className = "DCavailable";
       var inlist = document.getElementById('indoorlist');
       inlist.appendChild(sender)
+   } else {
+      sender.className = "DCunavailable";
+   }
+   drawERList();
+   updateMap();
+}
+
+function toggleEntrance(sender, d, c) {
+   dungeons[d].entrancelist[c].isOpened = !dungeons[d].entrancelist[c].isOpened;
+   if (dungeons[d].entrancelist[c].isOpened) {
+      sender.className = "DCopened";
+   } else if (dungeons[d].entrancelist[c].isAvailable()) {
+      sender.className = "DCavailable";
+      var owlist = document.getElementById('selectedERlist');
+      owlist.appendChild(sender)
    } else {
       sender.className = "DCunavailable";
    }
