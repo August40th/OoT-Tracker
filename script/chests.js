@@ -120,6 +120,16 @@ var dungeons = [
                return true; }
          },
       },
+    entrancelist: {
+       'Forest to Field': {
+          isAvailable: function () {
+               return true; }
+       },
+       'Forest to Woods': {
+          isAvailable: function () {
+               return true; }
+       },
+    }
       isBeatable: function () {
          return this.canGetChest();
       },
@@ -2542,6 +2552,20 @@ var dungeons = [
             }
          },
       },
+      entrancelist: {
+       'Market to Field': {
+          isAvailable: function () {
+               return true; }
+       },
+       'Market to Temple': {
+          isAvailable: function () {
+               return true; }
+       },
+       'Market to Castle': {
+          isAvailable: function () {
+               return true; }
+       },
+      },
       isBeatable: function () {
          return this.canGetChest();
       },
@@ -2565,6 +2589,12 @@ var dungeons = [
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword && items.ShadowMedallion && items.SpiritMedallion);
             }
          },
+      },
+      entrancelist: {
+         'Temple to Market': {
+             isAvailable: function () {
+                  return true; }
+          },
       },
       isBeatable: function () {
          return this.canGetChest();
@@ -2628,6 +2658,12 @@ var dungeons = [
             isAvailable: function () {
                return true
             }
+         },
+      },
+      entrancelist: {
+         'Castle to Market': {
+             isAvailable: function () {
+                  return true; }
          },
       },
       isBeatable: function () {
@@ -2840,6 +2876,20 @@ var dungeons = [
                   return true; }
          },
       },
+      entrancelist: {
+         'Village to Field': {
+             isAvailable: function () {
+                  return true; }
+         },
+         'Village to Trail': {
+             isAvailable: function () {
+                  return true; }
+         },
+         'Village to Graveyard': {
+             isAvailable: function () {
+                  return true; }
+         },
+      },
       isBeatable: function () {
          return this.canGetChest();
       },
@@ -2947,6 +2997,20 @@ var dungeons = [
             isAvailable: function () {
                return true
             }
+         },
+      },
+      entrancelist: {
+         'City to Trail': {
+             isAvailable: function () {
+                  return true; }
+         },
+         'City to Woods': {
+             isAvailable: function () {
+                  return true; }
+         },
+         'City to Crater': {
+             isAvailable: function () {
+                  return true; }
          },
       },
       isBeatable: function () {
@@ -3058,6 +3122,24 @@ var dungeons = [
             }
          },
       },
+      entrancelist: {
+         'Woods to Forest': {
+             isAvailable: function () {
+                  return true; }
+         },
+         'Woods to City': {
+             isAvailable: function () {
+                  return true; }
+         },
+         'Woods to River': {
+             isAvailable: function () {
+                  return true; }
+         },
+         'Woods to Meadow': {
+             isAvailable: function () {
+                  return true; }
+         },
+      },
       isBeatable: function () {
          return this.canGetChest();
       },
@@ -3130,6 +3212,12 @@ var dungeons = [
             isAvailable: function () {
                return true
             }
+         },
+      },
+      entrancelist: {
+         'Meadow to Woods': {
+             isAvailable: function () {
+                  return true; }
          },
       },
       isBeatable: function () {
@@ -3208,6 +3296,20 @@ var dungeons = [
             }
          },
       },
+      entrancelist: {
+         'Domain to River': {
+             isAvailable: function () {
+                  return true; }
+         },
+         'Domain to Lake': {
+             isAvailable: function () {
+                  return true; }
+         },
+         'Domain to Dountain': {
+             isAvailable: function () {
+                  return true; }
+         },
+      },
       isBeatable: function () {
          return this.canGetChest();
       },
@@ -3270,6 +3372,12 @@ var dungeons = [
             isAvailable: function () {
                return true
             }
+         },
+      },
+      entrancelist: {
+         'Fountain to Domain': {
+             isAvailable: function () {
+                  return true; }
          },
       },
       isBeatable: function () {
@@ -3359,6 +3467,24 @@ var dungeons = [
             }
          },
       },
+      entrancelist: {
+         'Trail to Village': {
+             isAvailable: function () {
+                  return true; }
+         },
+         'Trail to City': {
+             isAvailable: function () {
+                  return true; }
+         },
+         'Trail to Crater': {
+             isAvailable: function () {
+                  return true; }
+         },
+         'Trail Owl': {
+             isAvailable: function () {
+                  return true; }
+         },
+      },
       isBeatable: function () {
          return this.canGetChest();
       },
@@ -3442,6 +3568,16 @@ var dungeons = [
             isAvailable: function () {
                return true
             }
+         },
+      },
+      entrancelist: {
+         'Crater to Trail': {
+             isAvailable: function () {
+                  return true; }
+         },
+         'Crater to City': {
+             isAvailable: function () {
+                  return true; }
          },
       },
       isBeatable: function () {
@@ -3545,6 +3681,12 @@ var dungeons = [
                return true; }
          },
       },
+      entrancelist: {
+         'Ranch to Field': {
+             isAvailable: function () {
+                  return true; }
+         },
+      },
       isBeatable: function () {
          return this.canGetChest();
       },
@@ -3643,6 +3785,20 @@ var dungeons = [
             isAvailable: function () {
                return true
             }
+         },
+      },
+      entrancelist: {
+         'River to Field': {
+             isAvailable: function () {
+                  return true; }
+         },
+         'River to Woods': {
+             isAvailable: function () {
+                  return true; }
+         },
+         'River to Domain': {
+             isAvailable: function () {
+                  return true; }
          },
       },
       isBeatable: function () {
@@ -3749,6 +3905,20 @@ var dungeons = [
             }
          },
       },
+      entrancelist: {
+         'Lake to Field': {
+             isAvailable: function () {
+                  return true; }
+         },
+         'Lake to Domain': {
+             isAvailable: function () {
+                  return true; }
+         },
+         'Lake Owl': {
+             isAvailable: function () {
+                  return true; }
+         },
+      },
       isBeatable: function () {
          return this.canGetChest();
       },
@@ -3838,6 +4008,16 @@ var dungeons = [
             }
          },
       },
+      entrancelist: {
+         'Valley to Field': {
+             isAvailable: function () {
+                  return true; }
+         },
+         'Valley to Fortress': {
+             isAvailable: function () {
+                  return true; }
+         },
+      },
       isBeatable: function () {
          return this.canGetChest();
       },
@@ -3910,6 +4090,16 @@ var dungeons = [
                return true; }
          },
       },
+      entrancelist: {
+         'Fortress to Valley': {
+             isAvailable: function () {
+                  return true; }
+         },
+         'Fortress to Desert': {
+             isAvailable: function () {
+                  return true; }
+         },
+      },
       isBeatable: function () {
          return this.canGetChest();
       },
@@ -3978,6 +4168,12 @@ var dungeons = [
             isAvailable: function () {
                return true
             }
+         },
+      },
+      entrancelist: {
+         'Desert to Wasteland': {
+             isAvailable: function () {
+                  return true; }
          },
       },
       isBeatable: function () {
@@ -4075,6 +4271,12 @@ var dungeons = [
             }
          },
       },
+      entrancelist: {
+         'Graveyard to Village': {
+             isAvailable: function () {
+                  return true; }
+         },
+      },
       isBeatable: function () {
          return this.canGetChest();
       },
@@ -4106,49 +4308,21 @@ var dungeons = [
             }
          },
       },
-      indoorlist: {
-         'Hyrule Field Cow Grotto': {
-            isAvailable: function () {
-               return true; }
-         },
-         'Tektite Grotto': {
-            isAvailable: function () {
-               return true; }
-         },
-         'Field Fairy Fountain Grotto': {
-            isAvailable: function () {
-               return true; }
-         },
-         'West of Castle Grotto': {
-            isAvailable: function () {
-               return true; }
-         },
-         'Field Skulltula Grotto': {
-            isAvailable: function () {
-               return true; }
-         },
-         'Field South East Grotto': {
-            isAvailable: function () {
-               return true; }
-         },
-         'Field Open Grotto': {
-            isAvailable: function () {
-               return true; }
-         },
-         'Field Scrub Grotto': {
-            isAvailable: function () {
-               return true; }
-         },
-         'Double Defense Fairy Fountain': {
-            isAvailable: function () {
-               return true; }
-         },
-      },
       gossiplist: {
          'Northwest Desert Stone': {
             isAvailable: function () {
                return true
             }
+         },
+      },
+      entrancelist: {
+         'Wasteland to Fortress': {
+             isAvailable: function () {
+                  return true; }
+         },
+         'Wasteland to Desert': {
+             isAvailable: function () {
+                  return true; }
          },
       },
       isBeatable: function () {
