@@ -157,8 +157,8 @@ function loadCookie() {
    document.getElementsByName('GrottoER')[0].onchange();
    document.getElementsByName('OWERmap')[0].checked = !!cookieobj.oER;
    document.getElementsByName('OWERmap')[0].onchange();
-   document.getElementsByName('IndoorER')[0].value = !!cookieobj.iER;
-   document.getElementsByName('IndoorER')[0].onchange();
+   //document.getElementsByName('IndoorER')[0].value = !!cookieobj.iER;
+   //document.getElementsByName('IndoorER')[0].onchange();
 
    document.getElementsByName('shopsize')[0].value = cookieobj.shpsize;
    document.getElementsByName('shopsize')[0].onchange();
