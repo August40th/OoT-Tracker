@@ -1149,7 +1149,7 @@ function toggleEntrance(sender, d, c) {
       sender.className = "DCopened";
    } else if (dungeons[d].entrancelist[c].isAvailable()) {
       sender.className = "DCavailable";
-      var owlist = document.getElementById('selectedERlist');
+      var owlist = document.getElementById('entrancelist');
       owlist.appendChild(sender)
    } else {
       sender.className = "DCunavailable";
