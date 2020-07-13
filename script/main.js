@@ -401,15 +401,17 @@ function drawERList(){
          for (var key in dungeons[dungeonSelect].indoorlist) {
             if (GrottoER == false && (key.includes("Grotto") || key.includes("Grave") || key.includes("Tomb") ) ) 
             {}
-            var s = document.createElement('li');
-            s.innerHTML = key
-            s.onclick = new Function('toggleIndoor(this,' + dungeonSelect + ',"' + key + '")');
-            s.onmouseover = new Function('highlightDungeonChest(this)');
-            s.onmouseout = new Function('unhighlightDungeonChest(this)');
-            s.style.cursor = "pointer";
-            s.setAttribute("data-type", "indoor");
-            //if (dNone) s.classList.add("d-none");
-            selected.appendChild(s)
+            else {
+               var s = document.createElement('li');
+               s.innerHTML = key
+               s.onclick = new Function('toggleIndoor(this,' + dungeonSelect + ',"' + key + '")');
+               s.onmouseover = new Function('highlightDungeonChest(this)');
+               s.onmouseout = new Function('unhighlightDungeonChest(this)');
+               s.style.cursor = "pointer";
+               s.setAttribute("data-type", "indoor");
+               //if (dNone) s.classList.add("d-none");
+               selected.appendChild(s)
+            }
          }
    }
    if (OWERmap != false) {
