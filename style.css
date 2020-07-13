@@ -439,9 +439,10 @@ label {
     background-color: black;
 
     position: absolute;
-    left: 500px;
-    width: 230px;
-    height: 260px;
+    left: 440px;
+    bottom: 0px;
+    width: 388px;
+    height: 120px;
     margin-top: 160px;
 }
 
@@ -584,7 +585,7 @@ label {
     cursor: pointer;
 }
 
-#indoorlist2 {
+#entrancelist {
     background-color: black;
     top: -515px;
     left: 360px;
