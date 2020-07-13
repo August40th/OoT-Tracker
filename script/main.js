@@ -1491,8 +1491,8 @@ function setIndoorER(sender) {
 function setOWER(sender) {
    OWERmap = sender.checked;
    if (OWERmap = false)
-      document.getElementById('ermapdiv').'background-image' = none;
-   wlse document.getElementById('ermapdiv').'background-image' = initial;
+      document.getElementById('ermapdiv').display = none;
+   else document.getElementById('ermapdiv').background-image = initial;
    drawERList();
    updateMap();
    drawDungeonList();
