@@ -4334,8 +4334,8 @@ var dungeons = [
    },
    {
       name: "Hyrule Field",
-      x: "58.0%",
-      y: "45.0%",
+      x: "54.0%",
+      y: "42.0%",
       type: "overworld",
       entrancelist: {
          'Field to Forest': {
