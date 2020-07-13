@@ -2012,8 +2012,8 @@ function updateMap() {
       else if (GrottoER == true && (chests[k].name.includes("Fountain")||chests[k].name.startsWith("Skulltula") ) )
          document.getElementById(k).classList.remove("d-none");
    }
-
-   for (k = 0; k < dungeons.length ; k++) {
+   
+   for (k = 0; k < 32 ; k++) {
       document.getElementById("dungeon" + k).className = "mapspan dungeon " + getDungeonAvailability(dungeons[k]) + ((dungeonMarked.indexOf(k) > -1) ? " wayofhero" : " ");
 
       var DCcount = 0;
