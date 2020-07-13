@@ -309,7 +309,7 @@ label {
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: black transparent transparent transparent;
+    border-color: transparent;
 }
 
 .mapspan .tooltip:hover {
@@ -443,6 +443,18 @@ label {
     bottom: 0px;
     width: 388px;
     height: 120px;
+    margin-top: 160px;
+}
+
+
+.selectedentrances{
+    background-color: black;
+
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 230px;
+    height: 260px;
     margin-top: 160px;
 }
 
