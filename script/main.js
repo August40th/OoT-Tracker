@@ -1146,25 +1146,20 @@ function toggleShopChest(sender, d, c) {
 
 function toggleIndoor(sender, d, c) {
    dungeons[d].indoorlist[c].isOpened = !dungeons[d].indoorlist[c].isOpened;
-   if (sender.className = "DCavailable")
+   if (dungeons[d].entrancelist[c].isOpened) {
       sender.className = "DCopened";
-   else sender.className = "DCavailable";
-   document.getElementById('indoorlist').appendChild(sender)
+   } else if (dungeons[d].entrancelist[c].isAvailable()) {
+      sender.className = "DCavailable";
+      document.getElementById('indoorlist').appendChild(sender)
+   } else {
+      sender.className = "DCunavailable";
+   }
    drawERList();
    updateMap();
 }
 
 function toggleEntrance(sender, d, c) {
-   dungeons[d].entrancelist[c].isOpened = !dungeons[d].entrancelist[c].isOpened;
-   if (dungeons[d].entrancelist[c].isOpened) {
-      sender.className = "DCopened";
-      var owlist = document.getElementById('entrancelist');
-      owlist.appendChild(sender)
-   } else if (dungeons[d].entrancelist[c].isAvailable()) {
-      sender.className = "DCavailable";
-   } else {
-      sender.className = "DCunavailable";
-   }
+   document.getElementById('entrancelist').appendChild(sender)
    drawERList();
    updateMap();
 }
