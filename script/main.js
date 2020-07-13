@@ -1146,16 +1146,10 @@ function toggleShopChest(sender, d, c) {
 
 function toggleIndoor(sender, d, c) {
    dungeons[d].indoorlist[c].isOpened = !dungeons[d].indoorlist[c].isOpened;
-   if (dungeons[d].indoorlist[c].isOpened) {
+   if (sender.className = "DCavailable";)
       sender.className = "DCopened";
-   } else if (dungeons[d].indoorlist[c].isAvailable()) {
-      sender.className = "DCavailable";
-      var place = document.createElement('li');
-      place.innerHTML = sender
-      document.getElementById('indoorlist').appendChild(place)
-   } else {
-      sender.className = "DCunavailable";
-   }
+   else sender.className = "DCavailable";
+   document.getElementById('indoorlist').appendChild(sender)
    drawERList();
    updateMap();
 }
