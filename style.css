@@ -593,6 +593,7 @@ label {
     width: 360px;
     height: 515px;
     overflow-y: auto;
+    overflow-x: hidden;
     position: absolute;
     cursor: pointer;
 }
@@ -604,6 +605,7 @@ label {
     width: 360px;
     height: 515px;
     overflow-y: auto;
+    overflow-x: hidden;
     position: absolute;
     cursor: pointer;
 }
