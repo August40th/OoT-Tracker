@@ -401,7 +401,7 @@ function clickDungeon(d) {
    if (OWERmap == true) {
       var ERlist = document.getElementById('entrancelist');
       var nm = document.getElementById('submaparea')
-      ERlist.appendChild(nm)
+      ERlist.appendChild(d)
    }
    
    drawERList();
@@ -1165,6 +1165,7 @@ function toggleEntrance(sender, d, c) {
    } else if (dungeons[d].entrancelist[c].isAvailable()) {
       sender.className = "DCavailable";
       var owlist = document.getElementById('entrancelist');
+      owlist.appendChild(dungeons[d])
       owlist.appendChild(sender)
    } else {
       sender.className = "DCunavailable";
