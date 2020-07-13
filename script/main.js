@@ -2013,10 +2013,7 @@ function updateMap() {
          document.getElementById(k).classList.remove("d-none");
    }
 
-   var er = 1
-   if (OWERmap == true) er = 0;
-   else er = 1;
-   for (k = 0; k < (32-er) ; k++) {
+   for (k = 0; k < 33 ; k++) {
       document.getElementById("dungeon" + k).className = "mapspan dungeon " + getDungeonAvailability(dungeons[k]) + ((dungeonMarked.indexOf(k) > -1) ? " wayofhero" : " ");
 
       var DCcount = 0;
@@ -2304,7 +2301,10 @@ function populateMapdiv() {
    }
 
    // Dungeon bosses & chests
-   for (k = 0; k < dungeons.length; k++) {
+   var er = 1
+   if (OWERmap == true) er = 0;
+   else er = 1;
+   for (k = 0; k < (dungeons.length - er); k++) {
       s = document.createElement('span');
       s.style.backgroundImage = 'url(images/poi.png)';
       s.id = 'dungeon' + k;
