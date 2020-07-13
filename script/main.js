@@ -399,8 +399,8 @@ function clickDungeon(d) {
    document.getElementById('submaparea').className = "DC" + getDungeonAvailability(dungeons[dungeonSelect]);
    
    if (OWERmap == true) {
-      var owlist =document.getElementById('entrancelist');
-      var nm = createElement('li');
+      var owlist = document.getElementById('entrancelist');
+      var nm = document.createElement('li');
       nm.innerHTML = dungeons[dungeonSelect].name
       owlist.appendChild(nm)
    }
