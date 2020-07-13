@@ -397,6 +397,7 @@ function clickDungeon(d) {
 function drawERList(){
    if (IndoorER != false) {
       var selected = document.getElementById('selectindoorlist');
+      selected.innerHTML = "";
          for (var key in dungeons[dungeonSelect].indoorlist) {
             var s = document.createElement('li');
             s.innerHTML = key
