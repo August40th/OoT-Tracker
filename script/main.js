@@ -399,6 +399,8 @@ function drawERList(){
       var selected = document.getElementById('selectindoorlist');
       selected.innerHTML = "";
          for (var key in dungeons[dungeonSelect].indoorlist) {
+            if (GrottoER == false && (key.includes("Grotto") || key.includes("Grave") || key.includes("Tomb") ) ) 
+            {}
             var s = document.createElement('li');
             s.innerHTML = key
             s.onclick = new Function('toggleIndoor(this,' + dungeonSelect + ',"' + key + '")');
