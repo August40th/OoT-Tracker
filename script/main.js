@@ -1474,7 +1474,7 @@ function setGrottoER(sender) {
 
 function setIndoorER(sender) {
    IndoorER = sender.value;
-   if (IndoorER === false) {
+   if (IndoorER == 'Off') {
       document.getElementById('selectedindoors').style.display = none;
       document.getElementById('indoorlist').style.display = none;
    }
@@ -1490,7 +1490,7 @@ function setIndoorER(sender) {
 
 function setOWER(sender) {
    OWERmap = sender.checked;
-   if (OWERmap == false)
+   if (OWERmap == 'false')
       document.getElementById('ermapdiv').style.display = none;
    else document.getElementById('ermapdiv').style.display = "";
    drawERList();
