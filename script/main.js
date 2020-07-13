@@ -419,28 +419,24 @@ function drawERList(){
       OWERlist.innerHTML = "";
       var saveE=0;
       for (var e = 0; e < 32; e++){
-         if (dungeons[e].indoorlist != undefined) {
-            for (var key in dungeons[e].indoorlist) {
-               if (saveE != e && (key.includes("Grotto") || key.includes("Fountain") || key.includes("Grave") || key.includes("Tomb") ) ) {
+         if (dungeons[e].entrancelist != undefined) {
+            for (var key in dungeons[e].entrancelist) {
                   var l1 = document.createElement('hr');
-                  var l2 = l1
+                  var l2 = document.createElement('hr');
                   OWERlist.appendChild(l1)
                   var t = document.createElement('li');
                   t.innerHTML = dungeons[e].name;
                   OWERlist.appendChild(t)
-                  OWERlist.appendChild(l2)
-               }
-               if (key.includes("Grotto") || key.includes("Fountain") || key.includes("Grave") || key.includes("Tomb") ) {
                   var s = document.createElement('li');
                   s.innerHTML = key
                   s.onclick = new Function('toggleIndoor(this,' + e + ',"' + key + '")');
                   s.onmouseover = new Function('highlightDungeonChest(this)');
                   s.onmouseout = new Function('unhighlightDungeonChest(this)');
                   s.style.cursor = "pointer";
-                  s.setAttribute("data-type", "indoor");
+                  s.setAttribute("data-type", "entrance");
                   //if (dNone) s.classList.add("d-none");
                   OWERlist.appendChild(s)
-               }
+                  OWERlist.appendChild(l2)
                saveE = e;
             }
          }
