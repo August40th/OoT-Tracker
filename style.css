@@ -590,12 +590,10 @@ label {
 
 #indoorlist {
     background-color: black;
-    bottom: 5;
+    bottom: 0px;
     left: 0px;
-    width: 360px;
-    min-height: 40px;
-    height: auto;
-    max-height: 260;
+    width: 260px;
+    height: 260px;
     text-align: center;
     overflow-y: scroll;
     overflow-x: hidden;
