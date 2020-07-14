@@ -407,8 +407,8 @@ function clickDungeon(d) {
    }
    
    if (linestart % 2 == 0){
-      var tempx = dungeons[dungeonSelect].x;
-      var tempy = dungeons[dungeonSelect].y;
+      var tempx = dungeons[dungeonSelect].x.value;
+      var tempy = dungeons[dungeonSelect].y.value;
       linestart++;
    }
    else {
