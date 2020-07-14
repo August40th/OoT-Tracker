@@ -369,6 +369,7 @@ function highlightDungeon(x) {
       linestart++;
    }
    else {
+      var c = var c = document.getElementById("mapdiv");
       var ctx = c.getContext("2d");
       ctx.beginPath();
       ctx.moveTo(tempx, tempy);
