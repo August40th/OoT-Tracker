@@ -363,17 +363,6 @@ function unhighlight(x) {
 // Highlights a chest location (but for dungeons)
 function highlightDungeon(x) {
    document.getElementById("dungeon" + x).style.backgroundImage = "url(images/highlighted.png)";
-   if (linestart % 2 == 0){
-      var tempx = dungeons[x].x;
-      var tempy = dungeons[x].y;
-      linestart++;
-   }
-   else {
-      line(tempx, tempy, dungeons[x].x, dungeons[x].y)
-      stroke('red');
-      strokeWeight(4);
-      linestart++;
-   }
 }
 
 function unhighlightDungeon(x) {
@@ -415,6 +404,18 @@ function clickDungeon(d) {
       var nm = document.createElement('li');
       nm.innerHTML = dungeons[dungeonSelect].name
       owlist.appendChild(nm)
+   }
+   
+   if (linestart % 2 == 0){
+      var tempx = dungeons[x].x;
+      var tempy = dungeons[x].y;
+      linestart++;
+   }
+   else {
+      //line(tempx, tempy, dungeons[x].x, dungeons[x].y)
+      //stroke('red');
+      //strokeWeight(4);
+      linestart++;
    }
    
    drawERList();
