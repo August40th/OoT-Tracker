@@ -589,11 +589,12 @@ label {
 }
 
 #indoorlist {
-    background-color: transparent;
+    background-color: black;
     bottom: 0px;
     left: 0px;
-    width: 260px;
+    width: 240px;
     height: auto;
+    max-height: 220px;
     text-align: center;
     overflow-y: scroll;
     overflow-x: hidden;
