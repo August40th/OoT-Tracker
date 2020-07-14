@@ -370,11 +370,10 @@ function highlightDungeon(x) {
    }
    else {
       var c = document.getElementById("mapdiv");
-      var ctx = c.getContext("2d");
-      ctx.beginPath();
-      ctx.moveTo(tempx, tempy);
-      ctx.lineTo(dungeons[x].x, dungeons[x].y);
-      ctx.stroke();
+      c.beginPath();
+      c.moveTo(tempx, tempy);
+      c.lineTo(dungeons[x].x, dungeons[x].y);
+      c.stroke();
       linestart++;
    }
 }
