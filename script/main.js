@@ -369,11 +369,9 @@ function highlightDungeon(x) {
       linestart++;
    }
    else {
-      var c = document.getElementById("mapdiv");
-      c.beginPath();
-      c.moveTo(tempx, tempy);
-      c.lineTo(dungeons[x].x, dungeons[x].y);
-      c.stroke();
+      line(tempx, tempy, dungeons[x].x, dungeons[x].y)
+      stroke('red');
+      strokeWeight(4);
       linestart++;
    }
 }
