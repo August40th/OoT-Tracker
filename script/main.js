@@ -412,9 +412,15 @@ function clickDungeon(d) {
       linestart++;
    }
    else {
+      var c = document.createElement("canvas");
+      var ctx = c.getContext("2d");
+      ctx.beginPath();
+      ctx.moveTo(0, 0);
+      ctx.lineTo(300, 150);
+      ctx.stroke('red'); 
       //line(tempx, tempy, dungeons[x].x, dungeons[x].y)
       //stroke('red');
-      //strokeWeight(4);
+      ctx.strokeWeight(4);
       linestart++;
    }
    
