@@ -51,7 +51,9 @@ var dungeonSelect = 0;
 var dungeonMarked = [];
 var chestMarked = [];
 var linestart = 0;
-
+var tempx = 0.0%;
+var tempy = 0.0%;
+    
 function setCookie(obj) {
    var d = new Date();
    d.setTime(d.getTime() + (365 * 24 * 60 * 60 * 1000));
@@ -407,15 +409,15 @@ function clickDungeon(d) {
    }
    
    if (linestart % 2 == 0){
-      var tempx.x = dungeons[dungeonSelect].x;
-      var tempy.y = dungeons[dungeonSelect].y;
+      tempx = dungeons[dungeonSelect].x;
+      tempy = dungeons[dungeonSelect].y;
       linestart++;
    }
    else {
       var c = document.createElement("canvas");
       var ctx = c.getContext("2d");
       ctx.beginPath();
-      ctx.moveTo(tempx.x, tempy.y);
+      ctx.moveTo(tempx, tempy);
       ctx.lineTo(dungeons[dungeonSelect].x, dungeons[dungeonSelect].y);
       ctx.stroke('red'); 
       //line(tempx, tempy, dungeons[x].x, dungeons[x].y)
