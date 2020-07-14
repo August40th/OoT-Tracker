@@ -419,10 +419,6 @@ function clickDungeon(d) {
       ctx.beginPath();
       ctx.moveTo(tempx, tempy);
       ctx.lineTo(dungeons[dungeonSelect].x, dungeons[dungeonSelect].y);
-      //ctx.stroke('red'); 
-      //line(tempx, tempy, dungeons[x].x, dungeons[x].y)
-      //stroke('red');
-      ctx.strokeWeight(4);
       linestart++;
    }
    
