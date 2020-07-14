@@ -361,7 +361,21 @@ function unhighlight(x) {
 
 // Highlights a chest location (but for dungeons)
 function highlightDungeon(x) {
+   var step = 0;
    document.getElementById("dungeon" + x).style.backgroundImage = "url(images/highlighted.png)";
+   if (step % 2 == 0){
+      var tempx = dungeons[x].x;
+      var tempy = dungeons[x].y;
+      step++;
+   }
+   else {
+      var ctx = c.getContext("2d");
+      ctx.beginPath();
+      ctx.moveTo(tempx, tempy);
+      ctx.lineTo(dungeons[x].x, dungeons[x].y);
+      ctx.stroke();
+      step++;
+   }
 }
 
 function unhighlightDungeon(x) {
