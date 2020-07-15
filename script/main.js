@@ -2319,7 +2319,7 @@ function populateMapdiv() {
    
    var ermapdiv = document.getElementById('ermapdiv');
 
-   // Initialize all chests on the map
+   // Initialize all entrances on 2nd map
    for (k = 0; k < dungeons.length; k++) {
        for (var key in dungeons[k].entrancelist) {
           var s = document.createElement('span');
@@ -2332,11 +2332,6 @@ function populateMapdiv() {
           s.oncontextmenu = new Function('toggleMarkedChest(' + k + ')')      
           s.style.left = dungeons[k].x;
           s.style.top = dungeons[k].y;
-          if (chests[k].isOpened) {
-             s.className = "mapspan entrance opened";
-          }
-          else
-             s.className = "mapspan entrance " + dungeons[k].entrancelist.isAvailable();
 
           var ss = document.createElement('span');
           ss.className = "tooltip";
