@@ -2339,7 +2339,7 @@ function populateMapdiv() {
           s.onclick = new Function('toggleEntrance(s)');
           s.onmouseover = new Function('highlight(key)');
           s.onmouseout = new Function('unhighlight(key)');
-          if (k = 0) {
+          if (k == 0) {
               s.style.left = key.x;
               s.style.top = key.y;
           }
