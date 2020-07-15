@@ -337,6 +337,10 @@ function toggleChest(x) {
    updateMap();
 }
 
+function toggleEntrance(s) {
+   s.style.backgroundColor = white;
+}
+
 function toggleMarkedChest(x) {
    window.event.preventDefault()
    var elem = document.getElementById(x);
@@ -2331,13 +2335,12 @@ function populateMapdiv() {
           s.style.backgroundImage = 'url(images/poi.png)';
           s.style.color = 'black';
           s.id = k;
-          s.onclick = new Function('toggleChest(' + k + ')');
+          s.onclick = new Function('toggleEntrance(this)');
           s.onmouseover = new Function('highlight(' + k + ')');
           s.onmouseout = new Function('unhighlight(' + k + ')');
-          s.oncontextmenu = new Function('toggleMarkedChest(' + k + ')')      
           s.style.left = tempx;
           s.style.top = tempy;
-          s.className = "mapspan entrance " + "available";
+          s.className = "mapspan entrance";
           var ss = document.createElement('span');
           ss.className = "tooltip";
           ss.innerHTML = key;
