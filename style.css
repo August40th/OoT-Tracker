@@ -486,11 +486,24 @@ label {
     width: 16;
     height: 16;
     background-size: 100% 100%;
+    background-color: transparent;
 
     position: absolute;
     margin-left: -8px;
     margin-top: -8px;
     cursor: pointer;
+}
+
+.entrance1{
+    background-color: blue;
+}
+
+.entrance2{
+    background-color: cyan;
+}
+
+.entrance3{
+    background-color: white;
 }
 
 .unavailable{
