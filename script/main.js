@@ -339,13 +339,15 @@ function toggleChest(x) {
 
 function toggleEntrance(s) {
    if (document.getElementById(s).className == "mapspan entrance")
-       document.getElementById(s).className = "mapspan entrance1";
-   else if (document.getElementById(s).className == "mapspan entrance1")
-       document.getElementById(s).className = "mapspan entrance2";
-   else if (document.getElementById(s).className == "mapspan entrance2")
-       document.getElementById(s).className = "mapspan entrance3";
-   else if (document.getElementById(s).className == "mapspan entrance3")
-       document.getElementById(s).className = "mapspan entrance";
+       document.getElementById(s).className += " " + '1';
+   else if (document.getElementById(s).classList.contains('1'){
+       document.getElementById(s)classList.remove('1');
+       document.getElementById(s).className += " " + '2';
+   } else if (document.getElementById(s).classList.contains('2') {
+       document.getElementById(s)classList.remove('2');
+       document.getElementById(s).className += " " + '3';
+   } else if (document.getElementById(s).classList.contains('3')
+       document.getElementById(s)classList.remove('3');
 }
 
 function toggleMarkedChest(x) {
