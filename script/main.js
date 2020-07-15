@@ -338,13 +338,13 @@ function toggleChest(x) {
 }
 
 function toggleEntrance(s) {
-   if (document.getElementById(s).className = "mapspan entrance";
+   if (document.getElementById(s).className = "mapspan entrance")
        document.getElementById(s).className = "mapspan entrance1";
-   else if (document.getElementById(s).className = "mapspan entrance1";
+   else if (document.getElementById(s).className = "mapspan entrance1")
        document.getElementById(s).className = "mapspan entrance2";
-   else if (document.getElementById(s).className = "mapspan entrance2";
+   else if (document.getElementById(s).className = "mapspan entrance2")
        document.getElementById(s).className = "mapspan entrance3";
-   else if (document.getElementById(s).className = "mapspan entrance3";
+   else if (document.getElementById(s).className = "mapspan entrance3")
        document.getElementById(s).className = "mapspan entrance;
 }
 
