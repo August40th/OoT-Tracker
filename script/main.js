@@ -2339,9 +2339,11 @@ function populateMapdiv() {
           s.onclick = new Function('toggleEntrance(s)');
           s.onmouseover = new Function('highlight(key)');
           s.onmouseout = new Function('unhighlight(key)');
+          
           s.style.left = tempx;
           s.style.top = tempy;
           if (dungeons[k].entrancelist[key].x != undefined) s.style.left = dungeons[k].entrancelist[key].x;
+          if (dungeons[k].entrancelist[key].y != undefined) s.style.left = dungeons[k].entrancelist[key].y;
           s.className = "mapspan entrance";
           var ss = document.createElement('span');
           ss.className = "tooltip";
