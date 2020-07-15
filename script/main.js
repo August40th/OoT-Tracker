@@ -2319,13 +2319,13 @@ function populateMapdiv() {
    
    var ermapdiv = document.getElementById('ermapdiv');
    var tempx = 10;
-   var tempy = 10;
+   var tempy = 2;
 
    // Initialize all entrances on 2nd map
    for (k = 0; k < dungeons.length; k++) {
-       tempy += 10;
+       tempy += 16;
        for (var key in dungeons[k].entrancelist) {
-          tempx += 8;
+          tempx += 6;
           var s = document.createElement('span');
           s.style.backgroundImage = 'url(images/poi.png)';
           s.style.color = 'black';
