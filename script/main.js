@@ -2334,16 +2334,17 @@ function populateMapdiv() {
 
    // Initialize all entrances on 2nd map
    for (k = 0; k < dungeons.length; k++) {
+       var tempx = "0.0"
        for (var key in dungeons[k].entrancelist) {
-          tempx += 18;
+          tempx += 17.0%;
           var s = document.createElement('span');
           s.style.backgroundImage = 'url(images/poi.png)';
-          s.style.color = 'blue';
+          s.style.color = 'black';
           s.id = key;
-          s.onclick = new Function('toggleEntrance(this)');
-          s.onmouseover = new Function('highlight(key)');
-          s.onmouseout = new Function('unhighlight(key)');
-          s.style.left = dungeons[k].x;
+          s.onclick = new Function('toggleEntrance(' + s + ')');
+          s.onmouseover = new Function('highlight(s)');
+          s.onmouseout = new Function('unhighlight(s)');
+          s.style.left = dungeons[k].x + tempx;
           s.style.top = dungeons[k].y;
           if (dungeons[k].entrancelist[key].x != undefined) s.style.left = dungeons[k].entrancelist[key].x;
           if (dungeons[k].entrancelist[key].y != undefined) s.style.top = dungeons[k].entrancelist[key].y;
