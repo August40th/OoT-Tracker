@@ -2336,7 +2336,7 @@ function populateMapdiv() {
           s.oncontextmenu = new Function('toggleMarkedChest(' + k + ')')      
           s.style.left = tempx;
           s.style.top = tempy;
-
+          s.className = "mapspan chest " + key.isAvailable();
           var ss = document.createElement('span');
           ss.className = "tooltip";
           ss.innerHTML = key;
