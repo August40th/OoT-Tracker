@@ -2318,8 +2318,8 @@ function populateMapdiv() {
    }
    
    var ermapdiv = document.getElementById('ermapdiv');
-   var tempx = "10.0%";
-   var tempy = "10.0%";
+   var tempx = 10;
+   var tempy = 10;
 
    // Initialize all entrances on 2nd map
    for (k = 0; k < dungeons.length; k++) {
