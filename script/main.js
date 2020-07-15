@@ -2320,7 +2320,7 @@ function populateMapdiv() {
    var ermapdiv = document.getElementById('ermapdiv');
    // Initialize all entrances on 2nd map
    for (k = 0; k < dungeons.length; k++) {
-       var tempx = -5.0;
+       var tempx = "-5.0%";
        for (var key in dungeons[k].entrancelist) {
           tempx = tempx + 2;
           var s = document.createElement('span');
@@ -2332,7 +2332,7 @@ function populateMapdiv() {
           s.onmouseout = new Function('unhighlight(' + k + ')');
           s.oncontextmenu = new Function('toggleMarkedChest(' + k + ')')      
           s.style.left = dungeons[k].x + tempx;
-          s.style.top = dungeons[k].y - 5.0;
+          s.style.top = dungeons[k].y - "5.0%";
 
           var ss = document.createElement('span');
           ss.className = "tooltip";
