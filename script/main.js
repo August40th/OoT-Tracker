@@ -338,16 +338,6 @@ function toggleChest(x) {
 }
 
 function toggleEntrance(s) {
-   if (document.getElementById(s).className == "mapspan entrance")
-       document.getElementById(s).className += " " + '1';
-   else if (document.getElementById(s).classList.contains('1')) {
-       document.getElementById(s).classList.remove('1');
-       document.getElementById(s).className += " " + '2';
-   } else if (document.getElementById(s).classList.contains('2')) {
-       document.getElementById(s).classList.remove('2');
-       document.getElementById(s).className += " " + '3';
-   } else if (document.getElementById(s).classList.contains('3'))
-       document.getElementById(s).classList.remove('3');
 }
 
 function toggleMarkedChest(x) {
@@ -2335,13 +2325,14 @@ function populateMapdiv() {
    // Initialize all entrances on 2nd map
    for (k = 0; k < dungeons.length; k++) {
        for (var key in dungeons[k].entrancelist) {
+          tempx += 18;
           var s = document.createElement('span');
           s.style.backgroundImage = 'url(images/poi.png)';
-          s.style.color = 'black';
+          s.style.color = 'blue';
           s.id = key;
-          s.onclick = new Function('toggleEntrance(' + s + ')');
-          s.onmouseover = new Function('highlight(s)');
-          s.onmouseout = new Function('unhighlight(s)');
+          s.onclick = new Function('toggleEntrance(this)');
+          s.onmouseover = new Function('highlight(key)');
+          s.onmouseout = new Function('unhighlight(key)');
           s.style.left = dungeons[k].x;
           s.style.top = dungeons[k].y;
           if (dungeons[k].entrancelist[key].x != undefined) s.style.left = dungeons[k].entrancelist[key].x;
