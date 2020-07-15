@@ -122,10 +122,14 @@ var dungeons = [
       },
     entrancelist: {
        'Forest to Field': {
+          x: "72.0%",
+          y: "65.0%",
           isAvailable: function () {
                return true; }
        },
        'Forest to Woods': {
+          x: "74.0%",
+          y: "60.0%",
           isAvailable: function () {
                return true; }
        },
