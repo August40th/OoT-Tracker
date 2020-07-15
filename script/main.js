@@ -2325,7 +2325,7 @@ function populateMapdiv() {
    for (k = 0; k < dungeons.length; k++) {
        tempy += 10;
        for (var key in dungeons[k].entrancelist) {
-          tempx += 2;
+          tempx += 8;
           var s = document.createElement('span');
           s.style.backgroundImage = 'url(images/poi.png)';
           s.style.color = 'black';
