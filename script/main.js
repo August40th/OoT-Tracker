@@ -2336,7 +2336,7 @@ function populateMapdiv() {
           s.oncontextmenu = new Function('toggleMarkedChest(' + k + ')')      
           s.style.left = tempx;
           s.style.top = tempy;
-          s.className = "mapspan chest " + dungeons[k].entrancelist[key].isAvailable();
+          s.className = "mapspan entrance " + "available";
           var ss = document.createElement('span');
           ss.className = "tooltip";
           ss.innerHTML = key;
