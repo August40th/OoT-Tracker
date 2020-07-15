@@ -2323,13 +2323,9 @@ function populateMapdiv() {
    }
    
    var ermapdiv = document.getElementById('ermapdiv');
-   var tempx = "10.0%";
-   var tempy = "2.0%";
 
    // Initialize all entrances on 2nd map
    for (k = 0; k < dungeons.length; k++) {
-       //tempy += 18;
-       //if (k == 13) tempy = 20;
        for (var key in dungeons[k].entrancelist) {
           tempx += 18;
           var s = document.createElement('span');
@@ -2340,8 +2336,8 @@ function populateMapdiv() {
           s.onmouseover = new Function('highlight(key)');
           s.onmouseout = new Function('unhighlight(key)');
           
-          s.style.left = dungeons[k].x + tempx;
-          s.style.top = dungeons[k].y + tempy;
+          s.style.left = dungeons[k].x;
+          s.style.top = dungeons[k].y;
           if (dungeons[k].entrancelist[key].x != undefined) s.style.left = dungeons[k].entrancelist[key].x;
           if (dungeons[k].entrancelist[key].y != undefined) s.style.top = dungeons[k].entrancelist[key].y;
           s.className = "mapspan entrance";
