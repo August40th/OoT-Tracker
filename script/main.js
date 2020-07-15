@@ -2334,9 +2334,9 @@ function populateMapdiv() {
 
    // Initialize all entrances on 2nd map
    for (k = 0; k < dungeons.length; k++) {
-       var tempx = "0.0"
+       var tempx = "0.0%"
        for (var key in dungeons[k].entrancelist) {
-          tempx += 17.0%;
+          tempx += "17.0%";
           var s = document.createElement('span');
           s.style.backgroundImage = 'url(images/poi.png)';
           s.style.color = 'black';
