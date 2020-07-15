@@ -2339,14 +2339,9 @@ function populateMapdiv() {
           s.onclick = new Function('toggleEntrance(s)');
           s.onmouseover = new Function('highlight(key)');
           s.onmouseout = new Function('unhighlight(key)');
-          if (k == 0) {
-              s.style.left = key.x;
-              s.style.top = key.y;
-          }
-          else {
-              s.style.left = tempx;
-              s.style.top = tempy;
-          }
+          s.style.left = tempx;
+          s.style.top = tempy;
+          if (key.x != undefined) k++;
           s.className = "mapspan entrance";
           var ss = document.createElement('span');
           ss.className = "tooltip";
