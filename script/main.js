@@ -338,7 +338,7 @@ function toggleChest(x) {
 }
 
 function toggleEntrance(s) {
-   s.style.backgroundColor = white;
+   s.style.backgroundColor = "red";
    populateMapdiv();
 }
 
