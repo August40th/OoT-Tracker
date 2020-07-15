@@ -2341,7 +2341,7 @@ function populateMapdiv() {
           s.onmouseout = new Function('unhighlight(key)');
           s.style.left = tempx;
           s.style.top = tempy;
-          if (key.x != undefined) k++;
+          if (dungeons[k].entrancelist[key].x != undefined) s.style.left = dungeons[k].entrancelist[key].x;
           s.className = "mapspan entrance";
           var ss = document.createElement('span');
           ss.className = "tooltip";
