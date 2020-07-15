@@ -339,6 +339,7 @@ function toggleChest(x) {
 
 function toggleEntrance(s) {
    s.style.backgroundColor = white;
+   populateMapdiv();
 }
 
 function toggleMarkedChest(x) {
