@@ -482,6 +482,17 @@ label {
     cursor: pointer;
 }
 
+.entrance{
+    width: 16;
+    height: 16;
+    background-size: 100% 100%;
+
+    position: absolute;
+    margin-left: -8px;
+    margin-top: -8px;
+    cursor: pointer;
+}
+
 .unavailable{
     background-color: rgb(255,0,0);
 }
