@@ -2316,6 +2316,36 @@ function populateMapdiv() {
 
       mapdiv.appendChild(s);
    }
+   
+   var ermapdiv = document.getElementById('ermapdiv');
+
+   // Initialize all chests on the map
+   for (k = 0; k < dungeons.length; k++) {
+       for (var key in dungeons[k].entrancelist) {
+          var s = document.createElement('span');
+          s.style.backgroundImage = 'url(images/poi.png)';
+          s.style.color = 'black';
+          s.id = k;
+          s.onclick = new Function('toggleChest(' + k + ')');
+          s.onmouseover = new Function('highlight(' + k + ')');
+          s.onmouseout = new Function('unhighlight(' + k + ')');
+          s.oncontextmenu = new Function('toggleMarkedChest(' + k + ')')      
+          s.style.left = dungeons[k].x;
+          s.style.top = dungeons[k].y;
+          if (chests[k].isOpened) {
+             s.className = "mapspan entrance opened";
+          }
+          else
+             s.className = "mapspan entrance " + dungeons[k].entrancelist.isAvailable();
+
+          var ss = document.createElement('span');
+          ss.className = "tooltip";
+          ss.innerHTML = key;
+          s.appendChild(ss);
+
+          ermapdiv.appendChild(s);
+       }
+   }
 
    // Dungeon bosses & chests
    for (k = 0; k < dungeons.length; k++) {
