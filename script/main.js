@@ -2324,7 +2324,7 @@ function populateMapdiv() {
    
    var ermapdiv = document.getElementById('ermapdiv');
    var tempx = "10.0%";
-   var tempy = "2.0%;
+   var tempy = "2.0%";
 
    // Initialize all entrances on 2nd map
    for (k = 0; k < dungeons.length; k++) {
