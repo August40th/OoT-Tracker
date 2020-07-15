@@ -486,7 +486,7 @@ label {
     width: 16;
     height: 16;
     background-size: 100% 100%;
-    background-color: transparent;
+    background-color: orange;
 
     position: absolute;
     margin-left: -8px;
@@ -494,15 +494,15 @@ label {
     cursor: pointer;
 }
 
-.entrance1{
+.entrance.1{
     background-color: blue;
 }
 
-.entrance2{
+.entrance.2{
     background-color: cyan;
 }
 
-.entrance3{
+.entrance.3{
     background-color: white;
 }
 
