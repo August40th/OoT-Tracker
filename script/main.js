@@ -2334,11 +2334,11 @@ function populateMapdiv() {
           tempx += 18;
           var s = document.createElement('span');
           s.style.backgroundImage = 'url(images/poi.png)';
-          s.style.color = 'black';
-          s.id = k;
-          s.onclick = new Function('toggleEntrance(this)');
-          s.onmouseover = new Function('highlight(' + k + ')');
-          s.onmouseout = new Function('unhighlight(' + k + ')');
+          s.style.color = 'blue';
+          s.id = key;
+          s.onclick = new Function('toggleEntrance(s)');
+          s.onmouseover = new Function('highlight(key)');
+          s.onmouseout = new Function('unhighlight(key)');
           s.style.left = tempx;
           s.style.top = tempy;
           s.className = "mapspan entrance";
