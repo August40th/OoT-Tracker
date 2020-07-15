@@ -2323,9 +2323,10 @@ function populateMapdiv() {
 
    // Initialize all entrances on 2nd map
    for (k = 0; k < dungeons.length; k++) {
-       tempy += 16;
+       tempy += 18;
+       if (k == 13) tempy = 20;
        for (var key in dungeons[k].entrancelist) {
-          tempx += 6;
+          tempx += 18;
           var s = document.createElement('span');
           s.style.backgroundImage = 'url(images/poi.png)';
           s.style.color = 'black';
