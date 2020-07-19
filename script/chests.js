@@ -3302,14 +3302,20 @@ var dungeons = [
       },
       entrancelist: {
          'Domain to River': {
+            x: "90.0%",
+            y: "31.5%",
              isAvailable: function () {
                   return true; }
          },
          'Domain to Lake': {
+            x: "92.9%",
+            y: "30.5%",
              isAvailable: function () {
                   return true; }
          },
-         'Domain to Dountain': {
+         'Domain to Fountain': {
+            x: "91.9%",
+            y: "26.5%",
              isAvailable: function () {
                   return true; }
          },
@@ -3380,6 +3386,8 @@ var dungeons = [
       },
       entrancelist: {
          'Fountain to Domain': {
+            x: "91.9%",
+            y: "22.0%",
              isAvailable: function () {
                   return true; }
          },
@@ -3473,18 +3481,26 @@ var dungeons = [
       },
       entrancelist: {
          'Trail to Village': {
+            x: "62.0%",
+            y: "13.7%",
              isAvailable: function () {
                   return true; }
          },
          'Trail to City': {
+            x: "68.6%",
+            y: "9.6%",
              isAvailable: function () {
                   return true; }
          },
          'Trail to Crater': {
+            x: "64.6%",
+            y: "04.5%",
              isAvailable: function () {
                   return true; }
          },
          'Trail Owl': {
+            x: "60.6%",
+            y: "04.5%",
              isAvailable: function () {
                   return true; }
          },
@@ -3576,8 +3592,8 @@ var dungeons = [
       },
       entrancelist: {
          'Crater to Trail': {
-            x: "65.4%",
-            y: "04.0%",
+            x: "66.6%",
+            y: "02.5%",
              isAvailable: function () {
                   return true; }
          },
@@ -4387,19 +4403,19 @@ var dungeons = [
                   return true; }
          },
          'Field to River': {
-            x: "68.6%",
+            x: "67.6%",
             y: "38.0%",
              isAvailable: function () {
                   return true; }
          },
          'Field to Village': {
-            x: "61.6%",
+            x: "60.0%",
             y: "27.0%",
              isAvailable: function () {
                   return true; }
          },
          'Field to Market': {
-            x: "50.0%",
+            x: "52.0%",
             y: "28.0%",
              isAvailable: function () {
                   return true; }
