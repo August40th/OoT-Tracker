@@ -3911,14 +3911,20 @@ var dungeons = [
       },
       entrancelist: {
          'Lake to Field': {
+            x: "39.0%",
+            y: "75.0%",
              isAvailable: function () {
                   return true; }
          },
          'Lake to Domain': {
+            x: "40.0%",
+            y: "81.0%",
              isAvailable: function () {
                   return true; }
          },
          'Lake Owl': {
+            x: "32.0%",
+            y: "82.0%",
              isAvailable: function () {
                   return true; }
          },
@@ -4014,8 +4020,8 @@ var dungeons = [
       },
       entrancelist: {
          'Valley to Field': {
-            x: "18.0%",
-            y: "31.5%",
+            x: "28.0%",
+            y: "36.0%",
              isAvailable: function () {
                   return true; }
          },
@@ -4100,14 +4106,14 @@ var dungeons = [
       },
       entrancelist: {
          'Fortress to Valley': {
-            x: "14.0%",
-            y: "25.0%",
+            x: "18.0%",
+            y: "31.5%",
              isAvailable: function () {
                   return true; }
          },
-         'Fortress to Desert': {
-            x: "14.0%",
-            y: "28.4%",
+         'Fortress to Wasteland': {
+            x: "16.0%",
+            y: "27.0%",
              isAvailable: function () {
                   return true; }
          },
@@ -4287,8 +4293,8 @@ var dungeons = [
       },
       entrancelist: {
          'Graveyard to Village': {
-            x: "72.0%",
-            y: "20.5%",
+            x: "70.5%",
+            y: "22.5%",
              isAvailable: function () {
                   return true; }
          },
@@ -4333,13 +4339,13 @@ var dungeons = [
       },
       entrancelist: {
          'Wasteland to Fortress': {
-            x: "16.0%",
+            x: "15.0%",
             y: "25.0%",
              isAvailable: function () {
                   return true; }
          },
          'Wasteland to Desert': {
-            x: "12.0%",
+            x: "11.0%",
             y: "25.0%",
              isAvailable: function () {
                   return true; }
