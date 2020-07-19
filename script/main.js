@@ -2346,9 +2346,9 @@ function populateMapdiv() {
           s.style.backgroundImage = 'url(images/poi.png)';
           s.style.color = 'blue';
           s.id = key;
-          s.onclick = new Function('toggleEntrance(this)')  
-          s.onmouseover = new Function('highlight(key)');
-          s.onmouseout = new Function('unhighlight(key)');
+          s.onclick = new Function('toggleEntrance('key')')  
+          s.onmouseover = new Function('highlight(this)');
+          s.onmouseout = new Function('unhighlight(this)');
           if (dungeons[k].entrancelist[key].x != undefined) s.style.left = dungeons[k].entrancelist[key].x;
           if (dungeons[k].entrancelist[key].y != undefined) s.style.top = dungeons[k].entrancelist[key].y;
           s.className = "mapspan entrance0";
