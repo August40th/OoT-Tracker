@@ -339,7 +339,7 @@ function toggleChest(x) {
 
 function toggleEntrance(s) {
    window.event.preventDefault()
-   var elem = document.getElementById(x);
+   var elem = document.getElementById(s);
    if (elem) {
       if (elem.classList.contains('entrance0')) {
          elem.classList.remove('0');
@@ -2354,7 +2354,7 @@ function populateMapdiv() {
           s.style.top = dungeons[k].y;
           if (dungeons[k].entrancelist[key].x != undefined) s.style.left = dungeons[k].entrancelist[key].x;
           if (dungeons[k].entrancelist[key].y != undefined) s.style.top = dungeons[k].entrancelist[key].y;
-          s.className = "mapspan entrance";
+          s.className = "mapspan entrance0";
           var ss = document.createElement('span');
           ss.className = "tooltip";
           ss.innerHTML = key;
