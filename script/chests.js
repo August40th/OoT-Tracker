@@ -129,7 +129,7 @@ var dungeons = [
        },
        'Forest to Woods': {
           x: "78.9%",
-          y: "55.0%",
+          y: "56.0%",
           isAvailable: function () {
                return true; }
        },
@@ -2564,8 +2564,8 @@ var dungeons = [
                return true; }
        },
        'Market to Temple': {
-          x: "55.5%",
-          y: "21.2%",
+          x: "55.0%",
+          y: "22.2%",
           isAvailable: function () {
                return true; }
        },
@@ -3150,14 +3150,14 @@ var dungeons = [
       },
       entrancelist: {
          'Woods to Forest': {
-            x: "77.0%",
+            x: "80.0%",
             y: "52.0%",
              isAvailable: function () {
                   return true; }
          },
          'Woods to City': {
-            x: "75.7%",
-            y: "45.4%",
+            x: "76.7%",
+            y: "48.4%",
              isAvailable: function () {
                   return true; }
          },
@@ -3168,8 +3168,8 @@ var dungeons = [
                   return true; }
          },
          'Woods to Meadow': {
-            x: "79.0%",
-            y: "48.4%",
+            x: "82.0%",
+            y: "49.4%",
              isAvailable: function () {
                   return true; }
          },
@@ -4462,7 +4462,7 @@ var dungeons = [
          },
          'Field to Market': {
             x: "52.0%",
-            y: "30.0%",
+            y: "32.1%",
              isAvailable: function () {
                   return true; }
          },
