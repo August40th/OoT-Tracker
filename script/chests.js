@@ -3794,19 +3794,19 @@ var dungeons = [
       entrancelist: {
          'River to Field': {
             x: "70.7%",
-            y: "32.5%".
+            y: "32.5%",
              isAvailable: function () {
                   return true; }
          },
          'River to Woods': {
             x: "79.7%",
-            y: "31.5%".
+            y: "31.5%",
              isAvailable: function () {
                   return true; }
          },
          'River to Domain': {
             x: "80.0%",
-            y: "28.0%".
+            y: "28.0%",
              isAvailable: function () {
                   return true; }
          },
