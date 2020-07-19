@@ -3005,20 +3005,20 @@ var dungeons = [
       },
       entrancelist: {
          'City to Trail': {
-            x: "70.0%",
-            y: "06.3%",
+            x: "65.6%",
+            y: "11.0%",
              isAvailable: function () {
                   return true; }
          },
          'City to Woods': {
-            x: "70.0%",
-            y: "06.3%",
+            x: "68.0%",
+            y: "14.0%",
              isAvailable: function () {
                   return true; }
          },
          'City to Crater': {
-            x: "70.0%",
-            y: "06.3%",
+            x: "68.0%",
+            y: "08.0%",
              isAvailable: function () {
                   return true; }
          },
@@ -3134,18 +3134,38 @@ var dungeons = [
       },
       entrancelist: {
          'Woods to Forest': {
+            x: "75.3%",
+            y: "47.0%",
              isAvailable: function () {
                   return true; }
          },
          'Woods to City': {
+            x: "75.3%",
+            y: "47.0%",
              isAvailable: function () {
                   return true; }
          },
          'Woods to River': {
+            x: "75.3%",
+            y: "47.0%",
              isAvailable: function () {
                   return true; }
          },
          'Woods to Meadow': {
+            x: "75.3%",
+            y: "47.0%",
+             isAvailable: function () {
+                  return true; }
+         },
+         'Bridge to Forest': {
+            x: "72.0%",
+            y: "54.0%",
+             isAvailable: function () {
+                  return true; }
+         },
+         'Bridge to Field': {
+            x: "68.0%",
+            y: "54.0%",
              isAvailable: function () {
                   return true; }
          },
@@ -3311,7 +3331,7 @@ var dungeons = [
       entrancelist: {
          'Domain to River': {
             x: "90.0%",
-            y: "31.5%",
+            y: "29.5%",
              isAvailable: function () {
                   return true; }
          },
@@ -3496,7 +3516,7 @@ var dungeons = [
          },
          'Trail to City': {
             x: "65.6%",
-            y: "11.0%",
+            y: "15.0%",
              isAvailable: function () {
                   return true; }
          },
@@ -3507,8 +3527,8 @@ var dungeons = [
                   return true; }
          },
          'Trail Owl': {
-            x: "62.0%",
-            y: "04.5%",
+            x: "63.0%",
+            y: "02.5%",
              isAvailable: function () {
                   return true; }
          },
@@ -3606,8 +3626,8 @@ var dungeons = [
                   return true; }
          },
          'Crater to City': {
-            x: "65.6%",
-            y: "11.0%",
+            x: "70.0%",
+            y: "06.3%",
              isAvailable: function () {
                   return true; }
          },
