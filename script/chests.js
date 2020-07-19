@@ -3687,6 +3687,8 @@ var dungeons = [
       },
       entrancelist: {
          'Ranch to Field': {
+            x: "47.4%",
+            y: "40.6%",
              isAvailable: function () {
                   return true; }
          },
@@ -3793,19 +3795,19 @@ var dungeons = [
       },
       entrancelist: {
          'River to Field': {
-            x: "70.7%",
-            y: "32.5%",
+            x: "70.0%",
+            y: "32.0%",
              isAvailable: function () {
                   return true; }
          },
          'River to Woods': {
-            x: "79.7%",
-            y: "31.5%",
+            x: "88.8%",
+            y: "33.3%",
              isAvailable: function () {
                   return true; }
          },
          'River to Domain': {
-            x: "80.0%",
+            x: "90.0%",
             y: "28.0%",
              isAvailable: function () {
                   return true; }
@@ -3918,7 +3920,7 @@ var dungeons = [
       entrancelist: {
          'Lake to Field': {
             x: "39.0%",
-            y: "75.0%",
+            y: "70.0%",
              isAvailable: function () {
                   return true; }
          },
@@ -3930,7 +3932,7 @@ var dungeons = [
          },
          'Lake Owl': {
             x: "32.0%",
-            y: "82.5%",
+            y: "83.5%",
              isAvailable: function () {
                   return true; }
          },
@@ -4374,6 +4376,12 @@ var dungeons = [
              isAvailable: function () {
                   return true; }
          },
+         'Field to Ranch': {
+            x: "47.4%",
+            y: "38.0%",
+             isAvailable: function () {
+                  return true; }
+         },
          'Field to River': {
              isAvailable: function () {
                   return true; }
@@ -4387,10 +4395,14 @@ var dungeons = [
                   return true; }
          },
          'Field to Valley': {
+            x: "32.0%",
+            y: "42.5%",
              isAvailable: function () {
                   return true; }
          },
          'Field to Lake': {
+            x: "41.0%",
+            y: "62.0%",
              isAvailable: function () {
                   return true; }
          },
