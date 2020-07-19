@@ -4437,8 +4437,8 @@ var dungeons = [
       type: "overworld",
       entrancelist: {
          'Field to Forest': {
-            x: "62.0%",
-            y: "45.0%",
+            x: "64.0%",
+            y: "44.4%",
              isAvailable: function () {
                   return true; }
          },
