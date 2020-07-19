@@ -122,14 +122,14 @@ var dungeons = [
       },
     entrancelist: {
        'Forest to Field': {
-          x: "74.0%",
-          y: "58.5%",
+          x: "75.0%",
+          y: "58.0%",
           isAvailable: function () {
                return true; }
        },
        'Forest to Woods': {
-          x: "77.7%",
-          y: "54.0%",
+          x: "78.9%",
+          y: "55.0%",
           isAvailable: function () {
                return true; }
        },
@@ -2559,13 +2559,13 @@ var dungeons = [
       entrancelist: {
        'Market to Field': {
           x: "52.5%",
-          y: "25.0%",
+          y: "28.0%",
           isAvailable: function () {
                return true; }
        },
        'Market to Temple': {
-          x: "54.5%",
-          y: "20.2%",
+          x: "55.5%",
+          y: "21.2%",
           isAvailable: function () {
                return true; }
        },
@@ -2602,7 +2602,7 @@ var dungeons = [
       },
       entrancelist: {
          'Temple to Market': {
-            x: "56.5%",
+            x: "56.0%",
             y: "18.6%",
              isAvailable: function () {
                   return true; }
@@ -3156,26 +3156,26 @@ var dungeons = [
                   return true; }
          },
          'Woods to City': {
-            x: "75.3%",
-            y: "44.0%",
+            x: "75.7%",
+            y: "45.4%",
              isAvailable: function () {
                   return true; }
          },
          'Woods to River': {
-            x: "84.0%",
+            x: "82.0%",
             y: "48.0%",
              isAvailable: function () {
                   return true; }
          },
          'Woods to Meadow': {
-            x: "78.0%",
-            y: "47.0%",
+            x: "79.0%",
+            y: "48.4%",
              isAvailable: function () {
                   return true; }
          },
          'Bridge to Forest': {
-            x: "71.5%",
-            y: "48.6%",
+            x: "72.7%",
+            y: "50.0%",
              isAvailable: function () {
                   return true; }
          },
