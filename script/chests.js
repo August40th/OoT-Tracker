@@ -3150,8 +3150,8 @@ var dungeons = [
       },
       entrancelist: {
          'Woods to Forest': {
-            x: "80.0%",
-            y: "52.0%",
+            x: "78.7%",
+            y: "53.0%",
              isAvailable: function () {
                   return true; }
          },
@@ -3168,8 +3168,8 @@ var dungeons = [
                   return true; }
          },
          'Woods to Meadow': {
-            x: "82.0%",
-            y: "49.4%",
+            x: "80.0%",
+            y: "49.0%",
              isAvailable: function () {
                   return true; }
          },
@@ -4462,7 +4462,7 @@ var dungeons = [
          },
          'Field to Market': {
             x: "52.0%",
-            y: "32.1%",
+            y: "30.5%",
              isAvailable: function () {
                   return true; }
          },
