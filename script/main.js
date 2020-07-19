@@ -338,6 +338,23 @@ function toggleChest(x) {
 }
 
 function toggleEntrance(s) {
+   window.event.preventDefault()
+   var elem = document.getElementById(x);
+   if (elem) {
+      if (elem.classList.contains('entrance0')) {
+         elem.classList.remove('0');
+         elem.className += '1';
+      } else if (elem.classList.contains('1')) {
+         elem.classList.remove('1');
+         elem.className += '2';
+      } else if (elem.classList.contains('2')) {
+         elem.classList.remove('2');
+         elem.className += '3';
+      } else {
+         elem.classList.remove('3');
+         elem.className += '0';
+      }
+   }
 }
 
 function toggleMarkedChest(x) {
