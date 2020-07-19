@@ -3687,8 +3687,8 @@ var dungeons = [
       },
       entrancelist: {
          'Ranch to Field': {
-            x: "47.4%",
-            y: "40.6%",
+            x: "48.4%",
+            y: "38.5%",
              isAvailable: function () {
                   return true; }
          },
@@ -3801,13 +3801,13 @@ var dungeons = [
                   return true; }
          },
          'River to Woods': {
-            x: "88.8%",
+            x: "87.8%",
             y: "33.3%",
              isAvailable: function () {
                   return true; }
          },
          'River to Domain': {
-            x: "90.0%",
+            x: "87.0%",
             y: "28.0%",
              isAvailable: function () {
                   return true; }
@@ -4301,8 +4301,8 @@ var dungeons = [
       },
       entrancelist: {
          'Graveyard to Village': {
-            x: "71.0%",
-            y: "24.5%",
+            x: "72.7%",
+            y: "25.5%",
              isAvailable: function () {
                   return true; }
          },
@@ -4377,16 +4377,20 @@ var dungeons = [
                   return true; }
          },
          'Field to Ranch': {
-            x: "47.4%",
-            y: "38.0%",
+            x: "48.4%",
+            y: "36.0%",
              isAvailable: function () {
                   return true; }
          },
          'Field to River': {
+            x: "68.6%",
+            y: "38.0%",
              isAvailable: function () {
                   return true; }
          },
          'Field to Village': {
+            x: "58.0%",
+            y: "27.0%",
              isAvailable: function () {
                   return true; }
          },
@@ -4401,8 +4405,8 @@ var dungeons = [
                   return true; }
          },
          'Field to Lake': {
-            x: "41.0%",
-            y: "62.0%",
+            x: "43.2%",
+            y: "64.0%",
              isAvailable: function () {
                   return true; }
          },
