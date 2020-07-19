@@ -2347,7 +2347,7 @@ function populateMapdiv() {
           s.style.backgroundImage = 'url(images/poi.png)';
           s.style.color = 'blue';
           s.id = key;
-          s.onclick = new Function('toggleEntrance(this)');
+          s.onclick = new Function('toggleEntrance(' + key + ')')  
           s.onmouseover = new Function('highlight(key)');
           s.onmouseout = new Function('unhighlight(key)');
           s.style.left = dungeons[k].x;
