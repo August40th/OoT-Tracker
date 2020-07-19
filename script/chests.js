@@ -2596,6 +2596,8 @@ var dungeons = [
       },
       entrancelist: {
          'Temple to Market': {
+            x: "55.5%",
+            y: "18.2%",
              isAvailable: function () {
                   return true; }
           },
@@ -2666,6 +2668,8 @@ var dungeons = [
       },
       entrancelist: {
          'Castle to Market': {
+            x: "52.0%",
+            y: "16.0%",
              isAvailable: function () {
                   return true; }
          },
@@ -2882,14 +2886,20 @@ var dungeons = [
       },
       entrancelist: {
          'Village to Field': {
+            x: "60.4%",
+            y: "25.0%",
              isAvailable: function () {
                   return true; }
          },
          'Village to Trail': {
+            x: "65.4%",
+            y: "22.0%",
              isAvailable: function () {
                   return true; }
          },
          'Village to Graveyard': {
+            x: "69.0%",
+            y: "27.0%",
              isAvailable: function () {
                   return true; }
          },
@@ -3005,14 +3015,14 @@ var dungeons = [
       },
       entrancelist: {
          'City to Trail': {
-            x: "65.6%",
-            y: "11.0%",
+            x: "66.6%",
+            y: "09.0%",
              isAvailable: function () {
                   return true; }
          },
          'City to Woods': {
-            x: "68.0%",
-            y: "14.0%",
+            x: "69.0%",
+            y: "18.0%",
              isAvailable: function () {
                   return true; }
          },
@@ -3135,7 +3145,7 @@ var dungeons = [
       entrancelist: {
          'Woods to Forest': {
             x: "75.3%",
-            y: "47.0%",
+            y: "52.0%",
              isAvailable: function () {
                   return true; }
          },
@@ -3146,26 +3156,26 @@ var dungeons = [
                   return true; }
          },
          'Woods to River': {
-            x: "75.3%",
-            y: "47.0%",
+            x: "78.0%",
+            y: "50.0%",
              isAvailable: function () {
                   return true; }
          },
          'Woods to Meadow': {
-            x: "75.3%",
+            x: "78.0%",
             y: "47.0%",
              isAvailable: function () {
                   return true; }
          },
          'Bridge to Forest': {
-            x: "72.0%",
-            y: "54.0%",
+            x: "70.0%",
+            y: "50.0%",
              isAvailable: function () {
                   return true; }
          },
          'Bridge to Field': {
-            x: "68.0%",
-            y: "54.0%",
+            x: "69.0%",
+            y: "48.0%",
              isAvailable: function () {
                   return true; }
          },
@@ -3337,7 +3347,7 @@ var dungeons = [
          },
          'Domain to Lake': {
             x: "92.9%",
-            y: "30.5%",
+            y: "32.0%",
              isAvailable: function () {
                   return true; }
          },
@@ -3510,13 +3520,13 @@ var dungeons = [
       entrancelist: {
          'Trail to Village': {
             x: "63.0%",
-            y: "16.0%",
+            y: "18.0%",
              isAvailable: function () {
                   return true; }
          },
          'Trail to City': {
-            x: "65.6%",
-            y: "15.0%",
+            x: "62.6%",
+            y: "12.0%",
              isAvailable: function () {
                   return true; }
          },
@@ -3527,7 +3537,7 @@ var dungeons = [
                   return true; }
          },
          'Trail Owl': {
-            x: "63.0%",
+            x: "62.0%",
             y: "02.5%",
              isAvailable: function () {
                   return true; }
