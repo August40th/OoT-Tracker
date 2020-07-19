@@ -32,7 +32,6 @@ If you notice any bugs in logic please message me on Discord: August 40th#4864
 ****ToDo List****
 Logic tweaks
 MQ trials
-MQ letters keys, clear layout after right click
 Mark MQ by clicking small key
 Entrance tracker
 item tree
