@@ -482,11 +482,11 @@ label {
     cursor: pointer;
 }
 
-.entrance{
+.entrance0{
     width: 16;
     height: 16;
     background-size: 100% 100%;
-    background-color: orange;
+    background-color: white;
 
     position: absolute;
     margin-left: -8px;
@@ -494,16 +494,16 @@ label {
     cursor: pointer;
 }
 
-.entrance.1{
+.entrance1{
+    background-color: orange;
+}
+
+.entrance2{
+    background-color: black;
+}
+
+.entrance3{
     background-color: blue;
-}
-
-.entrance.2{
-    background-color: cyan;
-}
-
-.entrance.3{
-    background-color: white;
 }
 
 .unavailable{
