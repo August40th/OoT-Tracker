@@ -3005,14 +3005,20 @@ var dungeons = [
       },
       entrancelist: {
          'City to Trail': {
+            x: "70.0%",
+            y: "06.3%",
              isAvailable: function () {
                   return true; }
          },
          'City to Woods': {
+            x: "70.0%",
+            y: "06.3%",
              isAvailable: function () {
                   return true; }
          },
          'City to Crater': {
+            x: "70.0%",
+            y: "06.3%",
              isAvailable: function () {
                   return true; }
          },
@@ -3220,6 +3226,8 @@ var dungeons = [
       },
       entrancelist: {
          'Meadow to Woods': {
+            x: "80.0%",
+            y: "46.0%",
              isAvailable: function () {
                   return true; }
          },
@@ -3314,8 +3322,8 @@ var dungeons = [
                   return true; }
          },
          'Domain to Fountain': {
-            x: "91.9%",
-            y: "26.5%",
+            x: "94.9%",
+            y: "22.5%",
              isAvailable: function () {
                   return true; }
          },
@@ -3386,8 +3394,8 @@ var dungeons = [
       },
       entrancelist: {
          'Fountain to Domain': {
-            x: "91.9%",
-            y: "22.0%",
+            x: "92.5%",
+            y: "21.0%",
              isAvailable: function () {
                   return true; }
          },
@@ -3481,14 +3489,14 @@ var dungeons = [
       },
       entrancelist: {
          'Trail to Village': {
-            x: "62.0%",
-            y: "13.7%",
+            x: "63.0%",
+            y: "16.0%",
              isAvailable: function () {
                   return true; }
          },
          'Trail to City': {
-            x: "68.6%",
-            y: "9.6%",
+            x: "65.6%",
+            y: "11.0%",
              isAvailable: function () {
                   return true; }
          },
@@ -3499,7 +3507,7 @@ var dungeons = [
                   return true; }
          },
          'Trail Owl': {
-            x: "60.6%",
+            x: "62.0%",
             y: "04.5%",
              isAvailable: function () {
                   return true; }
