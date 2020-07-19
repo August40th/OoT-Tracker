@@ -338,7 +338,7 @@ function toggleChest(x) {
 }
 
 function toggleEntrance(s) {
-   window.event.preventDefault()
+   //window.event.preventDefault()
    var elem = document.getElementById(s);
    if (elem) {
       if (elem.classList.contains('entrance0')) {
@@ -2346,7 +2346,7 @@ function populateMapdiv() {
           s.style.backgroundImage = 'url(images/poi.png)';
           s.style.color = 'blue';
           s.id = key;
-          s.onclick = new Function('toggleEntrance(s)');
+          s.onclick = new Function('toggleEntrance(this)');
           //s.onmouseover = new Function('highlight(this)');
           //s.onmouseout = new Function('unhighlight(this)');
           if (dungeons[k].entrancelist[key].x != undefined) s.style.left = dungeons[k].entrancelist[key].x;
