@@ -123,13 +123,13 @@ var dungeons = [
     entrancelist: {
        'Forest to Field': {
           x: "74.0%",
-          y: "60.0%",
+          y: "58.5%",
           isAvailable: function () {
                return true; }
        },
        'Forest to Woods': {
-          x: "76.0%",
-          y: "55.0%",
+          x: "77.7%",
+          y: "54.0%",
           isAvailable: function () {
                return true; }
        },
@@ -2558,14 +2558,20 @@ var dungeons = [
       },
       entrancelist: {
        'Market to Field': {
+          x: "51.5%",
+          y: "22.2%",
           isAvailable: function () {
                return true; }
        },
        'Market to Temple': {
+          x: "54.5%",
+          y: "20.2%",
           isAvailable: function () {
                return true; }
        },
        'Market to Castle': {
+          x: "51.5%",
+          y: "20.2%",
           isAvailable: function () {
                return true; }
        },
@@ -2597,7 +2603,7 @@ var dungeons = [
       entrancelist: {
          'Temple to Market': {
             x: "55.5%",
-            y: "18.2%",
+            y: "19.3%",
              isAvailable: function () {
                   return true; }
           },
@@ -2668,7 +2674,7 @@ var dungeons = [
       },
       entrancelist: {
          'Castle to Market': {
-            x: "52.0%",
+            x: "52.5%",
             y: "16.0%",
              isAvailable: function () {
                   return true; }
@@ -2886,8 +2892,8 @@ var dungeons = [
       },
       entrancelist: {
          'Village to Field': {
-            x: "60.4%",
-            y: "25.0%",
+            x: "62.0%",
+            y: "23.4%",
              isAvailable: function () {
                   return true; }
          },
@@ -3015,8 +3021,8 @@ var dungeons = [
       },
       entrancelist: {
          'City to Trail': {
-            x: "66.6%",
-            y: "09.0%",
+            x: "65.0%",
+            y: "10.5%",
              isAvailable: function () {
                   return true; }
          },
@@ -3027,8 +3033,8 @@ var dungeons = [
                   return true; }
          },
          'City to Crater': {
-            x: "68.0%",
-            y: "08.0%",
+            x: "69.0%",
+            y: "09.0%",
              isAvailable: function () {
                   return true; }
          },
@@ -3144,20 +3150,20 @@ var dungeons = [
       },
       entrancelist: {
          'Woods to Forest': {
-            x: "75.3%",
+            x: "77.0%",
             y: "52.0%",
              isAvailable: function () {
                   return true; }
          },
          'Woods to City': {
             x: "75.3%",
-            y: "47.0%",
+            y: "44.0%",
              isAvailable: function () {
                   return true; }
          },
          'Woods to River': {
-            x: "78.0%",
-            y: "50.0%",
+            x: "84.0%",
+            y: "48.0%",
              isAvailable: function () {
                   return true; }
          },
@@ -3168,8 +3174,8 @@ var dungeons = [
                   return true; }
          },
          'Bridge to Forest': {
-            x: "70.0%",
-            y: "50.0%",
+            x: "71.5%",
+            y: "48.6%",
              isAvailable: function () {
                   return true; }
          },
@@ -3519,8 +3525,8 @@ var dungeons = [
       },
       entrancelist: {
          'Trail to Village': {
-            x: "63.0%",
-            y: "18.0%",
+            x: "63.1%",
+            y: "18.6%",
              isAvailable: function () {
                   return true; }
          },
@@ -3636,8 +3642,8 @@ var dungeons = [
                   return true; }
          },
          'Crater to City': {
-            x: "70.0%",
-            y: "06.3%",
+            x: "68.6%",
+            y: "05.5%",
              isAvailable: function () {
                   return true; }
          },
@@ -4431,6 +4437,8 @@ var dungeons = [
       type: "overworld",
       entrancelist: {
          'Field to Forest': {
+            x: "62.0%",
+            y: "45.0%",
              isAvailable: function () {
                   return true; }
          },
@@ -4454,7 +4462,7 @@ var dungeons = [
          },
          'Field to Market': {
             x: "52.0%",
-            y: "28.0%",
+            y: "30.0%",
              isAvailable: function () {
                   return true; }
          },
