@@ -122,14 +122,14 @@ var dungeons = [
       },
     entrancelist: {
        'Forest to Field': {
-          x: "72.0%",
-          y: "65.0%",
+          x: "74.0%",
+          y: "60.0%",
           isAvailable: function () {
                return true; }
        },
        'Forest to Woods': {
-          x: "74.0%",
-          y: "60.0%",
+          x: "76.0%",
+          y: "55.0%",
           isAvailable: function () {
                return true; }
        },
@@ -4014,10 +4014,14 @@ var dungeons = [
       },
       entrancelist: {
          'Valley to Field': {
+            x: "18.0%",
+            y: "31.5%",
              isAvailable: function () {
                   return true; }
          },
          'Valley to Fortress': {
+            x: "20.0%",
+            y: "36.0%",
              isAvailable: function () {
                   return true; }
          },
@@ -4096,10 +4100,14 @@ var dungeons = [
       },
       entrancelist: {
          'Fortress to Valley': {
+            x: "14.0%",
+            y: "25.0%",
              isAvailable: function () {
                   return true; }
          },
          'Fortress to Desert': {
+            x: "14.0%",
+            y: "28.4%",
              isAvailable: function () {
                   return true; }
          },
@@ -4176,6 +4184,8 @@ var dungeons = [
       },
       entrancelist: {
          'Desert to Wasteland': {
+            x: "8.4%",
+            y: "25.0%",
              isAvailable: function () {
                   return true; }
          },
@@ -4277,6 +4287,8 @@ var dungeons = [
       },
       entrancelist: {
          'Graveyard to Village': {
+            x: "72.0%",
+            y: "20.5%",
              isAvailable: function () {
                   return true; }
          },
@@ -4321,10 +4333,14 @@ var dungeons = [
       },
       entrancelist: {
          'Wasteland to Fortress': {
+            x: "16.0%",
+            y: "25.0%",
              isAvailable: function () {
                   return true; }
          },
          'Wasteland to Desert': {
+            x: "12.0%",
+            y: "25.0%",
              isAvailable: function () {
                   return true; }
          },
@@ -4443,16 +4459,6 @@ var chests = [
             && (items.Scale >= 2 || (items.MasterSword && items.IronBoots)
             )
          ))
-            return "available";
-         return "unavailable";
-      }
-   },
-   {
-      name: "Haunted Wasteland Chest",
-      x: "14.0%",
-      y: "25.0%",
-      isAvailable: function () {
-         if ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword && (((items.EponasSong || isFortressOpen()) && items.HoverBoots) || items.Hookshot >= 2) && (items.Magic && (items.Dins || (items.Bow && items.Fire)))))
             return "available";
          return "unavailable";
       }
