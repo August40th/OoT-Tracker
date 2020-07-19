@@ -2558,8 +2558,8 @@ var dungeons = [
       },
       entrancelist: {
        'Market to Field': {
-          x: "51.5%",
-          y: "22.2%",
+          x: "52.5%",
+          y: "25.0%",
           isAvailable: function () {
                return true; }
        },
@@ -2570,8 +2570,8 @@ var dungeons = [
                return true; }
        },
        'Market to Castle': {
-          x: "51.5%",
-          y: "20.2%",
+          x: "52.5%",
+          y: "19.0%",
           isAvailable: function () {
                return true; }
        },
@@ -2602,8 +2602,8 @@ var dungeons = [
       },
       entrancelist: {
          'Temple to Market': {
-            x: "55.5%",
-            y: "19.3%",
+            x: "56.5%",
+            y: "18.6%",
              isAvailable: function () {
                   return true; }
           },
@@ -2893,18 +2893,18 @@ var dungeons = [
       entrancelist: {
          'Village to Field': {
             x: "62.0%",
-            y: "23.4%",
+            y: "24.6%",
              isAvailable: function () {
                   return true; }
          },
          'Village to Trail': {
-            x: "65.4%",
+            x: "64.2%",
             y: "22.0%",
              isAvailable: function () {
                   return true; }
          },
          'Village to Graveyard': {
-            x: "69.0%",
+            x: "70.0%",
             y: "27.0%",
              isAvailable: function () {
                   return true; }
