@@ -3576,10 +3576,14 @@ var dungeons = [
       },
       entrancelist: {
          'Crater to Trail': {
+            x: "65.4%",
+            y: "04.0%",
              isAvailable: function () {
                   return true; }
          },
          'Crater to City': {
+            x: "65.6%",
+            y: "11.0%",
              isAvailable: function () {
                   return true; }
          },
@@ -3796,7 +3800,7 @@ var dungeons = [
       entrancelist: {
          'River to Field': {
             x: "70.0%",
-            y: "32.0%",
+            y: "35.0%",
              isAvailable: function () {
                   return true; }
          },
@@ -4378,7 +4382,7 @@ var dungeons = [
          },
          'Field to Ranch': {
             x: "48.4%",
-            y: "36.0%",
+            y: "34.5%",
              isAvailable: function () {
                   return true; }
          },
@@ -4389,12 +4393,14 @@ var dungeons = [
                   return true; }
          },
          'Field to Village': {
-            x: "58.0%",
+            x: "61.6%",
             y: "27.0%",
              isAvailable: function () {
                   return true; }
          },
          'Field to Market': {
+            x: "50.0%",
+            y: "28.0%",
              isAvailable: function () {
                   return true; }
          },
@@ -4405,8 +4411,8 @@ var dungeons = [
                   return true; }
          },
          'Field to Lake': {
-            x: "43.2%",
-            y: "64.0%",
+            x: "41.0%",
+            y: "65.6%",
              isAvailable: function () {
                   return true; }
          },
