@@ -3793,14 +3793,20 @@ var dungeons = [
       },
       entrancelist: {
          'River to Field': {
+            x: "70.7%",
+            y: "32.5%".
              isAvailable: function () {
                   return true; }
          },
          'River to Woods': {
+            x: "79.7%",
+            y: "31.5%".
              isAvailable: function () {
                   return true; }
          },
          'River to Domain': {
+            x: "80.0%",
+            y: "28.0%".
              isAvailable: function () {
                   return true; }
          },
@@ -3917,14 +3923,14 @@ var dungeons = [
                   return true; }
          },
          'Lake to Domain': {
-            x: "40.0%",
-            y: "81.0%",
+            x: "39.3%",
+            y: "80.0%",
              isAvailable: function () {
                   return true; }
          },
          'Lake Owl': {
             x: "32.0%",
-            y: "82.0%",
+            y: "82.5%",
              isAvailable: function () {
                   return true; }
          },
@@ -4020,14 +4026,14 @@ var dungeons = [
       },
       entrancelist: {
          'Valley to Field': {
-            x: "28.0%",
-            y: "36.0%",
+            x: "30.0%",
+            y: "37.5%",
              isAvailable: function () {
                   return true; }
          },
          'Valley to Fortress': {
             x: "20.0%",
-            y: "36.0%",
+            y: "37.0%",
              isAvailable: function () {
                   return true; }
          },
@@ -4112,8 +4118,8 @@ var dungeons = [
                   return true; }
          },
          'Fortress to Wasteland': {
-            x: "16.0%",
-            y: "27.0%",
+            x: "17.0%",
+            y: "23.4%",
              isAvailable: function () {
                   return true; }
          },
@@ -4293,8 +4299,8 @@ var dungeons = [
       },
       entrancelist: {
          'Graveyard to Village': {
-            x: "70.5%",
-            y: "22.5%",
+            x: "71.0%",
+            y: "24.5%",
              isAvailable: function () {
                   return true; }
          },
@@ -4339,8 +4345,8 @@ var dungeons = [
       },
       entrancelist: {
          'Wasteland to Fortress': {
-            x: "15.0%",
-            y: "25.0%",
+            x: "14.0%",
+            y: "23.4%",
              isAvailable: function () {
                   return true; }
          },
