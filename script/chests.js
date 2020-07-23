@@ -57,7 +57,7 @@ var dungeons = [
             isAvailable: function () {
                return true; }
          },
-         'Adult Twin House Roof Skulltula': {
+         'Adult Twin\'s House Roof Skulltula': {
             isAvailable: function () {
                return items.MasterSword && items.Hookshot; }
          },
@@ -90,6 +90,10 @@ var dungeons = [
                return true; }
          },
          'Link\'s House': {
+            isAvailable: function () {
+               return true; }
+         },
+         'Saria\'s House': {
             isAvailable: function () {
                return true; }
          },
@@ -155,7 +159,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[1].access; }
          },
-         '2nd Floor Big Chest': {
+         '2nd Floor Chest': {
             isAvailable: function () {
                return items.DekuShield; }
          },
@@ -163,7 +167,7 @@ var dungeons = [
             isAvailable: function () {
                return items.DekuShield; }
          },
-         'Top Floor Big Chest': {
+         'Top Floor Chest': {
             isAvailable: function () {
                return true; }
          },
@@ -204,11 +208,11 @@ var dungeons = [
             isAvailable: function () {
                return true; }
          },
-         'Top Floor Torch chest': {
+         'Top Floor Torch Chest': {
             isAvailable: function () {
                return true; }
          },
-         'Top Floor Larva kill': {
+         'Top Floor Larva Kill': {
             isAvailable: function () {
                return true; }
          },
@@ -347,7 +351,7 @@ var dungeons = [
          },
          '2F Scrub Room': {
             isAvailable: function () {
-               return (items.Bombs || items.Glove) && (items.Slingshot || items.Bow || items.HoverBoots) && (items.Bow || (items.Magic && items.Dins));
+               return (items.Bombs || items.Glove || items.Hammer) && (items.Slingshot || items.Bow || items.HoverBoots) && (items.Bow || (items.Magic && items.Dins));
             },
          },
       },
@@ -720,7 +724,7 @@ var dungeons = [
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.Hookshot && (items.Bow || (items.Ocarina && items.SongofTime) || (items.ForestKey && items.HoverBoots) || (items.ForestKey >= 2 && items.Bow && items.Glove));
             },
          },
-         'Courtyard Hookshot Chest': {
+         'Courtyard Island Chest': {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.Hookshot && (items.Bow || (items.Ocarina && items.SongofTime) || (items.ForestKey && items.HoverBoots) || (items.ForestKey >= 2 && items.Bow && items.Glove));
             },
@@ -735,7 +739,7 @@ var dungeons = [
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ForestKey && items.Hookshot && items.Bow && items.Glove;
             }
          },
-         'Boss Key Chest': {
+         'Hallway Twist Chest': {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ForestKey >= 2 && items.Hookshot && items.Bow && items.Glove;
             }
@@ -787,7 +791,7 @@ var dungeons = [
                return items.Hookshot && items.Ocarina && (items.SariasSong || items.MinuetofForest);
             },
          },
-         'Courtyard island Skulltula': {
+         'Courtyard Island Skulltula': {
             isAvailable: function () {
                return items.Hookshot && items.Ocarina && (items.SariasSong || items.MinuetofForest) && (items.Bow || items.SongofTime);
             },
@@ -912,7 +916,7 @@ var dungeons = [
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)) && items.Hammer;
             }
          },
-         'Gilded Chest': {
+         'Under Lobby Chest': {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)) && items.Hammer;
             }
@@ -1240,7 +1244,7 @@ var dungeons = [
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots);
             }
          },
-         ['Alcove Heart Piece']: {
+         ['Alcove Freestanding']: {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots);
             }
@@ -1262,7 +1266,7 @@ var dungeons = [
                return items.Hookshot && (items.Bombs || items.Scale) && items.ZoraLetter && items.Ocarina && items.ZeldasLullaby;
             },
          },
-         'Above Heart Piece Skulltula': {
+         'Alcove Skulltula': {
             isAvailable: function () {
                return items.Hookshot && (items.Bombs || items.Scale) && items.ZoraLetter && items.Ocarina && items.ZeldasLullaby;
             },
@@ -1335,7 +1339,7 @@ var dungeons = [
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.IronBoots && items.Hookshot) || (items.Scale >= 2 && items.Hookshot >= 2 && items.Ocarina && items.ZeldasLullaby);
             }
          },
-         'Shell Blade Chest': {
+         'Spuje Ball Chest': {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.IronBoots && items.Hookshot) || (items.Scale >= 2 && items.Hookshot >= 2);
             }
@@ -1360,12 +1364,12 @@ var dungeons = [
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && ((items.IronBoots && items.Hookshot) || (items.Scale >= 2 && items.Hookshot >= 2)) && items.Bow && items.Glove && items.Ocarina && items.ZeldasLullaby && (items.HoverBoots || items.Hookshot >= 2);
             }
          },
-         'Gilded Chest': {
+         'Boulder Hall Chest': {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.WaterKey >= 2 && ((items.IronBoots && items.Hookshot) || (items.Scale >= 2 && items.Hookshot >= 2)) && (((items.Bombs || (items.Bombchu && BombchuLogic)) && items.Glove) || items.HoverBoots) && (items.Hookshot >= 2 || items.HoverBoots);
             }
          },
-         'Dragon Chest': {
+         'Dragon Mouth Switch Chest': {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && ((items.IronBoots && items.Hookshot) || (items.Scale >= 2 && items.Hookshot >= 2)) && items.Ocarina && (((items.SongofTime && items.Bow && items.WaterKey >= 2)) || (items.ZeldasLullaby && items.Glove));
             }
@@ -1375,7 +1379,7 @@ var dungeons = [
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.WaterKey >= 2 && ((items.IronBoots && items.Hookshot) || (items.Scale >= 2 && items.Hookshot >= 2));
             }
          },
-         'River Chest': {
+         'River Eye Switch Chest': {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.WaterKey >= 2 && ((items.IronBoots && items.Hookshot) || (items.Scale >= 2 && items.Hookshot >= 2)) && items.Ocarina && items.SongofTime && items.Bow;
             }
@@ -1392,7 +1396,7 @@ var dungeons = [
                return (items.IronBoots && items.Hookshot) || (items.Scale >= 2 && items.Hookshot >= 2 && items.Ocarina && items.ZeldasLullaby) && items.WaterKey && items.Bombs;
             }
          },
-         'Before Gilded Chest Skulltula': {
+         'Boulder Hall Skulltula': {
             isAvailable: function () {
                return items.WaterKey && items.IronBoots && items.Hookshot && ((items.Bombs && items.Glove) || items.HoverBoots || items.Hookshot >= 2);
             }
@@ -1617,7 +1621,7 @@ var dungeons = [
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.GTGKey >= 5 && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen());
             }
          },
-         'Maze Big Chest': {
+         'Maze Center Chest': {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.GTGKey >= 7 && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen());
             }
@@ -1680,7 +1684,7 @@ var dungeons = [
             isAvailable: function () {
                return items.Membership && items.GTGKey >= 1; }
          },
-         'Maze Left Final Chest': {
+         'Maze Center Chest': {
             isAvailable: function () {
                return items.Membership && items.Hammer && items.GTGKey >= 3; }
          },
@@ -2025,12 +2029,12 @@ var dungeons = [
       y: "19.5%",
       type: "dungeon",
       chestlist: {
-         'Keese and Redead Room': {
+         'Keese and Redead Chest': {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.NocturneofShadow && items.Magic && items.Dins && (items.HoverBoots || items.Hookshot);
             }
          },
-         'Deadhand Room': {
+         'Deadhand Chest': {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.NocturneofShadow && items.Magic && items.Magic && items.Dins && (items.HoverBoots || items.Hookshot);
             }
@@ -2080,7 +2084,7 @@ var dungeons = [
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ShadowKey >= 2 && items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Hookshot;
             }
          },
-         'Readead and Hint': {
+         'Readeads and Hint': {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ShadowKey >= 3 && items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Hookshot;
             }
@@ -2384,7 +2388,7 @@ var dungeons = [
                return isBridgeOpen() && items.Glove >= 3 && items.Magic && items.Bow && items.Light && items.Hookshot >= 2;
             }
          },
-         ['Water Trial Clear']: {
+         ['Ice Trial Clear']: {
             isAvailable: function () {
                return isBridgeOpen() && items.Bottle && items.Hammer && items.Magic && items.Bow && items.Light;
             }
@@ -2544,22 +2548,23 @@ var dungeons = [
             isAvailable: function () {
                return true; }
          },
-         'Temple of Time': {
-            isAvailable: function () {
-               return true; }
-         },
-      },
-      gossiplist: {
-         'Outside Temple of Time x4': {
-            isAvailable: function () {
-               return true
-            }
-         },
       },
       entrancelist: {
-       'Market to Field': {
+       'Topdown to Drawbridge': {
           x: "52.5%",
           y: "28.0%",
+          isAvailable: function () {
+               return true; }
+       },
+       'Topdown to Market': {
+          x: "48.0%",
+          y: "25.0%",
+          isAvailable: function () {
+               return true; }
+       },
+       'Market to Topdown': {
+          x: "55.0%",
+          y: "25.0%",
           isAvailable: function () {
                return true; }
        },
@@ -2597,6 +2602,19 @@ var dungeons = [
          ['Zelda\'s Secret Weapon']: {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword && items.ShadowMedallion && items.SpiritMedallion);
+            }
+         },
+      },
+      indoorlist: {
+         'Temple of Time': {
+            isAvailable: function () {
+               return true; }
+         },
+      },
+      gossiplist: {
+         'Outside Temple x4': {
+            isAvailable: function () {
+               return true
             }
          },
       },
@@ -2650,7 +2668,7 @@ var dungeons = [
          },
       },
       indoorlist: {
-         'Din\'s Great Fairy Fountain': {
+         'Din\'s Fairy Fountain': {
                isAvailable: function () {
                   return true; }
          },
@@ -2733,7 +2751,7 @@ var dungeons = [
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0));
             }
          },
-         ['Kakariko Redead Grotto']: {
+         ['Redead Grotto']: {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.MasterSword && items.Hammer) || (items.Bombchu && BombchuLogic));
             }
@@ -2758,7 +2776,7 @@ var dungeons = [
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.Ocarina;
             }
          },
-         ['Windmill Heart Piece']: {
+         ['Windmill Freestanding']: {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword || items.Boomerang);
             }
@@ -2768,7 +2786,7 @@ var dungeons = [
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword && items.Bow);
             }
          },
-         ['Nocturne of Shadow']: {
+         ['Song from Sheik']: {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword && items.ForestMedallion && items.FireMedallion && items.WaterMedallion);
             }
@@ -2923,7 +2941,7 @@ var dungeons = [
       y: "06.3%",
       type: "overworld",
       chestlist: {
-         ['Link the Goron']: {
+         ['Little Rolling Goron']: {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Glove || items.Bombs || items.Bow || (items.Bombchu && BombchuLogic));
             }
@@ -2953,7 +2971,7 @@ var dungeons = [
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (OpenGate == 1 || (OpenGate == 0 && (items.Mask >= 1 || items.MasterSword || items.Bombs || (items.Dins && items.Magic) || (items.Bombchu && BombchuLogic)))) && (items.Bombs);
             }
          },
-         ['Spinning Pot Heart Piece']: {
+         ['Spinning Pot Freestanding']: {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (OpenGate == 1 || (OpenGate == 0 && (items.Mask >= 1 || items.MasterSword || items.Bombs || (items.Dins && items.Magic) || (items.Bombchu && BombchuLogic)))) && ((items.Glove || items.Bombs) && ((items.Ocarina && items.ZeldasLullaby && items.Stick) || (items.Magic && items.Dins)));
             }
@@ -3003,6 +3021,10 @@ var dungeons = [
       },
       indoorlist: {
          'Goron Shop': {
+               isAvailable: function () {
+                  return true; }
+         },
+         'Lava Cross Scrub Grotto': {
                isAvailable: function () {
                   return true; }
          },
@@ -3199,7 +3221,7 @@ var dungeons = [
       y: "47.0%",
       type: "overworld",
       chestlist: {
-         ['Minuet of Forest']: {
+         ['Song from Sheik']: {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword;
             }
@@ -3209,7 +3231,7 @@ var dungeons = [
                return items.Bombs || (items.MasterSword && items.Hammer) || (items.Bombchu && BombchuLogic);
             }
          },
-         ['Saria\'s Song']: {
+         ['Song from Saria']: {
             isAvailable: function () {
                return items.Mask >= 2;
             }
@@ -3377,17 +3399,17 @@ var dungeons = [
       y: "28.0%",
       type: "overworld",
       chestlist: {
-         ['Zora Fairy Fountain']: {
+         ['Farore\'s Great Fairy Fountain']: {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.ZoraLetter || OpenFountain) && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Ocarina && items.ZeldasLullaby;
             }
          },
-         ['Iceberg Heart Piece']: {
+         ['Iceberg Freestanding']: {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.ZoraLetter || OpenFountain) && (items.Bombs || items.Scale || (items.Bombchu && BombchuLogic)) && ((items.Ocarina && items.ZeldasLullaby) || items.HoverBoots);
             }
          },
-         ['Underwater Heart Piece']: {
+         ['Under Icy Waters Freestanding']: {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bombs || items.Scale || (items.Bombchu && BombchuLogic)) && (items.ZoraLetter || OpenFountain) && items.IronBoots && ((items.Ocarina && items.ZeldasLullaby) || items.HoverBoots);
             }
@@ -3411,7 +3433,7 @@ var dungeons = [
          },
       },
       indoorlist: {
-         'Farore\'s Great Fairy Fountain': {
+         'Farore\'s Fairy Fountain': {
                isAvailable: function () {
                   return true; }
          },
@@ -3449,7 +3471,7 @@ var dungeons = [
       y: "13.7%",
       type: "overworld",
       chestlist: {
-         ['Cavern Roof Heart Piece']: {
+         ['Cavern Roof Freestanding']: {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (OpenGate == 1 || (OpenGate == 0 && (items.Mask >= 1 || items.MasterSword || items.Bombs || (items.Dins && items.Magic) || (items.Bombchu && BombchuLogic))));
             }
@@ -3464,7 +3486,7 @@ var dungeons = [
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (OpenGate == 1 || (OpenGate == 0 && (items.Mask >= 1 || items.MasterSword || items.Bombs || (items.Dins && items.Magic) || (items.Bombchu && BombchuLogic)))) && (items.Ocarina && items.SongofStorms);
             }
          },
-         ['Summit Fairy Fountain']: {
+         ['Summit Great Fairy Fountain']: {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (OpenGate == 1 || (OpenGate == 0 && (items.Mask >= 1 || items.MasterSword || items.Bombs || (items.Dins && items.Magic) || (items.Bombchu && BombchuLogic)))) && ((items.Bombs || (items.MasterSword && items.Hammer) || (items.Bombchu && BombchuLogic)) && items.Ocarina && items.ZeldasLullaby);
             }
@@ -3562,17 +3584,17 @@ var dungeons = [
       y: "09.0%",
       type: "overworld",
       chestlist: {
-         ['Bolero of Fire']: {
+         ['Song from Sheik']: {
             isAvailable: function () {
                return items.MasterSword && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.BoleroofFire || ((items.HoverBoots || items.Hookshot) && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Hammer || items.Bow || (items.Magic && items.Dins))));
             }
          },
-         ['Bean Heart Piece']: {
+         ['Volcano Freestanding']: {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Glove || items.Bombs || items.Bow || (items.Bombchu && BombchuLogic)) && ((items.Bean && items.BoleroofFire) || items.HoverBoots);
             }
          },
-         ['Fairy Fountain']: {
+         ['Great Fairy Fountain']: {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword && items.Hammer && items.Ocarina && items.ZeldasLullaby);
             }
@@ -3582,7 +3604,7 @@ var dungeons = [
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (OpenGate == 1 || (OpenGate == 0 && (items.Mask >= 1 || items.MasterSword || items.Bombs || (items.Dins && items.Magic) || (items.Bombchu && BombchuLogic)))) && (items.Bombs || (items.MasterSword && items.Hammer) || (items.Bombchu && BombchuLogic));
             }
          },
-         ['Wall Heart Piece']: {
+         ['Wall Freestanding']: {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (OpenGate == 1 || (OpenGate == 0 && (items.Mask >= 1 || items.MasterSword || items.Bombs || (items.Dins && items.Magic) || (items.Bombchu && BombchuLogic)))) && ((items.Bombs || (items.Bombchu && BombchuLogic)) ||
                   (items.MasterSword && ((items.BoleroofFire && (items.HoverBoots || items.Hookshot)) || items.Bow || items.Glove)));
@@ -3618,11 +3640,11 @@ var dungeons = [
             isAvailable: function () {
                return true; }
          },
-         'Crater Fairy Fountain': {
+         'Fairy Fountain': {
             isAvailable: function () {
                return true; }
          },
-         'Crater Bomb Grotto': {
+         'Bomb Grotto': {
             isAvailable: function () {
                return true; }
          },
@@ -3681,7 +3703,7 @@ var dungeons = [
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Mask >= 2 && items.Ocarina;
             }
          },
-         ['Silo Heart Piece']: {
+         ['Silo Freestanding']: {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0));
             }
@@ -3718,7 +3740,7 @@ var dungeons = [
                return items.Boomerang
             }
          },
-         'East of Silo Skulltula': {
+         'North of Silo Skulltula': {
             isAvailable: function () {
                return items.Boomerang
             }
@@ -3770,12 +3792,12 @@ var dungeons = [
       y: "29.5%",
       type: "overworld",
       chestlist: {
-         'River Heart Piece 1': {
+         'Freestanding Lower Ledge': {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword || (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale));
             }
          },
-         'River Open Grotto': {
+         'Open Grotto': {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword || (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale));
             }
@@ -3785,7 +3807,7 @@ var dungeons = [
                return (items.MasterSword && items.Hammer) || items.Bombs || (items.Bombchu && BombchuLogic);
             }
          },
-         'River Heart Piece 2': {
+         'Freestanding Upper Ledge': {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.MasterSword && items.HoverBoots) || (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale));
             }
@@ -3807,7 +3829,7 @@ var dungeons = [
          }
       },
       skulllist: {
-         'Tree by entrance Skulltula': {
+         'Tree by Entrance Skulltula': {
             isAvailable: function () {
                return true
             }
@@ -3895,7 +3917,7 @@ var dungeons = [
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0));
             }
          },
-         ['Silver Scale item']: {
+         ['Child Underwater Freestanding']: {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Scale;
             }
@@ -3905,7 +3927,7 @@ var dungeons = [
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Scale >= 2 || (items.IronBoots && items.Hookshot));
             }
          },
-         ['Lab Roof Heart Piece']: {
+         ['Lab Roof Freestanding']: {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bean || (items.Hookshot && items.Scarecrow >= 2));
             }
@@ -4014,17 +4036,17 @@ var dungeons = [
       y: "31.5%",
       type: "overworld",
       chestlist: {
-         ['Crate Heart Piece']: {
+         ['Crate Freestanding']: {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0));
             }
          },
-         ['Waterfall Heart Piece']: {
+         ['Waterfall Freestanding']: {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0));
             }
          },
-         ['Valley Cow Milk 1']: {
+         ['Valley Cow Milk']: {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.EponasSong;
             }
@@ -4203,17 +4225,17 @@ var dungeons = [
       y: "15.9%",
       type: "overworld",
       chestlist: {
-         ['Requiem of Spirit']: {
+         ['Song from Sheik']: {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.MasterSword && (((items.Ocarina && items.EponasSong) || isFortressOpen()) && items.HoverBoots) || items.Hookshot >= 2) || (items.Ocarina && items.RequiemofSpirit));
             }
          },
-         ['Desert Bean Heart Piece']: {
+         ['Bean to Arch Freestanding']: {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.Bean && items.Ocarina && items.RequiemofSpirit
             }
          },
-         ['Desert Fairy Fountain']: {
+         ['Desert Great Fairy Fountain']: {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Ocarina && items.ZeldasLullaby && (items.Bombs || (items.Bombchu && BombchuLogic))) && (items.MasterSword && (((items.EponasSong || isFortressOpen()) && items.HoverBoots) || items.Hookshot >= 2) || items.RequiemofSpirit)
             }
@@ -4291,7 +4313,7 @@ var dungeons = [
                return ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)));
             }
          },
-         ['Magic Bean Heart Piece']: {
+         ['Magic Bean Freestanding']: {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.MasterSword && (items.Bean || items.Hookshot >= 2)) || items.Boomerang);
             }
@@ -4328,7 +4350,7 @@ var dungeons = [
                return items.Bottle;
             },
          },
-         'North Wall Skulltula': {
+         'South Wall Skulltula': {
             isAvailable: function () {
                return items.Boomerang;
             },
@@ -4380,7 +4402,7 @@ var dungeons = [
    },
    {
       name: "Haunted Wasteland",
-      x: "16.0%",
+      x: "12.0%",
       y: "25.0%",
       type: "overworld",
       chestlist: {
@@ -4399,13 +4421,6 @@ var dungeons = [
          'Structure Skulltula': {
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword && (((items.EponasSong || isFortressOpen()) && items.HoverBoots) || items.Hookshot >= 2))
-            }
-         },
-      },
-      gossiplist: {
-         'Northwest Desert Stone': {
-            isAvailable: function () {
-               return true
             }
          },
       },
