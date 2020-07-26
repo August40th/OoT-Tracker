@@ -339,22 +339,22 @@ function toggleChest(x) {
 
 function toggleEntrances(s) {
    //window.event.preventDefault()
-   var elem = document.getElementById(s);
-   if (elem) {
-      if (elem.classList.contains('0')) {
-         elem.classList.remove('0');
-         elem.className += " " + '1';
-      } else if (elem.classList.contains('1')) {
-         elem.classList.remove('1');
-         elem.className += " " + '2';
-      } else if (elem.classList.contains('2')) {
-         elem.classList.remove('2');
-         elem.className += " " + '3';
+   //var elem = document.getElementById(s);
+   //if (elem) {
+      if (s.classList.contains('0')) {
+         s.classList.remove('0');
+         s.className += " " + '1';
+      } s if (elem.classList.contains('1')) {
+         s.classList.remove('1');
+         s.className += " " + '2';
+      } s if (elem.classList.contains('2')) {
+         s.classList.remove('2');
+         s.className += " " + '3';
       } else {
-         elem.classList.remove('3');
-         elem.className += " " + '0';
+         s.classList.remove('3');
+         s.className += " " + '0';
       }
-   }
+   //}
 }
 
 function toggleMarkedChest(x) {
