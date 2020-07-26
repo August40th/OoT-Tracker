@@ -341,13 +341,13 @@ function toggleEntrances(s) {
    //window.event.preventDefault()
    //var elem = document.getElementById(s);
    //if (elem) {
-      if (s.classList.contains('0')) {
+      if (s.className.contains('0')) {
          //s.classList.remove('0');
          s.className = 'entrance1';
-      } if (s.classList.contains('1')) {
+      } if (s.className.contains('1')) {
          //s.classList.remove('1');
          s.className = 'entrance2';
-      } if (s.classList.contains('2')) {
+      } if (s.className.contains('2')) {
          //s.classList.remove('2');
          s.className = 'entrance3';
       } else {
