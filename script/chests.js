@@ -2551,13 +2551,13 @@ var dungeons = [
       },
       entrancelist: {
        'Topdown to Drawbridge': {
-          x: "53.5%",
+          x: "52.5%",
           y: "27.0%",
           isAvailable: function () {
                return true; }
        },
        'Topdown to Market': {
-          x: "51.5%",
+          x: "50.5%",
           y: "27.0%",
           isAvailable: function () {
                return true; }
@@ -3182,7 +3182,7 @@ var dungeons = [
                   return true; }
          },
          'Woods to City': {
-            x: "78.7%",
+            x: "80.0%",
             y: "48.4%",
              isAvailable: function () {
                   return true; }
@@ -3194,8 +3194,8 @@ var dungeons = [
                   return true; }
          },
          'Woods to Meadow': {
-            x: "80.0%",
-            y: "48.4%",
+            x: "84.0%",
+            y: "46.0%",
              isAvailable: function () {
                   return true; }
          },
