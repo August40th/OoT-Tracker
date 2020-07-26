@@ -702,6 +702,23 @@ function drawDungeonList() {
             DClist.appendChild(li);
          }
       }
+      if (dungeons[dungeonSelect].indoorlist) {
+         for (var door in dungeons[dungeonSelect].indoorlist) {
+            if (dungeons[dungeonSelect].indoorlist[door].classname == "DCopened")
+                dNone = true;
+            let li = document.createElement('li');
+            li.style.cursor = 'pointer';
+            li.innerText = door;
+            li.className = "DCpossible";
+            toggleGossip(li,' + dungeonSelect + ',"' + door + '")
+            li.onclick = new Function('toggleIndoor(this,' + dungeonSelect + ',"' + door + '")');
+            li.onmouseover = new Function('highlightDungeonChest(this)');
+            li.onmouseout = new Function('unhighlightDungeonChest(this)');
+            li.setAttribute("data-type", "indoor");
+            if (dNone) li.classList.add("d-none");
+            DClist.appendChild(li);
+         }
+      }
    }
                
    if (quest === "Master" || quest === "Mixed") {
