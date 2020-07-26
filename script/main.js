@@ -342,17 +342,17 @@ function toggleEntrances(s) {
    //var elem = document.getElementById(s);
    //if (elem) {
       if (s.classList.contains('0')) {
-         s.classList.remove('0');
-         s.className += " " + '1';
+         //s.classList.remove('0');
+         s.className = 'entrance1';
       } if (s.classList.contains('1')) {
-         s.classList.remove('1');
-         s.className += " " + '2';
+         //s.classList.remove('1');
+         s.className = 'entrance2';
       } if (s.classList.contains('2')) {
-         s.classList.remove('2');
-         s.className += " " + '3';
+         //s.classList.remove('2');
+         s.className = 'entrance3';
       } else {
-         s.classList.remove('3');
-         s.className += " " + '0';
+         //s.classList.remove('3');
+         s.className = 'entrance0';
       }
    //}
 }
