@@ -1187,7 +1187,7 @@ function toggleIndoor(sender, d, c) {
    } else if (dungeons[d].indoorlist[c].isAvailable()) {
       sender.className = "DCavailable";
       document.getElementById('submaplist').appendChild(sender);
-      document.getElementById('chestlist').appendChild(sender);
+      document.getElementById('dungeons[d].chestlist').appendChild(sender);
    } else {
       sender.className = "DCunavailable";
    }
