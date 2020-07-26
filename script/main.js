@@ -2633,15 +2633,7 @@ function getDungeonAvailability(dungeon) {
                   else if (GrottoER == false && (key.includes("Octorok Grotto") || key.includes("Fountain Grotto") ))
                   {}
                   else if (!list[key].isOpened && list[key].isAvailable()) {
-                      if (shopsize > 0 && key.includes("Shop ") ) {
-                         if (shopsize < 2 && key.includes("Shop 2") )
-                         {}
-                         if (shopsize < 3 && key.includes("Shop 3") )
-                         {}
-                         if (shopsize < 4 && key.includes("Shop 4") )
-                         {}
-                      }
-                      else canGet++;
+                      canGet++;
                   }
               }
        });
@@ -2741,14 +2733,6 @@ function getDungeonAvailability(dungeon) {
                {}
                else if (GrottoER == false && (key.includes("Octorok Grotto") || key.includes("Fountain Grotto") ))
                {}
-               else if (shopsize > 0 && key.includes("Shop ") ) {
-                  if (shopsize == 1 && key.includes("Shop 2") )
-                  {}
-                  if (shopsize <= 2 && key.includes("Shop 3") )
-                  {}
-                  if (shopsize <= 3 && key.includes("Shop 4") )
-                  {}
-               }
                else if (!list[key].isOpened && list[key].isAvailable()) {
                    canGet++;
                }
