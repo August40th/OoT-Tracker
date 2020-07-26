@@ -341,13 +341,13 @@ function toggleEntrances(s) {
    //window.event.preventDefault()
    //var elem = document.getElementById(s);
    //if (elem) {
-      if (s.className == 'mapspan entrance0';) {
+      if (s.className == 'mapspan entrance0') {
          //s.classList.remove('0');
          s.className = 'mapspan entrance1';
-      } if (s.className == 'mapspan entrance1';) {
+      } if (s.className == 'mapspan entrance1') {
          //s.classList.remove('1');
          s.className = 'mapspan entrance2';
-      } if (s.className == 'mapspan entrance2';) {
+      } if (s.className == 'mapspan entrance2') {
          //s.classList.remove('2');
          s.className = 'mapspan entrance3';
       } else {
