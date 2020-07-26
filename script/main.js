@@ -338,23 +338,21 @@ function toggleChest(x) {
 }
 
 function toggleEntrances(s) {
-   //window.event.preventDefault()
-   //var elem = document.getElementById(s);
-   //if (elem) {
       if (s.className == 'mapspan entrance0') {
-         //s.classList.remove('0');
          s.className = 'mapspan entrance1';
-      } if (s.className == 'mapspan entrance1') {
-         //s.classList.remove('1');
+      } else if (s.className == 'mapspan entrance1') {
          s.className = 'mapspan entrance2';
-      } if (s.className == 'mapspan entrance2') {
-         //s.classList.remove('2');
+      } else if (s.className == 'mapspan entrance2') {
          s.className = 'mapspan entrance3';
+      } else if (s.className == 'mapspan entrance3') {
+         s.className = 'mapspan entrance4';
+      } else if (s.className == 'mapspan entrance4') {
+         s.className = 'mapspan entrance5';
+      } else if (s.className == 'mapspan entrance5') {
+         s.className = 'mapspan entrance6';
       } else {
-         //s.classList.remove('3');
          s.className = 'mapspan entrance0';
       }
-   //}
 }
 
 function toggleMarkedChest(x) {
