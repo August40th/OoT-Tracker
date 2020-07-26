@@ -2551,20 +2551,20 @@ var dungeons = [
       },
       entrancelist: {
        'Topdown to Drawbridge': {
-          x: "52.5%",
-          y: "28.0%",
+          x: "54.5%",
+          y: "27.0%",
           isAvailable: function () {
                return true; }
        },
        'Topdown to Market': {
-          x: "48.0%",
-          y: "25.0%",
+          x: "50.0%",
+          y: "27.0%",
           isAvailable: function () {
                return true; }
        },
        'Market to Topdown': {
-          x: "55.0%",
-          y: "25.0%",
+          x: "52.0%",
+          y: "22.2%",
           isAvailable: function () {
                return true; }
        },
@@ -2669,6 +2669,10 @@ var dungeons = [
       },
       indoorlist: {
          'Din\'s Fairy Fountain': {
+               isAvailable: function () {
+                  return true; }
+         },
+         'Castle Moat Storms Grotto': {
                isAvailable: function () {
                   return true; }
          },
