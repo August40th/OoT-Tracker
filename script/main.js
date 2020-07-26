@@ -341,18 +341,18 @@ function toggleEntrances(s) {
    //window.event.preventDefault()
    //var elem = document.getElementById(s);
    //if (elem) {
-      if (s.className.contains('0')) {
+      if (s.className == 'mapspan entrance0';) {
          //s.classList.remove('0');
-         s.className = 'entrance1';
-      } if (s.className.contains('1')) {
+         s.className = 'mapspan entrance1';
+      } if (s.className == 'mapspan entrance1';) {
          //s.classList.remove('1');
-         s.className = 'entrance2';
-      } if (s.className.contains('2')) {
+         s.className = 'mapspan entrance2';
+      } if (s.className == 'mapspan entrance2';) {
          //s.classList.remove('2');
-         s.className = 'entrance3';
+         s.className = 'mapspan entrance3';
       } else {
          //s.classList.remove('3');
-         s.className = 'entrance0';
+         s.className = 'mapspan entrance0';
       }
    //}
 }
