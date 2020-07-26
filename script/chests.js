@@ -2564,7 +2564,7 @@ var dungeons = [
        },
        'Market to Topdown': {
           x: "52.0%",
-          y: "24.8%",
+          y: "23.4%",
           isAvailable: function () {
                return true; }
        },
@@ -3182,13 +3182,13 @@ var dungeons = [
                   return true; }
          },
          'Woods to City': {
-            x: "76.7%",
+            x: "78.7%",
             y: "48.4%",
              isAvailable: function () {
                   return true; }
          },
          'Woods to River': {
-            x: "79.7%",
+            x: "82.0%",
             y: "51.5%",
              isAvailable: function () {
                   return true; }
