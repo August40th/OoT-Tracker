@@ -344,10 +344,10 @@ function toggleEntrances(s) {
       if (s.classList.contains('0')) {
          s.classList.remove('0');
          s.className += " " + '1';
-      } s if (elem.classList.contains('1')) {
+      } if (s.classList.contains('1')) {
          s.classList.remove('1');
          s.className += " " + '2';
-      } s if (elem.classList.contains('2')) {
+      } if (s.classList.contains('2')) {
          s.classList.remove('2');
          s.className += " " + '3';
       } else {
