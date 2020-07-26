@@ -185,7 +185,6 @@ label {
     margin-top: 160px;
 }
 
-
 .mapvdiv{
     background-image: url("images/mapv.png");
     background-size: cover;
@@ -495,15 +494,75 @@ label {
 }
 
 .entrance1{
-    background-color: orange;
+    width: 16;
+    height: 16;
+    background-size: 100% 100%;
+    background-color: yellow;
+
+    position: absolute;
+    margin-left: -8px;
+    margin-top: -8px;
+    cursor: pointer;}
 }
 
 .entrance2{
-    background-color: black;
+    width: 16;
+    height: 16;
+    background-size: 100% 100%;
+    background-color: green;
+
+    position: absolute;
+    margin-left: -8px;
+    margin-top: -8px;
+    cursor: pointer;}
 }
 
 .entrance3{
+    width: 16;
+    height: 16;
+    background-size: 100% 100%;
+    background-color: red;
+
+    position: absolute;
+    margin-left: -8px;
+    margin-top: -8px;
+    cursor: pointer;}
+}
+
+.entrance4{
+    width: 16;
+    height: 16;
+    background-size: 100% 100%;
     background-color: blue;
+
+    position: absolute;
+    margin-left: -8px;
+    margin-top: -8px;
+    cursor: pointer;}
+}
+
+.entrance5{
+    width: 16;
+    height: 16;
+    background-size: 100% 100%;
+    background-color: purple;
+
+    position: absolute;
+    margin-left: -8px;
+    margin-top: -8px;
+    cursor: pointer;}
+}
+
+.entrance6{
+    width: 16;
+    height: 16;
+    background-size: 100% 100%;
+    background-color: orange;
+
+    position: absolute;
+    margin-left: -8px;
+    margin-top: -8px;
+    cursor: pointer;}
 }
 
 .unavailable{
