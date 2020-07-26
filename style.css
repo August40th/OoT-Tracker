@@ -502,19 +502,19 @@ label {
     position: absolute;
     margin-left: -8px;
     margin-top: -8px;
-    cursor: pointer;}
+    cursor: pointer;
 }
 
 .entrance2{
     width: 16;
     height: 16;
     background-size: 100% 100%;
-    background-color: green;
+    background-color: lightgreen;
 
     position: absolute;
     margin-left: -8px;
     margin-top: -8px;
-    cursor: pointer;}
+    cursor: pointer;
 }
 
 .entrance3{
@@ -526,31 +526,31 @@ label {
     position: absolute;
     margin-left: -8px;
     margin-top: -8px;
-    cursor: pointer;}
+    cursor: pointer;
 }
 
 .entrance4{
     width: 16;
     height: 16;
     background-size: 100% 100%;
-    background-color: blue;
+    background-color: lightskyblue;
 
     position: absolute;
     margin-left: -8px;
     margin-top: -8px;
-    cursor: pointer;}
+    cursor: pointer;
 }
 
 .entrance5{
     width: 16;
     height: 16;
     background-size: 100% 100%;
-    background-color: purple;
+    background-color: blueviolet;
 
     position: absolute;
     margin-left: -8px;
     margin-top: -8px;
-    cursor: pointer;}
+    cursor: pointer;
 }
 
 .entrance6{
@@ -562,7 +562,7 @@ label {
     position: absolute;
     margin-left: -8px;
     margin-top: -8px;
-    cursor: pointer;}
+    cursor: pointer;
 }
 
 .unavailable{
