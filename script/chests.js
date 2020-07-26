@@ -2551,20 +2551,20 @@ var dungeons = [
       },
       entrancelist: {
        'Topdown to Drawbridge': {
-          x: "54.5%",
+          x: "53.5%",
           y: "27.0%",
           isAvailable: function () {
                return true; }
        },
        'Topdown to Market': {
-          x: "50.0%",
+          x: "51.5%",
           y: "27.0%",
           isAvailable: function () {
                return true; }
        },
        'Market to Topdown': {
           x: "52.0%",
-          y: "22.2%",
+          y: "24.8%",
           isAvailable: function () {
                return true; }
        },
@@ -3177,7 +3177,7 @@ var dungeons = [
       entrancelist: {
          'Woods to Forest': {
             x: "78.7%",
-            y: "53.0%",
+            y: "52.0%",
              isAvailable: function () {
                   return true; }
          },
@@ -3188,14 +3188,14 @@ var dungeons = [
                   return true; }
          },
          'Woods to River': {
-            x: "82.0%",
-            y: "48.0%",
+            x: "79.7%",
+            y: "51.5%",
              isAvailable: function () {
                   return true; }
          },
          'Woods to Meadow': {
             x: "80.0%",
-            y: "49.0%",
+            y: "48.4%",
              isAvailable: function () {
                   return true; }
          },
@@ -4406,7 +4406,7 @@ var dungeons = [
    },
    {
       name: "Haunted Wasteland",
-      x: "12.0%",
+      x: "14.0%",
       y: "25.0%",
       type: "overworld",
       chestlist: {
@@ -4479,7 +4479,7 @@ var dungeons = [
              isAvailable: function () {
                   return true; }
          },
-         'Field to Market': {
+         'Drawbridge to Topdown': {
             x: "52.0%",
             y: "30.5%",
              isAvailable: function () {
