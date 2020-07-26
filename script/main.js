@@ -337,7 +337,7 @@ function toggleChest(x) {
    updateMap();
 }
 
-function toggleEntrance(s) {
+function toggleEntrances(s) {
    //window.event.preventDefault()
    var elem = document.getElementById(s);
    if (elem) {
@@ -1185,9 +1185,10 @@ function toggleIndoor(sender, d, c) {
    dungeons[d].indoorlist[c].isOpened = !dungeons[d].indoorlist[c].isOpened;
    if (dungeons[d].indoorlist[c].isOpened) {
       sender.className = "DCopened";
+      sender.classList.add("d-none");
    } else if (dungeons[d].indoorlist[c].isAvailable()) {
       sender.className = "DCavailable";
-      document.getElementById('indoorlist').appendChild(sender)
+      document.getElementById('submaplist').appendChild(sender)
    } else {
       sender.className = "DCunavailable";
    }
@@ -2346,7 +2347,7 @@ function populateMapdiv() {
           s.style.backgroundImage = 'url(images/poi.png)';
           s.style.color = 'blue';
           s.id = key;
-          s.onclick = new Function('toggleEntrance(this)');
+          s.onclick = new Function('toggleEntrances(this)');
           //s.onmouseover = new Function('highlight(this)');
           //s.onmouseout = new Function('unhighlight(this)');
           if (dungeons[k].entrancelist[key].x != undefined) s.style.left = dungeons[k].entrancelist[key].x;
