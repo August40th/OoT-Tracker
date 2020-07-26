@@ -3182,19 +3182,19 @@ var dungeons = [
                   return true; }
          },
          'Woods to City': {
-            x: "80.0%",
-            y: "48.4%",
+            x: "80.8%",
+            y: "49.0%",
              isAvailable: function () {
                   return true; }
          },
          'Woods to River': {
-            x: "82.0%",
+            x: "82.8%",
             y: "51.5%",
              isAvailable: function () {
                   return true; }
          },
          'Woods to Meadow': {
-            x: "84.0%",
+            x: "82.8%",
             y: "46.0%",
              isAvailable: function () {
                   return true; }
