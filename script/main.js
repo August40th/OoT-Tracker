@@ -419,27 +419,6 @@ function clickDungeon(d) {
       document.getElementById('submaparea').innerHTML = dungeons[dungeonSelect].name
    document.getElementById('submaparea').className = "DC" + getDungeonAvailability(dungeons[dungeonSelect]);
    
-   if (OWERmap == true) {
-      var owlist = document.getElementById('entrancelist');
-      var nm = document.createElement('li');
-      nm.innerHTML = dungeons[dungeonSelect].name
-      owlist.appendChild(nm)
-   }
-   
-   if (linestart % 2 == 0){
-      tempx = dungeons[dungeonSelect].x;
-      tempy = dungeons[dungeonSelect].y;
-      linestart++;
-   }
-   else {
-      var c = document.createElement("canvas");
-      var ctx = c.getContext("2d");
-      ctx.beginPath();
-      ctx.moveTo(tempx, tempy);
-      ctx.lineTo(dungeons[dungeonSelect].x, dungeons[dungeonSelect].y);
-      linestart++;
-   }
-   
    drawERList();
    drawDungeonList();
    updateMap();
@@ -455,7 +434,7 @@ function drawERList(){
             else {
                var s = document.createElement('li');
                s.innerHTML = key
-               s.onclick = new Function('toggleIndoor(this,' + dungeonSelect + ',"' + key + '")');
+               //s.onclick = new Function('toggleIndoor(this,' + dungeonSelect + ',"' + key + '")');
                s.onmouseover = new Function('highlightDungeonChest(this)');
                s.onmouseout = new Function('unhighlightDungeonChest(this)');
                s.style.cursor = "pointer";
@@ -687,6 +666,7 @@ function drawDungeonList() {
             DClist.appendChild(li);
          }
       }
+   }
       if (items.StoneofAgony && dungeons[dungeonSelect].gossiplist) {
          for (var gossip in dungeons[dungeonSelect].gossiplist) {
             let li = document.createElement('li');
@@ -702,21 +682,25 @@ function drawDungeonList() {
             DClist.appendChild(li);
          }
       }
-      if (dungeons[dungeonSelect].indoorlist) {
+      if (dungeons[dungeonSelect].indoorlist && IndoorER !== 'Off') {
          for (var door in dungeons[dungeonSelect].indoorlist) {
             if (dungeons[dungeonSelect].indoorlist[door].classname == "DCopened")
                 dNone = true;
-            let li = document.createElement('li');
-            li.style.cursor = 'pointer';
-            li.innerText = door;
-            li.className = "DCpossible";
-            toggleGossip(li,' + dungeonSelect + ',"' + door + '")
-            li.onclick = new Function('toggleIndoor(this,' + dungeonSelect + ',"' + door + '")');
-            li.onmouseover = new Function('highlightDungeonChest(this)');
-            li.onmouseout = new Function('unhighlightDungeonChest(this)');
-            li.setAttribute("data-type", "indoor");
-            if (dNone) li.classList.add("d-none");
-            DClist.appendChild(li);
+            if (GrottoER == false && (key.includes("Grotto") || key.includes("Grave") || key.includes("Tomb") ) ) 
+            {}
+            else {
+                let li = document.createElement('li');
+                li.style.cursor = 'pointer';
+                li.innerText = door;
+                li.className = "DCpossible";
+                toggleGossip(li,' + dungeonSelect + ',"' + door + '")
+                li.onclick = new Function('toggleIndoor(this,' + dungeonSelect + ',"' + door + '")');
+                li.onmouseover = new Function('highlightDungeonChest(this)');
+                li.onmouseout = new Function('unhighlightDungeonChest(this)');
+                li.setAttribute("data-type", "indoor");
+                if (dNone) li.classList.add("d-none");
+                DClist.appendChild(li);
+            }
          }
       }
    }
@@ -1200,10 +1184,8 @@ function toggleIndoor(sender, d, c) {
    dungeons[d].indoorlist[c].isOpened = !dungeons[d].indoorlist[c].isOpened;
    if (dungeons[d].indoorlist[c].isOpened) {
       sender.className = "DCopened";
-      sender.classList.add("d-none");
    } else if (dungeons[d].indoorlist[c].isAvailable()) {
       sender.className = "DCavailable";
-      document.getElementById('indoorlist').appendChild(sender);
    } else {
       sender.className = "DCunavailable";
    }
