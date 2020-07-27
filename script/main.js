@@ -597,75 +597,78 @@ function drawDungeonList() {
             DClist.appendChild(li);
          }
       }
-      var shopitem = shopsize;
-      var shopnum;
-      var started = true;
-      for (let key in dungeons[dungeonSelect].shoplist) {
-         if (started == true) {
-            if (dungeons[dungeonSelect] == dungeons[13])
-               shopnum = 3;
-            else if (dungeons[dungeonSelect] == dungeons[16])
-               shopnum = 2;
-            else
-               shopnum = 1;
-         }
-         else {
-            if (shopitem === undefined)
-               shopitem = shopsize;
-            else if (shopitem <= 0) {
-               if (shopsize != 4) dNone = true;
-                  shopitem--; 
-            }
-         }
-         started = false;
-               
-         if (shopitem > 0 || shopsize == 4) {
-            shopitem--;
-            let li = document.createElement('li');
-            li.style.cursor = 'pointer';
-            li.innerText = key;
-            if (dungeons[dungeonSelect].shoplist[key].isOpened)
-               li.className = "DCopened";
-            else if (dungeons[dungeonSelect].shoplist[key].isAvailable())
-               li.className = "DCavailable";
-            else li.className = "DCunavailable";
+       {
+          var shopitem = shopsize;
+          var shopnum;
+          var started = true;
+          for (let key in dungeons[dungeonSelect].shoplist) {
+             if (started == true) {
+                if (dungeons[dungeonSelect] == dungeons[13])
+                   shopnum = 3;
+                else if (dungeons[dungeonSelect] == dungeons[16])
+                   shopnum = 2;
+                else
+                   shopnum = 1;
+             }
+             else {
+                if (shopitem === undefined)
+                   shopitem = shopsize;
+                else if (shopitem <= 0) {
+                   if (shopsize != 4) dNone = true;
+                      shopitem--; 
+                }
+             }
+             started = false;
 
-            li.onclick = new Function('toggleShopChest(this,' + dungeonSelect + ',"' + key + '")');
-            li.onmouseover = new Function('highlightDungeonChest(this)');
-            li.onmouseout = new Function('unhighlightDungeonChest(this)');
-            li.setAttribute("data-type", "shop");
-            DClist.appendChild(li);
-         }
-         if (shopitem < 0 && shopnum > 1) {
-            if (shopsize == 1 && shopitem <= -3) {
-               shopitem = shopsize;
-               dNone = false;
-               shopnum--;
-            }
-            else if (shopsize == 2 && shopitem <= -2) {
-               shopitem = shopsize;
-               dNone = false;
-               shopnum--;
-            }
-            else if (shopsize == 3 && shopitem <= -1) {
-               shopitem = shopsize;
-               dNone = false;
-               shopnum--;
-            }
-         }
-         else if (shopsize == 0) {
-            dNone = true;
-            let li = document.createElement('li');
-            li.style.cursor = 'pointer';
-            li.innerText = key;
-            li.onclick = new Function('toggleShopChest(this,' + dungeonSelect + ',"' + key + '")');
-            li.onmouseover = new Function('highlightDungeonChest(this)');
-            li.onmouseout = new Function('unhighlightDungeonChest(this)');
-            li.setAttribute("data-type", "shop");
-            if (dNone) li.classList.add("d-none"); 
-            DClist.appendChild(li);
-         }
-      }
+             if (shopitem > 0 || shopsize == 4) {
+                shopitem--;
+                let li = document.createElement('li');
+                li.style.cursor = 'pointer';
+                li.innerText = key;
+                if (dungeons[dungeonSelect].shoplist[key].isOpened)
+                   li.className = "DCopened";
+                else if (dungeons[dungeonSelect].shoplist[key].isAvailable())
+                   li.className = "DCavailable";
+                else li.className = "DCunavailable";
+
+                li.onclick = new Function('toggleShopChest(this,' + dungeonSelect + ',"' + key + '")');
+                li.onmouseover = new Function('highlightDungeonChest(this)');
+                li.onmouseout = new Function('unhighlightDungeonChest(this)');
+                li.setAttribute("data-type", "shop");
+                if (dNone) li.classList.add("d-none"); 
+                DClist.appendChild(li);
+             }
+             if (shopitem < 0 && shopnum > 1) {
+                if (shopsize == 1 && shopitem <= -3) {
+                   shopitem = shopsize;
+                   dNone = false;
+                   shopnum--;
+                }
+                else if (shopsize == 2 && shopitem <= -2) {
+                   shopitem = shopsize;
+                   dNone = false;
+                   shopnum--;
+                }
+                else if (shopsize == 3 && shopitem <= -1) {
+                   shopitem = shopsize;
+                   dNone = false;
+                   shopnum--;
+                }
+             }
+             else if (shopsize == 0) {
+                dNone = true;
+                let li = document.createElement('li');
+                li.style.cursor = 'pointer';
+                li.innerText = key;
+                li.onclick = new Function('toggleShopChest(this,' + dungeonSelect + ',"' + key + '")');
+                li.onmouseover = new Function('highlightDungeonChest(this)');
+                li.onmouseout = new Function('unhighlightDungeonChest(this)');
+                li.setAttribute("data-type", "shop");
+                if (dNone) li.classList.add("d-none"); 
+                DClist.appendChild(li);
+             }
+          }
+       }
       if (items.StoneofAgony && dungeons[dungeonSelect].gossiplist) {
          for (var gossip in dungeons[dungeonSelect].gossiplist) {
             let li = document.createElement('li');
