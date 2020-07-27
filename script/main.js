@@ -666,7 +666,6 @@ function drawDungeonList() {
             DClist.appendChild(li);
          }
       }
-   }
       if (items.StoneofAgony && dungeons[dungeonSelect].gossiplist) {
          for (var gossip in dungeons[dungeonSelect].gossiplist) {
             let li = document.createElement('li');
