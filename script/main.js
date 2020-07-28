@@ -424,43 +424,6 @@ function clickDungeon(d) {
    updateMap();
 }
 
-function drawERList(){
-   if (IndoorER != false) {
-      var selected = document.getElementById('selectindoorlist');
-      selected.innerHTML = "";
-         for (var key in dungeons[dungeonSelect].indoorlist) {
-            if (GrottoER == false && (key.includes("Grotto") || key.includes("Grave") || key.includes("Tomb") ) ) 
-            {}
-            else {
-               var s = document.createElement('li');
-               s.innerHTML = key
-               //s.onclick = new Function('toggleIndoor(this,' + dungeonSelect + ',"' + key + '")');
-               s.onmouseover = new Function('highlightDungeonChest(this)');
-               s.onmouseout = new Function('unhighlightDungeonChest(this)');
-               s.style.cursor = "pointer";
-               s.setAttribute("data-type", "indoor");
-               //if (dNone) s.classList.add("d-none");
-               selected.appendChild(s)
-            }
-         }
-   }
-   if (OWERmap != false) {
-      var selectedER = document.getElementById('selectedERlist');
-      selectedER.innerHTML = "";
-         for (var key in dungeons[dungeonSelect].entrancelist) {
-            var s = document.createElement('li');
-            s.innerHTML = key
-            s.onclick = new Function('toggleEntrance(this,' + dungeonSelect + ',"' + key + '")');
-            s.onmouseover = new Function('highlightDungeonChest(this)');
-            s.onmouseout = new Function('unhighlightDungeonChest(this)');
-            s.style.cursor = "pointer";
-            s.setAttribute("data-type", "entrance");
-            //if (dNone) s.classList.add("d-none");
-            selectedER.appendChild(s)
-         }
-   }
-}
-
 function drawDungeonList() {
    DCcount = 0;
    var DClist = document.getElementById('submaplist');
@@ -2548,8 +2511,6 @@ function populateMapdiv() {
    document.getElementById("dungeon" + dungeonSelect).style.backgroundImage = "url(images/highlighted.png)";
 
    drawDungeonList();
-   //if (IndoorER = true)
-      drawERList();
 }
 
 function getDungeonAvailability(dungeon) {
