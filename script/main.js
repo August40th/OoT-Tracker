@@ -2316,7 +2316,7 @@ function populateMapdiv() {
           ss.innerHTML = key;
           s.appendChild(ss);
 
-          mapdiv.appendChild(s);
+          ermapdiv.appendChild(s);
        }
    }
 
