@@ -632,7 +632,9 @@ function drawDungeonList() {
              }
           }
        }
-      if (items.StoneofAgony && dungeons[dungeonSelect].gossiplist) {
+   }
+    
+    if (items.StoneofAgony && dungeons[dungeonSelect].gossiplist) {
          for (var gossip in dungeons[dungeonSelect].gossiplist) {
             let li = document.createElement('li');
             li.style.cursor = 'pointer';
@@ -668,7 +670,6 @@ function drawDungeonList() {
             }
          }
       }
-   }
                
    if (quest === "Master" || quest === "Mixed") {
       dNone = false;
@@ -1464,7 +1465,6 @@ function setShopsize(sender) {
 
 function setGrottoER(sender) {
    GrottoER = sender.checked;
-   drawERList();
    updateMap();
    drawDungeonList();
    saveCookie();
