@@ -652,6 +652,7 @@ function drawDungeonList() {
          for (var door in dungeons[dungeonSelect].indoorlist) {
             if (dungeons[dungeonSelect].indoorlist[door].classname == "DCopened")
                 dNone = true;
+            else dNone = false;
             if (GrottoER == false && (key.includes("Grotto") || key.includes("Grave") || key.includes("Tomb") ) ) 
             {}
             else {
