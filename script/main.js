@@ -419,7 +419,6 @@ function clickDungeon(d) {
       document.getElementById('submaparea').innerHTML = dungeons[dungeonSelect].name
    document.getElementById('submaparea').className = "DC" + getDungeonAvailability(dungeons[dungeonSelect]);
    
-   drawERList();
    drawDungeonList();
    updateMap();
 }
@@ -1155,13 +1154,11 @@ function toggleIndoor(sender, d, c) {
    } else {
       sender.className = "DCunavailable";
    }
-   drawERList();
    updateMap();
 }
 
 function toggleEntrance(sender, d, c) {
    document.getElementById('entrancelist').appendChild(sender)
-   drawERList();
    updateMap();
 }
 
@@ -1472,7 +1469,6 @@ function setGrottoER(sender) {
 
 function setIndoorER(sender) {
    IndoorER = sender.value;
-   drawERList();
    updateMap();
    drawDungeonList();
    saveCookie();
@@ -1480,7 +1476,6 @@ function setIndoorER(sender) {
 
 function setOWER(sender) {
    OWERmap = sender.checked;
-   drawERList();
    updateMap();
    drawDungeonList();
    saveCookie();
