@@ -644,7 +644,7 @@ function drawDungeonList() {
             li.onmouseover = new Function('highlightDungeonChest(this)');
             li.onmouseout = new Function('unhighlightDungeonChest(this)');
             li.setAttribute("data-type", "gossip");
-            if (dNone) li.classList.add("d-none");
+            //if (dNone) li.classList.add("d-none");
             DClist.appendChild(li);
          }
       }
