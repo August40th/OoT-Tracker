@@ -2303,7 +2303,7 @@ function populateMapdiv() {
        for (var key in dungeons[k].entrancelist) {
           var s = document.createElement('span');
           s.style.backgroundImage = 'url(images/poi.png)';
-          s.style.color = 'blue';
+          s.style.color = 'black';
           s.id = key;
           s.onclick = new Function('toggleEntrances(this)');
           //s.onmouseover = new Function('highlight(this)');
@@ -2316,7 +2316,7 @@ function populateMapdiv() {
           ss.innerHTML = key;
           s.appendChild(ss);
 
-          ermapdiv.appendChild(s);
+          mapdiv.appendChild(s);
        }
    }
 
