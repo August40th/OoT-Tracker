@@ -632,44 +632,6 @@ function drawDungeonList() {
           }
        }
    }
-    
-    if (items.StoneofAgony && dungeons[dungeonSelect].gossiplist) {
-         for (var gossip in dungeons[dungeonSelect].gossiplist) {
-            let li = document.createElement('li');
-            li.style.cursor = 'pointer';
-            li.innerText = gossip;
-            li.className = "DCgossip";
-            toggleGossip(li,' + dungeonSelect + ',"' + gossip + '")
-            li.onclick = new Function('toggleGossip(this,' + dungeonSelect + ',"' + gossip + '")');
-            li.onmouseover = new Function('highlightDungeonChest(this)');
-            li.onmouseout = new Function('unhighlightDungeonChest(this)');
-            li.setAttribute("data-type", "gossip");
-            //if (dNone) li.classList.add("d-none");
-            DClist.appendChild(li);
-         }
-      }
-      if (dungeons[dungeonSelect].indoorlist && IndoorER !== 'Off') {
-         for (var door in dungeons[dungeonSelect].indoorlist) {
-            if (dungeons[dungeonSelect].indoorlist[door].classname == "DCopened")
-                dNone = true;
-            else dNone = false;
-            if (GrottoER == false && (key.includes("Grotto") || key.includes("Grave") || key.includes("Tomb") ) ) 
-            {}
-            else {
-                let li = document.createElement('li');
-                li.style.cursor = 'pointer';
-                li.innerText = door;
-                li.className = "DCpossible";
-                toggleGossip(li,' + dungeonSelect + ',"' + door + '")
-                li.onclick = new Function('toggleIndoor(this,' + dungeonSelect + ',"' + door + '")');
-                li.onmouseover = new Function('highlightDungeonChest(this)');
-                li.onmouseout = new Function('unhighlightDungeonChest(this)');
-                li.setAttribute("data-type", "indoor");
-                if (dNone) li.classList.add("d-none");
-                DClist.appendChild(li);
-            }
-         }
-      }
                
    if (quest === "Master" || quest === "Mixed") {
       dNone = false;
@@ -912,6 +874,43 @@ function drawDungeonList() {
             }           
       }
    }
+   if (items.StoneofAgony && dungeons[dungeonSelect].gossiplist) {
+         for (var gossip in dungeons[dungeonSelect].gossiplist) {
+            let li = document.createElement('li');
+            li.style.cursor = 'pointer';
+            li.innerText = gossip;
+            li.className = "DCgossip";
+            toggleGossip(li,' + dungeonSelect + ',"' + gossip + '")
+            li.onclick = new Function('toggleGossip(this,' + dungeonSelect + ',"' + gossip + '")');
+            li.onmouseover = new Function('highlightDungeonChest(this)');
+            li.onmouseout = new Function('unhighlightDungeonChest(this)');
+            li.setAttribute("data-type", "gossip");
+            //if (dNone) li.classList.add("d-none");
+            DClist.appendChild(li);
+         }
+      }
+      if (dungeons[dungeonSelect].indoorlist && IndoorER !== 'Off') {
+         for (var door in dungeons[dungeonSelect].indoorlist) {
+            if (dungeons[dungeonSelect].indoorlist[door].classname == "DCopened")
+                dNone = true;
+            else dNone = false;
+            if (GrottoER == false && (key.includes("Grotto") || key.includes("Grave") || key.includes("Tomb") ) ) 
+            {}
+            else {
+                let li = document.createElement('li');
+                li.style.cursor = 'pointer';
+                li.innerText = door;
+                li.className = "DCpossible";
+                toggleGossip(li,' + dungeonSelect + ',"' + door + '")
+                li.onclick = new Function('toggleIndoor(this,' + dungeonSelect + ',"' + door + '")');
+                li.onmouseover = new Function('highlightDungeonChest(this)');
+                li.onmouseout = new Function('unhighlightDungeonChest(this)');
+                li.setAttribute("data-type", "indoor");
+                if (dNone) li.classList.add("d-none");
+                DClist.appendChild(li);
+            }
+         }
+      }
       
    if (quest === "Mixed" && dungeons[dungeonSelect].type === "dungeon") {
       const submaparea = document.getElementById("submaparea");
