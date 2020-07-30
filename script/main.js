@@ -1500,6 +1500,7 @@ function setIndoorER(sender) {
    IndoorER = sender.value;
    updateMap();
    drawDungeonList();
+   drawIndoorChecks();
    saveCookie();
 }
 
