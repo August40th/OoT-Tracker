@@ -1526,6 +1526,7 @@ function setCows(sender) {
    Cowsanity = sender.checked;
    updateMap();
    drawDungeonList();
+   if (IndoorER !== "Off") drawIndoorChecks();
    saveCookie();
 }
 
