@@ -472,7 +472,7 @@ function drawDungeonList() {
                s.classList.add("d-none"); }
             if (dungeons[dungeonSelect].chestlist[key].type == "indoor" && IndoorER !== "Off")
                 s.classList.add("d-none");
-            if (dungeons[dungeonSelect].chestlist[key].type == "grotto" && GrottoER == true)
+            if (dungeons[dungeonSelect].chestlist[key].type == "grotto" && GrottoER == true && IndoorER !== "Off")
                 s.classList.add("d-none");
 
             s.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
