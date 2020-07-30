@@ -815,7 +815,7 @@ function drawDungeonList() {
       var shopitem = shopsize;
       var shopnum;
       var started = true;
-      if (shopsize == 0)
+      if (shopsize == 0 || IndoorER !== "Off")
          dNone = true;
       else if (shopsize > 0 && (quest === "Master")) {
             for (let key in dungeons[dungeonSelect].shoplist) {
@@ -898,7 +898,7 @@ function drawDungeonList() {
             if (dungeons[dungeonSelect].indoorlist[door].classname == "DCopened")
                 dNone = true;
             else dNone = false;
-            if (GrottoER == false && (key.includes("Grotto") || key.includes("Grave") || key.includes("Tomb") ) ) 
+            if (GrottoER == false && (door.includes("Grotto") || door.includes("Grave") || door.includes("Tomb") ) ) 
             {}
             else {
                 let li = document.createElement('li');
