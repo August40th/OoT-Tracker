@@ -428,22 +428,28 @@ function drawIndoorChecks() {
     Doorlist.innerHTML = "";
     for (var k = 0; k < dungeons.length ; k++) {
         for (let key in dungeons[k].chestlist) {
-            let li = document.createElement('li');
-            li.style.cursor = 'pointer';
-            li.innerText = key;
-            if (dungeons[k].chestlist[key].isOpened) {
-                li.className = "DCopened";
-            } else if (dungeons[k].chestlist[key].isAvailable()) {
-                li.className = "DCavailable";
-            } else {
-                li.className = "DCunavailable";
+            if (dungeons[k].chestlist[key].type === "outdoor")
+            {}
+            else if (dungeons[k].chestlist[key].type === "grotto" && GrottoER == false)
+            {}
+            else {
+                let li = document.createElement('li');
+                li.style.cursor = 'pointer';
+                li.innerText = key;
+                if (dungeons[k].chestlist[key].isOpened) {
+                    li.className = "DCopened";
+                } else if (dungeons[k].chestlist[key].isAvailable()) {
+                    li.className = "DCavailable";
+                } else {
+                    li.className = "DCunavailable";
+                }
+                li.onclick = new Function('toggleDungeonChest(this,' + k + ',"' + key + '")');
+                li.onmouseover = new Function('highlightDungeonChest(this)');
+                li.onmouseout = new Function('unhighlightDungeonChest(this)');
+                li.setAttribute("data-type", "indoorcheck");
+                if (dNone) li.classList.add("d-none");
+                Doorlist.appendChild(li);
             }
-            li.onclick = new Function('toggleDungeonChest(this,' + k + ',"' + key + '")');
-            li.onmouseover = new Function('highlightDungeonChest(this)');
-            li.onmouseout = new Function('unhighlightDungeonChest(this)');
-            li.setAttribute("data-type", "indoorcheck");
-            if (dNone) li.classList.add("d-none");
-            Doorlist.appendChild(li);
         }
     }
 }
