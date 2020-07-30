@@ -423,12 +423,35 @@ function clickDungeon(d) {
    updateMap();
 }
 
+function drawIndoorChecks() {
+    var Doorlist = document.getElementById('indoorchecks');
+    Doorlist.innerHTML = "";
+    for (var k = 0; k < dungeons.length ; k++) {
+        for (let key in dungeons[k].chestlist) {
+            let li = document.createElement('li');
+            li.style.cursor = 'pointer';
+            li.innerText = key;
+            if (dungeons[k].chestlist[key].isOpened) {
+                li.className = "DCopened";
+            } else if (dungeons[k].chestlist[key].isAvailable()) {
+                li.className = "DCavailable";
+            } else {
+                li.className = "DCunavailable";
+            }
+            li.onclick = new Function('toggleDungeonChest(this,' + k + ',"' + key + '")');
+            li.onmouseover = new Function('highlightDungeonChest(this)');
+            li.onmouseout = new Function('unhighlightDungeonChest(this)');
+            li.setAttribute("data-type", "indoorcheck");
+            if (dNone) li.classList.add("d-none");
+            Doorlist.appendChild(li);
+        }
+    }
+}
+
 function drawDungeonList() {
    DCcount = 0;
    var DClist = document.getElementById('submaplist');
    DClist.innerHTML = "";
-   var Doorlist = document.getElementById('indoorchecks');
-   Doorlist.innerHTML = "";
    listFilter = document.getElementById('submaparea').getAttribute('data-filter');
    if (quest === "Vanilla" || quest === "Mixed") {
       let dNone = false;
@@ -473,17 +496,9 @@ function drawDungeonList() {
             if (GrottoER == false && (s.innerHTML.includes("Octorok Grotto") || s.innerHTML.includes("Fountain Grotto") )) {
                s.classList.add("d-none"); }
             if (dungeons[dungeonSelect].chestlist[key].type == "indoor" && IndoorER !== "Off") {
-                s.classList.add("d-none");
-                var i = document.createElement('li');
-                i.innerHTML = key
-                Doorlist.appendChild(i);
-            }
+                s.classList.add("d-none"); }
             if (dungeons[dungeonSelect].chestlist[key].type == "grotto" && GrottoER == true && IndoorER !== "Off") {
-                s.classList.add("d-none");
-                var g = document.createElement('li');
-                g.innerHTML = key
-                Doorlist.appendChild(g);
-            }
+                s.classList.add("d-none"); }
 
             s.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
             s.onmouseover = new Function('highlightDungeonChest(this)');
@@ -2520,6 +2535,7 @@ function populateMapdiv() {
    document.getElementById("dungeon" + dungeonSelect).style.backgroundImage = "url(images/highlighted.png)";
 
    drawDungeonList();
+   if (IndoorER !== "Off") drawIndoorChecks();
 }
 
 function getDungeonAvailability(dungeon) {
