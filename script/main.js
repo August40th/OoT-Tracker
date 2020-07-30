@@ -473,11 +473,11 @@ function drawDungeonList() {
             if (GrottoER == false && (s.innerHTML.includes("Octorok Grotto") || s.innerHTML.includes("Fountain Grotto") )) {
                s.classList.add("d-none"); }
             if (dungeons[dungeonSelect].chestlist[key].type == "indoor" && IndoorER !== "Off") {
-                s.classList.add("d-none");
+                //s.classList.add("d-none");
                 Doorlist.appendChild(s);
             }
             if (dungeons[dungeonSelect].chestlist[key].type == "grotto" && GrottoER == true && IndoorER !== "Off") {
-                s.classList.add("d-none");
+                //s.classList.add("d-none");
                 Doorlist.appendChild(s);
             }
 
