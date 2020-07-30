@@ -470,9 +470,9 @@ function drawDungeonList() {
                s.classList.add("d-none"); }
             if (GrottoER == false && (s.innerHTML.includes("Octorok Grotto") || s.innerHTML.includes("Fountain Grotto") )) {
                s.classList.add("d-none"); }
-            if (key.type == "indoor" && IndoorER == "Off")
+            if (key.type == "indoor" && IndoorER !== "Off")
                 s.classList.add("d-none");
-            if (key.type == "grotto" && GrottoER == false)
+            if (key.type == "grotto" && GrottoER == true)
                 s.classList.add("d-none");
 
             s.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
