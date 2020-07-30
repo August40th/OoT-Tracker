@@ -427,6 +427,8 @@ function drawDungeonList() {
    DCcount = 0;
    var DClist = document.getElementById('submaplist');
    DClist.innerHTML = "";
+   var Doorlist = document.getElementById('indoorchecks');
+   Doorlist.innerHTML = "";
    listFilter = document.getElementById('submaparea').getAttribute('data-filter');
    if (quest === "Vanilla" || quest === "Mixed") {
       let dNone = false;
@@ -470,10 +472,12 @@ function drawDungeonList() {
                s.classList.add("d-none"); }
             if (GrottoER == false && (s.innerHTML.includes("Octorok Grotto") || s.innerHTML.includes("Fountain Grotto") )) {
                s.classList.add("d-none"); }
-            if (dungeons[dungeonSelect].chestlist[key].type == "indoor" && IndoorER !== "Off")
+            if (dungeons[dungeonSelect].chestlist[key].type == "indoor" && IndoorER !== "Off") {
                 s.classList.add("d-none");
-            if (dungeons[dungeonSelect].chestlist[key].type == "grotto" && GrottoER == true && IndoorER !== "Off")
+                Doorlist.appendChild(s);)
+            if (dungeons[dungeonSelect].chestlist[key].type == "grotto" && GrottoER == true && IndoorER !== "Off") {
                 s.classList.add("d-none");
+                Doorlist.appendChild(s);)
 
             s.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
             s.onmouseover = new Function('highlightDungeonChest(this)');
