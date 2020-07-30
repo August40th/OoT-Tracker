@@ -432,6 +432,8 @@ function drawIndoorChecks() {
             {}
             else if (dungeons[k].chestlist[key].type === "grotto" && GrottoER == false)
             {}
+            else if (Cowsanity == false && key.includes("Cow Milk"))
+            {}
             else if (dungeons[k].chestlist[key].type == undefined )
             {}
             else {
@@ -1501,6 +1503,7 @@ function setGrottoER(sender) {
    GrottoER = sender.checked;
    updateMap();
    drawDungeonList();
+   if (IndoorER !== "Off") drawIndoorChecks();
    saveCookie();
 }
 
@@ -1508,7 +1511,7 @@ function setIndoorER(sender) {
    IndoorER = sender.value;
    updateMap();
    drawDungeonList();
-   drawIndoorChecks();
+   if (IndoorER !== "Off") drawIndoorChecks();
    saveCookie();
 }
 
