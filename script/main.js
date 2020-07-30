@@ -432,6 +432,8 @@ function drawIndoorChecks() {
             {}
             else if (dungeons[k].chestlist[key].type === "grotto" && GrottoER == false)
             {}
+            else if (dungeons[k].chestlist[key].type == undefined )
+            {}
             else {
                 let li = document.createElement('li');
                 li.style.cursor = 'pointer';
