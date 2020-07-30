@@ -43,7 +43,7 @@ var dungeons = [
                return true; }
          },
          'Song of Storms Grotto': {
-            type: "indoor",
+            type: "grotto",
             isAvailable: function () {
                return items.Ocarina && items.SongofStorms; }
          },
