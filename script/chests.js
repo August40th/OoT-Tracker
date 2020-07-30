@@ -3048,8 +3048,8 @@ var dungeons = [
             }
          },
          ['Big Rolling Goron']: {
+            type: "outdoor",
             isAvailable: function () {
-               type: "outdoor",
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (OpenGate == 1 || (OpenGate == 0 && (items.Mask >= 1 || items.MasterSword || items.Bombs || (items.Dins && items.Magic) || (items.Bombchu && BombchuLogic)))) && (items.Bombs);
             }
          },
