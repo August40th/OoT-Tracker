@@ -1096,10 +1096,11 @@ function toggleDungeonChest(sender, d, c) {
    }  else if (chestType === 'trial') {
       toggleTrial(sender, d, c);
    } else if (chestType === 'gossip') {
-      toggleTrial(sender, d, c);
+      toggleGossip(sender, d, c);
    }
    
    updateMap();
+   if (IndoorER !== 'Off) drawIndoorChecks();
 }
 
 function toggleSkullChest(sender, d, c) {
