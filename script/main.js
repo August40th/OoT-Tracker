@@ -160,8 +160,6 @@ function loadCookie() {
    document.getElementsByName('GrottoER')[0].onchange();
    document.getElementsByName('OWERmap')[0].checked = !!cookieobj.oER;
    document.getElementsByName('OWERmap')[0].onchange();
-   //document.getElementsByName('IndoorER')[0].value = !!cookieobj.iER;
-   //document.getElementsByName('IndoorER')[0].onchange();
 
    document.getElementsByName('shopsize')[0].value = cookieobj.shpsize;
    document.getElementsByName('shopsize')[0].onchange();
@@ -228,6 +226,12 @@ function loadCookie() {
       if (rbutton.value == cookieobj.sclogic)
          rbutton.click();
    }
+    
+   for (rbuttonID in document.getElementsByName('IndoorER')) {
+      rbutton = document.getElementsByName('IndoorER')[rbuttonID]
+      if (rbutton.value == cookieobj.iER)
+         rbutton.click();
+   }
 
    cookielock = false;
 }
@@ -254,8 +258,6 @@ function saveCookie() {
    
    cookieobj.gER = document.getElementsByName('GrottoER')[0].checked ? 1 : 0;
    cookieobj.oER = document.getElementsByName('OWERmap')[0].checked ? 1 : 0;
-   cookieobj.iER = document.getElementsByName('IndoorER')[0].value ? 1 : 0;
-
    
    cookieobj.shpsize = document.getElementsByName('shopsize')[0].value;
    cookieobj.numtrials = document.getElementsByName('trialsize')[0].value;
@@ -313,6 +315,12 @@ function saveCookie() {
       rbutton = document.getElementsByName('scrubs')[rbuttonID]
       if (rbutton.checked)
          cookieobj.sclogic = rbutton.value;
+   }
+   
+   for (rbuttonID in document.getElementsByName('IndoorER')) {
+      rbutton = document.getElementsByName('IndoorER')[rbuttonID]
+      if (rbutton.checked)
+         cookieobj.iER = rbutton.value;
    }
 
    cookieobj.items = JSON.parse(JSON.stringify(itemLayout));
