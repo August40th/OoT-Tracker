@@ -444,7 +444,7 @@ function drawIndoorChecks() {
             {}
             else if (dungeons[k].chestlist[key].type == undefined )
             {}
-            else if (dungeons[k].chestlist[key].type === "alldoor" && IndoorER !== "Full")
+            else if (dungeons[k].chestlist[key].type === "alldoor" && IndoorER === "Full")
             {}
             else {
                 let li = document.createElement('li');
@@ -932,7 +932,7 @@ function drawDungeonList() {
             else dNone = false;
             if (GrottoER == false && (door.includes("Grotto") || door.includes("Grave") || door.includes("Tomb") ) ) 
             {}
-            else if (dungeons[dungeonSelect].indoorlist[door].type == "alldoor" && (IndoorER !== "Simple" || IndoorER !== "Off") )
+            else if (dungeons[dungeonSelect].indoorlist[door].type == "alldoor" && IndoorER !== "Full" )
             {}
             else {
                 let li = document.createElement('li');
