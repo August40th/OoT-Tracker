@@ -2093,7 +2093,7 @@ function updateMap() {
                {}
                else if (dungeons[k].chestlist[key].type == "indoor" && IndoorER !== "Off") 
                {}
-               else if (dungeons[k].chestlist[key].type == "alldoor" && IndoorER !== "Full" ) 
+               else if (dungeons[k].chestlist[key].type == "alldoor" && IndoorER === "Full" ) 
                {}
                else if (dungeons[k].chestlist[key].type == "grotto" && GrottoER == true && IndoorER !== "Off") 
                {}
@@ -2170,7 +2170,7 @@ function updateMap() {
                   {}
                   else if (dungeons[k].chestlist[key].type == "indoor" && IndoorER !== "Off") 
                   {}
-                  else if (dungeons[k].chestlist[key].type == "alldoor" && IndoorER !== "Full" ) 
+                  else if (dungeons[k].chestlist[key].type == "alldoor" && IndoorER === "Full" ) 
                   {}
                   else if (dungeons[k].chestlist[key].type == "grotto" && GrottoER == true && IndoorER !== "Off") 
                   {}
@@ -2432,7 +2432,7 @@ function populateMapdiv() {
                {}
                else if (dungeons[k].chestlist[key].type == "indoor" && IndoorER !== "Off") 
                {}
-               else if (dungeons[k].chestlist[key].type == "alldoor" && IndoorER !== "Full" ) 
+               else if (dungeons[k].chestlist[key].type == "alldoor" && IndoorER === "Full" ) 
                {}
                else if (dungeons[k].chestlist[key].type == "grotto" && GrottoER == true && IndoorER !== "Off") 
                {}
@@ -2509,7 +2509,7 @@ function populateMapdiv() {
                   {}
                   else if (dungeons[k].chestlist[key].type == "indoor" && IndoorER !== "Off") 
                   {}
-                  else if (dungeons[k].chestlist[key].type == "alldoor" && IndoorER !== "Full" ) 
+                  else if (dungeons[k].chestlist[key].type == "alldoor" && IndoorER === "Full" ) 
                   {}
                   else if (dungeons[k].chestlist[key].type == "grotto" && GrottoER == true && IndoorER !== "Off") 
                   {}
@@ -2624,7 +2624,7 @@ function getDungeonAvailability(dungeon) {
           {}
           else if (dungeon.chestlist[key].type == "indoor" && IndoorER !== "Off") 
           {}
-          else if (dungeon.chestlist[key].type == "alldoor" && IndoorER !== "Full" ) 
+          else if (dungeon.chestlist[key].type == "alldoor" && IndoorER === "Full" ) 
           {}
           else if (dungeon.chestlist[key].type == "grotto" && GrottoER == true && IndoorER !== "Off") 
           {}
@@ -2685,7 +2685,7 @@ function getDungeonAvailability(dungeon) {
                   {}
                   else if (dungeon.chestlist[key].type == "indoor" && IndoorER !== "Off") 
                   {}
-                  else if (dungeon.chestlist[key].type == "alldoor" && IndoorER !== "Full" ) 
+                  else if (dungeon.chestlist[key].type == "alldoor" && IndoorER === "Full" ) 
                   {}
                   else if (dungeon.chestlist[key].type == "grotto" && GrottoER == true && IndoorER !== "Off") 
                   {}
@@ -2751,7 +2751,7 @@ function getDungeonAvailability(dungeon) {
                {}
                else if (dungeon.chestlist[key].type == "indoor" && IndoorER !== "Off") 
                {}
-               else if (dungeon.chestlist[key].type == "alldoor" && IndoorER !== "Full" ) 
+               else if (dungeon.chestlist[key].type == "alldoor" && IndoorER === "Full" ) 
                {}
                else if (dungeon.chestlist[key].type == "grotto" && GrottoER == true && IndoorER !== "Off") 
                {}
@@ -2798,7 +2798,7 @@ function getDungeonAvailability(dungeon) {
                {}
                else if (dungeon.chestlist[key].type == "indoor" && IndoorER !== "Off") 
                {}
-               else if (dungeon.chestlist[key].type == "alldoor" && IndoorER !== "Full" ) 
+               else if (dungeon.chestlist[key].type == "alldoor" && IndoorER === "Full" ) 
                {}
                else if (dungeon.chestlist[key].type == "grotto" && GrottoER == true && IndoorER !== "Off") 
                {}
