@@ -48,7 +48,7 @@ var dungeons = [
                return items.Ocarina && items.SongofStorms; }
          },
          'Link\'s House Cow Milk': {
-            type: "indoor",
+            type: "alldoor",
             isAvailable: function () {
                return items.Ocarina && items.EponasSong; }
          },
@@ -2630,13 +2630,13 @@ var dungeons = [
       type: "overworld",
       chestlist: {
          ['Song for Forest Medallion']: {
-            type: "outdoor",
+            type: "alldoor",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword && items.ForestMedallion);
             }
          },
          ['Zelda\'s Secret Weapon']: {
-            type: "outdoor",
+            type: "alldoor",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword && items.ShadowMedallion && items.SpiritMedallion);
             }
@@ -2644,6 +2644,7 @@ var dungeons = [
       },
       indoorlist: {
          'Temple of Time': {
+            type: "alldoor",
             isAvailable: function () {
                return true; }
          },
@@ -2830,13 +2831,13 @@ var dungeons = [
             }
          },
          ['Windmill Song']: {
-            type: "indoor",
+            type: "alldoor",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.Ocarina;
             }
          },
          ['Windmill Freestanding']: {
-            type: "indoor",
+            type: "alldoor",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword || items.Boomerang);
             }
@@ -2948,10 +2949,12 @@ var dungeons = [
                   return true; }
          },
          'Potion Shop front': {
+            type: "alldoor",
                isAvailable: function () {
                   return true; }
          },
          'Potion Shop back': {
+            type: "alldoor",
                isAvailable: function () {
                   return true; }
          },
@@ -2964,6 +2967,7 @@ var dungeons = [
                   return true; }
          },
          'Windmill': {
+            type: "alldoor",
                isAvailable: function () {
                   return true; }
          },
@@ -4360,7 +4364,7 @@ var dungeons = [
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.Ocarina && items.EponasSong) || items.Hookshot >= 2 || isFortressOpen()) && items.MasterSword && (items.HoverBoots || (items.Scarecrow >= 2 && items.Hookshot) || items.Hookshot >= 2);
             }
          },
-         ['Storms Fairy Fountain Grotto']: {
+         ['Fortress Storms Grotto']: {
             type: "grotto",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.Ocarina && items.EponasSong) || items.Hookshot >= 2 || isFortressOpen()) && items.MasterSword && (items.HoverBoots || (items.Scarecrow >= 2 && items.Hookshot) || items.Hookshot >= 2) && items.Ocarina && items.SongofStorms;
@@ -4530,13 +4534,13 @@ var dungeons = [
             }
          },
          ['Dampe Race 1']: {
-            type: "grotto",
+            type: "alldoor",
             isAvailable: function () {
                return ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword);
             }
          },
          ['Dampe Race 2']: {
-            type: "grotto",
+            type: "alldoor",
             isAvailable: function () {
                return ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword);
             }
@@ -4584,6 +4588,7 @@ var dungeons = [
                return true; }
          },
          'Dampe\'s Grave': {
+            type: "alldoor",
             isAvailable: function () {
                return true; }
          },
