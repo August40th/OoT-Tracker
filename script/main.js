@@ -517,6 +517,8 @@ function drawDungeonList() {
                s.classList.add("d-none"); }
             if (dungeons[dungeonSelect].chestlist[key].type == "indoor" && IndoorER !== "Off") {
                 s.classList.add("d-none"); }
+            if (dungeons[dungeonSelect].chestlist[key].type == "alldoor" && (IndoorER !== "Simple" || IndoorER !== "Off") ) {
+                s.classList.add("d-none"); }
             if (dungeons[dungeonSelect].chestlist[key].type == "grotto" && GrottoER == true && IndoorER !== "Off") {
                 s.classList.add("d-none"); }
 
@@ -923,27 +925,14 @@ function drawDungeonList() {
             }           
       }
    }
-   if (items.StoneofAgony && dungeons[dungeonSelect].gossiplist) {
-         for (var gossip in dungeons[dungeonSelect].gossiplist) {
-            let li = document.createElement('li');
-            li.style.cursor = 'pointer';
-            li.innerText = gossip;
-            li.className = "DCgossip";
-            toggleGossip(li,' + dungeonSelect + ',"' + gossip + '")
-            li.onclick = new Function('toggleGossip(this,' + dungeonSelect + ',"' + gossip + '")');
-            li.onmouseover = new Function('highlightDungeonChest(this)');
-            li.onmouseout = new Function('unhighlightDungeonChest(this)');
-            li.setAttribute("data-type", "gossip");
-            //if (dNone) li.classList.add("d-none");
-            DClist.appendChild(li);
-         }
-      }
       if (dungeons[dungeonSelect].indoorlist && IndoorER !== 'Off') {
          for (var door in dungeons[dungeonSelect].indoorlist) {
             if (dungeons[dungeonSelect].indoorlist[door].classname == "DCopened")
                 dNone = true;
             else dNone = false;
             if (GrottoER == false && (door.includes("Grotto") || door.includes("Grave") || door.includes("Tomb") ) ) 
+            {}
+            else if (dungeons[dungeonSelect].indoorlist[door].type == "alldoor" && (IndoorER !== "Simple" || IndoorER !== "Off") )
             {}
             else {
                 let li = document.createElement('li');
@@ -958,6 +947,21 @@ function drawDungeonList() {
                 if (dNone) li.classList.add("d-none");
                 DClist.appendChild(li);
             }
+         }
+      }
+    if (items.StoneofAgony && dungeons[dungeonSelect].gossiplist) {
+         for (var gossip in dungeons[dungeonSelect].gossiplist) {
+            let li = document.createElement('li');
+            li.style.cursor = 'pointer';
+            li.innerText = gossip;
+            li.className = "DCgossip";
+            toggleGossip(li,' + dungeonSelect + ',"' + gossip + '")
+            li.onclick = new Function('toggleGossip(this,' + dungeonSelect + ',"' + gossip + '")');
+            li.onmouseover = new Function('highlightDungeonChest(this)');
+            li.onmouseout = new Function('unhighlightDungeonChest(this)');
+            li.setAttribute("data-type", "gossip");
+            //if (dNone) li.classList.add("d-none");
+            DClist.appendChild(li);
          }
       }
       
