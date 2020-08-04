@@ -1100,7 +1100,7 @@ function toggleDungeonChest(sender, d, c) {
    }
    
    updateMap();
-   if (IndoorER !== 'Off) drawIndoorChecks();
+   if (IndoorER !== 'Off') drawIndoorChecks();
 }
 
 function toggleSkullChest(sender, d, c) {
