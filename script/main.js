@@ -1531,6 +1531,7 @@ function setIndoorER(sender) {
 
 function setOWER(sender) {
    OWERmap = sender.checked;
+   populateMapdiv();
    updateMap();
    drawDungeonList();
    saveCookie();
@@ -2367,24 +2368,26 @@ function populateMapdiv() {
    var ermapdiv = document.getElementById('ermapdiv');
 
    // Initialize all entrances on 2nd map
-   for (k = 0; k < dungeons.length; k++) {
-       for (var key in dungeons[k].entrancelist) {
-          var s = document.createElement('span');
-          s.style.backgroundImage = 'url(images/poi.png)';
-          s.style.color = 'black';
-          s.id = key;
-          s.onclick = new Function('toggleEntrances(this)');
-          //s.onmouseover = new Function('highlight(this)');
-          //s.onmouseout = new Function('unhighlight(this)');
-          if (dungeons[k].entrancelist[key].x != undefined) s.style.left = dungeons[k].entrancelist[key].x;
-          if (dungeons[k].entrancelist[key].y != undefined) s.style.top = dungeons[k].entrancelist[key].y;
-          s.className = "mapspan entrance0";
-          var ss = document.createElement('span');
-          ss.className = "tooltip";
-          ss.innerHTML = key;
-          s.appendChild(ss);
+   if (OWER == true) {
+       for (k = 0; k < dungeons.length; k++) {
+           for (var key in dungeons[k].entrancelist) {
+              var s = document.createElement('span');
+              s.style.backgroundImage = 'url(images/poi.png)';
+              s.style.color = 'black';
+              s.id = key;
+              s.onclick = new Function('toggleEntrances(this)');
+              //s.onmouseover = new Function('highlight(this)');
+              //s.onmouseout = new Function('unhighlight(this)');
+              if (dungeons[k].entrancelist[key].x != undefined) s.style.left = dungeons[k].entrancelist[key].x;
+              if (dungeons[k].entrancelist[key].y != undefined) s.style.top = dungeons[k].entrancelist[key].y;
+              s.className = "mapspan entrance0";
+              var ss = document.createElement('span');
+              ss.className = "tooltip";
+              ss.innerHTML = key;
+              s.appendChild(ss);
 
-          ermapdiv.appendChild(s);
+              ermapdiv.appendChild(s);
+           }
        }
    }
 
