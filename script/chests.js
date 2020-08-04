@@ -102,6 +102,7 @@ var dungeons = [
                return true; }
          },
          'Link\'s House': {
+            type: "alldoor",
             isAvailable: function () {
                return true; }
          },
