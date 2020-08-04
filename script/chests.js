@@ -38,7 +38,7 @@ var dungeons = [
                return true; }
          },
          'Fairy Ocarina': {
-            type: "indoor",
+            type: "outdoor",
             isAvailable: function () {
                return true; }
          },
