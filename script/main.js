@@ -2091,6 +2091,12 @@ function updateMap() {
                {}
                else if (GrottoER == false && (key.includes("Octorok Grotto") || key.includes("Fountain Grotto") ))
                {}
+               else if (dungeons[k].chestlist[key].type == "indoor" && IndoorER !== "Off") 
+               {}
+               else if (dungeons[k].chestlist[key].type == "alldoor" && IndoorER !== "Full" ) 
+               {}
+               else if (dungeons[k].chestlist[key].type == "grotto" && GrottoER == true && IndoorER !== "Off") 
+               {}
                else if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable() )
                   DCcount++;
             }
@@ -2161,6 +2167,12 @@ function updateMap() {
                   else if (Cowsanity == false && GrottoER == false && key == "Cow Milk Grotto" ) 
                   {}
                   else if (GrottoER == false && (key.includes("Octorok Grotto") || key.includes("Fountain Grotto") ))
+                  {}
+                  else if (dungeons[k].chestlist[key].type == "indoor" && IndoorER !== "Off") 
+                  {}
+                  else if (dungeons[k].chestlist[key].type == "alldoor" && IndoorER !== "Full" ) 
+                  {}
+                  else if (dungeons[k].chestlist[key].type == "grotto" && GrottoER == true && IndoorER !== "Off") 
                   {}
                   else if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable() && !(BeanShuffle == false && key == "BeanSalseman") )
                      DCcount++;
@@ -2418,6 +2430,12 @@ function populateMapdiv() {
                {}
                else if (GrottoER == false && (key.includes("Octorok Grotto") || key.includes("Fountain Grotto") ))
                {}
+               else if (dungeons[k].chestlist[key].type == "indoor" && IndoorER !== "Off") 
+               {}
+               else if (dungeons[k].chestlist[key].type == "alldoor" && IndoorER !== "Full" ) 
+               {}
+               else if (dungeons[k].chestlist[key].type == "grotto" && GrottoER == true && IndoorER !== "Off") 
+               {}
                else if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable() && !(BeanShuffle == false && key == "BeanSalseman") )
                   DCcount++;
             }
@@ -2488,6 +2506,12 @@ function populateMapdiv() {
                   else if (Cowsanity == false && GrottoER == false && key == "Cow Milk Grotto" ) 
                   {}
                   else if (GrottoER == false && (key.includes("Octorok Grotto") || key.includes("Fountain Grotto") ))
+                  {}
+                  else if (dungeons[k].chestlist[key].type == "indoor" && IndoorER !== "Off") 
+                  {}
+                  else if (dungeons[k].chestlist[key].type == "alldoor" && IndoorER !== "Full" ) 
+                  {}
+                  else if (dungeons[k].chestlist[key].type == "grotto" && GrottoER == true && IndoorER !== "Off") 
                   {}
                   else if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable() && !(BeanShuffle == false && key == "BeanSalseman") )
                      DCcount++;
@@ -2598,6 +2622,12 @@ function getDungeonAvailability(dungeon) {
           {}
           else if (GrottoER == false && (key.includes("Octorok Grotto") || key.includes("Fountain Grotto") ))
           {}
+          else if (dungeons[k].chestlist[key].type == "indoor" && IndoorER !== "Off") 
+          {}
+          else if (dungeons[k].chestlist[key].type == "alldoor" && IndoorER !== "Full" ) 
+          {}
+          else if (dungeons[k].chestlist[key].type == "grotto" && GrottoER == true && IndoorER !== "Off") 
+          {}
           else
              checklist.chestlist[key] = dungeon.chestlist[key];
        }
@@ -2652,6 +2682,12 @@ function getDungeonAvailability(dungeon) {
                   else if (shopsize == 2 && (key.includes("Shop 3") || key.includes("Shop 4") ) )
                   {}
                   else if (shopsize == 3 && key.includes("Shop 4") )
+                  {}
+                  else if (dungeons[k].chestlist[key].type == "indoor" && IndoorER !== "Off") 
+                  {}
+                  else if (dungeons[k].chestlist[key].type == "alldoor" && IndoorER !== "Full" ) 
+                  {}
+                  else if (dungeons[k].chestlist[key].type == "grotto" && GrottoER == true && IndoorER !== "Off") 
                   {}
                   else if (!list[key].isOpened && list[key].isAvailable()) {
                       canGet++;
@@ -2713,6 +2749,12 @@ function getDungeonAvailability(dungeon) {
                {}
                else if (GrottoER == false && (key.includes("Octorok Grotto") || key.includes("Fountain Grotto") ))
                {}
+               else if (dungeons[k].chestlist[key].type == "indoor" && IndoorER !== "Off") 
+               {}
+               else if (dungeons[k].chestlist[key].type == "alldoor" && IndoorER !== "Full" ) 
+               {}
+               else if (dungeons[k].chestlist[key].type == "grotto" && GrottoER == true && IndoorER !== "Off") 
+               {}
                else 
                   checklist.chestlist[key] = dungeon.chestlist[key];
             }
@@ -2753,6 +2795,12 @@ function getDungeonAvailability(dungeon) {
                else if (Cowsanity == false && GrottoER == false && key == "Cow Milk Grotto" ) 
                {}
                else if (GrottoER == false && (key.includes("Octorok Grotto") || key.includes("Fountain Grotto") ))
+               {}
+               else if (dungeons[k].chestlist[key].type == "indoor" && IndoorER !== "Off") 
+               {}
+               else if (dungeons[k].chestlist[key].type == "alldoor" && IndoorER !== "Full" ) 
+               {}
+               else if (dungeons[k].chestlist[key].type == "grotto" && GrottoER == true && IndoorER !== "Off") 
                {}
                else if (shopsize == 1 && key.includes("Shop ") )
                {}
