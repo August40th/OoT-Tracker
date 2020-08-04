@@ -1108,7 +1108,6 @@ function toggleDungeonChest(sender, d, c) {
    }
    
    updateMap();
-   if (IndoorER !== "Off") drawIndoorChecks();
 }
 
 function toggleSkullChest(sender, d, c) {
@@ -2037,6 +2036,7 @@ function gridItemClick(row, col, corner) {
 }
 
 function updateMap() {
+   if (IndoorER !== "Off") drawIndoorChecks();
    for (k = 0; k < chests.length; k++) {
       if (!chests[k].isOpened)
          document.getElementById(k).className = "mapspan chest " + checkChestAvailablity(chests[k]) + ((chestMarked.indexOf(k) > -1) ? " wayofhero" : " ");
