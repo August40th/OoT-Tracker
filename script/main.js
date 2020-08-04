@@ -438,11 +438,13 @@ function drawIndoorChecks() {
         for (let key in dungeons[k].chestlist) {
             if (dungeons[k].chestlist[key].type === "outdoor")
             {}
-            else if (dungeons[k].chestlist[key].type === "grotto" && GrottoER == false)
+            else if (dungeons[k].chestlist[key].type === "grotto")// && GrottoER == false)
             {}
             else if (Cowsanity == false && key.includes("Cow Milk"))
             {}
             else if (dungeons[k].chestlist[key].type == undefined )
+            {}
+            else if (dungeons[k].chestlist[key].type === "alldoors" && IndoorER !== "All")
             {}
             else {
                 let li = document.createElement('li');
