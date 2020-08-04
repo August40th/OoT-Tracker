@@ -2368,7 +2368,7 @@ function populateMapdiv() {
    var ermapdiv = document.getElementById('ermapdiv');
 
    // Initialize all entrances on 2nd map
-   if (OWER == true) {
+   if (OWERmap == true) {
        for (k = 0; k < dungeons.length; k++) {
            for (var key in dungeons[k].entrancelist) {
               var s = document.createElement('span');
