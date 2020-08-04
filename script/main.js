@@ -444,7 +444,7 @@ function drawIndoorChecks() {
             {}
             else if (dungeons[k].chestlist[key].type == undefined )
             {}
-            else if (dungeons[k].chestlist[key].type === "alldoor" && IndoorER === "Full")
+            else if (dungeons[k].chestlist[key].type === "alldoor" && IndoorER !== "Full")
             {}
             else {
                 let li = document.createElement('li');
