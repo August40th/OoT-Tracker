@@ -444,7 +444,7 @@ function drawIndoorChecks() {
             {}
             else if (dungeons[k].chestlist[key].type == undefined )
             {}
-            else if (dungeons[k].chestlist[key].type === "alldoor" && IndoorER !== "All")
+            else if (dungeons[k].chestlist[key].type === "alldoor" && IndoorER !== "Full")
             {}
             else {
                 let li = document.createElement('li');
@@ -517,7 +517,7 @@ function drawDungeonList() {
                s.classList.add("d-none"); }
             if (dungeons[dungeonSelect].chestlist[key].type == "indoor" && IndoorER !== "Off") {
                 s.classList.add("d-none"); }
-            if (dungeons[dungeonSelect].chestlist[key].type == "alldoor" && (IndoorER !== "Simple" || IndoorER !== "Off") ) {
+            if (dungeons[dungeonSelect].chestlist[key].type == "alldoor" && IndoorER === "Full" ) {
                 s.classList.add("d-none"); }
             if (dungeons[dungeonSelect].chestlist[key].type == "grotto" && GrottoER == true && IndoorER !== "Off") {
                 s.classList.add("d-none"); }
