@@ -461,7 +461,7 @@ function drawIndoorChecks() {
                 li.onmouseover = new Function('highlightDungeonChest(this)');
                 li.onmouseout = new Function('unhighlightDungeonChest(this)');
                 li.setAttribute("data-type", "chest");
-                if (dNone) li.classList.add("d-none");
+                //if (dNone) li.classList.add("d-none");
                 Doorlist.appendChild(li);
             }
         }
