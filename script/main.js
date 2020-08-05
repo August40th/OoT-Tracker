@@ -1531,7 +1531,6 @@ function setIndoorER(sender) {
 
 function setOWER(sender) {
    OWERmap = sender.checked;
-   populateMapdiv();
    updateMap();
    drawDungeonList();
    saveCookie();
