@@ -2683,11 +2683,11 @@ function getDungeonAvailability(dungeon) {
                   {}
                   else if (shopsize == 3 && key.includes("Shop 4") )
                   {}
-                  else if (dungeon.chestlist[key].type == "indoor" && IndoorER !== "Off") 
+                  else if (dungeon.chestlist[key].type != undefined && dungeon.chestlist[key].type == "indoor" && IndoorER !== "Off") 
                   {}
-                  else if (dungeon.chestlist[key].type == "alldoor" && IndoorER === "Full" ) 
+                  else if (dungeon.chestlist[key].type != undefined && dungeon.chestlist[key].type == "alldoor" && IndoorER === "Full" ) 
                   {}
-                  else if (dungeon.chestlist[key].type == "grotto" && GrottoER == true && IndoorER !== "Off") 
+                  else if (dungeon.chestlist[key].type != undefined && dungeon.chestlist[key].type == "grotto" && GrottoER == true && IndoorER !== "Off") 
                   {}
                   else if (!list[key].isOpened && list[key].isAvailable()) {
                       canGet++;
@@ -2749,11 +2749,11 @@ function getDungeonAvailability(dungeon) {
                {}
                else if (GrottoER == false && (key.includes("Octorok Grotto") || key.includes("Fountain Grotto") ))
                {}
-               else if (dungeon.chestlist[key].type == "indoor" && IndoorER !== "Off") 
+               else if (dungeon.chestlist[key].type != undefined && dungeon.chestlist[key].type == "indoor" && IndoorER !== "Off") 
                {}
-               else if (dungeon.chestlist[key].type == "alldoor" && IndoorER === "Full" ) 
+               else if (dungeon.chestlist[key].type != undefined && dungeon.chestlist[key].type == "alldoor" && IndoorER === "Full" ) 
                {}
-               else if (dungeon.chestlist[key].type == "grotto" && GrottoER == true && IndoorER !== "Off") 
+               else if (dungeon.chestlist[key].type != undefined && dungeon.chestlist[key].type == "grotto" && GrottoER == true && IndoorER !== "Off") 
                {}
                else 
                   checklist.chestlist[key] = dungeon.chestlist[key];
@@ -2796,11 +2796,11 @@ function getDungeonAvailability(dungeon) {
                {}
                else if (GrottoER == false && (key.includes("Octorok Grotto") || key.includes("Fountain Grotto") ))
                {}
-               else if (dungeon.chestlist[key].type == "indoor" && IndoorER !== "Off") 
+               else if (dungeon.chestlist[key].type != undefined && dungeon.chestlist[key].type == "indoor" && IndoorER !== "Off") 
                {}
-               else if (dungeon.chestlist[key].type == "alldoor" && IndoorER === "Full" ) 
+               else if (dungeon.chestlist[key].type != undefined && dungeon.chestlist[key].type == "alldoor" && IndoorER === "Full" ) 
                {}
-               else if (dungeon.chestlist[key].type == "grotto" && GrottoER == true && IndoorER !== "Off") 
+               else if (dungeon.chestlist[key].type != undefined && dungeon.chestlist[key].type == "grotto" && GrottoER == true && IndoorER !== "Off") 
                {}
                else if (shopsize == 1 && key.includes("Shop ") )
                {}
