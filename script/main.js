@@ -459,77 +459,70 @@ function drawIndoorChecks() {
     var FairyShops = document.getElementById('fairyshopchecks');
     FairyShops.innerHTML = "";
     
-    {
-          var shopitem = shopsize;
-          var shopnum;
-          var started = true;
-          if (shopsize == 0) {
-              dNone = true;
-          }
-          else { dNone = false; }
-          for (let key in dungeons[dungeonSelect].shoplist) {
-             if (started == true) {
-                if (dungeons[dungeonSelect] == dungeons[13])
-                   shopnum = 3;
-                else if (dungeons[dungeonSelect] == dungeons[16])
-                   shopnum = 2;
-                else
-                   shopnum = 1;
+    { var shopitem = shopsize;
+     var shopnum;
+     var started = true;
+     if (shopsize == 0) {
+         dNone = true;
+     }
+     else { dNone = false; }
+     for (let key in dungeons[dungeonSelect].shoplist) {
+         if (started == true) {
+             if (dungeons[dungeonSelect] == dungeons[13])
+                 shopnum = 3;
+             else if (dungeons[dungeonSelect] == dungeons[16])
+                 shopnum = 2;
+             else
+                 shopnum = 1;
+         }
+         else {
+             if (shopitem === undefined)
+                 shopitem = shopsize;
+             else if (shopitem <= 0) {
+                 if (shopsize != 4) dNone = true;
+                 shopitem--; 
              }
-             else {
-                if (shopitem === undefined)
-                   shopitem = shopsize;
-                else if (shopitem <= 0) {
-                   if (shopsize != 4) dNone = true;
-                      shopitem--; 
-                }
-             }
-             started = false;
+         }
+         started = false;
 
-             if (shopitem > 0 || shopsize == 4) {
-                shopitem--;
-                let li = document.createElement('li');
-                li.style.cursor = 'pointer';
-                li.innerText = key;
-                if (dungeons[dungeonSelect].shoplist[key].isOpened)
-                   li.className = "DCopened";
-                else if (dungeons[dungeonSelect].shoplist[key].isAvailable())
-                   li.className = "DCavailable";
-                else li.className = "DCunavailable";
+         if (shopitem > 0 || shopsize == 4) {
+             shopitem--;
+             let li = document.createElement('li');
+             li.style.cursor = 'pointer';
+             li.innerText = key;
+             if (dungeons[dungeonSelect].shoplist[key].isOpened)
+                 li.className = "DCopened";
+             else if (dungeons[dungeonSelect].shoplist[key].isAvailable())
+                 li.className = "DCavailable";
+             else li.className = "DCunavailable";
 
-                li.onclick = new Function('toggleShopChest(this,' + dungeonSelect + ',"' + key + '")');
-                li.onmouseover = new Function('highlightDungeonChest(this)');
-                li.onmouseout = new Function('unhighlightDungeonChest(this)');
-                li.setAttribute("data-type", "shop");
-                if (dNone) li.classList.add("d-none");
-                
-                if (IndoorER === "Off") {
-                    DClist.appendChild(li);
-                }
-                else {
-                    FairyShops.appendChild(li);
-                }
+             li.onclick = new Function('toggleShopChest(this,' + dungeonSelect + ',"' + key + '")');
+             li.onmouseover = new Function('highlightDungeonChest(this)');
+             li.onmouseout = new Function('unhighlightDungeonChest(this)');
+             li.setAttribute("data-type", "shop");
+             if (dNone) li.classList.add("d-none");
+               
+             FairyShops.appendChild(li);
+         }
+         if (shopitem < 0 && shopnum > 1) {
+             if (shopsize == 1 && shopitem <= -3) {
+                 shopitem = shopsize;
+                 dNone = false;
+                 shopnum--;
              }
-             if (shopitem < 0 && shopnum > 1) {
-                if (shopsize == 1 && shopitem <= -3) {
-                   shopitem = shopsize;
-                   dNone = false;
-                   shopnum--;
-                }
-                else if (shopsize == 2 && shopitem <= -2) {
-                   shopitem = shopsize;
-                   dNone = false;
-                   shopnum--;
-                }
-                else if (shopsize == 3 && shopitem <= -1) {
-                   shopitem = shopsize;
-                   dNone = false;
-                   shopnum--;
-                }
+             else if (shopsize == 2 && shopitem <= -2) {
+                 shopitem = shopsize;
+                 dNone = false;
+                 shopnum--;
              }
-          }
-       }
-   }
+             else if (shopsize == 3 && shopitem <= -1) {
+                 shopitem = shopsize;
+                 dNone = false;
+                 shopnum--;
+             }
+         }
+     }
+    }
     
     for (var k = 0; k < dungeons.length ; k++) {
         for (let key in dungeons[k].chestlist) {
