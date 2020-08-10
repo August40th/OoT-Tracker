@@ -650,6 +650,10 @@ function drawDungeonList() {
           var shopnum;
           var started = true;
           var FairyShops = document.getElementById('fairyshopchecks');
+          if (shopsize == 0) {
+              dNone = true;
+          }
+          else { dNone = false; }
           for (let key in dungeons[dungeonSelect].shoplist) {
              if (started == true) {
                 if (dungeons[dungeonSelect] == dungeons[13])
@@ -685,12 +689,8 @@ function drawDungeonList() {
                 li.onmouseout = new Function('unhighlightDungeonChest(this)');
                 li.setAttribute("data-type", "shop");
                 if (dNone) li.classList.add("d-none");
-                if (IndoorER !== "Off") {
-                    FairyShops.appendChild(li);
-                }
-                else {
-                    DClist.appendChild(li);
-                }
+                
+                DClist.appendChild(li);
              }
              if (shopitem < 0 && shopnum > 1) {
                 if (shopsize == 1 && shopitem <= -3) {
@@ -709,8 +709,6 @@ function drawDungeonList() {
                    shopnum--;
                 }
              }
-             else if (shopsize == 0) 
-             {}
           }
        }
    }
@@ -893,8 +891,9 @@ function drawDungeonList() {
       var shopitem = shopsize;
       var shopnum;
       var started = true;
-      if (shopsize == 0 || IndoorER !== "Off")
+      if (shopsize == 0) {
          dNone = true;
+      }
       else if (shopsize > 0 && (quest === "Master")) {
             for (let key in dungeons[dungeonSelect].shoplist) {
                if (started == true) {
