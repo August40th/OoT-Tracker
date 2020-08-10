@@ -2642,6 +2642,7 @@ function getDungeonAvailability(dungeon) {
           {}
           else if (GrottoER == false && (key.includes("Octorok Grotto") || key.includes("Fountain Grotto") ))
           {}
+          
           else if (dungeon.chestlist[key].type == "indoor" && IndoorER !== "Off") 
           {}
           else if (dungeon.chestlist[key].type == "alldoor" && IndoorER === "Full" ) 
@@ -2669,6 +2670,12 @@ function getDungeonAvailability(dungeon) {
       if (shopsize > 0){
             for (let key in dungeon.shoplist) {
                if (key.includes("d-none"))
+               {}
+               else if (shopsize == 1 && key.includes("Shop ") )
+               {}
+               else if (shopsize == 2 && (key.includes("Shop 3") || key.includes("Shop 4") ) )
+               {}
+               else if (shopsize == 3 && key.includes("Shop 4") )
                {}
                else checklist.shoplist[key] = dungeon.shoplist[key];
             }
@@ -2787,8 +2794,14 @@ function getDungeonAvailability(dungeon) {
                for (let key in dungeon.shoplist) {
                   if (key.includes("d-none"))
                   {}
+                  else if (shopsize == 1 && key.includes("Shop ") )
+                  {}
+                  else if (shopsize == 2 && (key.includes("Shop 3") || key.includes("Shop 4") ) )
+                  {}
+                  else if (shopsize == 3 && key.includes("Shop 4") )
+                  {}
                   else checklist.shoplist[key] = dungeon.shoplist[key];
-               }
+                }
             }
          }
          ['chestlist', 'skulllist', 'scrublist', 'shoplist'].forEach
