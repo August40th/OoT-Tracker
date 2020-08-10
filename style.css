@@ -460,7 +460,7 @@ label {
     width: 16;
     height: 16;
     background-size: 100% 100%;
-    background-color: white;
+    background-color: transparent;
 
     position: absolute;
     margin-left: -8px;
@@ -472,7 +472,7 @@ label {
     width: 16;
     height: 16;
     background-size: 100% 100%;
-    background-color: yellow;
+    background-color: brown;
 
     position: absolute;
     margin-left: -8px;
@@ -484,7 +484,7 @@ label {
     width: 16;
     height: 16;
     background-size: 100% 100%;
-    background-color: lightgreen;
+    background-color: red;
 
     position: absolute;
     margin-left: -8px;
@@ -496,7 +496,7 @@ label {
     width: 16;
     height: 16;
     background-size: 100% 100%;
-    background-color: red;
+    background-color: orange;
 
     position: absolute;
     margin-left: -8px;
@@ -508,7 +508,7 @@ label {
     width: 16;
     height: 16;
     background-size: 100% 100%;
-    background-color: lightskyblue;
+    background-color: yellow;
 
     position: absolute;
     margin-left: -8px;
@@ -520,7 +520,7 @@ label {
     width: 16;
     height: 16;
     background-size: 100% 100%;
-    background-color: blueviolet;
+    background-color: green;
 
     position: absolute;
     margin-left: -8px;
@@ -532,7 +532,127 @@ label {
     width: 16;
     height: 16;
     background-size: 100% 100%;
-    background-color: orange;
+    background-color: cyan;
+
+    position: absolute;
+    margin-left: -8px;
+    margin-top: -8px;
+    cursor: pointer;
+}
+
+.entrance7{
+    width: 16;
+    height: 16;
+    background-size: 100% 100%;
+    background-color: blue;
+
+    position: absolute;
+    margin-left: -8px;
+    margin-top: -8px;
+    cursor: pointer;
+}
+
+.entrance8{
+    width: 16;
+    height: 16;
+    background-size: 100% 100%;
+    background-color: pruple;
+
+    position: absolute;
+    margin-left: -8px;
+    margin-top: -8px;
+    cursor: pointer;
+}
+
+.entrance9{
+    width: 16;
+    height: 16;
+    background-size: 100% 100%;
+    background-color: pink;
+
+    position: absolute;
+    margin-left: -8px;
+    margin-top: -8px;
+    cursor: pointer;
+}
+
+.entrance10{
+    width: 16;
+    height: 16;
+    background-size: 100% 100%;
+    background-color: white;
+
+    position: absolute;
+    margin-left: -8px;
+    margin-top: -8px;
+    cursor: pointer;
+}
+
+.entrance11{
+    width: 16;
+    height: 16;
+    background-size: 100% 100%;
+    background-color: black;
+
+    position: absolute;
+    margin-left: -8px;
+    margin-top: -8px;
+    cursor: pointer;
+}
+
+.entrance12{
+    width: 16;
+    height: 16;
+    background-size: 100% 100%;
+    background-color: grey;
+
+    position: absolute;
+    margin-left: -8px;
+    margin-top: -8px;
+    cursor: pointer;
+}
+
+.entrance13{
+    width: 16;
+    height: 16;
+    background-size: 100% 100%;
+    background-color: tan;
+
+    position: absolute;
+    margin-left: -8px;
+    margin-top: -8px;
+    cursor: pointer;
+}
+
+.entrance14{
+    width: 16;
+    height: 16;
+    background-size: 100% 100%;
+    background-color: lightgreen;
+
+    position: absolute;
+    margin-left: -8px;
+    margin-top: -8px;
+    cursor: pointer;
+}
+
+.entrance15{
+    width: 16;
+    height: 16;
+    background-size: 100% 100%;
+    background-color: lavender;
+
+    position: absolute;
+    margin-left: -8px;
+    margin-top: -8px;
+    cursor: pointer;
+}
+
+.entrance16{
+    width: 16;
+    height: 16;
+    background-size: 100% 100%;
+    background-color: lightyellow;
 
     position: absolute;
     margin-left: -8px;
