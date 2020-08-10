@@ -358,6 +358,26 @@ function toggleEntrances(s) {
          s.className = 'mapspan entrance5';
       } else if (s.className == 'mapspan entrance5') {
          s.className = 'mapspan entrance6';
+      } else if (s.className == 'mapspan entrance6') {
+         s.className = 'mapspan entrance7';
+      } else if (s.className == 'mapspan entrance7') {
+         s.className = 'mapspan entrance8';
+      } else if (s.className == 'mapspan entrance8') {
+         s.className = 'mapspan entrance9';
+      } else if (s.className == 'mapspan entrance9') {
+         s.className = 'mapspan entrance10';
+      } else if (s.className == 'mapspan entrance10') {
+         s.className = 'mapspan entrance11';
+      } else if (s.className == 'mapspan entrance11') {
+         s.className = 'mapspan entrance12';
+      } else if (s.className == 'mapspan entrance12') {
+         s.className = 'mapspan entrance13';
+      } else if (s.className == 'mapspan entrance13') {
+         s.className = 'mapspan entrance14';
+      } else if (s.className == 'mapspan entrance14') {
+         s.className = 'mapspan entrance15';
+      } else if (s.className == 'mapspan entrance15') {
+         s.className = 'mapspan entrance16';
       } else {
          s.className = 'mapspan entrance0';
       }
