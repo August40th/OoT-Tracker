@@ -462,8 +462,6 @@ function drawIndoorChecks() {
         for (let key in dungeons[k].chestlist) {
             if (dungeons[k].chestlist[key].type === "outdoor")
             {}
-            else if (dungeons[k].chestlist[key].type === "grotto")// && GrottoER == false)
-            {}
             else if (Cowsanity == false && key.includes("Cow Milk"))
             {}
             else if (dungeons[k].chestlist[key].type == undefined )
@@ -494,7 +492,7 @@ function drawIndoorChecks() {
                 else if (shopsize > 0 && key.includes("Shop") ) {
                     FairyShops.appendChild(li);
                 }
-                else if (GrottoER == true && (dungeons[k].chestlist[key].type === "grotto" || key.includes("Dampe Race") ) ) {
+                else if (dungeons[k].chestlist[key].type === "grotto" || key.includes("Dampe Race") ) {
                     Grottolist.appendChild(li);
                 }
                 else {
