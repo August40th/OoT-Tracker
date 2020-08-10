@@ -489,13 +489,13 @@ function drawIndoorChecks() {
                 li.setAttribute("data-type", "chest");
                 //if (dNone) li.classList.add("d-none");
                 if (key.includes("Great Fairy") ) {
-                    FairyShops..appendChild(li);
+                    FairyShops.appendChild(li);
                 }
                 else if (shopsize > 0 && key.includes("Shop") ) {
-                    FairyShops..appendChild(li);
+                    FairyShops.appendChild(li);
                 }
                 else if (GrottoER == true && (dungeons[k].chestlist[key].type === "grotto" || key.includes("Dampe Race") ) ) {
-                    Grottolist..appendChild(li);
+                    Grottolist.appendChild(li);
                 }
                 else {
                     Doorlist.appendChild(li);
