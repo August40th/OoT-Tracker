@@ -454,6 +454,10 @@ function clickDungeon(d) {
 function drawIndoorChecks() {
     var Doorlist = document.getElementById('indoorchecks');
     Doorlist.innerHTML = "";
+    var Grottolist = document.getElementById('grottochecks');
+    Grottolist.innerHTML = "";
+    var FairyShops = document.getElementById('fairyshopchecks');
+    FairyShops.innerHTML = "";
     for (var k = 0; k < dungeons.length ; k++) {
         for (let key in dungeons[k].chestlist) {
             if (dungeons[k].chestlist[key].type === "outdoor")
@@ -465,6 +469,8 @@ function drawIndoorChecks() {
             else if (dungeons[k].chestlist[key].type == undefined )
             {}
             else if (dungeons[k].chestlist[key].type === "alldoor" && IndoorER !== "Full")
+            {}
+            else if (dungeons[k].chestlist[key].type === "grotto" && GrottoER == false)
             {}
             else {
                 let li = document.createElement('li');
@@ -482,7 +488,18 @@ function drawIndoorChecks() {
                 li.onmouseout = new Function('unhighlightDungeonChest(this)');
                 li.setAttribute("data-type", "chest");
                 //if (dNone) li.classList.add("d-none");
-                Doorlist.appendChild(li);
+                if (key.includes("Great Fairy") ) {
+                    FairyShops..appendChild(li);
+                }
+                else if (shopsize > 0 && key.includes("Shop") ) {
+                    FairyShops..appendChild(li);
+                }
+                else if (GrottoER == true && (dungeons[k].chestlist[key].type === "grotto" || key.includes("Dampe Race") ) ) {
+                    Grottolist..appendChild(li);
+                }
+                else {
+                    Doorlist.appendChild(li);
+                }
             }
         }
     }
@@ -539,7 +556,7 @@ function drawDungeonList() {
                 s.classList.add("d-none"); }
             if (dungeons[dungeonSelect].chestlist[key].type == "alldoor" && IndoorER === "Full" ) {
                 s.classList.add("d-none"); }
-            if (dungeons[dungeonSelect].chestlist[key].type == "grotto" && GrottoER == true && IndoorER !== "Off") {
+            if (dungeons[dungeonSelect].chestlist[key].type == "grotto" && GrottoER == true) {
                 s.classList.add("d-none"); }
 
             s.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
