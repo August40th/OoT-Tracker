@@ -507,6 +507,7 @@ function drawDungeonList() {
    DCcount = 0;
    var DClist = document.getElementById('submaplist');
    DClist.innerHTML = "";
+   var FairyShops = document.getElementById('fairyshopchecks');
    listFilter = document.getElementById('submaparea').getAttribute('data-filter');
    if (quest === "Vanilla" || quest === "Mixed") {
       let dNone = false;
@@ -649,7 +650,6 @@ function drawDungeonList() {
           var shopitem = shopsize;
           var shopnum;
           var started = true;
-          var FairyShops = document.getElementById('fairyshopchecks');
           if (shopsize == 0) {
               dNone = true;
           }
@@ -690,7 +690,12 @@ function drawDungeonList() {
                 li.setAttribute("data-type", "shop");
                 if (dNone) li.classList.add("d-none");
                 
-                DClist.appendChild(li);
+                if (IndoorER === "Off") {
+                    DClist.appendChild(li);
+                }
+                else {
+                    FairyShops.appendChild(li);
+                }
              }
              if (shopitem < 0 && shopnum > 1) {
                 if (shopsize == 1 && shopitem <= -3) {
