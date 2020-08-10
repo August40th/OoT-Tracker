@@ -780,6 +780,34 @@ label {
     cursor: pointer;
 }
 
+#grottochecks {
+    background-color: black;
+    bottom: 0px;
+    left: 320px;
+    width: 200px;
+    height: auto;
+    max-height: 120px;
+    text-align: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: absolute;
+    cursor: pointer;
+}
+
+#fairyshopchecks {
+    background-color: black;
+    bottom: 0px;
+    left: 320px;
+    width: 200px;
+    height: auto;
+    max-height: 120px;
+    text-align: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: absolute;
+    cursor: pointer;
+}
+
 .d-none {
     display:none!important;
 }
