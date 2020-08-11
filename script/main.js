@@ -2199,7 +2199,7 @@ function updateMap() {
                {}
                else if (dungeons[k].chestlist[key].type == "indoor" && IndoorER !== "Off") 
                {}
-               else if (GrottoER == true && dungeons[dungeonSelect].chestlist[key].type == "alldoor" && IndoorER !== "Full" && key.includes("Dampe Race")) 
+               else if (GrottoER == true && key != undefined && dungeons[dungeonSelect].chestlist[key].type == "alldoor" && IndoorER === "Simple" && key.includes("Dampe Race")) 
                {}
                else if (dungeons[k].chestlist[key].type == "alldoor" && IndoorER === "Full" ) 
                {}
