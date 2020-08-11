@@ -643,13 +643,13 @@ function drawDungeonList() {
                s.classList.add("d-none"); }
             if (dungeons[dungeonSelect].chestlist[key].type == "indoor" && IndoorER !== "Off") {
                 s.classList.add("d-none"); }
-            if (GrottoER == true && dungeons[dungeonSelect].chestlist[key].type == "alldoor" && key.includes("Dampe Race")) {
-                s.classList.add("d-none"); }
+            //if (GrottoER == true && dungeons[dungeonSelect].chestlist[key].type == "alldoor" && key.includes("Dampe Race")) {
+            //    s.classList.add("d-none"); }
             if (dungeons[dungeonSelect].chestlist[key].type == "alldoor" && IndoorER === "Full" ) {
                 s.classList.add("d-none"); }
             if (dungeons[dungeonSelect].chestlist[key].type == "grotto" && GrottoER == true && IndoorER !== "Off") {
                 s.classList.add("d-none"); }
-            if (key.includes("Dampe Race") && GrottoER == true && IndoorER === "Simple") {
+            if (key.includes("Dampe Race") && GrottoER == true && IndoorER !== "Off") {
                 s.classList.add("d-none"); }
 
             s.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
