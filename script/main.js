@@ -459,70 +459,72 @@ function drawIndoorChecks() {
     var FairyShops = document.getElementById('fairyshopchecks');
     FairyShops.innerHTML = "";
     
-    for (var k = 0; k < dungeons.length ; k++) {
-     var shopitem = shopsize;
-     var shopnum;
-     var started = true;
-     if (shopsize == 0) {
-         dNone = true;
-     }
-     else { dNone = false; }
-     for (let key in dungeons[k].shoplist) {
-         if (started == true) {
-             if (dungeons[k] == dungeons[13])
-                 shopnum = 3;
-             else if (dungeons[k] == dungeons[16])
-                 shopnum = 2;
-             else
-                 shopnum = 1;
-         }
-         else {
-             if (shopitem === undefined)
-                 shopitem = shopsize;
-             else if (shopitem <= 0) {
-                 if (shopsize != 4) dNone = true;
-                 shopitem--; 
-             }
-         }
-         started = false;
+    if IndoorER !== "Off") {
+        for (var k = 0; k < dungeons.length ; k++) {
+            var shopitem = shopsize;
+            var shopnum;
+            var started = true;
+            if (shopsize == 0) {
+                dNone = true;
+            }
+            else { dNone = false; }
+            for (let key in dungeons[k].shoplist) {
+                if (started == true) {
+                    if (dungeons[k] == dungeons[13])
+                        shopnum = 3;
+                    else if (dungeons[k] == dungeons[16])
+                        shopnum = 2;
+                    else
+                        shopnum = 1;
+                }
+                else {
+                    if (shopitem === undefined)
+                        shopitem = shopsize;
+                    else if (shopitem <= 0) {
+                        if (shopsize != 4) dNone = true;
+                        shopitem--; 
+                    }
+                }
+                started = false;
+                
+                if (shopitem > 0 || shopsize == 4) {
+                    shopitem--;
+                    let li = document.createElement('li');
+                    li.style.cursor = 'pointer';
+                    li.innerText = key;
+                    if (dungeons[k].shoplist[key].isOpened)
+                        li.className = "DCopened";
+                    else if (dungeons[k].shoplist[key].isAvailable())
+                        li.className = "DCavailable";
+                    else li.className = "DCunavailable";
+                    
+                    li.onclick = new Function('toggleShopChest(this,' + k + ',"' + key + '")');
+                    li.onmouseover = new Function('highlightDungeonChest(this)');
+                    li.onmouseout = new Function('unhighlightDungeonChest(this)');
+                    li.setAttribute("data-type", "shop");
+                    if (dNone) li.classList.add("d-none");
 
-         if (shopitem > 0 || shopsize == 4) {
-             shopitem--;
-             let li = document.createElement('li');
-             li.style.cursor = 'pointer';
-             li.innerText = key;
-             if (dungeons[k].shoplist[key].isOpened)
-                 li.className = "DCopened";
-             else if (dungeons[k].shoplist[key].isAvailable())
-                 li.className = "DCavailable";
-             else li.className = "DCunavailable";
-
-             li.onclick = new Function('toggleShopChest(this,' + k + ',"' + key + '")');
-             li.onmouseover = new Function('highlightDungeonChest(this)');
-             li.onmouseout = new Function('unhighlightDungeonChest(this)');
-             li.setAttribute("data-type", "shop");
-             if (dNone) li.classList.add("d-none");
-               
-             FairyShops.appendChild(li);
-         }
-         if (shopitem < 0 && shopnum > 1) {
-             if (shopsize == 1 && shopitem <= -3) {
-                 shopitem = shopsize;
-                 dNone = false;
-                 shopnum--;
-             }
-             else if (shopsize == 2 && shopitem <= -2) {
-                 shopitem = shopsize;
-                 dNone = false;
-                 shopnum--;
-             }
-             else if (shopsize == 3 && shopitem <= -1) {
-                 shopitem = shopsize;
-                 dNone = false;
-                 shopnum--;
-             }
-         }
-     }
+                    FairyShops.appendChild(li);
+                }
+                if (shopitem < 0 && shopnum > 1) {
+                    if (shopsize == 1 && shopitem <= -3) {
+                        shopitem = shopsize;
+                        dNone = false;
+                        shopnum--;
+                    }
+                    else if (shopsize == 2 && shopitem <= -2) {
+                        shopitem = shopsize;
+                        dNone = false;
+                        shopnum--;
+                    }
+                    else if (shopsize == 3 && shopitem <= -1) {
+                        shopitem = shopsize;
+                        dNone = false;
+                        shopnum--;
+                    }
+                }
+            }
+        }
     }
     if (IndoorER !== "Off") {
         for (var k = 0; k < dungeons.length ; k++) {
