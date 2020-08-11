@@ -574,7 +574,6 @@ function drawIndoorChecks() {
                             li.className = "DCunavailable";
                         }
                         li.onclick = new Function('toggleDungeonChest(this,' + k + ',"' + key + '")');
-                        li.oncontextmenu = new Function('placeIndoor(this,' + dungeonSelect + ',"' + key + '")');
                         li.onmouseover = new Function('highlightDungeonChest(this)');
                         li.onmouseout = new Function('unhighlightDungeonChest(this)');
                         li.setAttribute("data-type", "chest");
@@ -597,6 +596,7 @@ function drawIndoorChecks() {
                         li.className = "DCunavailable";
                     }
                     li.onclick = new Function('toggleDungeonChest(this,' + k + ',"' + key + '")');
+                    li.oncontextmenu = dungeon[dungeonSelect].chestlist.appendChild(li);
                     li.onmouseover = new Function('highlightDungeonChest(this)');
                     li.onmouseout = new Function('unhighlightDungeonChest(this)');
                     li.setAttribute("data-type", "chest");
