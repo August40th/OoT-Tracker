@@ -1715,6 +1715,7 @@ function setAge(sender) {
        clickDungeon(14);
    else if (RndmStart == true)
        clickDungeon(32);
+   saveCookie();
 }
 
 function setERTracker(sender) {
@@ -1726,6 +1727,7 @@ function setERTracker(sender) {
    else if (RndmStart == true)
        clickDungeon(32);
     updateMap();
+    saveCookie();
 }
 
 function setZoom(target, sender) {
