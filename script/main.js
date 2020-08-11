@@ -241,11 +241,11 @@ function loadCookie() {
          rbutton.click();
    }
     
-   for (rbuttonID in document.getElementsByName('Age')) {
-      rbutton = document.getElementsByName('Age')[rbuttonID]
-      if (rbutton.value == cookieobj.age)
-         rbutton.click();
-   }
+   //for (rbuttonID in document.getElementsByName('Age')) {
+  //    rbutton = document.getElementsByName('Age')[rbuttonID]
+   //   if (rbutton.value == cookieobj.age)
+         //rbutton.click();
+   //}
 
    cookielock = false;
 }
