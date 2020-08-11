@@ -1691,10 +1691,22 @@ function setBombchu(sender) {
 function setAge(sender) {
     Age = sender.value;
     updateMap();
+   if (Age === "Child" && RndmStart == false)
+       clickDungeon(0);
+   else if (Age === "Adult" && RndmStart == false)
+       clickDungeon(15);
+   else if (RndmStart == true)
+       clickDungeon(40);
 }
 
 function setERTracker(sender) {
     RndmStart = sender.checked;
+    if (Age === "Child" && RndmStart == false)
+       clickDungeon(0);
+   else if (Age === "Adult" && RndmStart == false)
+       clickDungeon(15);
+   else if (RndmStart == true)
+       clickDungeon(40);
     updateMap();
 }
 
