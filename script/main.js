@@ -535,7 +535,7 @@ function drawIndoorChecks() {
                 {}
                 else if (dungeons[k].chestlist[key].type == undefined )
                 {}
-                else if (dungeons[k].chestlist[key].type === "alldoor" && IndoorER !== "Full")
+                else if (dungeons[k].chestlist[key].type === "alldoor" && IndoorER !== "Full" && GrottoER == true)
                 {
                     if (key.includes("Dampe Race") && IndoorER === "Simple") {
                         let li = document.createElement('li');
