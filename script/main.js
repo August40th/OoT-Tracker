@@ -535,9 +535,9 @@ function drawIndoorChecks() {
                 {}
                 else if (dungeons[k].chestlist[key].type == undefined )
                 {}
-                else if (dungeons[k].chestlist[key].type === "alldoor" && IndoorER !== "Full" && GrottoER == true)
+                else if (dungeons[k].chestlist[key].type === "alldoor" && IndoorER !== "Full")
                 {
-                    if (key.includes("Dampe Race") && IndoorER === "Simple") {
+                    if (key.includes("Dampe Race") && IndoorER === "Simple" && GrottoER == true) {
                         let li = document.createElement('li');
                         li.style.cursor = 'pointer';
                         li.innerText = key;
@@ -579,7 +579,7 @@ function drawIndoorChecks() {
                     else if (shopsize > 0 && key.includes("Shop") ) {
                         FairyShops.appendChild(li);
                     }
-                    else if (dungeons[k].chestlist[key].type === "grotto" || key.includes("Dampe Race") ) {
+                    else if (dungeons[k].chestlist[key].type === "grotto" ) {
                         Grottolist.appendChild(li);
                     }
                     else {
@@ -641,7 +641,7 @@ function drawDungeonList() {
                s.classList.add("d-none"); }
             if (dungeons[dungeonSelect].chestlist[key].type == "indoor" && IndoorER !== "Off") {
                 s.classList.add("d-none"); }
-            if (GrottoER == true && dungeons[dungeonSelect].chestlist[key].type == "alldoor" && IndoorER === "Simple" && key.includes("Dampe Race")) {
+            if (GrottoER == true && dungeons[dungeonSelect].chestlist[key].type == "alldoor" && IndoorER === "Simple" && key.includes("Dampe Race") && GrottoER == true) {
                 s.classList.add("d-none"); }
             if (dungeons[dungeonSelect].chestlist[key].type == "alldoor" && IndoorER === "Full" ) {
                 s.classList.add("d-none"); }
