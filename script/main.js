@@ -2738,7 +2738,7 @@ function getDungeonAvailability(dungeon) {
           {}
           else if (dungeon.chestlist[key].type == "indoor" && IndoorER !== "Off") 
           {}
-          else if (GrottoER == true && dungeons[dungeonSelect].chestlist[key].type == "alldoor" && IndoorER !== "Full" && key.includes("Dampe Race")) 
+          else if (GrottoER == true && dungeons[dungeonSelect].chestlist[key].type !== undefined && dungeons[dungeonSelect].chestlist[key].type == "alldoor" && IndoorER !== "Full" && key.includes("Dampe Race")) 
           {}
           else if (dungeon.chestlist[key].type == "alldoor" && IndoorER === "Full" ) 
           {}
@@ -2807,7 +2807,7 @@ function getDungeonAvailability(dungeon) {
                   {}
                   else if (dungeon.chestlist[key] != undefined && dungeon.chestlist[key].type == "indoor" && IndoorER !== "Off") 
                   {}
-                  else if (GrottoER == true && dungeons[dungeonSelect].chestlist[key].type == "alldoor" && IndoorER !== "Full" && key.includes("Dampe Race")) 
+                  else if (GrottoER == true && dungeons[dungeonSelect].chestlist[key].type !== undefined && dungeons[dungeonSelect].chestlist[key].type == "alldoor" && IndoorER !== "Full" && key.includes("Dampe Race")) 
                   {}
                   else if (dungeon.chestlist[key] != undefined && dungeon.chestlist[key].type == "alldoor" && IndoorER === "Full" ) 
                   {}
@@ -2875,7 +2875,7 @@ function getDungeonAvailability(dungeon) {
                {}
                else if (dungeon.chestlist[key].type == "indoor" && IndoorER !== "Off") 
                {}
-               else if (GrottoER == true && dungeons[dungeonSelect].chestlist[key].type == "alldoor" && IndoorER !== "Full" && key.includes("Dampe Race")) 
+               else if (GrottoER == true && dungeons[dungeonSelect].chestlist[key].type !== undefined && dungeons[dungeonSelect].chestlist[key].type == "alldoor" && IndoorER !== "Full" && key.includes("Dampe Race")) 
                {}
                else if (dungeon.chestlist[key].type == "alldoor" && IndoorER === "Full" ) 
                {}
@@ -2930,7 +2930,7 @@ function getDungeonAvailability(dungeon) {
                {}
                else if (dungeon.chestlist[key] != undefined && dungeon.chestlist[key].type == "indoor" && IndoorER !== "Off") 
                {}
-               else if (GrottoER == true && dungeons[dungeonSelect].chestlist[key].type == "alldoor" && IndoorER !== "Full" && key.includes("Dampe Race")) 
+               else if (GrottoER == true && dungeons[dungeonSelect].chestlist[key].type !== undefined && dungeons[dungeonSelect].chestlist[key].type == "alldoor" && IndoorER !== "Full" && key.includes("Dampe Race")) 
                {}
                else if (dungeon.chestlist[key] != undefined && dungeon.chestlist[key].type == "alldoor" && IndoorER === "Full" ) 
                {}
