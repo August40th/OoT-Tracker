@@ -535,7 +535,7 @@ function drawIndoorChecks() {
                 {}
                 else if (dungeons[k].chestlist[key].type == undefined )
                 {}
-                else if (dungeons[k].chestlist[key].type === "alldoor" && IndoorER !== "Full")
+                else if (dungeons[k].chestlist[key].type === "alldoor" && (IndoorER !== "Full" || (GrottoER == false && key.includes("Dampe Race") ) ) )
                 {}
                 else if (dungeons[k].chestlist[key].type === "grotto" && GrottoER == false)
                 {}
@@ -628,6 +628,8 @@ function drawDungeonList() {
             if (dungeons[dungeonSelect].chestlist[key].type == "alldoor" && IndoorER === "Full" ) {
                 s.classList.add("d-none"); }
             if (dungeons[dungeonSelect].chestlist[key].type == "grotto" && GrottoER == true && IndoorER !== "Off") {
+                s.classList.add("d-none"); }
+            if (key.includes("Dampe Race") && GrottoER == true && IndoorER === "Simple") {
                 s.classList.add("d-none"); }
 
             s.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
@@ -2199,8 +2201,6 @@ function updateMap() {
                {}
                else if (dungeons[k].chestlist[key].type == "indoor" && IndoorER !== "Off") 
                {}
-               else if (GrottoER == true && key != undefined && dungeons[dungeonSelect].chestlist[key].type == "alldoor" && IndoorER === "Simple" && key.includes("Dampe Race")) 
-               {}
                else if (dungeons[k].chestlist[key].type == "alldoor" && IndoorER === "Full" ) 
                {}
                else if (dungeons[k].chestlist[key].type == "grotto" && GrottoER == true && IndoorER !== "Off") 
@@ -2277,8 +2277,6 @@ function updateMap() {
                   else if (GrottoER == false && (key.includes("Octorok Grotto") || key.includes("Fountain Grotto") ))
                   {}
                   else if (dungeons[k].chestlist[key].type == "indoor" && IndoorER !== "Off") 
-                  {}
-                  else if (GrottoER == true && dungeons[dungeonSelect].chestlist[key].type == "alldoor" && IndoorER !== "Full" && key.includes("Dampe Race")) 
                   {}
                   else if (dungeons[k].chestlist[key].type == "alldoor" && IndoorER === "Full" ) 
                   {}
