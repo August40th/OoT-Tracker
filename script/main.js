@@ -554,6 +554,8 @@ function drawIndoorChecks() {
                         li.setAttribute("data-type", "chest");
                         Grottolist.appendChild(li);
                     }
+                    else
+                    {}
                 }
                 else if (dungeons[k].chestlist[key].type === "grotto" && GrottoER == false)
                 {}
@@ -579,7 +581,7 @@ function drawIndoorChecks() {
                     else if (shopsize > 0 && key.includes("Shop") ) {
                         FairyShops.appendChild(li);
                     }
-                    else if (dungeons[k].chestlist[key].type === "grotto" ) {
+                    else if (dungeons[k].chestlist[key].type === "grotto" || (key.includes("Dampe Race") && GrottoER == true ) ) {
                         Grottolist.appendChild(li);
                     }
                     else {
