@@ -80,7 +80,7 @@ function getCookie() {
    return {};
 }
 
-var cookiekeys = ['iZoom', 'mZoom', 'rainlogic', 'items', 'qlogic', 'flogic', 'carp', 'smallk', 'bossk', 'sclogic', 'sklogic', 'ocShuff', 'sngShuff', 'eggShuff', 'beanShuff', 'chulogic', 'forest', 'gate', 'door', 'fountain', 'shpsize', 'cowShuff', 'numtrials', 'pigBK', 'gER', 'oER', 'iER', 'medi'];
+var cookiekeys = ['iZoom', 'mZoom', 'rainlogic', 'items', 'qlogic', 'flogic', 'carp', 'smallk', 'bossk', 'sclogic', 'sklogic', 'ocShuff', 'sngShuff', 'eggShuff', 'beanShuff', 'chulogic', 'forest', 'gate', 'door', 'fountain', 'shpsize', 'cowShuff', 'numtrials', 'pigBK', 'gER', 'oER', 'iER', 'medi', 'age', 'rstrt'];
 var cookieDefault = {
    iZoom: 100,
    mZoom: 100,
@@ -241,11 +241,11 @@ function loadCookie() {
          rbutton.click();
    }
     
-   //for (rbuttonID in document.getElementsByName('Age')) {
-  //    rbutton = document.getElementsByName('Age')[rbuttonID]
-   //   if (rbutton.value == cookieobj.age)
-         //rbutton.click();
-   //}
+   for (rbuttonID in document.getElementsByName('Age')) {
+      rbutton = document.getElementsByName('Age')[rbuttonID]
+      if (rbutton.value == cookieobj.age)
+         rbutton.click();
+   }
 
    cookielock = false;
 }
