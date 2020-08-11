@@ -3095,6 +3095,12 @@ function init() {
    
    loadCookie();
    saveCookie();
+   if (Age === "Child" && RndmStart == false)
+       clickDungeon(0);
+   else if (Age === "Adult" && RndmStart == false)
+       clickDungeon(14);
+   else if (RndmStart == true)
+       clickDungeon(32);
 }
 
 function preloader() {
