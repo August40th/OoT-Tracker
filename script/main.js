@@ -82,7 +82,7 @@ function getCookie() {
    return {};
 }
 
-var cookiekeys = ['iZoom', 'mZoom', 'rainlogic', 'items', 'qlogic', 'flogic', 'carp', 'smallk', 'bossk', 'sclogic', 'sklogic', 'ocShuff', 'sngShuff', 'eggShuff', 'beanShuff', 'chulogic', 'forest', 'gate', 'door', 'fountain', 'shpsize', 'cowShuff', 'numtrials', 'pigBK', 'gER', 'oER', 'iER', 'medi', 'age', 'rstrt'];
+var cookiekeys = ['iZoom', 'mZoom', 'rainlogic', 'items', 'qlogic', 'flogic', 'carp', 'smallk', 'bossk', 'sclogic', 'sklogic', 'ocShuff', 'sngShuff', 'eggShuff', 'beanShuff', 'chulogic', 'forest', 'gate', 'door', 'fountain', 'shpsize', 'cowShuff', 'numtrials', 'pigBK', 'gER', 'oER', 'iER', 'medi', 'ladin', 'age', 'rstrt'];
 var cookieDefault = {
    iZoom: 100,
    mZoom: 100,
@@ -111,6 +111,7 @@ var cookieDefault = {
    oER: 0,
    iER: 0,
    medi: 0,
+   ladin: 0,
    age: 'Child',
    rstrt: 0,
    
@@ -182,6 +183,8 @@ function loadCookie() {
    
    document.getElementsByName('Medigoron')[0].checked = !!cookieobj.medi;
    document.getElementsByName('Medigoron')[0].onchange();
+   document.getElementsByName('Aladdin')[0].checked = !!cookieobj.ladin;
+   document.getElementsByName('Aladdin')[0].onchange();
     
    document.getElementsByName('RndmStart')[0].checked = !!cookieobj.rstrt;
    document.getElementsByName('RndmStart')[0].onchange();
@@ -282,6 +285,7 @@ function saveCookie() {
 
    cookieobj.chulogic = document.getElementsByName('BombchuLogic')[0].checked ? 1 : 0;
    cookieobj.medi = document.getElementsByName('Medigoron')[0].checked ? 1 : 0;
+   cookieobj.ladin = document.getElementsByName('Aladdin')[0].checked ? 1 : 0;
    cookieobj.rstrt = document.getElementsByName('RndmStart')[0].checked ? 1 : 0;
     
    cookieobj.carp = document.getElementsByName('Rescue1')[0].checked ? 1 : 0;
