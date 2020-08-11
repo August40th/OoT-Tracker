@@ -472,6 +472,10 @@ function clickDungeon(d) {
    updateMap();
 }
 
+function placeIndoor(sender, c, d) {
+    dungeon[c].chestlist.appendChild(sender);
+}
+
 function drawIndoorChecks() {
     var Doorlist = document.getElementById('indoorchecks');
     Doorlist.innerHTML = "";
@@ -570,6 +574,7 @@ function drawIndoorChecks() {
                             li.className = "DCunavailable";
                         }
                         li.onclick = new Function('toggleDungeonChest(this,' + k + ',"' + key + '")');
+                        li.oncontextmenu = new Function('placeIndoor(this,' + dungeonSelect + ',"' + key + '")');
                         li.onmouseover = new Function('highlightDungeonChest(this)');
                         li.onmouseout = new Function('unhighlightDungeonChest(this)');
                         li.setAttribute("data-type", "chest");
