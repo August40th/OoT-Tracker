@@ -41,6 +41,9 @@ GrottoER = false;
 IndoorER = 'Off';
 OWERmap = false;
 
+Age = 'Child';
+RndmStart = false;
+
 var itemGrid = [];
 var itemLayout = [];
 
@@ -1685,6 +1688,16 @@ function setBombchu(sender) {
    saveCookie();
 }
 
+function setAge(sender) {
+    Age = sender.value;
+    updateMap();
+}
+
+function showERTracker(sender) {
+    RndmStart = sender.checked;
+    updateMap();
+}
+
 function setZoom(target, sender) {
    document.getElementById(target).style.zoom = sender.value / 100;
    document.getElementById(target).style.zoom = sender.value / 100;
@@ -3052,6 +3065,12 @@ function init() {
    
    loadCookie();
    saveCookie();
+   if (Age === "Child" && RndmStart == false)
+       clickDungeon(0);
+   else if (Age === "Adult" && RndmStart == false)
+       clickDungeon(15);
+   else if (RndmStart == true)
+       clickDungeon(40);
 }
 
 function preloader() {
