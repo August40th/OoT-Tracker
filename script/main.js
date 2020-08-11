@@ -641,7 +641,7 @@ function drawDungeonList() {
                s.classList.add("d-none"); }
             if (dungeons[dungeonSelect].chestlist[key].type == "indoor" && IndoorER !== "Off") {
                 s.classList.add("d-none"); }
-            if (GrottoER == true && dungeons[dungeonSelect].chestlist[key].type == "alldoor" && IndoorER === "Simple" && key.includes("Dampe Race") && GrottoER == true) {
+            if (GrottoER == true && dungeons[dungeonSelect].chestlist[key].type == "alldoor" && key.includes("Dampe Race")) {
                 s.classList.add("d-none"); }
             if (dungeons[dungeonSelect].chestlist[key].type == "alldoor" && IndoorER === "Full" ) {
                 s.classList.add("d-none"); }
