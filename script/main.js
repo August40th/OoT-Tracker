@@ -1693,7 +1693,7 @@ function setAge(sender) {
     updateMap();
 }
 
-function showERTracker(sender) {
+function setERTracker(sender) {
     RndmStart = sender.checked;
     updateMap();
 }
