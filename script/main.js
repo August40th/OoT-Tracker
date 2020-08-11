@@ -654,7 +654,7 @@ function drawDungeonList() {
                s.classList.add("d-none"); }
             if (Medigoron == false && key == "Medigoron") {
                s.classList.add("d-none"); }
-            if (Aladdin == false && key == "Carpet") {
+            if (Aladdin == false && key.includes("Carpet")) {
                s.classList.add("d-none"); }
             if (smallkeys != 'Keysanity' && key == "Guard Fight") {
                s.classList.add("d-none"); }
@@ -2265,7 +2265,7 @@ function updateMap() {
                {}
                else if (Medigoron == false && key == "Medigoron")
                {}
-               else if (Aladdin == false && key == "Carpet")
+               else if (Aladdin == false && key.includes("Carpet"))
                {}
                else if (smallkeys != 'Keysanity' && key == "Guard Fight")
                {}
@@ -2344,7 +2344,7 @@ function updateMap() {
                   {}
                   else if (Medigoron == false && key == "Medigoron")
                   {}
-                  else if (Aladdin == false && key == "Carpet")
+                  else if (Aladdin == false && key.includes("Carpet"))
                   {}
                   else if (smallkeys != 'Keysanity' && key == "Guard Fight")
                   {}
@@ -2608,7 +2608,7 @@ function populateMapdiv() {
                {}
                else if (Medigoron == false && key == "Medigoron")
                {}
-               else if (Aladdin == false && key == "Carpet")
+               else if (Aladdin == false && key.includes("Carpet"))
                {}
                else if (smallkeys != 'Keysanity' && key == "Guard Fight")
                {}
@@ -2689,7 +2689,7 @@ function populateMapdiv() {
                   {}
                   else if (Medigoron == false && key == "Medigoron")
                   {}
-                  else if (Aladdin == false && key == "Carpet")
+                  else if (Aladdin == false && key.includes("Carpet"))
                   {}
                   else if (smallkeys != 'Keysanity' && key == "Guard Fight")
                   {}
@@ -2808,7 +2808,7 @@ function getDungeonAvailability(dungeon) {
           {}
           else if (Medigoron == false && key == "Medigoron")
           {}
-          else if (Aladdin == false && key == "Carpet")
+          else if (Aladdin == false && key.includes("Carpet"))
           {}
           else if (smallkeys != 'Keysanity' && key == "Guard Fight")
           {}
@@ -2871,7 +2871,7 @@ function getDungeonAvailability(dungeon) {
                   {}
                   else if (Medigoron == false && key == "Medigoron")
                   {}
-                  else if (Aladdin == false && key == "Carpet")
+                  else if (Aladdin == false && key.includes("Carpet"))
                   {}
                   else if (smallkeys != 'Keysanity' && key == "Guard Fight")
                   {}
@@ -2945,7 +2945,7 @@ function getDungeonAvailability(dungeon) {
                {}
                else if (Medigoron == false && key == "Medigoron")
                {}
-               else if (Aladdin == false && key == "Carpet")
+               else if (Aladdin == false && key.includes("Carpet"))
                {}
                else if (smallkeys != 'Keysanity' && key == "Guard Fight")
                {}
@@ -3000,7 +3000,7 @@ function getDungeonAvailability(dungeon) {
                {}
                else if (Medigoron == false && key == "Medigoron")
                {}
-               else if (Aladdin == false && key == "Carpet")
+               else if (Aladdin == false && key.includes("Carpet"))
                {}
                else if (smallkeys != 'Keysanity' && key == "Guard Fight")
                {}
