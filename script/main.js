@@ -2229,7 +2229,7 @@ function updateMap() {
          }
          if (shopsize > 0){
             for (var key in dungeons[k].shoplist) {
-               if (dungeons[k].shoplist.hasOwnProperty(key)) {
+               if (dungeons[k].shoplist.hasOwnProperty(key) && IndoorER === "Off") {
                   if (!dungeons[k].shoplist[key].isOpened && dungeons[k].shoplist[key].isAvailable() && !key.includes("d-none") )
                      DCcount++;
                   for (var step = 2; step <= 4; step++) {
@@ -2280,7 +2280,7 @@ function updateMap() {
                      DCcount++;
                }
             }
-            if (shopsize > 0){
+            if (shopsize > 0 && IndoorER === "Off"){
             for (var key in dungeons[k].shoplist) {
                if (dungeons[k].shoplist.hasOwnProperty(key)) {
                   if (!dungeons[k].shoplist[key].isOpened && dungeons[k].shoplist[key].isAvailable()  )
@@ -2566,7 +2566,7 @@ function populateMapdiv() {
                }
             }
          }
-         if (shopsize > 0){
+         if (shopsize > 0 && IndoorER === "Off"){
             for (var key in dungeons[k].shoplist) {
                if (dungeons[k].shoplist.hasOwnProperty(key)) {
                   if (!dungeons[k].shoplist[key].isOpened && dungeons[k].shoplist[key].isAvailable()  )
@@ -2627,7 +2627,7 @@ function populateMapdiv() {
                   }
                }
             }
-            if (shopsize > 0){
+            if (shopsize > 0 && IndoorER === "Off"){
             for (var key in dungeons[k].shoplist) {
                if (dungeons[k].shoplist.hasOwnProperty(key)) {
                   if (!dungeons[k].shoplist[key].isOpened && dungeons[k].shoplist[key].isAvailable()  )
@@ -2749,7 +2749,7 @@ function getDungeonAvailability(dungeon) {
                checklist.scrublist[key] = dungeon.scrublist[key];
            }
        }
-      if (shopsize > 0){
+      if (shopsize > 0 && IndoorER === "Off"){
             for (let key in dungeon.shoplist) {
                if (key.includes("d-none"))
                {}
@@ -2872,7 +2872,7 @@ function getDungeonAvailability(dungeon) {
                   checklist.scrublist[key] = dungeon.scrublist[key];
                }
             }
-            if (shopsize > 0){
+            if (shopsize > 0 && IndoorER === "Off"){
                for (let key in dungeon.shoplist) {
                   if (key.includes("d-none"))
                   {}
