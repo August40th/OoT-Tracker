@@ -652,6 +652,8 @@ function drawDungeonList() {
                s.classList.add("d-none"); }
             if (Medigoron == false && key == "Medigoron") {
                s.classList.add("d-none"); }
+            if (CarpetSale == false && key == "Carpet") {
+               s.classList.add("d-none"); }
             if (smallkeys != 'Keysanity' && key == "Guard Fight") {
                s.classList.add("d-none"); }
             if (key.includes("Guard Fight ") && Rescue1 == true) {
@@ -1700,6 +1702,13 @@ function setMedigoron(sender) {
    saveCookie();
 }
 
+function setCarpet(sender) {
+   Aladdin = sender.checked;
+   drawDungeonList();
+   updateMap();
+   saveCookie();
+}
+
 function setBombchu(sender) {
    BombchuLogic = sender.checked;
    updateMap();
@@ -2254,6 +2263,8 @@ function updateMap() {
                {}
                else if (Medigoron == false && key == "Medigoron")
                {}
+               else if (Aladdin == false && key == "Carpet")
+               {}
                else if (smallkeys != 'Keysanity' && key == "Guard Fight")
                {}
                else if (key.includes("Guard Fight ") && Rescue1 == true) 
@@ -2330,6 +2341,8 @@ function updateMap() {
                   else if (BeanShuffle == false && key == "Bean Salesman")
                   {}
                   else if (Medigoron == false && key == "Medigoron")
+                  {}
+                  else if (Aladdin == false && key == "Carpet")
                   {}
                   else if (smallkeys != 'Keysanity' && key == "Guard Fight")
                   {}
@@ -2593,6 +2606,8 @@ function populateMapdiv() {
                {}
                else if (Medigoron == false && key == "Medigoron")
                {}
+               else if (Aladdin == false && key == "Carpet")
+               {}
                else if (smallkeys != 'Keysanity' && key == "Guard Fight")
                {}
                else if (key.includes("Guard Fight ") && Rescue1 == true)
@@ -2671,6 +2686,8 @@ function populateMapdiv() {
                   else if (BeanShuffle == false && key == "Bean Salesman")
                   {}
                   else if (Medigoron == false && key == "Medigoron")
+                  {}
+                  else if (Aladdin == false && key == "Carpet")
                   {}
                   else if (smallkeys != 'Keysanity' && key == "Guard Fight")
                   {}
@@ -2789,6 +2806,8 @@ function getDungeonAvailability(dungeon) {
           {}
           else if (Medigoron == false && key == "Medigoron")
           {}
+          else if (Aladdin == false && key == "Carpet")
+          {}
           else if (smallkeys != 'Keysanity' && key == "Guard Fight")
           {}
           else if (key.includes("Guard Fight ") && Rescue1 == true)
@@ -2849,6 +2868,8 @@ function getDungeonAvailability(dungeon) {
                   else if (BeanShuffle == false && key == "Bean Salesman")
                   {}
                   else if (Medigoron == false && key == "Medigoron")
+                  {}
+                  else if (Aladdin == false && key == "Carpet")
                   {}
                   else if (smallkeys != 'Keysanity' && key == "Guard Fight")
                   {}
@@ -2922,6 +2943,8 @@ function getDungeonAvailability(dungeon) {
                {}
                else if (Medigoron == false && key == "Medigoron")
                {}
+               else if (Aladdin == false && key == "Carpet")
+               {}
                else if (smallkeys != 'Keysanity' && key == "Guard Fight")
                {}
                else if (key.includes("Guard Fight ") && Rescue1 == true)
@@ -2974,6 +2997,8 @@ function getDungeonAvailability(dungeon) {
                else if (BeanShuffle == false && key == "Bean Salesman")
                {}
                else if (Medigoron == false && key == "Medigoron")
+               {}
+               else if (Aladdin == false && key == "Carpet")
                {}
                else if (smallkeys != 'Keysanity' && key == "Guard Fight")
                {}
