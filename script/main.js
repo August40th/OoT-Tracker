@@ -1694,9 +1694,9 @@ function setAge(sender) {
    if (Age === "Child" && RndmStart == false)
        clickDungeon(0);
    else if (Age === "Adult" && RndmStart == false)
-       clickDungeon(15);
+       clickDungeon(14);
    else if (RndmStart == true)
-       clickDungeon(40);
+       clickDungeon(32);
 }
 
 function setERTracker(sender) {
@@ -1704,9 +1704,9 @@ function setERTracker(sender) {
     if (Age === "Child" && RndmStart == false)
        clickDungeon(0);
    else if (Age === "Adult" && RndmStart == false)
-       clickDungeon(15);
+       clickDungeon(14);
    else if (RndmStart == true)
-       clickDungeon(40);
+       clickDungeon(33);
     updateMap();
 }
 
@@ -3077,12 +3077,6 @@ function init() {
    
    loadCookie();
    saveCookie();
-   if (Age === "Child" && RndmStart == false)
-       clickDungeon(0);
-   else if (Age === "Adult" && RndmStart == false)
-       clickDungeon(15);
-   else if (RndmStart == true)
-       clickDungeon(40);
 }
 
 function preloader() {
