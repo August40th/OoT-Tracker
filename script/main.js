@@ -109,6 +109,8 @@ var cookieDefault = {
    oER: 0,
    iER: 0,
    medi: 0,
+   age: 'Child',
+   rstrt: 0,
    
    items: defaultItemGrid
 }
@@ -178,6 +180,9 @@ function loadCookie() {
    
    document.getElementsByName('Medigoron')[0].checked = !!cookieobj.medi;
    document.getElementsByName('Medigoron')[0].onchange();
+    
+   document.getElementsByName('RndmStart')[0].checked = !!cookieobj.rstrt;
+   document.getElementsByName('RndmStart')[0].onchange();
 
    document.getElementsByName('Rescue1')[0].checked = !!cookieobj.carp;
    document.getElementsByName('Rescue1')[0].onchange();
@@ -235,6 +240,12 @@ function loadCookie() {
       if (rbutton.value == cookieobj.iER)
          rbutton.click();
    }
+    
+   for (rbuttonID in document.getElementsByName('Age')) {
+      rbutton = document.getElementsByName('Age')[rbuttonID]
+      if (rbutton.value == cookieobj.age)
+         rbutton.click();
+   }
 
    cookielock = false;
 }
@@ -269,7 +280,8 @@ function saveCookie() {
 
    cookieobj.chulogic = document.getElementsByName('BombchuLogic')[0].checked ? 1 : 0;
    cookieobj.medi = document.getElementsByName('Medigoron')[0].checked ? 1 : 0;
-   
+   cookieobj.rstrt = document.getElementsByName('RndmStart')[0].checked ? 1 : 0;
+    
    cookieobj.carp = document.getElementsByName('Rescue1')[0].checked ? 1 : 0;
 
    for (rbuttonID in document.getElementsByName('rainbowbridge')) {
@@ -324,6 +336,12 @@ function saveCookie() {
       rbutton = document.getElementsByName('IndoorER')[rbuttonID]
       if (rbutton.checked)
          cookieobj.iER = rbutton.value;
+   }
+    
+   for (rbuttonID in document.getElementsByName('Age')) {
+      rbutton = document.getElementsByName('Age')[rbuttonID]
+      if (rbutton.checked)
+         cookieobj.age = rbutton.value;
    }
 
    cookieobj.items = JSON.parse(JSON.stringify(itemLayout));
