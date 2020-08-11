@@ -459,7 +459,7 @@ function drawIndoorChecks() {
     var FairyShops = document.getElementById('fairyshopchecks');
     FairyShops.innerHTML = "";
     
-    if IndoorER !== "Off") {
+    if (IndoorER !== "Off") {
         for (var k = 0; k < dungeons.length ; k++) {
             var shopitem = shopsize;
             var shopnum;
