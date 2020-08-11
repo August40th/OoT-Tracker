@@ -31,6 +31,7 @@ BeanShuffle = false;
 
 BombchuLogic = false;
 Medigoron = false;
+Aladdin = false;
 
 OpenForest = true;
 OpenGate = true;
@@ -40,6 +41,7 @@ OpenFountain = false;
 GrottoER = false;
 IndoorER = 'Off';
 OWERmap = false;
+DungeonER = false;
 
 Age = 'Child';
 RndmStart = false;
@@ -652,7 +654,7 @@ function drawDungeonList() {
                s.classList.add("d-none"); }
             if (Medigoron == false && key == "Medigoron") {
                s.classList.add("d-none"); }
-            if (CarpetSale == false && key == "Carpet") {
+            if (Aladdin == false && key == "Carpet") {
                s.classList.add("d-none"); }
             if (smallkeys != 'Keysanity' && key == "Guard Fight") {
                s.classList.add("d-none"); }
