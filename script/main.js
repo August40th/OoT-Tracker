@@ -623,9 +623,11 @@ function drawDungeonList() {
                s.classList.add("d-none"); }
             if (dungeons[dungeonSelect].chestlist[key].type == "indoor" && IndoorER !== "Off") {
                 s.classList.add("d-none"); }
+            if (GrottoER == true && dungeons[dungeonSelect].chestlist[key].type == "alldoor" && IndoorER !== "Full" && key.includes("Dampe Race")) {
+                s.classList.add("d-none"); }
             if (dungeons[dungeonSelect].chestlist[key].type == "alldoor" && IndoorER === "Full" ) {
                 s.classList.add("d-none"); }
-            if (dungeons[dungeonSelect].chestlist[key].type == "grotto" && GrottoER == true) {
+            if (dungeons[dungeonSelect].chestlist[key].type == "grotto" && GrottoER == true && IndoorER !== "Off") {
                 s.classList.add("d-none"); }
 
             s.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
@@ -2197,6 +2199,8 @@ function updateMap() {
                {}
                else if (dungeons[k].chestlist[key].type == "indoor" && IndoorER !== "Off") 
                {}
+               else if (GrottoER == true && dungeons[dungeonSelect].chestlist[key].type == "alldoor" && IndoorER !== "Full" && key.includes("Dampe Race")) 
+               {}
                else if (dungeons[k].chestlist[key].type == "alldoor" && IndoorER === "Full" ) 
                {}
                else if (dungeons[k].chestlist[key].type == "grotto" && GrottoER == true && IndoorER !== "Off") 
@@ -2273,6 +2277,8 @@ function updateMap() {
                   else if (GrottoER == false && (key.includes("Octorok Grotto") || key.includes("Fountain Grotto") ))
                   {}
                   else if (dungeons[k].chestlist[key].type == "indoor" && IndoorER !== "Off") 
+                  {}
+                  else if (GrottoER == true && dungeons[dungeonSelect].chestlist[key].type == "alldoor" && IndoorER !== "Full" && key.includes("Dampe Race")) 
                   {}
                   else if (dungeons[k].chestlist[key].type == "alldoor" && IndoorER === "Full" ) 
                   {}
@@ -2536,6 +2542,8 @@ function populateMapdiv() {
                {}
                else if (dungeons[k].chestlist[key].type == "indoor" && IndoorER !== "Off") 
                {}
+               else if (GrottoER == true && dungeons[dungeonSelect].chestlist[key].type == "alldoor" && IndoorER !== "Full" && key.includes("Dampe Race")) 
+               {}
                else if (dungeons[k].chestlist[key].type == "alldoor" && IndoorER === "Full" ) 
                {}
                else if (dungeons[k].chestlist[key].type == "grotto" && GrottoER == true && IndoorER !== "Off") 
@@ -2612,6 +2620,8 @@ function populateMapdiv() {
                   else if (GrottoER == false && (key.includes("Octorok Grotto") || key.includes("Fountain Grotto") ))
                   {}
                   else if (dungeons[k].chestlist[key].type == "indoor" && IndoorER !== "Off") 
+                  {}
+                  else if (GrottoER == true && dungeons[dungeonSelect].chestlist[key].type == "alldoor" && IndoorER !== "Full" && key.includes("Dampe Race")) 
                   {}
                   else if (dungeons[k].chestlist[key].type == "alldoor" && IndoorER === "Full" ) 
                   {}
@@ -2726,8 +2736,9 @@ function getDungeonAvailability(dungeon) {
           {}
           else if (GrottoER == false && (key.includes("Octorok Grotto") || key.includes("Fountain Grotto") ))
           {}
-          
           else if (dungeon.chestlist[key].type == "indoor" && IndoorER !== "Off") 
+          {}
+          else if (GrottoER == true && dungeons[dungeonSelect].chestlist[key].type == "alldoor" && IndoorER !== "Full" && key.includes("Dampe Race")) 
           {}
           else if (dungeon.chestlist[key].type == "alldoor" && IndoorER === "Full" ) 
           {}
@@ -2796,6 +2807,8 @@ function getDungeonAvailability(dungeon) {
                   {}
                   else if (dungeon.chestlist[key] != undefined && dungeon.chestlist[key].type == "indoor" && IndoorER !== "Off") 
                   {}
+                  else if (GrottoER == true && dungeons[dungeonSelect].chestlist[key].type == "alldoor" && IndoorER !== "Full" && key.includes("Dampe Race")) 
+                  {}
                   else if (dungeon.chestlist[key] != undefined && dungeon.chestlist[key].type == "alldoor" && IndoorER === "Full" ) 
                   {}
                   else if (dungeon.chestlist[key] != undefined && dungeon.chestlist[key].type == "grotto" && GrottoER == true && IndoorER !== "Off") 
@@ -2862,6 +2875,8 @@ function getDungeonAvailability(dungeon) {
                {}
                else if (dungeon.chestlist[key].type == "indoor" && IndoorER !== "Off") 
                {}
+               else if (GrottoER == true && dungeons[dungeonSelect].chestlist[key].type == "alldoor" && IndoorER !== "Full" && key.includes("Dampe Race")) 
+               {}
                else if (dungeon.chestlist[key].type == "alldoor" && IndoorER === "Full" ) 
                {}
                else if (undefined && dungeon.chestlist[key].type == "grotto" && GrottoER == true && IndoorER !== "Off") 
@@ -2914,6 +2929,8 @@ function getDungeonAvailability(dungeon) {
                else if (GrottoER == false && (key.includes("Octorok Grotto") || key.includes("Fountain Grotto") ))
                {}
                else if (dungeon.chestlist[key] != undefined && dungeon.chestlist[key].type == "indoor" && IndoorER !== "Off") 
+               {}
+               else if (GrottoER == true && dungeons[dungeonSelect].chestlist[key].type == "alldoor" && IndoorER !== "Full" && key.includes("Dampe Race")) 
                {}
                else if (dungeon.chestlist[key] != undefined && dungeon.chestlist[key].type == "alldoor" && IndoorER === "Full" ) 
                {}
