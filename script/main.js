@@ -535,8 +535,26 @@ function drawIndoorChecks() {
                 {}
                 else if (dungeons[k].chestlist[key].type == undefined )
                 {}
-                else if (dungeons[k].chestlist[key].type === "alldoor" && (IndoorER !== "Full" || (GrottoER == false && key.includes("Dampe Race") ) ) )
-                {}
+                else if (dungeons[k].chestlist[key].type === "alldoor" && IndoorER !== "Full")
+                {
+                    if (key.includes("Dampe Race") && IndoorER === "Simple") {
+                        let li = document.createElement('li');
+                        li.style.cursor = 'pointer';
+                        li.innerText = key;
+                        if (dungeons[k].chestlist[key].isOpened) {
+                            li.className = "DCopened";
+                        } else if (dungeons[k].chestlist[key].isAvailable()) {
+                            li.className = "DCavailable";
+                        } else {
+                            li.className = "DCunavailable";
+                        }
+                        li.onclick = new Function('toggleDungeonChest(this,' + k + ',"' + key + '")');
+                        li.onmouseover = new Function('highlightDungeonChest(this)');
+                        li.onmouseout = new Function('unhighlightDungeonChest(this)');
+                        li.setAttribute("data-type", "chest");
+                        Grottolist.appendChild(li);
+                    }
+                }
                 else if (dungeons[k].chestlist[key].type === "grotto" && GrottoER == false)
                 {}
                 else {
