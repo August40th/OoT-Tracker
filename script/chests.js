@@ -122,7 +122,7 @@ var dungeons = [
             isAvailable: function () {
                return items.Ocarina && items.SongofStorms; }
          },
-         'Inside the Deky Tree': {
+         'Inside the Deku Tree': {
             isAvailable: function () {
                return true; }
          },
@@ -2988,6 +2988,10 @@ var dungeons = [
                isAvailable: function () {
                   return true; }
          },
+         'Bottom of The Well': {
+               isAvailable: function () {
+                  return true; }
+         },
       },
       entrancelist: {
          'Village to Field': {
@@ -3384,6 +3388,10 @@ var dungeons = [
                isAvailable: function () {
                   return true; }
          },
+         'Forest Temple': {
+               isAvailable: function () {
+                  return true; }
+         },
       },
       gossiplist: {
          'Temple Entrance': {
@@ -3567,6 +3575,14 @@ var dungeons = [
                isAvailable: function () {
                   return true; }
          },
+         'Lord Jabu Jabu\'s Belly': {
+               isAvailable: function () {
+                  return true; }
+         },
+         'Ice Cavern': {
+               isAvailable: function () {
+                  return true; }
+         },
       },
       gossiplist: {
          'West Fountain Stone': {
@@ -3676,6 +3692,10 @@ var dungeons = [
          'Sumit Fairy Fountain': {
             isAvailable: function () {
                return true; }
+         },
+         'Dodongo\'s Cavern': {
+               isAvailable: function () {
+                  return true; }
          },
       },
       gossiplist: {
@@ -3796,6 +3816,10 @@ var dungeons = [
          'Bomb Grotto': {
             isAvailable: function () {
                return true; }
+         },
+         'Fire Temple': {
+               isAvailable: function () {
+                  return true; }
          },
       },
       gossiplist: {
@@ -4176,6 +4200,10 @@ var dungeons = [
             isAvailable: function () {
                return true; }
          },
+         'Water Temple': {
+               isAvailable: function () {
+                  return true; }
+         },
       },
       gossiplist: {
          'Beside Lab Stone': {
@@ -4403,6 +4431,10 @@ var dungeons = [
             isAvailable: function () {
                return true; }
          },
+         'Gerudo Training Grounds': {
+               isAvailable: function () {
+                  return true; }
+         },
       },
       entrancelist: {
          'Fortress to Valley': {
@@ -4486,6 +4518,10 @@ var dungeons = [
          'Desert Strength Grotto': {
             isAvailable: function () {
                return true; }
+         },
+         'Spirit Temple': {
+               isAvailable: function () {
+                  return true; }
          },
       },
       gossiplist: {
@@ -4600,6 +4636,10 @@ var dungeons = [
          'Royal Tomb': {
             isAvailable: function () {
                return true; }
+         },
+         'Shadow Temple': {
+               isAvailable: function () {
+                  return true; }
          },
       },
       gossiplist: {
