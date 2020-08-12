@@ -2346,6 +2346,8 @@ function updateMap() {
                 for (var key in dungeons[k].indoorlist) {
                     if (DungeonER == false && (key.includes(" Temple") || key.includes("Deku Tree") || key.includes("Cavern") || key.includes("Bottom of") || key.includes("Belly") || key.includes("Training") ))
                     {}
+                    else if (GrottoER == false && (key.includes("Grotto") || key.includes("Grave") || key.includes("Tomb") ) )
+                    {}
                     else if (!dungeons[k].indoorlist[key].isOpened && dungeons[k].indoorlist[key].isAvailable()  )
                         DCcount++;
                 }
@@ -2409,6 +2411,8 @@ function updateMap() {
             if (IndoorER !== "Off") {
                 for (var key in dungeons[k].indoorlist) {
                     if (DungeonER == false && (door.includes(" Temple") || door.includes("Deku Tree") || door.includes("Cavern") || door.includes("Bottom of") || door.includes("Belly") || door.includes("Training") ))
+                    {}
+                    else if (GrottoER == false && (key.includes("Grotto") || key.includes("Grave") || key.includes("Tomb") ) )
                     {}
                     else if (!dungeons[k].indoorlist[key].isOpened && dungeons[k].indoorlist[key].isAvailable()  )
                         DCcount++;
@@ -2711,6 +2715,8 @@ function populateMapdiv() {
                 for (var key in dungeons[k].indoorlist) {
                     if (DungeonER == false && (door.includes(" Temple") || door.includes("Deku Tree") || door.includes("Cavern") || door.includes("Bottom of") || door.includes("Belly") || door.includes("Training") ))
                     {}
+                    else if (GrottoER == false && (key.includes("Grotto") || key.includes("Grave") || key.includes("Tomb") ) )
+                    {}
                     else if (!dungeons[k].indoorlist[key].isOpened && dungeons[k].indoorlist[key].isAvailable()  )
                         DCcount++;
                 }
@@ -2913,6 +2919,8 @@ function getDungeonAvailability(dungeon) {
            for (let key in dungeon.indoorlist) {
                if (DungeonER == false && (key.includes(" Temple") || key.includes("Deku Tree") || key.includes("Cavern") || key.includes("Bottom of") || key.includes("Belly") || key.includes("Training") ))
                {}
+               else if (GrottoER == false && (key.includes("Grotto") || key.includes("Grave") || key.includes("Tomb") ) )
+               {}
                else {
                    checklist.indoorlist[key] = dungeon.indoorlist[key];
                }
@@ -2960,6 +2968,8 @@ function getDungeonAvailability(dungeon) {
                   {}
                   else if (DungeonER == false && (key.includes(" Temple") || key.includes("Deku Tree") || key.includes("Cavern") || key.includes("Bottom of") || key.includes("Belly") || key.includes("Training") ))
                   {}
+                  //else if (GrottoER == false && (key.includes("Grotto") || key.includes("Grave") || key.includes("Tomb") ) )
+                  //{}
                   else if (!list[key].isOpened && list[key].isAvailable()) {
                       canGet++;
                   }
