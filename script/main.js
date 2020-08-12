@@ -1699,8 +1699,7 @@ function setOWER(sender) {
    saveCookie();
 }
 
-
-function serDER(sender) {
+function setDER(sender) {
    DungeonER = sender.checked;
    updateMap();
    drawDungeonList();
