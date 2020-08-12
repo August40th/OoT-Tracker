@@ -630,7 +630,8 @@ function drawDungeonList() {
    DClist.innerHTML = "";
    var FairyShops = document.getElementById('fairyshopchecks');
    listFilter = document.getElementById('submaparea').getAttribute('data-filter');
-   if (quest === "Vanilla" || quest === "Mixed") {
+   
+    if (quest === "Vanilla" || quest === "Mixed") {
       let dNone = false;
       if (quest === "Mixed" && listFilter === "master" && dungeons[dungeonSelect].type === "dungeon") {
          dNone = true;
@@ -871,9 +872,11 @@ function drawDungeonList() {
                s.classList.add("d-none"); }
             if (Medigoron == false && key == "Medigoron") {
                s.classList.add("d-none"); }
+            if (Aladdin == false && key.includes("Carpet")) {
+               s.classList.add("d-none"); }
             if (smallkeys != 'Keysanity' && key == "Guard Fight") {
                s.classList.add("d-none"); }
-            if (key.includes("Guard Fight ") && Rescue1 == true ) {
+            if (key.includes("Guard Fight ") && Rescue1 == true) {
                s.classList.add("d-none"); }
             if (Cowsanity == false && s.innerHTML.includes("Cow Milk") && key != "Cow Milk Grotto") {
                s.classList.add("d-none"); }
@@ -881,6 +884,16 @@ function drawDungeonList() {
                s.classList.add("d-none"); }
             if (GrottoER == false && (s.innerHTML.includes("Octorok Grotto") || s.innerHTML.includes("Fountain Grotto") )) {
                s.classList.add("d-none"); }
+            if (dungeons[dungeonSelect].chestlist[key].type == "indoor" && IndoorER !== "Off") {
+                s.classList.add("d-none"); }
+            //if (GrottoER == true && dungeons[dungeonSelect].chestlist[key].type == "alldoor" && key.includes("Dampe Race")) {
+            //    s.classList.add("d-none"); }
+            if (dungeons[dungeonSelect].chestlist[key].type == "alldoor" && IndoorER === "Full" ) {
+                s.classList.add("d-none"); }
+            if (dungeons[dungeonSelect].chestlist[key].type == "grotto" && GrottoER == true && IndoorER !== "Off") {
+                s.classList.add("d-none"); }
+            if (key.includes("Dampe Race") && GrottoER == true && IndoorER !== "Off") {
+                s.classList.add("d-none"); }
  
             s.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
             s.onmouseover = new Function('highlightDungeonChest(this)');
@@ -2366,35 +2379,35 @@ function updateMap() {
             for (var key in dungeons[k].chestlist) {
                if (dungeons[k].chestlist.hasOwnProperty(key) && dungeons[k].type === "overworld") {
                   if (OcarinaShuffle == false && key == "Fairy Ocarina")
-                  {}
-                  else if (WeirdEgg == false && key == "Malons Weird Egg")
-                  {}
-                  else if (BeanShuffle == false && key == "Bean Salesman")
-                  {}
-                  else if (Medigoron == false && key == "Medigoron")
-                  {}
-                  else if (Aladdin == false && key.includes("Carpet"))
-                  {}
-                  else if (smallkeys != 'Keysanity' && key == "Guard Fight")
-                  {}
-                  else if (key.includes("Guard Fight ") && Rescue1 == true)
-                  {}
-                  else if (Cowsanity == false && key.includes("Cow Milk") && key != "Cow Milk Grotto") 
-                  {}
-                  else if (Cowsanity == false && GrottoER == false && key == "Cow Milk Grotto" ) 
-                  {}
-                  else if (GrottoER == false && (key.includes("Octorok Grotto") || key.includes("Fountain Grotto") ))
-                  {}
-                  else if (dungeons[k].chestlist[key].type == "indoor" && IndoorER !== "Off") 
-                  {}
-                  else if (dungeons[k].chestlist[key].type == "alldoor" && IndoorER === "Full" ) 
-                  {}
-                  else if (dungeons[k].chestlist[key].type == "grotto" && GrottoER == true && IndoorER !== "Off") 
-                  {}
-                  else if (key.includes("Dampe Race") && IndoorER !== "Off" && GrottoER == true)
-                  {}
-                  else if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable() && !(BeanShuffle == false && key == "BeanSalseman") )
-                     DCcount++;
+               {}
+               else if (WeirdEgg == false && key == "Malons Weird Egg")
+               {}
+               else if (BeanShuffle == false && key == "Bean Salesman")
+               {}
+               else if (Medigoron == false && key == "Medigoron")
+               {}
+               else if (Aladdin == false && key.includes("Carpet"))
+               {}
+               else if (smallkeys != 'Keysanity' && key == "Guard Fight")
+               {}
+               else if (key.includes("Guard Fight ") && Rescue1 == true) 
+               {}
+               else if (Cowsanity == false && key.includes("Cow Milk") && key != "Cow Milk Grotto") 
+               {}
+               else if (Cowsanity == false && GrottoER == false && key == "Cow Milk Grotto" ) 
+               {}
+               else if (GrottoER == false && (key.includes("Octorok Grotto") || key.includes("Fountain Grotto") ))
+               {}
+               else if (dungeons[k].chestlist[key].type == "indoor" && IndoorER !== "Off") 
+               {}
+               else if (dungeons[k].chestlist[key].type == "alldoor" && IndoorER === "Full" ) 
+               {}
+               else if (dungeons[k].chestlist[key].type == "grotto" && GrottoER == true && IndoorER !== "Off") 
+               {}
+               else if (key.includes("Dampe Race") && IndoorER !== "Off" && GrottoER == true)
+               {}
+               else if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable() )
+                  DCcount++;
                }
             }
             if (shopsize > 0 && IndoorER === "Off"){
@@ -2735,37 +2748,37 @@ function populateMapdiv() {
             for (var key in dungeons[k].chestlist) {
                if (dungeons[k].chestlist.hasOwnProperty(key) && dungeons[k].type === "overworld" && quest === "Master") {
                   if (OcarinaShuffle == false && key == "Fairy Ocarina")
-                  {}
-                  else if (WeirdEgg == false && key == "Malons Weird Egg")
-                  {}
-                  else if (BeanShuffle == false && key == "Bean Salesman")
-                  {}
-                  else if (Medigoron == false && key == "Medigoron")
-                  {}
-                  else if (Aladdin == false && key.includes("Carpet"))
-                  {}
-                  else if (smallkeys != 'Keysanity' && key == "Guard Fight")
-                  {}
-                  else if (key.includes("Guard Fight ") && Rescue1 == true) 
-                  {}
-                  else if (Cowsanity == false && key.includes("Cow Milk") && key != "Cow Milk Grotto") 
-                  {}
-                  else if (Cowsanity == false && GrottoER == false && key == "Cow Milk Grotto" ) 
-                  {}
-                  else if (GrottoER == false && (key.includes("Octorok Grotto") || key.includes("Fountain Grotto") ))
-                  {}
-                  else if (dungeons[k].chestlist[key].type == "indoor" && IndoorER !== "Off") 
-                  {}
-                  else if (GrottoER == true && dungeons[dungeonSelect].chestlist[key].type == "alldoor" && IndoorER !== "Full" && key.includes("Dampe Race")) 
-                  {}
-                  else if (dungeons[k].chestlist[key].type == "alldoor" && IndoorER === "Full" ) 
-                  {}
-                  else if (dungeons[k].chestlist[key].type == "grotto" && GrottoER == true && IndoorER !== "Off") 
-                  {}
-                  else if (key.includes("Dampe Race") && IndoorER !== "Off" && GrottoER == true)
-                  {}
-                  else if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable() && !(BeanShuffle == false && key == "BeanSalseman") )
-                     DCcount++;
+                   {}
+                   else if (WeirdEgg == false && key == "Malons Weird Egg")
+                   {}
+                   else if (BeanShuffle == false && key == "Bean Salesman")
+                   {}
+                   else if (Medigoron == false && key == "Medigoron")
+                   {}
+                   else if (Aladdin == false && key.includes("Carpet"))
+                   {}
+                   else if (smallkeys != 'Keysanity' && key == "Guard Fight")
+                   {}
+                   else if (key.includes("Guard Fight ") && Rescue1 == true)
+                   {}
+                   else if (Cowsanity == false && key.includes("Cow Milk") && key != "Cow Milk Grotto") 
+                   {}
+                   else if (Cowsanity == false && GrottoER == false && key == "Cow Milk Grotto" ) 
+                   {}
+                   else if (GrottoER == false && (key.includes("Octorok Grotto") || key.includes("Fountain Grotto") ))
+                   {}
+                   else if (dungeons[k].chestlist[key].type == "indoor" && IndoorER !== "Off") 
+                   {}
+                   else if (GrottoER == true && dungeons[dungeonSelect].chestlist[key].type == "alldoor" && IndoorER !== "Full" && key.includes("Dampe Race")) 
+                   {}
+                   else if (dungeons[k].chestlist[key].type == "alldoor" && IndoorER === "Full" ) 
+                   {}
+                   else if (dungeons[k].chestlist[key].type == "grotto" && GrottoER == true && IndoorER !== "Off") 
+                   {}
+                   else if (key.includes("Dampe Race") && IndoorER !== "Off" && GrottoER == true)
+                   {}
+                   else if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable() && !(BeanShuffle == false && key == "BeanSalseman") )
+                      DCcount++;
                }
             }
             if (skulltula === "Overworld" || skulltula === "All") {
@@ -3013,35 +3026,35 @@ function getDungeonAvailability(dungeon) {
          if (dungeon.type === "overworld"){
             for (let key in dungeon.chestlist) {
                if (OcarinaShuffle == false && key == "Fairy Ocarina")
-               {}
-               else if (WeirdEgg == false && key == "Malons Weird Egg")
-               {}
-               else if (BeanShuffle == false && key == "Bean Salesman")
-               {}
-               else if (Medigoron == false && key == "Medigoron")
-               {}
-               else if (Aladdin == false && key.includes("Carpet"))
-               {}
-               else if (smallkeys != 'Keysanity' && key == "Guard Fight")
-               {}
-               else if (key.includes("Guard Fight ") && Rescue1 == true)
-               {}
-               else if (Cowsanity == false && key.includes("Cow Milk") && key != "Cow Milk Grotto") 
-               {}
-               else if (Cowsanity == false && GrottoER == false && key == "Cow Milk Grotto" ) 
-               {}
-               else if (GrottoER == false && (key.includes("Octorok Grotto") || key.includes("Fountain Grotto") ))
-               {}
-               else if (dungeon.chestlist[key].type == "indoor" && IndoorER !== "Off") 
-               {}
-               else if (dungeon.chestlist[key].type == "alldoor" && IndoorER === "Full" ) 
-               {}
-               else if (undefined && dungeon.chestlist[key].type == "grotto" && GrottoER == true && IndoorER !== "Off") 
-               {}
-               else if (key.includes("Dampe Race") && IndoorER !== "Off" && GrottoER == true)
-               {}
-               else 
-                  checklist.chestlist[key] = dungeon.chestlist[key];
+              {}
+              else if (WeirdEgg == false && key == "Malons Weird Egg")
+              {}
+              else if (BeanShuffle == false && key == "Bean Salesman")
+              {}
+              else if (Medigoron == false && key == "Medigoron")
+              {}
+              else if (Aladdin == false && key.includes("Carpet"))
+              {}
+              else if (smallkeys != 'Keysanity' && key == "Guard Fight")
+              {}
+              else if (key.includes("Guard Fight ") && Rescue1 == true)
+              {} 
+              else if (Cowsanity == false && key.includes("Cow Milk") && key != "Cow Milk Grotto") 
+              {}
+              else if (Cowsanity == false && GrottoER == false && key == "Cow Milk Grotto" ) 
+              {}
+              else if (GrottoER == false && (key.includes("Octorok Grotto") || key.includes("Fountain Grotto") ))
+              {}
+              else if (dungeon.chestlist[key].type == "indoor" && IndoorER !== "Off") 
+              {}
+              else if (dungeon.chestlist[key].type == "alldoor" && IndoorER === "Full" ) 
+              {}
+              else if (dungeon.chestlist[key].type == "grotto" && GrottoER == true && IndoorER !== "Off") 
+              {}
+              else if (key.includes("Dampe Race") && IndoorER !== "Off" && GrottoER == true)
+              {}
+              else
+                 checklist.chestlist[key] = dungeon.chestlist[key];
             }
             if (scrubs === "Scrubsanity") {
                for (let key in dungeon.scrublist) {
@@ -3089,20 +3102,24 @@ function getDungeonAvailability(dungeon) {
                {}
                else if (GrottoER == false && (key.includes("Octorok Grotto") || key.includes("Fountain Grotto") ))
                {}
-               else if (dungeon.chestlist[key] != undefined && dungeon.chestlist[key].type == "indoor" && IndoorER !== "Off") 
-               {}
-               else if (dungeon.chestlist[key] != undefined && dungeon.chestlist[key].type == "alldoor" && IndoorER === "Full" ) 
-               {}
-               else if (dungeon.chestlist[key] != undefined && dungeon.chestlist[key].type == "grotto" && GrottoER == true && IndoorER !== "Off") 
-               {}
                else if (shopsize == 1 && key.includes("Shop ") )
                {}
                else if (shopsize == 2 && (key.includes("Shop 3") || key.includes("Shop 4") ) )
                {}
                else if (shopsize == 3 && key.includes("Shop 4") )
                {}
+               else if (dungeon.chestlist[key] != undefined && dungeon.chestlist[key].type == "indoor" && IndoorER !== "Off") 
+               {}
+               else if (dungeon.chestlist[key] != undefined && dungeon.chestlist[key].type == "alldoor" && IndoorER === "Full" ) 
+               {}
+               else if (dungeon.chestlist[key] != undefined && dungeon.chestlist[key].type == "grotto" && GrottoER == true && IndoorER !== "Off") 
+               {}
                else if (key.includes("Dampe Race") && IndoorER !== "Off" && GrottoER == true)
                {}
+               else if (DungeonER == false && (key.includes(" Temple") || key.includes("Deku Tree") || key.includes("Cavern") || key.includes("Bottom of") || key.includes("Belly") || key.includes("Training") ))
+               {}
+               //else if (GrottoER == false && (key.includes("Grotto") || key.includes("Grave") || key.includes("Tomb") ) )
+               //{}
                else if (!list[key].isOpened && list[key].isAvailable()) {
                    canGet++;
                }
