@@ -1091,6 +1091,8 @@ function drawDungeonList() {
             {}
             else if (dungeons[dungeonSelect].indoorlist[door].type == "alldoor" && IndoorER !== "Full" )
             {}
+            else if (DungeonER == false && (door.includes(" Temple") || door.includes("Deku Tree") || door.includes("Cavern") || door.includes("Bottom of") || door.includes("Belly") || door.includes("Training") ))
+            {}
             else {
                 let li = document.createElement('li');
                 li.style.cursor = 'pointer';
@@ -2385,6 +2387,14 @@ function updateMap() {
                   }
                }
             }
+            if (IndoorER !== "Off") {
+                for (var key in dungeons[k].indoorlist) {
+                    if (DungeonER == false && (door.includes(" Temple") || door.includes("Deku Tree") || door.includes("Cavern") || door.includes("Bottom of") || door.includes("Belly") || door.includes("Training") ))
+                    {}
+                    else if (!dungeons[k].indoorlist[key].isOpened && dungeons[k].indoorlist[key].isAvailable()  )
+                        DCcount++;
+                }
+            }
          }
          }
          if ((skulltula === "Overworld" || skulltula === "All") && quest === "Master") {
@@ -2678,6 +2688,14 @@ function populateMapdiv() {
                }
             }
          }
+         if (IndoorER !== "Off") {
+                for (var key in dungeons[k].indoorlist) {
+                    if (DungeonER == false && (door.includes(" Temple") || door.includes("Deku Tree") || door.includes("Cavern") || door.includes("Bottom of") || door.includes("Belly") || door.includes("Training") ))
+                    {}
+                    else if (!dungeons[k].indoorlist[key].isOpened && dungeons[k].indoorlist[key].isAvailable()  )
+                        DCcount++;
+                }
+         }
       }
       if (quest === "Master" || quest === "Mixed") {
          for (var key in dungeons[k].MQlist) {
@@ -2809,6 +2827,7 @@ function getDungeonAvailability(dungeon) {
       MQskulllist: {},
       MQscrublist: {},
       shoplist: {},
+      indoorlist: {},
    };
    if (quest === "Vanilla" || quest === "Mixed") {
        for (let key in dungeon.chestlist) {
@@ -2871,7 +2890,16 @@ function getDungeonAvailability(dungeon) {
                else checklist.shoplist[key] = dungeon.shoplist[key];
             }
       }
-       ['chestlist', 'skulllist', 'scrublist', 'shoplist'].forEach(function (key) {
+      if (IndoorER !== "Off") {
+           for (let key in dungeon.indoorlist) {
+               if (DungeonER == false && (door.includes(" Temple") || door.includes("Deku Tree") || door.includes("Cavern") || door.includes("Bottom of") || door.includes("Belly") || door.includes("Training") ))
+               {}
+               else {
+                   checklist.indoorlist[key] = dungeon.indoorlist[key];
+               }
+           }
+      }
+       ['chestlist', 'skulllist', 'scrublist', 'shoplist', 'indoorlist'].forEach(function (key) {
            let list = checklist[key];
               for (let key in list) {
                   if (!list[key].isOpened) {
@@ -2910,6 +2938,8 @@ function getDungeonAvailability(dungeon) {
                   else if (dungeon.chestlist[key] != undefined && dungeon.chestlist[key].type == "grotto" && GrottoER == true && IndoorER !== "Off") 
                   {}
                   else if (key.includes("Dampe Race") && IndoorER !== "Off" && GrottoER == true)
+                  {}
+                  else if (DungeonER == false && (door.includes(" Temple") || door.includes("Deku Tree") || door.includes("Cavern") || door.includes("Bottom of") || door.includes("Belly") || door.includes("Training") ))
                   {}
                   else if (!list[key].isOpened && list[key].isAvailable()) {
                       canGet++;
