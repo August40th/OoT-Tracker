@@ -2342,6 +2342,14 @@ function updateMap() {
                }
             }
          }
+         if (IndoorER !== "Off") {
+                for (var key in dungeons[k].indoorlist) {
+                    if (DungeonER == false && (door.includes(" Temple") || door.includes("Deku Tree") || door.includes("Cavern") || door.includes("Bottom of") || door.includes("Belly") || door.includes("Training") ))
+                    {}
+                    else if (!dungeons[k].indoorlist[key].isOpened && dungeons[k].indoorlist[key].isAvailable()  )
+                        DCcount++;
+                }
+            }
       }
       if (quest === "Master" || quest === "Mixed") {
          for (var key in dungeons[k].MQlist) {
