@@ -82,7 +82,7 @@ function getCookie() {
    return {};
 }
 
-var cookiekeys = ['iZoom', 'mZoom', 'rainlogic', 'items', 'qlogic', 'flogic', 'carp', 'smallk', 'bossk', 'sclogic', 'sklogic', 'ocShuff', 'sngShuff', 'eggShuff', 'beanShuff', 'chulogic', 'forest', 'gate', 'door', 'fountain', 'shpsize', 'cowShuff', 'numtrials', 'pigBK', 'gER', 'oER', 'iER', 'medi', 'ladin', 'age', 'rstrt'];
+var cookiekeys = ['iZoom', 'mZoom', 'rainlogic', 'items', 'qlogic', 'flogic', 'carp', 'smallk', 'bossk', 'sclogic', 'sklogic', 'ocShuff', 'sngShuff', 'eggShuff', 'beanShuff', 'chulogic', 'forest', 'gate', 'door', 'fountain', 'shpsize', 'cowShuff', 'numtrials', 'pigBK', 'gER', 'oER', 'iER', 'dER', 'medi', 'ladin', 'age', 'rstrt'];
 var cookieDefault = {
    iZoom: 100,
    mZoom: 100,
@@ -110,6 +110,7 @@ var cookieDefault = {
    gER: 0,
    oER: 0,
    iER: 0,
+   dER: 0,
    medi: 0,
    ladin: 0,
    age: 'Child',
@@ -168,6 +169,8 @@ function loadCookie() {
    document.getElementsByName('GrottoER')[0].onchange();
    document.getElementsByName('OWERmap')[0].checked = !!cookieobj.oER;
    document.getElementsByName('OWERmap')[0].onchange();
+   document.getElementsByName('DungeonER')[0].checked = !!cookieobj.dER;
+   document.getElementsByName('DungeonER')[0].onchange();
 
    document.getElementsByName('shopsize')[0].value = cookieobj.shpsize;
    document.getElementsByName('shopsize')[0].onchange();
@@ -277,6 +280,7 @@ function saveCookie() {
    
    cookieobj.gER = document.getElementsByName('GrottoER')[0].checked ? 1 : 0;
    cookieobj.oER = document.getElementsByName('OWERmap')[0].checked ? 1 : 0;
+   cookieobj.dER = document.getElementsByName('DungeonER')[0].checked ? 1 : 0;
    
    cookieobj.shpsize = document.getElementsByName('shopsize')[0].value;
    cookieobj.numtrials = document.getElementsByName('trialsize')[0].value;
@@ -1690,6 +1694,14 @@ function setIndoorER(sender) {
 
 function setOWER(sender) {
    OWERmap = sender.checked;
+   updateMap();
+   drawDungeonList();
+   saveCookie();
+}
+
+
+function serDER(sender) {
+   DungeonER = sender.checked;
    updateMap();
    drawDungeonList();
    saveCookie();
