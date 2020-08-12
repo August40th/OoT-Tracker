@@ -2892,7 +2892,7 @@ function getDungeonAvailability(dungeon) {
       }
       if (IndoorER !== "Off") {
            for (let key in dungeon.indoorlist) {
-               if (DungeonER == false && (door.includes(" Temple") || door.includes("Deku Tree") || door.includes("Cavern") || door.includes("Bottom of") || door.includes("Belly") || door.includes("Training") ))
+               if (DungeonER == false && (key.includes(" Temple") || key.includes("Deku Tree") || key.includes("Cavern") || key.includes("Bottom of") || key.includes("Belly") || key.includes("Training") ))
                {}
                else {
                    checklist.indoorlist[key] = dungeon.indoorlist[key];
@@ -2939,7 +2939,7 @@ function getDungeonAvailability(dungeon) {
                   {}
                   else if (key.includes("Dampe Race") && IndoorER !== "Off" && GrottoER == true)
                   {}
-                  else if (DungeonER == false && (door.includes(" Temple") || door.includes("Deku Tree") || door.includes("Cavern") || door.includes("Bottom of") || door.includes("Belly") || door.includes("Training") ))
+                  else if (DungeonER == false && (key.includes(" Temple") || key.includes("Deku Tree") || key.includes("Cavern") || key.includes("Bottom of") || key.includes("Belly") || key.includes("Training") ))
                   {}
                   else if (!list[key].isOpened && list[key].isAvailable()) {
                       canGet++;
