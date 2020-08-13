@@ -2423,7 +2423,7 @@ function updateMap() {
             }
             if (IndoorER !== "Off") {
                 for (var key in dungeons[k].indoorlist) {
-                    if (DungeonER == false && (door.includes(" Temple") || door.includes("Deku Tree") || door.includes("Cavern") || door.includes("Bottom of") || door.includes("Belly") || door.includes("Training") ))
+                    if (DungeonER == false && (key.includes(" Temple") || key.includes("Deku Tree") || key.includes("Cavern") || key.includes("Bottom of") || key.includes("Belly") || key.includes("Training") ))
                     {}
                     else if (GrottoER == false && (key.includes("Grotto") || key.includes("Grave") || key.includes("Tomb") ) )
                     {}
@@ -2462,7 +2462,8 @@ function updateMap() {
                      DCcount++;
                }
             }
-         }      
+         }
+         
       }
       
       var child = document.getElementById("dungeon" + k).firstChild;
@@ -2726,7 +2727,7 @@ function populateMapdiv() {
          }
          if (IndoorER !== "Off") {
                 for (var key in dungeons[k].indoorlist) {
-                    if (DungeonER == false && (door.includes(" Temple") || door.includes("Deku Tree") || door.includes("Cavern") || door.includes("Bottom of") || door.includes("Belly") || door.includes("Training") ))
+                    if (DungeonER == false && (key.includes(" Temple") || key.includes("Deku Tree") || key.includes("Cavern") || key.includes("Bottom of") || key.includes("Belly") || key.includes("Training") ))
                     {}
                     else if (GrottoER == false && (key.includes("Grotto") || key.includes("Grave") || key.includes("Tomb") ) )
                     {}
@@ -2790,16 +2791,26 @@ function populateMapdiv() {
                }
             }
             if (shopsize > 0 && IndoorER === "Off"){
-            for (var key in dungeons[k].shoplist) {
-               if (dungeons[k].shoplist.hasOwnProperty(key)) {
-                  if (!dungeons[k].shoplist[key].isOpened && dungeons[k].shoplist[key].isAvailable()  )
-                     DCcount++;
-                  for (var step = 2; step <= 4; step++) {
-                     if(key.includes("Shop " + step) && step > shopsize)
-                        DCcount--;
-                  }
-               }
+                for (var key in dungeons[k].shoplist) {
+                   if (dungeons[k].shoplist.hasOwnProperty(key)) {
+                      if (!dungeons[k].shoplist[key].isOpened && dungeons[k].shoplist[key].isAvailable()  )
+                         DCcount++;
+                      for (var step = 2; step <= 4; step++) {
+                         if(key.includes("Shop " + step) && step > shopsize)
+                            DCcount--;
+                      }
+                   }
+                }
             }
+            if (IndoorER !== "Off") {
+                for (var key in dungeons[k].indoorlist) {
+                    if (DungeonER == false && (key.includes(" Temple") || key.includes("Deku Tree") || key.includes("Cavern") || key.includes("Bottom of") || key.includes("Belly") || key.includes("Training") ))
+                    {}
+                    else if (GrottoER == false && (key.includes("Grotto") || key.includes("Grave") || key.includes("Tomb") ) )
+                    {}
+                    else if (!dungeons[k].indoorlist[key].isOpened && dungeons[k].indoorlist[key].isAvailable()  )
+                        DCcount++;
+                }
          }
          }  
          if (skulltula === "Dungeons" || skulltula === "All") {
@@ -3072,10 +3083,21 @@ function getDungeonAvailability(dungeon) {
                   else if (shopsize == 3 && key.includes("Shop 4") )
                   {}
                   else checklist.shoplist[key] = dungeon.shoplist[key];
-                }
+               }
             }
+             if (IndoorER !== "Off") {
+                 for (let key in dungeon.indoorlist) {
+                    if (DungeonER == false && (key.includes(" Temple") || key.includes("Deku Tree") || key.includes("Cavern") || key.includes("Bottom of") || key.includes("Belly") || key.includes("Training") ))
+                    {}
+                    else if (GrottoER == false && (key.includes("Grotto") || key.includes("Grave") || key.includes("Tomb") ) )
+                    {}
+                    else {
+                        checklist.indoorlist[key] = dungeon.indoorlist[key];
+                    }
+                 }
+             }
          }
-         ['chestlist', 'skulllist', 'scrublist', 'shoplist'].forEach
+         ['chestlist', 'skulllist', 'scrublist', 'shoplist', 'indoorlist'].forEach
          (function (key) {
            let list = checklist[key];
            for (let key in list) {
