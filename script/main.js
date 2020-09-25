@@ -1108,7 +1108,7 @@ function drawDungeonList() {
             {}
             else if (dungeons[dungeonSelect].indoorlist[door].type == "alldoor" && IndoorER !== "Full" )
             {}
-            else if (DungeonER == false && (door.includes(" Temple") || door.includes("Deku Tree") || door.includes("Cavern") || door.includes("Bottom of") || door.includes("Belly") || door.includes("Training") ))
+            else if (DungeonER == false && (door.includes(" Temple") || door.includes("Deku Tree") || door.includes(" Cavern") || door.includes("Bottom of") || door.includes("Belly") || door.includes("Training") ))
             {}
             else {
                 let li = document.createElement('li');
@@ -2357,7 +2357,7 @@ function updateMap() {
          }
          if (IndoorER !== "Off") {
                 for (var key in dungeons[k].indoorlist) {
-                    if (DungeonER == false && (key.includes(" Temple") || key.includes("Deku Tree") || key.includes("Cavern") || key.includes("Bottom of") || key.includes("Belly") || key.includes("Training") ))
+                    if (DungeonER == false && (key.includes(" Temple") || key.includes("Deku Tree") || key.includes(" Cavern") || key.includes("Bottom of") || key.includes("Belly") || key.includes("Training") ))
                     {}
                     else if (GrottoER == false && (key.includes("Grotto") || key.includes("Grave") || key.includes("Tomb") ) )
                     {}
@@ -2424,7 +2424,7 @@ function updateMap() {
             }
             if (IndoorER !== "Off") {
                 for (var key in dungeons[k].indoorlist) {
-                    if (DungeonER == false && (key.includes(" Temple") || key.includes("Deku Tree") || key.includes("Cavern") || key.includes("Bottom of") || key.includes("Belly") || key.includes("Training") ))
+                    if (DungeonER == false && (key.includes(" Temple") || key.includes("Deku Tree") || key.includes(" Cavern") || key.includes("Bottom of") || key.includes("Belly") || key.includes("Training") ))
                     {}
                     else if (GrottoER == false && (key.includes("Grotto") || key.includes("Grave") || key.includes("Tomb") ) )
                     {}
@@ -2726,7 +2726,7 @@ function populateMapdiv() {
          }
          if (IndoorER !== "Off") {
                 for (var key in dungeons[k].indoorlist) {
-                    if (DungeonER == false && (key.includes(" Temple") || key.includes("Deku Tree") || key.includes("Cavern") || key.includes("Bottom of") || key.includes("Belly") || key.includes("Training") ))
+                    if (DungeonER == false && (key.includes(" Temple") || key.includes("Deku Tree") || key.includes(" Cavern") || key.includes("Bottom of") || key.includes("Belly") || key.includes("Training") ))
                     {}
                     else if (GrottoER == false && (key.includes("Grotto") || key.includes("Grave") || key.includes("Tomb") ) )
                     {}
@@ -2803,7 +2803,7 @@ function populateMapdiv() {
             }
             if (IndoorER !== "Off") {
                 for (var key in dungeons[k].indoorlist) {
-                    if (DungeonER == false && (key.includes(" Temple") || key.includes("Deku Tree") || key.includes("Cavern") || key.includes("Bottom of") || key.includes("Belly") || key.includes("Training") ))
+                    if (DungeonER == false && (key.includes(" Temple") || key.includes("Deku Tree") || key.includes(" Cavern") || key.includes("Bottom of") || key.includes("Belly") || key.includes("Training") ))
                     {}
                     else if (GrottoER == false && (key.includes("Grotto") || key.includes("Grave") || key.includes("Tomb") ) )
                     {}
@@ -2940,7 +2940,7 @@ function getDungeonAvailability(dungeon) {
       }
       if (IndoorER !== "Off") {
            for (let key in dungeon.indoorlist) {
-               if (DungeonER == false && (key.includes(" Temple") || key.includes("Deku Tree") || key.includes("Cavern") || key.includes("Bottom of") || key.includes("Belly") || key.includes("Training") ))
+               if (DungeonER == false && (key.includes(" Temple") || key.includes("Deku Tree") || key.includes(" Cavern") || key.includes("Bottom of") || key.includes("Belly") || key.includes("Training") ))
                {}
                else if (GrottoER == false && (key.includes("Grotto") || key.includes("Grave") || key.includes("Tomb") ) )
                {}
@@ -2989,7 +2989,7 @@ function getDungeonAvailability(dungeon) {
                   {}
                   else if (key.includes("Dampe Race") && IndoorER !== "Off" && GrottoER == true)
                   {}
-                  else if (DungeonER == false && (key.includes(" Temple") || key.includes("Deku Tree") || key.includes("Cavern") || key.includes("Bottom of") || key.includes("Belly") || key.includes("Training") ))
+                  else if (DungeonER == false && (key.includes(" Temple") || key.includes("Deku Tree") || key.includes(" Cavern") || key.includes("Bottom of") || key.includes("Belly") || key.includes("Training") ))
                   {}
                   //else if (GrottoER == false && (key.includes("Grotto") || key.includes("Grave") || key.includes("Tomb") ) )
                   //{}
@@ -3086,7 +3086,7 @@ function getDungeonAvailability(dungeon) {
             }
              if (IndoorER !== "Off") {
                  for (let key in dungeon.indoorlist) {
-                    if (DungeonER == false && (key.includes(" Temple") || key.includes("Deku Tree") || key.includes("Cavern") || key.includes("Bottom of") || key.includes("Belly") || key.includes("Training") ))
+                    if (DungeonER == false && (key.includes(" Temple") || key.includes("Deku Tree") || key.includes(" Cavern") || key.includes("Bottom of") || key.includes("Belly") || key.includes("Training") ))
                     {}
                     else if (GrottoER == false && (key.includes("Grotto") || key.includes("Grave") || key.includes("Tomb") ) )
                     {}
@@ -3137,7 +3137,7 @@ function getDungeonAvailability(dungeon) {
                {}
                else if (key.includes("Dampe Race") && IndoorER !== "Off" && GrottoER == true)
                {}
-               else if (DungeonER == false && (key.includes(" Temple") || key.includes("Deku Tree") || key.includes("Cavern") || key.includes("Bottom of") || key.includes("Belly") || key.includes("Training") ))
+               else if (DungeonER == false && (key.includes(" Temple") || key.includes("Deku Tree") || key.includes(" Cavern") || key.includes("Bottom of") || key.includes("Belly") || key.includes("Training") ))
                {}
                //else if (GrottoER == false && (key.includes("Grotto") || key.includes("Grave") || key.includes("Tomb") ) )
                //{}
