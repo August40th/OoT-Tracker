@@ -3197,7 +3197,7 @@ function isBridgeOpen() {
       case "Vanilla":
          return (items['ShadowMedallion'] && items['SpiritMedallion']);
       case "Skulltulas":
-           return items['Skulltulas'] >= 2;
+           return items['Skulltula'] >= 2;
       case "Stones":
            return (items['KokiriEmerald'] && items['GoronRuby'] && items['ZoraSapphire']);
       case "Medallions":
