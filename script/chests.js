@@ -19,7 +19,7 @@ function generalCanGetChest(chestlist) {
       return "unavailable"
    return "possible"
 }
-
+// (OWER == false || (OWER == true && dungeon[].found == true) ) && (Randomstart == false || (Randomstart == true && dungeon[].entrance[].access == true) )
 // define dungeon chests
 var dungeons = [
    { name: "Kokiri Forest",
