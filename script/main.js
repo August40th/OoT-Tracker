@@ -34,6 +34,7 @@ Medigoron = false;
 Aladdin = false;
 
 OpenForest = true;
+OpenDeku = true;
 OpenGate = true;
 OpenDoor = true;
 OpenFountain = false;
@@ -82,7 +83,7 @@ function getCookie() {
    return {};
 }
 
-var cookiekeys = ['iZoom', 'mZoom', 'rainlogic', 'items', 'qlogic', 'flogic', 'carp', 'smallk', 'bossk', 'sclogic', 'sklogic', 'ocShuff', 'sngShuff', 'eggShuff', 'beanShuff', 'chulogic', 'forest', 'gate', 'door', 'fountain', 'shpsize', 'cowShuff', 'numtrials', 'pigBK', 'gER', 'oER', 'iER', 'dER', 'medi', 'ladin', 'age', 'rstrt'];
+var cookiekeys = ['iZoom', 'mZoom', 'rainlogic', 'items', 'qlogic', 'flogic', 'carp', 'smallk', 'bossk', 'sclogic', 'sklogic', 'ocShuff', 'sngShuff', 'eggShuff', 'beanShuff', 'chulogic', 'forest', 'tree', 'gate', 'door', 'fountain', 'shpsize', 'cowShuff', 'numtrials', 'pigBK', 'gER', 'oER', 'iER', 'dER', 'medi', 'ladin', 'age', 'rstrt'];
 var cookieDefault = {
    iZoom: 100,
    mZoom: 100,
@@ -100,6 +101,7 @@ var cookieDefault = {
    beanShuff: 0,
    chulogic: 0,
    forest: 1,
+   tree: 1,
    gate: 1,
    door: 1,
    fountain: 0,
@@ -143,6 +145,9 @@ function loadCookie() {
 
    document.getElementsByName('OpenForest')[0].checked = !!cookieobj.forest;
    document.getElementsByName('OpenForest')[0].onchange();
+   
+   document.getElementsByName('OpenDeku')[0].checked = !!cookieobj.tree;
+   document.getElementsByName('OpenDeku')[0].onchange(); 
 
    document.getElementsByName('OpenGate')[0].checked = !!cookieobj.gate;
    document.getElementsByName('OpenGate')[0].onchange();
@@ -269,6 +274,7 @@ function saveCookie() {
    cookieobj.mZoom = document.getElementsByName('mapdivsize')[0].value;
 
    cookieobj.forest = document.getElementsByName('OpenForest')[0].checked ? 1 : 0;
+   cookieobj.tree = document.getElementsByName('OpenDeku')[0].checked ? 1 : 0; 
    cookieobj.gate = document.getElementsByName('OpenGate')[0].checked ? 1 : 0;
    cookieobj.door = document.getElementsByName('OpenDoor')[0].checked ? 1 : 0;
    cookieobj.fountain = document.getElementsByName('OpenFountain')[0].checked ? 1 : 0;
@@ -1607,6 +1613,13 @@ function setScrub(sender) {
 
 function setForest(sender) {
    OpenForest = sender.checked;
+   updateGridItemAll();
+   updateMap();
+   saveCookie();
+}
+
+function setTree(sender) {
+   OpenDeku = sender.checked;
    updateGridItemAll();
    updateMap();
    saveCookie();
