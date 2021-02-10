@@ -174,85 +174,85 @@ var dungeons = [
       chestlist: {
          'Lobby Chest': {
             isAvailable: function () {
-               return dungeons[1].access; }
+               return OpenDeku == 0 || (items.KokiriSword && items.DekuShield); }
          },
          '2nd Floor Chest': {
             isAvailable: function () {
-               return items.DekuShield; }
+               return (items.DekuShield && OpenDeku == 0 || (items.KokiriSword && items.DekuShield)); }
          },
          '2nd Floor Side Chest': {
             isAvailable: function () {
-               return items.DekuShield; }
+               return (items.DekuShield && OpenDeku == 0 || (items.KokiriSword && items.DekuShield)); }
          },
          'Top Floor Chest': {
             isAvailable: function () {
-               return true; }
+               return OpenDeku == 0 || (items.KokiriSword && items.DekuShield); }
          },
          'Top Floor Side Chest': {
             isAvailable: function () {
-               return true; }
+               return OpenDeku == 0 || (items.KokiriSword && items.DekuShield); }
          },
          'Basement Chest': {
             isAvailable: function () {
-               return true; }
+               return OpenDeku == 0 || (items.KokiriSword && items.DekuShield); }
          },
          'Queen Gohma': {
             isAvailable: function () {
-               return items.DekuShield && (items.Slingshot || (items.Stick && items.Nuts));
+               return (items.DekuShield OpenDeku == 0 || (items.KokiriSword && items.DekuShield));
             }
          },
       },
       skulllist: {
          'Top Floor Skulltula': {
             isAvailable: function () {
-               return true; }
+               return OpenDeku == 0 || (items.KokiriSword && items.DekuShield); }
          },
          'Basement 1st Skulltula': {
             isAvailable: function () {
-               return true; }
+               return OpenDeku == 0 || (items.KokiriSword && items.DekuShield); }
          },
          'Basement 2nd Skulltula': {
             isAvailable: function () {
-               return true; }
+               return OpenDeku == 0 || (items.KokiriSword && items.DekuShield); }
          },
          'Basement Bomb Wall Skulltula': {
             isAvailable: function () {
-               return items.Boomerang && items.Bombs; }
+               return (OpenDeku == 0 || (items.KokiriSword && items.DekuShield)) && items.Boomerang && items.Bombs; }
          },
       },
       MQlist: {
          'Lobby Chest': {
             isAvailable: function () {
-               return true; }
+               return OpenDeku == 0 || (items.KokiriSword && items.DekuShield); }
          },
          'Top Floor Torch Chest': {
             isAvailable: function () {
-               return true; }
+               return OpenDeku == 0 || (items.KokiriSword && items.DekuShield); }
          },
          'Top Floor Larva Kill': {
             isAvailable: function () {
-               return true; }
+               return OpenDeku == 0 || (items.KokiriSword && items.DekuShield); }
          },
          '2nd Floor Chest': {
             isAvailable: function () {
-               return true; }
+               return OpenDeku == 0 || (items.KokiriSword && items.DekuShield); }
          },
          'Basement Chest 1': {
             isAvailable: function () {
-               return true; }
+               return OpenDeku == 0 || (items.KokiriSword && items.DekuShield); }
          },
          'Spiked Log Open Chest': {
             isAvailable: function () {
-               return items.Slingshot; }
+               return (OpenDeku == 0 || (items.KokiriSword && items.DekuShield)) && items.Slingshot; }
          },
          'Song of Time Chest': {
             isAvailable: function () {
-               return items.Slingshot && items.Ocarina && items.SongofTime; 
+               return (OpenDeku == 0 || (items.KokiriSword && items.DekuShield)) && items.Slingshot && items.Ocarina && items.SongofTime; 
             }
          },
          'Queen Gohma': {
             isAvailable: function () {
-               return items.DekuShield; }
+               return (items.DekuShield OpenDeku == 0 || (items.KokiriSword && items.DekuShield));
          },
       },
       MQskulllist: {
