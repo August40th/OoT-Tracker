@@ -198,7 +198,7 @@ var dungeons = [
          },
          'Queen Gohma': {
             isAvailable: function () {
-               return (items.DekuShield OpenDeku == 0 || (items.KokiriSword && items.DekuShield));
+               return (items.DekuShield && OpenDeku == 0 || (items.KokiriSword && items.DekuShield));
             }
          },
       },
@@ -252,7 +252,7 @@ var dungeons = [
          },
          'Queen Gohma': {
             isAvailable: function () {
-               return (items.DekuShield OpenDeku == 0 || (items.KokiriSword && items.DekuShield));
+               return (items.DekuShield && OpenDeku == 0 || (items.KokiriSword && items.DekuShield));
          },
       },
       MQskulllist: {
