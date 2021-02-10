@@ -166,39 +166,34 @@ var dungeons = [
       x: "88.0%",
       y: "48.5%",
       type: "dungeon",
-      access: {
-            isAvailable: function () {
-               return OpenForest == 1 || (items.DekuShield && items.KokiriSword)
-            }
-      },
       chestlist: {
          'Lobby Chest': {
             isAvailable: function () {
-               return dungeons[1].access; }
+               return OpenDeku == 0 || (items.KokiriSword&& items.DekuShield); }
          },
          '2nd Floor Chest': {
             isAvailable: function () {
-               return items.DekuShield; }
+               return (items.DekuShield && OpenDeku == 0) || (items.KokiriSword&& items.DekuShield); }
          },
          '2nd Floor Side Chest': {
             isAvailable: function () {
-               return items.DekuShield; }
+               return (items.DekuShield && OpenDeku == 0) || (items.KokiriSword&& items.DekuShield); }
          },
          'Top Floor Chest': {
             isAvailable: function () {
-               return true; }
+               return OpenDeku == 0 || (items.KokiriSword&& items.DekuShield); }
          },
          'Top Floor Side Chest': {
             isAvailable: function () {
-               return true; }
+               return OpenDeku == 0 || (items.KokiriSword&& items.DekuShield); }
          },
          'Basement Chest': {
             isAvailable: function () {
-               return true; }
+               return OpenDeku == 0 || (items.KokiriSword&& items.DekuShield); }
          },
          'Queen Gohma': {
             isAvailable: function () {
-               return items.DekuShield && (items.Slingshot || (items.Stick && items.Nuts));
+               return (items.DekuShield && OpenDeku == 0) || (items.KokiriSword&& items.DekuShield);
             }
          },
       },
