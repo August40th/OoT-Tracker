@@ -706,7 +706,7 @@ label {
 .mapspan .tooltipgray {
     visibility: hidden;
     width: 160px;
-    font-size: 16;
+    font-size: 20;
     background-color: black;
     color: #fff;
     text-align: center;
@@ -730,7 +730,7 @@ label {
 .mapspan .tooltip {
     visibility: hidden;
     width: 160px;
-    font-size: 16;
+    font-size: 24;
     background-color: black;
     color: #fff;
     text-align: center;
