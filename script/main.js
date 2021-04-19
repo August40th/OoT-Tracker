@@ -1720,6 +1720,7 @@ function setIndoorER(sender) {
 
 function setOWER(sender) {
    OWERmap = sender.checked;
+   populateMapdiv();
    updateMap();
    drawDungeonList();
    saveCookie();
@@ -2269,7 +2270,6 @@ function gridItemClick(row, col, corner) {
 }
 
 function updateMap() {
-   populateMapdiv();
    drawIndoorChecks();
    for (k = 0; k < chests.length; k++) {
       if (!chests[k].isOpened)
@@ -2619,11 +2619,11 @@ function populateMapdiv() {
 
       mapdiv.appendChild(s);
    }
-   
+    
+   if (OWERmap == true){
    var ermapdiv = document.getElementById('ermapdiv');
 
    // Initialize all entrances on 2nd map
-   //if (OWERmap == true){
        for (k = 0; k < dungeons.length; k++) {
            for (var key in dungeons[k].entrancelist) {
               var s = document.createElement('span');
@@ -2644,7 +2644,7 @@ function populateMapdiv() {
               ermapdiv.appendChild(s);
            }
        }
-   //}
+   }
 
    // Dungeon bosses & chests
    for (k = 0; k < dungeons.length; k++) {
