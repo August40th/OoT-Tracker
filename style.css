@@ -168,7 +168,7 @@ label {
 .ermapdiv{
     if (OWERmap == true)
         background-image: url("images/ermap.png");
-    else if (OWERma false)
+    else if (OWERmap == false)
         background-image: none;
     background-size: 100% 100%;
     background-repeat: no-repeat;
