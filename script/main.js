@@ -41,7 +41,7 @@ OpenFountain = false;
 
 GrottoER = false;
 IndoorER = 'Off';
-OWERmap = false;
+OWERmap = true ;
 DungeonER = false;
 
 Age = 'Child';
@@ -2269,6 +2269,7 @@ function gridItemClick(row, col, corner) {
 }
 
 function updateMap() {
+   populateMapdiv();
    drawIndoorChecks();
    for (k = 0; k < chests.length; k++) {
       if (!chests[k].isOpened)
