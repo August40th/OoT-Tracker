@@ -166,7 +166,10 @@ label {
 }
 
 .ermapdiv{
-    background-image: url("images/ermap.png");
+    if (OWERmap == true)
+        background-image: url("images/ermap.png");
+    else
+        background-image: none;
     background-size: 100% 100%;
     background-repeat: no-repeat;
 
