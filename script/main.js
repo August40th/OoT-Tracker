@@ -2622,6 +2622,7 @@ function populateMapdiv() {
    var ermapdiv = document.getElementById('ermapdiv');
 
    // Initialize all entrances on 2nd map
+   if (OWERmap == true){
        for (k = 0; k < dungeons.length; k++) {
            for (var key in dungeons[k].entrancelist) {
               var s = document.createElement('span');
@@ -2642,6 +2643,7 @@ function populateMapdiv() {
               ermapdiv.appendChild(s);
            }
        }
+   }
 
    // Dungeon bosses & chests
    for (k = 0; k < dungeons.length; k++) {
