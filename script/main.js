@@ -1094,7 +1094,7 @@ function drawDungeonList() {
                 li.onclick = new Function('toggleIndoor(this,' + dungeonSelect + ',"' + door + '")');
                 li.onmouseover = new Function('highlightDungeonChest(this)');
                 li.onmouseout = new Function('unhighlightDungeonChest(this)');
-                li.setAttribute("data-type", "simple");
+                li.setAttribute("data-type", "indoor");
                 if (dNone) li.classList.add("d-none");
                 DClist.appendChild(li);
             }
