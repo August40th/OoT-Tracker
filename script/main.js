@@ -598,9 +598,6 @@ function drawIndoorChecks() {
                     else if (shopsize > 0 && key.includes("Shop") ) {
                         FairyShops.appendChild(li);
                     }
-                    else if (dungeons[k].chestlist[key].access === "grotto" || (key.includes("Dampe Race") && GrottoER == true ) ) {
-                        Grottolist.appendChild(li);
-                    }
                     else {
                         Doorlist.appendChild(li);
                     }
@@ -667,6 +664,15 @@ function drawDungeonList() {
                 s.classList.add("d-none"); }
             if (dungeons[dungeonSelect].chestlist[key].access == "grotto" && GrottoER == true && IndoorER !== "Off") {
                 s.classList.add("d-none"); }
+
+            s.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
+            s.onmouseover = new Function('highlightDungeonChest(this)');
+            s.onmouseout = new Function('unhighlightDungeonChest(this)');
+            s.style.cursor = "pointer";
+            s.setAttribute("data-type", "chest");
+            if (dNone) s.classList.add("d-none");
+            DClist.appendChild(s)
+         }
       if ((skulltula === "Dungeons" || skulltula === "All") &&  dungeons[dungeonSelect].type === "dungeon"){
          for (let key in dungeons[dungeonSelect].skulllist) {
             let li = document.createElement('li');
@@ -862,8 +868,6 @@ function drawDungeonList() {
             if (dungeons[dungeonSelect].chestlist[key].access == "alldoor" && IndoorER === "Full" ) {
                 s.classList.add("d-none"); }
             if (dungeons[dungeonSelect].chestlist[key].access == "grotto" && GrottoER == true && IndoorER !== "Off") {
-                s.classList.add("d-none"); }
-            if (key.includes("Dampe Race") && GrottoER == true && IndoorER !== "Off") {
                 s.classList.add("d-none"); }
  
             s.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
@@ -2656,8 +2660,6 @@ function populateMapdiv() {
                {}
                else if (dungeons[k].chestlist[key].access == "grotto" && GrottoER == true && IndoorER !== "Off") 
                {}
-               else if (key.includes("Dampe Race") && IndoorER !== "Off" && GrottoER == true)
-               {}
                else if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable() && !(BeanShuffle == false && key == "BeanSalseman") )
                   DCcount++;
             }
@@ -2957,6 +2959,8 @@ function getDungeonAvailability(dungeon) {
                   {}
                   else if (DungeonER == false && (key.includes(" Temple") || key.includes("Deku Tree") || key.includes(" Cavern") || key.includes("Bottom of") || key.includes("Belly") || key.includes("Training") ))
                   {}
+                  //else if (GrottoER == false && (key.includes("Grotto") || key.includes("Grave") || key.includes("Tomb") ) )
+                  //{}
                   else if (!list[key].isOpened && list[key].isAvailable()) {
                       canGet++;
                   }
@@ -3099,6 +3103,8 @@ function getDungeonAvailability(dungeon) {
                {}
                else if (DungeonER == false && (key.includes(" Temple") || key.includes("Deku Tree") || key.includes(" Cavern") || key.includes("Bottom of") || key.includes("Belly") || key.includes("Training") ))
                {}
+               //else if (GrottoER == false && (key.includes("Grotto") || key.includes("Grave") || key.includes("Tomb") ) )
+               //{}
                else if (!list[key].isOpened && list[key].isAvailable()) {
                    canGet++;
                }
