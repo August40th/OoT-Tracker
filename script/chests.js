@@ -2131,7 +2131,7 @@ var dungeons = [
       },
       skulllist: {
          'Child Torch Skulltula': {
-            type: skulltula",
+            type: "skulltula",
             isAvailable: function () {
                return items.Ocarina && items.RequiemofSpirit && (items.Slingshot || items.Boomerang);
             },
