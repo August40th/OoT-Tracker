@@ -83,6 +83,7 @@ function getCookie() {
     return {};
 }
 
+var cookiekeys = ['iZoom', 'mZoom', 'rainlogic', 'items', 'qlogic', 'flogic', 'carp', 'smallk', 'bossk', 'sclogic', 'sklogic', 'ocShuff', 'sngShuff', 'eggShuff', 'beanShuff', 'chulogic', 'forest', 'tree', 'gate', 'door', 'fountain', 'shpsize', 'cowShuff', 'numtrials', 'pigBK', 'gER', 'oER', 'iER', 'dER', 'medi', 'ladin', 'age', 'rstrt'];
 var cookieDefault = {
    iZoom: 100,
    mZoom: 100,
