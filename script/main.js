@@ -1292,7 +1292,7 @@ function gridItemClick(row, col, corner) {
     } else {
         var item = itemLayout[row][col];
 
-        if (medallions[item] !== undefined && showprizes) {
+        if (medallions[item] !== undefined) {
             if (corner == 3) {
                 medallions[item]++;
                 if (medallions[item] >=  9) {
@@ -1326,7 +1326,7 @@ function gridItemRClick(row, col, corner) {
     } else {
         var item = itemLayout[row][col];
 
-        if (medallions[item] !== undefined && showprizes) {
+        if (medallions[item] !== undefined) {
             if (corner == 3) {
                 //this is where the code for the dungeon list happenes
                 //corner 3 is bottom right
