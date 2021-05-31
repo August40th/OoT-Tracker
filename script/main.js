@@ -80,11 +80,11 @@ function setCookie(obj) {
     d.setTime(d.getTime() + (365 * 24 * 60 * 60 * 1000));
     var expires = "expires=" + d.toUTCString();
     var val = JSON.stringify(obj);
-    document.cookie = "key=" + val + ";" + expires + ";path=/";
+    document.cookie = "cookey=" + val + ";" + expires + ";path=/";
 }
 
 function getCookie() {
-    var name = "key=";
+    var name = "cookey=";
     var ca = document.cookie.split(';');
     for (var i = 0; i < ca.length; i++) {
         var c = ca[i];
@@ -510,7 +510,7 @@ function clickDungeon(d) {
     var DClist = document.getElementById('submaplist');
     DClist.innerHTML = '';
     var regionSelected = document.getElementById('submaparea').innerHTML;
-    document.getElementById('submaparea').onclick = new Function('bulkDCSelect(this)');
+    submaparea.onclick = new Function('bulkDCSelect(this)');
 
     for (var key in dungeons[dungeonSelect].chestlist) {
         var s = document.createElement('li');
