@@ -528,6 +528,13 @@ function clickDungeon(d) {
         s.style.cursor = "pointer";
 
         DClist.appendChild(s);
+
+submaparea.oncontextmenu = function(e) {
+         e.preventDefault();
+         var clean = dungeons[dungeonSelect].canGetChest();
+         if (clean === "unavailable" || clean === "available" || clean === "opened")
+             bulkDCSelect();
+             }
     }
 }
 
@@ -1417,10 +1424,10 @@ function gridItemRClick(row, col, corner) {
 function updateMap() {
     for (k = 0; k < chests.length; k++) {
         if (!chests[k].isOpened)
-            document.getElementById(k).className = "mapspan chest " + chests[k].isAvailable() + ((chestMarked.indexOf(k) > -1) ? " wayofhero" : " ");
+            document.getElementById(k).className = "mapspan chest " + checkChestAvailablity(chests[k]) + ((chestMarked.indexOf(k) > -1) ? " wayofhero" : " ");
     }
     for (k = 0; k < dungeons.length; k++) {
-        document.getElementById("dungeon" + k).className = "mapspan dungeon " + dungeons[k].canGetChest() + ((dungeonMarked.indexOf(k) > -1) ? " wayofhero" : " ");
+        document.getElementById("dungeon" + k).className = "mapspan dungeon " + getDungeonAvailability(dungeons[k]) + ((dungeonMarked.indexOf(k) > -1) ? " wayofhero" : " ");
         var DCcount = 0;
         for (var key in dungeons[k].chestlist) {
             if (dungeons[k].chestlist.hasOwnProperty(key)) {
