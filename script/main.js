@@ -302,7 +302,6 @@ function saveCookie() {
 
     cookieobj = {};
 
-    cookieobj.map = document.getElementsByName('showmap')[0].checked ? 1 : 0;
     cookieobj.iZoom = document.getElementsByName('itemdivsize')[0].value;
     cookieobj.mZoom = document.getElementsByName('mapdivsize')[0].value;
    cookieobj.forest = document.getElementsByName('OpenForest')[0].checked ? 1 : 0;
