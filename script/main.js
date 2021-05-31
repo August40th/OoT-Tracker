@@ -1166,13 +1166,9 @@ function updateGridItem(row, index) {
       else
          itemGrid[row][index][3].style.backgroundImage = "url(images/" + songimg[songs[item]] + ".png)";
    }
-    if (medallions[item] !== undefined) {
-        if (showprizes) {
-            itemGrid[row][index][3].style.backgroundImage = 'url(images/' + dungeonImg[medallions[item]] + '.png)';
-        } else {
-            itemGrid[row][index][3].style.backgroundImage = '';
-        }
-    }
+   if (medallions[item] !== undefined) {
+         itemGrid[row][index][3].style.backgroundImage = "url(images/" + dungeonImg[medallions[item]] + ".png)";
+   }
 }
 
 
