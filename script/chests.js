@@ -165,7 +165,7 @@ var dungeons = [
             type: "dungeon",
             access: "door",
             isAvailable: function () {
-               return (items.DekuShield && OpenDeku == 0) ||                                        (items.KokiriSword&& items.DekuShield);}
+               return (items.DekuShield && OpenDeku == 0) || (items.KokiriSword&& items.DekuShield);}
          },
       },
       isBeatable: function () {
@@ -350,64 +350,55 @@ var dungeons = [
             type: "skulltula",
             access: "vanilla",
             isAvailable: function () {
-               return items.Bombs || items.Hammer || items.Glove;
-            },
+               return items.Bombs || items.Hammer || items.Glove; }
          },
          'Scarecrow Skulltula': {
             type: "skulltula",
             access: "vanilla",
             isAvailable: function () {
-               return items.Bombs || items.Hammer || items.Glove && items.Ocarina && items.Hookshot;
-            },
+               return items.Bombs || items.Hammer || items.Glove && items.Ocarina && items.Hookshot; }
          },
          '1F Right Scrub Room': {
             type: "scrub",
             access: "vanilla",
             isAvailable: function () {
-               return items.Bombs || items.Hammer || items.Glove;
-            },
+               return items.Bombs || items.Hammer || items.Glove; }
          },
          'Lobby Chest': {
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (OpenGate == 1 || (OpenGate == 0 && (items.Mask >= 1 || items.MasterSword || items.Bombs || (items.Dins && items.Magic) || (items.Bombchu && BombchuLogic)))) && (items.Bombs || (items.MasterSword && items.Hammer) || items.Glove || (items.Bombchu && BombchuLogic));
-            },
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (OpenGate == 1 || (OpenGate == 0 && (items.Mask >= 1 || items.MasterSword || items.Bombs || (items.Dins && items.Magic) || (items.Bombchu && BombchuLogic)))) && (items.Bombs || (items.MasterSword && items.Hammer) || items.Glove || (items.Bombchu && BombchuLogic)); }
          },
          'Lobby Scrub': {
             type: "scrub",
             access: "vanilla",
             isAvailable: function () {
-               return items.Bombs || items.Hammer || items.Glove;
-            },
+               return items.Bombs || items.Hammer || items.Glove; }
          },
          'Armos Chest': {
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (OpenGate == 1 || (OpenGate == 0 && (items.Mask >= 1 || items.MasterSword || items.Bombs || (items.Dins && items.Magic) || (items.Bombchu && BombchuLogic)))) && (items.Bombs || (items.MasterSword && items.Hammer) || items.Glove || (items.Bombchu && BombchuLogic));
-            },
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (OpenGate == 1 || (OpenGate == 0 && (items.Mask >= 1 || items.MasterSword || items.Bombs || (items.Dins && items.Magic) || (items.Bombchu && BombchuLogic)))) && (items.Bombs || (items.MasterSword && items.Hammer) || items.Glove || (items.Bombchu && BombchuLogic)); }
          },
          'Top of the Stairs Skulltula': {
             type: "skulltula",
             access: "vanilla",
             isAvailable: function () {
-               return (items.Bombs || items.Glove) || (items.Hammer && (items.Bow || (items.Magic && items.Dins)));
-            },
+               return (items.Bombs || items.Glove) || (items.Hammer && (items.Bow || (items.Magic && items.Dins))); }
          },
          'Behind Stairs Skulltula': {
             type: "skulltula",
             access: "vanilla",
             isAvailable: function () {
-               return (items.Bombs || items.Glove) || (items.Hammer && (items.Bow || (items.Magic && items.Dins)));
-            },
+               return (items.Bombs || items.Glove) || (items.Hammer && (items.Bow || (items.Magic && items.Dins))); }
          },
          'Bomb Flower Platform': {
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (OpenGate == 1 || (OpenGate == 0 && (items.Mask >= 1 || items.MasterSword || items.Bombs || (items.Dins && items.Magic) || (items.Bombchu && BombchuLogic)))) && (items.Bombs || (items.MasterSword && items.Hammer && items.Bow) || items.Glove || (items.Bombchu && BombchuLogic));
-            },
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (OpenGate == 1 || (OpenGate == 0 && (items.Mask >= 1 || items.MasterSword || items.Bombs || (items.Dins && items.Magic) || (items.Bombchu && BombchuLogic)))) && (items.Bombs || (items.MasterSword && items.Hammer && items.Bow) || items.Glove || (items.Bombchu && BombchuLogic)); }
          },
          'Top Floor Big Chest': {
             type: "chest",
@@ -420,8 +411,8 @@ var dungeons = [
             type: "scrub",
             access: "vanilla",
             isAvailable: function () {
-               return (items.Bombs || items.Glove || items.Hammer) && (items.Slingshot || items.Bow || items.HoverBoots) && (items.Bow || (items.Magic && items.Dins));
-            },
+               return (items.Bombs || items.Glove || items.Hammer) && (items.Slingshot || items.Bow || items.HoverBoots) && (items.Bow || (items.Magic && items.Dins)); }
+         },
          'End of Bridge Chest': {
             type: "chest",
             access: "vanilla",
@@ -434,7 +425,7 @@ var dungeons = [
             access: "vanilla",
             isAvailable: function () {
                return (items.Bombs || items.Glove) && ((items.Slingshot && items.Glove) || items.Bow);
-            },
+            }
          },
          'Chest Above King Dodongo': {
             type: "chest",
