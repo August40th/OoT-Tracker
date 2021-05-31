@@ -510,7 +510,7 @@ function clickDungeon(d) {
     var DClist = document.getElementById('submaplist');
     DClist.innerHTML = '';
     var regionSelected = document.getElementById('submaparea').innerHTML;
-    regionSelected.onclick = new Function('bulkDCSelect(this)');
+    document.getElementById('submaparea').onclick = new Function('bulkDCSelect(this)');
 
     for (var key in dungeons[dungeonSelect].chestlist) {
         var s = document.createElement('li');
