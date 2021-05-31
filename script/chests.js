@@ -27,9 +27,23 @@ var dungeons = [
       y: "63.9%",
       type: "overworld",
       chestlist: {
-         'Kokiri Sword Chest': {
-            type: "chest",
-            access: "outdoor",
+         'Forest to Field': {
+          x: "75.0%",
+          y: "58.0%",
+          type: "entrance",
+          access: "entrance",
+          isAvailable: function () {
+               return true; }
+       },
+         'Fairy Ocarina': {
+            type: "ocarina",
+            access: "entrance",
+            isAvailable: function () {
+               return true; }
+         },
+         'Mido\'s House': {
+            type: "simple",
+            access: "door",
             isAvailable: function () {
                return true; }
          },
@@ -39,31 +53,11 @@ var dungeons = [
             isAvailable: function () {
                return true; }
          },
-         'Fairy Ocarina': {
-            type: "ocarina",
-            access: "entrance",
+         'Know It All Bro\'s': {
+            type: "simple",
+            access: "door",
             isAvailable: function () {
                return true; }
-         },
-         'Song of Storms Grotto': {
-            type: "chest",
-            access: "grotto",
-            isAvailable: function () {
-               return items.Ocarina && items.SongofStorms; }
-         },
-         'Link\'s House Cow Milk': {
-            type: "cow",
-            access: "alldoor",
-            isAvailable: function () {
-               return items.Ocarina && items.EponasSong; }
-         },
-      },
-      skulllist: {
-         'Soil Patch Skulltula': {
-            type: "skulltula",
-            access: "outdoor",
-            isAvailable: function () {
-               return items.Bottle; }
          },
          'Child Know it All Bros Skulltula': {
             type: "skulltula",
@@ -71,49 +65,9 @@ var dungeons = [
             isAvailable: function () {
                return true; }
          },
-         'Adult Twin\'s House Roof Skulltula': {
-            type: "skulltula",
+         'Kokiri Sword Chest': {
+            type: "chest",
             access: "outdoor",
-            isAvailable: function () {
-               return items.MasterSword && items.Hookshot; }
-         },
-      },
-      shoplist: {
-         'Kokiri Shop': {
-            type: "shop",
-            access: "simple",
-            isAvailable: function () {
-               return true; }
-         },
-         'Kokiri Shop 2': {
-            type: "shop",
-            access: "simple",
-            isAvailable: function () {
-               return true; }
-         },
-         'Kokiri Shop 3': {
-            type: "shop",
-            access: "simple",
-            isAvailable: function () {
-               return true; }
-         },
-         'Kokiri Shop 4': {
-            type: "shop",
-            access: "simple",
-            isAvailable: function () {
-               return true; }
-         },
-      },
-      indoorlist: {
-         'Mido\'s House': {
-            type: "simple",
-            access: "door",
-            isAvailable: function () {
-               return true; }
-         },
-         'Know It All Bro\'s': {
-            type: "simple",
-            access: "door",
             isAvailable: function () {
                return true; }
          },
@@ -122,6 +76,12 @@ var dungeons = [
             access: "door",
             isAvailable: function () {
                return true; }
+         },
+         'Link\'s House Cow': {
+            type: "cow",
+            access: "alldoor",
+            isAvailable: function () {
+               return items.Ocarina && items.EponasSong; }
          },
          'Saria\'s House': {
             type: "simple",
@@ -135,17 +95,71 @@ var dungeons = [
             isAvailable: function () {
                return true; }
          },
+         'Adult Twin\'s House Roof Skulltula': {
+            type: "skulltula",
+            access: "outdoor",
+            isAvailable: function () {
+               return items.MasterSword && items.Hookshot; }
+         },
+         'Soil Patch Skulltula': {
+            type: "skulltula",
+            access: "outdoor",
+            isAvailable: function () {
+               return items.Bottle; }
+         },
          'Kokiri Shop': {
             type: "simple",
             access: "door",
             isAvailable: function () {
                return true; }
          },
-         'Storms Grotto': {
+         'Kokiri Sale': {
+            type: "shop",
+            access: "simple",
+            isAvailable: function () {
+               return true; }
+         },
+         'Infront Storms Grotto': {
+            type: "gossip",
+            access: "outdoor",
+            isAvailable: function () {
+               return true; }
+         },
+         'Song of Storms Grotto': {
             type: "grotto",
             access: "grotto",
             isAvailable: function () {
                return items.Ocarina && items.SongofStorms; }
+         },
+         'Storms Grotto Chest': {
+            type: "chest",
+            access: "grotto",
+            isAvailable: function () {
+               return items.Ocarina && items.SongofStorms; }
+         },
+         'Storms Grotto Gossip': {
+            type: "gossip",
+            access: "outdoor",
+            isAvailable: function () {
+               return true; }
+         },
+         'Forest to Woods': {
+          x: "78.9%",
+          y: "56.0%",
+          isAvailable: function () {
+               return true; }
+       },
+         'Left of Deku Tree Gossip': {
+            type: "gossip",
+            access: "outdoor",
+            isAvailable: function () {
+               return true; }
+         },
+         'Behind Deku Tree Gossip': {
+            type: "gossip",
+            access: "outdoor",
+            isAvailable: function () {
+               return true; }
          },
          'Inside the Deku Tree': {
             type: "dungeon",
@@ -154,34 +168,6 @@ var dungeons = [
                return (items.DekuShield && OpenDeku == 0) ||                                        (items.KokiriSword&& items.DekuShield);}
          },
       },
-      gossiplist: {
-         'Infront Storms Grotto': {
-            isAvailable: function () {
-               return true; }
-         },
-         'Left of Deku Tree': {
-            isAvailable: function () {
-               return true; }
-         },
-         'Behind Deku Tree': {
-            isAvailable: function () {
-               return true; }
-         },
-      },
-    entrancelist: {
-       'Forest to Field': {
-          x: "75.0%",
-          y: "58.0%",
-          isAvailable: function () {
-               return true; }
-       },
-       'Forest to Woods': {
-          x: "78.9%",
-          y: "56.0%",
-          isAvailable: function () {
-               return true; }
-       },
-    },
       isBeatable: function () {
          return this.canGetChest();
       },
