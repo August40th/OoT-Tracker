@@ -5416,6 +5416,7 @@ var dungeons = [
       x: "54.0%",
       y: "42.0%",
       type: "overworld",
+      chestlist: {},
       entrancelist: {
          'Field to Forest': {
             x: "64.0%",
