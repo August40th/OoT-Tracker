@@ -1669,7 +1669,6 @@ function isKeysanity() {
 }
 
 function init() {
-   createItemTracker(document.getElementById('itemdiv'));
    quest = null;
    populateMapdiv();
    populateItemconfig();
