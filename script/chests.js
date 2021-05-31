@@ -372,7 +372,7 @@ var dungeons = [
             access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (OpenGate == 1 || (OpenGate == 0 && (items.Mask >= 1 || items.MasterSword || items.Bombs || (items.Dins && items.Magic) || (items.Bombchu && BombchuLogic)))) && (items.Bombs || (items.MasterSword && items.Hammer) || items.Glove || (items.Bombchu && BombchuLogic));
-            }
+            },
          },
          'Lobby Scrub': {
             type: "scrub",
@@ -386,7 +386,7 @@ var dungeons = [
             access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (OpenGate == 1 || (OpenGate == 0 && (items.Mask >= 1 || items.MasterSword || items.Bombs || (items.Dins && items.Magic) || (items.Bombchu && BombchuLogic)))) && (items.Bombs || (items.MasterSword && items.Hammer) || items.Glove || (items.Bombchu && BombchuLogic));
-            }
+            },
          },
          'Top of the Stairs Skulltula': {
             type: "skulltula",
@@ -407,7 +407,7 @@ var dungeons = [
             access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (OpenGate == 1 || (OpenGate == 0 && (items.Mask >= 1 || items.MasterSword || items.Bombs || (items.Dins && items.Magic) || (items.Bombchu && BombchuLogic)))) && (items.Bombs || (items.MasterSword && items.Hammer && items.Bow) || items.Glove || (items.Bombchu && BombchuLogic));
-            }
+            },
          },
          'Top Floor Big Chest': {
             type: "chest",
@@ -472,8 +472,7 @@ var dungeons = [
             type: "skulltula",
             access: "master",
             isAvailable: function () {
-               return (items.Glove || items.Bombs || items.Hammer) && items.Ocarina && items.SongofTime;
-            },
+               return (items.Glove || items.Bombs || items.Hammer) && items.Ocarina && items.SongofTime; }
          },
          'Stair Master Scrub': {
             type: "scrub",
