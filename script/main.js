@@ -431,6 +431,14 @@ function deserializeDungeonChests(serializedDungeons) {
 // Event of clicking a chest on the map
 function toggleChest(x) {
     chests[x].isOpened = !chests[x].isOpened;
+   if (chests[x].isOpened){
+      if (document.getElementById(x).classList.contains('wayofhero'))
+         document.getElementById(x).className = "mapspan chest opened wayofhero";
+      else
+         document.getElementById(x).className = "mapspan chest opened";
+   }
+   else
+      document.getElementById(x).className = "mapspan chest " + chests[x].isAvailable();
     refreshChest(x);
     saveCookie();
 }
@@ -1409,11 +1417,10 @@ function gridItemRClick(row, col, corner) {
 function updateMap() {
     for (k = 0; k < chests.length; k++) {
         if (!chests[k].isOpened)
-            document.getElementById(k).className = 'mapspan chest ' + chests[k].isAvailable();
+            document.getElementById(k).className = "mapspan chest " + checkChestAvailablity(chests[k]) + ((chestMarked.indexOf(k) > -1) ? " wayofhero" : " ");
     }
     for (k = 0; k < dungeons.length; k++) {
-        document.getElementById('dungeon' + k).className = 'mapspan dungeon ' + dungeons[k].canGetChest();
-
+        document.getElementById("dungeon" + k).className = "mapspan dungeon " + getDungeonAvailability(dungeons[k]) + ((dungeonMarked.indexOf(k) > -1) ? " wayofhero" : " ");
         var DCcount = 0;
         for (var key in dungeons[k].chestlist) {
             if (dungeons[k].chestlist.hasOwnProperty(key)) {
