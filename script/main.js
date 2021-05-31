@@ -436,6 +436,11 @@ function toggleChest(x) {
     saveCookie();
 }
 
+function refreshChest(x) {
+    var stateClass = chests[x].isOpened ? 'opened' : chests[x].isAvailable();
+    document.getElementById(x).className = 'mapspan chest ' + stateClass;
+}
+
 function toggleMarkedChest(x) {
    window.event.preventDefault()
    var elem = document.getElementById(x);
