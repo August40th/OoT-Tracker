@@ -544,148 +544,163 @@ var dungeons = [
       canGetChest: function () {
          return generalCanGetChest(this.chestlist);
       },
-   },
-   { name: "Jabu Jabu's Belly",
+   },{ name: "Jabu Jabu's Belly",
       x: "88.4%",
       y: "18.0%",
       type: "dungeon",
       chestlist: {
+         'Water Switch Skulltula': {
+            type: "skulltula",
+            access: "vanilla",
+            isAvailable: function () {
+               return (items.Bombs || items.Scale) && items.ZoraLetter; }
+         },
+         'Basement Dive to Scrub': {
+            type: "scrub",
+            access: "vanilla",
+            isAvailable: function () {
+               return ((items.Bombs && items.ZeldasLullaby && items.Ocarina) || items.Scale) && items.ZoraLetter && (items.Slingshot || items.Bombs || items.Boomerang);
+            }
+         },
          'StingRay Chest': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && (items.Slingshot || items.Boomerang || items.Bombs || (items.Bombchu && BombchuLogic));
             }
          },
          'Tentacle Chest': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && items.Boomerang;
             }
          },
          'Bubble Pop Chest': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && items.Boomerang;
             }
-         },
-         'Barinade': {
-            type: "boss",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && items.Boomerang;
-            }
-         },
-      },
-      skulllist: {
-         'Water Switch Skulltula': {
-            type: "skulltula",
-            isAvailable: function () {
-               return (items.Bombs || items.Scale) && items.ZoraLetter; }
          },
          'Before Big Octo x2 Skulltula': {
             type: "skulltula",
+            access: "vanilla",
             isAvailable: function () {
                return (items.Bombs || items.Scale) && items.ZoraLetter && items.Boomerang;
             }
          },
          'Before Brainade Skulltula': {
             type: "skulltula",
+            access: "vanilla",
             isAvailable: function () {
                return (items.Bombs || items.Scale) && items.ZoraLetter && items.Boomerang;
             }
          },
-      },
-      scrublist: {
-         type: "scrub",
-         'Basement Dive to Scrub': {
+         'Barinade': {
+            type: "boss",
+            access: "vanilla",
             isAvailable: function () {
-               return ((items.Bombs && items.ZeldasLullaby && items.Ocarina) || items.Scale) && items.ZoraLetter && (items.Slingshot || items.Bombs || items.Boomerang);
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && items.Boomerang;
             }
          },
-      },
-      MQlist: {
          'Lobby Switch Chest': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return (items.Bombs || items.Scale) && items.ZoraLetter && items.Bombs;
             },
          },
          'Lobby Cow Chest': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return (items.Bombs || items.Scale) && items.ZoraLetter && items.Slingshot; 
             }
          },
          'Underwater Cow Chest': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return (items.Bombs || items.Scale) && items.ZoraLetter && items.Slingshot; }
          },
          'Elevator Room Lower Chest': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return (items.Bombs || items.Scale) && items.ZoraLetter && items.Slingshot; 
             }
          },
          'Basement Chest x2': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return (items.Bombs || items.Scale) && items.ZoraLetter && items.Slingshot; }
          },
          'Basement Open Chest': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return (items.Bombs || items.Scale) && items.ZoraLetter; }
          },
          'Basement Battle Chest': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return (items.Bombs || items.Scale) && items.ZoraLetter; }
          },
-         'Falling Like Like Chest': {
-            type: "chest",
-            isAvailable: function () {
-               return (items.Bombs || items.Scale) && items.ZoraLetter && items.Slingshot && items.Boomerang; }
-         },
-         'Elevator Room Upper Chest': {
-            type: "chest",
-            isAvailable: function () {
-               return (items.Bombs || items.Scale) && items.ZoraLetter && items.Slingshot && items.Boomerang; }
-         },
-         'Cow Milk': {
-            type: "cow",
-            isAvailable: function () {
-               return (items.Bombs || items.Scale) && items.ZoraLetter && items.Slingshot && items.Boomerang && items.Ocarina && items.EponasSong; }
-         },
-         'Chest Near Boss Door': {
-            type: "chest",
-            isAvailable: function () {
-               return (items.Bombs || items.Scale) && items.ZoraLetter && items.Slingshot && items.Boomerang; }
-         },
-         'Barinade': {
-            type: "boss",
-            isAvailable: function () {
-               return (items.Bombs || items.Scale) && items.ZoraLetter && items.Slingshot && items.Boomerang; }
-         },
-      },
-      MQskulllist: {
          'Song of Time Skulltula': {
             type: "skulltula",
+            access: "master",
             isAvailable: function () {
                return (items.Bombs || items.Scale) && items.ZoraLetter && items.Slingshot && items.Ocarina && items.SongofTime;
             },
          },
-         'Bubble Battle Skulltule': {
+         'Bubble Battle Skulltula': {
             type: "skulltula",
+            access: "master",
             isAvailable: function () {
                return (items.Bombs || items.Scale) && items.ZoraLetter && items.Slingshot && items.Boomerang; }
          },
          'Invisible Enemies Skulltula': {
             type: "skulltula",
+            access: "master",
+            isAvailable: function () {
+               return (items.Bombs || items.Scale) && items.ZoraLetter && items.Slingshot && items.Boomerang; }
+         },
+         'Falling Like Like Chest': {
+            type: "chest",
+            access: "master",
+            isAvailable: function () {
+               return (items.Bombs || items.Scale) && items.ZoraLetter && items.Slingshot && items.Boomerang; }
+         },
+         'Elevator Room Upper Chest': {
+            type: "chest",
+            access: "master",
+            isAvailable: function () {
+               return (items.Bombs || items.Scale) && items.ZoraLetter && items.Slingshot && items.Boomerang; }
+         },
+         'Top Floor Standing Cow': {
+            type: "cow",
+            access: "master",
+            isAvailable: function () {
+               return (items.Bombs || items.Scale) && items.ZoraLetter && items.Slingshot && items.Boomerang && items.Ocarina && items.EponasSong; }
+         },
+         'Chest Near Boss Door': {
+            type: "chest",
+            access: "master",
             isAvailable: function () {
                return (items.Bombs || items.Scale) && items.ZoraLetter && items.Slingshot && items.Boomerang; }
          },
          'Skulltula Near Boos Door': {
             type: "skulltula",
+            access: "master",
+            isAvailable: function () {
+               return (items.Bombs || items.Scale) && items.ZoraLetter && items.Slingshot && items.Boomerang; }
+         },
+         'Barinade': {
+            type: "boss",
+            access: "master",
             isAvailable: function () {
                return (items.Bombs || items.Scale) && items.ZoraLetter && items.Slingshot && items.Boomerang; }
          },
@@ -704,149 +719,168 @@ var dungeons = [
       chestlist: {
          'Front Left Hidden Wall': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.SongofStorms;
             }
          },
          'Front Center Bombable': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.SongofStorms && (items.Bombs || (items.Bombchu && BombchuLogic));
             }
          },
          'Center Large Chest': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.SongofStorms;
             }
          },
          'Underwater Left Chest': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.SongofStorms && items.Ocarina && items.ZeldasLullaby;
             }
          },
          'Coffin Key': {
             type: "freestanding",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.SongofStorms;
             }
          },
          'Center Small Chest': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.SongofStorms;
             }
          },
          'Back Left Bombable': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.SongofStorms && (items.Bombs || (items.Bombchu && BombchuLogic));
             }
          },
-         'Right Bottom Hidden Wall': {
-            type: "chest",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.SongofStorms;
-            }
-         },
-         'Locked Pits': {
-            type: "chest",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.SongofStorms && (items.WellKey >= 1 || smallkeys === "Remove");
-            }
-         },
-         'Like Like Chest': {
-            type: "chest",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.SongofStorms && (items.WellKey >= 1 || smallkeys === "Remove");
-            }
-         },
-         'Basement Chest': {
-            type: "chest",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.SongofStorms && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove);
-            }
-         },
-         'Underwater Front Chest': {
-            type: "chest",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.SongofStorms && items.Ocarina && items.ZeldasLullaby;
-            }
-         },
-         'Dead Hand': {
-            type: "chest",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.SongofStorms && items.Ocarina && items.ZeldasLullaby && (items.KokiriSword || items.Stick);
-            }
-         },
-         ['Invisible Chest']: {
-            type: "chest",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.SongofStorms && items.Ocarina && items.ZeldasLullaby;
-            }
-         },
-      },
-      skulllist: {
          'West Key Door Skulltula': {
             type: "skulltula",
+            access: "vanilla",
             isAvailable: function () {
                return items.Boomerang && items.Ocarina && items.SongofStorms && (items.WellKey >= 3 || smallkeys === "Remove");
             },
          },
          'East Key Door Skulltula': {
             type: "skulltula",
+            access: "vanilla",
             isAvailable: function () {
                return items.Boomerang && items.Ocarina && items.SongofStorms && (items.WellKey >= 3 || smallkeys === "Remove");
             },
+         },
+         'Right Bottom Hidden Wall': {
+            type: "chest",
+            access: "vanilla",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.SongofStorms;
+            }
+         },
+         'Locked Pits': {
+            type: "chest",
+            access: "vanilla",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.SongofStorms && (items.WellKey >= 1 || smallkeys === "Remove");
+            }
+         },
+         'Like Like Chest': {
+            type: "chest",
+            access: "vanilla",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.SongofStorms && (items.WellKey >= 1 || smallkeys === "Remove");
+            }
          },
          'Like Like Skulltula': {
             type: "skulltula",
+            access: "vanilla",
             isAvailable: function () {
                return items.Boomerang && items.Ocarina && items.SongofStorms && (items.WellKey >= 3 || smallkeys === "Remove");
             },
          },
-      },
-      MQlist: {
+         'Basement Chest': {
+            type: "chest",
+            access: "vanilla",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.SongofStorms && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove);
+            }
+         },
+         'Underwater Front Chest': {
+            type: "chest",
+            access: "vanilla",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.SongofStorms && items.Ocarina && items.ZeldasLullaby;
+            }
+         },
+         'Dead Hand': {
+            type: "chest",
+            access: "vanilla",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.SongofStorms && items.Ocarina && items.ZeldasLullaby && (items.KokiriSword || items.Stick);
+            }
+         },
+         ['Invisible Chest']: {
+            type: "chest",
+            access: "vanilla",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.SongofStorms && items.Ocarina && items.ZeldasLullaby;
+            }
+         },
          'Center Chest': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return items.Ocarina && items.SongofStorms && items.ZeldasLullaby; }
          },
          'Deadhand Chest': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return items.Ocarina && items.SongofStorms && items.ZeldasLullaby; }
          },
          'Deadhand Freestanding': {
             type: "freestanding",
+            access: "master",
             isAvailable: function () {
                return items.Ocarina && items.SongofStorms && items.ZeldasLullaby && items.Bombs; }
          },
          'Inner Room Freestanding': {
             type: "freestanding",
+            access: "master",
             isAvailable: function () {
                return items.Ocarina && items.SongofStorms && items.ZeldasLullaby; }
          },
          'Basement Chest': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return items.Ocarina && items.SongofStorms && items.ZeldasLullaby && items.Bombs && items.Slingshot && (items.WellKey >= 1 || smallkeys === "Remove"); }
          },
-      },
-      MQskulllist: {
          'Tombstone Skulltula': {
             type: "skulltula",
+            access: "master",
             isAvailable: function () {
                return items.Ocarina && items.SongofStorms && items.Slingshot; }
          },
          'Coffin Room Skulltula': {
             type: "skulltula",
+            access: "master",
             isAvailable: function () {
                return items.Ocarina && items.SongofStorms && items.ZeldasLullaby && items.Bombs && (items.WellKey >= 3 || smallkeys === "Remove"); }
          },
          'Basement Skulltula': {
             type: "skulltula",
+            access: "master",
             isAvailable: function () {
                return items.Ocarina && items.SongofStorms && items.ZeldasLullaby && items.Bombs && items.Slingshot && (items.WellKey >= 3 || smallkeys === "Remove"); }
          },
@@ -864,227 +898,260 @@ var dungeons = [
       y: "39.0%",
       type: "dungeon",
       chestlist: {
+         'Lobby Skulltula': {
+            type: "skulltula",
+            access: "vanilla",
+            isAvailable: function () {
+               return items.Hookshot && items.Ocarina && (items.SariasSong || items.MinuetofForest);
+            }
+         },
          'Lobby Chest': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.Hookshot;
             }
          },
+         'Torch Room Skulltula': {
+            type: "skulltula",
+            access: "vanilla",
+            isAvailable: function () {
+               return items.Hookshot && items.Ocarina && (items.SariasSong || items.MinuetofForest);
+            },
+         },
          '1st Floor Stalfos': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.Hookshot;
             }
          },
          'Bubble Chest': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.Hookshot && (items.Bow || (items.Ocarina && items.SongofTime) || (items.ForestKey && items.HoverBoots) || (items.ForestKey >= 2 && items.Bow && items.Glove));
             },
          },
          'Courtyard Island Chest': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.Hookshot && (items.Bow || (items.Ocarina && items.SongofTime) || (items.ForestKey && items.HoverBoots) || (items.ForestKey >= 2 && items.Bow && items.Glove));
             },
          },
+         'Courtyard Island Skulltula': {
+            type: "skulltula",
+            access: "vanilla",
+            isAvailable: function () {
+               return items.Hookshot && items.Ocarina && (items.SariasSong || items.MinuetofForest) && (items.Bow || items.SongofTime);
+            },
+         },
          'Well Chest': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.Hookshot && (items.Bow || (items.Ocarina && items.SongofTime) || (items.ForestKey && items.HoverBoots) || (items.ForestKey >= 2 && items.Bow && items.Glove));
             },
          },
          'Push Block Room Chest': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ForestKey && items.Hookshot && items.Bow && items.Glove;
             }
          },
          'Hallway Twist Chest': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ForestKey >= 2 && items.Hookshot && items.Bow && items.Glove;
             }
          },
          'Floormaster Chest': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.Hookshot && ((items.Bow && items.ForestKey >= 2 && items.Glove) || (items.HoverBoots && items.ForestKey));
             },
          },
+         'West Courtyard Skulltula': {
+            type: "skulltula",
+            access: "vanilla",
+            isAvailable: function () {
+               return (items.ForestKey >= 2 || (items.ForestKey && items.HoverBoots)) && items.Hookshot && items.Ocarina && (items.SariasSong || items.MinuetofForest);
+            },
+         },
          'Red Poe Chest': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ForestKey >= 3 && items.Hookshot && items.Bow && items.Glove;
             }
          },
          '2nd Floor Stalfos': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ForestKey >= 3 && items.Hookshot && items.Glove;
             },
          },
          'Blue Poe Chest': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return items.MasterSword && items.ForestKey >= 3 && items.Hookshot && items.Bow && items.Glove;
             }
          },
          'Checkerboard Chest': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.ForestKey >= 5 || (items.ForestKey >= 3 && items.HoverBoots)) && items.Hookshot && items.Glove && (items.Bow || (items.Dins && items.Magic));
             }
          },
          'Near Boss Chest': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.ForestKey >= 5 || (items.ForestKey >= 3 && items.HoverBoots)) && items.Hookshot && items.Bow && items.Glove;
             }
          },
-         'Phantom Ganon': {
-            type: "boss",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.ForestKey >= 5 || (items.ForestKey >= 3 && items.HoverBoots)) && items.BossForest && items.Hookshot && items.Bow && items.Glove;
-            }
-         },
-      },
-      skulllist: {
-         'Lobby Skulltula': {
-            type: "skulltula",
-            isAvailable: function () {
-               return items.Hookshot && items.Ocarina && (items.SariasSong || items.MinuetofForest);
-            }
-         },
-         'Before 1st Stalfos Skulltula': {
-            type: "skulltula",
-            isAvailable: function () {
-               return items.Hookshot && items.Ocarina && (items.SariasSong || items.MinuetofForest);
-            },
-         },
-         'Courtyard Island Skulltula': {
-            type: "skulltula",
-            isAvailable: function () {
-               return items.Hookshot && items.Ocarina && (items.SariasSong || items.MinuetofForest) && (items.Bow || items.SongofTime);
-            },
-         },
-         'Outside Floormaster Room Skulltula': {
-            type: "skulltula",
-            isAvailable: function () {
-               return (items.ForestKey >= 2 || (items.ForestKey && items.HoverBoots)) && items.Hookshot && items.Ocarina && (items.SariasSong || items.MinuetofForest);
-            },
-         },
          'Basement Skulltula': {
             type: "skulltula",
+            access: "vanilla",
             isAvailable: function () {
                return items.Hookshot && items.Ocarina && (items.SariasSong || items.MinuetofForest) && items.Bow && items.Glove;
             },
          },
-      },
-      MQlist: {
+         'Phantom Ganon': {
+            type: "boss",
+            access: "vanilla",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.ForestKey >= 5 || (items.ForestKey >= 3 && items.HoverBoots)) && items.BossForest && items.Hookshot && items.Bow && items.Glove;
+            }
+         },
          'Lobby Chest': {
             type: "chest",
+            access: "master",
+            isAvailable: function () {
+               return items.Hookshot; }
+         },
+         '1st Hallway Skulltula': {
+            type: "skulltula",
+            access: "master",
             isAvailable: function () {
                return items.Hookshot; }
          },
          'Wolfos Chest': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return items.Hookshot && items.Ocarina && items.SongofTime; }
          },
          'Courtyard Island Chest': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return items.Hookshot && items.Glove && items.ForestKey >= 5 && items.Bow; }
          },
          'Counrtyard Climb Chest': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return items.Hookshot && items.Bow; }
          },
-         'Well Chest': {
-            type: "chest",
-            isAvailable: function () {
-               return items.Hookshot && (items.Bow || items.IronBoots); }
-         },
-         'Above Well Chest': {
-            type: "chest",
-            isAvailable: function () {
-               return items.Hookshot && ((items.Glove && items.ForestKey >= 2) || items.Bow); }
-         },
-         'Gilded Chest': {
-            type: "chest",
-            isAvailable: function () {
-               return items.Hookshot && items.Glove && items.ForestKey >= 1; }
-         },
-         'Redead Chest': {
-            type: "chest",
-            isAvailable: function () {
-               return items.Hookshot && items.Glove && items.ForestKey >= 1; }
-         },
-         'Red Poe Chest': {
-            type: "chest",
-            isAvailable: function () {
-               return items.Hookshot && items.Glove && items.ForestKey >= 2 && items.Bow; }
-         },
-         '2nd Floor Stalfos': {
-            type: "chest",
-            isAvailable: function () {
-               return items.Hookshot && items.Glove && items.ForestKey >= 2; }
-         },
-         'Blue Poe Chest': {
-            type: "chest",
-            isAvailable: function () {
-               return items.Hookshot && items.Glove && items.ForestKey >= 2 && items.Bow; }
-         },
-         'Courtyard Island Chest': {
-            type: "chest",
-            isAvailable: function () {
-               return items.Hookshot && items.Glove && items.ForestKey >= 5 && items.Bow; }
-         },
-         'Checkerboard Room Chest': {
-            type: "chest",
-            isAvailable: function () {
-               return items.Hookshot && items.Glove && items.ForestKey >= 5 && items.Bow; }
-         },
-         'Chest Near Boss Door': {
-            type: "chest",
-            isAvailable: function () {
-               return items.Hookshot && items.Glove && items.ForestKey >= 6 && items.Bow; }
-         },
-         'Phantom Ganon': {
-            type: "boss",
-            isAvailable: function () {
-               return items.Hookshot && items.Glove && items.ForestKey >= 6 && items.Bow && items.BossForest; }
-         },
-      },
-      MQskulllist: {
-         '1st Hallway Skulltula': {
-            type: "skulltula",
-            isAvailable: function () {
-               return items.Hookshot; }
-         },
-         'Push Block Room Skulltula': {
-            type: "skulltula",
-            isAvailable: function () {
-               return items.Hookshot; }
-         },
          'West Courtyard Skulltula': {
             type: "skulltula",
+            access: "master",
             isAvailable: function () {
                return items.Hookshot && items.Glove && items.ForestKey >= 2 && items.Bow; }
          },
          'Well Skulltula': {
             type: "skulltula",
+            access: "master",
             isAvailable: function () {
                return items.Hookshot && ((items.Glove && items.ForestKey >= 2 && items.IronBoots) || items.Bow); 
             }
          },
+         'Well Chest': {
+            type: "chest",
+            access: "master",
+            isAvailable: function () {
+               return items.Hookshot && (items.Bow || items.IronBoots); }
+         },
+         'Above Well Chest': {
+            type: "chest",
+            access: "master",
+            isAvailable: function () {
+               return items.Hookshot && ((items.Glove && items.ForestKey >= 2) || items.Bow); }
+         },
+         'Gilded Chest': {
+            type: "chest",
+            access: "master",
+            isAvailable: function () {
+               return items.Hookshot && items.Glove && items.ForestKey >= 1; }
+         },
+         'Redead Chest': {
+            type: "chest",
+            access: "master",
+            isAvailable: function () {
+               return items.Hookshot && items.Glove && items.ForestKey >= 1; }
+         },
+         'Push Block Room Skulltula': {
+            type: "skulltula",
+            access: "master",
+            isAvailable: function () {
+               return items.Hookshot; }
+         },
+         'Red Poe Chest': {
+            type: "chest",
+            access: "master",
+            isAvailable: function () {
+               return items.Hookshot && items.Glove && items.ForestKey >= 2 && items.Bow; }
+         },
+         '2nd Floor Stalfos': {
+            type: "chest",
+            access: "master",
+            isAvailable: function () {
+               return items.Hookshot && items.Glove && items.ForestKey >= 2; }
+         },
+         'Blue Poe Chest': {
+            type: "chest",
+            access: "master",
+            isAvailable: function () {
+               return items.Hookshot && items.Glove && items.ForestKey >= 2 && items.Bow; }
+         },
+         'Courtyard Island Chest': {
+            type: "chest",
+            access: "master",
+            isAvailable: function () {
+               return items.Hookshot && items.Glove && items.ForestKey >= 5 && items.Bow; }
+         },
          'East Courtyard Skulltula': {
             type: "skulltula",
+            access: "master",
             isAvailable: function () {
                return items.Hookshot && ((items.Glove && items.ForestKey >= 2 && (items.IronBoots || items.Scale >= 2)) || items.Bow); 
             }
+         },
+         'Checkerboard Room Chest': {
+            type: "chest",
+            access: "master",
+            isAvailable: function () {
+               return items.Hookshot && items.Glove && items.ForestKey >= 5 && items.Bow; }
+         },
+         'Chest Near Boss Door': {
+            type: "chest",
+            access: "master",
+            isAvailable: function () {
+               return items.Hookshot && items.Glove && items.ForestKey >= 6 && items.Bow; }
+         },
+         'Phantom Ganon': {
+            type: "boss",
+            access: "master",
+            isAvailable: function () {
+               return items.Hookshot && items.Glove && items.ForestKey >= 6 && items.Bow && items.BossForest; }
          },
       },
       isBeatable: function () {
