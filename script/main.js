@@ -283,9 +283,9 @@ function loadCookie() {
       if (rbutton.value == cookieobj.age)
          rbutton.click();
    }
-    for (rbuttonID in document.getElementsByName('ganonlogic')) {
-        rbutton = document.getElementsByName('ganonlogic')[rbuttonID];
-        if (rbutton.value == cookieobj.glogic) {
+    for (rbuttonID in document.getElementsByName('rainbowbridge')) {
+        rbutton = document.getElementsByName('rainbowbridge')[rbuttonID];
+        if (rbutton.value == cookieobj.rainlogic) {
             rbutton.click();
         }
     }
