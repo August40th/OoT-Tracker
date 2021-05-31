@@ -573,7 +573,7 @@ function bulkDCSelect() {
          }
       }
    });
-   drawDungeonList();
+    
    updateMap();
 }
 
@@ -627,7 +627,7 @@ function setCastle(sender) {
 function setTrialSize(sender) {
    trialsize = sender.value;
    updateMap();
-   drawDungeonList();
+    
    saveCookie();
 }
 
@@ -664,7 +664,7 @@ function setQuest(sender) {
       itemsMax.WellKey = 3;
    }
    updateGridItemAll();
-   drawDungeonList();
+    
    updateMap();
    saveCookie();
 }
@@ -675,7 +675,7 @@ function setFortressLogic(sender) {
       items.Membership = true;
    }
    updateGridItemAll();
-   drawDungeonList();
+    
    updateMap();
    saveCookie();
 }
@@ -686,7 +686,7 @@ function setCarpenter(sender) {
       keyimg = 0;
    }
    updateGridItemAll();
-   drawDungeonList();
+    
    updateMap();
    saveCookie();
 }
@@ -724,7 +724,7 @@ function setSmallKeys(sender) {
       items.WellKey = 0;
    }
    updateGridItemAll();
-   drawDungeonList();
+    
    updateMap();
    saveCookie();
 }
@@ -759,14 +759,14 @@ function setBossKeys(sender) {
 
 function setSkulltula(sender) {
    skulltula = sender.value;
-   drawDungeonList();
+    
    updateMap();
    saveCookie();
 }
 
 function setScrub(sender) {
    scrubs = sender.value;
-   drawDungeonList();
+    
    updateMap();
    saveCookie();
 }
@@ -818,7 +818,7 @@ function setOcarina(sender) {
    items.Ocarina = itemsMin.Ocarina;
    updateGridItemAll();
    updateMap();
-   drawDungeonList();
+    
    saveCookie();
 }
 
@@ -838,13 +838,13 @@ function setEgg(sender) {
    items.Mask = itemsMin.Mask;
    updateGridItemAll();
    updateMap();
-   drawDungeonList();
+    
    saveCookie();
 }
 
 function setBean(sender) {
    BeanShuffle = sender.checked;
-   drawDungeonList();
+    
    updateMap();
    saveCookie();
 }
@@ -857,7 +857,7 @@ function setShopsize(sender) {
    else if (shopsize == 0) {
       Shopsanity = false;
    }
-   drawDungeonList();
+    
    updateMap();
    saveCookie();
 } 
@@ -865,7 +865,7 @@ function setShopsize(sender) {
 function setGrottoER(sender) {
    GrottoER = sender.checked;
    updateMap();
-   drawDungeonList();
+    
    //if (IndoorER !== "Off") drawIndoorChecks();
    saveCookie();
 }
@@ -873,7 +873,7 @@ function setGrottoER(sender) {
 function setIndoorER(sender) {
    IndoorER = sender.value;
    updateMap();
-   drawDungeonList();
+    
    //if (IndoorER !== "Off") drawIndoorChecks();
    saveCookie();
 }
@@ -881,35 +881,35 @@ function setIndoorER(sender) {
 function setOWER(sender) {
    OWERmap = sender.checked;
    updateMap();
-   drawDungeonList();
+    
    saveCookie();
 }
 
 function setDER(sender) {
    DungeonER = sender.checked;
    updateMap();
-   drawDungeonList();
+    
    saveCookie();
 }
 
 function setCows(sender) {
    Cowsanity = sender.checked;
    updateMap();
-   drawDungeonList();
+    
    //if (IndoorER !== "Off") drawIndoorChecks();
    saveCookie();
 }
 
 function setMedigoron(sender) {
    Medigoron = sender.checked;
-   drawDungeonList();
+    
    updateMap();
    saveCookie();
 }
 
 function setCarpet(sender) {
    Aladdin = sender.checked;
-   drawDungeonList();
+    
    updateMap();
    saveCookie();
 }
