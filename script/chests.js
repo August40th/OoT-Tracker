@@ -3020,8 +3020,8 @@ var dungeons = [
             //access: "vanilla",
             //isAvailable: function () {
             //   return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && ((items.Magic && items.Bow && items.Fire) || ((items.Hookshot >= 1 || items.HoverBoots) && items.Magic && items.Dins) || items.Hookshot >= 2);
-            /}
-         },
+            //}
+         //},
          ['Shadow Trial Clear']: {
             type: "trial",
             access: "mixed",
