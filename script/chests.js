@@ -3008,20 +3008,29 @@ var dungeons = [
                return isBridgeOpen() && items.Bottle && items.Hammer && items.Magic && items.Bow && items.Light;
             }
          },
-         //['Shadow Chest 1']: {
-           // type: "chest",
-            //access: "vanilla",
-            //isAvailable: function () {
-              // return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && ((items.Magic && items.Bow && items.Fire) || items.Hookshot >= 1 || items.HoverBoots || (items.Ocarina >= 1 && items.SongofTimw;
-            //}
-         //},
-         //['Shadow Chest 2']: {
-           // type: "chest",
-            //access: "vanilla",
-            //isAvailable: function () {
-            //   return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && ((items.Magic && items.Bow && items.Fire) || ((items.Hookshot >= 1 || items.HoverBoots) && items.Magic && items.Dins) || items.Hookshot >= 2);
-            //}
-         //},
+         ['Shadow Chest 1']: {
+            type: "chest",
+            access: "vanilla",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) 
+               && items.MasterSword && isBridgeOpen() && (
+                  (items.Magic && items.Bow && items.Fire) || 
+                  items.Hookshot >= 1 || 
+                  items.HoverBoots || 
+                  (items.Ocarina >= 1 && items.SongofTime));
+            }
+         },
+         ['Shadow Chest 2']: {
+            type: "chest",
+            access: "vanilla",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) 
+               && items.MasterSword && isBridgeOpen() && (
+                  (items.Magic && items.Bow && items.Fire) || (
+                     (items.Hookshot >= 1 || items.HoverBoots) && 
+                     items.Magic && items.Dins) || items.Hookshot >= 2);
+            }
+         },
          ['Shadow Trial Clear']: {
             type: "trial",
             access: "mixed",
