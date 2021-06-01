@@ -5481,6 +5481,20 @@ var dungeons = [
       y: "19.5%",
       type: "overworld",
       chestlist: {
+         'Graveyard to Village': {
+            x: "72.7%",
+            y: "25.5%",
+            type: "entrance",
+            access: "entrance",
+             isAvailable: function () {
+                  return true; }
+         },
+         'Dampe\'s Hut': {
+            type: "simple", 
+            access: "outdoor",
+            isAvailable: function () {
+               return true; }
+         },
          ['Dampe Digging']: {
             type: "NPC", 
             access: "outdoor",
@@ -5488,8 +5502,14 @@ var dungeons = [
                return ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)));
             }
          },
-         ['Vanilla Shield Grave']: {
+         'Free Chest Grave': {
             type: "grotto", 
+            access: "grotto",
+            isAvailable: function () {
+               return true; }
+         },
+         ['Free Chest Grave']: {
+            type: "chest", 
             access: "grotto",
             isAvailable: function () {
                return ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)));
@@ -5501,6 +5521,19 @@ var dungeons = [
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.MasterSword && (items.Bean || items.Hookshot >= 2)) || items.Boomerang);
             }
+         },
+         'Soil Patch Skulltula': {
+            type: "skulltula", 
+            access: "outdoor",
+            isAvailable: function () {
+               return items.Bottle;
+            },
+         },
+         'Dampe\'s Grave': {
+            type: "grotto", 
+            access: "grotto",
+            isAvailable: function () {
+               return true; }
          },
          ['Dampe Race 1']: {
             type: "NPC", 
@@ -5516,12 +5549,31 @@ var dungeons = [
                return ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword);
             }
          },
-         ['Redead Grave']: {
+         'Redead Grave': {
+            type: "grotto", 
+            access: "grotto",
+            isAvailable: function () {
+               return true; }
+         },
+         ['Redead Grave Chest']: {
             type: "chest", 
             access: "grotto",
             isAvailable: function () {
                return ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.SunsSong);
             }
+         },
+         'South Wall Skulltula': {
+            type: "skulltula", 
+            access: "outdoor",
+            isAvailable: function () {
+               return items.Boomerang;
+            },
+         },
+         'Royal Tomb': {
+            type: "grotto", 
+            access: "grotto",
+            isAvailable: function () {
+               return true; }
          },
          ['Composer Brothers\' Song']: {
             type: "song", 
@@ -5537,73 +5589,24 @@ var dungeons = [
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Ocarina && items.ZeldasLullaby && ((items.Dins || (items.Fire && items.Bow)) && items.Magic));
             }
          },
-      },
-      skulllist: {
-         'Soil Patch Skulltula': {
-            type: "skulltula", 
+         'Noturne Warp': {
+            type: "warp",
+            access: "warp",
+            isAvailable: function () {
+               return items.Ocarina && items.NocturneofShadow
+            }
+         },
+         'Noturne Gossip': {
+            type: "gossip",
             access: "outdoor",
             isAvailable: function () {
-               return items.Bottle;
-            },
-         },
-         'South Wall Skulltula': {
-            type: "skulltula", 
-            access: "outdoor",
-            isAvailable: function () {
-               return items.Boomerang;
-            },
-         },
-      },
-      indoorlist: {
-         'Dampe\'s Hut': {
-            type: "simple", 
-            access: "outdoor",
-            isAvailable: function () {
-               return true; }
-         },
-         'Shield Grave': {
-            type: "grotto", 
-            access: "grotto",
-            isAvailable: function () {
-               return true; }
-         },
-         'Dampe\'s Grave': {
-            type: "grotto", 
-            access: "grotto",
-            isAvailable: function () {
-               return true; }
-         },
-         'Redead Grave': {
-            type: "grotto", 
-            access: "grotto",
-            isAvailable: function () {
-               return true; }
-         },
-         'Royal Tomb': {
-            type: "grotto", 
-            access: "grotto",
-            isAvailable: function () {
-               return true; }
+               return items.Ocarina && items.NocturneofShadow
+            }
          },
          'Shadow Temple': {
             type: "dungeon", 
             access: "door",
                isAvailable: function () {
-                  return true; }
-         },
-      },
-      gossiplist: {
-         'Shadow Temple Entrance': {
-            isAvailable: function () {
-               return true
-            }
-         },
-      },
-      entrancelist: {
-         'Graveyard to Village': {
-            x: "72.7%",
-            y: "25.5%",
-             isAvailable: function () {
                   return true; }
          },
       },
@@ -5620,12 +5623,13 @@ var dungeons = [
       y: "25.0%",
       type: "overworld",
       chestlist: {
-         ['Torch Chest']: {
-            type: "chest", 
-            access: "outdoor",
+         'Wasteland to Fortress': {
+            x: "14.0%",
+            y: "23.4%",
+            type: "entrance",
+            access: "entrance",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword && (((items.EponasSong || isFortressOpen()) && items.HoverBoots) || items.Hookshot >= 2) && (items.Magic && (items.Dins || (items.Bow && items.Fire))))
-            }
+                  return true; }
          },
          ['Carpet Salesman']: {
             type: "NPC", 
@@ -5634,8 +5638,13 @@ var dungeons = [
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword && (((items.EponasSong || isFortressOpen()) && items.HoverBoots) || items.Hookshot >= 2))
             }
          },
-      },
-      skulllist: {
+         ['Torch Chest']: {
+            type: "chest", 
+            access: "outdoor",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword && (((items.EponasSong || isFortressOpen()) && items.HoverBoots) || items.Hookshot >= 2) && (items.Magic && (items.Dins || (items.Bow && items.Fire))))
+            }
+         },
          'Structure Skulltula': {
             type: "skulltula", 
             access: "outdoor",
@@ -5643,18 +5652,12 @@ var dungeons = [
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword && (((items.EponasSong || isFortressOpen()) && items.HoverBoots) || items.Hookshot >= 2))
             }
          },
-      },
-      entrancelist: {
-         'Wasteland to Fortress': {
-            x: "14.0%",
-            y: "23.4%",
-             isAvailable: function () {
-                  return true; }
-         },
          'Wasteland to Desert': {
             x: "11.0%",
             y: "25.0%",
-             isAvailable: function () {
+            type: "entrance",
+            access: "entrance",
+            isAvailable: function () {
                   return true; }
          },
       },
