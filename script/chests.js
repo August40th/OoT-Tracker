@@ -3403,6 +3403,12 @@ var dungeons = [
             isAvailable: function () {
                return true; }
          },
+         'Prelude Warp': {
+            type: "warp", 
+            access: "warp",
+               isAvailable: function () {
+                  return items.Ocarina && items.PreludeofLight; }
+         },
          ['Song for Forest Medallion']: {
             type: "song", 
             access: "alldoor",
@@ -4165,6 +4171,12 @@ var dungeons = [
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword;
             }
          },
+         'Minuet Warp': {
+            type: "warp", 
+            access: "warp",
+               isAvailable: function () {
+                  return items.Ocarina && items.MinuetofForest; }
+         },
          'Meadow Storms Grotto': {
             type: "grotto", 
             access: "grotto",
@@ -4371,7 +4383,7 @@ var dungeons = [
                return true
             }
          },
-         'Farore\'s Fairy Fountain': {
+         'Bombable Doorway': {
             type: "simple", 
             access: "door",
                isAvailable: function () {
@@ -4425,11 +4437,39 @@ var dungeons = [
       y: "13.7%",
       type: "overworld",
       chestlist: {
+         'Trail to Village': {
+            x: "63.1%",
+            y: "18.6%",
+            type: "entrance", 
+            access: "entrance",
+             isAvailable: function () {
+                  return true; }
+         },
+         'Bombable Wall Skulltula': {
+            type: "skulltula", 
+            access: "outdoor",
+            isAvailable: function () {
+               return items.Bombs || items.Hammer
+            }
+         },
+         'Dodongo\'s Cavern': {
+            type: "dungeon", 
+            access: "door",
+               isAvailable: function () {
+                  return true; }
+         },
          ['Cavern Roof Freestanding']: {
             type: "freestanding", 
             access: "outdoor",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (OpenGate == 1 || (OpenGate == 0 && (items.Mask >= 1 || items.MasterSword || items.Bombs || (items.Dins && items.Magic) || (items.Bombchu && BombchuLogic))));
+            }
+         },
+         'Cavern Soil Patch Skulltula': {
+            type: "skulltula", 
+            access: "outdoor",
+            isAvailable: function () {
+               return items.Bottle
             }
          },
          ['Breakable Wall Chest']: {
@@ -4439,12 +4479,66 @@ var dungeons = [
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (OpenGate == 1 || (OpenGate == 0 && (items.Mask >= 1 || items.MasterSword || items.Bombs || (items.Dins && items.Magic) || (items.Bombchu && BombchuLogic)))) && (items.Bombs || (items.MasterSword && items.Hammer) || (items.Bombchu && BombchuLogic) || items.Glove);
             }
          },
-         ['Storms Grotto']: {
+         'Song of Storms Grotto': {
+            type: "grotto", 
+            access: "grotto",
+            isAvailable: function () {
+               return true; }
+         },
+         ['Trail Storms Grotto']: {
             type: "chest", 
             access: "grotto",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (OpenGate == 1 || (OpenGate == 0 && (items.Mask >= 1 || items.MasterSword || items.Bombs || (items.Dins && items.Magic) || (items.Bombchu && BombchuLogic)))) && (items.Ocarina && items.SongofStorms);
             }
+         },
+         'Storms Grotto Gossip': {
+            type: "gossip", 
+            access: "grotto",
+            isAvailable: function () {
+               return true
+            }
+         },
+         'Trail to City': {
+            x: "62.6%",
+            y: "12.0%",
+            type: "entrance", 
+            access: "entrance",
+             isAvailable: function () {
+                  return true; }
+         },
+         'Lower Red Rock Skulltula': {
+            type: "skulltula", 
+            access: "outdoor",
+            isAvailable: function () {
+               return items.Hammer
+            }
+         },
+         'Cow Grotto': {
+            type: "grotto", 
+            access: "grotto",
+            isAvailable: function () {
+               return true; }
+         },
+         ['Cow Milk Grotto']: {
+            type: "cow", 
+            access: "grotto",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (OpenGate == 1 || (OpenGate == 0 && (items.Mask >= 1 || items.MasterSword || items.Bombs || (items.Dins && items.Magic) || (items.Bombchu && BombchuLogic)))) && (items.Bombs || (items.MasterSword && items.Hammer) || (items.Bombchu && BombchuLogic)) && items.Ocarina && items.EponasSong;
+            }
+         },
+         'Upper Red Rock Skulltula': {
+            type: "skulltula", 
+            access: "outdoor",
+            isAvailable: function () {
+               return items.Hammer
+            }
+         },
+         'Sumit Fairy Fountain': {
+            type: "simple", 
+            access: "door",
+            isAvailable: function () {
+               return true; }
          },
          ['Summit Great Fairy Fountain']: {
             type: "NPC", 
@@ -4460,101 +4554,28 @@ var dungeons = [
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword && (items.Trade >= 1 && (items.ZoraLetter || OpenFountain) && (items.EponasSong || items.Hookshot >= 2)) || (items.Trade >= 6 && (items.EponasSong || items.Hookshot >= 2)) || items.Trade >= 9);
             }
          },
-         ['Cow Milk Grotto']: {
-            type: "cow", 
-            access: "grotto",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (OpenGate == 1 || (OpenGate == 0 && (items.Mask >= 1 || items.MasterSword || items.Bombs || (items.Dins && items.Magic) || (items.Bombchu && BombchuLogic)))) && (items.Bombs || (items.MasterSword && items.Hammer) || (items.Bombchu && BombchuLogic)) && items.Ocarina && items.EponasSong;
-            }
-         },
-      },
-      skulllist: {
-         'Bombable Wall Skulltula': {
-            type: "skulltula", 
-            access: "outdoor",
-            isAvailable: function () {
-               return items.Bombs || items.Hammer
-            }
-         },
-         'Cavern Soil Patch Skulltula': {
-            type: "skulltula", 
-            access: "outdoor",
-            isAvailable: function () {
-               return items.Bottle
-            }
-         },
-         'Hammer Rock 1 Skulltula': {
-            type: "skulltula", 
-            access: "outdoor",
-            isAvailable: function () {
-               return items.Hammer
-            }
-         },
-         'Hammer Rock 2 Skulltula': {
-            type: "skulltula", 
-            access: "outdoor",
-            isAvailable: function () {
-               return items.Hammer
-            }
-         },
-      },
-      indoorlist: {
-         'Storms Grotto': {
-            type: "grotto", 
-            access: "grotto",
-            isAvailable: function () {
-               return true; }
-         },
-         'Cow Grotto': {
-            type: "grotto", 
-            access: "grotto",
-            isAvailable: function () {
-               return true; }
-         },
-         'Sumit Fairy Fountain': {
-            type: "simple", 
-            access: "door",
-            isAvailable: function () {
-               return true; }
-         },
-         'Dodongo\'s Cavern': {
-            type: "dungeon", 
-            access: "door",
-               isAvailable: function () {
-                  return true; }
-         },
-      },
-      gossiplist: {
-         'Under Summit Fairy': {
-            isAvailable: function () {
-               return true
-            }
-         },
-      },
-      entrancelist: {
-         'Trail to Village': {
-            x: "63.1%",
-            y: "18.6%",
-             isAvailable: function () {
-                  return true; }
-         },
-         'Trail to City': {
-            x: "62.6%",
-            y: "12.0%",
-             isAvailable: function () {
-                  return true; }
-         },
          'Trail to Crater': {
             x: "64.6%",
             y: "04.5%",
+            type: "entrance", 
+            access: "entrance",
              isAvailable: function () {
                   return true; }
          },
          'Trail Owl': {
             x: "62.0%",
             y: "02.5%",
+            type: "entrance", 
+            access: "entrance",
              isAvailable: function () {
                   return true; }
+         },
+         'Summit Gossip': {
+            type: "gossip", 
+            access: "outdoor",
+            isAvailable: function () {
+               return true
+            }
          },
       },
       isBeatable: function () {
@@ -4570,12 +4591,52 @@ var dungeons = [
       y: "09.0%",
       type: "overworld",
       chestlist: {
+         'Crater to City': {
+            x: "68.6%",
+            y: "05.5%",
+            type: "entrance", 
+            access: "entrance",
+             isAvailable: function () {
+                  return true; }
+         },
+         'Red Rock Grotto': {
+            type: "grotto", 
+            access: "grotto",
+            isAvailable: function () {
+               return true; }
+         },
+         'Red Rock Grotto Scrubs x3': {
+            type: "scrub", 
+            access: "grotto",
+            isAvailable: function () {
+               return items.Hammer && ((items.Glove || items.Bombs || items.Bow || (items.Magic && items.Dins)) || (items.BoleroofFire && items.Ocarina && (items.Hookshot || items.HoverBoots)));
+            },
+         },
          ['Song from Sheik']: {
             type: "song", 
             access: "outdoor",
             isAvailable: function () {
                return items.MasterSword && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.BoleroofFire || ((items.HoverBoots || items.Hookshot) && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Hammer || items.Bow || (items.Magic && items.Dins))));
             }
+         },
+         'Bolero Warp': {
+            type: "warp", 
+            access: "warp",
+               isAvailable: function () {
+                  return items.Ocarina && items.BoleroofFire; }
+         },
+         'Soil Patch Skulltula': {
+            type: "skulltula", 
+            access: "outdoor",
+            isAvailable: function () {
+               return items.Ocarina && items.BoleroofFire && items.Bottle
+            }
+         },
+         'Fire Temple': {
+            type: "dungeon", 
+            access: "door",
+               isAvailable: function () {
+                  return true; }
          },
          ['Volcano Freestanding']: {
             type: "freestanding", 
@@ -4584,11 +4645,30 @@ var dungeons = [
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Glove || items.Bombs || items.Bow || (items.Bombchu && BombchuLogic)) && ((items.Bean && items.BoleroofFire) || items.HoverBoots);
             }
          },
+         'Red Rocks Doorway': {
+            type: "simple", 
+            access: "door",
+            isAvailable: function () {
+               return true; }
+         },
          ['Great Fairy Fountain']: {
             type: "NPC", 
             access: "simple",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword && items.Hammer && items.Ocarina && items.ZeldasLullaby);
+            }
+         },
+         'Bombable Grotto': {
+            type: "grotto", 
+            access: "grotto",
+            isAvailable: function () {
+               return true; }
+         },
+         'Bomb Grotto Gossip': {
+            type: "gossip", 
+            access: "grotto",
+            isAvailable: function () {
+               return true
             }
          },
          ['Crater Bombable Grotto']: {
@@ -4606,8 +4686,6 @@ var dungeons = [
                   (items.MasterSword && ((items.BoleroofFire && (items.HoverBoots || items.Hookshot)) || items.Bow || items.Glove)));
             }
          },
-      },
-      skulllist: {
          'Crate Skulltula': {
             type: "skulltula", 
             access: "outdoor",
@@ -4615,15 +4693,6 @@ var dungeons = [
                return items.Bombs;
             },
          },
-         'Soil Patch Skulltula': {
-            type: "skulltula", 
-            access: "outdoor",
-            isAvailable: function () {
-               return items.Ocarina && items.BoleroofFire && items.Bottle
-            }
-         },
-      },
-      scrublist: {
          'Child Climb Summit to Crater Scrub': {
             type: "scrub", 
             access: "outdoor",
@@ -4631,57 +4700,18 @@ var dungeons = [
                return items.Bombs;
             },
          },
-         'Hammer Rock Grotto Scrubs x3': {
-            type: "scrub", 
-            access: "grotto",
-            isAvailable: function () {
-               return items.Hammer && ((items.Glove || items.Bombs || items.Bow || (items.Magic && items.Dins)) || (items.BoleroofFire && items.Ocarina && (items.Hookshot || items.HoverBoots)));
-            },
-         },
-      },
-      indoorlist: {
-         'Hammer Grotto': {
-            type: "grotto", 
-            access: "grotto",
-            isAvailable: function () {
-               return true; }
-         },
-         'Fairy Fountain': {
-            type: "simple", 
-            access: "door",
-            isAvailable: function () {
-               return true; }
-         },
-         'Bomb Grotto': {
-            type: "grotto", 
-            access: "grotto",
-            isAvailable: function () {
-               return true; }
-         },
-         'Fire Temple': {
-            type: "dungeon", 
-            access: "door",
-               isAvailable: function () {
-                  return true; }
-         },
-      },
-      gossiplist: {
-         'Cracked wall': {
+         'Cracked Wall Gossip': {
+            type: "gossip", 
+            access: "outdoor",
             isAvailable: function () {
                return true
             }
          },
-      },
-      entrancelist: {
          'Crater to Trail': {
             x: "66.6%",
             y: "02.5%",
-             isAvailable: function () {
-                  return true; }
-         },
-         'Crater to City': {
-            x: "68.6%",
-            y: "05.5%",
+            type: "entrance", 
+            access: "entrance",
              isAvailable: function () {
                   return true; }
          },
@@ -5067,6 +5097,12 @@ var dungeons = [
          },
       },
       indoorlist: {
+         'Serenade Warp': {
+            type: "warp", 
+            access: "warp",
+               isAvailable: function () {
+                  return items.Ocarina && items.SerenadeoffWater; }
+         },
          'Laboratory': {
             type: "simple", 
             access: "door",
@@ -5421,6 +5457,12 @@ var dungeons = [
          },
       },
       indoorlist: {
+         'Requiem Warp': {
+            type: "warp", 
+            access: "warp",
+               isAvailable: function () {
+                  return items.Ocarina && items.RequiemofSpirit; }
+         },
          'Nayru\'s Great Fairy Fountain': {
             type: "simple", 
             access: "door",
