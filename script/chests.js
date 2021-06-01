@@ -3186,12 +3186,74 @@ var dungeons = [
       y: "20.2%",
       type: "overworld",
       chestlist: {
-         ['Slingshot Mini Game']: {
+         'Topdown to Drawbridge': {
+          x: "52.5%",
+          y: "27.0%",
+          type: "entrance",
+          access: "entrance",
+          isAvailable: function () {
+               return true; }
+         },
+         'Guard/Ghostbuster House': {
+            type: "simple", 
+            access: "door",
+               isAvailable: function () {
+                  return true; }
+         },
+         'Pottery Crate Skulltula': {
+            type: "skulltula", 
+            access: "simple",
+            isAvailable: function () {
+               return true
+            }
+         },
+         ['10 Big Poes']: {
             type: "NPC", 
             access: "simple",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0));
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword && items.Bow && items.EponasSong && items.Bottle);
             }
+         },
+         'Topdown to Market': {
+          x: "50.5%",
+          y: "27.0%",
+          type: "entrance",
+          access: "entrance",
+          isAvailable: function () {
+               return true; }
+       },
+       'Market to Topdown': {
+          x: "52.0%",
+          y: "23.4%",
+          type: "entrance",
+          access: "entrance",
+          isAvailable: function () {
+               return true; }
+         },
+         'Treasure game': {
+            type: "simple", 
+            access: "door",
+               isAvailable: function () {
+                  return true; }
+         },
+         ['Treasure Chest Mini Game']: {
+            type: "chest", 
+            access: "simple",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Lens && items.Magic);
+            }
+         },
+         'Bombchu Shop': {
+            type: "simple", 
+            access: "door",
+            isAvailable: function () {
+               return true; }
+         },
+         'Bombchu Sale': {
+            type: "shop", 
+            access: "simple",
+            isAvailable: function () {
+               return true; }
          },
          ['Return Richard']: {
             type: "NPC", 
@@ -3199,6 +3261,31 @@ var dungeons = [
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0));
             }
+         },
+         'Back Alley House': {
+            type: "simple", 
+            access: "door",
+            isAvailable: function () {
+               return true; }
+         },
+         'Slingshot Shooting': {
+            type: "simple", 
+            access: "door",
+            isAvailable: function () {
+               return true; }
+         },
+         ['Slingshot Mini Game']: {
+            type: "NPC", 
+            access: "simple",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0));
+            }
+         },
+         'Bowling': {
+            type: "simple", 
+            access: "door",
+            isAvailable: function () {
+               return true; }
          },
          ['Bombchu Bowling 1']: {
             type: "NPC", 
@@ -3214,150 +3301,11 @@ var dungeons = [
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.Bombchu && BombchuLogic));
             }
          },
-         ['Treasure Chest Mini Game']: {
-            type: "chest", 
-            access: "simple",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Lens && items.Magic);
-            }
-         },
-         ['10 Big Poes']: {
-            type: "NPC", 
-            access: "simple",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword && items.Bow && items.EponasSong && items.Bottle);
-            }
-         },
-      },
-      skulllist: {
-         'Pottery Crate Skulltula': {
-            type: "skulltula", 
-            access: "simple",
-            isAvailable: function () {
-               return true
-            }
-         },
-      },
-      shoplist: {
-         'Potion Shop': {
-            type: "shop", 
-            access: "simple",
-            isAvailable: function () {
-               return true; }
-         },
-         'Potion Shop 2': {
-            type: "shop", 
-            access: "simple",
-            isAvailable: function () {
-               return true; }
-         },
-         'Potion Shop 3': {
-            type: "shop", 
-            access: "simple",
-            isAvailable: function () {
-               return true; }
-         },
-         'Potion Shop 4': {
-            type: "shop", 
-            access: "simple",
-            isAvailable: function () {
-               return true; }
-         },
-         'Bazaar Shop': {
-            type: "shop", 
-            access: "simple",
-            isAvailable: function () {
-               return true; }
-         },
-         'Bazaar Shop 2': {
-            type: "shop", 
-            access: "simple",
-            isAvailable: function () {
-               return true; }
-         },
-         'Bazaar Shop 3': {
-            type: "shop", 
-            access: "simple",
-            isAvailable: function () {
-               return true; }
-         },
-         'Bazaar Shop 4': {
-            type: "shop", 
-            access: "simple",
-            isAvailable: function () {
-               return true; }
-         },
-         'Bombchu Shop': {
-            type: "shop", 
-            access: "simple",
-            isAvailable: function () {
-               return true; }
-         },
-         'Bombchu Shop 2': {
-            type: "shop", 
-            access: "simple",
-            isAvailable: function () {
-               return true; }
-         },
-         'Bombchu Shop 3': {
-            type: "shop", 
-            access: "simple",
-            isAvailable: function () {
-               return true; }
-         },
-         'Bombchu Shop 4': {
-            type: "shop", 
-            access: "simple",
-            isAvailable: function () {
-               return true; }
-         },
-      },
-      indoorlist: {
-         'Guard/Ghostbuster House': {
-            type: "simple", 
-            access: "door",
-               isAvailable: function () {
-                  return true; }
-         },
-         'Treasure game': {
-            type: "simple", 
-            access: "door",
-               isAvailable: function () {
-                  return true; }
-         },
-         'Bombchu Shop': {
-            type: "simple", 
-            access: "door",
-            isAvailable: function () {
-               return true; }
-         },
-         'Back Alley House': {
-            type: "simple", 
-            access: "door",
-            isAvailable: function () {
-               return true; }
-         },
-         'Slingshot Shooting': {
-            type: "simple", 
-            access: "door",
-            isAvailable: function () {
-               return true; }
-         },
-         'Bowling': {
-            type: "simple", 
-            access: "door",
-            isAvailable: function () {
-               return true; }
-         },
-         'Bazar': {
-            type: "simple", 
-            access: "door",
-            isAvailable: function () {
-               return true; }
-         },
-         'Potion Shop': {
-            type: "simple", 
-            access: "door",
+         'Market to Castle': {
+             x: "52.5%",
+            y: "19.0%",
+            type: "entrance",
+            access: "entrance",
             isAvailable: function () {
                return true; }
          },
@@ -3367,38 +3315,38 @@ var dungeons = [
             isAvailable: function () {
                return true; }
          },
-      },
-      entrancelist: {
-       'Topdown to Drawbridge': {
-          x: "52.5%",
-          y: "27.0%",
-          isAvailable: function () {
+         'Market to Temple': {
+            x: "55.0%",
+            y: "22.2%",
+            type: "entrance",
+            access: "entrance",
+            isAvailable: function () {
                return true; }
-       },
-       'Topdown to Market': {
-          x: "50.5%",
-          y: "27.0%",
-          isAvailable: function () {
+         },
+         'Potion Shop': {
+            type: "simple", 
+            access: "door",
+            isAvailable: function () {
                return true; }
-       },
-       'Market to Topdown': {
-          x: "52.0%",
-          y: "23.4%",
-          isAvailable: function () {
+         },
+         'Potion Sale': {
+            type: "shop", 
+            access: "simple",
+            isAvailable: function () {
                return true; }
-       },
-       'Market to Temple': {
-          x: "55.0%",
-          y: "22.2%",
-          isAvailable: function () {
+         },
+         'Bazar': {
+            type: "simple", 
+            access: "door",
+            isAvailable: function () {
                return true; }
-       },
-       'Market to Castle': {
-          x: "52.5%",
-          y: "19.0%",
-          isAvailable: function () {
+         },
+         'Bazaar Sale': {
+            type: "shop", 
+            access: "simple",
+            isAvailable: function () {
                return true; }
-       },
+         },
       },
       isBeatable: function () {
          return this.canGetChest();
@@ -3413,6 +3361,48 @@ var dungeons = [
       y: "18.2%",
       type: "overworld",
       chestlist: {
+         'Temple to Market': {
+            x: "56.0%",
+            y: "18.6%",
+            type: "entrance",
+            access: "entrance",
+             isAvailable: function () {
+                  return true; }
+          },
+         'Temple Gossip 1': {
+            type: "gossip",
+            access: "outdoor",
+            isAvailable: function () {
+               return true
+            }
+         },
+         'Temple Gossip 2': {
+            type: "gossip",
+            access: "outdoor",
+            isAvailable: function () {
+               return true
+            }
+         },
+         'Temple Gossip 3': {
+            type: "gossip",
+            access: "outdoor",
+            isAvailable: function () {
+               return true
+            }
+         },
+         'Temple Gossip 4': {
+            type: "gossip",
+            access: "outdoor",
+            isAvailable: function () {
+               return true
+            }
+         },
+         'Temple of Time': {
+            type: "alldoor", 
+            access: "door",
+            isAvailable: function () {
+               return true; }
+         },
          ['Song for Forest Medallion']: {
             type: "song", 
             access: "alldoor",
@@ -3428,29 +3418,6 @@ var dungeons = [
             }
          },
       },
-      indoorlist: {
-         'Temple of Time': {
-            type: "alldoor", 
-            access: "door",
-            isAvailable: function () {
-               return true; }
-         },
-      },
-      gossiplist: {
-         'Outside Temple x4': {
-            isAvailable: function () {
-               return true
-            }
-         },
-      },
-      entrancelist: {
-         'Temple to Market': {
-            x: "56.0%",
-            y: "18.6%",
-             isAvailable: function () {
-                  return true; }
-          },
-      },
       isBeatable: function () {
          return this.canGetChest();
       },
@@ -3464,29 +3431,14 @@ var dungeons = [
       y: "14.0%",
       type: "overworld",
       chestlist: {
-         ['Malon\s Weird Egg']: {
-            type: "NPC", 
-            access: "outdoor",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0));
-            }
+         'Castle to Market': {
+            x: "52.5%",
+            y: "16.0%",
+            type: "entrance",
+            access: "entrance",
+             isAvailable: function () {
+                  return true; }
          },
-         ['Song from Impa']: {
-            type: "song", 
-            access: "outdoor",
-            isAvailable: function () {
-               return ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Mask >= 1);
-            }
-         },
-         ['Dins Great Fairy Fountain']: {
-            type: "NPC", 
-            access: "simple",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Ocarina && items.ZeldasLullaby;
-            }
-         },
-      },
-      skulllist: {
          'Tree to Castle Skulltula': {
             type: "skulltula", 
             access: "outdoor",
@@ -3494,20 +3446,39 @@ var dungeons = [
                return true
             }
          },
-         'Castle Moat Storms Grotto': {
-            type: "skulltula", 
-            access: "grotto",
+         'Malon\s Weird Egg': {
+            type: "NPC", 
+            access: "outdoor",
             isAvailable: function () {
-               return items.Ocarina && items.SongofStorms && items.Bombs
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0));
             }
          },
-      },
-      indoorlist: {
+         'Above Malon': {
+            type: "gossip",
+            access: "outdoor",
+            isAvailable: function () {
+               return true
+            }
+         },
          'Din\'s Fairy Fountain': {
             type: "simple", 
             access: "door",
                isAvailable: function () {
                   return true; }
+         },
+         'Dins Great Fairy': {
+            type: "NPC", 
+            access: "simple",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Ocarina && items.ZeldasLullaby;
+            }
+         },
+         'Castle Moat Stone': {
+            type: "gossip",
+            access: "outdoor",
+            isAvailable: function () {
+               return true
+            }
          },
          'Castle Moat Storms Grotto': {
             type: "grotto", 
@@ -3515,30 +3486,26 @@ var dungeons = [
                isAvailable: function () {
                   return true; }
          },
-      },
-      gossiplist: {
-         'Above Malon': {
+         'Moat Storms Grotto Skull': {
+            type: "skulltula", 
+            access: "grotto",
+            isAvailable: function () {
+               return items.Ocarina && items.SongofStorms && items.Bombs
+            }
+         },
+         'Storms Grotto Gossip': {
+            type: "gossip",
+            access: "grotto",
             isAvailable: function () {
                return true
             }
          },
-         'Castle Moat Stone': {
+         'Song from Impa': {
+            type: "song", 
+            access: "outdoor",
             isAvailable: function () {
-               return true
+               return ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Mask >= 1);
             }
-         },
-         'Storms Grotto Stone': {
-            isAvailable: function () {
-               return true
-            }
-         },
-      },
-      entrancelist: {
-         'Castle to Market': {
-            x: "52.5%",
-            y: "16.0%",
-             isAvailable: function () {
-                  return true; }
          },
       },
       isBeatable: function () {
