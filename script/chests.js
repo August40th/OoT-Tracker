@@ -4245,6 +4245,155 @@ var dungeons = [
       }
    },
    {
+      name: "Zora's River",
+      x: "78.7%",
+      y: "29.5%",
+      type: "overworld",
+      chestlist: {
+         'River to Field': {
+            x: "70.0%",
+            y: "35.0%",
+            type: "entrance", 
+            access: "entrance",
+             isAvailable: function () {
+                  return true; }
+         },
+         'Tree by Entrance Skulltula': {
+            type: "skulltula", 
+            access: "outdoor",
+            type: "outdoor",
+            isAvailable: function () {
+               return true
+            }
+         },
+         'Storms Grotto Scrubs x3': {
+            type: "scrub", 
+            access: "grotto",
+            isAvailable: function () {
+               return items.Ocarina && items.SongofStorms && (items.Bombs || items.Bombchu || items.Scale);
+            }
+         },
+         'Bean Salesman': {
+            type: "NPC", 
+            access: "outdoor",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale));
+            }
+         },
+         'Frogs in the Rain': {
+            type: "NPC", 
+            access: "outdoor",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.Ocarina && items.SongofStorms && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale)));
+            }
+         },
+         'Frogs Mini Game': {
+            type: "NPC", 
+            access: "outdoor",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.Ocarina && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && items.ZeldasLullaby && items.EponasSong && items.SariasSong && items.SunsSong && items.SongofTime && items.SongofStorms));
+            }
+         },
+         'Adult Skulltula by Grotto': {
+            type: "skulltula", 
+            access: "outdoor",
+            isAvailable: function () {
+               return items.Hookshot
+            }
+         },
+         'Open Grotto': {
+            type: "grotto", 
+            access: "grotto",
+            isAvailable: function () {
+               return true; }
+         },
+         'River Open Grotto': {
+            type: "chest", 
+            access: "grotto",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword || (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale));
+            }
+         },
+         'Grotto Gossip': {
+            type: "gossip", 
+            access: "grotto",
+            isAvailable: function () {
+               return true
+            }
+         },
+         'Adult above Bridge Skulltula': {
+            type: "skulltula", 
+            access: "outdoor",
+            isAvailable: function () {
+               return items.Hookshot
+            }
+         },
+         'Boulder Grotto': {
+            type: "grotto", 
+            access: "grotto",
+            isAvailable: function () {
+               return true; }
+         },
+         'Freestanding Lower Ledge': {
+            type: "freestanding", 
+            access: "outdoor",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword || (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale));
+            }
+         },
+         'Above Frogs Gossip': {
+            type: "gossip", 
+            access: "outdoor",
+            isAvailable: function () {
+               return true
+            }
+         },
+         'Child Ladder Skulltula': {
+            type: "skulltula", 
+            access: "outdoor",
+            isAvailable: function () {
+               return items.Bombs || items.Scale
+            }
+         },
+         'Freestanding Upper Ledge': {
+            type: "freestanding", 
+            access: "outdoor",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.MasterSword && items.HoverBoots) || (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale));
+            }
+         },
+         'River to Woods': {
+            x: "87.8%",
+            y: "33.3%",
+            type: "entrance", 
+            access: "entrance",
+             isAvailable: function () {
+                  return true; }
+         },
+         'Waterfall Gossip': {
+            type: "gossip", 
+            access: "outdoor",
+            isAvailable: function () {
+               return true
+            }
+         },
+         'River to Domain': {
+            x: "87.0%",
+            y: "28.0%",
+            type: "entrance", 
+            access: "entrance",
+             isAvailable: function () {
+                  return true; }
+         },
+      },
+      isBeatable: function () {
+         return this.canGetChest();
+      },
+      canGetChest: function () {
+         return generalCanGetChest(this.chestlist);
+      }
+   },
+   {
       name: "Zora's Domain",
       x: "92.9%",
       y: "34.5%",
@@ -4729,12 +4878,32 @@ var dungeons = [
       y: "45.6%",
       type: "overworld",
       chestlist: {
+         'Ranch to Field': {
+            x: "48.4%",
+            y: "38.5%",
+            type: "entrance",
+            access: "entrance",
+             isAvailable: function () {
+                  return true; }
+         },
+         'Talon\'s House': {
+            type: "simple", 
+            access: "door",
+            isAvailable: function () {
+               return true; }
+         },
          ['Talon\'s Cucco game']: {
             type: "NPC", 
             access: "simple",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Mask >= 2;
             }
+         },
+         'Ranch Stables': {
+            type: "simple", 
+            access: "door",
+            isAvailable: function () {
+               return true; }
          },
          ['Stable Cow Milk 1']: {
             type: "cow", 
@@ -4750,12 +4919,52 @@ var dungeons = [
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.EponasSong;
             }
          },
+         '2nd Floor Window Skulltula': {
+            type: "skulltula", 
+            access: "outdoor",
+            isAvailable: function () {
+               return items.Boomerang
+            }
+         },
+         'Tree Skulltula': {
+            type: "skulltula", 
+            access: "outdoor",
+            isAvailable: function () {
+               return true
+            }
+         },
          ['Song from Malon']: {
             type: "song", 
             access: "outdoor",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Mask >= 2 && items.Ocarina;
             }
+         },
+         'Back of Coral Skulltula': {
+            type: "skulltula", 
+            access: "outdoor",
+            isAvailable: function () {
+               return true
+            }
+         },
+         'Ranch Open Grotto': {
+            type: "grotto", 
+            access: "grotto",
+            isAvailable: function () {
+               return true; }
+         },
+         'Open Grotto Scrubs x3': {
+            type: "scrub", 
+            access: "grotto",
+            isAvailable: function () {
+               return true;
+            }
+         },
+         'Ranch Silo': {
+            type: "simple", 
+            access: "door",
+            isAvailable: function () {
+               return true; }
          },
          ['Silo Freestanding']: {
             type: "freestanding", 
@@ -4778,220 +4987,12 @@ var dungeons = [
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.EponasSong;
             }
          },
-      },
-      skulllist: {
-         'Tree Skulltula': {
-            type: "skulltula", 
-            access: "outdoor",
-            isAvailable: function () {
-               return true
-            }
-         },
-         'Back of Coral Skulltula': {
-            type: "skulltula", 
-            access: "outdoor",
-            isAvailable: function () {
-               return true
-            }
-         },
-         '2nd Floor Window Skulltula': {
-            type: "skulltula", 
-            access: "outdoor",
-            isAvailable: function () {
-               return items.Boomerang
-            }
-         },
          'North of Silo Skulltula': {
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
                return items.Boomerang
             }
-         },
-      },
-      scrublist: {
-         'Open Grotto Scrubs x3': {
-            type: "scrub", 
-            access: "grotto",
-            isAvailable: function () {
-               return true;
-            }
-         },
-      },
-      indoorlist: {
-         'Talon\'s House': {
-            type: "simple", 
-            access: "door",
-            isAvailable: function () {
-               return true; }
-         },
-         'Ranch Stables': {
-            type: "simple", 
-            access: "door",
-            isAvailable: function () {
-               return true; }
-         },
-         'Ranch Open Grotto': {
-            type: "grotto", 
-            access: "grotto",
-            isAvailable: function () {
-               return true; }
-         },
-         'Ranch Silo': {
-            type: "simple", 
-            access: "door",
-            isAvailable: function () {
-               return true; }
-         },
-      },
-      entrancelist: {
-         'Ranch to Field': {
-            x: "48.4%",
-            y: "38.5%",
-             isAvailable: function () {
-                  return true; }
-         },
-      },
-      isBeatable: function () {
-         return this.canGetChest();
-      },
-      canGetChest: function () {
-         return generalCanGetChest(this.chestlist);
-      }
-   },
-   {
-      name: "Zora's River",
-      x: "78.7%",
-      y: "29.5%",
-      type: "overworld",
-      chestlist: {
-         'Freestanding Lower Ledge': {
-            type: "freestanding", 
-            access: "outdoor",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword || (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale));
-            }
-         },
-         'River Open Grotto': {
-            type: "chest", 
-            access: "grotto",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword || (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale));
-            }
-         },
-         'Freestanding Upper Ledge': {
-            type: "freestanding", 
-            access: "outdoor",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.MasterSword && items.HoverBoots) || (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale));
-            }
-         },
-         'Frogs in the Rain': {
-            type: "NPC", 
-            access: "outdoor",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.Ocarina && items.SongofStorms && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale)));
-            }
-         },
-         'Frogs Mini Game': {
-            type: "NPC", 
-            access: "outdoor",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.Ocarina && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && items.ZeldasLullaby && items.EponasSong && items.SariasSong && items.SunsSong && items.SongofTime && items.SongofStorms));
-            }
-         },
-         'Bean Salesman': {
-            type: "NPC", 
-            access: "outdoor",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale));
-            }
-         }
-      },
-      skulllist: {
-         'Tree by Entrance Skulltula': {
-            type: "skulltula", 
-            access: "outdoor",
-            type: "outdoor",
-            isAvailable: function () {
-               return true
-            }
-         },
-         'Adult Skulltula by Grotto': {
-            type: "skulltula", 
-            access: "outdoor",
-            isAvailable: function () {
-               return items.Hookshot
-            }
-         },
-         'Adult above Bridge Skulltula': {
-            type: "skulltula", 
-            access: "outdoor",
-            isAvailable: function () {
-               return items.Hookshot
-            }
-         },
-         'Child Ladder Skulltula': {
-            type: "skulltula", 
-            access: "outdoor",
-            isAvailable: function () {
-               return items.Bombs || items.Scale
-            }
-         },
-      },
-      scrublist: {
-         'Storms Grotto Scrubs x3': {
-            type: "scrub", 
-            access: "grotto",
-            isAvailable: function () {
-               return items.Ocarina && items.SongofStorms && (items.Bombs || items.Bombchu || items.Scale);
-            }
-         },
-      },
-      indoorlist: {
-         'Open Grotto': {
-            type: "grotto", 
-            access: "grotto",
-            isAvailable: function () {
-               return true; }
-         },
-         'Boulder Grotto': {
-            type: "grotto", 
-            access: "grotto",
-            isAvailable: function () {
-               return true; }
-         },
-      },
-      gossiplist: {
-         'Above Frogs': {
-            isAvailable: function () {
-               return true
-            }
-         },
-         'Base of the Waterfall': {
-            isAvailable: function () {
-               return true
-            }
-         },
-      },
-      entrancelist: {
-         'River to Field': {
-            x: "70.0%",
-            y: "35.0%",
-             isAvailable: function () {
-                  return true; }
-         },
-         'River to Woods': {
-            x: "87.8%",
-            y: "33.3%",
-             isAvailable: function () {
-                  return true; }
-         },
-         'River to Domain': {
-            x: "87.0%",
-            y: "28.0%",
-             isAvailable: function () {
-                  return true; }
          },
       },
       isBeatable: function () {
