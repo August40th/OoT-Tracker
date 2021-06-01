@@ -3804,6 +3804,21 @@ var dungeons = [
       y: "06.3%",
       type: "overworld",
       chestlist: {
+         'City to Trail': {
+            x: "65.0%",
+            y: "10.5%",
+            type: "entrance", 
+            access: "entrance",
+             isAvailable: function () {
+                  return true; }
+         },
+         'Ruby Pedestal Skulltula': {
+            type: "skulltula", 
+            access: "outdoor",
+            isAvailable: function () {
+               return true;
+            },
+         },
          ['Little Rolling Goron']: {
             type: "NPC", 
             access: "outdoor",
@@ -3816,6 +3831,13 @@ var dungeons = [
             access: "outdoor",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Glove || items.Bombs || (items.Bombchu && BombchuLogic));
+            }
+         },
+         'Medigoron Gossip': {
+            type: "gossip", 
+            access: "outdoor",
+            isAvailable: function () {
+               return true
             }
          },
          ['Left Boulder Maze Chest']: {
@@ -3832,12 +3854,59 @@ var dungeons = [
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (OpenGate == 1 || (OpenGate == 0 && (items.Mask >= 1 || items.MasterSword || items.Bombs || (items.Dins && items.Magic) || (items.Bombchu && BombchuLogic)))) && (items.Bombs || (items.MasterSword && (items.Hammer || items.Glove >= 2)) || (items.Bombchu && BombchuLogic));
             }
          },
+         'Maze Crate Skulltula': {
+            type: "skulltula", 
+            access: "outdoor",
+            isAvailable: function () {
+               return items.Bombs
+            }
+         },
+         'Maze Gossip': {
+            type: "gossip", 
+            access: "outdoor",
+            isAvailable: function () {
+               return true
+            }
+         },
          ['Right Boulder Maze Chest']: {
             type: "chest", 
             access: "outdoor",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (OpenGate == 1 || (OpenGate == 0 && (items.Mask >= 1 || items.MasterSword || items.Bombs || (items.Dins && items.Magic) || (items.Bombchu && BombchuLogic)))) && (items.Bombs || (items.MasterSword && (items.Hammer || items.Glove >= 2)) || (items.Bombchu && BombchuLogic));
             }
+         },
+         'Lava Cross Grotto': {
+            type: "grotto", 
+            access: "grotto",
+               isAvailable: function () {
+                  return true; }
+         },
+         'Lava Scrubs x3': {
+            type: "scrub", 
+            access: "grotto",
+            isAvailable: function () {
+               return (items.Ocarina && items.SongofTime) || (items.Hookshot && items.GoronTunic);
+            },
+         },
+         'City to Woods': {
+            x: "69.0%",
+            y: "18.0%",
+            type: "entrance", 
+            access: "entrance",
+             isAvailable: function () {
+                  return true; }
+         },
+         'Goron Shop': {
+            type: "simple", 
+            access: "door",
+               isAvailable: function () {
+                  return true; }
+         },
+         'Goron Sale': {
+            type: "shop", 
+            access: "simple",
+            isAvailable: function () {
+               return true; }
          },
          ['Big Rolling Goron']: {
             type: "NPC", 
@@ -3860,100 +3929,11 @@ var dungeons = [
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (OpenGate == 1 || (OpenGate == 0 && (items.Mask >= 1 || items.MasterSword || items.Bombs || (items.Dins && items.Magic) || (items.Bombchu && BombchuLogic)))) && (items.Ocarina && items.ZeldasLullaby && items.SariasSong);
             }
          },
-      },
-      skulllist: {
-         'Rock Maze Crate Skulltula': {
-            type: "skulltula", 
-            access: "outdoor",
-            isAvailable: function () {
-               return items.Bombs
-            }
-         },
-         'Ruby Pedestal Skulltula': {
-            type: "skulltula", 
-            access: "outdoor",
-            isAvailable: function () {
-               return true;
-            },
-         },
-      },
-      scrublist: {
-         'Across the Lava Scrubs x3': {
-            type: "scrub", 
-            access: "grotto",
-            isAvailable: function () {
-               return (items.Ocarina && items.SongofTime) || (items.Hookshot && items.GoronTunic);
-            },
-         },
-      },
-      shoplist: {
-         'Goron Shop': {
-            type: "shop", 
-            access: "simple",
-            isAvailable: function () {
-               return true; }
-         },
-         'Goron Shop 2': {
-            type: "shop", 
-            access: "simple",
-            isAvailable: function () {
-               return true; }
-         },
-         'Goron Shop 3': {
-            type: "shop", 
-            access: "simple",
-            isAvailable: function () {
-               return true; }
-         },
-         'Goron Shop 4': {
-            type: "shop", 
-            access: "simple",
-            isAvailable: function () {
-               return true; }
-         },
-      },
-      indoorlist: {
-         'Goron Shop': {
-            type: "simple", 
-            access: "door",
-               isAvailable: function () {
-                  return true; }
-         },
-         'Lava Cross Scrub Grotto': {
-            type: "grotto", 
-            access: "grotto",
-               isAvailable: function () {
-                  return true; }
-         },
-      },
-      gossiplist: {
-         'Boulder Maze Gossip': {
-            isAvailable: function () {
-               return true
-            }
-         },
-         'Beside Medigoron': {
-            isAvailable: function () {
-               return true
-            }
-         },
-      },
-      entrancelist: {
-         'City to Trail': {
-            x: "65.0%",
-            y: "10.5%",
-             isAvailable: function () {
-                  return true; }
-         },
-         'City to Woods': {
-            x: "69.0%",
-            y: "18.0%",
-             isAvailable: function () {
-                  return true; }
-         },
          'City to Crater': {
             x: "69.0%",
             y: "09.0%",
+            type: "entrance", 
+            access: "entrance",
              isAvailable: function () {
                   return true; }
          },
