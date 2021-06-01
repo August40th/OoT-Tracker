@@ -4238,6 +4238,39 @@ var dungeons = [
       y: "34.5%",
       type: "overworld",
       chestlist: {
+         'Domain to River': {
+            x: "90.0%",
+            y: "29.5%",
+            type: "entrance", 
+            access: "entrance",
+             isAvailable: function () {
+                  return true; }
+         },
+         'Zora Shop': {
+            type: "simple", 
+            access: "door",
+               isAvailable: function () {
+                  return true; }
+         },
+         'Zora Shop': {
+            type: "shop", 
+            access: "simple",
+            isAvailable: function () {
+               return true; }
+         },
+         'Storms Grotto': {
+            type: "grotto", 
+            access: "grotto",
+               isAvailable: function () {
+                  return true; }
+         },
+         'Royal Zora Gossip': {
+            type: "gossip", 
+            access: "outdoor",
+            isAvailable: function () {
+               return true
+            }
+         },
          ['Diving Mini Game']: {
             type: "NPC", 
             access: "outdoor",
@@ -4252,15 +4285,14 @@ var dungeons = [
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || items.Scale || (items.Bombchu && BombchuLogic));
             }
          },
-         ['Thaw King Zora']: {
-            type: "NPC", 
-            access: "outdoor",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Bottle && items.MasterSword && ((items.Ocarina && items.ZeldasLullaby) || items.HoverBoots) && ((((items.ZoraLetter || OpenFountain) && (items.Bombs || items.Scale || (items.Bombchu && BombchuLogic))) || isBridgeOpen() || items.Wallet >= 3));
-            }
+         'Domain to Lake': {
+            x: "92.9%",
+            y: "32.0%",
+            type: "entrance", 
+            access: "entrance",
+             isAvailable: function () {
+                  return true; }
          },
-      },
-      skulllist: {
          'Frozen Waterfall Skulltula': {
             type: "skulltula", 
             access: "outdoor",
@@ -4268,70 +4300,18 @@ var dungeons = [
                return (items.MasterSword && items.Hookshot && items.ZoraLetter && (items.Bombs || items.Scale) && items.ZeldasLullaby && items.Ocarina);
             },
          },
-      },
-      shoplist: {
-         'Zora Shop': {
-            type: "shop", 
-            access: "simple",
+         ['Thaw King Zora']: {
+            type: "NPC", 
+            access: "outdoor",
             isAvailable: function () {
-               return true; }
-         },
-         'Zora Shop 2': {
-            type: "shop", 
-            access: "simple",
-            isAvailable: function () {
-               return true; }
-         },
-         'Zora Shop 3': {
-            type: "shop", 
-            access: "simple",
-            isAvailable: function () {
-               return true; }
-         },
-         'Potion Shop 4': {
-            type: "shop", 
-            access: "simple",
-            isAvailable: function () {
-               return true; }
-         },
-      },
-      indoorlist: {
-         'Zora Shop': {
-            type: "simple", 
-            access: "door",
-               isAvailable: function () {
-                  return true; }
-         },
-         'Storms Grotto': {
-            type: "grotto", 
-            access: "grotto",
-               isAvailable: function () {
-                  return true; }
-         },
-      },
-      gossiplist: {
-         'Infront King Zora': {
-            isAvailable: function () {
-               return true
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Bottle && items.MasterSword && ((items.Ocarina && items.ZeldasLullaby) || items.HoverBoots) && ((((items.ZoraLetter || OpenFountain) && (items.Bombs || items.Scale || (items.Bombchu && BombchuLogic))) || isBridgeOpen() || items.Wallet >= 3));
             }
-         },
-      },
-      entrancelist: {
-         'Domain to River': {
-            x: "90.0%",
-            y: "29.5%",
-             isAvailable: function () {
-                  return true; }
-         },
-         'Domain to Lake': {
-            x: "92.9%",
-            y: "32.0%",
-             isAvailable: function () {
-                  return true; }
          },
          'Domain to Fountain': {
             x: "94.9%",
             y: "22.5%",
+            type: "entrance", 
+            access: "entrance",
              isAvailable: function () {
                   return true; }
          },
@@ -4349,12 +4329,67 @@ var dungeons = [
       y: "28.0%",
       type: "overworld",
       chestlist: {
+         'Fountain to Domain': {
+            type: "entrance", 
+            access: "entrance",
+            x: "92.5%",
+            y: "21.0%",
+             isAvailable: function () {
+                  return true; }
+         },
+         'West Fountain Gossip': {
+            type: "gossip", 
+            access: "outdoor",
+            isAvailable: function () {
+               return true
+            }
+         },
+         'Lord Jabu Jabu\'s Belly': {
+            type: "dungeon", 
+            access: "door",
+               isAvailable: function () {
+                  return true; }
+         },
+         'Stand on the Log Skulltula': {
+            type: "skulltula", 
+            access: "outdoor",
+            isAvailable: function () {
+               return items.ZoraLetter && items.Boomerang && (items.Bombs || items.Scale);
+            },
+         },
+         'Tree by Great Fairy Skulltula': {
+            type: "skulltula", 
+            access: "outdoor",
+            isAvailable: function () {
+               return items.ZoraLetter && ((items.Bombs && items.Ocarina && items.ZeldasLullaby) || items.Scale);
+            },
+         },
+         'Great Fairy Gossip': {
+            type: "gossip", 
+            access: "outdoor",
+            isAvailable: function () {
+               return true
+            }
+         },
+         'Farore\'s Fairy Fountain': {
+            type: "simple", 
+            access: "door",
+               isAvailable: function () {
+                  return true; }
+         },
          ['Farore\'s Great Fairy Fountain']: {
             type: "NPC", 
             access: "simple",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.ZoraLetter || OpenFountain) && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Ocarina && items.ZeldasLullaby;
             }
+         },
+         'Silver Rock Skulltula': {
+            type: "skulltula", 
+            access: "outdoor",
+            isAvailable: function () {
+               return (items.MasterSword && items.Glove >= 2 && items.ZoraLetter && (items.Bombs || items.Scale) && items.ZeldasLullaby && items.Ocarina);
+            },
          },
          ['Iceberg Freestanding']: {
             type: "freestanding", 
@@ -4370,67 +4405,10 @@ var dungeons = [
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bombs || items.Scale || (items.Bombchu && BombchuLogic)) && (items.ZoraLetter || OpenFountain) && items.IronBoots && ((items.Ocarina && items.ZeldasLullaby) || items.HoverBoots);
             }
          },
-      },
-      skulllist: {
-         'Tree by Great Fairy Skulltula': {
-            type: "skulltula", 
-            access: "outdoor",
-            isAvailable: function () {
-               return items.ZoraLetter && ((items.Bombs && items.Ocarina && items.ZeldasLullaby) || items.Scale);
-            },
-         },
-         'Stand on the Log Skulltula': {
-            type: "skulltula", 
-            access: "outdoor",
-            isAvailable: function () {
-               return items.ZoraLetter && items.Boomerang && (items.Bombs || items.Scale);
-            },
-         },
-         'Silver Rock Skulltula': {
-            type: "skulltula", 
-            access: "outdoor",
-            isAvailable: function () {
-               return (items.MasterSword && items.Glove >= 2 && items.ZoraLetter && (items.Bombs || items.Scale) && items.ZeldasLullaby && items.Ocarina);
-            },
-         },
-      },
-      indoorlist: {
-         'Farore\'s Fairy Fountain': {
-            type: "simple", 
-            access: "door",
-               isAvailable: function () {
-                  return true; }
-         },
-         'Lord Jabu Jabu\'s Belly': {
-            type: "dungeon", 
-            access: "door",
-               isAvailable: function () {
-                  return true; }
-         },
          'Ice Cavern': {
             type: "dungeon", 
             access: "door",
                isAvailable: function () {
-                  return true; }
-         },
-      },
-      gossiplist: {
-         'West Fountain Stone': {
-            isAvailable: function () {
-               return true
-            }
-         },
-         'Great Fairy Stone': {
-            isAvailable: function () {
-               return true
-            }
-         },
-      },
-      entrancelist: {
-         'Fountain to Domain': {
-            x: "92.5%",
-            y: "21.0%",
-             isAvailable: function () {
                   return true; }
          },
       },
