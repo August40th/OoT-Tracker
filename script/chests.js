@@ -2184,30 +2184,49 @@ var dungeons = [
       chestlist: {
          ['Child Switch Room']: {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.RequiemofSpirit && (items.Boomerang || items.Slingshot || (items.Bombchu && BombchuLogic));
             }
          },
          ['Child 1st Floor Torches']: {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.RequiemofSpirit && (items.Boomerang || items.Slingshot || (items.Bombchu && BombchuLogic));
             }
          },
+         'Child Torch Skulltula': {
+            type: "skulltula",
+            access: "vanilla",
+            isAvailable: function () {
+               return items.Ocarina && items.RequiemofSpirit && (items.Slingshot || items.Boomerang);
+            },
+         },
+         'Child Climb Skulltula': {
+            type: "skulltula",
+            access: "vanilla",
+            isAvailable: function () {
+               return items.SpiritKey && ((items.Ocarina && items.RequiemofSpirit && (items.Boomerang || items.Slingshot)) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2) && items.Lens && items.Magic) || (items.Ocarina && items.RequiemofSpirit)) && items.Glove >= 2 && (items.Hookshot || items.Bow)));
+            },
+         },
          ['Child Lizalfos East Chest']: {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return items.SpiritKey && (((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.RequiemofSpirit) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && items.MasterSword && (items.Hookshot || items.Bow || (items.Bombs || (items.Bombchu && BombchuLogic)))));
             }
          },
          ['Child Lizalfos North Chest']: {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return items.SpiritKey && (((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.RequiemofSpirit) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && items.MasterSword && (items.Hookshot || items.Bow || (items.Bombs || (items.Bombchu && BombchuLogic)))));
             }
          },
          ['Large Torch Chest']: {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return items.SpiritKey &&
                   (((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.RequiemofSpirit && (items.Bombs || (items.Bombchu && BombchuLogic))
@@ -2218,130 +2237,133 @@ var dungeons = [
          },
          ['Sun Block Room Chest']: {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return items.SpiritKey && (((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.RequiemofSpirit && (items.Bombs || (items.Bombchu && BombchuLogic))) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && items.MasterSword && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic)) && (items.Dins || (items.Fire && items.Bow)) && items.Magic));
             }
          },
+         'Before Child IronKnuckle Skulltula': {
+            type: "skulltula",
+            access: "vanilla",
+            isAvailable: function () {
+               return items.SpiritKey && (items.Ocarina && items.RequiemofSpirit && items.Bombs) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2) && items.Lens && items.Magic) || (items.Ocarina && items.RequiemofSpirit)) && items.Glove >= 2);
+            },
+         },
          ['Colossus Right Hand Chest']: {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (items.RequiemofSpirit && items.SpiritKey >= 2 && items.Ocarina && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.Bombchu && BombchuLogic))) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && items.MasterSword && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic)) && items.SpiritKey >= 2);
             }
          },
          ['Wolfos Lullaby Chest']: {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && ((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && items.Hookshot && items.Ocarina && items.ZeldasLullaby;
             }
          },
+         'Song of Time Skulltula': {
+            type: "skulltula",
+            access: "vanilla",
+            isAvailable: function () {
+               return ((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2) && items.Lens && items.Magic) || (items.Ocarina && items.RequiemofSpirit)) && items.Glove >= 2;
+            },
+         },
          ['Silver Rupee Halfpipe']: {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && ((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic));
             }
          },
          ['Floormaster Left Chest']: {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.SpiritKey && ((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic));
             }
          },
          ['Floormaster Right Chest']: {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.SpiritKey && ((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic));
             }
          },
-         ['Statue\'s Hand after Lullaby']: {
-            type: "chest",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.SpiritKey && (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic))) && items.Ocarina && items.ZeldasLullaby;
-            }
-         },
          ['Top Right after Lullaby']: {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.SpiritKey && (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic))) && items.Ocarina && items.ZeldasLullaby && (items.HoverBoots || items.Hookshot);
             }
          },
+         ['Statue\'s Hand after Lullaby']: {
+            type: "chest",
+            access: "vanilla",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.SpiritKey && (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic))) && items.Ocarina && items.ZeldasLullaby;
+            }
+         },
+         'Top Left Scarecrow Skulltula': {
+            type: "skulltula",
+            access: "vanilla",
+            isAvailable: function () {
+               return items.SpiritKey && (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2) && items.Lens && items.Magic) || items.RequiemofSpirit) && items.Glove >= 2) && ((items.Ocarina && items.Hookshot) || items.Hookshot >= 2);
+            },
+         },
          ['Four Armos Side Room']: {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.SpiritKey >= 2 && (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic))) && items.MirrorShield && (items.Bombs || (items.Bombchu && BombchuLogic));
             }
          },
          ['Left Invisible Chest']: {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.SpiritKey >= 2 && items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic)) && (items.Bombs || (items.Bombchu && BombchuLogic)) && ((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2 || items.RequiemofSpirit);
             }
          },
          ['Right Invisible Chest']: {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.SpiritKey >= 2 && items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic)) && (items.Bombs || (items.Bombchu && BombchuLogic)) && ((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2 || items.RequiemofSpirit);
             }
          },
          ['Colossus Left Hand Chest']: {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.SpiritKey >= 2 && items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic)) && (items.Bombs || (items.Bombchu && BombchuLogic)) && ((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2 || items.RequiemofSpirit);
             }
          },
-         ['Boss Key Chest']: {
+         ['Fire Trap Chest']: {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.SpiritKey >= 3 && items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic)) && items.ZeldasLullaby && items.Ocarina && ((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2 || items.RequiemofSpirit);
             }
          },
          ['Adult Lizalfos Chest']: {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.SpiritKey >= 3 && items.Glove >= 2 && items.MirrorShield && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic)) && ((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2 || items.RequiemofSpirit);
             }
          },
          ['Twinrova']: {
             type: "bss",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.SpiritKey >= 3 && (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic)) && items.MirrorShield && items.Hookshot && items.BossSpirit);
             }
          },
-      },
-      skulllist: {
-         'Child Torch Skulltula': {
-            type: "skulltula",
-            isAvailable: function () {
-               return items.Ocarina && items.RequiemofSpirit && (items.Slingshot || items.Boomerang);
-            },
-         },
-         'Child Climb Skulltula': {
-            type: "skulltula",
-            isAvailable: function () {
-               return items.SpiritKey && ((items.Ocarina && items.RequiemofSpirit && (items.Boomerang || items.Slingshot)) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2) && items.Lens && items.Magic) || (items.Ocarina && items.RequiemofSpirit)) && items.Glove >= 2 && (items.Hookshot || items.Bow)));
-            },
-         },
-         'Before Child IronKnuckle Skulltula': {
-            type: "skulltula",
-            isAvailable: function () {
-               return items.SpiritKey && (items.Ocarina && items.RequiemofSpirit && items.Bombs) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2) && items.Lens && items.Magic) || (items.Ocarina && items.RequiemofSpirit)) && items.Glove >= 2);
-            },
-         },
-         'Song of Time Skulltula': {
-            type: "skulltula",
-            isAvailable: function () {
-               return ((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2) && items.Lens && items.Magic) || (items.Ocarina && items.RequiemofSpirit)) && items.Glove >= 2;
-            },
-         },
-         'Top Left Scarecrow Skulltula': {
-            type: "skulltula",
-            isAvailable: function () {
-               return items.SpiritKey && (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2) && items.Lens && items.Magic) || items.RequiemofSpirit) && items.Glove >= 2) && ((items.Ocarina && items.Hookshot) || items.Hookshot >= 2);
-            },
-         },
-      },
-      MQlist: {
          'Lobby Bottom Left': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return (items.Ocarina && items.RequiemofSpirit) //Child Temple access
                || (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2); // Adult Temple access
@@ -2349,6 +2371,7 @@ var dungeons = [
          },
          'Lobby Top Left': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return (items.Ocarina && items.RequiemofSpirit 
                && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Slingshot) //Boulder and eye switch
@@ -2358,6 +2381,7 @@ var dungeons = [
          },
          'Lobby Top Right': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return (items.Ocarina && items.RequiemofSpirit 
                && items.Slingshot) //Eye switch
@@ -2367,24 +2391,28 @@ var dungeons = [
          },
          'Slug Room Chest': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return items.Ocarina && items.RequiemofSpirit && items.Glove >= 2 && items.Hammer;
             }
          },
          'Anubis Free Chest': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return items.Ocarina && items.RequiemofSpirit;
             }
          },
          'Anubis Fight Chest': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return items.Ocarina && items.RequiemofSpirit && items.Bombchu && items.Slingshot && items.Magic && items.Dins; //Kill Anubis and long way around
             }
          },
          'Dodongo Chest': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return (items.Ocarina && items.RequiemofSpirit && items.Bombchu && items.SpiritKey >= 1) //Child climb
                || (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2)
@@ -2393,6 +2421,7 @@ var dungeons = [
          },
          'Statue Room Eye Switch': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return (items.Ocarina && items.RequiemofSpirit && items.Bombchu && items.SpiritKey >= 2) //Child Statue Room
                || (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2)
@@ -2401,6 +2430,7 @@ var dungeons = [
          },
          'Shortcut Hallway Eye Switch': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return (items.Ocarina && items.RequiemofSpirit && items.Bombchu && items.SpiritKey >= 2 
                && items.Magic && items.Dins && (items.Slingshot || items.Bow) ) //Child opens shortcut hallway
@@ -2409,16 +2439,27 @@ var dungeons = [
                && ((items.Slingshot && items.Ocarina && items.RequiemofSpirit) || items.Bow) && items.Magic && (items.Dins || (items.Bow && items.Fire)); //Adult opens
             }
          },
-         'Sunblock Chest': {
+         'MQ Sunblock Chest': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return (items.Ocarina && items.RequiemofSpirit && items.Bombchu && items.SpiritKey >= 2 && items.SongofTime) //Blue switch on statue hand
                || (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2)
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.Ocarina && items.SongofTime && items.SpiritKey >= 1; //As Asult
             }
          },
-         'Colossus Right Hand': {
+         'Sunblock Room Skulltula': {
+            type: "skulltula",
+            access: "master",
+            isAvailable: function () {
+               return (items.Ocarina && items.RequiemofSpirit && items.Bombchu && items.SpiritKey >= 2 && items.SongofTime && items.Boomerang) //Blue switch on statue hand
+               || (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
+               && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.Ocarina && items.SongofTime && items.SpiritKey >= 1; //As Asult
+            }
+         },
+         'MQ Colossus Right Hand': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return (items.Ocarina && items.RequiemofSpirit && items.Bombchu && items.SpiritKey >= 3 && items.SongofTime)
                || (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2)
@@ -2427,6 +2468,7 @@ var dungeons = [
          },
          'Dodongo Room Adult Chest': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.SpiritKey >= 1;
@@ -2434,6 +2476,7 @@ var dungeons = [
          },
          'Statue Room Lower Chest': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.Ocarina && items.ZeldasLullaby; 
@@ -2441,6 +2484,7 @@ var dungeons = [
          },
          'Statue Room Upper Chest': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.Ocarina && items.ZeldasLullaby; 
@@ -2448,6 +2492,15 @@ var dungeons = [
          },
          'Leever Room Chest': {
             type: "chest",
+            access: "master",
+            isAvailable: function () {
+               return (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
+               && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.Bow && items.Magic && items.Fire; //Stalfos Room access
+            }
+         },
+         'Leever Room Skulltula': {
+            type: "skulltula",
+            access: "master",
             isAvailable: function () {
                return (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.Bow && items.Magic && items.Fire; //Stalfos Room access
@@ -2455,6 +2508,16 @@ var dungeons = [
          },
          'Child Songs Halfpipe': {
             type: "chest",
+            access: "master",
+            isAvailable: function () {
+               return (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
+               && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.Bow && items.Magic && items.Fire
+               && items.Ocarina && items.ZeldasLullaby && items.EponasSong && items.SunsSong && items.SongofStorms && items.SongofTime; 
+            }
+         },
+         'Songs Halfpipe Skulltula': {
+            type: "skulltula",
+            access: "master",
             isAvailable: function () {
                return (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.Bow && items.Magic && items.Fire
@@ -2463,6 +2526,7 @@ var dungeons = [
          },
          'Lobby Bottom Right': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.Bow && items.Magic && items.Fire && items.Hammer; 
@@ -2470,6 +2534,7 @@ var dungeons = [
          },
          'Beamos Room Chest': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.SpiritKey >= 1 && items.Bombs || items.Bombchu; 
@@ -2477,6 +2542,7 @@ var dungeons = [
          },
          'Dinalfos Chest': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.SpiritKey >= 1 
@@ -2485,14 +2551,16 @@ var dungeons = [
          },
          'Gibdo Room Chest': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.SpiritKey >= 1 
                && items.Ocarina && items.SongofTime && items.MirrorShield;
             }
          },
-         'Colossus Left Hand': {
+         'MQ Colossus Left Hand': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.SpiritKey >= 1;
@@ -2500,49 +2568,27 @@ var dungeons = [
          },
          'Highest Chest': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.SpiritKey >= 2;
             }
          },
-         'TwinRova': {
+         'Iron Knuckle Skulltula x2': {
+            type: "skulltula",
+            access: "master",
+            isAvailable: function () {
+               return (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
+               && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.SpiritKey >= 3;
+            }
+         },
+         'MQ TwinRova': {
             type: "boss",
+            access: "master",
             isAvailable: function () {
                return (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 
                && items.MirrorShield && items.SpiritKey >= 2 && items.BossSpirit;
-            }
-         },
-      },
-      MQskulllist: {
-         'Sunblock Room Skulltula': {
-            type: "skulltula",
-            isAvailable: function () {
-               return (items.Ocarina && items.RequiemofSpirit && items.Bombchu && items.SpiritKey >= 2 && items.SongofTime && items.Boomerang) //Blue switch on statue hand
-               || (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
-               && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.Ocarina && items.SongofTime && items.SpiritKey >= 1; //As Asult
-            }
-         },
-         'Leever Room Skulltula': {
-            type: "skulltula",
-            isAvailable: function () {
-               return (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
-               && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.Bow && items.Magic && items.Fire; //Stalfos Room access
-            }
-         },
-         'Songs Halfpipe Skulltula': {
-            type: "skulltula",
-            isAvailable: function () {
-               return (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
-               && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.Bow && items.Magic && items.Fire
-               && items.Ocarina && items.ZeldasLullaby && items.EponasSong && items.SunsSong && items.SongofStorms && items.SongofTime; 
-            }
-         },
-         'Iron Knuckle Skulltula x2': {
-            type: "skulltula",
-            isAvailable: function () {
-               return (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
-               && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.SpiritKey >= 3;
             }
          },
       },
@@ -2562,142 +2608,161 @@ var dungeons = [
       chestlist: {
          'Keese and Redead Chest': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.NocturneofShadow && items.Magic && items.Dins && (items.HoverBoots || items.Hookshot);
             }
          },
          'Deadhand Chest': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.NocturneofShadow && items.Magic && items.Magic && items.Dins && (items.HoverBoots || items.Hookshot);
             }
          },
          '1st Gibdos Room': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots;
             }
          },
          '1st Silver Rupees': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots;
             }
          },
+         'Silver Rupee Skulltula': {
+            type: "skulltula",
+            access: "vanilla",
+            isAvailable: function () {
+               return items.ShadowKey && items.Ocarina && items.NocturneofShadow && items.Dins && items.Magic && items.Lens && items.HoverBoots && items.Bombs;
+            },
+         },
          'Like Like Visible Chest': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ShadowKey && items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots && (items.Bombs || (items.Bombchu && BombchuLogic));
             }
          },
          'Like Like Invisible Chest': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ShadowKey && items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots && (items.Bombs || (items.Bombchu && BombchuLogic));
             }
          },
+         'Crushing Spikes Skulltula': {
+            type: "skulltula",
+            access: "vanilla",
+            isAvailable: function () {
+               return items.ShadowKey && items.Ocarina && items.NocturneofShadow && items.Dins && items.Magic && items.Lens && items.HoverBoots && items.Bombs;
+            },
+         },
          'Crushing Spikes Lower Chest': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ShadowKey && items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots && (items.Bombs || (items.Bombchu && BombchuLogic));
             }
          },
          'Crushing Spikes Upper Chest': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ShadowKey && items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Glove;
             }
          },
          'Crushing Spikes Switch Chest': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ShadowKey && items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Glove;
             }
          },
          'Readeads and Silver Rupees': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ShadowKey >= 2 && items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots && (items.Bombs || (items.Bombchu && BombchuLogic));
             }
          },
+         'Single Skull Pot Skulltula': {
+            type: "skulltula",
+            access: "vanilla",
+            isAvailable: function () {
+               return items.ShadowKey >= 2 && items.Ocarina && items.NocturneofShadow && items.Dins && items.Magic && items.Lens && items.HoverBoots && items.Bombs && items.Hookshot;
+            },
+         },
          'Skull Pot Bombing': {
             type: "freestanding",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ShadowKey >= 2 && items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Hookshot;
             }
          },
          'Readeads and Hint': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ShadowKey >= 3 && items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Hookshot;
             }
          },
          '2nd Gibdos Room': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ShadowKey >= 3 && items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Hookshot;
             }
          },
          'Gibdos Hidden Chest': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ShadowKey >= 3 && items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Hookshot;
             }
          },
+         'Before Boat Ride Skulltula': {
+            type: "skulltula",
+            access: "vanilla",
+            isAvailable: function () {
+               return items.ShadowKey >= 3 && items.Ocarina && items.NocturneofShadow && items.Dins && items.Magic && items.Lens && items.HoverBoots && items.Bombs && items.Hookshot && items.Glove;
+            },
+         },
          'Floormaster Room': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ShadowKey >= 4 && items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Hookshot && items.Glove && items.Ocarina && items.ZeldasLullaby;
             }
          },
+         'Triple Skull Pot Skulltula': {
+            type: "skulltula",
+            access: "vanilla",
+            isAvailable: function () {
+               return items.ShadowKey >= 4 && items.Ocarina && items.NocturneofShadow && items.Dins && items.Magic && items.Lens && items.HoverBoots && items.Bombs && items.Hookshot && items.Glove && items.ZeldasLullaby;
+            },
+         },
          'Burnable Spike Wall Chest x2': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ShadowKey >= 4 && items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Hookshot && items.Glove && items.Ocarina && items.ZeldasLullaby;
             }
          },
          'Bongo Bongo': {
             type: "boss",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ShadowKey >= 5 && items.BossShadow && (items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Hookshot && items.Glove && items.Ocarina && items.ZeldasLullaby && (items.Bow || items.Scarecrow >= 2));
             }
          },
-      },
-      skulllist: {
-         'Invisible Blades Skulltula': {
-            type: "skulltula",
-            isAvailable: function () {
-               return items.ShadowKey && items.Ocarina && items.NocturneofShadow && items.Dins && items.Magic && items.Lens && items.HoverBoots && items.Bombs;
-            },
-         },
-         'Crushing Spikes Skulltula': {
-            type: "skulltula",
-            isAvailable: function () {
-               return items.ShadowKey && items.Ocarina && items.NocturneofShadow && items.Dins && items.Magic && items.Lens && items.HoverBoots && items.Bombs;
-            },
-         },
-         'Single Skull Pot Skulltula': {
-            type: "skulltula",
-            isAvailable: function () {
-               return items.ShadowKey >= 2 && items.Ocarina && items.NocturneofShadow && items.Dins && items.Magic && items.Lens && items.HoverBoots && items.Bombs && items.Hookshot;
-            },
-         },
-         'Before Boat Ride Skulltula': {
-            type: "skulltula",
-            isAvailable: function () {
-               return items.ShadowKey >= 3 && items.Ocarina && items.NocturneofShadow && items.Dins && items.Magic && items.Lens && items.HoverBoots && items.Bombs && items.Hookshot && items.Glove;
-            },
-         },
-         'Triple Skull Pot Skulltula': {
-            type: "skulltula",
-            isAvailable: function () {
-               return items.ShadowKey >= 4 && items.Ocarina && items.NocturneofShadow && items.Dins && items.Magic && items.Lens && items.HoverBoots && items.Bombs && items.Hookshot && items.Glove && items.ZeldasLullaby;
-            },
-         },
-      },
-      MQlist: {
          '1st Redead Room': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) //Temple access
                && items.Bombs && items.ShadowKey >= 1; //Bombwall + keydoor
@@ -2705,39 +2770,45 @@ var dungeons = [
          },
          '1st Deadhand Chest': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots)
                && items.Bombs && items.ShadowKey >= 1
                && items.SongofTime && items.Bow; //Block of time + eye switch
             }
          },
-         '1st Gibdos Room': {
+         'MQ 1st Gibdos Room': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire; //Deeper access
             }
          },
-         'Skulltulas and Siler Ruppees': {
+         'Skulltulas and Silver Ruppees': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire; //Deeper access
             }
          },
          'Fall to Dock Invisible Chest': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire; //Deeper access
             }
          },
-         'Like Like Visible Chest': {
+         'MQ Like Like Visible Chest': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 1; //Deeper access
             }
          },
-         'Like Like Invisible Chest': {
+         'MQ Like Like Invisible Chest': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 1; //Deeper access
@@ -2745,34 +2816,47 @@ var dungeons = [
          },
          'Beamos Silver Rupee Chest': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 1 && items.Hookshot >= 2; //Longshot requireq for a rupee
             }
          },
-         'Crushing Spikes Lower Chest': {
+         'MQ Crushing Spikes Skulltula': {
+            type: "skulltula",
+            access: "master",
+            isAvailable: function () {
+               return items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
+               && items.Bombs && items.ShadowKey >= 1 && items.Hookshot;
+            }
+         },
+         'MQ Crushing Spikes Lower Chest': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 1;
             }
          },
-         'Crushing Spikes Upper Chest': {
+         'MQ Crushing Spikes Upper Chest': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 1;
             }
          },
-         'Crushing Spikes Switch Chest': {
+         'MQ Crushing Spikes Switch Chest': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 1;
             }
          },
-         'Redeads and Silver Rupees': {
+         'MQ Redeads and Silver Rupees': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 2;
@@ -2780,79 +2864,46 @@ var dungeons = [
          },
          'Stalfos Chest': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 2 && items.Hookshot >= 2;
             }
          },
-         'Redeads invisible Chest': {
+         'MQ Redeads invisible Chest': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 3 && items.Hookshot >= 2;
-            }
-         },
-         '2nd Gibdos Chest': {
-            type: "chest",
-            isAvailable: function () {
-               return items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
-               && items.Bombs && items.ShadowKey >= 3 && items.Hookshot >= 2;
-            }
-         },
-         'Gibdos Hidden Chest': {
-            type: "chest",
-            isAvailable: function () {
-               return items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
-               && items.Bombs && items.ShadowKey >= 3 && items.Hookshot >= 2;
-            }
-         },
-         'Skull Pot Freestanding': {
-            type: "freestanding",
-            isAvailable: function () {
-               return items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
-               && items.Bombs && items.ShadowKey >= 4 && items.Hookshot >= 2 && items.ZeldasLullaby
-               && items.SongofTime;
-            }
-         },
-         'Burnable Spike Walls Chest x2 ': {
-            type: "chest",
-            isAvailable: function () {
-               return items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
-               && items.Bombs && items.ShadowKey >= 5 && items.Hookshot >= 2 && items.ZeldasLullaby && items.SongofTime;
-            }
-         },
-         '2nd Deadhand': {
-            type: "chest",
-            isAvailable: function () {
-               return items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
-               && items.Bombs && items.ShadowKey >= 4 && items.Hookshot >= 2 && items.ZeldasLullaby && items.SongofTime;
-            }
-         },
-         'Bongo Bongo': {
-            type: "boss",
-            isAvailable: function () {
-               return items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
-               && items.Bombs && items.ShadowKey >= 4 && items.Hookshot >= 2 && items.ZeldasLullaby && items.BossShadow;
-            }
-         },
-      },
-      MQskulllist: {
-         'Crushing Spikes Skulltula': {
-            type: "skulltula",
-            isAvailable: function () {
-               return items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
-               && items.Bombs && items.ShadowKey >= 1 && items.Hookshot;
             }
          },
          '2nd Redead Room Skulltula': {
             type: "skulltula",
+            access: "master",
             isAvailable: function () {
                return items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 3 && items.Hookshot >= 2;
             }
          },
-         '2nd Gibdos Room Skulltula': {
+         'MQ 2nd Gibdos Chest': {
+            type: "chest",
+            access: "master",
+            isAvailable: function () {
+               return items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
+               && items.Bombs && items.ShadowKey >= 3 && items.Hookshot >= 2;
+            }
+         },
+         'MQ Gibdos Hidden Chest': {
+            type: "chest",
+            access: "master",
+            isAvailable: function () {
+               return items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
+               && items.Bombs && items.ShadowKey >= 3 && items.Hookshot >= 2;
+            }
+         },'2nd Gibdos Room Skulltula': {
             type: "skulltula",
+            access: "master",
             isAvailable: function () {
                return items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 3 && items.Hookshot >= 2;
@@ -2860,16 +2911,51 @@ var dungeons = [
          },
          'Dark River Skulltula': {
             type: "skulltula",
+            access: "master",
             isAvailable: function () {
                return items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 4 && items.Hookshot >= 2 && items.ZeldasLullaby;
             }
          },
+         'MQ Skull Pot Freestanding': {
+            type: "freestanding",
+            access: "master",
+            isAvailable: function () {
+               return items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
+               && items.Bombs && items.ShadowKey >= 4 && items.Hookshot >= 2 && items.ZeldasLullaby
+               && items.SongofTime;
+            }
+         },
+         'MQ Burnable Spike Walls Chest x2 ': {
+            type: "chest",
+            access: "master",
+            isAvailable: function () {
+               return items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
+               && items.Bombs && items.ShadowKey >= 5 && items.Hookshot >= 2 && items.ZeldasLullaby && items.SongofTime;
+            }
+         },
+         '2nd Deadhand': {
+            type: "chest",
+            access: "master",
+            isAvailable: function () {
+               return items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
+               && items.Bombs && items.ShadowKey >= 4 && items.Hookshot >= 2 && items.ZeldasLullaby && items.SongofTime;
+            }
+         },
          'Skulltula Near Boss Door': {
             type: "skulltula",
+            access: "master",
             isAvailable: function () {
                return items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 4 && items.Hookshot >= 2 && items.ZeldasLullaby;
+            }
+         },
+         'MQ Bongo Bongo': {
+            type: "boss",
+            access: "master",
+            isAvailable: function () {
+               return items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
+               && items.Bombs && items.ShadowKey >= 4 && items.Hookshot >= 2 && items.ZeldasLullaby && items.BossShadow;
             }
          },
       },
@@ -2890,118 +2976,191 @@ var dungeons = [
       chestlist: {
          ['Forest Chest']: {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen();
             }
          },
-         ['Ice Chests x2']: {
+         ['Forest Trial Clear']: {
+            type: "trial",
+            access: "mixed",
+            isAvailable: function () {
+               return isBridgeOpen() && items.Magic && items.Bow && items.Light && (items.Fire || (items.Hookshot && items.Dins));
+            }
+         },
+         ['Ice Chest 1']: {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen();
             }
          },
-         ['Spirit Chest x2']: {
+         ['Ice Chest 2']: {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && items.Hookshot && (items.Bombchu && BombchuLogic);
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen();
             }
          },
-         ['Shadow Chests x2']: {
-            type: "chest",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && ((items.Magic && items.Bow && items.Fire) || items.Hookshot >= 2) && items.HoverBoots;
+         ['Ice Trial Clear']: {
+            type: "trial",
+            access: "mixed",
+            trial: function () {
+               return isBridgeOpen() && items.Bottle && items.Hammer && items.Magic && items.Bow && items.Light;
             }
          },
-         ['Light Chests x6']: {
+         ['Shadow Chest 1']: {
             type: "chest",
+            access: "vanilla",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && ((items.Magic && items.Bow && items.Fire) || items.Hookshot >= 1 || items.HoverBoots || (items.Ocarina >= 1 && items.SongofTimw;
+            }
+         },
+         ['Shadow Chest 2']: {
+            type: "chest",
+            access: "vanilla",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && ((items.Magic && items.Bow && items.Fire) || ((items.Hookshot >= 1 || items.HoverBoots) && items.Magic && items.Dins) || items.Hookshot >= 2);
+            }
+         },
+         ['Shadow Trial Clear']: {
+            type: "trial",
+            access: "mixed",
+            isAvailable: function () {
+               return isBridgeOpen() && items.Magic && items.Bow && items.Light && items.Hammer && (items.Fire || items.Hookshot >= 2) && (items.Lens || (items.HoverBoots && items.Hookshot >= 2));
+            }
+         },
+         ['Fire Trial Clear']: {
+            type: "trial",
+            access: "mixed",
+            isAvailable: function () {
+               return isBridgeOpen() && items.Glove >= 3 && items.Magic && items.Bow && items.Light && items.Hookshot >= 2;
+            }
+         },
+         ['Spirit Chest 1']: {
+            type: "chest",
+            access: "vanilla",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && items.Hookshot && (items.Bombchu || items.Bow);
+            }
+         },
+         ['Spirit Chest 2']: {
+            type: "chest",
+            access: "vanilla",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && items.Hookshot && (items.Bombchu || items.Bow);
+            }
+         },
+         ['Spirit Trial Clear']: {
+            type: "trial",
+            access: "mixed",
+            isAvailable: function () {
+               return isBridgeOpen() && items.Magic && items.Bow && items.Light && items.MirrorShield && items.Bombs && items.Hookshot;
+            }
+         },
+         ['Light Chest 1']: {
+            type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && items.Glove >= 3;
             }
          },
-         ['Light Trial Invisible CHest']: {
+         ['Light Chest 2']: {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && items.Glove >= 3;
             }
          },
-         ['Light Trial Lullaby Chest']: {
+         ['Light Chest 3']: {
             type: "chest",
+            access: "vanilla",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && items.Glove >= 3;
+            }
+         },
+         ['Light Chest 4']: {
+            type: "chest",
+            access: "vanilla",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && items.Glove >= 3;
+            }
+         },
+         ['Light Chest 5']: {
+            type: "chest",
+            access: "vanilla",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && items.Glove >= 3;
+            }
+         },
+         ['Light Chest 6']: {
+            type: "chest",
+            access: "vanilla",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && items.Glove >= 3;
+            }
+         },
+         ['Light Invisible CHest']: {
+            type: "chest",
+            access: "vanilla",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && items.Glove >= 3;
+            }
+         },
+         ['Light Lullaby Chest']: {
+            type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && items.Glove >= 3 && items.Ocarina && items.ZeldasLullaby && items.CastleKey;
             }
          },
+         ['Light Trial Clear']: {
+            type: "trial",
+            access: "mixed",
+            isAvailable: function () {
+               return isBridgeOpen() && items.Glove >= 3 && items.Magic && items.Bow && items.Hookshot && items.Light && items.CastleKey >= 2;
+            }
+         },
          ['Boss Key Chest']: {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && generalCanGetChest(this.trials);
             }
          },
          ['GanonDorf']: {
             type: "boss",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && generalCanGetChest(this.trials) && items.BossCastle && items.Bow && items.Magic && items.Light;
             }
          },
-      },
-      scrublist: {
          'Lower Invisible Wall Scrubs x4': {
             type: "scrub",
+            access: "vanilla",
             isAvailable: function () {
                return isBridgeOpen();
             }
          },
-      },
-      MQlist: {
-         'Check 1 ': {
+         'MQ Check 1 ': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return true;
             },
          },
-      },
-      MQscrublist: {
-         'Scrub 1 ': {
+         'MQ Scrub 1 ': {
             type: "scrub",
+            access: "master",
             isAvailable: function () {
                return true;
             },
          },
-      },
-      triallist: {
-         ['Forest Trial Clear']: {
-            type: "trial",
+         ['MQ GanonDorf']: {
+            type: "boss",
+            access: "vanilla",
             isAvailable: function () {
-               return isBridgeOpen() && items.Magic && items.Bow && items.Light && (items.Fire || (items.Hookshot && items.Dins));
-            }
-         },
-         ['Fire Trial Clear']: {
-            type: "trial",
-            isAvailable: function () {
-               return isBridgeOpen() && items.Glove >= 3 && items.Magic && items.Bow && items.Light && items.Hookshot >= 2;
-            }
-         },
-         ['Ice Trial Clear']: {
-            type: "chest",
-            trial: function () {
-               return isBridgeOpen() && items.Bottle && items.Hammer && items.Magic && items.Bow && items.Light;
-            }
-         },
-         ['Shadow Trial Clear']: {
-            type: "trial",
-            isAvailable: function () {
-               return isBridgeOpen() && items.Magic && items.Bow && items.Light && items.Hammer && (items.Fire || items.Hookshot >= 2) && (items.Lens || (items.HoverBoots && items.Hookshot >= 2));
-            }
-         },
-         ['Spirit Trial Clear']: {
-            type: "trial",
-            isAvailable: function () {
-               return isBridgeOpen() && items.Magic && items.Bow && items.Light && items.MirrorShield && items.Bombs && items.Hookshot;
-            }
-         },
-         ['Light Trial Clear']: {
-            type: "trial",
-            isAvailable: function () {
-               return isBridgeOpen() && items.Glove >= 3 && items.Magic && items.Bow && items.Hookshot && items.Light && items.CastleKey >= 2;
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && generalCanGetChest(this.trials) && items.BossCastle && items.Bow && items.Magic && items.Light;
             }
          },
       },
