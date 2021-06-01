@@ -4266,6 +4266,12 @@ var dungeons = [
                return true
             }
          },
+         'Song of Storms Grotto': {
+            type: "grotto", 
+            access: "grotto",
+            isAvailable: function () {
+               return true; }
+         },
          'Storms Grotto Scrubs x3': {
             type: "scrub", 
             access: "grotto",
@@ -5008,11 +5014,26 @@ var dungeons = [
       y: "81.0%",
       type: "overworld",
       chestlist: {
-         ['Child Fishing']: {
-            type: "NPC", 
-            access: "simple",
+         'Lake to Field': {
+            x: "39.0%",
+            y: "70.0%",
+            type: "entrance", 
+            access: "entrance",
+             isAvailable: function () {
+                  return true; }
+         },
+         'Beside Lab Gossip': {
+            type: "gossip", 
+            access: "outdoor",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0));
+               return true
+            }
+         },
+         'Soil Patch Skulltula': {
+            type: "skulltula", 
+            access: "outdoor",
+            isAvailable: function () {
+               return items.Bottle;
             }
          },
          ['Child Underwater Freestanding']: {
@@ -5020,6 +5041,27 @@ var dungeons = [
             access: "outdoor",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Scale;
+            }
+         },
+         'Lake to Domain': {
+            x: "39.3%",
+            y: "80.0%",
+            type: "entrance", 
+            access: "entrance",
+             isAvailable: function () {
+                  return true; }
+         },
+         'Laboratory': {
+            type: "simple", 
+            access: "door",
+            isAvailable: function () {
+               return true; }
+         },
+         'Lab Crate Skulltula': {
+            type: "skulltula", 
+            access: "simple",
+            isAvailable: function () {
+               return items.IronBoots && items.Hookshot;
             }
          },
          ['Diving in the Lab']: {
@@ -5036,6 +5078,74 @@ var dungeons = [
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bean || (items.Hookshot && items.Scarecrow >= 2));
             }
          },
+         'Lab Wall Skulltula': {
+            type: "skulltula", 
+            access: "outdoor",
+            isAvailable: function () {
+               return items.Boomerang;
+            }
+         },
+         'Lake Owl': {
+            x: "32.0%",
+            y: "83.5%",
+            type: "entrance", 
+            access: "entrance",
+             isAvailable: function () {
+                  return true; }
+         },
+         'Lake Hylia Grave': {
+            type: "simple", 
+            access: "door",
+            isAvailable: function () {
+               return true; }
+         },
+         'Grave Pull Scrub x3': {
+            type: "scrub", 
+            access: "grotto",
+            isAvailable: function () {
+               return true;
+            },
+         },
+         'Serenade Warp': {
+            type: "warp", 
+            access: "warp",
+               isAvailable: function () {
+                  return items.Ocarina && items.SerenadeoffWater; }
+         },
+         'Top of Tree Skulltula': {
+            type: "skulltula", 
+            access: "outdoor",
+            isAvailable: function () {
+               return items.Hookshot >= 2;
+            }
+         },
+         'Perimeter of Lake 1': {
+            type: "gossip", 
+            access: "outdoor",
+            isAvailable: function () {
+               return true
+            }
+         },
+         'Perimeter of Lake 2': {
+            type: "gossip", 
+            access: "outdoor",
+            isAvailable: function () {
+               return true
+            }
+         },
+         'Fishing Pond': {
+            type: "simple", 
+            access: "door",
+            isAvailable: function () {
+               return true; }
+         },
+         ['Child Fishing']: {
+            type: "NPC", 
+            access: "simple",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0));
+            }
+         },
          ['Adult Fishing']: {
             type: "NPC", 
             access: "simple",
@@ -5050,114 +5160,17 @@ var dungeons = [
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.Bow && items.Hookshot >= 2 && items.Scarecrow >= 2;
             }
          },
-      },
-      skulllist: {
-         'Soil Patch Skulltula': {
-            type: "skulltula", 
-            access: "outdoor",
-            isAvailable: function () {
-               return items.Bottle
-            }
-         },
-         'Lab Wall Skulltula': {
-            type: "skulltula", 
-            access: "outdoor",
-            isAvailable: function () {
-               return items.Boomerang
-            }
-         },
          'Fire Arrow Island Skulltula': {
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
-               return true
-            }
-         },
-         'Top of Tree Skulltula': {
-            type: "skulltula", 
-            access: "outdoor",
-            isAvailable: function () {
-               return items.Hookshot >= 2
-            }
-         },
-         'Lab Crate Skulltula': {
-            type: "skulltula", 
-            access: "simple",
-            isAvailable: function () {
-               return items.IronBoots && items.Hookshot
-            }
-         },
-      },
-      scrublist: {
-         'Grave Pull Scrub Grotto': {
-            type: "scrub", 
-            access: "grotto",
-            isAvailable: function () {
                return true;
-            },
-         },
-      },
-      indoorlist: {
-         'Serenade Warp': {
-            type: "warp", 
-            access: "warp",
-               isAvailable: function () {
-                  return items.Ocarina && items.SerenadeoffWater; }
-         },
-         'Laboratory': {
-            type: "simple", 
-            access: "door",
-            isAvailable: function () {
-               return true; }
-         },
-         'Fishing Pond': {
-            type: "simple", 
-            access: "door",
-            isAvailable: function () {
-               return true; }
-         },
-         'Lake Hylia Grave': {
-            type: "simple", 
-            access: "door",
-            isAvailable: function () {
-               return true; }
+            }
          },
          'Water Temple': {
             type: "simple", 
             access: "door",
                isAvailable: function () {
-                  return true; }
-         },
-      },
-      gossiplist: {
-         'Beside Lab Stone': {
-            isAvailable: function () {
-               return true
-            }
-         },
-         'Perimeter of Lake x2': {
-            isAvailable: function () {
-               return true
-            }
-         },
-      },
-      entrancelist: {
-         'Lake to Field': {
-            x: "39.0%",
-            y: "70.0%",
-             isAvailable: function () {
-                  return true; }
-         },
-         'Lake to Domain': {
-            x: "39.3%",
-            y: "80.0%",
-             isAvailable: function () {
-                  return true; }
-         },
-         'Lake Owl': {
-            x: "32.0%",
-            y: "83.5%",
-             isAvailable: function () {
                   return true; }
          },
       },
@@ -5174,6 +5187,13 @@ var dungeons = [
       y: "31.5%",
       type: "overworld",
       chestlist: {
+         'Right of Plank Skulltula': {
+            type: "skulltula", 
+            access: "outdoor",
+            isAvailable: function () {
+               return items.Boomerang;
+            },
+         },
          ['Crate Freestanding']: {
             type: "freestanding", 
             access: "outdoor",
@@ -5188,6 +5208,13 @@ var dungeons = [
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0));
             }
          },
+         'Waterfall Gossip': {
+            type: "gossip", 
+            access: "outdoor",
+            isAvailable: function () {
+               return true
+            }
+         },
          ['Valley Cow Milk']: {
             type: "cow", 
             access: "outdoor",
@@ -5195,15 +5222,6 @@ var dungeons = [
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.EponasSong;
             }
          },
-         ['Hammer Rocks Chest']: {
-            type: "chest", 
-            access: "outdoor",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.Ocarina && items.EponasSong) || items.Hookshot >= 2 || isFortressOpen()) && items.MasterSword && items.Hammer;
-            }
-         },
-      },
-      skulllist: {
          'Soil Patch Skulltula': {
             type: "skulltula", 
             access: "outdoor",
@@ -5211,12 +5229,11 @@ var dungeons = [
                return items.Bottle;
             },
          },
-         'Right of Plank Skulltula': {
-            type: "skulltula", 
-            access: "outdoor",
+         'Octorok Grotto': {
+            type: "grotto", 
+            access: "grotto",
             isAvailable: function () {
-               return items.Boomerang;
-            },
+               return true; }
          },
          'Above Hammer Rocks Skulltula': {
             type: "skulltula", 
@@ -5225,6 +5242,19 @@ var dungeons = [
                return items.Hookshot && ((items.Ocarina && items.EponasSong) || items.Hookshot >= 2);
             },
          },
+         ['Hammer Rocks Chest']: {
+            type: "chest", 
+            access: "outdoor",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.Ocarina && items.EponasSong) || items.Hookshot >= 2 || isFortressOpen()) && items.MasterSword && items.Hammer;
+            }
+         },
+         'Carpenter Tent': {
+            type: "simple", 
+            access: "door",
+            isAvailable: function () {
+               return true; }
+         },
          'Behind Tent Skulltula': {
             type: "skulltula", 
             access: "outdoor",
@@ -5232,8 +5262,12 @@ var dungeons = [
                return items.Hookshot && ((items.Ocarina && items.EponasSong) || items.Hookshot >= 2);
             },
          },
-      },
-      scrublist: {
+         'Song of Storms Grotto': {
+            type: "grotto", 
+            access: "grotto",
+            isAvailable: function () {
+               return true; }
+         },
          'Storms Grotto behind Tent': {
             type: "scrub", 
             access: "grotto",
@@ -5242,32 +5276,8 @@ var dungeons = [
             },
          },
       },
-      indoorlist: {
-         'Carpenter Tent': {
-            type: "simple", 
-            access: "door",
-            isAvailable: function () {
-               return true; }
-         },
-         'Valley Storms Grotto': {
-            type: "grotto", 
-            access: "grotto",
-            isAvailable: function () {
-               return true; }
-         },
-         'Octorok Grotto': {
-            type: "grotto", 
-            access: "grotto",
-            isAvailable: function () {
-               return true; }
-         },
-      },
       gossiplist: {
-         'Base of the Waterfall': {
-            isAvailable: function () {
-               return true
-            }
-         },
+         
       },
       entrancelist: {
          'Valley to Field': {
