@@ -3951,6 +3951,22 @@ var dungeons = [
       y: "47.0%",
       type: "overworld",
       chestlist: {
+         'Bridge to Forest': {
+            x: "72.7%",
+            y: "50.0%",
+            type: "entrance", 
+            access: "entrance",
+             isAvailable: function () {
+                  return true; }
+         },
+         'Bridge to Field': {
+            x: "69.0%",
+            y: "48.0%",
+            type: "entrance", 
+            access: "entrance",
+             isAvailable: function () {
+                  return true; }
+         },
          ['Deku Sale $40']: {
             type: "NPC", 
             access: "outdoor",
@@ -3958,11 +3974,40 @@ var dungeons = [
                return (items.DekuShield || items.Nuts || items.Stick || items.Bombs || (items.Bombchu && BombchuLogic) || items.KokiriSword || items.Boomerang);
             }
          },
+         'Bridge Stone': {
+            type: "gossip",
+            access: "outdoor",
+            isAvailable: function () {
+               return true
+            }
+         },
+         'Bridge Soil Patch Skulltula': {
+            type: "skulltula", 
+            access: "outdoor",
+            isAvailable: function () {
+               return items.Bottle;
+            },
+         },
          ['Skull Kid']: {
             type: "NPC", 
             access: "outdoor",
             isAvailable: function () {
                return (items.Ocarina && items.SariasSong);
+            }
+         },
+         'Woods to Forest': {
+            x: "78.7%",
+            y: "52.0%",
+            type: "entrance", 
+            access: "entrance",
+             isAvailable: function () {
+                  return true; }
+         },
+         ['Slingshot Target']: {
+            type: "NPC", 
+            access: "outdoor",
+            isAvailable: function () {
+               return (items.Slingshot);
             }
          },
          ['Ocarina Memory Game']: {
@@ -3972,48 +4017,47 @@ var dungeons = [
                return (items.Ocarina);
             }
          },
-         ['Slingshot Target']: {
-            type: "NPC", 
-            access: "outdoor",
-            isAvailable: function () {
-               return (items.Slingshot);
-            }
+         'Bomb Grotto by City': {
+            type: "grotto", 
+            access: "grotto",
+               isAvailable: function () {
+                  return true; }
          },
-         ['Bomb Grotto Chest']: {
+         ['City Grotto Chest']: {
             type: "chest", 
             access: "grotto",
             isAvailable: function () {
                return items.Bombs || (items.MasterSword && items.Hammer) || (items.Bombchu && BombchuLogic);
             }
          },
-         ['Deku Sale Grotto $40']: {
-            type: "NPC", 
-            access: "grotto",
-            isAvailable: function () {
-               return (items.Bombs || (items.MasterSword && items.Hammer) || (items.Bombchu && BombchuLogic)) && (items.DekuShield || items.Nuts || items.Stick);
-            }
-         },
-         ['Deku Theater Skull Mask']: {
-            type: "NPC", 
-            access: "grotto",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Mask >= 6;
-            }
-         },
-         ['Deku Theater Mask of Truth']: {
-            type: "NPC", 
-            access: "grotto",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.KokiriEmerald && items.GoronRuby && items.ZoraSapphire && items.Mask >= 12;
-            }
-         },
-      },
-      skulllist: {
-         'Bridge Soil Patch Skulltula': {
-            type: "skulltula", 
+         'City Grotto Gossip': {
+            type: "gossip",
             access: "outdoor",
             isAvailable: function () {
-               return items.Bottle;
+               return true
+            }
+         },
+         'Woods to City': {
+            x: "80.8%",
+            y: "49.0%",
+            type: "entrance", 
+            access: "entrance",
+             isAvailable: function () {
+                  return true; }
+         },
+         'Woods to River': {
+            x: "82.8%",
+            y: "51.5%",
+            type: "entrance", 
+            access: "entrance",
+             isAvailable: function () {
+                  return true; }
+         },
+         'Theatre Scrub x2': {
+            type: "scrub", 
+            access: "outdoor",
+            isAvailable: function () {
+               return true;
             },
          },
          'Theatre Soil Patch Skulltula': {
@@ -4030,8 +4074,39 @@ var dungeons = [
                return items.Hookshot || items.Bombs || items.Scale;
             },
          },
-      },
-      scrublist: {
+         'Deku Theatre Grotto': {
+            type: "grotto", 
+            access: "grotto",
+               isAvailable: function () {
+                  return true; }
+         },
+         ['Deku Theater Skull Mask']: {
+            type: "NPC", 
+            access: "grotto",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Mask >= 6;
+            }
+         },
+         ['Deku Theater Mask of Truth']: {
+            type: "NPC", 
+            access: "grotto",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.KokiriEmerald && items.GoronRuby && items.ZoraSapphire && items.Mask >= 12;
+            }
+         },
+         'Bomb Grotto by Meadow': {
+            type: "grotto", 
+            access: "grotto",
+               isAvailable: function () {
+                  return true; }
+         },
+         ['Deku Sale Grotto $40']: {
+            type: "NPC", 
+            access: "grotto",
+            isAvailable: function () {
+               return (items.Bombs || (items.MasterSword && items.Hammer) || (items.Bombchu && BombchuLogic)) && (items.DekuShield || items.Nuts || items.Stick);
+            }
+         },
          '2nd Scrub in Grotto': {
             type: "scrub", 
             access: "grotto",
@@ -4039,80 +4114,11 @@ var dungeons = [
                return (items.Bombs || items.Hammer);
             },
          },
-         'Outside Deku Theatre x2': {
-            type: "scrub", 
-            access: "outdoor",
-            isAvailable: function () {
-               return true;
-            },
-         },
-      },
-      indoorlist: {
-         'Woods by City Grotto': {
-            type: "grotto", 
-            access: "grotto",
-               isAvailable: function () {
-                  return true; }
-         },
-         'Deku Theatre Grotto': {
-            type: "grotto", 
-            access: "grotto",
-               isAvailable: function () {
-                  return true; }
-         },
-         'Woods by Meadow Grotto': {
-            type: "grotto", 
-            access: "grotto",
-               isAvailable: function () {
-                  return true; }
-         },
-      },
-      gossiplist: {
-         'Bridge Stone': {
-            isAvailable: function () {
-               return true
-            }
-         },
-         'Grotto Stone': {
-            isAvailable: function () {
-               return true
-            }
-         },
-      },
-      entrancelist: {
-         'Woods to Forest': {
-            x: "78.7%",
-            y: "52.0%",
-             isAvailable: function () {
-                  return true; }
-         },
-         'Woods to City': {
-            x: "80.8%",
-            y: "49.0%",
-             isAvailable: function () {
-                  return true; }
-         },
-         'Woods to River': {
-            x: "82.8%",
-            y: "51.5%",
-             isAvailable: function () {
-                  return true; }
-         },
          'Woods to Meadow': {
             x: "82.8%",
             y: "46.0%",
-             isAvailable: function () {
-                  return true; }
-         },
-         'Bridge to Forest': {
-            x: "72.7%",
-            y: "50.0%",
-             isAvailable: function () {
-                  return true; }
-         },
-         'Bridge to Field': {
-            x: "69.0%",
-            y: "48.0%",
+            type: "entrance", 
+            access: "entrance",
              isAvailable: function () {
                   return true; }
          },
@@ -4130,12 +4136,53 @@ var dungeons = [
       y: "47.0%",
       type: "overworld",
       chestlist: {
+         'Meadow to Woods': {
+            x: "80.0%",
+            y: "46.0%",
+            type: "entrance", 
+            access: "entrance",
+             isAvailable: function () {
+                  return true; }
+         },
+         'Maze Gossip 1': {
+            type: "gossip", 
+            access: "outdoor",
+            isAvailable: function () {
+               return true
+            }
+         },
+         'Maze Gossip 2': {
+            type: "gossip", 
+            access: "outdoor",
+            isAvailable: function () {
+               return true
+            }
+         },
          ['Song from Sheik']: {
             type: "song", 
             access: "outdoor",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword;
             }
+         },
+         'Meadow Storms Grotto': {
+            type: "grotto", 
+            access: "grotto",
+               isAvailable: function () {
+                  return true; }
+         },
+         'Storms Grotto by Temple': {
+            type: "scrub", 
+            access: "grotto",
+            isAvailable: function () {
+               return items.Ocarina && items.SongofStorms && (items.SariasSong || items.MinuetofForest);
+            },
+         },
+         'Wolfos Grotto': {
+            type: "grotto", 
+            access: "grotto",
+               isAvailable: function () {
+                  return true; }
          },
          ['Wolfos Grotto']: {
             type: "unique", 
@@ -4144,15 +4191,6 @@ var dungeons = [
                return items.Bombs || (items.MasterSword && items.Hammer) || (items.Bombchu && BombchuLogic);
             }
          },
-         ['Song from Saria']: {
-            type: "song", 
-            access: "outdoor",
-            isAvailable: function () {
-               return items.Mask >= 2;
-            }
-         },
-      },
-      skulllist: {
          'Meadow Maze Skulltula': {
             type: "skulltula", 
             access: "outdoor",
@@ -4160,59 +4198,30 @@ var dungeons = [
                return items.Hookshot;
             },
          },
-      },
-      scrublist: {
-         'Storms Grotto by Temple': {
-            type: "scrub", 
-            access: "grotto",
-            isAvailable: function () {
-               return items.Ocarina && items.SongofStorms && (items.SariasSong || items.MinuetofForest);
-            },
-         },
-      },
-      indoorlist: {
-         'Wolfos Grotto': {
-            type: "grotto", 
-            access: "grotto",
-               isAvailable: function () {
-                  return true; }
-         },
          'Meadow Open Grotto': {
             type: "grotto", 
             access: "grotto",
                isAvailable: function () {
                   return true; }
          },
-         'Meadow Storms Grotto': {
-            type: "grotto", 
-            access: "grotto",
-               isAvailable: function () {
-                  return true; }
+         ['Song from Saria']: {
+            type: "song", 
+            access: "outdoor",
+            isAvailable: function () {
+               return items.Mask >= 2;
+            }
+         },
+         'Temple Gossip': {
+            type: "gossip", 
+            access: "outdoor",
+            isAvailable: function () {
+               return true
+            }
          },
          'Forest Temple': {
             type: "dungeon", 
             access: "door",
                isAvailable: function () {
-                  return true; }
-         },
-      },
-      gossiplist: {
-         'Temple Entrance': {
-            isAvailable: function () {
-               return true
-            }
-         },
-         'Ontop Maze x2': {
-            isAvailable: function () {
-               return true
-            }
-         },
-      },
-      entrancelist: {
-         'Meadow to Woods': {
-            x: "80.0%",
-            y: "46.0%",
-             isAvailable: function () {
                   return true; }
          },
       },
