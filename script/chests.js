@@ -3521,6 +3521,233 @@ var dungeons = [
       y: "22.0%",
       type: "overworld",
       chestlist: {
+         'Village to Field': {
+            x: "62.0%",
+            y: "24.6%",
+            type: "entrance",
+            access: "entrance",
+             isAvailable: function () {
+                  return true; }
+         },
+         ['Song from Sheik']: {
+            type: "song", 
+            access: "outdoor",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword && items.ForestMedallion && items.FireMedallion && items.WaterMedallion);
+            }
+         },
+         'Tree Skulltula': {
+            type: "skulltula", 
+            access: "outdoor",
+            isAvailable: function () {
+               return true;
+            },
+         },
+         'Redead Grotto': {
+            type: "grotto", 
+            access: "grotto",
+               isAvailable: function () {
+                  return true; }
+         },
+         ['Redead Chest']: {
+            type: "unique", 
+            access: "grotto",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.MasterSword && items.Hammer) || (items.Bombchu && BombchuLogic));
+            }
+         },
+         'Tower House': {
+            type: "simple", 
+            access: "door",
+               isAvailable: function () {
+                  return true; }
+         },
+         'Behind Shop Skulltula': {
+            type: "skulltula", 
+            access: "outdoor",
+            isAvailable: function () {
+               return true;
+            },
+         },
+         'Tower Skulltula': {
+            type: "skulltula", 
+            access: "outdoor",
+            isAvailable: function () {
+               return true;
+            },
+         },
+         'Kakariko Bazar': {
+            type: "simple", 
+            access: "door",
+               isAvailable: function () {
+                  return true; }
+         },
+         'Bazar Sale': {
+            type: "shop", 
+            access: "simple",
+            isAvailable: function () {
+               return true; }
+         },
+         'Village to Trail': {
+            x: "64.2%",
+            y: "22.0%",
+            type: "entrance",
+            access: "entrance",
+             isAvailable: function () {
+                  return true; }
+         },
+         'Potion Shop front': {
+            type: "alldoor", 
+            access: "door",
+               isAvailable: function () {
+                  return true; }
+         },
+         ['Man on Roof']: {
+            type: "NPC", 
+            access: "outdoor",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0));
+            }
+         },
+         'Potion Sale': {
+            type: "shop", 
+            access: "simple",
+            isAvailable: function () {
+               return true; }
+         },
+         'Potion Shop back': {
+            type: "alldoor", 
+            access: "door",
+               isAvailable: function () {
+                  return true; }
+         },
+         'Granny\'s Shop': {
+            type: "simple", 
+            access: "door",
+               isAvailable: function () {
+                  return true; }
+         },
+         'Kakariko Open Grotto': {
+            type: "grotto", 
+            access: "grotto",
+               isAvailable: function () {
+                  return true; }
+         },
+         ['Village Open Grotto']: {
+            type: "chest", 
+            access: "grotto",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0));
+            }
+         },
+         'Windmill': {
+            type: "alldoor", 
+            access: "door",
+               isAvailable: function () {
+                  return true; }
+         },
+         ['Windmill Song']: {
+            type: "song", 
+            access: "alldoor",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.Ocarina;
+            }
+         },
+         ['Windmill Freestanding']: {
+            type: "freestanding", 
+            access: "alldoor",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword || items.Boomerang);
+            }
+         },
+         'Village to Graveyard': {
+            x: "70.0%",
+            y: "27.0%",
+            type: "entrance",
+            access: "entrance",
+             isAvailable: function () {
+                  return true; }
+         },
+         'Archery Foundation Skulltula': {
+            type: "skulltula", 
+            access: "outdoor",
+            isAvailable: function () {
+               return true;
+            },
+         },
+         'Archery': {
+            type: "simple", 
+            access: "door",
+               isAvailable: function () {
+                  return true; }
+         },
+         ['Bow Mini Game']: {
+            type: "NPC", 
+            access: "simple",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword && items.Bow);
+            }
+         },
+         ['Anju\'s Chickens']: {
+            type: "NPC", 
+            access: "outdoor",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0));
+            }
+         },
+         ['Anju\'s Adult item']: {
+            type: "NPC", 
+            access: "outdoor",
+            isAvailable: function () {
+               return ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword);
+            }
+         },
+         'Impa\'s House back': {
+            type: "simple", 
+            access: "door",
+               isAvailable: function () {
+                  return true; }
+         },
+         ['Impa\'s House Freestanding']: {
+            type: "freestanding", 
+            access: "simple",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0));
+            }
+         },
+         ['Impa\'s House Cow Milk']: {
+            type: "cow", 
+            access: "simple",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.EponasSong;
+            }
+         },
+         'Impa’s Roof Skulltula': {
+            type: "skulltula", 
+            access: "outdoor",
+            isAvailable: function () {
+               return items.Hookshot;
+            },
+         },
+         'Impa\'s House front': {
+            type: "simple", 
+            access: "door",
+               isAvailable: function () {
+                  return true; }
+         },
+         'Skull House Skulltula': {
+            type: "skulltula", 
+            access: "outdoor",
+            isAvailable: function () {
+               return true;
+            },
+         },
+         'Skulltula House': {
+            type: "simple", 
+            access: "door",
+               isAvailable: function () {
+                  return true; }
+         },
          ['Skulltula House 10']: {
             type: "NPC", 
             access: "simple",
@@ -3557,275 +3784,10 @@ var dungeons = [
                return ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Skulltula >= 50);
             }
          },
-         ['Anju\'s Chickens']: {
-            type: "NPC", 
-            access: "outdoor",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0));
-            }
-         },
-         ['Man on Roof']: {
-            type: "NPC", 
-            access: "outdoor",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0));
-            }
-         },
-         ['Village Open Grotto']: {
-            type: "chest", 
-            access: "grotto",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0));
-            }
-         },
-         ['Redead Grotto']: {
-            type: "unique", 
-            access: "grotto",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.MasterSword && items.Hammer) || (items.Bombchu && BombchuLogic));
-            }
-         },
-         ['Impa\'s House Freestanding']: {
-            type: "freestanding", 
-            access: "simple",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0));
-            }
-         },
-         ['Impa\'s House Cow Milk']: {
-            type: "cow", 
-            access: "simple",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.EponasSong;
-            }
-         },
-         ['Anju\'s Adult item']: {
-            type: "NPC", 
-            access: "outdoor",
-            isAvailable: function () {
-               return ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword);
-            }
-         },
-         ['Windmill Song']: {
-            type: "song", 
-            access: "alldoor",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.Ocarina;
-            }
-         },
-         ['Windmill Freestanding']: {
-            type: "freestanding", 
-            access: "alldoor",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword || items.Boomerang);
-            }
-         },
-         ['Bow Mini Game']: {
-            type: "NPC", 
-            access: "simple",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword && items.Bow);
-            }
-         },
-         ['Song from Sheik']: {
-            type: "song", 
-            access: "outdoor",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword && items.ForestMedallion && items.FireMedallion && items.WaterMedallion);
-            }
-         },
-      },
-      skulllist: {
-         'Tree Skulltula': {
-            type: "skulltula", 
-            access: "outdoor",
-            isAvailable: function () {
-               return true;
-            },
-         },
-         'Behind Shop Skulltula': {
-            type: "skulltula", 
-            access: "outdoor",
-            isAvailable: function () {
-               return true;
-            },
-         },
-         'Tower Skulltula': {
-            type: "skulltula", 
-            access: "outdoor",
-            isAvailable: function () {
-               return true;
-            },
-         },
-         'Archery Foundation Skulltula': {
-            type: "skulltula", 
-            access: "outdoor",
-            isAvailable: function () {
-               return true;
-            },
-         },
-         'Skull House Skulltula': {
-            type: "skulltula", 
-            access: "outdoor",
-            isAvailable: function () {
-               return true;
-            },
-         },
-         'Impa’s Roof Skulltula': {
-            type: "skulltula", 
-            access: "outdoor",
-            isAvailable: function () {
-               return items.Hookshot;
-            },
-         },
-      },
-      shoplist: {
-         'Potion Shop': {
-            type: "shop", 
-            access: "simple",
-            isAvailable: function () {
-               return true; }
-         },
-         'Potion Shop 2': {
-            type: "shop", 
-            access: "simple",
-            isAvailable: function () {
-               return true; }
-         },
-         'Potion Shop 3': {
-            type: "shop", 
-            access: "simple",
-            isAvailable: function () {
-               return true; }
-         },
-         'Potion Shop 4': {
-            type: "shop", 
-            access: "simple",
-            isAvailable: function () {
-               return true; }
-         },
-         'Bazaar Shop': {
-            type: "shop", 
-            access: "simple",
-            isAvailable: function () {
-               return true; }
-         },
-         'Bazaar Shop 2': {
-            type: "shop", 
-            access: "simple",
-            isAvailable: function () {
-               return true; }
-         },
-         'Bazaar Shop 3': {
-            type: "shop", 
-            access: "simple",
-            isAvailable: function () {
-               return true; }
-         },
-         'Bazaar Shop 4': {
-            type: "shop", 
-            access: "simple",
-            isAvailable: function () {
-               return true; }
-         },
-      },
-      indoorlist: {
-         'Redead Grotto': {
-            type: "grotto", 
-            access: "grotto",
-               isAvailable: function () {
-                  return true; }
-         },
-         'Tower House': {
-            type: "simple", 
-            access: "door",
-               isAvailable: function () {
-                  return true; }
-         },
-         'Kakariko Bazar': {
-            type: "simple", 
-            access: "door",
-               isAvailable: function () {
-                  return true; }
-         },
-         'Potion Shop front': {
-            type: "alldoor", 
-            access: "door",
-               isAvailable: function () {
-                  return true; }
-         },
-         'Potion Shop back': {
-            type: "alldoor", 
-            access: "door",
-               isAvailable: function () {
-                  return true; }
-         },
-         'Granny\'s Shop': {
-            type: "simple", 
-            access: "door",
-               isAvailable: function () {
-                  return true; }
-         },
-         'Kakariko Open Grotto': {
-            type: "grotto", 
-            access: "grotto",
-               isAvailable: function () {
-                  return true; }
-         },
-         'Windmill': {
-            type: "alldoor", 
-            access: "door",
-               isAvailable: function () {
-                  return true; }
-         },
-         'Archery': {
-            type: "simple", 
-            access: "door",
-               isAvailable: function () {
-                  return true; }
-         },
-         'Impa\'s House back': {
-            type: "simple", 
-            access: "door",
-               isAvailable: function () {
-                  return true; }
-         },
-         'Impa\'s House front': {
-            type: "simple", 
-            access: "door",
-               isAvailable: function () {
-                  return true; }
-         },
-         'Skulltula House': {
-            type: "simple", 
-            access: "door",
-               isAvailable: function () {
-                  return true; }
-         },
          'Bottom of The Well': {
             type: "dungeon", 
             access: "door",
                isAvailable: function () {
-                  return true; }
-         },
-      },
-      entrancelist: {
-         'Village to Field': {
-            x: "62.0%",
-            y: "24.6%",
-             isAvailable: function () {
-                  return true; }
-         },
-         'Village to Trail': {
-            x: "64.2%",
-            y: "22.0%",
-             isAvailable: function () {
-                  return true; }
-         },
-         'Village to Graveyard': {
-            x: "70.0%",
-            y: "27.0%",
-             isAvailable: function () {
                   return true; }
          },
       },
@@ -3842,6 +3804,21 @@ var dungeons = [
       y: "06.3%",
       type: "overworld",
       chestlist: {
+         'City to Trail': {
+            x: "65.0%",
+            y: "10.5%",
+            type: "entrance", 
+            access: "entrance",
+             isAvailable: function () {
+                  return true; }
+         },
+         'Ruby Pedestal Skulltula': {
+            type: "skulltula", 
+            access: "outdoor",
+            isAvailable: function () {
+               return true;
+            },
+         },
          ['Little Rolling Goron']: {
             type: "NPC", 
             access: "outdoor",
@@ -3854,6 +3831,13 @@ var dungeons = [
             access: "outdoor",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Glove || items.Bombs || (items.Bombchu && BombchuLogic));
+            }
+         },
+         'Medigoron Gossip': {
+            type: "gossip", 
+            access: "outdoor"
+            isAvailable: function () {
+               return true
             }
          },
          ['Left Boulder Maze Chest']: {
@@ -3870,12 +3854,59 @@ var dungeons = [
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (OpenGate == 1 || (OpenGate == 0 && (items.Mask >= 1 || items.MasterSword || items.Bombs || (items.Dins && items.Magic) || (items.Bombchu && BombchuLogic)))) && (items.Bombs || (items.MasterSword && (items.Hammer || items.Glove >= 2)) || (items.Bombchu && BombchuLogic));
             }
          },
+         'Maze Crate Skulltula': {
+            type: "skulltula", 
+            access: "outdoor",
+            isAvailable: function () {
+               return items.Bombs
+            }
+         },
+         'Maze Gossip': {
+            type: "gossip", 
+            access: "outdoor"
+            isAvailable: function () {
+               return true
+            }
+         },
          ['Right Boulder Maze Chest']: {
             type: "chest", 
             access: "outdoor",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (OpenGate == 1 || (OpenGate == 0 && (items.Mask >= 1 || items.MasterSword || items.Bombs || (items.Dins && items.Magic) || (items.Bombchu && BombchuLogic)))) && (items.Bombs || (items.MasterSword && (items.Hammer || items.Glove >= 2)) || (items.Bombchu && BombchuLogic));
             }
+         },
+         'Lava Cross Grotto': {
+            type: "grotto", 
+            access: "grotto",
+               isAvailable: function () {
+                  return true; }
+         },
+         'Lava Scrubs x3': {
+            type: "scrub", 
+            access: "grotto",
+            isAvailable: function () {
+               return (items.Ocarina && items.SongofTime) || (items.Hookshot && items.GoronTunic);
+            },
+         },
+         'City to Woods': {
+            x: "69.0%",
+            y: "18.0%",
+            type: "entrance", 
+            access: "entrance",
+             isAvailable: function () {
+                  return true; }
+         },
+         'Goron Shop': {
+            type: "simple", 
+            access: "door",
+               isAvailable: function () {
+                  return true; }
+         },
+         'Goron Sale': {
+            type: "shop", 
+            access: "simple",
+            isAvailable: function () {
+               return true; }
          },
          ['Big Rolling Goron']: {
             type: "NPC", 
@@ -3898,100 +3929,11 @@ var dungeons = [
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (OpenGate == 1 || (OpenGate == 0 && (items.Mask >= 1 || items.MasterSword || items.Bombs || (items.Dins && items.Magic) || (items.Bombchu && BombchuLogic)))) && (items.Ocarina && items.ZeldasLullaby && items.SariasSong);
             }
          },
-      },
-      skulllist: {
-         'Rock Maze Crate Skulltula': {
-            type: "skulltula", 
-            access: "outdoor",
-            isAvailable: function () {
-               return items.Bombs
-            }
-         },
-         'Ruby Pedestal Skulltula': {
-            type: "skulltula", 
-            access: "outdoor",
-            isAvailable: function () {
-               return true;
-            },
-         },
-      },
-      scrublist: {
-         'Across the Lava Scrubs x3': {
-            type: "scrub", 
-            access: "grotto",
-            isAvailable: function () {
-               return (items.Ocarina && items.SongofTime) || (items.Hookshot && items.GoronTunic);
-            },
-         },
-      },
-      shoplist: {
-         'Goron Shop': {
-            type: "shop", 
-            access: "simple",
-            isAvailable: function () {
-               return true; }
-         },
-         'Goron Shop 2': {
-            type: "shop", 
-            access: "simple",
-            isAvailable: function () {
-               return true; }
-         },
-         'Goron Shop 3': {
-            type: "shop", 
-            access: "simple",
-            isAvailable: function () {
-               return true; }
-         },
-         'Goron Shop 4': {
-            type: "shop", 
-            access: "simple",
-            isAvailable: function () {
-               return true; }
-         },
-      },
-      indoorlist: {
-         'Goron Shop': {
-            type: "simple", 
-            access: "door",
-               isAvailable: function () {
-                  return true; }
-         },
-         'Lava Cross Scrub Grotto': {
-            type: "grotto", 
-            access: "grotto",
-               isAvailable: function () {
-                  return true; }
-         },
-      },
-      gossiplist: {
-         'Boulder Maze Gossip': {
-            isAvailable: function () {
-               return true
-            }
-         },
-         'Beside Medigoron': {
-            isAvailable: function () {
-               return true
-            }
-         },
-      },
-      entrancelist: {
-         'City to Trail': {
-            x: "65.0%",
-            y: "10.5%",
-             isAvailable: function () {
-                  return true; }
-         },
-         'City to Woods': {
-            x: "69.0%",
-            y: "18.0%",
-             isAvailable: function () {
-                  return true; }
-         },
          'City to Crater': {
             x: "69.0%",
             y: "09.0%",
+            type: "entrance", 
+            access: "entrance",
              isAvailable: function () {
                   return true; }
          },
