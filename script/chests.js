@@ -321,7 +321,7 @@ var dungeons = [
             isAvailable: function () {
                return items.Slingshot && (OpenDeku == 0 || (items.KokiriSword&& items.DekuShield)); }
          },
-         'Queen Gohma': {
+         'MQ Queen Gohma': {
             type: "boss",
             access: "master",
             isAvailable: function () {
@@ -531,7 +531,7 @@ var dungeons = [
             isAvailable: function () {
                return items.Bombs; }
          },
-         'King Dodongo': {
+         'MQ King Dodongo': {
             type: "boss",
             access: "master",
             isAvailable: function () {
@@ -698,7 +698,7 @@ var dungeons = [
             isAvailable: function () {
                return (items.Bombs || items.Scale) && items.ZoraLetter && items.Slingshot && items.Boomerang; }
          },
-         'Barinade': {
+         'MQ Barinade': {
             type: "boss",
             access: "master",
             isAvailable: function () {
@@ -842,7 +842,7 @@ var dungeons = [
             isAvailable: function () {
                return items.Ocarina && items.SongofStorms && items.ZeldasLullaby; }
          },
-         'Deadhand Chest': {
+         'MQ Deadhand Chest': {
             type: "chest",
             access: "master",
             isAvailable: function () {
@@ -860,7 +860,7 @@ var dungeons = [
             isAvailable: function () {
                return items.Ocarina && items.SongofStorms && items.ZeldasLullaby; }
          },
-         'Basement Chest': {
+         'MQ Basement Chest': {
             type: "chest",
             access: "master",
             isAvailable: function () {
@@ -1147,7 +1147,7 @@ var dungeons = [
             isAvailable: function () {
                return items.Hookshot && items.Glove && items.ForestKey >= 6 && items.Bow; }
          },
-         'Phantom Ganon': {
+         'MQ Phantom HorsePig': {
             type: "boss",
             access: "master",
             isAvailable: function () {
@@ -1169,130 +1169,147 @@ var dungeons = [
       chestlist: {
          'Chest Near Boss': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return items.MasterSword && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.BoleroofFire || ((items.HoverBoots || items.Hookshot) && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Hammer || items.Bow || (items.Magic && items.Dins))));
             }
          },
+         'Before 1st Fire Dancer Skulltula': {
+            type: "skulltula",
+            access: "vanilla",
+            isAvailable: function () {
+               return items.Hammer && (items.Hookshot || items.HoverBoots || items.BoleroofFire)
+            }
+         },
          'Flare Dancer Chest': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)) && items.Hammer;
             }
          },
          'Under Lobby Chest': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)) && items.Hammer;
             }
          },
+         'Song of Time Lava Room Skulltula': {
+            type: "skulltula",
+            access: "vanilla",
+            isAvailable: function () {
+               return items.Ocarina && items.SongofTime && items.FireKey && (items.BoleroofFire || (items.HoverBoots || items.Hookshot))
+            }
+         },
          'Lava Room Open Chest': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.FireKey && (items.BoleroofFire || (items.HoverBoots || items.Hookshot));
             }
          },
          'Lava Room Bombable Wall': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.FireKey && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)) && (items.Bombs || (items.Bombchu && BombchuLogic));
             }
          },
          'Maze Lower Chest': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.FireKey >= 3 && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)) && items.Glove;
             }
          },
+         'Maze Bombable Wall Skulltula': {
+            type: "skulltula",
+            access: "vanilla",
+            isAvailable: function () {
+               return (items.Bombs || items.Bombchu) && items.FireKey >= 3 && (items.BoleroofFire || (items.HoverBoots || items.Hookshot))
+            }
+         },
          'Maze Side Room': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.FireKey >= 3 && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)) && items.Glove;
             }
          },
          'Eye Switch Chest': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && ((items.FireKey >= 4 && items.Bow) || items.FireKey >= 5) && (items.BoleroofFire || items.HoverBoots || items.Hookshot) && items.Glove;
             }
          },
          'Maze Upper Chest': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.FireKey >= 5 && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)) && items.Glove;
             }
          },
          'Maze Bombable Pit': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.FireKey >= 5 && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)) && items.Glove && (items.Bombs || (items.Bombchu && BombchuLogic));
             }
          },
-         'Scarecrow Chest': {
-            type: "chest",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.FireKey >= 5 && items.Glove && items.Hookshot && items.Ocarina && items.Scarecrow >= 2;
-            }
-         },
-         'Flame Maze Side Room': {
-            type: "chest",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.FireKey >= 6 && (items.BoleroofFire || items.HoverBoots || items.Hookshot) && items.Glove;
-            }
-         },
-         'Song of Time Chest': {
-            type: "chest",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.FireKey >= 7 || (items.FireKey >= 6 && items.HoverBoots)) && (items.BoleroofFire || items.HoverBoots || items.Hookshot) && items.Glove && items.Hammer;
-            }
-         },
-         'Topmost Chest': {
-            type: "chest",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.FireKey >= 6 && (items.BoleroofFire || items.HoverBoots || items.Hooksho) && items.Glove && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Hammer);
-            }
-         },
-         'Volvagia': {
-            type: "boss",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.BossFire && ((items.GoronTunic || items.Bottle) && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)) && items.Hammer && (items.HoverBoots || (items.Glove && (items.Bombs || items.Hookshot) && items.Bombs)));
-            }
-         },
-      },
-      skulllist: {
-         'Before 1st Fire Dancer Skulltula': {
-            type: "skulltula",
-            isAvailable: function () {
-               return items.Hammer && (items.Hookshot || items.HoverBoots || items.BoleroofFire)
-            }
-         },
-         'Song of Time Lava Room Skulltula': {
-            type: "skulltula",
-            isAvailable: function () {
-               return items.Ocarina && items.SongofTime && items.FireKey && (items.BoleroofFire || (items.HoverBoots || items.Hookshot))
-            }
-         },
-         'Maze Bombable Wall Skulltula': {
-            type: "skulltula",
-            isAvailable: function () {
-               return (items.Bombs || items.Bombchu) && items.FireKey >= 3 && (items.BoleroofFire || (items.HoverBoots || items.Hookshot))
-            }
-         },
          '1st Scarecrow Skulltula': {
             type: "skulltula",
+            access: "vanilla",
             isAvailable: function () {
                return items.FireKey >= 5 && items.Glove && items.Hookshot && items.Ocarina
             }
          },
          '2nd Scarecrow Skulltula': {
             type: "skulltula",
+            access: "vanilla",
             isAvailable: function () {
                return items.FireKey >= 5 && items.Glove && items.Hookshot && items.Ocarina
             }
          },
-      },
-      MQlist: {
+         'Scarecrow Chest': {
+            type: "chest",
+            access: "vanilla",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.FireKey >= 5 && items.Glove && items.Hookshot && items.Ocarina && items.Scarecrow >= 2;
+            }
+         },
+         'Flame Maze Side Room': {
+            type: "chest",
+            access: "vanilla",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.FireKey >= 6 && (items.BoleroofFire || items.HoverBoots || items.Hookshot) && items.Glove;
+            }
+         },
+         'Song of Time Chest': {
+            type: "chest",
+            access: "vanilla",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.FireKey >= 7 || (items.FireKey >= 6 && items.HoverBoots)) && (items.BoleroofFire || items.HoverBoots || items.Hookshot) && items.Glove && items.Hammer;
+            }
+         },
+         'Topmost Chest': {
+            type: "chest",
+            access: "vanilla",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.FireKey >= 6 && (items.BoleroofFire || items.HoverBoots || items.Hooksho) && items.Glove && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Hammer);
+            }
+         },
+         'Volvagia': {
+            type: "boss",
+            access: "vanilla",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.BossFire && ((items.GoronTunic || items.Bottle) && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)) && items.Hammer && (items.HoverBoots || (items.Glove && (items.Bombs || items.Hookshot) && items.Bombs)));
+            }
+         },
          'Like Like Chest': {
             type: "chest",
+            access: "master",
             isAvailable: function () { 
                return ( (items.BoleroofFire && items.Ocarina) //Warp
                          || ( (items.HoverBoots || items.Hookshot) //Cross Crater Bridge
@@ -1304,6 +1321,7 @@ var dungeons = [
          },
          'Chest Near Boss Door': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return (items.Magic && (items.Dins || (items.Bow && items.Fire)) &&
                        ((items.BoleroofFire && items.Ocarina) //Warp
@@ -1317,6 +1335,7 @@ var dungeons = [
          },
          'Flare Dancer Chest': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return ( (items.BoleroofFire && items.Ocarina) //Warp
                          || ( (items.HoverBoots || items.Hookshot) //Cross Crater Bridge
@@ -1327,6 +1346,7 @@ var dungeons = [
          },
          'Rusted Switch Chest': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return ( (items.BoleroofFire && items.Ocarina) //Warp
                          || ( (items.HoverBoots || items.Hookshot) //Cross Crater Bridge
@@ -1337,6 +1357,7 @@ var dungeons = [
          },
          'Lava Green Room Chest': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return ( (items.BoleroofFire && items.Ocarina) //Warp
                          || ( (items.HoverBoots || items.Hookshot) //Cross Crater Bridge
@@ -1348,6 +1369,7 @@ var dungeons = [
          },
          'Lava Bombable Room': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return ( (items.BoleroofFire && items.Ocarina) //Warp
                          || ( (items.HoverBoots || items.Hookshot) //Cross Crater Bridge
@@ -1359,8 +1381,35 @@ var dungeons = [
                       ;
             }
          },
+         'Lava Side Room Skulltula': {
+            type: "skulltula",
+            access: "master",
+            isAvailable: function () {
+               return ( (items.BoleroofFire && items.Ocarina) //Warp
+                         || ( (items.HoverBoots || items.Hookshot) //Cross Crater Bridge
+                              && (items.Hammer //Summit Climb
+                                  || items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Bow || (items.Magic && items.Dins)) //:ink the Goron
+                            )) && items.Hammer; //Lava Room
+            }
+         },
+         'Song of Time Climb Skulltula': {
+            type: "skulltula",
+            access: "master",
+            isAvailable: function () {
+               return ( (items.BoleroofFire && items.Ocarina) //Warp
+                         || ( (items.HoverBoots || items.Hookshot) //Cross Crater Bridge
+                              && (items.Hammer //Summit Climb
+                                  || items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Bow || (items.Magic && items.Dins)) //:ink the Goron
+                            ) )
+                      && items.Hammer && items.Hookshot && items.Magic && (items.Dins || (items.Bow && items.Fire)) && items.FireKey >= 1 //Lava Room and Torch
+                      && (items.Bombs || (BombchuLogic && items.Bombchu)) //Bombwall to rusted switch
+                      && items.SongofTime && items.Ocarina && items.Glove //Block of Time climb, strength for push block
+                      ;
+            }
+         },
          'Bombable Shortcut Chest': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return ( (items.BoleroofFire && items.Ocarina) //Warp
                          || ( (items.HoverBoots || items.Hookshot) //Cross Crater Bridge
@@ -1374,6 +1423,7 @@ var dungeons = [
          },
          'Maze Upper Gate': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return ( (items.BoleroofFire && items.Ocarina) //Warp
                          || ( (items.HoverBoots || items.Hookshot) //Cross Crater Bridge
@@ -1387,6 +1437,7 @@ var dungeons = [
          },
          'Maze Lower Gate': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return ( (items.BoleroofFire && items.Ocarina) //Warp
                          || ( (items.HoverBoots || items.Hookshot) //Cross Crater Bridge
@@ -1399,6 +1450,7 @@ var dungeons = [
          },
          'Maze Side Room': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return ( (items.BoleroofFire && items.Ocarina) //Warp
                          || ( (items.HoverBoots || items.Hookshot) //Cross Crater Bridge
@@ -1410,76 +1462,9 @@ var dungeons = [
                       ;
             }
          },
-         'Flare Dancer Freestanding': {
-            type: "freestanding",
-            isAvailable: function () {
-               return ( (items.BoleroofFire && items.Ocarina) //Warp
-                         || ( (items.HoverBoots || items.Hookshot) //Cross Crater Bridge
-                              && (items.Hammer //Summit Climb
-                                  || items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Bow || (items.Magic && items.Dins)) //:ink the Goron
-                            ) )
-                        && items.Hammer && items.Hookshot && items.Magic && (items.Dins || (items.Bow && items.Fire))//Lava Room and Torch
-                        && items.FireKey>= 2 && items.Bow && items.Ocarina && items.SongofTime //2nd Key door, arrow torch, Block of Time
-                      ;
-            }
-         },
-         'Highest Chest': {
-            type: "chest",
-            isAvailable: function () {
-               return ( (items.BoleroofFire && items.Ocarina) //Warp
-                         || ( (items.HoverBoots || items.Hookshot) //Cross Crater Bridge
-                              && (items.Hammer //Summit Climb
-                                  || items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Bow || (items.Magic && items.Dins)) //:ink the Goron
-                            ) )
-                        && items.Hammer && items.Hookshot && items.Magic && (items.Dins || (items.Bow && items.Fire))//Lava Room and Torch
-                        && items.Bow && items.Ocarina && items.SongofTime //2nd Key door, arrow torch, Block of Time
-                        && items.FireKey >= 3 //Amother KeyDoor
-                      ;
-            }
-         },
-         'Volvagia': {
-            type: "boss",
-            isAvailable: function () {
-               return ( (items.BoleroofFire && items.Ocarina) //Warp
-                         || ( (items.HoverBoots || items.Hookshot) //Cross Crater Bridge
-                              && (items.Hammer //Summit Climb
-                                  || items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Bow || (items.Magic && items.Dins)) //:ink the Goron
-                            ))
-                        && items.Magic && (items.Dins || (items.Bow && items.Fire)) //Boss Door access
-                        && items.BossFire && items.Hammer && (items.Hoverboots //Boss Key, Hammer, and Hovers...
-                                                             || (items.Hammer && items.Hookshot && items.Magic && (items.Dins || (items.Bow && items.Fire))//Lava Room and Torch
-                                                             && items.Bow && items.Ocarina && items.SongofTime //2nd Key door, arrow torch, Block of Time
-                                                             && items.FireKey >= 4)) ; //or Deep Fire
-            }
-         },
-      },
-      MQskulllist: {
-         'Lava Side Room Skulltula': {
-            type: "skulltula",
-            isAvailable: function () {
-               return ( (items.BoleroofFire && items.Ocarina) //Warp
-                         || ( (items.HoverBoots || items.Hookshot) //Cross Crater Bridge
-                              && (items.Hammer //Summit Climb
-                                  || items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Bow || (items.Magic && items.Dins)) //:ink the Goron
-                            )) && items.Hammer; //Lava Room
-            }
-         },
-         'Song of Time Climb Skulltula': {
-            type: "skulltula",
-            isAvailable: function () {
-               return ( (items.BoleroofFire && items.Ocarina) //Warp
-                         || ( (items.HoverBoots || items.Hookshot) //Cross Crater Bridge
-                              && (items.Hammer //Summit Climb
-                                  || items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Bow || (items.Magic && items.Dins)) //:ink the Goron
-                            ) )
-                      && items.Hammer && items.Hookshot && items.Magic && (items.Dins || (items.Bow && items.Fire)) && items.FireKey >= 1 //Lava Room and Torch
-                      && (items.Bombs || (BombchuLogic && items.Bombchu)) //Bombwall to rusted switch
-                      && items.SongofTime && items.Ocarina && items.Glove //Block of Time climb, strength for push block
-                      ;
-            }
-         },
          'Flame Maze Side Room': {
             type: "skulltula",
+            access: "master",
             isAvailable: function () {
                return ( (items.BoleroofFire && items.Ocarina) //Warp
                          || ( (items.HoverBoots || items.Hookshot) //Cross Crater Bridge
@@ -1493,6 +1478,7 @@ var dungeons = [
          },
          'Bombwall Skulltula': {
             type: "skulltula",
+            access: "master",
             isAvailable: function () {
                return ( (items.BoleroofFire && items.Ocarina) //Warp
                          || ( (items.HoverBoots || items.Hookshot) //Cross Crater Bridge
@@ -1505,8 +1491,38 @@ var dungeons = [
                       ;
             }
          },
+         'Flare Dancer Freestanding': {
+            type: "freestanding",
+            access: "master",
+            isAvailable: function () {
+               return ( (items.BoleroofFire && items.Ocarina) //Warp
+                         || ( (items.HoverBoots || items.Hookshot) //Cross Crater Bridge
+                              && (items.Hammer //Summit Climb
+                                  || items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Bow || (items.Magic && items.Dins)) //:ink the Goron
+                            ) )
+                        && items.Hammer && items.Hookshot && items.Magic && (items.Dins || (items.Bow && items.Fire))//Lava Room and Torch
+                        && items.FireKey>= 2 && items.Bow && items.Ocarina && items.SongofTime //2nd Key door, arrow torch, Block of Time
+                      ;
+            }
+         },
+         'Highest Chest': {
+            type: "chest",
+            access: "master",
+            isAvailable: function () {
+               return ( (items.BoleroofFire && items.Ocarina) //Warp
+                         || ( (items.HoverBoots || items.Hookshot) //Cross Crater Bridge
+                              && (items.Hammer //Summit Climb
+                                  || items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Bow || (items.Magic && items.Dins)) //:ink the Goron
+                            ) )
+                        && items.Hammer && items.Hookshot && items.Magic && (items.Dins || (items.Bow && items.Fire))//Lava Room and Torch
+                        && items.Bow && items.Ocarina && items.SongofTime //2nd Key door, arrow torch, Block of Time
+                        && items.FireKey >= 3 //Amother KeyDoor
+                      ;
+            }
+         },
          'Highest Skulltula': {
             type: "skulltula",
+            access: "master",
             isAvailable: function () {
                return ( (items.BoleroofFire && items.Ocarina) //Warp
                          || ( (items.HoverBoots || items.Hookshot) //Cross Crater Bridge
@@ -1516,6 +1532,22 @@ var dungeons = [
                       && items.Hammer && items.Hookshot && items.Magic && (items.Dins || (items.Bow && items.Fire))//Lava Room and Torch
                         && items.Bow && items.Ocarina && items.SongofTime //2nd Key door, arrow torch, Block of Time
                         && items.FireKey >= 5;
+            }
+         },
+         'MQ Volvagia': {
+            type: "boss",
+            access: "master",
+            isAvailable: function () {
+               return ( (items.BoleroofFire && items.Ocarina) //Warp
+                         || ( (items.HoverBoots || items.Hookshot) //Cross Crater Bridge
+                              && (items.Hammer //Summit Climb
+                                  || items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Bow || (items.Magic && items.Dins)) //:ink the Goron
+                            ))
+                        && items.Magic && (items.Dins || (items.Bow && items.Fire)) //Boss Door access
+                        && items.BossFire && items.Hammer && (items.Hoverboots //Boss Key, Hammer, and Hovers...
+                                                             || (items.Hammer && items.Hookshot && items.Magic && (items.Dins || (items.Bow && items.Fire))//Lava Room and Torch
+                                                             && items.Bow && items.Ocarina && items.SongofTime //2nd Key door, arrow torch, Block of Time
+                                                             && items.FireKey >= 4)) ; //or Deep Fire
             }
          },
       },
@@ -1533,104 +1565,114 @@ var dungeons = [
       y: "18.0%",
       type: "dungeon",
       chestlist: {
+         'Above Silver Rupee Skulltula': {
+            type: "skulltula",
+            access: "vanilla",
+            isAvailable: function () {
+               return items.Hookshot && (items.Bombs || items.Scale) && items.ZoraLetter && items.Ocarina && items.ZeldasLullaby;
+            },
+         },
          ['1st Chest']: {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots);
             }
          },
          ['Alcove Chest']: {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots);
             }
          },
          ['Alcove Freestanding']: {
             type: "freestanding",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots);
             }
-         },
-         ['White Wolfos']: {
-            type: "chest",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots);
-            }
-         },
-         ['Song from Sheik']: {
-            type: "song",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots);
-            }
-         },
-      },
-      skulllist: {
-         'Above Silver Rupee Skulltula': {
-            type: "skulltula",
-            isAvailable: function () {
-               return items.Hookshot && (items.Bombs || items.Scale) && items.ZoraLetter && items.Ocarina && items.ZeldasLullaby;
-            },
          },
          'Alcove Skulltula': {
             type: "skulltula",
+            access: "vanilla",
             isAvailable: function () {
                return items.Hookshot && (items.Bombs || items.Scale) && items.ZoraLetter && items.Ocarina && items.ZeldasLullaby;
             },
          },
          'Ice Block Puzzle Skulltula': {
             type: "skulltula",
+            access: "vanilla",
             isAvailable: function () {
                return items.Hookshot && (items.Bombs || items.Scale) && items.ZoraLetter && items.Ocarina && items.ZeldasLullaby;
             },
          },
-      },
-      MQlist: {
-         'Alcove Switch Chest': {
+         ['White Wolfos']: {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots);
             }
          },
+         ['Song from Sheik']: {
+            type: "song",
+            access: "vanilla",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots);
+            }
+         },
+         'Alcove Switch Chest': {
+            type: "chest",
+            access: "master",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots);
+            }
+         },
+         'Red Ice Skulltula': {
+            type: "skulltula",
+            access: "master",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots) && items.SongofTime;
+            }
+         },
          'Pilar Chest': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots);
             }
          },
          'Frozen Freestanding': {
             type: "freestanding",
+            access: "master",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots);
-            }
-         },
-         'Stalfos Chest': {
-            type: "chest",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots);
-            }
-         },
-         'Song from Sheik': {
-            type: "song",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots);
-            }
-         },
-      },
-      MQskulllist: {
-         'Red Ice Skulltula': {
-            type: "skulltula",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots) && items.SongofTime;
             }
          },
          'Scarecrow Skulltula': {
             type: "skulltula",
+            access: "master",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots);
             }
          },
          'Crystal Switch Skulltula': {
             type: "skulltula",
+            access: "master",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots);
+            }
+         },
+         'Stalfos Chest': {
+            type: "chest",
+            access: "master",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots);
+            }
+         },
+         'MQ Sheik Song': {
+            type: "song",
+            access: "master",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots);
             }
