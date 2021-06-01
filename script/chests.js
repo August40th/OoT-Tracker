@@ -1693,106 +1693,119 @@ var dungeons = [
       chestlist: {
          'Water Jet Chest': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.IronBoots && items.Hookshot) || (items.Scale >= 2 && items.Hookshot >= 2 && items.Ocarina && items.ZeldasLullaby);
             }
          },
          'Spike Ball Chest': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.IronBoots && items.Hookshot) || (items.Scale >= 2 && items.Hookshot >= 2);
             }
          },
          'Torches to Shellblades': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && ((items.IronBoots && items.Hookshot) || (items.Scale >= 2 && items.Hookshot >= 2)) && (items.Bow || (items.Dins && items.Magic)) && items.Ocarina && items.ZeldasLullaby;
             }
          },
          'Cracked Wall': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && ((items.IronBoots && items.Hookshot) && (items.Bombs || (items.Bombchu && BombchuLogic))) || ((items.Scale >= 2 && items.Hookshot >= 2) && items.Ocarina && items.ZeldasLullaby);
             }
          },
-         'Central Pillar Basement': {
-            type: "chest",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.WaterKey || items.Bow) && items.IronBoots && items.Hookshot && items.Ocarina && items.ZeldasLullaby;
-            }
-         },
          'Central Bow Target': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && ((items.IronBoots && items.Hookshot) || (items.Scale >= 2 && items.Hookshot >= 2)) && items.Bow && items.Glove && items.Ocarina && items.ZeldasLullaby && (items.HoverBoots || items.Hookshot >= 2);
             }
          },
-         'Boulder Hall Chest': {
-            type: "chest",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.WaterKey >= 2 && ((items.IronBoots && items.Hookshot) || (items.Scale >= 2 && items.Hookshot >= 2)) && (((items.Bombs || (items.Bombchu && BombchuLogic)) && items.Glove) || items.HoverBoots) && (items.Hookshot >= 2 || items.HoverBoots);
-            }
-         },
-         'Dragon Mouth Switch Chest': {
-            type: "chest",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && ((items.IronBoots && items.Hookshot) || (items.Scale >= 2 && items.Hookshot >= 2)) && items.Ocarina && (((items.SongofTime && items.Bow && items.WaterKey >= 2)) || (items.ZeldasLullaby && items.Glove));
-            }
-         },
-         'Dark Link': {
-            type: "chest",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.WaterKey >= 2 && ((items.IronBoots && items.Hookshot) || (items.Scale >= 2 && items.Hookshot >= 2));
-            }
-         },
-         'River Eye Switch Chest': {
-            type: "chest",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.WaterKey >= 2 && ((items.IronBoots && items.Hookshot) || (items.Scale >= 2 && items.Hookshot >= 2)) && items.Ocarina && items.SongofTime && items.Bow;
-            }
-         },
-         'Morpha': {
-            type: "boss",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && ((items.IronBoots && items.Hookshot >= 2) || (items.Scale >= 2 && items.Hookshot >= 2)) && items.BossWater;
-            }
-         },
-      },
-      skulllist: {
          'Basement Key Door to Skulltula': {
             type: "skulltula",
+            access: "vanilla",
             isAvailable: function () {
                return (items.IronBoots && items.Hookshot) || (items.Scale >= 2 && items.Hookshot >= 2 && items.Ocarina && items.ZeldasLullaby) && items.WaterKey && items.Bombs;
             }
          },
          'Boulder Hall Skulltula': {
             type: "skulltula",
+            access: "vanilla",
             isAvailable: function () {
                return items.WaterKey && items.IronBoots && items.Hookshot && ((items.Bombs && items.Glove) || items.HoverBoots || items.Hookshot >= 2);
             }
          },
+         'Boulder Hall Chest': {
+            type: "chest",
+            access: "vanilla",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.WaterKey >= 2 && ((items.IronBoots && items.Hookshot) || (items.Scale >= 2 && items.Hookshot >= 2)) && (((items.Bombs || (items.Bombchu && BombchuLogic)) && items.Glove) || items.HoverBoots) && (items.Hookshot >= 2 || items.HoverBoots);
+            }
+         },
          'Top of Central Pillar Skulltula': {
             type: "skulltula",
+            access: "vanilla",
             isAvailable: function () {
                return items.IronBoots && (items.WaterKey && items.Ocarina && items.ZeldasLullaby) || (items.Bow && items.Ocarina && items.ZeldasLullaby) && items.Hookshot >= 2;
             }
          },
+         'Central Pillar Basement': {
+            type: "chest",
+            access: "vanilla",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.WaterKey || items.Bow) && items.IronBoots && items.Hookshot && items.Ocarina && items.ZeldasLullaby;
+            }
+         },
+         'Dragon Mouth Switch Chest': {
+            type: "chest",
+            access: "vanilla",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && ((items.IronBoots && items.Hookshot) || (items.Scale >= 2 && items.Hookshot >= 2)) && items.Ocarina && (((items.SongofTime && items.Bow && items.WaterKey >= 2)) || (items.ZeldasLullaby && items.Glove));
+            }
+         },
          'Platform Room Skulltula': {
             type: "skulltula",
+            access: "vanilla",
             isAvailable: function () {
                return items.WaterKey && items.Hookshot >= 2;
             }
          },
-         'River Room Skulltula': {
+         'Dark Link': {
+            type: "chest",
+            access: "vanilla",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.WaterKey >= 2 && ((items.IronBoots && items.Hookshot) || (items.Scale >= 2 && items.Hookshot >= 2));
+            }
+         },
+         'River Skulltula': {
             type: "skulltula",
+            access: "vanilla",
             isAvailable: function () {
                return items.SongofTime && items.IronBoots && items.Hookshot;
             }
          },
-      },
-      MQlist: {
+         'River Eye Switch Chest': {
+            type: "chest",
+            access: "vanilla",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.WaterKey >= 2 && ((items.IronBoots && items.Hookshot) || (items.Scale >= 2 && items.Hookshot >= 2)) && items.Ocarina && items.SongofTime && items.Bow;
+            }
+         },
+         'Morpha': {
+            type: "boss",
+            access: "vanilla",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && ((items.IronBoots && items.Hookshot >= 2) || (items.Scale >= 2 && items.Hookshot >= 2)) && items.BossWater;
+            }
+         },
          'Stalfos Chest': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return ((items.IronBoots && items.Hookshot >= 1) || (items.Scale >= 2 && items. Hookshot >= 2)) //Temple Access
                        && items.Magic && ((items.Bow && items.Fire) || items.Dins) //Torches to enter room
@@ -1801,6 +1814,7 @@ var dungeons = [
          },
          'Open Wall Chest': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return ((items.IronBoots && items.Hookshot >= 1) || 
                        (items.Scale >= 2 && items. Hookshot >= 2 
@@ -1808,16 +1822,41 @@ var dungeons = [
                        );
             }
          },
+         'Scarecrow Skulltula': {
+            type: "skulltula",
+            access: "master",
+            isAvailable: function () {
+               return items.IronBoots && items.Hookshot >= 1 && items.Ocarina && items.Scarecrow >=2 && items.Magic && items.Bow && items.Fire;
+            }
+         },
+         'Blue Switch Skulltula': {
+            type: "skulltula",
+            access: "master",
+            isAvailable: function () {
+               return (items.IronBoots || items.Scale >= 2) && items. Hookshot >= 2 && items.Ocarina && items.ZeldasLullaby;
+            }
+         },
+         'Lizalfos Hallway Skulltula': {
+            type: "skulltula",
+            access: "master",
+            isAvailable: function () {
+               return ((items.IronBoots && items.Hookshot >= 1) || (items.Scale >= 2 && items. Hookshot >= 2 && items.Ocarina && items.ZeldasLullaby)) //Temple Access
+                       && items.Magic && items.Dins //Torches to enter room
+                       ;
+            }
+         },
          'Lizalfos Chest': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return ((items.IronBoots && items.Hookshot >= 1) || (items.Scale >= 2 && items. Hookshot >= 2))
                        && items.Magic && ((items.Bow && items.Fire) || items.Dins) //Torches
                        ;
             }
          },
-         'Central Pillar Basement': {
+         'MQ Central Pillar Basement': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return (items.IronBoots && items.Hookshot >= 1 //Temple Access
                        && items.Magic && ( (items.Bow && items.Fire) || (items.Dins && items.Ocarina && items.SongofTime) ) //Torches at the top of Pillar
@@ -1826,6 +1865,7 @@ var dungeons = [
          },
          'Dins Ontop Water Jet': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return ((items.IronBoots && items.Hookshot >= 1) || (items.Scale >= 2 && items. Hookshot >= 2)) //Temple Access
                        && items.Magic && items.Dins && items.WaterKey >= 1 //Jet room access
@@ -1834,44 +1874,25 @@ var dungeons = [
          },
          'Basement Crate Freestanding': {
             type: "freestanding",
+            access: "master",
             isAvailable: function () {
                return ((items.IronBoots && items.Hookshot >= 1) || (items.Scale >= 2 && items. Hookshot >= 2 && items.Ocarina && items.ZeldasLullaby)) //Temple Access
                        && (items.Hookshot >= 2 || items.HoverBoots) //Get over the spikes
                        ;
             }
          },
-         'Morpha': {
+         'MQ Morpha': {
             type: "boss",
+            access: "master",
             isAvailable: function () {
                return ((items.IronBoots && items.Hookshot >= 1) || (items.Scale >= 2 && items. Hookshot >= 2 && items.Ocarina && items.ZeldasLullaby)) //Temple Access
                        && items.BossWater && items.Hookshot >= 2 //Boos door access
                        ;
             }
          },
-      },
-      MQskulllist: {
-         'Scarecrow Skulltula': {
+         'MQ River Skulltula': {
             type: "skulltula",
-            isAvailable: function () {
-               return items.IronBoots && items.Hookshot >= 1 && items.Ocarina && items.Scarecrow >=2 && items.Magic && items.Bow && items.Fire;
-            }
-         },
-         'Lizalfos Hallway Skulltula': {
-            type: "skulltula",
-            isAvailable: function () {
-               return ((items.IronBoots && items.Hookshot >= 1) || (items.Scale >= 2 && items. Hookshot >= 2 && items.Ocarina && items.ZeldasLullaby)) //Temple Access
-                       && items.Magic && items.Dins //Torches to enter room
-                       ;
-            }
-         },
-         'Blue Switch Skulltula': {
-            type: "skulltula",
-            isAvailable: function () {
-               return (items.IronBoots || items.Scale >= 2) && items. Hookshot >= 2 && items.Ocarina && items.ZeldasLullaby;
-            }
-         },
-         'River Skulltula': {
-            type: "skulltula",
+            access: "master",
             isAvailable: function () {
                return ((items.IronBoots && items.Hookshot >= 1) || (items.Scale >= 2 && items. Hookshot >= 2)) //Temple Access
                        && items.WaterKey >= 1 //Fight Stalfos and Dark Link
@@ -1880,6 +1901,7 @@ var dungeons = [
          },
          'Dodongo Skulltula': {
             type: "skulltula",
+            access: "master",
             isAvailable: function () {
                return ((items.IronBoots && items.Hookshot >= 1) || (items.Scale >= 2 && items. Hookshot >= 2 && items.Ocarina && items.ZeldasLullaby)) //Temple Access
                        && items.Magic && ((items.Bow && items.Fire) || items.Dins) //Torches to enter room
@@ -1903,210 +1925,245 @@ var dungeons = [
       chestlist: {
          'Lobby Right Chest': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Bow;
             }
          },
          'Lobby Left Chest': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Bow;
             }
          },
          'Stalfos Room': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen());
             }
          },
          'Wolfos Room': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Hookshot;
             }
          },
          'Like Like Open Chest': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Hookshot && items.Glove >= 2;
             }
          },
          'Like Like Room 1st Chest': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Hookshot && items.Glove >= 2;
             }
          },
          'Like Like Room 2nd Chest': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Hookshot && items.Glove >= 2;
             }
          },
          'Like Like Invisible Chest': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Hookshot && items.Glove >= 2;
             }
          },
          'Cyclops Statue Eyes': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Hookshot && items.Bow && (items.SongofTime || items.HoverBoots || items.Hookshot >= 2 || (items.Hookshot));
             }
          },
          'Cyclops Room Top Room': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Hookshot && items.Bow;
             }
          },
          'Fire Enemies Clear': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Hookshot;
             }
          },
-         'Fire Enemies Fire Chest': {
+         'Fire Trap Chest': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Hookshot;
             }
          },
          'Maze Right Freestanding': {
             type: "freestanding",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && ((items.Ocarina && items.SongofTime) || items.GTGKey >= 2);
             }
          },
          'Maze Right Central Chest': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && ((items.Ocarina && items.SongofTime) || items.GTGKey >= 2);
             }
          },
          'Maze Right Side Chest': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && ((items.Ocarina && items.SongofTime) || items.GTGKey >= 2);
             }
          },
          'Underwater Silver Rupees': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Hookshot && items.Ocarina && items.SongofTime && items.IronBoots;
             }
          },
          'Beamos Room': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && (items.Bombs || (items.Bombchu && BombchuLogic));
             }
          },
-         'Hidden Ceiling Chest': {
+         'Left 1 Key Hidden Ceiling': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.GTGKey && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen());
             }
          },
-         'Maze Left First Chest': {
+         'Left 2 Key Chest': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.GTGKey >= 2 && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen());
             }
          },
-         'Maze Left Second Chest': {
+         'Left 4 Key Chest': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.GTGKey >= 4 && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen());
             }
          },
-         'Maze Left Third Chest': {
+         'Left 5 Key Chest': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.GTGKey >= 5 && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen());
             }
          },
          'Maze Center Chest': {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.GTGKey >= 7 && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen());
             }
          },
-      },
-      MQlist: {
-         'Lobby Left': {
+         'MQ Lobby Left': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return items.Membership; }
          },
-         'Lobby Right': {
+         'MQ Lobby Right': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return items.Membership; }
          },
          'White Iron Knuckle': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return items.Membership; }
          },
          'Skulltula and Stalfos': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return items.Membership; }
          },
          'Silver Block Chest': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return items.Membership; }
          },
          'Crystal Switch Chest': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return items.Membership; }
          },
          'Black Iron Knuckle': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return items.Membership; }
          },
-         'Fire Circle Chest': {
+         'MQ Fire Trap Chest': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return items.Membership; }
          },
-         'Underwater Silver Rupees': {
+         'MQ Underwater Silver Rupees': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return items.Membership; }
          },
-         'Maze Right Chest x2': {
+         'MQ Maze Right Chest x2': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return items.Membership; }
          },
          'Dinosaur Room': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return items.Membership; }
          },
          'Maze Left Hidden Ceiling': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return items.Membership; }
          },
          'Maze Left Unlocked Chests x2': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return items.Membership; }
          },
          'Maze Left Locked Chest': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return items.Membership && items.GTGKey >= 1; }
          },
-         'Maze Center Chest': {
+         'MQ Maze Center Chest': {
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return items.Membership && items.Hammer && items.GTGKey >= 3; }
          },
