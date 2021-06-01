@@ -3063,7 +3063,7 @@ var dungeons = [
             type: "trial",
             access: "mixed",
             isAvailable: function () {
-               return isBridgeOpen() && items.Magic && items.Bow && items.Light && items.MirrorShield && items.Bombs && items.Hookshot;
+               return isBridgeOpen() && items.Magic && items.Bow && items.Light && items.MirrorShield && items.Bombs && items.Hookshot >= 1;
             }
          },
          ['Light Chest 1']: {
