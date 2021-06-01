@@ -2975,123 +2975,196 @@ var dungeons = [
       chestlist: {
          ['Forest Chest']: {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen();
             }
          },
-         ['Ice Chests x2']: {
+         ['Forest Trial Clear']: {
+            type: "trial",
+            access: "mixed",
+            isAvailable: function () {
+               return isBridgeOpen() && items.Magic && items.Bow && items.Light && (items.Fire || (items.Hookshot && items.Dins));
+            }
+         },
+         ['Ice Chest 1']: {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen();
             }
          },
-         ['Spirit Chest x2']: {
+         ['Ice Chest 2']: {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && items.Hookshot && (items.Bombchu && BombchuLogic);
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen();
             }
          },
-         ['Shadow Chests x2']: {
-            type: "chest",
+         ['Ice Trial Clear']: {
+            type: "trial",
+            access: "mixed",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && ((items.Magic && items.Bow && items.Fire) || items.Hookshot >= 2) && items.HoverBoots;
+               return isBridgeOpen() && items.Bottle && items.Hammer && items.Magic && items.Bow && items.Light;
             }
          },
-         ['Light Chests x6']: {
+         ['Shadow Chest 1']: {
             type: "chest",
+            access: "vanilla",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && ((items.Magic && items.Bow && items.Fire) || items.Hookshot >= 1 || items.HoverBoots || (items.Ocarina >= 1 && items.SongofTimw;
+            }
+         },
+         ['Shadow Chest 2']: {
+            type: "chest",
+            access: "vanilla",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && ((items.Magic && items.Bow && items.Fire) || ((items.Hookshot >= 1 || items.HoverBoots) && items.Magic && items.Dins) || items.Hookshot >= 2);
+            }
+         },
+         ['Shadow Trial Clear']: {
+            type: "trial",
+            access: "mixed",
+            isAvailable: function () {
+               return isBridgeOpen() && items.Magic && items.Bow && items.Light && items.Hammer && (items.Fire || items.Hookshot >= 2) && (items.Lens || (items.HoverBoots && items.Hookshot >= 2));
+            }
+         },
+         ['Fire Trial Clear']: {
+            type: "trial",
+            access: "mixed",
+            isAvailable: function () {
+               return isBridgeOpen() && items.Glove >= 3 && items.Magic && items.Bow && items.Light && items.Hookshot >= 2;
+            }
+         },
+         ['Spirit Chest 1']: {
+            type: "chest",
+            access: "vanilla",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && items.Hookshot && (items.Bombchu || items.Bow);
+            }
+         },
+         ['Spirit Chest 2']: {
+            type: "chest",
+            access: "vanilla",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && items.Hookshot && (items.Bombchu || items.Bow);
+            }
+         },
+         ['Spirit Trial Clear']: {
+            type: "trial",
+            access: "mixed",
+            isAvailable: function () {
+               return isBridgeOpen() && items.Magic && items.Bow && items.Light && items.MirrorShield && items.Bombs && items.Hookshot;
+            }
+         },
+         ['Light Chest 1']: {
+            type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && items.Glove >= 3;
             }
          },
-         ['Light Trial Invisible CHest']: {
+         ['Light Chest 2']: {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && items.Glove >= 3;
             }
          },
-         ['Light Trial Lullaby Chest']: {
+         ['Light Chest 3']: {
             type: "chest",
+            access: "vanilla",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && items.Glove >= 3;
+            }
+         },
+         ['Light Chest 4']: {
+            type: "chest",
+            access: "vanilla",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && items.Glove >= 3;
+            }
+         },
+         ['Light Chest 5']: {
+            type: "chest",
+            access: "vanilla",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && items.Glove >= 3;
+            }
+         },
+         ['Light Chest 6']: {
+            type: "chest",
+            access: "vanilla",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && items.Glove >= 3;
+            }
+         },
+         ['Light Invisible Chest']: {
+            type: "chest",
+            access: "vanilla",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && items.Glove >= 3;
+            }
+         },
+         ['Light Lullaby Chest']: {
+            type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && items.Glove >= 3 && items.Ocarina && items.ZeldasLullaby && items.CastleKey;
             }
          },
+         ['Light Trial Clear']: {
+            type: "trial",
+            access: "mixed",
+            isAvailable: function () {
+               return isBridgeOpen() && items.Glove >= 3 && items.Magic && items.Bow && items.Hookshot && items.Light && items.CastleKey >= 2;
+            }
+         },
          ['Boss Key Chest']: {
             type: "chest",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && generalCanGetChest(this.trials);
             }
          },
          ['GanonDorf']: {
             type: "boss",
+            access: "vanilla",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && generalCanGetChest(this.trials) && items.BossCastle && items.Bow && items.Magic && items.Light;
+            }
+         },
+         'Lower Invisible Wall Scrubs x4': {
+            type: "scrub",
+            access: "vanilla",
+            isAvailable: function () {
+               return isBridgeOpen();
+            }
+         },
+         'MQ Check 1 ': {
+            type: "chest",
+            access: "master",
+            isAvailable: function () {
+               return true;
+            },
+         },
+         'MQ Scrub 1 ': {
+            type: "scrub",
+            access: "master",
+            isAvailable: function () {
+               return true;
+            },
+         },
+         ['MQ GanonDorf']: {
+            type: "boss",
+            access: "vanilla",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && generalCanGetChest(this.trials) && items.BossCastle && items.Bow && items.Magic && items.Light;
             }
          },
       },
-      scrublist: {
-         'Lower Invisible Wall Scrubs x4': {
-            type: "scrub",
-            isAvailable: function () {
-               return isBridgeOpen();
-            }
-         },
-      },
-      MQlist: {
-         'Check 1 ': {
-            type: "chest",
-            isAvailable: function () {
-               return true;
-            },
-         },
-      },
-      MQscrublist: {
-         'Scrub 1 ': {
-            type: "scrub",
-            isAvailable: function () {
-               return true;
-            },
-         },
-      },
-      triallist: {
-         ['Forest Trial Clear']: {
-            type: "trial",
-            isAvailable: function () {
-               return isBridgeOpen() && items.Magic && items.Bow && items.Light && (items.Fire || (items.Hookshot && items.Dins));
-            }
-         },
-         ['Fire Trial Clear']: {
-            type: "trial",
-            isAvailable: function () {
-               return isBridgeOpen() && items.Glove >= 3 && items.Magic && items.Bow && items.Light && items.Hookshot >= 2;
-            }
-         },
-         ['Ice Trial Clear']: {
-            type: "chest",
-            trial: function () {
-               return isBridgeOpen() && items.Bottle && items.Hammer && items.Magic && items.Bow && items.Light;
-            }
-         },
-         ['Shadow Trial Clear']: {
-            type: "trial",
-            isAvailable: function () {
-               return isBridgeOpen() && items.Magic && items.Bow && items.Light && items.Hammer && (items.Fire || items.Hookshot >= 2) && (items.Lens || (items.HoverBoots && items.Hookshot >= 2));
-            }
-         },
-         ['Spirit Trial Clear']: {
-            type: "trial",
-            isAvailable: function () {
-               return isBridgeOpen() && items.Magic && items.Bow && items.Light && items.MirrorShield && items.Bombs && items.Hookshot;
-            }
-         },
-         ['Light Trial Clear']: {
-            type: "trial",
-            isAvailable: function () {
-               return isBridgeOpen() && items.Glove >= 3 && items.Magic && items.Bow && items.Hookshot && items.Light && items.CastleKey >= 2;
-            }
-         },
-      },
       isBeatable: function () {
-         return this.canGetChest();
+         return generalCanGetChest(this.trials) && items.BossCastle;
       },
       canGetChest: function () {
          return generalCanGetChest(this.chestlist);
