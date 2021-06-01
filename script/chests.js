@@ -3164,7 +3164,7 @@ var dungeons = [
          },
       },
       isBeatable: function () {
-         return generalCanGetChest(this.trials) && items.BossCastle;
+         return this.canGetChest();
       },
       canGetChest: function () {
          return generalCanGetChest(this.chestlist);
