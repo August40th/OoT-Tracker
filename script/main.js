@@ -513,23 +513,29 @@ function clickDungeon(d) {
     regionSelected.onclick = bulkDCSelect();
 
     for (var key in dungeons[dungeonSelect].chestlist) {
-        var s = document.createElement('li');
-        s.innerHTML = key;
-
-        if (dungeons[dungeonSelect].chestlist[key].isOpened) {
-            s.className = "DCopened";
-        } else if ( dungeons[dungeonSelect].chestlist[key].isAvailable()) {
-            s.className = "DCavailable";
-        } else {
-            s.className = "DCunavailable";
+        if ( key.type == "entrance" || key.type == "warp" || key.type == "owl" ) { //Do Nothing
         }
+        else if (key.type == "cow" && Cowsanity == false) { //Do Nothing
+        }
+        else {
+           var s = document.createElement('li');
+           s.innerHTML = key;
 
-        s.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
-        s.onmouseover = new Function('highlightDungeonChest(this)');
-        s.onmouseout = new Function('unhighlightDungeonChest(this)');
-        s.style.cursor = "pointer";
+            if (dungeons[dungeonSelect].chestlist[key].isOpened) {
+                s.className = "DCopened";
+            } else if ( dungeons[dungeonSelect].chestlist[key].isAvailable()) {
+                s.className = "DCavailable";
+            } else {
+                s.className = "DCunavailable";
+            }
 
-        DClist.appendChild(s);
+            s.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
+            s.onmouseover = new Function('highlightDungeonChest(this)');
+            s.onmouseout = new Function('unhighlightDungeonChest(this)');
+            s.style.cursor = "pointer";
+
+            DClist.appendChild(s);
+        }
     }
 }
 
