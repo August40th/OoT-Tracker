@@ -514,28 +514,25 @@ function clickDungeon(d) {
 
     for (var key in dungeons[dungeonSelect].chestlist) {
         if ( dungeons[dungeonSelect].chestlist[key].type == "entrance" || dungeons[dungeonSelect].chestlist[key].type == "warp" || dungeons[dungeonSelect].chestlist[key].type == "owl" ) { //Do Nothing
+            continue;}
+        if (dungeons[dungeonSelect].chestlist[key].type == "cow" && Cowsanity == false) { //Do Nothing
+            continue;}
+        var s = document.createElement('li');
+        s.innerHTML = key;
+        if (dungeons[dungeonSelect].chestlist[key].isOpened) {            
+            s.className = "DCopened";
+        } else if ( dungeons[dungeonSelect].chestlist[key].isAvailable()) {
+            s.className = "DCavailable";
+        } else {
+            s.className = "DCunavailable";
         }
-        else if (dungeons[dungeonSelect].chestlist[key].type == "cow" && Cowsanity == false) { //Do Nothing
-        }
-        else {
-           var s = document.createElement('li');
-           s.innerHTML = key;
 
-            if (dungeons[dungeonSelect].chestlist[key].isOpened) {
-                s.className = "DCopened";
-            } else if ( dungeons[dungeonSelect].chestlist[key].isAvailable()) {
-                s.className = "DCavailable";
-            } else {
-                s.className = "DCunavailable";
-            }
+        s.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
+        s.onmouseover = new Function('highlightDungeonChest(this)');
+        s.onmouseout = new Function('unhighlightDungeonChest(this)');
+        s.style.cursor = "pointer";
 
-            s.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
-            s.onmouseover = new Function('highlightDungeonChest(this)');
-            s.onmouseout = new Function('unhighlightDungeonChest(this)');
-            s.style.cursor = "pointer";
-
-            DClist.appendChild(s);
-        }
+        DClist.appendChild(s);
     }
 }
 
