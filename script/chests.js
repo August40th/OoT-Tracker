@@ -5187,6 +5187,14 @@ var dungeons = [
       y: "31.5%",
       type: "overworld",
       chestlist: {
+         'Valley to Field': {
+            x: "30.0%",
+            y: "37.5%",
+            type: "entrance", 
+            access: "entrance",
+             isAvailable: function () {
+                  return true; }
+         },
          'Right of Plank Skulltula': {
             type: "skulltula", 
             access: "outdoor",
@@ -5229,11 +5237,11 @@ var dungeons = [
                return items.Bottle;
             },
          },
-         'Octorok Grotto': {
+         'Silver Rock Grotto': {
             type: "grotto", 
             access: "grotto",
             isAvailable: function () {
-               return true; }
+               return items.Glove >= 2; }
          },
          'Above Hammer Rocks Skulltula': {
             type: "skulltula", 
@@ -5275,20 +5283,11 @@ var dungeons = [
                return (items.EponasSong || items.Hookshot >= 2) && items.Ocarina && items.SongofStorms;
             },
          },
-      },
-      gossiplist: {
-         
-      },
-      entrancelist: {
-         'Valley to Field': {
-            x: "30.0%",
-            y: "37.5%",
-             isAvailable: function () {
-                  return true; }
-         },
          'Valley to Fortress': {
             x: "20.0%",
             y: "37.0%",
+            type: "entrance", 
+            access: "entrance",
              isAvailable: function () {
                   return true; }
          },
