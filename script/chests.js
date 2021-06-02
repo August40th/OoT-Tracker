@@ -3513,6 +3513,22 @@ var dungeons = [
                return ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Mask >= 1);
             }
          },
+         'Gold Gauntlets Doorway': {
+            type: "simple", 
+            access: "door",
+               isAvailable: function () {
+                  return ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword && items.Glove >= 3 && items.Ocarina && items.ZeldasLullaby))
+               }
+         },
+         'Gold Gauntlets Fairy' : {
+            x: "55.5%",
+            y: "13.5%",
+            type: "NPC", 
+            access: "simple",
+               isAvailable: function () {
+                  return ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword && items.Glove >= 3 && items.Ocarina && items.ZeldasLullaby))
+               }
+         },
       },
       isBeatable: function () {
          return this.canGetChest();
@@ -5305,6 +5321,20 @@ var dungeons = [
       y: "16.4%",
       type: "overworld",
       chestlist: {
+         'Fortress to Valley': {
+            x: "18.0%",
+            y: "31.5%",
+            type: "entrance", 
+            access: "entrance",
+             isAvailable: function () {
+                  return true; }
+         },
+         'Fortress Storms Grotto': {
+            type: "grotto", 
+            access: "grotto",
+            isAvailable: function () {
+               return true; }
+         },
          ['Guard Fight']: {
             type: "freestanding", 
             access: "outdoor",
@@ -5333,12 +5363,25 @@ var dungeons = [
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.Ocarina && items.EponasSong) || items.Hookshot >= 2 || isFortressOpen()) && items.MasterSword && Rescue1 &&  smallkeys == 'Keysanity';
             }
          },
+         'Fortress Skulltula': {
+            type: "skulltula", 
+            access: "outdoor",
+            isAvailable: function () {
+               return (items.Ocarina && items.EponasSong) || items.Hookshot >= 2;
+            },
+         },
          ['Rooftop Chest']: {
             type: "chest", 
             access: "outdoor",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.Ocarina && items.EponasSong) || items.Hookshot >= 2 || isFortressOpen()) && items.MasterSword && (items.HoverBoots || (items.Scarecrow >= 2 && items.Hookshot) || items.Hookshot >= 2);
             }
+         },
+         'Gerudo Training Grounds': {
+            type: "dungeon", 
+            access: "door",
+               isAvailable: function () {
+                  return true; }
          },
          ['Horseback Archery 1000 pts']: {
             type: "NPC", 
@@ -5354,15 +5397,6 @@ var dungeons = [
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && isFortressOpen() && items.MasterSword && items.Bow && items.EponasSong && items.Ocarina;
             }
          },
-      },
-      skulllist: {
-         'Fortress Skulltula': {
-            type: "skulltula", 
-            access: "outdoor",
-            isAvailable: function () {
-               return (items.Ocarina && items.EponasSong) || items.Hookshot >= 2;
-            },
-         },
          'Archery Target Skulltula': {
             type: "skulltula", 
             access: "outdoor",
@@ -5370,31 +5404,11 @@ var dungeons = [
                return items.Hookshot && ((items.Ocarina && items.EponasSong) || items.Hookshot >= 2);
             },
          },
-      },
-      indoorlist: {
-         'Fortress Storms Grotto': {
-            type: "grotto", 
-            access: "grotto",
-            isAvailable: function () {
-               return true; }
-         },
-         'Gerudo Training Grounds': {
-            type: "dungeon", 
-            access: "door",
-               isAvailable: function () {
-                  return true; }
-         },
-      },
-      entrancelist: {
-         'Fortress to Valley': {
-            x: "18.0%",
-            y: "31.5%",
-             isAvailable: function () {
-                  return true; }
-         },
          'Fortress to Wasteland': {
             x: "17.0%",
             y: "23.4%",
+            type: "entrance", 
+            access: "entrance",
              isAvailable: function () {
                   return true; }
          },
@@ -5412,6 +5426,70 @@ var dungeons = [
       y: "15.9%",
       type: "overworld",
       chestlist: {
+         'Desert to Wasteland': {
+            x: "8.4%",
+            y: "25.0%",
+            type: "entrance", 
+            access: "entrance",
+             isAvailable: function () {
+                  return true; }
+         },
+         'Cracked Wall Doorway': {
+            type: "simple", 
+            access: "door",
+            isAvailable: function () {
+               return true; }
+         },
+         'Nayru\'s Great Fairy Fountain': {
+            type: "simple", 
+            access: "door",
+            isAvailable: function () {
+               return true; }
+         },
+         ['Nayru\'s Great Fairy Fountain']: {
+            type: "NPC", 
+            access: "simple",
+            isAvailable: function () {
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Ocarina && items.ZeldasLullaby && (items.Bombs || (items.Bombchu && BombchuLogic))) && (items.MasterSword && (((items.EponasSong || isFortressOpen()) && items.HoverBoots) || items.Hookshot >= 2) || items.RequiemofSpirit)
+            }
+         },
+         'Water Hole Tree Skulltula': {
+            type: "skulltula", 
+            access: "outdoor",
+            isAvailable: function () {
+               return items.Hookshot && (items.Membership >= 5 && (items.HoverBoots || items.Hookshot >= 2)) || (items.Ocarina && items.RequiemofSpirit);
+            },
+         },
+         'Requiem Warp': {
+            type: "warp", 
+            access: "warp",
+               isAvailable: function () {
+                  return items.Ocarina && items.RequiemofSpirit; }
+         },
+         'Desert Strength Grotto': {
+            type: "grotto", 
+            access: "grotto",
+            isAvailable: function () {
+               return true; }
+         },
+         'Silver Rock Scrub Grotto': {
+            type: "scrub", 
+            access: "grotto",
+            isAvailable: function () {
+               return items.Glove >= 2 && ((items.Membership >= 5 && (items.HoverBoots || items.Hookshot >= 2)) || (items.Ocarina && items.RequiemofSpirit));
+            },
+         },
+         'Northwest Desert Gossip': {
+            isAvailable: function () {
+               return true
+            }
+         },
+         'Spirit Temple': {
+            type: "dungeon", 
+            access: "door",
+               isAvailable: function () {
+                  return true; }
+         },
          ['Song from Sheik']: {
             type: "song", 
             access: "outdoor",
@@ -5419,22 +5497,6 @@ var dungeons = [
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.MasterSword && (((items.Ocarina && items.EponasSong) || isFortressOpen()) && items.HoverBoots) || items.Hookshot >= 2) || (items.Ocarina && items.RequiemofSpirit));
             }
          },
-         ['Bean to Arch Freestanding']: {
-            type: "freestanding", 
-            access: "outdoor",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.Bean && items.Ocarina && items.RequiemofSpirit
-            }
-         },
-         ['Desert Great Fairy Fountain']: {
-            type: "NPC", 
-            access: "simple",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Ocarina && items.ZeldasLullaby && (items.Bombs || (items.Bombchu && BombchuLogic))) && (items.MasterSword && (((items.EponasSong || isFortressOpen()) && items.HoverBoots) || items.Hookshot >= 2) || items.RequiemofSpirit)
-            }
-         },
-      },
-      skulllist: {
          'Soil Patch Skulltula': {
             type: "skulltula", 
             access: "outdoor",
@@ -5449,62 +5511,12 @@ var dungeons = [
                return items.Ocarina && items.RequiemofSpirit && (items.Bombs || items.Scale)
             }
          },
-         'Water Hole Tree Skulltula': {
-            type: "skulltula", 
+         ['Bean to Arch Freestanding']: {
+            type: "freestanding", 
             access: "outdoor",
             isAvailable: function () {
-               return items.Hookshot && (items.Membership >= 5 && (items.HoverBoots || items.Hookshot >= 2)) || (items.Ocarina && items.RequiemofSpirit);
-            },
-         },
-      },
-      scrublist: {
-         'Silver Rock Scrub Grotto': {
-            type: "scrub", 
-            access: "grotto",
-            isAvailable: function () {
-               return items.Glove >= 2 && ((items.Membership >= 5 && (items.HoverBoots || items.Hookshot >= 2)) || (items.Ocarina && items.RequiemofSpirit));
-            },
-         },
-      },
-      indoorlist: {
-         'Requiem Warp': {
-            type: "warp", 
-            access: "warp",
-               isAvailable: function () {
-                  return items.Ocarina && items.RequiemofSpirit; }
-         },
-         'Nayru\'s Great Fairy Fountain': {
-            type: "simple", 
-            access: "door",
-            isAvailable: function () {
-               return true; }
-         },
-         'Desert Strength Grotto': {
-            type: "grotto", 
-            access: "grotto",
-            isAvailable: function () {
-               return true; }
-         },
-         'Spirit Temple': {
-            type: "dungeon", 
-            access: "door",
-               isAvailable: function () {
-                  return true; }
-         },
-      },
-      gossiplist: {
-         'Northwest Desert Stone': {
-            isAvailable: function () {
-               return true
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.Bean && items.Ocarina && items.RequiemofSpirit
             }
-         },
-      },
-      entrancelist: {
-         'Desert to Wasteland': {
-            x: "8.4%",
-            y: "25.0%",
-             isAvailable: function () {
-                  return true; }
          },
       },
       isBeatable: function () {
@@ -5712,47 +5724,235 @@ var dungeons = [
       x: "54.0%",
       y: "42.0%",
       type: "overworld",
-      chestlist: {},
-      entrancelist: {
+      chestlist: {
+         'Ocarina of Time': {
+            x: "54.3%",
+            y: "28.0%",
+            type: "ocarina", 
+            access: "outdoor",
+               isAvailable: function () {
+                  return ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.KokiriEmerald && items.GoronRuby && items.ZoraSapphire)
+               }
+         },
+         'Song from Zelda': {
+            x: "54.3%",
+            y: "28.0%",
+            type: "song", 
+            access: "outdoor",
+               isAvailable: function () {
+                  return ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.KokiriEmerald && items.GoronRuby && items.ZoraSapphire)
+               }
+         },
+         'North West of Castle Grotto' : {
+            x: "50.0%",
+            y: "28.0%",
+            type: "grotto", 
+            access: "grotto",
+               isAvailable: function () {
+                  return ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.MasterSword && items.Hammer) || (items.Bombchu && BombchuLogic)))
+               }
+         },
+         'Grotto West of Castle Gate' : {
+            x: "50.0%",
+            y: "28.0%",
+            type: "chest", 
+            access: "grotto",
+               isAvailable: function () {
+                  return ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.MasterSword && items.Hammer) || (items.Bombchu && BombchuLogic)))
+               }
+         },
+         'South East Remote Grotto' : {
+            x: "60.0%",
+            y: "59.0%",
+            type: "grotto", 
+            access: "grotto",
+               isAvailable: function () {
+                  return ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.MasterSword && items.Hammer) || (items.Bombchu && BombchuLogic)))
+               }
+         },
+         'South East Grotto' : {
+            x: "60.0%",
+            y: "59.0%",
+            type: "chest", 
+            access: "grotto",
+               isAvailable: function () {
+                  return ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.MasterSword && items.Hammer) || (items.Bombchu && BombchuLogic)))
+               }
+         },
+         'South Open Grotto' : {
+            x: "44.5%",
+            y: "64.0%",
+            type: "grotto", 
+            access: "grotto",
+               isAvailable: function () {
+                  return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0))
+               }
+         },
+         'Southern Open Grotto' : {
+            x: "44.5%",
+            y: "64.0%",
+            type: "chest", 
+            access: "grotto",
+               isAvailable: function () {
+                  return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0))
+               }
+         },
+         'Fenced Bomb Grotto' : {
+            x: "42.0%",
+            y: "64.0%",
+            type: "grotto", 
+            access: "grotto",
+               isAvailable: function () {
+                  return ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.MasterSword && items.Hammer) || (items.Bombchu && BombchuLogic)))
+               }
+         },
+         'Bomb Grotto Deku Sale 10$' : {
+            x: "42.0%",
+            y: "64.0%",
+            type: "NPC", 
+            access: "grotto",
+               isAvailable: function () {
+                  return ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.MasterSword && items.Hammer) || (items.Bombchu && BombchuLogic)))
+               }
+         },
+         'North West Lone Tree Grotto' : {
+            x: "42.0%",
+            y: "33.0%",
+            type: "grotto", 
+            access: "grotto",
+               isAvailable: function () {
+                  return ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.MasterSword && items.Hammer) || (items.Bombchu && BombchuLogic)))
+               }
+         },
+         'Tektite Grotto' : {
+            x: "42.0%",
+            y: "33.0%",
+            type: "freestanding", 
+            access: "grotto",
+               isAvailable: function () {
+               return (((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (
+                  ((items.Bombs || (items.Bombchu && BombchuLogic)) || (items.Hammer && items.MasterSword)) )
+                  && (items.Scale >= 2 || (items.MasterSword && items.IronBoots) ) ))
+               }
+         },
+         'Paradox Grotto' : {
+            x: "36.1%",
+            y: "42.0%",
+            type: "grotto", 
+            access: "grotto",
+               isAvailable: function () {
+                  return ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (((( (items.Bombs || (items.Bombchu && BombchuLogic))) || (items.MasterSword && (items.Bombs || items.Hammer || (items.Bombchu && BombchuLogic)))))))
+               }
+         },
+         'Web Grotto Skulltula' : {
+            x: "36.1%",
+            y: "42.0%",
+            type: "skulltula", 
+            access: "grotto",
+               isAvailable: function () {
+                  return ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.Magic && ((items.Dins && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Boomerang) || (((items.Bow && items.Fire) || items.Dins) && items.Hookshot && items.MasterSword && (items.Bombs || items.Hammer || (items.Bombchu && BombchuLogic)))))))
+               }
+         },
+         'Web Grotto Cow' : {
+            x: "36.1%",
+            y: "42.0%",
+            type: "cow", 
+            access: "grotto",
+               isAvailable: function () {
+                  return ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.Magic && ((items.Dins && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Boomerang) || (((items.Bow && items.Fire) || items.Dins) && items.Hookshot && items.MasterSword && (items.Bombs || items.Hammer || (items.Bombchu && BombchuLogic)))))))
+               }
+         },
+         'Web Grotto Gossip' : {
+            x: "36.1%",
+            y: "42.0%",
+            type: "gossip", 
+            access: "grotto",
+               isAvailable: function () {
+                  return ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.Magic && ((items.Dins && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Boomerang) || (((items.Bow && items.Fire) || items.Dins) && items.Hookshot && items.MasterSword && (items.Bombs || items.Hammer || (items.Bombchu && BombchuLogic)))))))
+               }
+         },
+         'North East Lone Tree Grotto' : {
+            x: "57.3%",
+            y: "26.0%",
+            type: "grotto", 
+            access: "grotto",
+               isAvailable: function () {
+                  return (((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.Bombs || (items.Bombchu && BombchuLogic)
+                     ) && items.Boomerang) || ((items.Bombs || items.Hammer || (items.Bombchu && BombchuLogic) ) && items.MasterSword && items.Hookshot) ))
+               }
+         },
+         'Skulltula Grotto' : {
+            x: "57.3%",
+            y: "26.0%",
+            type: "chest", 
+            access: "grotto",
+               isAvailable: function () {
+                  return (((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.Bombs || (items.Bombchu && BombchuLogic)
+                     ) && items.Boomerang) || ((items.Bombs || items.Hammer || (items.Bombchu && BombchuLogic) ) && items.MasterSword && items.Hookshot) ))
+               }
+         },
+         'Fairy Fountain Grotto' : {
+            x: "44.0%",
+            y: "25.0%",
+            type: "grotto", 
+            access: "grotto",
+               isAvailable: function () {
+                  return ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.MasterSword && items.Hammer) || (items.Bombchu && BombchuLogic)))
+               }
+         },
          'Field to Forest': {
             x: "64.0%",
             y: "44.4%",
+            type: "entrance", 
+            access: "entrance",
              isAvailable: function () {
                   return true; }
          },
          'Field to Ranch': {
             x: "48.4%",
             y: "34.5%",
+            type: "entrance", 
+            access: "entrance",
              isAvailable: function () {
                   return true; }
          },
          'Field to River': {
             x: "67.6%",
             y: "38.0%",
+            type: "entrance", 
+            access: "entrance",
              isAvailable: function () {
                   return true; }
          },
          'Field to Village': {
             x: "60.0%",
             y: "27.0%",
+            type: "entrance", 
+            access: "entrance",
              isAvailable: function () {
                   return true; }
          },
          'Drawbridge to Topdown': {
             x: "52.0%",
             y: "30.5%",
+            type: "entrance", 
+            access: "entrance",
              isAvailable: function () {
                   return true; }
          },
          'Field to Valley': {
             x: "32.0%",
             y: "42.5%",
+            type: "entrance", 
+            access: "entrance",
              isAvailable: function () {
                   return true; }
          },
          'Field to Lake': {
             x: "41.0%",
             y: "65.6%",
+            type: "entrance", 
+            access: "entrance",
              isAvailable: function () {
                   return true; }
          },
