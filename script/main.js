@@ -513,9 +513,9 @@ function clickDungeon(d) {
     regionSelected.onclick = bulkDCSelect();
 
     for (var key in dungeons[dungeonSelect].chestlist) {
-        if ( key.type == "entrance" || key.type == "warp" || key.type == "owl" ) { //Do Nothing
+        if ( dungeons[dungeonSelect].chestlist[key].type == "entrance" || dungeons[dungeonSelect].chestlist[key].type == "warp" || dungeons[dungeonSelect].chestlist[key].type == "owl" ) { //Do Nothing
         }
-        else if (key.type == "cow" && Cowsanity == false) { //Do Nothing
+        else if (dungeons[dungeonSelect].chestlist[key].type == "cow" && Cowsanity == false) { //Do Nothing
         }
         else {
            var s = document.createElement('li');
