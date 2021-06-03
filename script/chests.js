@@ -3168,7 +3168,7 @@ var dungeons = [
          },
          ['MQ GanonDorf']: {
             type: "boss",
-            access: "vanilla",
+            access: "master",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && generalCanGetChest(this.trials) && items.BossCastle && items.Bow && items.Magic && items.Light;
             }
