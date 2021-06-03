@@ -533,7 +533,7 @@ function clickDungeon(d) {
             continue;}
         if (dungeons[dungeonSelect].type == "dungeon" && dungeons[dungeonSelect].chestlist[key].type == "skulltula" && (skulltula == "Off" || skulltula == "Overworld") ) { // Dungeon Skulls
             continue;}
-        if (dungeons[dungeonSelect].chestlist[key].type == "scrub" && scrubs == false) { //Scrubs 
+        if (dungeons[dungeonSelect].chestlist[key].type == "scrub" && scrubs == "Off") { //Scrubs 
             continue;}
         if (dungeons[dungeonSelect].chestlist[key].type == "cow" && Cowsanity == false) { //Cows
             continue;}
