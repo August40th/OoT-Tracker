@@ -5935,14 +5935,14 @@ var dungeons = [
              isAvailable: function () {
                   return true; }
          },
-         //'Field to Lake': {
-           // x: "41.0%",
-            //y: "65.6%",
-            //type: "entrance", 
-            //access: "entrance",
-             //isAvailable: function () {
-               //   return true; }
-         //},
+         'Field to Lake': {
+            x: "41.0%",
+            y: "65.6%",
+            type: "entrance", 
+            access: "entrance",
+             isAvailable: function () {
+                  return true; }
+         },
       },
       isBeatable: function () {
          return this.canGetChest();
@@ -5959,6 +5959,8 @@ var chests = [
       name: "Ocarina of Time",
       x: "54.3%",
       y: "28.0%",
+      type: "freestanding", 
+      access: "outdoor",
       isAvailable: function () {
          if ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.KokiriEmerald && items.GoronRuby && items.ZoraSapphire)
             return "available";
@@ -5969,6 +5971,8 @@ var chests = [
       name: "Grotto West of Castle Gate",
       x: "50.0%",
       y: "28.0%",
+      type: "chest", 
+      access: "grotto",
       isAvailable: function () {
          if ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.MasterSword && items.Hammer) || (items.Bombchu && BombchuLogic)))
             return "available";
@@ -5979,6 +5983,8 @@ var chests = [
       name: "South East Grotto",
       x: "60.0%",
       y: "59.0%",
+      type: "chest", 
+      access: "grotto",
       isAvailable: function () {
          if ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.MasterSword && items.Hammer) || (items.Bombchu && BombchuLogic)))
             return "available";
@@ -5989,6 +5995,8 @@ var chests = [
       name: "Southern Open Grotto",
       x: "44.5%",
       y: "64.0%",
+      type: "chest", 
+      access: "grotto",
       isAvailable: function () {
          if (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0))
             return "available";
@@ -5999,6 +6007,8 @@ var chests = [
       name: "Bomb Grotto Deku Sale 10$",
       x: "42.0%",
       y: "64.0%",
+      type: "NPC", 
+      access: "grotto",
       isAvailable: function () {
          if ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.MasterSword && items.Hammer) || (items.Bombchu && BombchuLogic)))
             return "available";
@@ -6009,6 +6019,8 @@ var chests = [
       name: "Tektite Grotto",
       x: "42.0%",
       y: "33.0%",
+      type: "freestanding", 
+      access: "grotto",
       isAvailable: function () {
          if (((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) &&
             (
@@ -6028,6 +6040,8 @@ var chests = [
       name: "Gold Gauntlets Fairy",
       x: "55.5%",
       y: "13.5%",
+      type: "NPC", 
+      access: "simple",
       isAvailable: function () {
          if ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword && items.Glove >= 3 && items.Ocarina && items.ZeldasLullaby))
             return "available";
@@ -6038,6 +6052,8 @@ var chests = [
       name: "Skulltula, Hint, Cow Milk Grotto",
       x: "36.1%",
       y: "42.0%",
+      type: "skulltula", 
+      access: "grotto",
       isAvailable: function () {
          if ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.Magic && ((items.Dins && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Boomerang) || (((items.Bow && items.Fire) || items.Dins) && items.Hookshot && items.MasterSword && (items.Bombs || items.Hammer || (items.Bombchu && BombchuLogic)))))))
             return "available";
@@ -6048,6 +6064,8 @@ var chests = [
       name: "Skulltula Grotto",
       x: "57.3%",
       y: "26.0%",
+      type: "skulltula", 
+      access: "grotto",
       isAvailable: function () {
          if (((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.Bombs || (items.Bombchu && BombchuLogic)
                ) && items.Boomerang
@@ -6063,6 +6081,8 @@ var chests = [
       name: "Fairy Fountain Grotto",
       x: "44.0%",
       y: "25.0%",
+      type: "grotto", 
+      access: "grotto",
       isAvailable: function () {
          if ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.MasterSword && items.Hammer) || (items.Bombchu && BombchuLogic)))
             return "available";
@@ -6073,6 +6093,8 @@ var chests = [
       name: "Ganon\'s Castle Skulltula",
       x: "52.0%",
       y: "15.0%",
+      type: "skulltula", 
+      access: "outdoor",
       isAvailable: function () {
          if (items.MasterSword)
             return "available";
