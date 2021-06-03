@@ -513,9 +513,9 @@ function clickDungeon(d) {
     regionSelected.onclick = bulkDCSelect();
 
     for (var key in dungeons[dungeonSelect].chestlist) {
-        if ( dungeons[dungeonSelect] <== 12 && dungeons[dungeonSelect].chestlist[key].access == "master" && quest == "Vanila" ) { //Master checks
+        if ( dungeons[dungeonSelect].type == "dungeon" && dungeons[dungeonSelect].chestlist[key].access == "master" && quest == "Vanila" ) { //Master checks
             continue;}
-        if ( dungeons[dungeonSelect] <== 12 && dungeons[dungeonSelect].chestlist[key].access == "vanilla" && quest == "Master" ) { //Master checks
+        if ( dungeons[dungeonSelect].type == "dungeon" && dungeons[dungeonSelect].chestlist[key].access == "vanilla" && quest == "Master" ) { //Master checks
             continue;}
         if ( dungeons[dungeonSelect] == 12 && dungeons[dungeonSelect].chestlist[key].type == "trial" ) { //Master checks
             continue;}
