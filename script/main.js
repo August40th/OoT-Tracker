@@ -1666,7 +1666,7 @@ function populateMapdiv() {
         s.onclick = new Function('clickDungeon(' + k + ')');
         s.onmouseover = new Function('highlightDungeon(' + k + ')');
         s.onmouseout = new Function('unhighlightDungeon(' + k + ')');
-        s.oncontextmenu = new Function('toggleMarkDungeon(' + k + ')')
+        s.oncontextmenu = new Function('toggleMarkDungeon(' + k + ')');
         s.style.left = dungeons[k].x;
         s.style.top = dungeons[k].y;
         s.className = 'mapspan dungeon ' + dungeons[k].canGetChest();
