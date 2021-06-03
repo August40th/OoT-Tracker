@@ -5344,31 +5344,10 @@ var dungeons = [
                return true; }
          },
          ['Guard Fight']: {
-            type: "freestanding", 
+            type: "guard", 
             access: "outdoor",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.Ocarina && items.EponasSong) || items.Hookshot >= 2 || isFortressOpen()) && items.MasterSword && smallkeys == 'Keysanity';
-            }
-         },
-         ['Guard Fight 2']: {
-            type: "freestanding", 
-            access: "outdoor",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.Ocarina && items.EponasSong) || items.Hookshot >= 2 || isFortressOpen()) && items.MasterSword && Rescue1 && smallkeys == 'Keysanity';
-            }
-         },
-         ['Guard Fight 3']: {
-            type: "freestanding", 
-            access: "outdoor",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.Ocarina && items.EponasSong) || items.Hookshot >= 2 || isFortressOpen()) && items.MasterSword && Rescue1 &&  smallkeys == 'Keysanity';
-            }
-         },
-         ['Guard Fight 4']: {
-            type: "freestanding", 
-            access: "outdoor",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.Ocarina && items.EponasSong) || items.Hookshot >= 2 || isFortressOpen()) && items.MasterSword && Rescue1 &&  smallkeys == 'Keysanity';
             }
          },
          'Fortress Skulltula': {
