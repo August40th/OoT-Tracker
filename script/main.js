@@ -517,7 +517,7 @@ function clickDungeon(d) {
             continue;}
         if ( dungeons[dungeonSelect].chestlist[key].access == "door" && dungeons[dungeonSelect].chestlist[key].type == "simple" && IndoorER == "Off" ) { //Simple Doorways
             continue;}
-        if ( dungeons[dungeonSelect].chestlist[key].access == "door" && dungeons[dungeonSelect].chestlist[key].type == "alldoor" && (IndoorER == "Off" || Indoor == "Simple") ) { // Full indoor doorways
+        if ( dungeons[dungeonSelect].chestlist[key].access == "door" && dungeons[dungeonSelect].chestlist[key].type == "alldoor" && IndoorER !== "Full" ) { // Full indoor doorways
             continue;}
         if ( dungeons[dungeonSelect].chestlist[key].access == "door" && dungeons[dungeonSelect].chestlist[key].type == "dungeon" && DungeonER == false ) { // Dungeon doorways
             continue;}
@@ -529,7 +529,13 @@ function clickDungeon(d) {
             continue;}
         if ( dungeons[dungeonSelect].chestlist[key].access == "grotto" && dungeons[dungeonSelect].chestlist[key].type !== "grotto" && GrottoER == true ) { //Grotto checks
             continue;}
-        if (dungeons[dungeonSelect].chestlist[key].type == "cow" && Cowsanity == false) { //Do Nothing
+        if (dungeons[dungeonSelect].type == "overworld" && dungeons[dungeonSelect].chestlist[key].type == "skulltula" && (Skullsanity == "Off" || Skullsanity == "Dungeons") ) { // Overworld Skulls
+            continue;}
+        if (dungeons[dungeonSelect].type == "dungeon" && dungeons[dungeonSelect].chestlist[key].type == "skulltula" && (Skullsanity == "Off" || Skullsanity == "Overworld") ) { // Dungeon Skulls
+            continue;}
+        if (dungeons[dungeonSelect].chestlist[key].type == "scrub" && Scrubsanity == false) { //Scrubs 
+            continue;}
+        if (dungeons[dungeonSelect].chestlist[key].type == "cow" && Cowsanity == false) { //Cows
             continue;}
         var s = document.createElement('li');
         s.innerHTML = key;
