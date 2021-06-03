@@ -3851,7 +3851,7 @@ var dungeons = [
             }
          },
          ['Medigoron']: {
-            type: "NPC", 
+            type: "knife", 
             access: "outdoor",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Glove || items.Bombs || (items.Bombchu && BombchuLogic));
@@ -4298,7 +4298,7 @@ var dungeons = [
             }
          },
          'Bean Salesman': {
-            type: "NPC", 
+            type: "bean", 
             access: "outdoor",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale));
@@ -5685,7 +5685,7 @@ var dungeons = [
                   return true; }
          },
          ['Carpet Salesman']: {
-            type: "NPC", 
+            type: "carpet", 
             access: "outdoor",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword && (((items.EponasSong || isFortressOpen()) && items.HoverBoots) || items.Hookshot >= 2))
