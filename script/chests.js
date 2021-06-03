@@ -5935,14 +5935,14 @@ var dungeons = [
              isAvailable: function () {
                   return true; }
          },
-         'Field to Lake': {
-            x: "41.0%",
-            y: "65.6%",
-            type: "entrance", 
-            access: "entrance",
-             isAvailable: function () {
-                  return true; }
-         },
+         //'Field to Lake': {
+           // x: "41.0%",
+            //y: "65.6%",
+            //type: "entrance", 
+            //access: "entrance",
+             //isAvailable: function () {
+               //   return true; }
+         //},
       },
       isBeatable: function () {
          return this.canGetChest();
