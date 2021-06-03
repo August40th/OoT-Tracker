@@ -1538,7 +1538,7 @@ function updateMap() {
             if(itemlist[item].classList.contains("d-none")) {
                 dNone = true;
             }
-            if ( dungeons[dungeonSelect].chestlist[itemlist[item].innerHTML].isOpened && dungeons[dungeonSelect].chestlist[itemlist[item]].type == "entrance") {
+            if ( dungeons[dungeonSelect].chestlist[itemlist[item].innerHTML].isOpened ) {
                 itemlist[item].className = 'DCopened';
             } else if ( dungeons[dungeonSelect].chestlist[itemlist[item].innerHTML].isAvailable() && itemlist.hasOwnProperty(item) ) {
                 itemlist[item].className = 'DCavailable';
