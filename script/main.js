@@ -628,48 +628,6 @@ function bulkDCSelect() {
 }
 
 function toggleDungeonChest(sender, d, c) {
-    if ( dungeons[d].type == "dungeon" && dungeons[d].chestlist[c].access == "master" && quest == "Vanilla" ) { //Master checks
-                return;}
-            if ( dungeons[d].type == "dungeon" && dungeons[d].chestlist[c].access == "vanilla" && quest == "Master" ) { //Master checks
-                return;}
-            if ( dungeons[d] == dungeons[12] && dungeons[d].chestlist[c].type == "trial" && trialsize == 0 ) { //Castle trials
-                return;}
-            if ( dungeons[d].chestlist[c].access == "entrance" || dungeons[d].chestlist[c].type == "warp" || dungeons[d].chestlist[c].type == "owl" ) { //Do Nothing
-                return;}
-            if ( dungeons[d].chestlist[c].access == "door" && dungeons[d].chestlist[c].type == "simple" && IndoorER == "Off" ) { //Simple Doorways
-                return;}
-            if ( dungeons[d].chestlist[c].access == "door" && dungeons[d].chestlist[c].type == "alldoor" && IndoorER !== "Full" ) { // Full indoor doorways
-                return;}
-            if ( dungeons[d].chestlist[c].access == "door" && dungeons[d].chestlist[c].type == "dungeon" && DungeonER == false ) { // Dungeon doorways
-                return;}
-            if ( dungeons[d].chestlist[c].access == "simple" && IndoorER !== "Off" ) { //simple indoor checks
-                return;}
-            if ( dungeons[d].chestlist[c].access == "alldoor" && IndoorER !== "Full" ) { //Link's House, ToT, and windmill checks
-                return;}
-            if ( dungeons[d].chestlist[c].access == "grotto" && dungeons[d].chestlist[c].type == "grotto" && GrottoER == false ) { //Grotto doorways
-                return;}
-            if ( dungeons[d].chestlist[c].access == "grotto" && dungeons[d].chestlist[c].type !== "grotto" && GrottoER == true ) { //Grotto checks
-                return;}
-            if (dungeons[d].type == "overworld" && dungeons[d].chestlist[c].type == "skulltula" && (skulltula == "Off" || skulltula == "Dungeons") ) { // Overworld Skulls
-                return;}
-            if (dungeons[d].type == "dungeon" && dungeons[d].chestlist[c].type == "skulltula" && (skulltula == "Off" || skulltula == "Overworld") ) { // Dungeon Skulls
-                return;}
-            if (dungeons[d].chestlist[c].type == "scrub" && scrubs == "Off") { //Scrubs 
-                return;}
-            if (dungeons[d].chestlist[c].type == "cow" && Cowsanity == false) { //Cows
-                return;}
-            if ( dungeons[d] == dungeons[20] && dungeons[d].chestlist[c].type == "bean" && BeanShuffle == false ) { //Bean shuffle
-                return;}
-            if ( dungeons[d] == dungeons[17] && dungeons[d].chestlist[c].type == "knife" && Medigoron == false ) { //Medigoron item
-                return;}
-            if ( dungeons[d] == dungeons[31] && dungeons[d].chestlist[c].type == "carpet" && Aladdin == false ) { //Carpet Sale
-                return;}
-            if ( dungeons[d] == dungeons[18] && dungeons[d].chestlist[c].type == "ocarina" && OWERmap == false ) { //Ocarina shuffle no OWER
-                return;}
-            if ( dungeons[d] == dungeons[0] && dungeons[d].chestlist[c].type == "ocarina" && OWERmap == true ) { //OWER Ocarina shuffle
-                return;}
-            if ( dungeons[d] == dungeons[28] && dungeons[d].chestlist[c].type == "guard" && gerudobridge !== "Default" && smallkeys == "Keysanity" ) { //Fortress Guard checks
-                return;}
     dungeons[d].chestlist[c].isOpened = !dungeons[d].chestlist[c].isOpened;
     if (dungeons[d].chestlist[c].isOpened)
         sender.className = 'DCopened';
@@ -1582,7 +1540,7 @@ function updateMap() {
             }
             if ( dungeons[dungeonSelect].chestlist[itemlist[item].innerHTML].isOpened) {
                 itemlist[item].className = 'DCopened';
-            } else if ( dungeons[dungeonSelect].chestlist[itemlist[item].innerHTML].isAvailable()) {
+            } else if ( dungeons[dungeonSelect].chestlist[itemlist[item].innerHTML].isAvailable()) && itemlist.hasOwnProperty(item){
                 itemlist[item].className = 'DCavailable';
             } else {
                 itemlist[item].className = 'DCunavailable';
@@ -1795,7 +1753,7 @@ function populateMapdiv() {
         if (dungeons[dungeonSelect].chestlist[key].isOpened) {
             s.className = 'DCopened';
         }
-        else if ( dungeons[dungeonSelect].chestlist[key].isAvailable()) {
+        else if ( dungeons[dungeonSelect].chestlist[key].isAvailable() ) {
             s.className = 'DCavailable';
         }
         else {
