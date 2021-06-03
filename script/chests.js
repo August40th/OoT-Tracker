@@ -3,7 +3,7 @@ function generalCanGetChest(chestlist) {
    var unopened = 0
    for (var key in chestlist) {
       if ( chestlist[key].type == "entrance" || chestlist[key].type == "warp" || chestlist[key].type == "owl" ) { //Don't count entrances
-         continue;}
+         unopened--;}
       if (chestlist.hasOwnProperty(key)) {
          if (!chestlist[key].isOpened)
             unopened++;
