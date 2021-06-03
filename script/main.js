@@ -1540,7 +1540,7 @@ function updateMap() {
             }
             if ( dungeons[dungeonSelect].chestlist[itemlist[item].innerHTML].isOpened) {
                 itemlist[item].className = 'DCopened';
-            } else if ( dungeons[dungeonSelect].chestlist[itemlist[item].innerHTML].isAvailable()) && itemlist.hasOwnProperty(item){
+            } else if ( dungeons[dungeonSelect].chestlist[itemlist[item].innerHTML].isAvailable() && itemlist.hasOwnProperty(item) ) {
                 itemlist[item].className = 'DCavailable';
             } else {
                 itemlist[item].className = 'DCunavailable';
