@@ -515,6 +515,20 @@ function clickDungeon(d) {
     for (var key in dungeons[dungeonSelect].chestlist) {
         if ( dungeons[dungeonSelect].chestlist[key].type == "entrance" || dungeons[dungeonSelect].chestlist[key].type == "warp" || dungeons[dungeonSelect].chestlist[key].type == "owl" ) { //Do Nothing
             continue;}
+        if ( dungeons[dungeonSelect].chestlist[key].access == "door" && dungeons[dungeonSelect].chestlist[key].type == "simple" && IndoorER == "Off" ) { //Simple Doorways
+            continue;}
+        if ( dungeons[dungeonSelect].chestlist[key].access == "door" && dungeons[dungeonSelect].chestlist[key].type == "alldoor" && (IndoorER == "Off" || Indoor == "Simple") ) { // Full indoor doorways
+            continue;}
+        if ( dungeons[dungeonSelect].chestlist[key].access == "door" && dungeons[dungeonSelect].chestlist[key].type == "dungeon" && DungeonER == false ) { // Dungeon doorways
+            continue;}
+        if ( dungeons[dungeonSelect].chestlist[key].access == "simple" && IndoorER !== "Off" ) { //simple indoor checks
+            continue;}
+        if ( dungeons[dungeonSelect].chestlist[key].access == "alldoor" && IndoorER !== "Full" ) { //Link's House, ToT, and windmill checks
+            continue;}
+        if ( dungeons[dungeonSelect].chestlist[key].access == "grotto" && dungeons[dungeonSelect].chestlist[key].type == "grotto" && GrottoER == false ) { //Grotto doorways
+            continue;}
+        if ( dungeons[dungeonSelect].chestlist[key].access == "grotto" && dungeons[dungeonSelect].chestlist[key].type !== "grotto" && GrottoER == true ) { //Grotto checks
+            continue;}
         if (dungeons[dungeonSelect].chestlist[key].type == "cow" && Cowsanity == false) { //Do Nothing
             continue;}
         var s = document.createElement('li');
