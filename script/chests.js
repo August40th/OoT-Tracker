@@ -273,7 +273,7 @@ var dungeons = [
             isAvailable: function () {
                return OpenDeku == 0 || (items.KokiriSword&& items.DekuShield); }
          },
-         '2nd Floor Chest': {
+         'MQ 2nd Floor Chest': {
             type: "chest",
             access: "master",
             isAvailable: function () {
