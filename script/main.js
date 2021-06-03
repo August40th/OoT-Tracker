@@ -1472,7 +1472,7 @@ function updateMap() {
                 continue;}
             if ( dungeons[k] == dungeons[12] && dungeons[k].chestlist[key].type == "trial" && trialsize == 0 ) { //Castle trials
                 continue;}
-            if ( dungeons[k].chestlist[key].type == "entrance" || dungeons[k].chestlist[key].type == "warp" || dungeons[k].chestlist[key].type == "owl" ) { //Do Nothing
+            if ( dungeons[k].chestlist[key].type == undefined || dungeons[k].chestlist[key].type == "entrance" || dungeons[k].chestlist[key].type == "warp" || dungeons[k].chestlist[key].type == "owl" ) { //Do Nothing
                 continue;}
             if ( dungeons[k].chestlist[key].access == "door" && dungeons[k].chestlist[key].type == "simple" && IndoorER == "Off" ) { //Simple Doorways
                 continue;}
