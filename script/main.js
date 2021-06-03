@@ -513,11 +513,11 @@ function clickDungeon(d) {
     regionSelected.onclick = bulkDCSelect();
 
     for (var key in dungeons[dungeonSelect].chestlist) {
-        if ( dungeons[dungeonSelect].type == "dungeon" && dungeons[dungeonSelect].chestlist[key].access == "master" && quest == "Vanila" ) { //Master checks
+        if ( dungeons[dungeonSelect].type == "dungeon" && dungeons[dungeonSelect].chestlist[key].access == "master" && quest == "Vanilla" ) { //Master checks
             continue;}
         if ( dungeons[dungeonSelect].type == "dungeon" && dungeons[dungeonSelect].chestlist[key].access == "vanilla" && quest == "Master" ) { //Master checks
             continue;}
-        if ( dungeons[dungeonSelect] == 12 && dungeons[dungeonSelect].chestlist[key].type == "trial" ) { //Master checks
+        if ( dungeons[dungeonSelect] === 12 && dungeons[dungeonSelect].chestlist[key].type == "trial" && trialsize === 0 ) { //Master checks
             continue;}
         if ( dungeons[dungeonSelect].chestlist[key].type == "entrance" || dungeons[dungeonSelect].chestlist[key].type == "warp" || dungeons[dungeonSelect].chestlist[key].type == "owl" ) { //Do Nothing
             continue;}
