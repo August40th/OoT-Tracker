@@ -1533,6 +1533,11 @@ function updateMap() {
     document.getElementById('submaparea').className = 'DC' + dungeons[dungeonSelect].isBeatable();
     var itemlist = document.getElementById('submaplist').children;
     for (var item in itemlist) {
+        if (itemlist.hasOwnProperty(item)) {
+         let dNone = false;
+         if(itemlist[item].classList.contains("d-none")) {
+            dNone = true;
+         }
             if ( dungeons[dungeonSelect].type == "dungeon" && dungeons[dungeonSelect].chestlist[key].access == "master" && quest == "Vanilla" ) { //Master checks
                 continue;}
             if ( dungeons[dungeonSelect].type == "dungeon" && dungeons[dungeonSelect].chestlist[key].access == "vanilla" && quest == "Master" ) { //Master checks
@@ -1583,6 +1588,9 @@ function updateMap() {
                 itemlist[item].className = 'DCavailable';
             } else {
                 itemlist[item].className = 'DCunavailable';
+            }
+            if (dNone) {
+            itemlist[item].classList.add("d-none");
             }
         }
     }
