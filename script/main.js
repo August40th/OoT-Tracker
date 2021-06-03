@@ -1538,6 +1538,48 @@ function updateMap() {
          if(itemlist[item].classList.contains("d-none")) {
             dNone = true;
          }
+            if ( dungeons[dungeonSelect].type == "dungeon" && dungeons[dungeonSelect].chestlist[key].access == "master" && quest == "Vanilla" ) { //Master checks
+                continue;}
+            if ( dungeons[dungeonSelect].type == "dungeon" && dungeons[dungeonSelect].chestlist[key].access == "vanilla" && quest == "Master" ) { //Master checks
+                continue;}
+            if ( dungeons[dungeonSelect] == dungeons[12] && dungeons[dungeonSelect].chestlist[key].type == "trial" && trialsize == 0 ) { //Castle trials
+                continue;}
+            if ( dungeons[dungeonSelect].chestlist[key].type == "entrance" || dungeons[dungeonSelect].chestlist[key].type == "warp" || dungeons[dungeonSelect].chestlist[key].type == "owl" ) { //Do Nothing
+                continue;}
+            if ( dungeons[dungeonSelect].chestlist[key].access == "door" && dungeons[dungeonSelect].chestlist[key].type == "simple" && IndoorER == "Off" ) { //Simple Doorways
+                continue;}
+            if ( dungeons[dungeonSelect].chestlist[key].access == "door" && dungeons[dungeonSelect].chestlist[key].type == "alldoor" && IndoorER !== "Full" ) { // Full indoor doorways
+                continue;}
+            if ( dungeons[dungeonSelect].chestlist[key].access == "door" && dungeons[dungeonSelect].chestlist[key].type == "dungeon" && DungeonER == false ) { // Dungeon doorways
+                continue;}
+            if ( dungeons[dungeonSelect].chestlist[key].access == "simple" && IndoorER !== "Off" ) { //simple indoor checks
+                continue;}
+            if ( dungeons[dungeonSelect].chestlist[key].access == "alldoor" && IndoorER !== "Full" ) { //Link's House, ToT, and windmill checks
+                continue;}
+            if ( dungeons[dungeonSelect].chestlist[key].access == "grotto" && dungeons[dungeonSelect].chestlist[key].type == "grotto" && GrottoER == false ) { //Grotto doorways
+                continue;}
+            if ( dungeons[dungeonSelect].chestlist[key].access == "grotto" && dungeons[dungeonSelect].chestlist[key].type !== "grotto" && GrottoER == true ) { //Grotto checks
+                continue;}
+            if (dungeons[dungeonSelect].type == "overworld" && dungeons[dungeonSelect].chestlist[key].type == "skulltula" && (skulltula == "Off" || skulltula == "Dungeons") ) { // Overworld Skulls
+                continue;}
+            if (dungeons[dungeonSelect].type == "dungeon" && dungeons[dungeonSelect].chestlist[key].type == "skulltula" && (skulltula == "Off" || skulltula == "Overworld") ) { // Dungeon Skulls
+                continue;}
+            if (dungeons[dungeonSelect].chestlist[key].type == "scrub" && scrubs == "Off") { //Scrubs 
+                continue;}
+            if (dungeons[dungeonSelect].chestlist[key].type == "cow" && Cowsanity == false) { //Cows
+                continue;}
+            if ( dungeons[dungeonSelect] == dungeons[20] && dungeons[dungeonSelect].chestlist[key].type == "bean" && BeanShuffle == false ) { //Bean shuffle
+                continue;}
+            if ( dungeons[dungeonSelect] == dungeons[17] && dungeons[dungeonSelect].chestlist[key].type == "knife" && Medigoron == false ) { //Medigoron item
+                continue;}
+            if ( dungeons[dungeonSelect] == dungeons[31] && dungeons[dungeonSelect].chestlist[key].type == "carpet" && Aladdin == false ) { //Carpet Sale
+                continue;}
+            if ( dungeons[dungeonSelect] == dungeons[18] && dungeons[dungeonSelect].chestlist[key].type == "ocarina" && OWERmap == false ) { //Ocarina shuffle no OWER
+                continue;}
+            if ( dungeons[dungeonSelect] == dungeons[0] && dungeons[dungeonSelect].chestlist[key].type == "ocarina" && OWERmap == true ) { //OWER Ocarina shuffle
+                continue;}
+            if ( dungeons[dungeonSelect] == dungeons[28] && dungeons[dungeonSelect].chestlist[key].type == "guard" && gerudobridge !== "Default" && smallkeys == "Keysanity" ) { //Fortress Guard checks
+                continue;}
             if ( dungeons[dungeonSelect].chestlist[itemlist[item].innerHTML].isOpened) {
                 itemlist[item].className = 'DCopened';
             } else if ( dungeons[dungeonSelect].chestlist[itemlist[item].innerHTML].isAvailable()) {
