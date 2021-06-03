@@ -1538,8 +1538,6 @@ function updateMap() {
          if(itemlist[item].classList.contains("d-none")) {
             dNone = true;
          }
-            if ( dungeons[k].chestlist[key].type == undefined || if ( dungeons[k] == undefined) {
-                }
             if ( dungeons[dungeonSelect].type == "dungeon" && dungeons[dungeonSelect].chestlist[key].access == "master" && quest == "Vanilla" ) { //Master checks
                 continue;}
             if ( dungeons[dungeonSelect].type == "dungeon" && dungeons[dungeonSelect].chestlist[key].access == "vanilla" && quest == "Master" ) { //Master checks
