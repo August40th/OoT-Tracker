@@ -634,29 +634,29 @@ function toggleDungeonChest(sender, d, c) {
                 return;}
             if ( dungeons[d] == dungeons[12] && dungeons[d].chestlist[c].type == "trial" && trialsize == 0 ) { //Castle trials
                 return;}
-            if ( dungeons[d].chestlist[key].access == "entrance" || dungeons[d].chestlist[c].type == "warp" || dungeons[d].chestlist[c].type == "owl" ) { //Do Nothing
+            if ( dungeons[d].chestlist[c].access == "entrance" || dungeons[d].chestlist[c].type == "warp" || dungeons[d].chestlist[c].type == "owl" ) { //Do Nothing
                 return;}
-            if ( dungeons[d].chestlist[key].access == "door" && dungeons[d].chestlist[c].type == "simple" && IndoorER == "Off" ) { //Simple Doorways
+            if ( dungeons[d].chestlist[c].access == "door" && dungeons[d].chestlist[c].type == "simple" && IndoorER == "Off" ) { //Simple Doorways
                 return;}
-            if ( dungeons[d].chestlist[key].access == "door" && dungeons[d].chestlist[c].type == "alldoor" && IndoorER !== "Full" ) { // Full indoor doorways
+            if ( dungeons[d].chestlist[c].access == "door" && dungeons[d].chestlist[c].type == "alldoor" && IndoorER !== "Full" ) { // Full indoor doorways
                 return;}
-            if ( dungeons[d].chestlist[key].access == "door" && dungeons[d].chestlist[c].type == "dungeon" && DungeonER == false ) { // Dungeon doorways
+            if ( dungeons[d].chestlist[c].access == "door" && dungeons[d].chestlist[c].type == "dungeon" && DungeonER == false ) { // Dungeon doorways
                 return;}
-            if ( dungeons[d].chestlist[key].access == "simple" && IndoorER !== "Off" ) { //simple indoor checks
+            if ( dungeons[d].chestlist[c].access == "simple" && IndoorER !== "Off" ) { //simple indoor checks
                 return;}
-            if ( dungeons[d].chestlist[key].access == "alldoor" && IndoorER !== "Full" ) { //Link's House, ToT, and windmill checks
+            if ( dungeons[d].chestlist[c].access == "alldoor" && IndoorER !== "Full" ) { //Link's House, ToT, and windmill checks
                 return;}
-            if ( dungeons[d].chestlist[key].access == "grotto" && dungeons[d].chestlist[c].type == "grotto" && GrottoER == false ) { //Grotto doorways
+            if ( dungeons[d].chestlist[c].access == "grotto" && dungeons[d].chestlist[c].type == "grotto" && GrottoER == false ) { //Grotto doorways
                 return;}
-            if ( dungeons[d].chestlist[key].access == "grotto" && dungeons[d].chestlist[c].type !== "grotto" && GrottoER == true ) { //Grotto checks
+            if ( dungeons[d].chestlist[c].access == "grotto" && dungeons[d].chestlist[c].type !== "grotto" && GrottoER == true ) { //Grotto checks
                 return;}
             if (dungeons[d].type == "overworld" && dungeons[d].chestlist[c].type == "skulltula" && (skulltula == "Off" || skulltula == "Dungeons") ) { // Overworld Skulls
                 return;}
             if (dungeons[d].type == "dungeon" && dungeons[d].chestlist[c].type == "skulltula" && (skulltula == "Off" || skulltula == "Overworld") ) { // Dungeon Skulls
                 return;}
-            if (dungeons[d].chestlist[key].type == "scrub" && scrubs == "Off") { //Scrubs 
+            if (dungeons[d].chestlist[c].type == "scrub" && scrubs == "Off") { //Scrubs 
                 return;}
-            if (dungeons[d].chestlist[key].type == "cow" && Cowsanity == false) { //Cows
+            if (dungeons[d].chestlist[c].type == "cow" && Cowsanity == false) { //Cows
                 return;}
             if ( dungeons[d] == dungeons[20] && dungeons[d].chestlist[c].type == "bean" && BeanShuffle == false ) { //Bean shuffle
                 return;}
