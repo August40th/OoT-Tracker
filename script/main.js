@@ -517,7 +517,7 @@ function clickDungeon(d) {
             continue;}
         if ( dungeons[dungeonSelect].type == "dungeon" && dungeons[dungeonSelect].chestlist[key].access == "vanilla" && quest == "Master" ) { //Master checks
             continue;}
-        if ( dungeons[dungeonSelect] === 12 && dungeons[dungeonSelect].chestlist[key].type == "trial" && trialsize === 0 ) { //Master checks
+        if ( dungeons[dungeonSelect] == dungeons[12] && dungeons[dungeonSelect].chestlist[key].type == "trial" && trialsize === 0 ) { //Master checks
             continue;}
         if ( dungeons[dungeonSelect].chestlist[key].type == "entrance" || dungeons[dungeonSelect].chestlist[key].type == "warp" || dungeons[dungeonSelect].chestlist[key].type == "owl" ) { //Do Nothing
             continue;}
@@ -542,6 +542,18 @@ function clickDungeon(d) {
         if (dungeons[dungeonSelect].chestlist[key].type == "scrub" && scrubs == "Off") { //Scrubs 
             continue;}
         if (dungeons[dungeonSelect].chestlist[key].type == "cow" && Cowsanity == false) { //Cows
+            continue;}
+        if ( dungeons[dungeonSelect] == dungeons[20] && dungeons[dungeonSelect].chestlist[key].type == "bean" && BeanShuffle == false ) { //Bean shuffle
+            continue;}
+        if ( dungeons[dungeonSelect] == dungeons[17] && dungeons[dungeonSelect].chestlist[key].type == "knife" && Medigoron == false ) { //Medigoron item
+            continue;}
+        if ( dungeons[dungeonSelect] == dungeons[31] && dungeons[dungeonSelect].chestlist[key].type == "carpet" && Aladdin == false ) { //Carpet Sale
+            continue;}
+        if ( dungeons[dungeonSelect] == dungeons[18] && dungeons[dungeonSelect].chestlist[key].type == "ocarina" && OWERmap == false ) { //Ocarina shuffle no OWER
+            continue;}
+        if ( dungeons[dungeonSelect] == dungeons[0] && dungeons[dungeonSelect].chestlist[key].type == "ocarina" && OWERmap == false ) { //OWER Ocarina shuffle
+            continue;}
+        if ( dungeons[dungeonSelect] == dungeons[28] && dungeons[dungeonSelect].chestlist[key].type == "guard" && gerudobridge !== "Default" && smallkeys == "Keysanity" ) { //Fortress Guard checks
             continue;}
         var s = document.createElement('li');
         s.innerHTML = key;
