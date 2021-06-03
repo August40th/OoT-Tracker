@@ -146,6 +146,8 @@ var dungeons = [
          'Forest to Woods': {
           x: "78.9%",
           y: "56.0%",
+          type: "entrance",
+          access: "entrance",
           isAvailable: function () {
                return true; }
        },
