@@ -3983,6 +3983,12 @@ var dungeons = [
              isAvailable: function () {
                   return true; }
          },
+         'Fairy Ocarina': {
+            type: "ocarina",
+            access: "OWER",
+            isAvailable: function () {
+               return true; }
+         },
          'Bridge to Field': {
             x: "69.0%",
             y: "48.0%",
