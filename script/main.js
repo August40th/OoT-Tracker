@@ -513,6 +513,12 @@ function clickDungeon(d) {
     regionSelected.onclick = bulkDCSelect();
 
     for (var key in dungeons[dungeonSelect].chestlist) {
+        if ( dungeons[dungeonSelect] <= 12 && dungeons[dungeonSelect].chestlist[key].access == "master" && quest == "Vanila" ) { //Master checks
+            continue;}
+        if ( dungeons[dungeonSelect] <= 12 && dungeons[dungeonSelect].chestlist[key].access == "vanilla" && quest == "Master" ) { //Master checks
+            continue;}
+        if ( dungeons[dungeonSelect] == 12 && dungeons[dungeonSelect].chestlist[key].type == "trial" && quest == "Vanila" ) { //Master checks
+            continue;}
         if ( dungeons[dungeonSelect].chestlist[key].type == "entrance" || dungeons[dungeonSelect].chestlist[key].type == "warp" || dungeons[dungeonSelect].chestlist[key].type == "owl" ) { //Do Nothing
             continue;}
         if ( dungeons[dungeonSelect].chestlist[key].access == "door" && dungeons[dungeonSelect].chestlist[key].type == "simple" && IndoorER == "Off" ) { //Simple Doorways
