@@ -255,7 +255,7 @@ var dungeons = [
             isAvailable: function () {
                return OpenDeku == 0 || (items.KokiriSword&& items.DekuShield); }
          },
-         'Lobby Chest': {
+         'MQ Lobby Chest': {
             type: "chest",
             access: "master",
             isAvailable: function () {
