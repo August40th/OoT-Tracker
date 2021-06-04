@@ -1509,12 +1509,12 @@ function updateMap() {
                 continue;}
             if ( dungeons[k] == dungeons[31] && dungeons[k].chestlist[key].type == "carpet" && Aladdin == false ) { //Carpet Sale
                 continue;}
-            if ( dungeons[dungeonSelect].chestlist[key].type == "ocarina" && OcarinaShuffle == false && 
-            (dungeons[dungeonSelect] == dungeons[32] ||
-            (dungeons[dungeonSelect] == dungeons[18] && OWERmap == false) ||
-            (dungeons[dungeonSelect] == dungeons[0] && OWERmap == true)
-            )
-           ) { //Ocarina shuffle for field
+            if ( dungeons[k].chestlist[key].type == "ocarina" && OcarinaShuffle == false && 
+                (dungeons[k] == dungeons[32] ||
+                (dungeons[k] == dungeons[18] && OWERmap == false) ||
+                (dungeons[k] == dungeons[0] && OWERmap == true)
+                )
+               ) { //Ocarina shuffle for field
             continue;}
             if ( dungeons[k] == dungeons[28] && dungeons[k].chestlist[key].type == "guard" && gerudobridge !== "Default" && smallkeys == "Keysanity" ) { //Fortress Guard checks
                 continue;}
