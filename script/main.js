@@ -1677,7 +1677,7 @@ function populateMapdiv() {
                 continue;}
             if ( dungeons[k] == dungeons[31] && dungeons[k].chestlist[key].type == "carpet" && Aladdin == false ) { //Carpet Sale
                 continue;}
-            if ( dungeons[dungeonSelect] == dungeons[33] && dungeons[dungeonSelect].chestlist[key].type == "ocarina" && OcarinaShuffle == false ) { //Ocarina shuffle for field
+            if ( dungeons[k] == dungeons[33] && dungeons[k].chestlist[key].type == "ocarina" && OcarinaShuffle == false ) { //Ocarina shuffle for field
                 continue;}
             if ( dungeons[k] == dungeons[18] && dungeons[k].chestlist[key].type == "ocarina" && OWERmap == false && OcarinaShuffle == false) { //Ocarina shuffle no OWER
                 continue;}
