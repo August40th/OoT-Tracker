@@ -18,7 +18,7 @@ function generalCanGetChest(chestlist) {
             continue;}
         if ( chestlist[key].access == "simple" && IndoorER !== "Off" ) { //simple indoor checks
             continue;}
-        if ( chestlist[key].access == "alldoor" && IndoorER !== "Full" ) { //Link's House, ToT, and windmill checks
+        if ( chestlist[key].access == "alldoor" && IndoorER == "Full" ) { //Link's House, ToT, and windmill checks
             continue;}
         if ( chestlist[key].access == "grotto" && chestlist[key].type == "grotto" && GrottoER == false ) { //Grotto doorways
             continue;}
