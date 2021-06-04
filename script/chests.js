@@ -58,7 +58,7 @@ function generalCanGetChest(chestlist) {
    if (unopened == 0)
       return "opened"
    if (canGet == unopened)
-      return "available";
+      return "available"
    if (canGet == 0)
       return "unavailable"
    return "possible"
