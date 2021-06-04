@@ -30,7 +30,7 @@ function generalCanGetChest(chestlist) {
             continue;}
         if (chestlist[key].type == "scrub" && scrubs == "Off") { //Scrubs 
             continue;}
-        if (chestlist[key].type == "shop" && shopsoze == 0) { //Shops 
+        if (chestlist[key].type == "shop" && shopsize == 0) { //Shops 
             continue;}
         if (chestlist[key].type == "cow" && Cowsanity == false) { //Cows
             continue;}
