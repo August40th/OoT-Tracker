@@ -541,6 +541,8 @@ function clickDungeon(d) {
             continue;}
         if (dungeons[dungeonSelect].chestlist[key].type == "scrub" && scrubs == "Off") { //Scrubs 
             continue;}
+        if (dungeons[dungeonSelect].chestlist[key].type == "shop" && shopsize == 0) { //Shops 
+            continue;}
         if (dungeons[dungeonSelect].chestlist[key].type == "cow" && Cowsanity == false) { //Cows
             continue;}
         if ( dungeons[dungeonSelect] == dungeons[20] && dungeons[dungeonSelect].chestlist[key].type == "bean" && BeanShuffle == false ) { //Bean shuffle
@@ -1494,6 +1496,8 @@ function updateMap() {
                 continue;}
             if (dungeons[k].chestlist[key].type == "scrub" && scrubs == "Off") { //Scrubs 
                 continue;}
+            if (dungeons[k].chestlist[key].type == "shop" && shopsize == 0) { //Shops 
+                continue;}
             if (dungeons[k].chestlist[key].type == "cow" && Cowsanity == false) { //Cows
                 continue;}
             if ( dungeons[k] == dungeons[20] && dungeons[k].chestlist[key].type == "bean" && BeanShuffle == false ) { //Bean shuffle
@@ -1659,6 +1663,8 @@ function populateMapdiv() {
                 continue;}
             if (dungeons[k].chestlist[key].type == "scrub" && scrubs == "Off") { //Scrubs 
                 continue;}
+            if (dungeons[k].chestlist[key].type == "shop" && shopsize == 0) { //Shops 
+            continue;}
             if (dungeons[k].chestlist[key].type == "cow" && Cowsanity == false) { //Cows
                 continue;}
             if ( dungeons[k] == dungeons[20] && dungeons[k].chestlist[key].type == "bean" && BeanShuffle == false ) { //Bean shuffle
@@ -1732,6 +1738,8 @@ function populateMapdiv() {
         if (dungeons[dungeonSelect].type == "dungeon" && dungeons[dungeonSelect].chestlist[key].type == "skulltula" && (skulltula == "Off" || skulltula == "Overworld") ) { // Dungeon Skulls
             continue;}
         if (dungeons[dungeonSelect].chestlist[key].type == "scrub" && scrubs == "Off") { //Scrubs 
+            continue;}
+        if (dungeons[dungeonSelect].chestlist[key].type == "shop" && shopsize == 0) { //Shops 
             continue;}
         if (dungeons[dungeonSelect].chestlist[key].type == "cow" && Cowsanity == false) { //Cows
             continue;}
