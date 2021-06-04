@@ -40,7 +40,7 @@ function generalCanGetChest(chestlist) {
             continue;}
         if ( chestlist[key].type == "carpet" && Aladdin == false ) { //Carpet Sale
             continue;}
-        if ( chestlist[key].access == "outdoor" && chestlist[key].type == "ocarina" && OcarinaShuffle == false ) { //Ocarina shuffle in field
+        if ( chestlist[key].type == "ocarina" && OcarinaShuffle == false ) { //Ocarina shuffle in field
             continue;}
         if ( chestlist[key].access == "OWER" && chestlist[key].type == "ocarina" && OWERmap == false && OcarinaShuffle == false) { //Ocarina shuffle no OWER
             continue;}
