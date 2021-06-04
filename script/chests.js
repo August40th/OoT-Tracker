@@ -2,12 +2,50 @@ function generalCanGetChest(chestlist) {
    var canGet = 0;
    var unopened = 0
    for (var key in chestlist) {
-      if ( chestlist[key].type == "entrance" || chestlist[key].type == "warp" || chestlist[key].type == "owl" ) { //Don't count entrances
-         continue; }
-      if ( chestlist[key].access == "master" && quest == "Vanilla" ) {
-         continue; }
-      if ( chestlist[key] == undefined ) {
-         continue; }
+      if ( chestlist[key].access == "master" && quest == "Vanilla" ) { //Master checks
+            continue;}
+        if ( chestlist[key].access == "vanilla" && quest == "Master" ) { //Master checks
+            continue;}
+        if ( chestlist[key].type == "trial" && trialsize == 0 ) { //Castle trials
+            continue;}
+        if ( chestlist[key].type == "entrance" || chestlist[key].type == "warp" || chestlist[key].type == "owl" ) { //Do Nothing
+            continue;}
+        if ( chestlist[key].access == "door" && chestlist[key].type == "simple" && IndoorER == "Off" ) { //Simple Doorways
+            continue;}
+        if ( chestlist[key].access == "door" && chestlist[key].type == "alldoor" && IndoorER !== "Full" ) { // Full indoor doorways
+            continue;}
+        if ( .chestlist[key].access == "door" && chestlist[key].type == "dungeon" && DungeonER == false ) { // Dungeon doorways
+            continue;}
+        if ( chestlist[key].access == "simple" && IndoorER !== "Off" ) { //simple indoor checks
+            continue;}
+        if ( chestlist[key].access == "alldoor" && IndoorER !== "Full" ) { //Link's House, ToT, and windmill checks
+            continue;}
+        if ( chestlist[key].access == "grotto" && chestlist[key].type == "grotto" && GrottoER == false ) { //Grotto doorways
+            continue;}
+        if ( chestlist[key].access == "grotto" && chestlist[key].type !== "grotto" && GrottoER == true ) { //Grotto checks
+            continue;}
+        if ( (chestlist[key].access !== "master" || chestlist[key].access !== "vanilla") && chestlist[key].type == "skulltula" && (skulltula == "Off" || skulltula == "Dungeons") ) { // Overworld Skulls
+            continue;}
+        if ( (chestlist[key].access !== "master" || chestlist[key].access !== "vanilla") && chestlist[key].type == "skulltula" && (skulltula == "Off" || skulltula == "Overworld") ) { // Dungeon Skulls
+            continue;}
+        if (chestlist[key].type == "scrub" && scrubs == "Off") { //Scrubs 
+            continue;}
+        if (chestlist[key].type == "shop" && shopsoze == 0) { //Shops 
+            continue;}
+        if (chestlist[key].type == "cow" && Cowsanity == false) { //Cows
+            continue;}
+        if ( chestlist[key].type == "bean" && BeanShuffle == false ) { //Bean shuffle
+            continue;}
+        if ( chestlist[key].type == "knife" && Medigoron == false ) { //Medigoron item
+            continue;}
+        if ( chestlist[key].type == "carpet" && Aladdin == false ) { //Carpet Sale
+            continue;}
+        if ( chestlist[key].access !== "outdoor" && chestlist[key].type == "ocarina" && OWERmap == false ) { //Ocarina shuffle no OWER
+            continue;}
+        if ( chestlist[key].access !== "outdoor" && chestlist[key].type == "ocarina" && OWERmap == true ) { //OWER Ocarina shuffle
+            continue;}
+        if ( chestlist[key].type == "guard" && gerudobridge !== "Default" && smallkeys == "Keysanity" ) { //Fortress Guard checks
+            continue;}
       if (chestlist.hasOwnProperty(key)) {
          if (!chestlist[key].isOpened)
             unopened++;
