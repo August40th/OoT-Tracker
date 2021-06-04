@@ -14,7 +14,7 @@ function generalCanGetChest(chestlist) {
             continue;}
         if ( chestlist[key].access == "door" && chestlist[key].type == "alldoor" && IndoorER !== "Full" ) { // Full indoor doorways
             continue;}
-        if ( .chestlist[key].access == "door" && chestlist[key].type == "dungeon" && DungeonER == false ) { // Dungeon doorways
+        if ( chestlist[key].access == "door" && chestlist[key].type == "dungeon" && DungeonER == false ) { // Dungeon doorways
             continue;}
         if ( chestlist[key].access == "simple" && IndoorER !== "Off" ) { //simple indoor checks
             continue;}
