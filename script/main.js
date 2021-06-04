@@ -551,9 +551,11 @@ function clickDungeon(d) {
             continue;}
         if ( dungeons[dungeonSelect] == dungeons[31] && dungeons[dungeonSelect].chestlist[key].type == "carpet" && Aladdin == false ) { //Carpet Sale
             continue;}
-        if ( dungeons[dungeonSelect] == dungeons[18] && dungeons[dungeonSelect].chestlist[key].type == "ocarina" && OWERmap == false ) { //Ocarina shuffle no OWER
+        if ( dungeons[dungeonSelect] == dungeons[33] && dungeons[dungeonSelect].chestlist[key].type == "ocarina" && OcarinaShuffle == false ) { //Ocarina shuffle for field
             continue;}
-        if ( dungeons[dungeonSelect] == dungeons[0] && dungeons[dungeonSelect].chestlist[key].type == "ocarina" && OWERmap == true ) { //OWER Ocarina shuffle
+        if ( dungeons[dungeonSelect] == dungeons[18] && dungeons[dungeonSelect].chestlist[key].type == "ocarina" && OWERmap == false && OcarinaShuffle == false ) { //Ocarina shuffle no OWER
+            continue;}
+        if ( dungeons[dungeonSelect] == dungeons[0] && dungeons[dungeonSelect].chestlist[key].type == "ocarina" && OWERmap == true && OcarinaShuffle == false) { //OWER Ocarina shuffle
             continue;}
         if ( dungeons[dungeonSelect] == dungeons[28] && dungeons[dungeonSelect].chestlist[key].type == "guard" && gerudobridge !== "Default" && smallkeys == "Keysanity" ) { //Fortress Guard checks
             continue;}
@@ -1506,6 +1508,8 @@ function updateMap() {
                 continue;}
             if ( dungeons[k] == dungeons[31] && dungeons[k].chestlist[key].type == "carpet" && Aladdin == false ) { //Carpet Sale
                 continue;}
+            if ( dungeons[k] == dungeons[33] && dungeons[k].chestlist[key].type == "ocarina" && OcarinaShuffle == false ) { //Ocarina shuffle for field
+                continue;}
             if ( dungeons[k] == dungeons[18] && dungeons[k].chestlist[key].type == "ocarina" && OWERmap == false ) { //Ocarina shuffle no OWER
                 continue;}
             if ( dungeons[k] == dungeons[0] && dungeons[k].chestlist[key].type == "ocarina" && OWERmap == true ) { //OWER Ocarina shuffle
@@ -1672,6 +1676,8 @@ function populateMapdiv() {
             if ( dungeons[k] == dungeons[17] && dungeons[k].chestlist[key].type == "knife" && Medigoron == false ) { //Medigoron item
                 continue;}
             if ( dungeons[k] == dungeons[31] && dungeons[k].chestlist[key].type == "carpet" && Aladdin == false ) { //Carpet Sale
+                continue;}
+            if ( dungeons[dungeonSelect] == dungeons[33] && dungeons[dungeonSelect].chestlist[key].type == "ocarina" && OcarinaShuffle == false ) { //Ocarina shuffle for field
                 continue;}
             if ( dungeons[k] == dungeons[18] && dungeons[k].chestlist[key].type == "ocarina" && OWERmap == false ) { //Ocarina shuffle no OWER
                 continue;}
