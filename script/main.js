@@ -134,7 +134,7 @@ var cookieDefault = {
     medallions: defaultMedallions,
     items: defaultItemGrid,
     obtainedItems: items,
-//    chests: serializeChests(),
+    chests: serializeChests(),
     dungeonChests: serializeDungeonChests(),
 }
 
