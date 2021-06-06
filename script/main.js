@@ -613,22 +613,12 @@ function bulkDCSelect() {
       selector = '#submaplist li';
       opening = true;
    }
-   if (quest === "Mixed") {
-      const filter = document.getElementById("submaparea").getAttribute("data-filter");
-      if (filter === 'vanilla') {
-         selector = selector + ':not([data-type^=MQ])';
-      }  else if (filter === 'master') {
-         selector = selector + '[data-type^=MQ]';
-      }
-   }
+   
    document.querySelectorAll(selector).forEach
    (function (dungeon) {
        for (let key in dungeons[dungeonSelect].chestlist) {
            dungeons[dungeonSelect].chestlist[dungeon.innerHTML].isOpened = opening; 
-       }
-   }
-   )
-    ;
+       }   }   )    ;
     updateMap();
 }
 
