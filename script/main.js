@@ -629,7 +629,7 @@ function bulkDCSelect() {
          }
       }
    });
-    
+   drawDungeonList();
    updateMap();
 }
 
