@@ -559,6 +559,8 @@ function clickDungeon(d) {
             continue;}
         if ( dungeons[dungeonSelect] == dungeons[28] && dungeons[dungeonSelect].chestlist[key].type == "guard" && gerudobridge !== "Default" && smallkeys == "Keysanity" ) { //Fortress Guard checks
             continue;}
+        if (dungeons[dungeonSelect].chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
+            continue;}
         var s = document.createElement('li');
         s.innerHTML = key;
         if (dungeons[dungeonSelect].chestlist[key].isOpened) {            
@@ -1516,6 +1518,8 @@ function updateMap() {
                 continue;}
             if ( dungeons[k] == dungeons[28] && dungeons[k].chestlist[key].type == "guard" && gerudobridge !== "Default" && smallkeys == "Keysanity" ) { //Fortress Guard checks
                 continue;}
+            if (dungeons[k].chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
+                continue;}
             if (dungeons[k].chestlist.hasOwnProperty(key)) {
                 if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable()) {
                     DCcount++;
@@ -1684,6 +1688,8 @@ function populateMapdiv() {
             if ( dungeons[k].chestlist[key].type == "ocarina" && dungeons[k] == dungeons[0] && ((OWERmap == true && OcarinaShuffle == true) || OcarinaShuffle == false) ) { //Ocarina shuffle for no OWER
                 continue;}
             if ( dungeons[k] == dungeons[28] && dungeons[k].chestlist[key].type == "guard" && gerudobridge !== "Default" && smallkeys == "Keysanity" ) { //Fortress Guard checks
+                continue;}
+            if (dungeons[k].chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
                 continue;}
             if (dungeons[k].chestlist.hasOwnProperty(key)) {
                 if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable()) {
