@@ -44,7 +44,7 @@ function generalCanGetChest(chestlist) {
             continue;}
         if ( chestlist[key].access == "OWER" && chestlist[key].type == "ocarina" && OWERmap == false && OcarinaShuffle == false) { //Ocarina shuffle no OWER
             continue;}
-        if ( chestlist[key].access == "entrance" && chestlist[key].type == "ocarina" && OWERmap == true && OcarinaShuffle == false ) { //OWER Ocarina shuffle
+        if ( chestlist[key].access == "no OWER" && chestlist[key].type == "ocarina" && OWERmap == true && OcarinaShuffle == false ) { //OWER Ocarina shuffle
             continue;}
         if ( chestlist[key].type == "guard" && gerudobridge !== "Default" && smallkeys == "Keysanity" ) { //Fortress Guard checks
             continue;}
@@ -83,7 +83,7 @@ var dungeons = [
        },
          'Fairy Ocarina': {
             type: "ocarina",
-            access: "entrance",
+            access: "no OWER",
             isAvailable: function () {
                return true; }
          },
