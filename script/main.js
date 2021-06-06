@@ -624,7 +624,6 @@ function bulkDCSelect() {
    document.querySelectorAll(selector).forEach(function (dungeon) {
       for (let key in dungeons[dungeonSelect].chestlist) {
             dungeons[dungeonSelect].chestlist[key][dungeon.innerHTML].isOpened = opening; 
-         }
       }
    });
    updateMap();
