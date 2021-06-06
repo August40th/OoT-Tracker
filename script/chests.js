@@ -42,9 +42,9 @@ function generalCanGetChest(chestlist) {
             continue;}
         if ( chestlist[key].type == "ocarina" && OcarinaShuffle == false ) { //Ocarina shuffle in field
             continue;}
-        if ( chestlist[key].access == "OWER" && chestlist[key].type == "ocarina" && OWERmap == false && OcarinaShuffle == false) { //Ocarina shuffle no OWER
+        if ( chestlist[key].access == "OWER" && chestlist[key].type == "ocarina" && ((OWERmap == false && OcarinaShuffle == true) || OcarinaShuffle == false) ) { //Ocarina shuffle no OWER
             continue;}
-        if ( chestlist[key].access == "no OWER" && chestlist[key].type == "ocarina" && OWERmap == true && OcarinaShuffle == false ) { //OWER Ocarina shuffle
+        if ( chestlist[key].access == "no OWER" && chestlist[key].type == "ocarina" && ((OWERmap == true && OcarinaShuffle == true) || OcarinaShuffle == false) ) { //OWER Ocarina shuffle
             continue;}
         if ( chestlist[key].type == "guard" && gerudobridge !== "Default" && smallkeys == "Keysanity" ) { //Fortress Guard checks
             continue;}
