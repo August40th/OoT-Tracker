@@ -4333,7 +4333,6 @@ var dungeons = [
          'Tree by Entrance Skulltula': {
             type: "skulltula", 
             access: "outdoor",
-            type: "outdoor",
             isAvailable: function () {
                return true
             }
@@ -5240,7 +5239,7 @@ var dungeons = [
             }
          },
          'Water Temple': {
-            type: "simple", 
+            type: "dungeon", 
             access: "door",
                isAvailable: function () {
                   return true; }
@@ -5515,6 +5514,8 @@ var dungeons = [
             },
          },
          'Northwest Desert Gossip': {
+            type: "gossip", 
+            access: "outdoor",
             isAvailable: function () {
                return true
             }
@@ -5919,7 +5920,7 @@ var dungeons = [
          'Skulltula Grotto' : {
             x: "57.3%",
             y: "26.0%",
-            type: "chest", 
+            type: "skulltula", 
             access: "grotto",
                isAvailable: function () {
                   return (((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.Bombs || (items.Bombchu && BombchuLogic)
