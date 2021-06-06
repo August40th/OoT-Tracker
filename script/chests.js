@@ -229,6 +229,8 @@ var dungeons = [
       x: "88.0%",
       y: "48.5%",
       type: "dungeon",
+      mixedtype: "default",
+      keytype: "none",
       chestlist: {
          'Lobby Chest': {
             type: "chest",
@@ -389,6 +391,8 @@ var dungeons = [
       x: "60.6%",
       y: "08.4%",
       type: "dungeon",
+      mixedtype: "default",
+      keytype: "none",      
       chestlist: {
          'Lobby Gossip': {
             type: "gossip",
@@ -598,6 +602,8 @@ var dungeons = [
       x: "88.4%",
       y: "18.0%",
       type: "dungeon",
+      mixedtype: "default",
+      keytype: "none",
       chestlist: {
          'Water Switch Skulltula': {
             type: "skulltula",
@@ -766,6 +772,8 @@ var dungeons = [
       x: "69.3%",
       y: "23.4%",
       type: "dungeon",
+      mixedtype: "default",
+      keytype: "Well",
       chestlist: {
          'Front Left Hidden Wall': {
             type: "chest",
@@ -941,12 +949,13 @@ var dungeons = [
       canGetChest: function () {
          return generalCanGetChest(this.chestlist);
       },
-      requiredKey: "WellKey"
    },
    { name: "Forest Temple",
       x: "78.5%",
       y: "39.0%",
       type: "dungeon",
+      mixedtype: "default",
+      keytype: "Forest",
       chestlist: {
          'Lobby Skulltula': {
             type: "skulltula",
@@ -1210,12 +1219,13 @@ var dungeons = [
       canGetChest: function () {
          return generalCanGetChest(this.chestlist);
       },
-      requiredKey: "ForestKey"
    },
    { name: "Fire Temple",
       x: "65.4%",
       y: "04.0%",
       type: "dungeon",
+      mixedtype: "default",
+      keytype: "Fire",
       chestlist: {
          'Chest Near Boss': {
             type: "chest",
@@ -1607,13 +1617,14 @@ var dungeons = [
       canGetChest: function () {
          return generalCanGetChest(this.chestlist);
       },
-      requiredKey: "FireKey"
    },
    {
       name: "Ice Cavern",
       x: "93.5%",
       y: "18.0%",
       type: "dungeon",
+      mixedtype: "default",
+      keytype: "none",
       chestlist: {
          'Above Silver Rupee Skulltula': {
             type: "skulltula",
@@ -1740,6 +1751,8 @@ var dungeons = [
       x: "36.1%",
       y: "91.0%",
       type: "dungeon",
+      mixedtype: "default",
+      keytype: "Water",
       chestlist: {
          'Water Jet Chest': {
             type: "chest",
@@ -1965,13 +1978,14 @@ var dungeons = [
       canGetChest: function () {
          return generalCanGetChest(this.chestlist);
       },
-      requiredKey: "WaterKey"
    },
    {
       name: "Gerudo Training Ground",
       x: "20.7%",
       y: "16.4%",
       type: "dungeon",
+      mixedtype: "default",
+      keytype: "GTG",
       chestlist: {
          'Lobby Right Chest': {
             type: "chest",
@@ -2224,13 +2238,14 @@ var dungeons = [
       canGetChest: function () {
          return generalCanGetChest(this.chestlist);
       },
-      requiredKey: "GTGKey"
    },
    {
       name: "Spirit Temple",
       x: "02.5%",
       y: "17.0%",
       type: "dungeon",
+      mixedtype: "default",
+      keytype: "Spirit",
       chestlist: {
          ['Child Switch Room']: {
             type: "chest",
@@ -2648,13 +2663,14 @@ var dungeons = [
       canGetChest: function () {
          return generalCanGetChest(this.chestlist);
       },
-      requiredKey: "SpiritKey"
    },
    {
       name: "Shadow Temple",
       x: "79.7%",
       y: "19.5%",
       type: "dungeon",
+      mixedtype: "default",
+      keytype: "Shadow",
       chestlist: {
          'Keese and Redead Chest': {
             type: "chest",
@@ -3015,13 +3031,14 @@ var dungeons = [
       canGetChest: function () {
          return generalCanGetChest(this.chestlist);
       },
-      requiredKey: "ShadowKey"
    },
    {
       name: "Ganon's Tower",
       x: "44.0%",
       y: "14.0%",
       type: "dungeon",
+      mixedtype: "default",
+      keytype: "Castle",
       chestlist: {
          ['Forest Chest']: {
             type: "chest",
@@ -3228,7 +3245,6 @@ var dungeons = [
       canGetChest: function () {
          return generalCanGetChest(this.chestlist);
       },
-      requiredKey: "CastleKey"
    },
    {
       name: "The Market",
