@@ -1081,7 +1081,7 @@ var dungeons = [
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.ForestKey >= 5 || (items.ForestKey >= 3 && items.HoverBoots)) && items.BossForest && items.Hookshot && items.Bow && items.Glove;
             }
          },
-         'Lobby Chest': {
+         'MQ Lobby Chest': {
             type: "chest",
             access: "master",
             isAvailable: function () {
@@ -1099,7 +1099,7 @@ var dungeons = [
             isAvailable: function () {
                return items.Hookshot && items.Ocarina && items.SongofTime; }
          },
-         'Courtyard Island Chest': {
+         'MQ Courtyard Island Chest': {
             type: "chest",
             access: "master",
             isAvailable: function () {
@@ -1111,7 +1111,7 @@ var dungeons = [
             isAvailable: function () {
                return items.Hookshot && items.Bow; }
          },
-         'West Courtyard Skulltula': {
+         'MQ West Courtyard Skulltula': {
             type: "skulltula",
             access: "master",
             isAvailable: function () {
@@ -1124,7 +1124,7 @@ var dungeons = [
                return items.Hookshot && ((items.Glove && items.ForestKey >= 2 && items.IronBoots) || items.Bow); 
             }
          },
-         'Well Chest': {
+         'MQ Well Chest': {
             type: "chest",
             access: "master",
             isAvailable: function () {
@@ -1154,19 +1154,19 @@ var dungeons = [
             isAvailable: function () {
                return items.Hookshot; }
          },
-         'Red Poe Chest': {
+         'MQ Red Poe Chest': {
             type: "chest",
             access: "master",
             isAvailable: function () {
                return items.Hookshot && items.Glove && items.ForestKey >= 2 && items.Bow; }
          },
-         '2nd Floor Stalfos': {
+         'MQ 2nd Floor Stalfos': {
             type: "chest",
             access: "master",
             isAvailable: function () {
                return items.Hookshot && items.Glove && items.ForestKey >= 2; }
          },
-         'Blue Poe Chest': {
+         'MQ Blue Poe Chest': {
             type: "chest",
             access: "master",
             isAvailable: function () {
@@ -1185,13 +1185,13 @@ var dungeons = [
                return items.Hookshot && ((items.Glove && items.ForestKey >= 2 && (items.IronBoots || items.Scale >= 2)) || items.Bow); 
             }
          },
-         'Checkerboard Room Chest': {
+         'MQ Checkerboard Room Chest': {
             type: "chest",
             access: "master",
             isAvailable: function () {
                return items.Hookshot && items.Glove && items.ForestKey >= 5 && items.Bow; }
          },
-         'Chest Near Boss Door': {
+         'MQ Chest Near Boss Door': {
             type: "chest",
             access: "master",
             isAvailable: function () {
@@ -1369,7 +1369,7 @@ var dungeons = [
                       );
             }
          },
-         'Chest Near Boss Door': {
+         'MQ Chest Near Boss Door': {
             type: "chest",
             access: "master",
             isAvailable: function () {
@@ -1383,7 +1383,7 @@ var dungeons = [
                       ); //Boss Door access
             }
          },
-         'Flare Dancer Chest': {
+         'MQ Flare Dancer Chest': {
             type: "chest",
             access: "master",
             isAvailable: function () {
@@ -1417,7 +1417,7 @@ var dungeons = [
                        && items.Hammer && items.Hookshot && items.Magic && (items.Dins || (items.Bow && items.Fire)) ; //Lava Room and Torch
             }
          },
-         'Lava Bombable Room': {
+         'MQ Lava Bombable Room': {
             type: "chest",
             access: "master",
             isAvailable: function () {
@@ -1498,7 +1498,7 @@ var dungeons = [
                        ;
             }
          },
-         'Maze Side Room': {
+         'MQ Maze Side Room': {
             type: "chest",
             access: "master",
             isAvailable: function () {
@@ -1512,7 +1512,7 @@ var dungeons = [
                       ;
             }
          },
-         'Flame Maze Side Room': {
+         'MQ Flame Maze Side Room': {
             type: "skulltula",
             access: "master",
             isAvailable: function () {
@@ -1555,7 +1555,7 @@ var dungeons = [
                       ;
             }
          },
-         'Highest Chest': {
+         'MQ Highest Chest': {
             type: "chest",
             access: "master",
             isAvailable: function () {
@@ -4490,7 +4490,7 @@ var dungeons = [
                isAvailable: function () {
                   return true; }
          },
-         'Zora Shop': {
+         'Zora Sale': {
             type: "shop", 
             access: "simple",
             isAvailable: function () {
