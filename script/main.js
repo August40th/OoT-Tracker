@@ -622,10 +622,8 @@ function bulkDCSelect() {
       }
    }
    document.querySelectorAll(selector).forEach(function (dungeon) {
-      let itemType = dungeon.getAttribute("data-type") + "list";
-      for (let key in dungeons[dungeonSelect][itemType]) {
-         if (!(BeanShuffle == false && dungeons[dungeonSelect].chestlist[key] == "Bean Salesman")) {
-            dungeons[dungeonSelect][itemType][dungeon.innerHTML].isOpened = opening; 
+      for (let key in dungeons[dungeonSelect].chestlist) {
+            dungeons[dungeonSelect].chestlist[key][dungeon.innerHTML].isOpened = opening; 
          }
       }
    });
