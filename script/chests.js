@@ -48,6 +48,8 @@ function generalCanGetChest(chestlist) {
             continue;}
         if ( chestlist[key].type == "guard" && gerudobridge !== "Default" && smallkeys == "Keysanity" ) { //Fortress Guard checks
             continue;}
+        if (chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
+            continue;}
       if (chestlist.hasOwnProperty(key)) {
          if (!chestlist[key].isOpened)
             unopened++;
