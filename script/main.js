@@ -557,7 +557,6 @@ function clickDungeon(d) {
             continue;}
         if ( dungeons[dungeonSelect].chestlist[key].type == "ocarina" && dungeons[dungeonSelect] == dungeons[0] && ((OWERmap == false && OcarinaShuffle == true) || OcarinaShuffle == false) ) { //Ocarina shuffle for no OWER
             continue;}
-        ((OWERmap == false && OcarinaShuffle == true) || OcarinaShuffle == false) ) { //
         if ( dungeons[dungeonSelect] == dungeons[28] && dungeons[dungeonSelect].chestlist[key].type == "guard" && gerudobridge !== "Default" && smallkeys == "Keysanity" ) { //Fortress Guard checks
             continue;}
         var s = document.createElement('li');
