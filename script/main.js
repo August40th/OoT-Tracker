@@ -512,18 +512,8 @@ function clickDungeon(d) {
     var regionSelected = document.getElementById('submaparea').innerHTML;
     regionSelected.onclick = bulkDCSelect();
     
-    regionSelected.oncontextmenu = setQuestType(regionSelected, dungeonSelect); // {
-        //e.preventDefault();
-        //if (quest === "Mixed" && dungeons[dungeonSelect].type === "dungeon") {
-          //  if ( dungeons[dungeonSelect].mixedtype == "default" ) {
-            //    dungeons[dungeonSelect].mixedtype = "vanilla"; 
-            //} else if ( dungeons[dungeonSelect].mixedtype == "vanilla" ) {
-              //  dungeons[dungeonSelect].mixedtype = "master"; 
-            //} else if ( dungeons[dungeonSelect].mixedtype == "master" ) {
-              //  dungeons[dungeonSelect].mixedtype = "vanilla"; 
-            //}
-        //}
-    //}    
+    regionSelected.oncontextmenu = setQuestType(regionSelected, dungeonSelect); 
+    
     for (var key in dungeons[dungeonSelect].chestlist) {
         if ( dungeons[dungeonSelect].type == "dungeon" && quest == "Mixed" && dungeons[dungeonSelect].mixedtype == "master" && dungeons[dungeonSelect].chestlist[key].access == "master") { //Mixed quest checks
             continue;}
@@ -599,32 +589,26 @@ function clickDungeon(d) {
 function setQuestType(sender, d) {    
         if (quest === "Mixed" && dungeons[d].type === "dungeon") {
             if ( dungeons[d].mixedtype == "default" ) {
-                if ( dungeons[d].canGetChest() == "mapspan dungeon possible" ) {
-                    bulkDCSelect();
-                    bulkDCSelect();}
-                else if ( dungeons[d].canGetChest() == "mapspan dungeon opened" ) {
-                } else { bulkDCSelect(); }
                 dungeons[d].mixedtype = "vanilla";
-                if ( dungeons[d].canGetChest() == "mapspan dungeon opened" ) {
-                    bulkDCSelect(); }
+                for (check in dungeons[d].chestlist) {
+                    if (dungeons[d].chestlist[check].type == "master") {
+                        dungeons[d].chestlist[check].class = "DCopened"; 
+                    }
+                }
             } else if ( dungeons[d].mixedtype == "vanilla" ) {
-                if ( dungeons[d].canGetChest() == "mapspan dungeon possible" ) {
-                    bulkDCSelect();
-                    bulkDCSelect();}
-               else if ( dungeons[d].canGetChest() == "mapspan dungeon opened" ) {
-               } else { bulkDCSelect(); }
                 dungeons[d].mixedtype = "master"; 
-                if ( dungeons[d].canGetChest() == "mapspan dungeon opened" ) {
-                    bulkDCSelect(); }
+                for (check in dungeons[d].chestlist) {
+                    if (dungeons[d].chestlist[check].type == "vanilla") {
+                        dungeons[d].chestlist[check].class = "DCopened"; 
+                    }
+                }
             } else if ( dungeons[d].mixedtype == "master" ) {
-                if ( dungeons[d].canGetChest() == "mapspan dungeon possible" ) {
-                    bulkDCSelect();
-                    bulkDCSelect();}
-                else if ( dungeons[d].canGetChest() == "mapspan dungeon opened" ) {
-                } else { bulkDCSelect(); }
                 dungeons[d].mixedtype = "vanilla"; 
-                if ( dungeons[d].canGetChest() == "mapspan dungeon opened" ) {
-                    bulkDCSelect();}
+                for (check in dungeons[d].chestlist) {
+                    if (dungeons[d].chestlist[check].type == "master") {
+                        dungeons[d].chestlist[check].class = "DCopened"; 
+                    }
+                }
             }
         }
 }
