@@ -18,9 +18,11 @@ var keyimg = ['Membership0', 'Membership1', 'Membership2', 'Membership3', 'Membe
 var songs = [];
 var songimg = ['Unknown', 'Impa', 'Malon', 'SariasSong2', 'Guru', 'CompBro', 'TempleofTime', 'Forest', 'Crater', 'IceSong', 'Desert', 'BurningKak', 'Ocarina2'];
 
-var doors = [];
-var doorimg = ['Unknown', 'Guru'];
+var doorimg = [];
+var doortype = ['Unknown', 'Guru'];
+
 var checkimg = [];
+var checkhas = ['Hookshot0', 'Slingshot0'];
 
 var questdungeons = [];
 var questimg = ['', 'MQ'];
