@@ -512,8 +512,6 @@ function clickDungeon(d) {
     var regionSelected = document.getElementById('submaparea').innerHTML;
     regionSelected.onclick = bulkDCSelect();
     
-    regionSelected.oncontextmenu = setQuestType(this, dungeonSelect);
-
     for (var key in dungeons[dungeonSelect].chestlist) {
         if ( dungeons[dungeonSelect].type == "dungeon" && quest == "Mixed" && dungeons[dungeonSelect].mixedtype == "master" && dungeons[dungeonSelect].chestlist[key].access == "master") { //Mixed quest checks
             continue;}
@@ -583,6 +581,9 @@ function clickDungeon(d) {
         s.style.cursor = "pointer";
 
         DClist.appendChild(s);
+        
+        regionSelected.oncontextmenu = setQuestType(this, dungeonSelect);
+
     }
 }
 
@@ -1749,7 +1750,6 @@ function populateMapdiv() {
         s.onmouseover = new Function('highlightDungeonChest(this)');
         s.onmouseout = new Function('unhighlightDungeonChest(this)');
         s.style.cursor = 'pointer';
-        document.getElementById('submaparea').oncontextmenu = setQuestType(this, dungeonSelect);
         document.getElementById('submaplist').appendChild(s);
     }
 }
