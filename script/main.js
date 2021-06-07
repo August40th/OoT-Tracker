@@ -511,8 +511,25 @@ function clickDungeon(d) {
     DClist.innerHTML = '';
     var regionSelected = document.getElementById('submaparea').innerHTML;
     regionSelected.onclick = bulkDCSelect();
+    
+    if (quest === "Mixed" && dungeons[dungeonSelect].type === "dungeon") {
+        regionSelected.oncontextmenu = function(e) {
+            e.preventDefault();
+            if ( dungeons[dungeonSelect].mixedtype == "default" ) {
+                dungeons[dungeonSelect].mixedtype = "vanilla"; 
+            } else if ( dungeons[dungeonSelect].mixedtype == "vanilla" ) {
+                dungeons[dungeonSelect].mixedtype = "master"; 
+            } else if ( dungeons[dungeonSelect].mixedtype == "master" ) {
+                dungeons[dungeonSelect].mixedtype = "vanilla"; 
+            }
+        }
+    }
 
     for (var key in dungeons[dungeonSelect].chestlist) {
+        if ( dungeons[dungeonSelect].type == "dungeon" && quest == "Mixed" && dungeons[dungeonSelect].mixedtype == "master" && dungeons[dungeonSelect].chestlist[key].access == "master") { //Mixed quest checks
+            continue;}
+        if ( dungeons[dungeonSelect].type == "dungeon" && quest == "Mixed" && dungeons[dungeonSelect].mixedtype == "vanilla" && dungeons[dungeonSelect].chestlist[key].access == "vanilla") { //Mixed quest checks
+            continue;}
         if ( dungeons[dungeonSelect].type == "dungeon" && dungeons[dungeonSelect].chestlist[key].access == "master" && quest == "Vanilla" ) { //Master checks
             continue;}
         if ( dungeons[dungeonSelect].type == "dungeon" && dungeons[dungeonSelect].chestlist[key].access == "vanilla" && quest == "Master" ) { //Master checks
@@ -1461,6 +1478,10 @@ function updateMap() {
         document.getElementById("dungeon" + k).className = "mapspan dungeon " + dungeons[k].canGetChest() + ((dungeonMarked.indexOf(k) > -1) ? " wayofhero" : " ");
         var DCcount = 0;
         for (var key in dungeons[k].chestlist) {
+            if ( dungeons[k].type == "dungeon" && quest == "Mixed" && dungeons[k].mixedtype == "master" && dungeons[k].chestlist[key].access == "master") { //Mixed quest checks
+                continue;}
+            if ( dungeons[k].type == "dungeon" && quest == "Mixed" && dungeons[k].mixedtype == "vanilla" && dungeons[k].chestlist[key].access == "vanilla") { //Mixed quest checks
+                continue;}
             if ( dungeons[k].type == "dungeon" && dungeons[k].chestlist[key].access == "master" && quest == "Vanilla" ) { //Master checks
                 continue;}
             if ( dungeons[k].type == "dungeon" && dungeons[k].chestlist[key].access == "vanilla" && quest == "Master" ) { //Master checks
@@ -1519,7 +1540,9 @@ function updateMap() {
         var child = document.getElementById('dungeon' + k).firstChild;
         while (child) {
             if (child.className == 'chestCount') {
-                if (DCcount == 0) {
+                if ( quest == "Mixed" && dungeons[k].mixedttype == "default" ) {
+                    child.innerHTML = '?';
+                } else if (DCcount == 0) {
                     child.innerHTML = '';
                 } else {
                     child.innerHTML = DCcount;
@@ -1632,6 +1655,10 @@ function populateMapdiv() {
       }
         var DCcount = 0;
         for (var key in dungeons[k].chestlist) {
+            if ( dungeons[k].type == "dungeon" && quest == "Mixed" && dungeons[k].mixedtype == "master" && dungeons[k].chestlist[key].access == "master") { //Mixed quest master checks
+                continue;}
+            if ( dungeons[k].type == "dungeon" && quest == "Mixed" && dungeons[k].mixedtype == "vanilla" && dungeons[k].chestlist[key].access == "vanilla") { //Mixed quest vanilla checks
+                continue;}
             if ( dungeons[k].type == "dungeon" && dungeons[k].chestlist[key].access == "master" && quest == "Vanilla" ) { //Master checks
                 continue;}
             if ( dungeons[k].type == "dungeon" && dungeons[k].chestlist[key].access == "vanilla" && quest == "Master" ) { //Master checks
@@ -1689,7 +1716,9 @@ function populateMapdiv() {
 
         var ss = document.createElement('span');
         ss.className = 'chestCount';
-        if (DCcount == 0) {
+        if ( quest == "Mixed" && dungeons[k].mixedttype == "default" ) {
+            ss.innerHTML = '?';
+        } else if (DCcount == 0) {
             ss.innerHTML = '';
         } else {
             ss.innerHTML = DCcount;
