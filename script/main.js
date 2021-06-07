@@ -1768,8 +1768,8 @@ function populateMapdiv() {
     for (var key in dungeons[dungeonSelect].chestlist) {
         
         var dr = document.createElement('th');
-        dr.style.backgroundImage = 'url(images/' + doors[doorimg[]] + '.png)'; 
-        dr.onclick = doors++;
+        dr.style.backgroundImage = 'url(images/Unknown.png)'; 
+        //dr.onclick = doors++;
         
         var s = document.createElement('li');
         s.innerHTML = key
