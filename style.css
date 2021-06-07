@@ -811,3 +811,10 @@ label {
 .d-none {
     display:none!important;
 }
+
+.doorcheck{
+    width: 32px;
+    height: 32px;
+    backgroundImage = 'url(images/Guru.png)';
+    background-color: blue;
+}
