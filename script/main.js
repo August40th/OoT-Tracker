@@ -24,6 +24,8 @@ var questimg = ['', 'MQ'];
 rainbowbridge = 'Open';
 castlelogic = 'Removed';
 trialsize = 0;
+prizesize = 0;
+maxprize = 0;
 gerudobridge = 'Default';
 Rescue1 = true;
 smallkeys = 'Dungeons';
@@ -698,6 +700,22 @@ function setCastle(sender) {
 
 function setTrialSize(sender) {
    trialsize = sender.value;
+   updateMap();
+   if (rainbowbridge == "Skulltulas" ) {
+       maxprize = 100;
+   } else if (rainbowbridge == "Stones" ) {
+       maxprize = 3;
+   } else if (rainbowbridge == "Medallions" ) {
+       maxprize = 6; 
+   } else if (rainbowbridge == "Dungeons" ) {
+       maxprize = 9;
+   }
+   saveCookie();
+}
+
+function setprizesize(sender) {
+   prizesize = sender.value;
+    
    updateMap();
     
    saveCookie();
@@ -1797,7 +1815,7 @@ function isBridgeOpen() {
       case "Vanilla":
          return (items['ShadowMedallion'] && items['SpiritMedallion']);
       case "Skulltulas":
-           return items['Skulltula'] >= 2;
+           return items['Skulltula'] >= prizesize;
       case "Stones":
            return (items['KokiriEmerald'] && items['GoronRuby'] && items['ZoraSapphire']);
       case "Medallions":
