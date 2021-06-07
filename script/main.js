@@ -599,31 +599,31 @@ function clickDungeon(d) {
 function setQuestType(sender, d) {    
         if (quest === "Mixed" && dungeons[d].type === "dungeon") {
             if ( dungeons[d].mixedtype == "default" ) {
-                if ( dungeons[d].CanGetChest() == "mapspan dungeon possible" ) {
+                if ( dungeons[d].canGetChest() == "mapspan dungeon possible" ) {
                     bulkDCSelect();
                     bulkDCSelect();}
-                else if ( dungeons[d].CanGetChest() == "mapspan dungeon opened" ) {
+                else if ( dungeons[d].canGetChest() == "mapspan dungeon opened" ) {
                 } else { bulkDCSelect(); }
                 dungeons[d].mixedtype = "vanilla";
-                if ( dungeons[d].CanGetChest() == "mapspan dungeon opened" ) {
+                if ( dungeons[d].canGetChest() == "mapspan dungeon opened" ) {
                     bulkDCSelect(); }
             } else if ( dungeons[d].mixedtype == "vanilla" ) {
-                if ( dungeons[d].CanGetChest() == "mapspan dungeon possible" ) {
+                if ( dungeons[d].canGetChest() == "mapspan dungeon possible" ) {
                     bulkDCSelect();
                     bulkDCSelect();}
-               else if ( dungeons[d].CanGetChest() == "mapspan dungeon opened" ) {
+               else if ( dungeons[d].canGetChest() == "mapspan dungeon opened" ) {
                } else { bulkDCSelect(); }
                 dungeons[d].mixedtype = "master"; 
-                if ( dungeons[d].CanGetChest() == "mapspan dungeon opened" ) {
+                if ( dungeons[d].canGetChest() == "mapspan dungeon opened" ) {
                     bulkDCSelect(); }
             } else if ( dungeons[d].mixedtype == "master" ) {
-                if ( dungeons[d].CanGetChest() == "mapspan dungeon possible" ) {
+                if ( dungeons[d].canGetChest() == "mapspan dungeon possible" ) {
                     bulkDCSelect();
                     bulkDCSelect();}
-                else if ( dungeons[d].CanGetChest() == "mapspan dungeon opened" ) {
+                else if ( dungeons[d].canGetChest() == "mapspan dungeon opened" ) {
                 } else { bulkDCSelect(); }
                 dungeons[d].mixedtype = "vanilla"; 
-                if ( dungeons[d].CanGetChest() == "mapspan dungeon opened" ) {
+                if ( dungeons[d].canGetChest() == "mapspan dungeon opened" ) {
                     bulkDCSelect();}
             }
         }
