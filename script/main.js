@@ -512,7 +512,7 @@ function clickDungeon(d) {
     var regionSelected = document.getElementById('submaparea').innerHTML;
     regionSelected.onclick = bulkDCSelect();
     
-    regionSelected.oncontextmenu = setQuestType(this,' + dungeonSelect + ',"' + key + '")');
+    regionSelected.oncontextmenu = setQuestType(this,' + dungeonSelect + ');
 
     for (var key in dungeons[dungeonSelect].chestlist) {
         if ( dungeons[dungeonSelect].type == "dungeon" && quest == "Mixed" && dungeons[dungeonSelect].mixedtype == "master" && dungeons[dungeonSelect].chestlist[key].access == "master") { //Mixed quest checks
@@ -586,7 +586,7 @@ function clickDungeon(d) {
     }
 }
 
-function setQuestType(sender, d, c) {    
+function setQuestType(sender, d) {    
         if (quest === "Mixed" && dungeons[d].type === "dungeon") {
             if ( dungeons[d].mixedtype == "default" ) {
                 dungeons[d].mixedtype = "vanilla"; 
