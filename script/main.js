@@ -573,7 +573,7 @@ function clickDungeon(d) {
             continue;}
         
         var dr = document.createElement('th');
-        dr.className = 'doorcheck';
+        dr.className = 'corner';
         dr.style.backgroundImage = 'url(images/Guru.png)'; 
         //dr.onclick = doors++;
         dr.style.cursor = 'pointer';
@@ -1769,8 +1769,61 @@ function populateMapdiv() {
     document.getElementById('submaparea').oncontextmenu = setQuestType(this, dungeonSelect); 
     for (var key in dungeons[dungeonSelect].chestlist) {
         
+        if ( dungeons[k].type == "dungeon" && quest == "Mixed" && dungeons[k].mixedtype == "master" && dungeons[k].chestlist[key].access == "master") { //Mixed quest master checks
+                continue;}
+            if ( dungeons[k].type == "dungeon" && quest == "Mixed" && dungeons[k].mixedtype == "vanilla" && dungeons[k].chestlist[key].access == "vanilla") { //Mixed quest vanilla checks
+                continue;}
+            if ( dungeons[k].type == "dungeon" && dungeons[k].chestlist[key].access == "master" && quest == "Vanilla" ) { //Master checks
+                continue;}
+            if ( dungeons[k].type == "dungeon" && dungeons[k].chestlist[key].access == "vanilla" && quest == "Master" ) { //Master checks
+                continue;}
+            if ( dungeons[k] == dungeons[12] && dungeons[k].chestlist[key].type == "trial" && trialsize == 0 ) { //Castle trials
+                continue;}
+            if ( dungeons[k].chestlist[key].type == "entrance" || dungeons[k].chestlist[key].type == "warp" || dungeons[k].chestlist[key].type == "owl" ) { //Do Nothing
+                continue;}
+            if ( dungeons[k].chestlist[key].access == "door" && dungeons[k].chestlist[key].type == "simple" && IndoorER == "Off" ) { //Simple Doorways
+                continue;}
+            if ( dungeons[k].chestlist[key].access == "door" && dungeons[k].chestlist[key].type == "alldoor" && IndoorER !== "Full" ) { // Full indoor doorways
+                continue;}
+            if ( dungeons[k].chestlist[key].access == "door" && dungeons[k].chestlist[key].type == "dungeon" && DungeonER == false ) { // Dungeon doorways
+                continue;}
+            if ( dungeons[k].chestlist[key].access == "simple" && IndoorER !== "Off" ) { //simple indoor checks
+                continue;}
+            if ( dungeons[k].chestlist[key].access == "alldoor" && IndoorER == "Full" ) { //Link's House, ToT, and windmill checks
+                continue;}
+            if ( dungeons[k].chestlist[key].access == "grotto" && dungeons[k].chestlist[key].type == "grotto" && GrottoER == false ) { //Grotto doorways
+                continue;}
+            if ( dungeons[k].chestlist[key].access == "grotto" && dungeons[k].chestlist[key].type !== "grotto" && GrottoER == true ) { //Grotto checks
+                continue;}
+            if (dungeons[k].type == "overworld" && dungeons[k].chestlist[key].type == "skulltula" && (skulltula == "Off" || skulltula == "Dungeons") ) { // Overworld Skulls
+                continue;}
+            if (dungeons[k].type == "dungeon" && dungeons[k].chestlist[key].type == "skulltula" && (skulltula == "Off" || skulltula == "Overworld") ) { // Dungeon Skulls
+                continue;}
+            if (dungeons[k].chestlist[key].type == "scrub" && scrubs == "Off") { //Scrubs 
+                continue;}
+            if (dungeons[k].chestlist[key].type == "shop" && shopsize == 0) { //Shops 
+                continue;}
+            if (dungeons[k].chestlist[key].type == "cow" && Cowsanity == false) { //Cows
+                continue;}
+            if ( dungeons[k] == dungeons[20] && dungeons[k].chestlist[key].type == "bean" && BeanShuffle == false ) { //Bean shuffle
+                continue;}
+            if ( dungeons[k] == dungeons[17] && dungeons[k].chestlist[key].type == "knife" && Medigoron == false ) { //Medigoron item
+                continue;}
+            if ( dungeons[k] == dungeons[31] && dungeons[k].chestlist[key].type == "carpet" && Aladdin == false ) { //Carpet Sale
+                continue;}
+            if ( dungeons[k].chestlist[key].type == "ocarina" && OcarinaShuffle == false && dungeons[k] == dungeons[32]) { //Ocarina shuffle for field
+                continue;}
+            if ( dungeons[k].chestlist[key].type == "ocarina" && dungeons[k] == dungeons[18] && ((OWERmap == false && OcarinaShuffle == true) || OcarinaShuffle == false) ) { //Ocarina shuffle for OWER
+                continue;}
+            if ( dungeons[k].chestlist[key].type == "ocarina" && dungeons[k] == dungeons[0] && ((OWERmap == true && OcarinaShuffle == true) || OcarinaShuffle == false) ) { //Ocarina shuffle for no OWER
+                continue;}
+            if ( dungeons[k] == dungeons[28] && dungeons[k].chestlist[key].type == "guard" && gerudobridge !== "Default" && smallkeys == "Keysanity" ) { //Fortress Guard checks
+                continue;}
+            if (dungeons[k].chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
+                continue;}
+        
         var dr = document.createElement('th');
-        dr.className = 'doorcheck';
+        dr.className = 'corner';
         dr.style.backgroundImage = 'url(images/Guru.png)'; 
         //dr.onclick = doors++;
         dr.style.cursor = 'pointer';
