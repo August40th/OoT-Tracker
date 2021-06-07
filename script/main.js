@@ -573,7 +573,7 @@ function clickDungeon(d) {
             continue;}
         
         var dr = document.createElement('th');
-        dr.style.backgroundImage = 'url(images/' + doorimg[] + '.png)'; 
+        dr.style.backgroundImage = 'url(images/' + doors[doorimg[]] + '.png)'; 
         //dr.onclick = doorimg++;
         
         var s = document.createElement('li');
