@@ -512,7 +512,7 @@ function clickDungeon(d) {
     var regionSelected = document.getElementById('submaparea').innerHTML;
     regionSelected.onclick = bulkDCSelect();
     
-    regionSelected.oncontextmenu = setQuestType();
+    regionSelected.oncontextmenu = setQuestType(this,' + dungeonSelect + ',"' + key + '")');
 
     for (var key in dungeons[dungeonSelect].chestlist) {
         if ( dungeons[dungeonSelect].type == "dungeon" && quest == "Mixed" && dungeons[dungeonSelect].mixedtype == "master" && dungeons[dungeonSelect].chestlist[key].access == "master") { //Mixed quest checks
@@ -586,15 +586,14 @@ function clickDungeon(d) {
     }
 }
 
-function setQuestType() {    
-        if (quest === "Mixed" && dungeons[dungeonSelect].type === "dungeon") {
-            preventDefault();
-            if ( dungeons[dungeonSelect].mixedtype == "default" ) {
-                dungeons[dungeonSelect].mixedtype = "vanilla"; 
-            } else if ( dungeons[dungeonSelect].mixedtype == "vanilla" ) {
-                dungeons[dungeonSelect].mixedtype = "master"; 
-            } else if ( dungeons[dungeonSelect].mixedtype == "master" ) {
-                dungeons[dungeonSelect].mixedtype = "vanilla"; 
+function setQuestType(sender, d, c) {    
+        if (quest === "Mixed" && dungeons[d].type === "dungeon") {
+            if ( dungeons[d].mixedtype == "default" ) {
+                dungeons[d].mixedtype = "vanilla"; 
+            } else if ( dungeons[d].mixedtype == "vanilla" ) {
+                dungeons[d].mixedtype = "master"; 
+            } else if ( dungeons[d].mixedtype == "master" ) {
+                dungeons[d].mixedtype = "vanilla"; 
             }
         }
 }
