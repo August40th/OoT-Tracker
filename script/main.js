@@ -588,7 +588,7 @@ function clickDungeon(d) {
 
 function setQuestType(sender, d) {    
         if (quest === "Mixed" && dungeons[d].type === "dungeon") {
-            if ( dungeons[d].class == "DCpossible) {
+            if ( dungeons[d].class == "DCpossible") {
                 bulkDCSelect();
                 bulkDCSelect();
             } else { bulkDCSelect(); }
