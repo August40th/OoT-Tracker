@@ -511,8 +511,19 @@ function clickDungeon(d) {
     DClist.innerHTML = '';
     var regionSelected = document.getElementById('submaparea').innerHTML;
     regionSelected.onclick = bulkDCSelect();
-    regionSelected.oncontextmenu = setQuestType(this, dungeonSelect);
     
+    if (quest === "Mixed" && dungeons[dungeonSelect].type === "dungeon") {
+        regionSelected.oncontextmenu = function(e) {
+            e.preventDefault();
+            if ( dungeons[dungeonSelect].mixedtype == "default" ) {
+                dungeons[dungeonSelect].mixedtype = "vanilla"; 
+            } else if ( dungeons[dungeonSelect].mixedtype == "vanilla" ) {
+                dungeons[dungeonSelect].mixedtype = "master"; 
+            } else if ( dungeons[dungeonSelect].mixedtype == "master" ) {
+                dungeons[dungeonSelect].mixedtype = "vanilla"; 
+            }
+        }
+    }    
     for (var key in dungeons[dungeonSelect].chestlist) {
         if ( dungeons[dungeonSelect].type == "dungeon" && quest == "Mixed" && dungeons[dungeonSelect].mixedtype == "master" && dungeons[dungeonSelect].chestlist[key].access == "master") { //Mixed quest checks
             continue;}
