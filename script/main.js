@@ -512,18 +512,7 @@ function clickDungeon(d) {
     var regionSelected = document.getElementById('submaparea').innerHTML;
     regionSelected.onclick = bulkDCSelect();
     
-    regionSelected.oncontextmenu = function(e) {    
-        if (quest === "Mixed" && dungeons[dungeonSelect].type === "dungeon") {
-            e.preventDefault();
-            if ( dungeons[dungeonSelect].mixedtype == "default" ) {
-                dungeons[dungeonSelect].mixedtype = "vanilla"; 
-            } else if ( dungeons[dungeonSelect].mixedtype == "vanilla" ) {
-                dungeons[dungeonSelect].mixedtype = "master"; 
-            } else if ( dungeons[dungeonSelect].mixedtype == "master" ) {
-                dungeons[dungeonSelect].mixedtype = "vanilla"; 
-            }
-        }
-    }
+    regionSelected.oncontextmenu = setQuestType();
 
     for (var key in dungeons[dungeonSelect].chestlist) {
         if ( dungeons[dungeonSelect].type == "dungeon" && quest == "Mixed" && dungeons[dungeonSelect].mixedtype == "master" && dungeons[dungeonSelect].chestlist[key].access == "master") { //Mixed quest checks
@@ -595,6 +584,19 @@ function clickDungeon(d) {
 
         DClist.appendChild(s);
     }
+}
+
+function setQuestType() {    
+        if (quest === "Mixed" && dungeons[dungeonSelect].type === "dungeon") {
+            preventDefault();
+            if ( dungeons[dungeonSelect].mixedtype == "default" ) {
+                dungeons[dungeonSelect].mixedtype = "vanilla"; 
+            } else if ( dungeons[dungeonSelect].mixedtype == "vanilla" ) {
+                dungeons[dungeonSelect].mixedtype = "master"; 
+            } else if ( dungeons[dungeonSelect].mixedtype == "master" ) {
+                dungeons[dungeonSelect].mixedtype = "vanilla"; 
+            }
+        }
 }
 
 function bulkDCSelect() {
@@ -1759,6 +1761,7 @@ function populateMapdiv() {
         s.onmouseover = new Function('highlightDungeonChest(this)');
         s.onmouseout = new Function('unhighlightDungeonChest(this)');
         s.style.cursor = 'pointer';
+        document.getElementById('submaparea').oncontextmenu = setQuestType();
 
         document.getElementById('submaplist').appendChild(s);
     }
