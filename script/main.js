@@ -572,7 +572,7 @@ function clickDungeon(d) {
             continue;}
         
         var dr = document.createElement('th');
-        dr.style.backgroundimage = doorimg[];
+        dr.style.backgroundimage = 'url(images/' + doorimg[] + '.png)'; 
         dr.onclick = doorimg++;
         
         var s = document.createElement('li');
@@ -1767,7 +1767,7 @@ function populateMapdiv() {
     for (var key in dungeons[dungeonSelect].chestlist) {
         
         var dr = document.createElement('th');
-        dr.style.backgroundimage = doorimg[];
+        dr.style.backgroundimage = 'url(images/' + doorimg[] + '.png)'; 
         dr.onclick = doorimg++;
         
         var s = document.createElement('li');
