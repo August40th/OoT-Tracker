@@ -18,6 +18,7 @@ var keyimg = ['Membership0', 'Membership1', 'Membership2', 'Membership3', 'Membe
 var songs = [];
 var songimg = ['Unknown', 'Impa', 'Malon', 'SariasSong2', 'Guru', 'CompBro', 'TempleofTime', 'Forest', 'Crater', 'IceSong', 'Desert', 'BurningKak', 'Ocarina2'];
 
+var doors = [];
 var doorimg = ['Unknown', 'Guru'];
 var checkimg = [];
 
@@ -572,7 +573,7 @@ function clickDungeon(d) {
             continue;}
         
         var dr = document.createElement('th');
-        dr.style.backgroundimage = 'url(images/' + doorimg[] + '.png)'; 
+        dr.style.backgroundImage = 'url(images/' + doorimg[] + '.png)'; 
         //dr.onclick = doorimg++;
         
         var s = document.createElement('li');
@@ -1767,8 +1768,8 @@ function populateMapdiv() {
     for (var key in dungeons[dungeonSelect].chestlist) {
         
         var dr = document.createElement('th');
-        dr.style.backgroundimage = 'url(images/' + doorimg[] + '.png)'; 
-        dr.onclick = doorimg++;
+        dr.style.backgroundImage = 'url(images/' + doors[doorimg[]] + '.png)'; 
+        dr.onclick = doors++;
         
         var s = document.createElement('li');
         s.innerHTML = key
