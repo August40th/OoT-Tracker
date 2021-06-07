@@ -1371,7 +1371,39 @@ function gridItemClick(row, col, corner) {
                 items[item] = !items[item];
             }
         }
-        else if ((typeof items[item]) == 'boolean') {
+        else if (fortresskeys[item] !== undefined) {
+            if (smallkeys == "Keysanity") {
+                if (corner == 3) {
+                    fortresskeys[item]++;
+                    if (Rescue1) {
+                        if (fortresskeys[item] >= 2) {
+                            fortresskeys[item] = 0;
+                        }
+                    }
+                    if (!Rescue1) {
+                        if (fortresskeys[item] >= 5) {
+                            fortresskeys[item] = 0;
+                        }
+                    }
+                } else {
+                    items[item] = !items[item];
+                }
+            } else {
+                items[item] = !items[item];
+            }
+       } else if (songs[item] !== undefined) {
+          if (corner == 3) {
+             songs[item]++;
+             if (songs[item] >= 13)
+                songs[item] = 0;
+          } else if (corner == 2) {
+             songs[item]++;
+             if (songs[item] >= 13)
+                songs[item] = 0;
+          } else {
+             items[item] = !items[item];
+          }
+   } else if ((typeof items[item]) == 'boolean') {
             items[item] = !items[item];
         } else {
             items[item]++;
@@ -1410,50 +1442,7 @@ function gridItemRClick(row, col, corner) {
                 items[item] = !items[item];
             }
         }
-        else if (fortresskeys[item] !== undefined) {
-      if (smallkeys == "Keysanity") {
-         if (corner == 3) {
-            fortresskeys[item]++;
-            if (Rescue1) {
-               if (fortresskeys[item] >= 2) {
-                  fortresskeys[item] = 0;
-               }
-            }
-            if (!Rescue1) {
-               if (fortresskeys[item] >= 5) {
-                  fortresskeys[item] = 0;
-               }
-            }
-         } else if (corner == 2) {
-            fortresskeys[item]++;
-            if (Rescue1) {
-               if (fortresskeys[item] >= 2) {
-                  fortresskeys[item] = 0;
-               }
-            } else if (!Rescue1) {
-               if (fortresskeys[item] >= 5) {
-                  fortresskeys[item] = 0;
-               }
-            }
-         } else {
-            items[item] = !items[item];
-         }
-      } else {
-         items[item] = !items[item];
-      }
-   } else if (songs[item] !== undefined) {
-      if (corner == 3) {
-         songs[item]++;
-         if (songs[item] >= 13)
-            songs[item] = 0;
-      } else if (corner == 2) {
-         songs[item]++;
-         if (songs[item] >= 13)
-            songs[item] = 0;
-      } else {
-         items[item] = !items[item];
-      }
-   } else if ((typeof items[item]) == 'boolean') {
+        else if ((typeof items[item]) == 'boolean') {
             items[item] = !items[item];
         } else {
             if (items[item] == itemsMin[item]) {
@@ -1689,7 +1678,7 @@ function populateMapdiv() {
             if (dungeons[k].chestlist[key].type == "scrub" && scrubs == "Off") { //Scrubs 
                 continue;}
             if (dungeons[k].chestlist[key].type == "shop" && shopsize == 0) { //Shops 
-            continue;}
+                continue;}
             if (dungeons[k].chestlist[key].type == "cow" && Cowsanity == false) { //Cows
                 continue;}
             if ( dungeons[k] == dungeons[20] && dungeons[k].chestlist[key].type == "bean" && BeanShuffle == false ) { //Bean shuffle
