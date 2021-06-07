@@ -572,7 +572,7 @@ function clickDungeon(d) {
         if (dungeons[dungeonSelect].chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
             continue;}
         
-        var dr = document.createElement('td');
+        var dr = document.createElement('img');
         dr.className = 'doorcheck';
         dr.style.backgroundImage = 'url(images/Guru.png)'; 
         //dr.onclick = doors++;
@@ -1856,7 +1856,7 @@ function populateMapdiv() {
         if (dungeons[dungeonSelect].chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
             continue;}
         
-        var dr = document.createElement('td');
+        var dr = document.createElement('img');
         dr.className = 'doorcheck';
         dr.style.backgroundImage = 'url(images/Guru.png)'; 
         //dr.onclick = doors++;
