@@ -572,9 +572,11 @@ function clickDungeon(d) {
         if (dungeons[dungeonSelect].chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
             continue;}
         
-        //var dr = document.createElement('th');
-        //dr.style.backgroundImage = 'url(images/' + doors[doorimg[]] + '.png)'; 
-        //dr.onclick = doorimg++;
+        var dr = document.createElement('th');
+        dr.classname = 'doorcheck';
+        dr.style.backgroundImage = 'url(images/Guru.png)'; 
+        //dr.onclick = doors++;
+        dr.style.cursor = 'pointer';
         
         var s = document.createElement('li');
         s.innerHTML = key;
@@ -1768,8 +1770,10 @@ function populateMapdiv() {
     for (var key in dungeons[dungeonSelect].chestlist) {
         
         var dr = document.createElement('th');
-        dr.style.backgroundImage = 'url(images/Unknown.png)'; 
+        dr.classname = 'doorcheck';
+        dr.style.backgroundImage = 'url(images/Guru.png)'; 
         //dr.onclick = doors++;
+        dr.style.cursor = 'pointer';
         
         var s = document.createElement('li');
         s.innerHTML = key
