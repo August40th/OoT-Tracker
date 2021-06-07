@@ -512,7 +512,7 @@ function clickDungeon(d) {
     var regionSelected = document.getElementById('submaparea').innerHTML;
     regionSelected.onclick = bulkDCSelect();
     
-    regionSelected.addEventListener("contextmenu", setQuestType(regionSelected, dungeonSelect) ); // {
+    regionSelected.oncontextmenu = setQuestType(regionSelected, dungeonSelect); // {
         //e.preventDefault();
         //if (quest === "Mixed" && dungeons[dungeonSelect].type === "dungeon") {
           //  if ( dungeons[dungeonSelect].mixedtype == "default" ) {
