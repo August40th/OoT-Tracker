@@ -58,14 +58,14 @@
                     <fieldset> <center>
                         <legend>Items: 
                         <input type="range" name='itemdivsize' value='100' max='200' min='1' onchange="setZoom('itemdiv', this)">
-                        <span id='itemdivsize'>100%</span> </legend> <br>
+                        <span id='itemdivsize'>100%</span> </legend>
                         <legend>Map: <input type="range" name='mapdivsize' value='100' max='200' min='1' onchange="setZoom('mapdiv', this)">
                         <span id='mapdivsize'>100%</span> </legend>
                     </fieldset>    
                     <fieldset> 
                         <legend>World</legend>
                                 <center> <input type='checkbox' name='OpenForest' checked='true' onchange="setForest(this)">Open Forest 
-                                <input type='checkbox' name='OpenDeku' checked='true' onchange="setTree(this)">Open Deku
+                                <input type='checkbox' name='OpenDeku' checked='true' onchange="setTree(this)">Closed Deku
                                 <input type='checkbox' name='OpenGate' checked='true' onchange="setGate(this)">Open Gate <br>
                                 <input type='checkbox' name='OpenDoor' checked='true' onchange="setDoor(this)">Open Door 
                                 <input type='checkbox' name='OpenFountain' checked='false' onchange="setFountain(this)">Open Fountain
@@ -76,7 +76,7 @@
                         <input type='radio' name='quest' value='Mixed' onclick="setQuest(this)">Mixed </legend>
                         </center> </fieldset>
                         <fieldset> <Legend>Ganon's Castle</legend>
-                        <legend>Rainbow Bridge</legend> <br>
+                        <legend>Rainbow Bridge</legend> 
                             <center><input type='radio' name='rainbowbridge' value='Open' checked='true' onclick="setRainbow(this)">Open
                             <input type='radio' name='rainbowbridge' value='Vanilla' onclick="setRainbow(this)">Vanilla
                             <input type='radio' name='rainbowbridge' value='Skulltulas' onclick="setRainbow(this)">Skulltulas <br>
