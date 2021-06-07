@@ -1760,8 +1760,7 @@ function populateMapdiv() {
         s.onmouseover = new Function('highlightDungeonChest(this)');
         s.onmouseout = new Function('unhighlightDungeonChest(this)');
         s.style.cursor = 'pointer';
-        document.getElementById('submaparea').oncontextmenu = setQuestType();
-
+        document.getElementById('submaparea').oncontextmenu = setQuestType(this, dungeonSelect);
         document.getElementById('submaplist').appendChild(s);
     }
 }
