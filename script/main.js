@@ -573,7 +573,7 @@ function clickDungeon(d) {
             continue;}
         
         var dr = document.createElement('th');
-        dr.classname = 'doorcheck';
+        dr.className = 'doorcheck';
         dr.style.backgroundImage = 'url(images/Guru.png)'; 
         //dr.onclick = doors++;
         dr.style.cursor = 'pointer';
@@ -1770,7 +1770,7 @@ function populateMapdiv() {
     for (var key in dungeons[dungeonSelect].chestlist) {
         
         var dr = document.createElement('th');
-        dr.classname = 'doorcheck';
+        dr.className = 'doorcheck';
         dr.style.backgroundImage = 'url(images/Guru.png)'; 
         //dr.onclick = doors++;
         dr.style.cursor = 'pointer';
