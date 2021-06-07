@@ -572,8 +572,8 @@ function clickDungeon(d) {
         if (dungeons[dungeonSelect].chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
             continue;}
         
-        var dr = document.createElement('th');
-        dr.style.backgroundImage = 'url(images/' + doors[doorimg[]] + '.png)'; 
+        //var dr = document.createElement('th');
+        //dr.style.backgroundImage = 'url(images/' + doors[doorimg[]] + '.png)'; 
         //dr.onclick = doorimg++;
         
         var s = document.createElement('li');
