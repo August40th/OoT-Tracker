@@ -512,7 +512,7 @@ function clickDungeon(d) {
     var regionSelected = document.getElementById('submaparea').innerHTML;
     regionSelected.onclick = bulkDCSelect();
     
-    regionSelected.oncontextmenu = setQuestType(this,'dungeonSelect');
+    regionSelected.oncontextmenu = setQuestType(this, dungeonSelect);
 
     for (var key in dungeons[dungeonSelect].chestlist) {
         if ( dungeons[dungeonSelect].type == "dungeon" && quest == "Mixed" && dungeons[dungeonSelect].mixedtype == "master" && dungeons[dungeonSelect].chestlist[key].access == "master") { //Mixed quest checks
