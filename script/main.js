@@ -574,7 +574,7 @@ function clickDungeon(d) {
         
         var dr = document.createElement('img');
         dr.className = 'doorcheck';
-        dr.style.backgroundImage = 'url(images/Guru.png)'; 
+        dr.src = 'url(images/Guru.png)'; 
         //dr.onclick = doors++;
         dr.style.cursor = 'pointer';
         
@@ -1858,7 +1858,7 @@ function populateMapdiv() {
         
         var dr = document.createElement('img');
         dr.className = 'doorcheck';
-        dr.style.backgroundImage = 'url(images/Guru.png)'; 
+        dr.src = 'url(images/Guru.png)'; 
         //dr.onclick = doors++;
         dr.style.cursor = 'pointer';
         
