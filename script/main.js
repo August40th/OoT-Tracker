@@ -512,8 +512,8 @@ function clickDungeon(d) {
     var regionSelected = document.getElementById('submaparea').innerHTML;
     regionSelected.onclick = bulkDCSelect();
     
-    if (quest === "Mixed" && dungeons[dungeonSelect].type === "dungeon") {
-        regionSelected.oncontextmenu = function(e) {
+    regionSelected.oncontextmenu = function(e) {    
+        if (quest === "Mixed" && dungeons[dungeonSelect].type === "dungeon") {
             e.preventDefault();
             if ( dungeons[dungeonSelect].mixedtype == "default" ) {
                 dungeons[dungeonSelect].mixedtype = "vanilla"; 
