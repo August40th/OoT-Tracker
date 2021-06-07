@@ -588,27 +588,19 @@ function clickDungeon(d) {
 
 function setQuestType(sender, d) {    
         if (quest === "Mixed" && dungeons[d].type === "dungeon") {
+            if ( dungeons[d].class == "DCpossible) {
+                bulkDCSelect();
+                bulkDCSelect();
+            } else { bulkDCSelect(); }
             if ( dungeons[d].mixedtype == "default" ) {
                 dungeons[d].mixedtype = "vanilla";
-                for (check in dungeons[d].chestlist) {
-                    if (dungeons[d].chestlist[check].type == "master") {
-                        dungeons[d].chestlist[check].class = "DCopened"; 
-                    }
-                }
+                bulkDCSelect();
             } else if ( dungeons[d].mixedtype == "vanilla" ) {
                 dungeons[d].mixedtype = "master"; 
-                for (check in dungeons[d].chestlist) {
-                    if (dungeons[d].chestlist[check].type == "vanilla") {
-                        dungeons[d].chestlist[check].class = "DCopened"; 
-                    }
-                }
+                bulkDCSelect();
             } else if ( dungeons[d].mixedtype == "master" ) {
                 dungeons[d].mixedtype = "vanilla"; 
-                for (check in dungeons[d].chestlist) {
-                    if (dungeons[d].chestlist[check].type == "master") {
-                        dungeons[d].chestlist[check].class = "DCopened"; 
-                    }
-                }
+                bulkDCSelect();
             }
         }
 }
