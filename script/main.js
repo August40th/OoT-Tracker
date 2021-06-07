@@ -573,7 +573,7 @@ function clickDungeon(d) {
             continue;}
         
         var dr = document.createElement('th');
-        dr.className = 'corner';
+        dr.className = 'doorcheck';
         dr.style.backgroundImage = 'url(images/Guru.png)'; 
         //dr.onclick = doors++;
         dr.style.cursor = 'pointer';
@@ -1857,7 +1857,7 @@ function populateMapdiv() {
             continue;}
         
         var dr = document.createElement('th');
-        dr.className = 'corner';
+        dr.className = 'doorcheck';
         dr.style.backgroundImage = 'url(images/Guru.png)'; 
         //dr.onclick = doors++;
         dr.style.cursor = 'pointer';
