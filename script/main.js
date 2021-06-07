@@ -1766,7 +1766,14 @@ function populateMapdiv() {
     document.getElementById('submaparea').innerHTML = dungeons[dungeonSelect].name;
     document.getElementById('submaparea').className = 'DC' + dungeons[dungeonSelect].isBeatable();
     document.getElementById('dungeon' + dungeonSelect).style.backgroundImage = 'url(images/highlighted.png)';
-    document.getElementById('submaparea').oncontextmenu = setQuestType(this, dungeonSelect); 
+    
+    
+    document.getElementById('submaparea').oncontextmenu = function(e) {
+         e.preventDefault(); // oncontextmenu = 
+        setQuestType(this, dungeonSelect); 
+    }
+    
+    
     for (var key in dungeons[dungeonSelect].chestlist) {
         
         if ( dungeons[k].type == "dungeon" && quest == "Mixed" && dungeons[k].mixedtype == "master" && dungeons[k].chestlist[key].access == "master") { //Mixed quest master checks
