@@ -18,6 +18,9 @@ var keyimg = ['Membership0', 'Membership1', 'Membership2', 'Membership3', 'Membe
 var songs = [];
 var songimg = ['Unknown', 'Impa', 'Malon', 'SariasSong2', 'Guru', 'CompBro', 'TempleofTime', 'Forest', 'Crater', 'IceSong', 'Desert', 'BurningKak', 'Ocarina2'];
 
+var doorimg = ['Unknown', 'Guru'];
+var checkimg = [];
+
 var questdungeons = [];
 var questimg = ['', 'MQ'];
 
@@ -513,9 +516,7 @@ function clickDungeon(d) {
     DClist.innerHTML = '';
     var regionSelected = document.getElementById('submaparea').innerHTML;
     regionSelected.onclick = bulkDCSelect();
-    
-    regionSelected.oncontextmenu = setQuestType(regionSelected, dungeonSelect); 
-    
+        
     for (var key in dungeons[dungeonSelect].chestlist) {
         if ( dungeons[dungeonSelect].type == "dungeon" && quest == "Mixed" && dungeons[dungeonSelect].mixedtype == "master" && dungeons[dungeonSelect].chestlist[key].access == "master") { //Mixed quest checks
             continue;}
@@ -569,6 +570,11 @@ function clickDungeon(d) {
             continue;}
         if (dungeons[dungeonSelect].chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
             continue;}
+        
+        var dr = document.createElement('th');
+        dr.style.backgroundimage = doorimg[];
+        dr.onclick = doorimg++;
+        
         var s = document.createElement('li');
         s.innerHTML = key;
         if (dungeons[dungeonSelect].chestlist[key].isOpened) {            
@@ -1757,7 +1763,12 @@ function populateMapdiv() {
     document.getElementById('submaparea').innerHTML = dungeons[dungeonSelect].name;
     document.getElementById('submaparea').className = 'DC' + dungeons[dungeonSelect].isBeatable();
     document.getElementById('dungeon' + dungeonSelect).style.backgroundImage = 'url(images/highlighted.png)';
+    document.getElementById('submaparea').oncontextmenu = setQuestType(this, dungeonSelect); 
     for (var key in dungeons[dungeonSelect].chestlist) {
+        
+        var dr = document.createElement('th');
+        dr.style.backgroundimage = doorimg[];
+        dr.onclick = doorimg++;
         
         var s = document.createElement('li');
         s.innerHTML = key
