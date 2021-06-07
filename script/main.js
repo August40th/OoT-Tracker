@@ -1770,22 +1770,33 @@ function populateMapdiv() {
     
     document.getElementById('submaparea').oncontextmenu = function(e) {
          e.preventDefault(); // oncontextmenu = setQuestType(this, dungeonSelect); 
-        if ( dungeons[d].mixedtype == "default" ) {
-                //if ( dungeons[d].class == "DCpossible") {
-                //bulkDCSelect();
-                //bulkDCSelect();
-                //} else { bulkDCSelect(); }
-                dungeons[d].mixedtype = "vanilla";
-                //bulkDCSelect();
-            } else if ( dungeons[d].mixedtype == "vanilla" ) {
-                dungeons[d].mixedtype = "master"; 
-                //if ( dungeons[d].class == "DCopened") {
-                //bulkDCSelect(); }
-            } else if ( dungeons[d].mixedtype == "master" ) {
-                dungeons[d].mixedtype = "vanilla"; 
-                //if ( dungeons[d].class == "DCopened") {
-                //bulkDCSelect(); }
+        if ( dungeons[dungeonSelect].mixedtype == "default" ) {
+                if ( dungeons[dungeonSelect].class == "DCpossible") {
+                bulkDCSelect();
+                bulkDCSelect();
+                } else { bulkDCSelect(); }
+                dungeons[dungeonSelect].mixedtype = "vanilla";
+                bulkDCSelect();
+            } else if ( dungeons[dungeonSelect].mixedtype == "vanilla" ) {
+                if ( dungeons[dungeonSelect].class == "DCpossible") {
+                bulkDCSelect();
+                bulkDCSelect();
+                } else if (dungeons[dungeonSelect].class == "DCunavailable" || dungeons[dungeonSelect].class == "DCavailable")  {
+                bulkDCSelect(); }
+                dungeons[dungeonSelect].mixedtype = "master"; 
+                if ( dungeons[dungeonSelect].class == "DCopened") {
+                bulkDCSelect(); }
+            } else if ( dungeons[dungeonSelect].mixedtype == "master" ) {
+                if ( dungeons[dungeonSelect].class == "DCpossible") {
+                bulkDCSelect();
+                bulkDCSelect();
+                } else if (dungeons[dungeonSelect].class == "DCunavailable" || dungeons[dungeonSelect].class == "DCavailable")  {
+                bulkDCSelect(); }
+                dungeons[dungeonSelect].mixedtype = "vanilla"; 
+                if ( dungeons[dungeonSelect].class == "DCopened") {
+                bulkDCSelect(); }
             }
+        updateMap();
     }
     
     
