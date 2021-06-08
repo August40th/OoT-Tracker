@@ -50,12 +50,6 @@ function generalCanGetChest(chestlist) {
             continue;}
         if (chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
             continue;}
-      for (k = 1; k < 13; k++) {
-           if ( dungeons[k].mixedtype == "vanilla" && quest == "Mixed" && chestlist[key].access == "master") { //Mixed master checks
-               continue;}
-           if ( dungeons[k].mixedtype == "master" && quest == "Mixed" && chestlist[key].access == "vanilla") { //Mixed vanilla checks
-               continue;}
-         }
       if (chestlist.hasOwnProperty(key)) {
          if (!chestlist[key].isOpened)
             unopened++;
