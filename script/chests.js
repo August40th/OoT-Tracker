@@ -36,6 +36,8 @@ function generalCanGetChest(chestlist) {
             continue;}
         if ( chestlist[key].type == "bean" && BeanShuffle == false ) { //Bean shuffle
             continue;}
+        if ( chestlist[key].type == "egg" && WeirdEgg == false ) { //Bean shuffle
+            continue;}
         if ( chestlist[key].type == "knife" && Medigoron == false ) { //Medigoron item
             continue;}
         if ( chestlist[key].type == "carpet" && Aladdin == false ) { //Carpet Sale
@@ -3535,7 +3537,7 @@ var dungeons = [
             }
          },
          'Malon\s Weird Egg': {
-            type: "NPC", 
+            type: "egg", 
             access: "outdoor",
             isAvailable: function () {
                return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0));
