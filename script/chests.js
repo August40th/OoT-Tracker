@@ -6,6 +6,10 @@ function generalCanGetChest(chestlist) {
             continue;}
         if ( chestlist[key].access == "vanilla" && quest == "Master" ) { //Master checks
             continue;}
+        if ( dungeons[this].mixedtype == "vanilla" && dungeons[this].type == "dungeon" && quest == "Mixed" && chestlist[key].access == "master") { //Mixed master checks
+            continue;}
+        if ( dungeons[this].mixedtype == "master" && dungeons[this].type == "dungeon" && quest == "Mixed" && chestlist[key].access == "vanilla") { //Mixed vanilla checks
+            continue;}
         if ( chestlist[key].type == "trial" && trialsize == 0 ) { //Castle trials
             continue;}
         if ( chestlist[key].type == "entrance" || chestlist[key].type == "warp" || chestlist[key].type == "owl" ) { //Do Nothing
