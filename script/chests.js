@@ -1,17 +1,16 @@
 function generalCanGetChest(chestlist) {
    var canGet = 0;
    var unopened = 0
-   for (var key in chestlist) {
-      if ( chestlist[key].access == "master" && quest == "Vanilla" ) { //Master checks
+   for (k = 0; k < dungeons.length; k++) {
+      for (var key in dungeons[k].chestlist) {
+         if ( chestlist[key].access == "master" && quest == "Vanilla" ) { //Master checks
             continue;}
         if ( chestlist[key].access == "vanilla" && quest == "Master" ) { //Master checks
             continue;}
-        for (k = 1; k < 13; k++) {
-           if ( dungeons[k].mixedtype == "vanilla" && dungeons[k].type == "dungeon" && quest == "Mixed" && chestlist[key].access == "master") { //Mixed master checks
-               continue;}
-           if ( dungeons[k].mixedtype == "master" && dungeons[k].type == "dungeon" && quest == "Mixed" && chestlist[key].access == "vanilla") { //Mixed vanilla checks
-               continue;}
-        }
+        if ( dungeons[k].mixedtype == "vanilla" && dungeons[k].type == "dungeon" && quest == "Mixed" && chestlist[key].access == "master") { //Mixed master checks
+            continue;}
+        if ( dungeons[k].mixedtype == "master" && dungeons[k].type == "dungeon" && quest == "Mixed" && chestlist[key].access == "vanilla") { //Mixed vanilla checks
+            continue;}
         if ( chestlist[key].type == "trial" && trialsize == 0 ) { //Castle trials
             continue;}
         if ( chestlist[key].type == "entrance" || chestlist[key].type == "warp" || chestlist[key].type == "owl" ) { //Do Nothing
