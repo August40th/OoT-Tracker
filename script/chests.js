@@ -55,12 +55,13 @@ function generalCanGetChest(chestlist) {
             continue;}
         if (chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
             continue;}
-      if (chestlist.hasOwnProperty(key)) {
-         if (!chestlist[key].isOpened)
-            unopened++;
+        if (chestlist.hasOwnProperty(key)) {
+            if (!chestlist[key].isOpened)
+               unopened++;
 
-         if (!chestlist[key].isOpened && chestlist[key].isAvailable())
-            canGet++;
+            if (!chestlist[key].isOpened && chestlist[key].isAvailable())
+               canGet++;
+         }
       }
    }
 
