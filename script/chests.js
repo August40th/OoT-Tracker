@@ -1,67 +1,67 @@
 function generalCanGetChest(chestlist) {
    var canGet = 0;
    var unopened = 0
-   for (k = 0; k < dungeons.length; k++) {
-      for (var key in dungeons[k].chestlist) {
-         if ( dungeons[k].type == "dungeon" && quest == "Mixed" && dungeons[k].mixedtype == "master" && dungeons[k].chestlist[key].access == "master") { //Mixed quest checks
+   for (var key in chestlist) {
+      if ( chestlist[key].access == "master" && quest == "Vanilla" ) { //Master checks
             continue;}
-         if ( dungeons[k].type == "dungeon" && quest == "Mixed" && dungeons[k].mixedtype == "vanilla" && dungeons[k].chestlist[key].access == "vanilla") { //Mixed quest checks
+        if ( chestlist[key].access == "vanilla" && quest == "Master" ) { //Master checks
             continue;}
-         if ( dungeons[k].type == "dungeon" && dungeons[k].chestlist[key].access == "master" && quest == "Vanilla" ) { //Master checks
+        if ( chestlist[key].type == "trial" && trialsize == 0 ) { //Castle trials
             continue;}
-         if ( dungeons[k].type == "dungeon" && dungeons[k].chestlist[key].access == "vanilla" && quest == "Master" ) { //Master checks
+        if ( chestlist[key].type == "entrance" || chestlist[key].type == "warp" || chestlist[key].type == "owl" ) { //Do Nothing
             continue;}
-         if ( dungeons[k] == dungeons[12] && dungeons[k].chestlist[key].type == "trial" && trialsize == 0 ) { //Castle trials
+        if ( chestlist[key].access == "door" && chestlist[key].type == "simple" && IndoorER == "Off" ) { //Simple Doorways
             continue;}
-         if ( dungeons[k].chestlist[key].type == "entrance" || dungeons[k].chestlist[key].type == "warp" || dungeons[k].chestlist[key].type == "owl" ) { //Do Nothing
+        if ( chestlist[key].access == "door" && chestlist[key].type == "alldoor" && IndoorER !== "Full" ) { // Full indoor doorways
             continue;}
-         if ( dungeons[k].chestlist[key].access == "door" && dungeons[k].chestlist[key].type == "simple" && IndoorER == "Off" ) { //Simple Doorways
+        if ( chestlist[key].access == "door" && chestlist[key].type == "dungeon" && DungeonER == false ) { // Dungeon doorways
             continue;}
-         if ( dungeons[k].chestlist[key].access == "door" && dungeons[k].chestlist[key].type == "alldoor" && IndoorER !== "Full" ) { // Full indoor doorways
+        if ( chestlist[key].access == "simple" && IndoorER !== "Off" ) { //simple indoor checks
             continue;}
-         if ( dungeons[k].chestlist[key].access == "door" && dungeons[k].chestlist[key].type == "dungeon" && DungeonER == false ) { // Dungeon doorways
+        if ( chestlist[key].access == "alldoor" && IndoorER == "Full" ) { //Link's House, ToT, and windmill checks
             continue;}
-         if ( dungeons[k].chestlist[key].access == "simple" && IndoorER !== "Off" ) { //simple indoor checks
+        if ( chestlist[key].access == "grotto" && chestlist[key].type == "grotto" && GrottoER == false ) { //Grotto doorways
             continue;}
-         if ( dungeons[k].chestlist[key].access == "alldoor" && IndoorER == "Full" ) { //Link's House, ToT, and windmill checks
+        if ( chestlist[key].access == "grotto" && chestlist[key].type !== "grotto" && GrottoER == true ) { //Grotto checks
             continue;}
-         if ( dungeons[k].chestlist[key].access == "grotto" && dungeons[k].chestlist[key].type == "grotto" && GrottoER == false ) { //Grotto doorways
+        if ( (chestlist[key].access !== "master" || chestlist[key].access !== "vanilla") && chestlist[key].type == "skulltula" && (skulltula == "Off" || skulltula == "Dungeons") ) { // Overworld Skulls
             continue;}
-         if ( dungeons[k].chestlist[key].access == "grotto" && dungeons[k].chestlist[key].type !== "grotto" && GrottoER == true ) { //Grotto checks
+        if ( (chestlist[key].access !== "master" || chestlist[key].access !== "vanilla") && chestlist[key].type == "skulltula" && (skulltula == "Off" || skulltula == "Overworld") ) { // Dungeon Skulls
             continue;}
-         if (dungeons[k].type == "overworld" && dungeons[k].chestlist[key].type == "skulltula" && (skulltula == "Off" || skulltula == "Dungeons") ) { // Overworld Skulls
+        if (chestlist[key].type == "scrub" && scrubs == "Off") { //Scrubs 
             continue;}
-         if (dungeons[k].type == "dungeon" && dungeons[k].chestlist[key].type == "skulltula" && (skulltula == "Off" || skulltula == "Overworld") ) { // Dungeon Skulls
+        if (chestlist[key].type == "shop" && shopsize == 0) { //Shops 
             continue;}
-         if (dungeons[k].chestlist[key].type == "scrub" && scrubs == "Off") { //Scrubs 
+        if (chestlist[key].type == "cow" && Cowsanity == false) { //Cows
             continue;}
-         if (dungeons[k].chestlist[key].type == "shop" && shopsize == 0) { //Shops 
+        if ( chestlist[key].type == "bean" && BeanShuffle == false ) { //Bean shuffle
             continue;}
-         if (dungeons[k].chestlist[key].type == "cow" && Cowsanity == false) { //Cows
+        if ( chestlist[key].type == "knife" && Medigoron == false ) { //Medigoron item
             continue;}
-         if ( dungeons[k] == dungeons[20] && dungeons[k].chestlist[key].type == "bean" && BeanShuffle == false ) { //Bean shuffle
+        if ( chestlist[key].type == "carpet" && Aladdin == false ) { //Carpet Sale
             continue;}
-         if ( dungeons[k] == dungeons[17] && dungeons[k].chestlist[key].type == "knife" && Medigoron == false ) { //Medigoron item
+        if ( chestlist[key].type == "ocarina" && OcarinaShuffle == false ) { //Ocarina shuffle in field
             continue;}
-         if ( dungeons[k] == dungeons[31] && dungeons[k].chestlist[key].type == "carpet" && Aladdin == false ) { //Carpet Sale
+        if ( chestlist[key].access == "OWER" && chestlist[key].type == "ocarina" && ((OWERmap == false && OcarinaShuffle == true) || OcarinaShuffle == false) ) { //Ocarina shuffle no OWER
             continue;}
-         if ( dungeons[k].chestlist[key].type == "ocarina" && OcarinaShuffle == false && dungeons[k] == dungeons[32]) { //Ocarina shuffle for field
+        if ( chestlist[key].access == "no OWER" && chestlist[key].type == "ocarina" && ((OWERmap == true && OcarinaShuffle == true) || OcarinaShuffle == false) ) { //OWER Ocarina shuffle
             continue;}
-         if ( dungeons[k].chestlist[key].type == "ocarina" && dungeons[k] == dungeons[18] && ((OWERmap == false && OcarinaShuffle == true) || OcarinaShuffle == false) ) { //Ocarina shuffle for OWER
+        if ( chestlist[key].type == "guard" && gerudobridge !== "Default" && smallkeys == "Keysanity" ) { //Fortress Guard checks
             continue;}
-         if ( dungeons[k].chestlist[key].type == "ocarina" && dungeons[k] == dungeons[0] && ((OWERmap == true && OcarinaShuffle == true) || OcarinaShuffle == false) ) { //Ocarina shuffle for no OWER
+        if (chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
             continue;}
-         if ( dungeons[k] == dungeons[28] && dungeons[k].chestlist[key].type == "guard" && gerudobridge !== "Default" && smallkeys == "Keysanity" ) { //Fortress Guard checks
-            continue;}
-         if (dungeons[k].chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
-            continue;}
-         if (chestlist.hasOwnProperty(key)) {
-            if (!chestlist[key].isOpened)
-               unopened++;
-
-            if (!chestlist[key].isOpened && chestlist[key].isAvailable())
-               canGet++;
+      for (k = 1; k < 13; k++) {
+           if ( dungeons[k].mixedtype == "vanilla" && quest == "Mixed" && chestlist[key].access == "master") { //Mixed master checks
+               continue;}
+           if ( dungeons[k].mixedtype == "master" && quest == "Mixed" && chestlist[key].access == "vanilla") { //Mixed vanilla checks
+               continue;}
          }
+      if (chestlist.hasOwnProperty(key)) {
+         if (!chestlist[key].isOpened)
+            unopened++;
+
+         if (!chestlist[key].isOpened && chestlist[key].isAvailable())
+            canGet++;
       }
    }
 
