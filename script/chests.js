@@ -84,67 +84,89 @@ var dungeons = [
           type: "entrance",
           access: "entrance",
           isAvailable: function () {
-               return true; }
+               return OWER == false && dungeons[0].found == false; }
        },
          'Fairy Ocarina': {
             type: "ocarina",
             access: "no OWER",
             isAvailable: function () {
-               return true; }
+               return (OWER == false || dungeons[0].found == true) && OcarinaShuffle == false; }
          },
          'Mido\'s House': {
             type: "simple",
             access: "door",
             isAvailable: function () {
-               return true; }
+               return (OWER == false || dungeons[0].found == true) && IndoorER !== "Off"; }
          },
-         'Mido\'s House x4 Chests': {
+         'Mido\'s House 1': {
             type: "chest",
             access: "simple",
             isAvailable: function () {
-               return true; }
+               return (OWER == false || dungeons[0].found == true) && IndoorER == "Off"; }
+         },
+         'Mido\'s House 2': {
+            type: "chest",
+            access: "simple",
+            isAvailable: function () {
+               return (OWER == false || dungeons[0].found == true) && IndoorER == "Off"; }
+         },
+         'Mido\'s House 3': {
+            type: "chest",
+            access: "simple",
+            isAvailable: function () {
+               return (OWER == false || dungeons[0].found == true) && IndoorER == "Off"; }
+         },
+         'Mido\'s House 4': {
+            type: "chest",
+            access: "simple",
+            isAvailable: function () {
+               return (OWER == false || dungeons[0].found == true) && IndoorER == "Off"; }
          },
          'Know It All Bro\'s': {
             type: "simple",
             access: "door",
             isAvailable: function () {
-               return true; }
+               return (OWER == false || dungeons[0].found == true) && IndoorER !== "Off"; }
          },
          'Child Know it All Bros Skulltula': {
             type: "skulltula",
             access: "outdoor",
-            isAvailable: function () {
-               return true; }
+            isAvailable: function () { //Child only outdoor
+               return (OWER == false || dungeons[0].found == true) && 
+                  (Age "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); }
          },
          'Kokiri Sword Chest': {
-            type: "chest",
+            type: "ksword",
             access: "outdoor",
             isAvailable: function () {
-               return true; }
+               return (OWER == false || dungeons[0].found == true) && 
+                  (Age "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); }
          },
          'Link\'s House': {
             type: "alldoor",
             access: "door",
             isAvailable: function () {
-               return true; }
+               return (OWER == false || dungeons[0].found == true) && IndoorER == "Full" ; }
          },
          'Link\'s House Cow': {
             type: "cow",
             access: "alldoor",
-            isAvailable: function () {
-               return items.Ocarina && items.EponasSong; }
+            isAvailable: function () { //Child only indoor
+               return (OWER == false || dungeons[0].found == true) && IndoorER !== "Full" && Cowsanity == false
+                 && (Age "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) &&
+                  items.Ocarina && items.EponasSong; }
          },
          'Saria\'s House': {
             type: "simple",
             access: "door",
             isAvailable: function () {
-               return true; }
+               return (OWER == false || dungeons[0].found == true) && IndoorER !== "Off"; }
          },
          'Twin\'s House': {
             type: "simple",
             access: "door",
             isAvailable: function () {
-               return true; }
+               return (OWER == false || dungeons[0].found == true) && IndoorER !== "Off"; }
          },
          'Adult Twin\'s House Roof Skulltula': {
             type: "skulltula",
@@ -162,7 +184,7 @@ var dungeons = [
             type: "simple",
             access: "door",
             isAvailable: function () {
-               return true; }
+               return (OWER == false || dungeons[0].found == true) && IndoorER !== "Off"; }
          },
          'Kokiri Sale': {
             type: "shop",
