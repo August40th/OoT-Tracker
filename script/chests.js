@@ -5594,7 +5594,7 @@ var dungeons = [
          },
          'Dampe\'s Hut': {
             type: "simple", 
-            access: "outdoor",
+            access: "door",
             isAvailable: function () {
                return true; }
          },
