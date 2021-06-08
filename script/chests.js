@@ -133,14 +133,15 @@ var dungeons = [
             access: "outdoor",
             isAvailable: function () { //Child only outdoor
                return (OWER == false || dungeons[0].found == true) && 
-                  (Age "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); }
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) 
+                  ); }
          },
          'Kokiri Sword Chest': {
             type: "ksword",
             access: "outdoor",
             isAvailable: function () {
                return (OWER == false || dungeons[0].found == true) && 
-                  (Age "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); }
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); }
          },
          'Link\'s House': {
             type: "alldoor",
@@ -153,7 +154,7 @@ var dungeons = [
             access: "alldoor",
             isAvailable: function () { //Child only indoor
                return (OWER == false || dungeons[0].found == true) && IndoorER !== "Full" && Cowsanity == false
-                 && (Age "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) &&
+                 && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) &&
                   items.Ocarina && items.EponasSong; }
          },
          'Saria\'s House': {
@@ -171,8 +172,10 @@ var dungeons = [
          'Adult Twin\'s House Roof Skulltula': {
             type: "skulltula",
             access: "outdoor",
-            isAvailable: function () {
-               return items.MasterSword && items.Hookshot; }
+            isAvailable: function () { //Adult only outdoor
+               return (OWER == false || dungeons[0].found == true) && IndoorER !== "Full" && Cowsanity == false
+                 && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) 
+               && items.Hookshot; }
          },
          'Soil Patch Skulltula': {
             type: "skulltula",
