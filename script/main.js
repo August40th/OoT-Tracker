@@ -559,7 +559,7 @@ function clickDungeon(d) {
             continue;}
         if ( dungeons[dungeonSelect] == dungeons[20] && dungeons[dungeonSelect].chestlist[key].type == "bean" && BeanShuffle == false ) { //Bean shuffle
             continue;}
-        if ( dungeons[dungeonSelect] == dungeons[16] && dungeons[dungeonSelect].chestlist[key].type == "egg" && WeirdEgg == false ) { //Bean shuffle
+        if ( dungeons[dungeonSelect] == dungeons[15] && dungeons[dungeonSelect].chestlist[key].type == "egg" && WeirdEgg == false ) { //Bean shuffle
             continue;}
         if ( dungeons[dungeonSelect] == dungeons[17] && dungeons[dungeonSelect].chestlist[key].type == "knife" && Medigoron == false ) { //Medigoron item
             continue;}
@@ -1546,7 +1546,7 @@ function updateMap() {
                 continue;}
             if ( dungeons[k] == dungeons[20] && dungeons[k].chestlist[key].type == "bean" && BeanShuffle == false ) { //Bean shuffle
                 continue;}
-            if ( dungeons[k] == dungeons[16] && dungeons[k].chestlist[key].type == "egg" && WeirdEgg == false ) { //Bean shuffle
+            if ( dungeons[k] == dungeons[15] && dungeons[k].chestlist[key].type == "egg" && WeirdEgg == false ) { //Bean shuffle
                 continue;}
             if ( dungeons[k] == dungeons[17] && dungeons[k].chestlist[key].type == "knife" && Medigoron == false ) { //Medigoron item
                 continue;}
@@ -1725,7 +1725,7 @@ function populateMapdiv() {
                 continue;}
             if ( dungeons[k] == dungeons[20] && dungeons[k].chestlist[key].type == "bean" && BeanShuffle == false ) { //Bean shuffle
                 continue;}
-            if ( dungeons[k] == dungeons[16] && dungeons[k].chestlist[key].type == "egg" && WeirdEgg == false ) { //Bean shuffle
+            if ( dungeons[k] == dungeons[15] && dungeons[k].chestlist[key].type == "egg" && WeirdEgg == false ) { //Bean shuffle
                 continue;}
             if ( dungeons[k] == dungeons[17] && dungeons[k].chestlist[key].type == "knife" && Medigoron == false ) { //Medigoron item
                 continue;}
@@ -1849,7 +1849,7 @@ function populateMapdiv() {
             continue;}
         if ( dungeons[dungeonSelect] == dungeons[20] && dungeons[dungeonSelect].chestlist[key].type == "bean" && BeanShuffle == false ) { //Bean shuffle
             continue;}
-        if ( dungeons[dungeonSelect] == dungeons[16] && dungeons[dungeonSelect].chestlist[key].type == "egg" && WeirdEgg == false ) { //Bean shuffle
+        if ( dungeons[dungeonSelect] == dungeons[15] && dungeons[dungeonSelect].chestlist[key].type == "egg" && WeirdEgg == false ) { //Bean shuffle
             continue;}
         if ( dungeons[dungeonSelect] == dungeons[17] && dungeons[dungeonSelect].chestlist[key].type == "knife" && Medigoron == false ) { //Medigoron item
             continue;}
