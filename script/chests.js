@@ -74,6 +74,7 @@ var dungeons = [
       x: "78.9%",
       y: "63.9%",
       type: "overworld",
+      found: true,
       chestlist: {
          'Forest to Field': {
           x: "75.0%",
@@ -231,6 +232,7 @@ var dungeons = [
       type: "dungeon",
       mixedtype: "default",
       keytype: "none",
+      found: true,
       chestlist: {
          'Lobby Chest': {
             type: "chest",
@@ -392,7 +394,8 @@ var dungeons = [
       y: "08.4%",
       type: "dungeon",
       mixedtype: "default",
-      keytype: "none",      
+      keytype: "none",
+      found: true,
       chestlist: {
          'Lobby Gossip': {
             type: "gossip",
@@ -604,6 +607,7 @@ var dungeons = [
       type: "dungeon",
       mixedtype: "default",
       keytype: "none",
+      found: true,
       chestlist: {
          'Water Switch Skulltula': {
             type: "skulltula",
@@ -774,6 +778,7 @@ var dungeons = [
       type: "dungeon",
       mixedtype: "default",
       keytype: "Well",
+      found: true,
       chestlist: {
          'Front Left Hidden Wall': {
             type: "chest",
@@ -956,6 +961,7 @@ var dungeons = [
       type: "dungeon",
       mixedtype: "default",
       keytype: "Forest",
+      found: true,
       chestlist: {
          'Lobby Skulltula': {
             type: "skulltula",
@@ -1226,6 +1232,7 @@ var dungeons = [
       type: "dungeon",
       mixedtype: "default",
       keytype: "Fire",
+      found: true,
       chestlist: {
          'Chest Near Boss': {
             type: "chest",
@@ -1625,6 +1632,7 @@ var dungeons = [
       type: "dungeon",
       mixedtype: "default",
       keytype: "none",
+      found: true,
       chestlist: {
          'Above Silver Rupee Skulltula': {
             type: "skulltula",
@@ -1753,6 +1761,7 @@ var dungeons = [
       type: "dungeon",
       mixedtype: "default",
       keytype: "Water",
+      found: true,
       chestlist: {
          'Water Jet Chest': {
             type: "chest",
@@ -1986,6 +1995,7 @@ var dungeons = [
       type: "dungeon",
       mixedtype: "default",
       keytype: "GTG",
+      found: true,
       chestlist: {
          'Lobby Right Chest': {
             type: "chest",
@@ -2246,6 +2256,7 @@ var dungeons = [
       type: "dungeon",
       mixedtype: "default",
       keytype: "Spirit",
+      found: true,
       chestlist: {
          ['Child Switch Room']: {
             type: "chest",
@@ -2671,6 +2682,7 @@ var dungeons = [
       type: "dungeon",
       mixedtype: "default",
       keytype: "Shadow",
+      found: true,
       chestlist: {
          'Keese and Redead Chest': {
             type: "chest",
@@ -3039,6 +3051,7 @@ var dungeons = [
       type: "dungeon",
       mixedtype: "default",
       keytype: "Castle",
+      found: true,
       chestlist: {
          ['Forest Chest']: {
             type: "chest",
@@ -3251,6 +3264,7 @@ var dungeons = [
       x: "50.5%",
       y: "20.2%",
       type: "overworld",
+      found: true,
       chestlist: {
          'Topdown to Drawbridge': {
           x: "52.5%",
@@ -3426,6 +3440,7 @@ var dungeons = [
       x: "55.5%",
       y: "18.2%",
       type: "overworld",
+      found: true,
       chestlist: {
          'Temple to Market': {
             x: "56.0%",
@@ -3502,6 +3517,7 @@ var dungeons = [
       x: "49.0%",
       y: "14.0%",
       type: "overworld",
+      found: true,
       chestlist: {
          'Castle to Market': {
             x: "52.5%",
@@ -3608,6 +3624,7 @@ var dungeons = [
       x: "65.4%",
       y: "22.0%",
       type: "overworld",
+      found: true,
       chestlist: {
          'Village to Field': {
             x: "62.0%",
@@ -3891,6 +3908,7 @@ var dungeons = [
       x: "70.0%",
       y: "06.3%",
       type: "overworld",
+      found: true,
       chestlist: {
          'City to Trail': {
             x: "65.0%",
@@ -4038,6 +4056,7 @@ var dungeons = [
       x: "75.3%",
       y: "47.0%",
       type: "overworld",
+      found: true,
       chestlist: {
          'Bridge to Forest': {
             x: "72.7%",
@@ -4229,6 +4248,7 @@ var dungeons = [
       x: "80.3%",
       y: "47.0%",
       type: "overworld",
+      found: true,
       chestlist: {
          'Meadow to Woods': {
             x: "80.0%",
@@ -4337,6 +4357,7 @@ var dungeons = [
       x: "78.7%",
       y: "29.5%",
       type: "overworld",
+      found: true,
       chestlist: {
          'River to Field': {
             x: "70.0%",
@@ -4491,6 +4512,7 @@ var dungeons = [
       x: "92.9%",
       y: "34.5%",
       type: "overworld",
+      found: true,
       chestlist: {
          'Domain to River': {
             x: "90.0%",
@@ -4582,6 +4604,7 @@ var dungeons = [
       x: "92.9%",
       y: "28.0%",
       type: "overworld",
+      found: true,
       chestlist: {
          'Fountain to Domain': {
             type: "entrance", 
@@ -4678,6 +4701,7 @@ var dungeons = [
       x: "62.0%",
       y: "13.7%",
       type: "overworld",
+      found: true,
       chestlist: {
          'Trail to Village': {
             x: "63.1%",
@@ -4832,6 +4856,7 @@ var dungeons = [
       x: "65.4%",
       y: "09.0%",
       type: "overworld",
+      found: true,
       chestlist: {
          'Crater to City': {
             x: "68.6%",
@@ -4970,6 +4995,7 @@ var dungeons = [
       x: "47.4%",
       y: "45.6%",
       type: "overworld",
+      found: true,
       chestlist: {
          'Ranch to Field': {
             x: "48.4%",
@@ -5100,6 +5126,7 @@ var dungeons = [
       x: "40.0%",
       y: "81.0%",
       type: "overworld",
+      found: true,
       chestlist: {
          'Lake to Field': {
             x: "39.0%",
@@ -5273,6 +5300,7 @@ var dungeons = [
       x: "19.0%",
       y: "31.5%",
       type: "overworld",
+      found: true,
       chestlist: {
          'Valley to Field': {
             x: "30.0%",
@@ -5391,6 +5419,7 @@ var dungeons = [
       x: "15.5%",
       y: "16.4%",
       type: "overworld",
+      found: true,
       chestlist: {
          'Fortress to Valley': {
             x: "18.0%",
@@ -5475,6 +5504,7 @@ var dungeons = [
       x: "8.4%",
       y: "15.9%",
       type: "overworld",
+      found: true,
       chestlist: {
          'Desert to Wasteland': {
             x: "8.4%",
@@ -5583,6 +5613,7 @@ var dungeons = [
       x: "73.7%",
       y: "19.5%",
       type: "overworld",
+      found: true,
       chestlist: {
          'Graveyard to Village': {
             x: "72.7%",
@@ -5725,6 +5756,7 @@ var dungeons = [
       x: "14.0%",
       y: "25.0%",
       type: "overworld",
+      found: true,
       chestlist: {
          'Wasteland to Fortress': {
             x: "14.0%",
@@ -5776,6 +5808,7 @@ var dungeons = [
       x: "54.0%",
       y: "42.0%",
       type: "overworld",
+      found: true,
       chestlist: {
          'Ocarina of Time': {
             x: "54.3%",
