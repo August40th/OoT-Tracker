@@ -181,7 +181,8 @@ var dungeons = [
             type: "skulltula",
             access: "outdoor",
             isAvailable: function () {
-               return items.Bottle; }
+               return (OWERmap == false || dungeons[0].found == true) && 
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) && items.Bottle; }
          },
          'Kokiri Shop': {
             type: "simple",
@@ -193,31 +194,34 @@ var dungeons = [
             type: "shop",
             access: "simple",
             isAvailable: function () {
-               return true; }
+               return (OWERmap == false || dungeons[0].found == true) && IndoorER !== "Off"; }
          },
          'Infront Storms Grotto': {
             type: "gossip",
             access: "outdoor",
             isAvailable: function () {
-               return true; }
+               return (OWERmap == false || dungeons[0].found == true) && IndoorER !== "Off"; }
          },
          'Song of Storms Grotto': {
             type: "grotto",
             access: "grotto",
             isAvailable: function () {
-               return items.Ocarina && items.SongofStorms; }
+               return (OWERmap == false || dungeons[0].found == true) && GrottoER == true
+               && items.Ocarina && items.SongofStorms; }
          },
          'Storms Grotto Chest': {
             type: "chest",
             access: "grotto",
             isAvailable: function () {
-               return items.Ocarina && items.SongofStorms; }
+               return (OWERmap == false || dungeons[0].found == true) && GrottoER == true &&
+                  items.Ocarina && items.SongofStorms; }
          },
          'Storms Grotto Gossip': {
             type: "gossip",
             access: "outdoor",
             isAvailable: function () {
-               return true; }
+               return (OWERmap == false || dungeons[0].found == true) && GrottoER == true &&
+                  items.Ocarina && items.SongofStorms; }
          },
          'Forest to Woods': {
           x: "78.9%",
@@ -225,25 +229,28 @@ var dungeons = [
           type: "entrance",
           access: "entrance",
           isAvailable: function () {
-               return true; }
+               return OWERmap == false && dungeons[0].found == false; }
        },
          'Left of Deku Tree Gossip': {
             type: "gossip",
             access: "outdoor",
             isAvailable: function () {
-               return true; }
+               return OWERmap == false && dungeons[0].found == false && 
+                  (items.DekuShield && OpenDeku == true) || (items.KokiriSword && items.DekuShield); }
          },
          'Behind Deku Tree Gossip': {
             type: "gossip",
             access: "outdoor",
             isAvailable: function () {
-               return true; }
+               return OWERmap == false && dungeons[0].found == false && 
+                  (items.DekuShield && OpenDeku == true) || (items.KokiriSword && items.DekuShield); }
          },
          'Inside the Deku Tree': {
             type: "dungeon",
             access: "door",
             isAvailable: function () {
-               return (items.DekuShield && OpenDeku == 0) || (items.KokiriSword&& items.DekuShield);}
+               return OWERmap == false && dungeons[0].found == false && 
+                  (items.DekuShield && OpenDeku == true) || (items.KokiriSword && items.DekuShield);}
          },
       },
       isBeatable: function () {
