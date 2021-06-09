@@ -213,7 +213,7 @@ var dungeons = [
             type: "chest",
             access: "grotto",
             isAvailable: function () {
-               return (OWERmap == false || dungeons[0].found == true) && GrottoER == true &&
+               return (OWERmap == false || dungeons[0].found == true) &&
                   items.Ocarina && items.SongofStorms; }
          },
          'Storms Grotto Gossip': {
