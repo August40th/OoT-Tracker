@@ -163,7 +163,7 @@ var defaultItemGrid = [
         "Hammer",
         "BigPoe",
         "Skulltula",
-        "GoMode"
+        "GoMode",
         "Bean",
         "Boomerang",
         "Bombchu",
