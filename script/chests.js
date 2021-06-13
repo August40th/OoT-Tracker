@@ -4076,63 +4076,78 @@ var dungeons = [
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
-               return true;
-            },
+               return (OWERmap == false || dungeons[?].found == true) && 
+                  (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
+            }
          },
          ['Little Rolling Goron']: {
             type: "NPC", 
             access: "outdoor",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Glove || items.Bombs || items.Bow || (items.Bombchu && BombchuLogic));
+               return (OWERmap == false || dungeons[?].found == true) && 
+                  (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+               && (items.Glove || items.Bombs || (items.Bombchu && BombchuLogic) || items.Bow) ;
             }
          },
          ['Medigoron']: {
             type: "knife", 
             access: "outdoor",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Glove || items.Bombs || (items.Bombchu && BombchuLogic));
+               return (OWERmap == false || dungeons[?].found == true) && 
+                  (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+               && (items.Glove || items.Bombs || (items.Bombchu && BombchuLogic) ) ;
             }
          },
          'Medigoron Gossip': {
             type: "gossip", 
             access: "outdoor",
             isAvailable: function () {
-               return true
+               return (OWERmap == false || dungeons[?].found == true)
+               && (items.Glove || items.Bombs || (items.Bombchu && BombchuLogic) ) ;
             }
          },
          ['Left Boulder Maze Chest']: {
             type: "chest", 
             access: "outdoor",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Glove >= 2 || items.Hammer);
+               return (OWERmap == false || dungeons[?].found == true) && 
+                  (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+               && (items.Glove >= 2 || items.Hammer || 
+                   (items.HoverBoots && (items.Bombs || (items.Bombchu && BombchuLogic) ) ) 
+                  ) ;
             }
          },
          ['Center Boulder Maze Chest']: {
             type: "chest", 
             access: "outdoor",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (OpenGate == 1 || (OpenGate == 0 && (items.Mask >= 1 || items.MasterSword || items.Bombs || (items.Dins && items.Magic) || (items.Bombchu && BombchuLogic)))) && (items.Bombs || (items.MasterSword && (items.Hammer || items.Glove >= 2)) || (items.Bombchu && BombchuLogic));
+               return (OWERmap == false || dungeons[?].found == true)
+               && (items.Bombs || (items.Bombchu && BombchuLogic) ) ;
             }
          },
          'Maze Crate Skulltula': {
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
-               return items.Bombs
+               return (OWERmap == false || dungeons[?].found == true) && 
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+               && (items.Bombs || (items.Bombchu && BombchuLogic) ) ;
             }
          },
          'Maze Gossip': {
             type: "gossip", 
             access: "outdoor",
             isAvailable: function () {
-               return true
+               return (OWERmap == false || dungeons[?].found == true)
+               && (items.Bombs || (items.Bombchu && BombchuLogic) ) ;
             }
          },
          ['Right Boulder Maze Chest']: {
             type: "chest", 
             access: "outdoor",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (OpenGate == 1 || (OpenGate == 0 && (items.Mask >= 1 || items.MasterSword || items.Bombs || (items.Dins && items.Magic) || (items.Bombchu && BombchuLogic)))) && (items.Bombs || (items.MasterSword && (items.Hammer || items.Glove >= 2)) || (items.Bombchu && BombchuLogic));
+               return (OWERmap == false || dungeons[?].found == true)
+               && (items.Bombs || (items.Bombchu && BombchuLogic) ) ;
             }
          },
          'Lava Cross Grotto': {
@@ -4160,33 +4175,55 @@ var dungeons = [
             type: "simple", 
             access: "door",
                isAvailable: function () {
-                  return true; }
+                  return (OWERmap == false || dungeons[16].found == true) &&
+                  ( items.Bombs || (items.Bow && 
+                       (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                      )
+                  ) || ((items.Glove || (items.Ocarina && items.ZeldasLullaby) || (items.Dins && items.Magic) && 
+                       (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                      )
+                  );
+               }
          },
          'Goron Sale': {
             type: "shop", 
             access: "simple",
             isAvailable: function () {
-               return true; }
+               return (OWERmap == false || dungeons[16].found == true) &&
+                  ( items.Bombs || (items.Bow && 
+                       (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                      )
+                  ) || ((items.Glove || (items.Ocarina && items.ZeldasLullaby) || (items.Dins && items.Magic) && 
+                       (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                      )
+                  );
+               }
          },
          ['Big Rolling Goron']: {
             type: "NPC", 
             access: "outdoor",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (OpenGate == 1 || (OpenGate == 0 && (items.Mask >= 1 || items.MasterSword || items.Bombs || (items.Dins && items.Magic) || (items.Bombchu && BombchuLogic)))) && (items.Bombs);
+               return (OWERmap == false || dungeons[?].found == true) && 
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+               && (items.Bombs || (items.Bombchu && BombchuLogic) ) ;
             }
          },
          ['Spinning Pot Freestanding']: {
             type: "freestanding", 
             access: "outdoor",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (OpenGate == 1 || (OpenGate == 0 && (items.Mask >= 1 || items.MasterSword || items.Bombs || (items.Dins && items.Magic) || (items.Bombchu && BombchuLogic)))) && ((items.Glove || items.Bombs) && ((items.Ocarina && items.ZeldasLullaby && items.Stick) || (items.Magic && items.Dins)));
+               return (OWERmap == false || dungeons[?].found == true) && 
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+               && (items.Glove || items.Bombs ) ;
             }
          },
          ['Darunia\'s Dance']: {
             type: "NPC", 
             access: "outdoor",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (OpenGate == 1 || (OpenGate == 0 && (items.Mask >= 1 || items.MasterSword || items.Bombs || (items.Dins && items.Magic) || (items.Bombchu && BombchuLogic)))) && (items.Ocarina && items.ZeldasLullaby && items.SariasSong);
+               return (OWERmap == false || dungeons[?].found == true) && 
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+               && items.Ocarina && items.SariasSong && items.ZeldasLullaby;
             }
          },
          'City to Crater': {
