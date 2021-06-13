@@ -3575,13 +3575,15 @@ var dungeons = [
             isAvailable: function () {
                return (OWERmap == false || dungeons[14].found == true) && IndoorER !== "Full" && 
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) 
-                  ) && ( (items.ShadowMedallion && items.SpiritMedallion && (castlelogic != "LACSStones" || castlelogic != "LACSMeds" || castlelogic != "LACSAD")
-                         ) || (items.KokiriEmerald && items.GoronRuby && items.ZoraSapphire && castlelogic == "LACSStones") 
-                   || (items.ForestMedallion && items.FireMedallion && items.WaterMedallion && items.LightMedallion 
-                       && items.ShadowMedallion && items.SpiritMedallion && castlelogic == "LACSMeds") 
-                   || (items.KokiriEmerald && items.GoronRuby && items.ZoraSapphire && items.ForestMedallion && items.FireMedallion && items.WaterMedallion && items.LightMedallion 
-                       && items.ShadowMedallion && items.SpiritMedallion && castlelogic == "LACSAD") 
-                   );
+                  ) && ( (items.ShadowMedallion && items.SpiritMedallion && castlelogic !== "LACSStones" 
+                          && castlelogic !== "LACSMeds" && castlelogic !== "LACSAD")
+                        || (items.KokiriEmerald && items.GoronRuby && items.ZoraSapphire 
+                            && castlelogic == "LACSStones") 
+                        || (items.ForestMedallion && items.FireMedallion && items.WaterMedallion && items.LightMedallion 
+                            && items.ShadowMedallion && items.SpiritMedallion && castlelogic == "LACSMeds") 
+                        || (items.KokiriEmerald && items.GoronRuby && items.ZoraSapphire && items.ForestMedallion && items.FireMedallion && items.WaterMedallion && items.LightMedallion 
+                            && items.ShadowMedallion && items.SpiritMedallion && castlelogic == "LACSAD") 
+                       );
             }
          },
       },
