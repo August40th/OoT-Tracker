@@ -3518,41 +3518,41 @@ var dungeons = [
             type: "entrance",
             access: "entrance",
              isAvailable: function () {
-                  return true; }
+                  return OWERmap == false || dungeons[14].found == true; }
           },
          'Temple Gossip 1': {
             type: "gossip",
             access: "outdoor",
             isAvailable: function () {
-               return true;
+               return OWERmap == false || dungeons[14].found == true;
             }
          },
          'Temple Gossip 2': {
             type: "gossip",
             access: "outdoor",
             isAvailable: function () {
-               return true;
+               return OWERmap == false || dungeons[14].found == true;
             }
          },
          'Temple Gossip 3': {
             type: "gossip",
             access: "outdoor",
             isAvailable: function () {
-               return true;
+               return OWERmap == false || dungeons[14].found == true;
             }
          },
          'Temple Gossip 4': {
             type: "gossip",
             access: "outdoor",
             isAvailable: function () {
-               return true;
+               return OWERmap == false || dungeons[14].found == true;
             }
          },
          'Temple of Time': {
             type: "alldoor", 
             access: "door",
             isAvailable: function () {
-               return true; }
+               return OWERmap == false || dungeons[14].found == true; }
          },
          'Prelude Warp': {
             type: "warp", 
@@ -3575,7 +3575,7 @@ var dungeons = [
             isAvailable: function () {
                return (OWERmap == false || dungeons[14].found == true) && IndoorER !== "Full" && 
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) 
-                  ) && ( (items.ShadowMedallion && items.SpiritMedallion) 
+                  ) && ( (items.ShadowMedallion && items.SpiritMedallion&& && (castlelogic !== "LACSStones" || castlelogic !== "LACSMeds" || castlelogic !== "LACSAD")) 
                    || (items.KokiriEmerald && items.GoronRuby && items.ZoraSapphire && castlelogic == "LACSStones") 
                    || (items.ForestMedallion && items.FireMedallion && items.WaterMedallion && items.LightMedallion 
                        && items.ShadowMedallion && items.SpiritMedallion && castlelogic == "LACSMeds") 
