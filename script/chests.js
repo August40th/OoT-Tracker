@@ -3318,14 +3318,17 @@ var dungeons = [
             type: "skulltula", 
             access: "simple",
             isAvailable: function () {
-               return true
+               return (OWERmap == false || dungeons[13].found == true) && IndoorER == "Off"
+                 && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
          },
          ['10 Big Poes']: {
             type: "NPC", 
             access: "simple",
-            isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword && items.Bow && items.EponasSong && items.Bottle);
+            isAvailable: function () { //Adult only indoor
+               return (OWERmap == false || dungeons[13].found == true) && IndoorER == "Off" 
+               && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+               && items.BigPoe >= 1;
             }
          },
          'Topdown to Market': {
@@ -3347,72 +3350,95 @@ var dungeons = [
          'Treasure game': {
             type: "simple", 
             access: "door",
-               isAvailable: function () {
-                  return true; }
+            isAvailable: function () {
+               return (OWERmap == false || dungeons[13].found == true) && 
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) 
+                  );
+            }
          },
          ['Treasure Chest Mini Game']: {
             type: "chest", 
             access: "simple",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Lens && items.Magic);
+               return (OWERmap == false || dungeons[13].found == true) && IndoorER == "Off"
+                 && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) 
+                    && items.Magic >= 1 && items.Lens);
             }
          },
          'Bombchu Shop': {
             type: "simple", 
             access: "door",
             isAvailable: function () {
-               return true; }
+               return (OWERmap == false || dungeons[13].found == true) && 
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) 
+                  ); 
+            }
          },
          'Bombchu Sale': {
             type: "shop", 
             access: "simple",
             isAvailable: function () {
-               return true; }
+               return (OWERmap == false || dungeons[13].found == true) && IndoorER == "Off"
+                 && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
+            }
          },
          ['Return Richard']: {
             type: "NPC", 
             access: "outdoor",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0));
+               return (OWERmap == false || dungeons[13].found == true) && 
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) 
+                  );
             }
          },
          'Back Alley House': {
             type: "simple", 
             access: "door",
             isAvailable: function () {
-               return true; }
+               return (OWERmap == false || dungeons[13].found == true) && 
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) 
+                  );
+            }
          },
          'Slingshot Shooting': {
             type: "simple", 
             access: "door",
             isAvailable: function () {
-               return true; }
+               return (OWERmap == false || dungeons[13].found == true) &&
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
+            }
          },
          ['Slingshot Mini Game']: {
             type: "NPC", 
             access: "simple",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0));
+               return (OWERmap == false || dungeons[13].found == true) && IndoorER == "Off"
+                 && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
          },
          'Bowling': {
             type: "simple", 
             access: "door",
             isAvailable: function () {
-               return true; }
+               return (OWERmap == false || dungeons[13].found == true) &&
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
+            }
          },
          ['Bombchu Bowling 1']: {
             type: "NPC", 
             access: "simple",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.Bombchu && BombchuLogic));
-            }
+               return (OWERmap == false || dungeons[13].found == true) && IndoorER == "Off"
+                 && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+               && (items.Bombs || (items.Bombchu && BombchuLogic));}
          },
          ['Bombchu Bowling 2']: {
             type: "NPC", 
             access: "simple",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.Bombchu && BombchuLogic));
+               return (OWERmap == false || dungeons[13].found == true) && IndoorER == "Off"
+                 && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+               && (items.Bombs || (items.Bombchu && BombchuLogic));
             }
          },
          'Market to Castle': {
@@ -3427,7 +3453,9 @@ var dungeons = [
             type: "simple", 
             access: "door",
             isAvailable: function () {
-               return true; }
+               return (OWERmap == false || dungeons[13].found == true) &&
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
+            }
          },
          'Market to Temple': {
             x: "55.0%",
@@ -3441,25 +3469,33 @@ var dungeons = [
             type: "simple", 
             access: "door",
             isAvailable: function () {
-               return true; }
+               return (OWERmap == false || dungeons[13].found == true) &&
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
+            }
          },
          'Potion Sale': {
             type: "shop", 
             access: "simple",
             isAvailable: function () {
-               return true; }
+               return (OWERmap == false || dungeons[13].found == true) && IndoorER == "Off"
+                 && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
+            }
          },
          'Bazar': {
             type: "simple", 
             access: "door",
             isAvailable: function () {
-               return true; }
+               return (OWERmap == false || dungeons[13].found == true) &&
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
+            }
          },
          'Bazaar Sale': {
             type: "shop", 
             access: "simple",
             isAvailable: function () {
-               return true; }
+               return (OWERmap == false || dungeons[13].found == true) && IndoorER == "Off"
+                 && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
+            }
          },
       },
       isBeatable: function () {
@@ -3488,28 +3524,28 @@ var dungeons = [
             type: "gossip",
             access: "outdoor",
             isAvailable: function () {
-               return true
+               return true;
             }
          },
          'Temple Gossip 2': {
             type: "gossip",
             access: "outdoor",
             isAvailable: function () {
-               return true
+               return true;
             }
          },
          'Temple Gossip 3': {
             type: "gossip",
             access: "outdoor",
             isAvailable: function () {
-               return true
+               return true;
             }
          },
          'Temple Gossip 4': {
             type: "gossip",
             access: "outdoor",
             isAvailable: function () {
-               return true
+               return true;
             }
          },
          'Temple of Time': {
@@ -3528,14 +3564,24 @@ var dungeons = [
             type: "song", 
             access: "alldoor",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword && items.ForestMedallion);
+               return (OWERmap == false || dungeons[14].found == true) && IndoorER !== "Full" && 
+                  (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+               && items.ForestMedallion;
             }
          },
          ['Zelda\'s Secret Weapon']: {
             type: "NPC", 
             access: "alldoor",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword && items.ShadowMedallion && items.SpiritMedallion);
+               return (OWERmap == false || dungeons[14].found == true) && IndoorER !== "Full" && 
+                  (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) 
+                  ) && ( (items.ShadowMedallion && items.SpiritMedallion) 
+                   || (items.KokiriEmerald && items.GoronRuby && items.ZoraSapphire && castlelogic == "LACSStones") 
+                   || (items.ForestMedallion && items.FireMedallion && items.WaterMedallion && items.LightMedallion 
+                       && items.ShadowMedallion && items.SpiritMedallion && castlelogic == "LACSMeds") 
+                   || (items.KokiriEmerald && items.GoronRuby && items.ZoraSapphire && items.ForestMedallion && items.FireMedallion && items.WaterMedallion && items.LightMedallion 
+                       && items.ShadowMedallion && items.SpiritMedallion && castlelogic == "LACSAD") 
+                   );
             }
          },
       },
@@ -3565,75 +3611,99 @@ var dungeons = [
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
-               return true
+               return (OWERmap == false || dungeons[15].found == true) && 
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) 
+                  );
             }
          },
          'Malon\s Weird Egg': {
             type: "egg", 
             access: "outdoor",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0));
+               return (OWERmap == false || dungeons[15].found == true) && 
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) 
+                  );
             }
          },
          'Above Malon': {
             type: "gossip",
             access: "outdoor",
             isAvailable: function () {
-               return true
+               return (OWERmap == false || dungeons[15].found == true) && 
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) 
+                  );
             }
          },
          'Din\'s Fairy Fountain': {
             type: "simple", 
             access: "door",
                isAvailable: function () {
-                  return true; }
+                  return (OWERmap == false || dungeons[15].found == true) && 
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) 
+                  ) && (items.Bombs || (items.Bombchu && BombchuLogic));
+               }
          },
          'Dins Great Fairy': {
             type: "NPC", 
             access: "simple",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Ocarina && items.ZeldasLullaby;
+               return (OWERmap == false || dungeons[15].found == true) && IndoorER == "Off"
+                 && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+               && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Ocarina >= 1 && items.ZeldasLullaby;
             }
          },
          'Castle Moat Stone': {
             type: "gossip",
             access: "outdoor",
             isAvailable: function () {
-               return true
+               return (OWERmap == false || dungeons[15].found == true) && 
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) 
+                  );
             }
          },
          'Castle Moat Storms Grotto': {
             type: "grotto", 
             access: "grotto",
                isAvailable: function () {
-                  return true; }
+                  return (OWERmap == false || dungeons[15].found == true) && 
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) 
+                  ) && items.Ocarina >= 1 && items.SongofStorms;
+               }
          },
          'Moat Storms Grotto Skull': {
             type: "skulltula", 
             access: "grotto",
             isAvailable: function () {
-               return items.Ocarina && items.SongofStorms && items.Bombs
+               return (OWERmap == false || dungeons[15].found == true) && GrottoER == false &&
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) 
+                  ) && items.Ocarina >= 1 && items.SongofStorms && (items.Bombs || items.Boomerang);
             }
          },
          'Storms Grotto Gossip': {
             type: "gossip",
             access: "grotto",
             isAvailable: function () {
-               return true
+               return (OWERmap == false || dungeons[15].found == true) && GrottoER == false &&
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) 
+                  ) && items.Ocarina >= 1 && items.SongofStorms && items.Bombs;
             }
          },
          'Song from Impa': {
             type: "song", 
             access: "outdoor",
             isAvailable: function () {
-               return ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Mask >= 1);
+               return (OWERmap == false || dungeons[15].found == true) && 
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) 
+                  ) && items.Mask >= 1;
             }
          },
          'Gold Gauntlets Doorway': {
             type: "simple", 
             access: "door",
                isAvailable: function () {
-                  return ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword && items.Glove >= 3 && items.Ocarina && items.ZeldasLullaby))
+                  return (OWERmap == false || dungeons[15].found == true) &&
+                     (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) 
+                     ) && items.Glove >= 3 && items.Ocarina && items.ZeldasLullaby ;
                }
          },
          'Gold Gauntlets Fairy' : {
@@ -3642,7 +3712,9 @@ var dungeons = [
             type: "NPC", 
             access: "simple",
                isAvailable: function () {
-                  return ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword && items.Glove >= 3 && items.Ocarina && items.ZeldasLullaby))
+                  return (OWERmap == false || dungeons[15].found == true) && IndoorER == "Off" &&
+                     (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) 
+                     ) && items.Glove >= 3 && items.Ocarina && items.ZeldasLullaby ;
                }
          },
       },
