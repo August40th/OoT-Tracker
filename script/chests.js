@@ -3888,7 +3888,7 @@ var dungeons = [
             type: "song", 
             access: "alldoor",
             isAvailable: function () {
-               return (OWERmap == false || dungeons[?].found == true) && 
+               return (OWERmap == false || dungeons[16].found == true) && 
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) 
                && items.Ocarina;
             }
@@ -3978,7 +3978,7 @@ var dungeons = [
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
-               return (OWERmap == false || dungeons[?].found == true) && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+               return (OWERmap == false || dungeons[16].found == true) && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && items.Hookshot;
             }
          },
