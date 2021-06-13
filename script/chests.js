@@ -4008,21 +4008,21 @@ var dungeons = [
             type: "NPC", 
             access: "simple",
             isAvailable: function () {
-               return OWERmap == false || dungeons[16].found == true && items.Skulltula >= 10) ;
+               return OWERmap == false || dungeons[16].found == true && items.Skulltula >= 10 ;
             }
          },
          ['Skulltula House 20']: {
             type: "NPC", 
             access: "simple",
             isAvailable: function () {
-               return OWERmap == false || dungeons[16].found == true && items.Skulltula >= 20) ;
+               return OWERmap == false || dungeons[16].found == true && items.Skulltula >= 20 ;
             }
          },
          ['Skulltula House 30']: {
             type: "NPC", 
             access: "simple",
             isAvailable: function () {
-               return OWERmap == false || dungeons[16].found == true && items.Skulltula >= 30) ;
+               return OWERmap == false || dungeons[16].found == true && items.Skulltula >= 30 ;
             }
          },
          ['Skulltula House 40']: {
@@ -4030,14 +4030,14 @@ var dungeons = [
             access: "simple",
             type: "indoor",
             isAvailable: function () {
-               return OWERmap == false || dungeons[16].found == true && items.Skulltula >= 40) ;
+               return OWERmap == false || dungeons[16].found == true && items.Skulltula >= 40 ;
             }
          },
          ['Skulltula House 50']: {
             type: "NPC", 
             access: "simple",
             isAvailable: function () {
-               return OWERmap == false || dungeons[16].found == true && items.Skulltula >= 50) ;
+               return OWERmap == false || dungeons[16].found == true && items.Skulltula >= 50 ;
             }
          },
          'Bottom of The Well': {
