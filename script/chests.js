@@ -4639,7 +4639,6 @@ var dungeons = [
          return generalCanGetChest(this.chestlist);
       }
    },
-   },
    {
       name: "Zora's River",
       x: "78.7%",
