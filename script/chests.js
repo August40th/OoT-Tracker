@@ -4095,7 +4095,7 @@ var dungeons = [
             isAvailable: function () {
                return (OWERmap == false || dungeons[17].found == true) && 
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-               && (items.Glove || items.Bombs || (items.Bombchu && BombchuLogic) ) ;
+               && (items.Glove || items.Hammer || items.Bombs || (items.Bombchu && BombchuLogic) ) ;
             }
          },
          'Medigoron Gossip': {
@@ -4103,7 +4103,7 @@ var dungeons = [
             access: "outdoor",
             isAvailable: function () {
                return (OWERmap == false || dungeons[17].found == true)
-               && (items.Glove || items.Bombs || (items.Bombchu && BombchuLogic) ) ;
+               && (items.Glove || items.Hammer || items.Bombs || (items.Bombchu && BombchuLogic) ) ;
             }
          },
          ['Left Boulder Maze Chest']: {
@@ -4122,7 +4122,9 @@ var dungeons = [
             access: "outdoor",
             isAvailable: function () {
                return (OWERmap == false || dungeons[17].found == true)
-               && (items.Bombs || (items.Bombchu && BombchuLogic) ) ;
+               && (items.Bombs || (items.Bombchu && BombchuLogic) || 
+                  (items.Hammer && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )) 
+                   );
             }
          },
          'Maze Crate Skulltula': {
@@ -4139,7 +4141,9 @@ var dungeons = [
             access: "outdoor",
             isAvailable: function () {
                return (OWERmap == false || dungeons[17].found == true)
-               && (items.Bombs || (items.Bombchu && BombchuLogic) ) ;
+               && (items.Bombs || (items.Bombchu && BombchuLogic) || 
+                  (items.Hammer && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )) 
+                   );
             }
          },
          ['Right Boulder Maze Chest']: {
@@ -4147,21 +4151,32 @@ var dungeons = [
             access: "outdoor",
             isAvailable: function () {
                return (OWERmap == false || dungeons[17].found == true)
-               && (items.Bombs || (items.Bombchu && BombchuLogic) ) ;
+               && (items.Bombs || (items.Bombchu && BombchuLogic) || 
+                  (items.Hammer && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )) 
+                   );
             }
          },
          'Lava Cross Grotto': {
             type: "grotto", 
             access: "grotto",
                isAvailable: function () {
-                  return true; }
+                  return (OWERmap == false || dungeons[17].found == true) && 
+                  (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) && 
+                     ( (items.Ocarina && items.SongofTime) || 
+                      (items.Hookshot && (items.GoronTunic || items.Nayrus || items.Wallet >= 2) ) 
+                     ) ;
+               }
          },
          'Lava Scrubs x3': {
             type: "scrub", 
             access: "grotto",
             isAvailable: function () {
-               return (items.Ocarina && items.SongofTime) || (items.Hookshot && items.GoronTunic);
-            },
+               return (OWERmap == false || dungeons[17].found == true) && 
+                  (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) && 
+                     ( (items.Ocarina && items.SongofTime) || 
+                      (items.Hookshot && (items.GoronTunic || items.Nayrus || items.Wallet >= 2) ) 
+                     ) ;
+               }
          },
          'City to Woods': {
             x: "69.0%",
@@ -4261,7 +4276,7 @@ var dungeons = [
             type: "ocarina",
             access: "OWER",
             isAvailable: function () {
-               return true; }
+               return OWERmap == false || dungeons[18].found == true; }
          },
          'Bridge to Field': {
             x: "69.0%",
@@ -4275,28 +4290,34 @@ var dungeons = [
             type: "NPC", 
             access: "outdoor",
             isAvailable: function () {
-               return (items.DekuShield || items.Nuts || items.Stick || items.Bombs || (items.Bombchu && BombchuLogic) || items.KokiriSword || items.Boomerang);
+               return (OWERmap == false || dungeons[18].found == true) && 
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
             }
          },
          'Bridge Stone': {
             type: "gossip",
             access: "outdoor",
             isAvailable: function () {
-               return true
+               return (OWERmap == false || dungeons[18].found == true) && 
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
             }
          },
          'Bridge Soil Patch Skulltula': {
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
-               return items.Bottle;
-            },
+               return (OWERmap == false || dungeons[18].found == true) && 
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  )
+               && items.Bottle ;
+            }
          },
          ['Skull Kid']: {
             type: "NPC", 
             access: "outdoor",
             isAvailable: function () {
-               return (items.Ocarina && items.SariasSong);
+               return (OWERmap == false || dungeons[18].found == true) && 
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  )
+               && items.Ocarina && items.SariasSong ;
             }
          },
          'Woods to Forest': {
@@ -4311,34 +4332,42 @@ var dungeons = [
             type: "NPC", 
             access: "outdoor",
             isAvailable: function () {
-               return (items.Slingshot);
+               return (OWERmap == false || dungeons[18].found == true) && 
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  )
+               && items.Slingshot ;
             }
          },
          ['Ocarina Memory Game']: {
             type: "NPC", 
             access: "outdoor",
             isAvailable: function () {
-               return (items.Ocarina);
+               return (OWERmap == false || dungeons[18].found == true) && 
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  )
+               && items.Ocarina ;
             }
          },
          'Bomb Grotto by City': {
             type: "grotto", 
             access: "grotto",
                isAvailable: function () {
-                  return true; }
+                  return (OWERmap == false || dungeons[18].found == true) && 
+                  (items.Bombs || items.Hammer) || (items.Bombchu && BombchuLogic);
+               }
          },
          ['City Grotto Chest']: {
             type: "chest", 
             access: "grotto",
             isAvailable: function () {
-               return items.Bombs || (items.MasterSword && items.Hammer) || (items.Bombchu && BombchuLogic);
+               return (OWERmap == false || dungeons[18].found == true) && 
+                  (items.Bombs || items.Hammer) || (items.Bombchu && BombchuLogic);
             }
          },
          'City Grotto Gossip': {
             type: "gossip",
             access: "outdoor",
             isAvailable: function () {
-               return true
+               return (OWERmap == false || dungeons[18].found == true) && 
+                  (items.Bombs || items.Hammer) || (items.Bombchu && BombchuLogic);
             }
          },
          'Woods to City': {
@@ -4355,68 +4384,88 @@ var dungeons = [
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
-                  return true; }
+                  return ( items.IronBoots && (Age == "Adult" || OpenDoor == true || 
+                                               (items.Ocarina && items.SongofTime) ) 
+                         ) || items.Scale; }
          },
          'Theatre Scrub x2': {
             type: "scrub", 
             access: "outdoor",
             isAvailable: function () {
-               return true;
+               return (OWERmap == false || dungeons[18].found == true) && 
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  
+                  ) ;
             },
          },
          'Theatre Soil Patch Skulltula': {
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
-               return items.Bottle;
+               return (OWERmap == false || dungeons[18].found == true) && 
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+               && items.Bottle ;
             },
          },
          'Bean Ride Skulltula': {
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
-               return items.Hookshot || items.Bombs || items.Scale;
+               return (OWERmap == false || dungeons[18].found == true) && 
+                  (items.Hookshot || 
+                  (items.Bean && 
+                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                   ) ) ;
             },
          },
          'Deku Theatre Grotto': {
             type: "grotto", 
             access: "grotto",
                isAvailable: function () {
-                  return true; }
+                  return (OWERmap == false || dungeons[18].found == true) && 
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ;
+               }
          },
          ['Deku Theater Skull Mask']: {
             type: "NPC", 
             access: "grotto",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Mask >= 6;
+               return (OWERmap == false || dungeons[18].found == true) && 
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  )
+               && items.Mask >= 6;
             }
          },
          ['Deku Theater Mask of Truth']: {
             type: "NPC", 
             access: "grotto",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.KokiriEmerald && items.GoronRuby && items.ZoraSapphire && items.Mask >= 12;
+               return (OWERmap == false || dungeons[18].found == true) && 
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  )
+               && items.Mask >= 12;
             }
          },
          'Bomb Grotto by Meadow': {
             type: "grotto", 
             access: "grotto",
                isAvailable: function () {
-                  return true; }
+                  return (OWERmap == false || dungeons[18].found == true) && 
+                  (items.Bombs || items.Hammer) || (items.Bombchu && BombchuLogic);
+               }
          },
          ['Deku Sale Grotto $40']: {
             type: "NPC", 
             access: "grotto",
             isAvailable: function () {
-               return (items.Bombs || (items.MasterSword && items.Hammer) || (items.Bombchu && BombchuLogic)) && (items.DekuShield || items.Nuts || items.Stick);
+               return (OWERmap == false || dungeons[18].found == true) && 
+                  (items.Bombs || items.Hammer) || (items.Bombchu && BombchuLogic);
             }
          },
          '2nd Scrub in Grotto': {
             type: "scrub", 
             access: "grotto",
             isAvailable: function () {
-               return (items.Bombs || items.Hammer);
-            },
+               return (OWERmap == false || dungeons[18].found == true) && 
+                  (items.Bombs || items.Hammer) || (items.Bombchu && BombchuLogic);
+            }
          },
          'Woods to Meadow': {
             x: "82.8%",
