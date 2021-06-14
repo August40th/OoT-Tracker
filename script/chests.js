@@ -1185,6 +1185,13 @@ var dungeons = [
             isAvailable: function () {
                return items.Hookshot && ((items.Glove && items.ForestKey >= 2) || items.Bow); }
          },
+         'East Courtyard Skulltula': {
+            type: "skulltula",
+            access: "master",
+            isAvailable: function () {
+               return items.Hookshot && ((items.Glove && items.ForestKey >= 2 && (items.IronBoots || items.Scale >= 2)) || items.Bow); 
+            }
+         },
          'Gilded Chest': {
             type: "chest",
             access: "master",
@@ -1220,19 +1227,6 @@ var dungeons = [
             access: "master",
             isAvailable: function () {
                return items.Hookshot && items.Glove && items.ForestKey >= 2 && items.Bow; }
-         },
-         'Courtyard Island Chest': {
-            type: "chest",
-            access: "master",
-            isAvailable: function () {
-               return items.Hookshot && items.Glove && items.ForestKey >= 5 && items.Bow; }
-         },
-         'East Courtyard Skulltula': {
-            type: "skulltula",
-            access: "master",
-            isAvailable: function () {
-               return items.Hookshot && ((items.Glove && items.ForestKey >= 2 && (items.IronBoots || items.Scale >= 2)) || items.Bow); 
-            }
          },
          'MQ Checkerboard Room Chest': {
             type: "chest",
