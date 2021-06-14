@@ -4619,7 +4619,7 @@ var dungeons = [
             access: "outdoor",
             isAvailable: function () {
                return (OWERmap == false || dungeons[19].found == true) && 
-                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  )
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && items.Mask >= 1;
             }
          },
@@ -4634,10 +4634,9 @@ var dungeons = [
             type: "dungeon", 
             access: "door",
                isAvailable: function () {
-                  return (OWERmap == false || dungeons[19].found == true) && items.Hookshot &&
-                     (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ; 
+                  return itemms.Hookshot ;
                }
-      },
+         },
       isBeatable: function () {
          return this.canGetChest();
       },
