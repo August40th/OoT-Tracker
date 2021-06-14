@@ -4531,27 +4531,14 @@ var dungeons = [
             type: "grotto", 
             access: "grotto",
                isAvailable: function () {
-                  return (OWERmap == false || dungeons[19].found == true) &&
-                  ( ( (items.Bombs || items.Hammer || (items.Bombchu && BombchuLogic) ) && 
-                     (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-                    )
-                   || ( (items.Bombs || (items.Bombchu && BombchuLogic) ) &&
-                       (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-                      )
-                  );}
+                  return true ;
+               }
          },
          ['Wolfos Grotto']: {
             type: "unique", 
             access: "grotto",
             isAvailable: function () {
-               return (OWERmap == false || dungeons[19].found == true) &&
-                  ( ( (items.Bombs || items.Hammer || (items.Bombchu && BombchuLogic) ) && 
-                     (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-                    )
-                   || ( (items.Bombs || (items.Bombchu && BombchuLogic) ) &&
-                       (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-                      )
-                  );
+               return true ;
             }
          },
          'Maze Gossip 1': {
@@ -4572,8 +4559,7 @@ var dungeons = [
             type: "song", 
             access: "outdoor",
             isAvailable: function () {
-               return (OWERmap == false || dungeons[19].found == true) && 
-                  (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
+               return true;
             }
          },
          'Minuet Warp': {
@@ -4602,10 +4588,8 @@ var dungeons = [
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
-               return (OWERmap == false || dungeons[19].found == true) && 
-                  (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-               && items.Hookshot;
-            },
+               return true ;
+            }
          },
          'Meadow Open Grotto': {
             type: "grotto", 
@@ -4618,9 +4602,7 @@ var dungeons = [
             type: "song", 
             access: "outdoor",
             isAvailable: function () {
-               return (OWERmap == false || dungeons[19].found == true) && 
-                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-               && items.Mask >= 1;
+               return true ;
             }
          },
          'Temple Gossip': {
@@ -4633,9 +4615,9 @@ var dungeons = [
          'Forest Temple': {
             type: "dungeon", 
             access: "door",
-               isAvailable: function () {
-                  return itemms.Hookshot ;
-               }
+            isAvailable: function () {
+               return itemms.Hookshot ;
+            }
          },
       isBeatable: function () {
          return this.canGetChest();
