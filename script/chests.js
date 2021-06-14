@@ -4990,7 +4990,7 @@ var dungeons = [
             access: "simple",
             isAvailable: function () {
                return (OWERmap == false || dungeons[22].found == true) &&
-                   && items.Ocarina && items.ZeldasLullaby &&
+                    items.Ocarina && items.ZeldasLullaby &&
                   ( ( (items.Bombs || items.Hammer || (items.Bombchu && BombchuLogic) ) && 
                      (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                     )
