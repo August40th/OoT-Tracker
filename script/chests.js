@@ -4527,20 +4527,6 @@ var dungeons = [
              isAvailable: function () {
                   return true; }
          },
-         'Meadow Bomb Grotto': {
-            type: "grotto", 
-            access: "grotto",
-               isAvailable: function () {
-                  return true ;
-               }
-         },
-         ['Wolfos Grotto']: {
-            type: "unique", 
-            access: "grotto",
-            isAvailable: function () {
-               return true ;
-            }
-         },
          'Maze Gossip 1': {
             type: "gossip", 
             access: "outdoor",
@@ -4559,7 +4545,8 @@ var dungeons = [
             type: "song", 
             access: "outdoor",
             isAvailable: function () {
-               return true;
+               return (OWERmap == false || dungeons[19].found == true) && 
+                  (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
          },
          'Minuet Warp': {
@@ -4584,47 +4571,74 @@ var dungeons = [
                      items.Ocarina && items.SongofStorms ;
             }
          },
+         'Wolfos Grotto': {
+            type: "grotto", 
+            access: "grotto",
+               isAvailable: function () {
+                  return (OWERmap == false || dungeons[19].found == true) &&
+                  ( ( (items.Bombs || items.Hammer || (items.Bombchu && BombchuLogic) ) && 
+                     (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                    )
+                   || ( (items.Bombs || (items.Bombchu && BombchuLogic) ) &&
+                       (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                      )
+                  );}
+         },
+         ['Wolfos Grotto']: {
+            type: "unique", 
+            access: "grotto",
+            isAvailable: function () {
+               return (OWERmap == false || dungeons[19].found == true) &&
+                  ( ( (items.Bombs || items.Hammer || (items.Bombchu && BombchuLogic) ) && 
+                     (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                    )
+                   || ( (items.Bombs || (items.Bombchu && BombchuLogic) ) &&
+                       (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                      )
+                  );
+            }
+         },
          'Meadow Maze Skulltula': {
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
-               return true ;
-            }
+               return items.Hookshot;
+            },
          },
          'Meadow Open Grotto': {
             type: "grotto", 
             access: "grotto",
                isAvailable: function () {
-                  return OWERmap == false || dungeons[19].found == true ;
-               }
+                  return true; }
          },
          ['Song from Saria']: {
             type: "song", 
             access: "outdoor",
             isAvailable: function () {
-               return true ;
+               return items.Mask >= 2;
             }
          },
          'Temple Gossip': {
             type: "gossip", 
             access: "outdoor",
             isAvailable: function () {
-               return OWERmap == false || dungeons[19].found == true ;
+               return true
             }
          },
          'Forest Temple': {
             type: "dungeon", 
             access: "door",
-            isAvailable: function () {
-               return itemms.Hookshot ;
-            }
+               isAvailable: function () {
+                  return true; }
          },
+      },
       isBeatable: function () {
          return this.canGetChest();
       },
       canGetChest: function () {
          return generalCanGetChest(this.chestlist);
       }
+   },
    },
    {
       name: "Zora's River",
@@ -4645,9 +4659,7 @@ var dungeons = [
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
-               return (OWERmap == false || dungeons[20].found == true) && 
-                  (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) &&
-                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
+               return true
             }
          },
          'Song of Storms Grotto': {
@@ -4680,38 +4692,28 @@ var dungeons = [
             type: "bean", 
             access: "outdoor",
             isAvailable: function () {
-               return (OWERmap == false || dungeons[20].found == true) && 
-                  (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) &&
-                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale));
             }
          },
          'Frogs in the Rain': {
             type: "NPC", 
             access: "outdoor",
             isAvailable: function () {
-               return (OWERmap == false || dungeons[20].found == true) && 
-                  items.Ocarina && items.SongofStorms &&
-                  (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) &&
-                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.Ocarina && items.SongofStorms && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale)));
             }
          },
          'Frogs Mini Game': {
             type: "NPC", 
             access: "outdoor",
             isAvailable: function () {
-               return (OWERmap == false || dungeons[20].found == true) && 
-                  items.Ocarina && items.SongofStorms && items.ZeldasLullaby && 
-                  items.EponasSong && items.SariasSong && items.SunsSong && items.SongofTime &&
-                  (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) &&
-                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.Ocarina && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && items.ZeldasLullaby && items.EponasSong && items.SariasSong && items.SunsSong && items.SongofTime && items.SongofStorms));
             }
          },
          'Adult Skulltula by Grotto': {
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
-               return (OWERmap == false || dungeons[20].found == true) && items.Hookshot &&
-                  (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
+               return items.Hookshot
             }
          },
          'Open Grotto': {
@@ -4723,8 +4725,7 @@ var dungeons = [
                    || ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale ) &&
                        (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                       )
-                  ); 
-            }
+                  ); }
          },
          'River Open Grotto': {
             type: "chest", 
@@ -4735,8 +4736,7 @@ var dungeons = [
                    || ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale ) &&
                        (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                       )
-                  );
-            }
+                  );}
          },
          'Grotto Gossip': {
             type: "gossip", 
@@ -4755,15 +4755,14 @@ var dungeons = [
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
-               return (OWERmap == false || dungeons[20].found == true) && items.Hookshot &&
-                  (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
+               return items.Hookshot
             }
          },
          'Boulder Grotto': {
             type: "grotto", 
             access: "grotto",
             isAvailable: function () {
-               return (OWERmap == false || dungeons[20].found == true) &&
+               return (OWERmap == false || dungeons[18].found == true) &&
                   ( ( (items.Bombs || items.Hammer || (items.Bombchu && BombchuLogic) ) && 
                      (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                     )
@@ -4777,45 +4776,28 @@ var dungeons = [
             type: "freestanding", 
             access: "outdoor",
             isAvailable: function () {
-               return (OWERmap == false || dungeons[18].found == true) &&
-                  ( (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-                   || ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) &&
-                       (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-                      )
-                  );
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword || (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale));
             }
          },
          'Above Frogs Gossip': {
             type: "gossip", 
             access: "outdoor",
             isAvailable: function () {
-               return (OWERmap == false || dungeons[18].found == true) &&
-                  ( (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-                   || ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) &&
-                       (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-                      )
-                  );
+               return true
             }
          },
          'Child Ladder Skulltula': {
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
-               return (OWERmap == false || dungeons[20].found == true) && 
-                  (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) &&
-                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
+               return items.Bombs || items.Scale
             }
          },
          'Freestanding Upper Ledge': {
             type: "freestanding", 
             access: "outdoor",
             isAvailable: function () {
-               return (OWERmap == false || dungeons[18].found == true) &&
-                  ( (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-                   || ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) &&
-                       (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-                      )
-                  );
+               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.MasterSword && items.HoverBoots) || (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale));
             }
          },
          'River to Woods': {
@@ -4824,25 +4806,13 @@ var dungeons = [
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
-                  return (OWERmap == false || dungeons[18].found == true) &&
-                  ( ( (items.IronBoots || items.Scale) && 
-                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-                    ) || (items.Scale &&
-                       (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-                      )
-                  );
-             }
+                  return true; }
          },
          'Waterfall Gossip': {
             type: "gossip", 
             access: "outdoor",
             isAvailable: function () {
-               return (OWERmap == false || dungeons[18].found == true) &&
-                  ( (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-                   || ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) &&
-                       (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-                      )
-                  );
+               return true
             }
          },
          'River to Domain': {
@@ -4851,15 +4821,7 @@ var dungeons = [
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
-                  return (OWERmap == false || dungeons[20].found == true) &&
-                  ( ( (items.HoverBoots || (items.Ocarina && items.ZeldasLullaby) ) && 
-                     (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-                    )
-                   || ( (items.Bombs || (items.Bombchu && BombchuLogic) ) &&
-                       (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-                      )
-                  );
-             }
+                  return true; }
          },
       },
       isBeatable: function () {
