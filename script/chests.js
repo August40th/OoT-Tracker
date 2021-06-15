@@ -4891,7 +4891,7 @@ var dungeons = [
                isAvailable: function () {
                   return (OWERmap == false || dungeons[21].found == true) &&
                   ( ( (items.Hoverboots || (items.Ocarina && items.ZeldasLullaby) ) && 
-                     items.Bottle && (items.Wallet >= 3 || isBridgeOpen() || items.ZoraLetter || OpenFountain) 
+                     items.Bottle && (items.Wallet >= 3 || isBridgeOpen() || OpenFountain) 
                      && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                     )
                    || ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) &&
@@ -4906,7 +4906,7 @@ var dungeons = [
             isAvailable: function () {
                return (OWERmap == false || dungeons[21].found == true) &&
                   ( ( (items.Hoverboots || (items.Ocarina && items.ZeldasLullaby) ) && 
-                     items.Bottle && (items.Wallet >= 3 || isBridgeOpen() || items.ZoraLetter || OpenFountain) 
+                     items.Bottle && (items.Wallet >= 3 || isBridgeOpen() || OpenFountain) 
                      && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                     )
                    || ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) &&
@@ -4974,7 +4974,7 @@ var dungeons = [
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
-               return (OWERmap == false || dungeons[21].found == true) && items.Hookshot
+               return (OWERmap == false || dungeons[21].found == true) && items.Hookshot &&
                   (items.Hoverboots || (items.Ocarina && items.ZeldasLullaby)) &&
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
             }
