@@ -4665,7 +4665,7 @@ var dungeons = [
             isAvailable: function () {
                return (OWERmap == false || dungeons[20].found == true) && 
                   (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale ) &&
-               && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
          },
          'Song of Storms Grotto': {
@@ -4700,7 +4700,7 @@ var dungeons = [
             isAvailable: function () {
                return (OWERmap == false || dungeons[20].found == true) && 
                   (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale ) &&
-               && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
          },
          'Frogs in the Rain': {
@@ -4710,7 +4710,7 @@ var dungeons = [
                return (OWERmap == false || dungeons[20].found == true) && 
                   (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale ) &&
                   items.Ocarina && items.SongofStorms &&
-               && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
          },
          'Frogs Mini Game': {
@@ -4720,7 +4720,7 @@ var dungeons = [
                return (OWERmap == false || dungeons[20].found == true) && 
                   (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale ) &&
                   items.Ocarina && items.SongofStorms &&
-               && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
          },
          'Adult Skulltula by Grotto': {
