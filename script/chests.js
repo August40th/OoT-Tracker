@@ -4889,39 +4889,77 @@ var dungeons = [
             type: "simple", 
             access: "door",
                isAvailable: function () {
-                  return true; }
+                  return (OWERmap == false || dungeons[21].found == true) &&
+                  ( ( (items.Hoverboots || (items.Ocarina && items.ZeldasLullaby) ) && 
+                     items.Bottle && (items.Wallet >= 3 || isBridgeOpen() || items.ZoraLetter || OpenFountain) 
+                     && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                    )
+                   || ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) &&
+                       (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                      )
+                  );
+            }
          },
          'Zora Sale': {
             type: "shop", 
             access: "simple",
             isAvailable: function () {
-               return true; }
+               return (OWERmap == false || dungeons[21].found == true) &&
+                  ( ( (items.Hoverboots || (items.Ocarina && items.ZeldasLullaby) ) && 
+                     items.Bottle && (items.Wallet >= 3 || isBridgeOpen() || items.ZoraLetter || OpenFountain) 
+                     && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                    )
+                   || ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) &&
+                       (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                      )
+                  );
+            }
          },
          'Storms Grotto': {
             type: "grotto", 
             access: "grotto",
-               isAvailable: function () {
-                  return true; }
+            isAvailable: function () {
+               return (OWERmap == false || dungeons[21].found == true) &&
+                  items.Ocarina && items.SongofStorms &&
+                  ( ( (items.Hoverboots || (items.Ocarina && items.ZeldasLullaby) ) && 
+                     (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                    )
+                   || ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) &&
+                       (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                      )
+                  );
+            }
          },
          'Royal Zora Gossip': {
             type: "gossip", 
             access: "outdoor",
             isAvailable: function () {
-               return true
+               return (OWERmap == false || dungeons[21].found == true) && 
+                  ( ( (items.Hoverboots || (items.Ocarina && items.ZeldasLullaby) ) && 
+                     (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                    )
+                   || ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) &&
+                       (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                      )
+                  );
             }
          },
          ['Diving Mini Game']: {
             type: "NPC", 
             access: "outdoor",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || items.Scale || (items.Bombchu && BombchuLogic));
+               return (OWERmap == false || dungeons[21].found == true) && 
+                  (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale ) &&
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
             }
          },
          ['Torch Run']: {
             type: "chest", 
             access: "outdoor",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || items.Scale || (items.Bombchu && BombchuLogic));
+               return (OWERmap == false || dungeons[21].found == true) && 
+                  (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale ) &&
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
             }
          },
          'Domain to Lake': {
@@ -4936,14 +4974,18 @@ var dungeons = [
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
-               return (items.MasterSword && items.Hookshot && items.ZoraLetter && (items.Bombs || items.Scale) && items.ZeldasLullaby && items.Ocarina);
-            },
+               return (OWERmap == false || dungeons[21].found == true) && items.Hookshot
+                  (items.Hoverboots || (items.Ocarina && items.ZeldasLullaby)) &&
+                  (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
+            }
          },
          ['Thaw King Zora']: {
             type: "NPC", 
             access: "outdoor",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Bottle && items.MasterSword && ((items.Ocarina && items.ZeldasLullaby) || items.HoverBoots) && ((((items.ZoraLetter || OpenFountain) && (items.Bombs || items.Scale || (items.Bombchu && BombchuLogic))) || isBridgeOpen() || items.Wallet >= 3));
+               return (OWERmap == false || dungeons[21].found == true) && items.Bottle
+                  (items.Hoverboots || (items.Ocarina && items.ZeldasLullaby)) &&
+                  (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
             }
          },
          'Domain to Fountain': {
