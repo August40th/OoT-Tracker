@@ -4002,21 +4002,21 @@ var dungeons = [
             type: "NPC", 
             access: "simple",
             isAvailable: function () {
-               return OWERmap == false || dungeons[16].found == true && items.Skulltula >= 10 ;
+               return (OWERmap == false || dungeons[16].found == true) && items.Skulltula >= 10 ;
             }
          },
          ['Skulltula House 20']: {
             type: "NPC", 
             access: "simple",
             isAvailable: function () {
-               return OWERmap == false || dungeons[16].found == true && items.Skulltula >= 20 ;
+               return (OWERmap == false || dungeons[16].found == true) && items.Skulltula >= 20 ;
             }
          },
          ['Skulltula House 30']: {
             type: "NPC", 
             access: "simple",
             isAvailable: function () {
-               return OWERmap == false || dungeons[16].found == true && items.Skulltula >= 30 ;
+               return (OWERmap == false || dungeons[16].found == true) && items.Skulltula >= 30 ;
             }
          },
          ['Skulltula House 40']: {
@@ -4024,14 +4024,14 @@ var dungeons = [
             access: "simple",
             type: "indoor",
             isAvailable: function () {
-               return OWERmap == false || dungeons[16].found == true && items.Skulltula >= 40 ;
+               return (OWERmap == false || dungeons[16].found == true) && items.Skulltula >= 40 ;
             }
          },
          ['Skulltula House 50']: {
             type: "NPC", 
             access: "simple",
             isAvailable: function () {
-               return OWERmap == false || dungeons[16].found == true && items.Skulltula >= 50 ;
+               return (OWERmap == false || dungeons[16].found == true) && items.Skulltula >= 50 ;
             }
          },
          'Bottom of The Well': {
@@ -4087,7 +4087,7 @@ var dungeons = [
             type: "knife", 
             access: "outdoor",
             isAvailable: function () {
-               return (OWERmap == false || dungeons[17].found == true) && 
+               return (OWERmap == false || dungeons[17].found == true) && items.Wallet >= 2 &&
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && (items.Glove || items.Hammer || items.Bombs || (items.Bombchu && BombchuLogic) ) ;
             }
@@ -4527,12 +4527,54 @@ var dungeons = [
              isAvailable: function () {
                   return true; }
          },
+         'Wolfos Grotto': {
+            type: "grotto", 
+            access: "grotto",
+               isAvailable: function () {
+                  return (OWERmap == false || dungeons[19].found == true) &&
+                  ( ( (items.Bombs || items.Hammer || (items.Bombchu && BombchuLogic) ) && 
+                     (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                    )
+                   || ( (items.Bombs || (items.Bombchu && BombchuLogic) ) &&
+                       (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                      )
+                  );}
+         },
+         ['Wolfos Grotto']: {
+            type: "unique", 
+            access: "grotto",
+            isAvailable: function () {
+               return (OWERmap == false || dungeons[19].found == true) &&
+                  ( ( (items.Bombs || items.Hammer || (items.Bombchu && BombchuLogic) ) && 
+                     (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                    )
+                   || ( (items.Bombs || (items.Bombchu && BombchuLogic) ) &&
+                       (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                      )
+                  );
+            }
+         },
          'Maze Gossip 1': {
             type: "gossip", 
             access: "outdoor",
             isAvailable: function () {
                return OWERmap == false || dungeons[19].found == true;
             }
+         },
+         'Meadow Maze Skulltula': {
+            type: "skulltula", 
+            access: "outdoor",
+            isAvailable: function () {
+               return (OWERmap == false || dungeons[19].found == true) && items.Hookshot &&
+                  (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
+            },
+         },
+         'Meadow Open Grotto': {
+            type: "grotto", 
+            access: "grotto",
+               isAvailable: function () {
+                  return OWERmap == false || dungeons[19].found == true;
+               }
          },
          'Maze Gossip 2': {
             type: "gossip", 
@@ -4571,65 +4613,28 @@ var dungeons = [
                      items.Ocarina && items.SongofStorms ;
             }
          },
-         'Wolfos Grotto': {
-            type: "grotto", 
-            access: "grotto",
-               isAvailable: function () {
-                  return (OWERmap == false || dungeons[19].found == true) &&
-                  ( ( (items.Bombs || items.Hammer || (items.Bombchu && BombchuLogic) ) && 
-                     (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-                    )
-                   || ( (items.Bombs || (items.Bombchu && BombchuLogic) ) &&
-                       (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-                      )
-                  );}
-         },
-         ['Wolfos Grotto']: {
-            type: "unique", 
-            access: "grotto",
-            isAvailable: function () {
-               return (OWERmap == false || dungeons[19].found == true) &&
-                  ( ( (items.Bombs || items.Hammer || (items.Bombchu && BombchuLogic) ) && 
-                     (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-                    )
-                   || ( (items.Bombs || (items.Bombchu && BombchuLogic) ) &&
-                       (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-                      )
-                  );
-            }
-         },
-         'Meadow Maze Skulltula': {
-            type: "skulltula", 
-            access: "outdoor",
-            isAvailable: function () {
-               return items.Hookshot;
-            },
-         },
-         'Meadow Open Grotto': {
-            type: "grotto", 
-            access: "grotto",
-               isAvailable: function () {
-                  return true; }
-         },
          ['Song from Saria']: {
             type: "song", 
             access: "outdoor",
             isAvailable: function () {
-               return items.Mask >= 2;
+               return (OWERmap == false || dungeons[19].found == true) && items.Mask >= 2 &&
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
          },
          'Temple Gossip': {
             type: "gossip", 
             access: "outdoor",
             isAvailable: function () {
-               return true
+               return OWERmap == false || dungeons[19].found == true;
             }
          },
          'Forest Temple': {
             type: "dungeon", 
             access: "door",
                isAvailable: function () {
-                  return true; }
+                  return (OWERmap == false || dungeons[19].found == true) && items.Hookshot &&
+                  (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
+               }
          },
       },
       isBeatable: function () {
