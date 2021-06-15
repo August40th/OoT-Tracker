@@ -4983,7 +4983,7 @@ var dungeons = [
             type: "NPC", 
             access: "outdoor",
             isAvailable: function () {
-               return (OWERmap == false || dungeons[21].found == true) && items.Bottle
+               return (OWERmap == false || dungeons[21].found == true) && items.Bottle &&
                   (items.Hoverboots || (items.Ocarina && items.ZeldasLullaby)) &&
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
             }
