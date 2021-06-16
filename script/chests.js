@@ -24,8 +24,12 @@ function generalCanGetChest(chestlist) {
             continue;}
         if ( chestlist[key].access == "grotto" && chestlist[key].type !== "grotto" && GrottoER == true ) { //Grotto checks
             continue;}
-        if ( (chestlist[key].access !== "master" || chestlist[key].access !== "vanilla") && chestlist[key].type == "skulltula" && (skulltula !== "All" || skulltula !== "Dungeons") ) { // Overworld Skulls
-            continue;}
+        if ( chestlist[key].type == "skulltula" && skulltula !== "All") { // Skulls
+            if ( (chestlist[key].access == "master" || chestlist[key].access == "vanilla") && skulltula !== "Dungeons" ) {
+               continue;}
+           else if ( (chestlist[key].access !== "master" || chestlist[key].access !== "vanilla") && skulltula !== "Overworld" ) {
+               continue;}
+        }
         if ( (chestlist[key].access == "master" || chestlist[key].access == "vanilla") && chestlist[key].type == "skulltula" && (skulltula !== "Dungeons" || skulltula !== "All") ) { // Dungeon Skulls
             continue;}
         if (chestlist[key].type == "scrub" && scrubs == "Off") { //Scrubs 
