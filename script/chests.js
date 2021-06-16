@@ -28,7 +28,7 @@ function generalCanGetChest(chestlist) {
             continue;}
         if ( (chestlist[key].access == "master" || chestlist[key].access == "vanilla") && chestlist[key].type == "skulltula" && skulltula == "Overworld" ) { // Dungeon Skulls
             continue;}
-        if ( (chestlist[key].access !== "master" || chestlist[key].access !== "vanilla") && chestlist[key].type == "skulltula" && skulltula == "Dungeons" ) { // Dungeon Skulls
+        else if ( (chestlist[key].access !== "master" || chestlist[key].access !== "vanilla") && chestlist[key].type == "skulltula" && skulltula == "Dungeons" ) { // OW Skulls
             continue;}
         if (chestlist[key].type == "scrub" && scrubs == "Off") { //Scrubs 
             continue;}
