@@ -4890,14 +4890,22 @@ var dungeons = [
             access: "door",
                isAvailable: function () {
                   return (OWERmap == false || dungeons[21].found == true) &&
-                  ( ( (items.Hoverboots || (items.Ocarina && items.ZeldasLullaby) ) && 
-                     items.Bottle && (items.Wallet >= 3 || isBridgeOpen() || OpenFountain) 
-                     && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-                    )
-                   || ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) &&
-                       (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-                      )
-                  );
+                  (
+                     (
+                        (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) //Can get adult
+                        && (items.Hoverboots || (items.Ocarina && items.ZeldasLullaby) ) //Can get into domain
+                        && items.Bottle //has bottle
+                        && (items.Wallet >= 3 || isBridgeOpen() || OpenFountain || //Can get blue fire as adult
+                            (Age == "Child" && (OpenDoor == true || (items.Ocarina && items.SongofTime) ) //Or open fountain as child
+                             && items.ZoraLetter && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale)
+                             )
+                            )
+                     ) ||
+                     (
+                        (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) //Can get child
+                        && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) //Can get into domain
+                     )
+                   );
             }
          },
          'Zora Sale': {
@@ -4905,14 +4913,22 @@ var dungeons = [
             access: "simple",
             isAvailable: function () {
                return (OWERmap == false || dungeons[21].found == true) &&
-                  ( ( (items.Hoverboots || (items.Ocarina && items.ZeldasLullaby) ) && 
-                     items.Bottle && (items.Wallet >= 3 || isBridgeOpen() || OpenFountain) 
-                     && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-                    )
-                   || ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) &&
-                       (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-                      )
-                  );
+                  (
+                     (
+                        (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) //Can get adult
+                        && (items.Hoverboots || (items.Ocarina && items.ZeldasLullaby) ) //Can get into domain
+                        && items.Bottle //has bottle
+                        && (items.Wallet >= 3 || isBridgeOpen() || OpenFountain || //Can get blue fire as adult
+                            (Age == "Child" && (OpenDoor == true || (items.Ocarina && items.SongofTime) ) //Or open fountain as child
+                             && items.ZoraLetter && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale)
+                             )
+                            )
+                     ) ||
+                     (
+                        (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) //Can get child
+                        && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) //Can get into domain
+                     )
+                   );
             }
          },
          'Storms Grotto': {
@@ -4983,9 +4999,19 @@ var dungeons = [
             type: "NPC", 
             access: "outdoor",
             isAvailable: function () {
-               return (OWERmap == false || dungeons[21].found == true) && items.Bottle &&
-                  (items.Hoverboots || (items.Ocarina && items.ZeldasLullaby)) &&
-                  (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
+               return (OWERmap == false || dungeons[21].found == true) &&
+                  (
+                     (
+                        (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) //Can get adult
+                        && (items.Hoverboots || (items.Ocarina && items.ZeldasLullaby) ) //Can get into domain
+                        && items.Bottle //has bottle
+                        && (items.Wallet >= 3 || isBridgeOpen() || OpenFountain || //Can get blue fire as adult
+                            (Age == "Child" && (OpenDoor == true || (items.Ocarina && items.SongofTime) ) //Or open fountain as child
+                             && items.ZoraLetter && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale)
+                             )
+                           )
+                     )
+                  );
             }
          },
          'Domain to Fountain': {
