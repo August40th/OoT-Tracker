@@ -1639,7 +1639,7 @@ var dungeons = [
                                   || items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Bow || (items.Magic && items.Dins)) //:ink the Goron
                             ))
                         && items.Magic && (items.Dins || (items.Bow && items.Fire)) //Boss Door access
-                        && items.BossFire && items.Hammer && (items.Hoverboots //Boss Key, Hammer, and Hovers...
+                        && items.BossFire && items.Hammer && (items.HoverBoots //Boss Key, Hammer, and Hovers...
                                                              || (items.Hammer && items.Hookshot && items.Magic && (items.Dins || (items.Bow && items.Fire))//Lava Room and Torch
                                                              && items.Bow && items.Ocarina && items.SongofTime //2nd Key door, arrow torch, Block of Time
                                                              && items.FireKey >= 4)) ; //or Deep Fire
