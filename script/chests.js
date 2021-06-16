@@ -5171,7 +5171,7 @@ var dungeons = [
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
-               return (OWERmap == false || dungeons[22].found == true) && items.Glove = 2 &&
+               return (OWERmap == false || dungeons[22].found == true) && items.Glove >= 2 &&
                   (
                      (
                         (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) //Can get adult
