@@ -5989,8 +5989,7 @@ var dungeons = [
                    || ( (items.Hookshot && items.Ocarina) && 
                      (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                    || (items.Bean && (OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
-                  )
-               ); 
+                  ) ; 
             }
          },
          ['Child Fishing']: {
