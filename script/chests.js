@@ -5431,7 +5431,8 @@ var dungeons = [
             isAvailable: function () {
                return (OWERmap == false || dungeons[23].found == true) && 
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) && 
-                  ( (items.Trade >= 1 && (items.Bottle && (items.ZoraLetter && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale ) && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                  ( (items.Trade >= 1 && (items.Bottle && (items.HoverBoots || (items.Ocarina && items.ZeldasLullaby) ) 
+                                          && (items.ZoraLetter && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale ) && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                                           ) || OpenFountain || isBridgeOpen() || items.Wallet >= 3) && (items.EponasSong || items.Hookshot >= 2) 
                     )//Get King Z unthawed for eyeball
                    || (items.Trade >= 6 && (items.EponasSong || items.Hookshot >= 2)) //Valley Carpenter Foreman
@@ -5459,7 +5460,7 @@ var dungeons = [
             access: "outdoor",
             isAvailable: function () {
                return (OWERmap == false || dungeons[23].found == true) &&
-                  ( ( (items.Bombs || (items.BoleroofFire && (items.Hookshot || items.HoverBoots) ) //Bombs or Bolero warp
+                  ( ( (items.Bombs || (items.BoleroofFire && items.Ocarina && (items.Hookshot || items.HoverBoots) ) //Bombs or Bolero warp
                        || items.Hammer || items.Bow || items.Glove || (items.Bombchu && BombchuLogic) ) && //Bow and glove access via Goron City
                      (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                     )
@@ -5496,20 +5497,33 @@ var dungeons = [
             type: "grotto", 
             access: "grotto",
             isAvailable: function () {
-               return true; }
+               return (OWERmap == false || dungeons[24].found == true) && items.Hammer &&
+                  ( ( (items.BoleroofFire && items.Ocarina && (items.Hookshot || items.HoverBoots)) //BBolero warp
+                       || items.Bow || items.Glove ) && //Bow and glove access via Goron City
+                     (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                  ) ;
+            }
          },
          'Red Rock Grotto Scrubs x3': {
             type: "scrub", 
             access: "grotto",
             isAvailable: function () {
-               return items.Hammer && ((items.Glove || items.Bombs || items.Bow || (items.Magic && items.Dins)) || (items.BoleroofFire && items.Ocarina && (items.Hookshot || items.HoverBoots)));
-            },
+               return (OWERmap == false || dungeons[24].found == true) && items.Hammer &&
+                  ( ( (items.BoleroofFire && items.Ocarina && (items.Hookshot || items.HoverBoots)) //BBolero warp
+                       || items.Bow || items.Glove ) && //Bow and glove access via Goron City
+                     (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                  ) ;
+            }
          },
          ['Song from Sheik']: {
             type: "song", 
             access: "outdoor",
             isAvailable: function () {
-               return items.MasterSword && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.BoleroofFire || ((items.HoverBoots || items.Hookshot) && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Hammer || items.Bow || (items.Magic && items.Dins))));
+               return (OWERmap == false || dungeons[24].found == true) &&
+                  ( (items.Bombs || (items.BoleroofFire && items.Ocarina  ) //Bombs or Bolero warp
+                       || items.Hammer || items.Bow || items.Glove || (items.Bombchu && BombchuLogic) ) && //Bow and glove access via Goron City
+                     (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                    && (items.Hookshot || items.HoverBoots) ) ;
             }
          },
          'Bolero Warp': {
@@ -5522,34 +5536,64 @@ var dungeons = [
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
-               return items.Ocarina && items.BoleroofFire && items.Bottle
+               return (OWERmap == false || dungeons[24].found == true) &&
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) &&
+                  items.Ocarina && items.BoleroofFire && items.Bottle ;
             }
          },
          'Fire Temple': {
             type: "dungeon", 
             access: "door",
                isAvailable: function () {
-                  return true; }
+                  return (OWERmap == false || dungeons[24].found == true) &&
+                  ( ( ( (items.BoleroofFire && items.Ocarina ) //Bolero warp
+                       || ((items.Hookshot || items.HoverBoots) && (items.Bombs || items.Hammer || items.Bow || items.Glove || (items.Bombchu && BombchuLogic) ) ))
+                     && //access via city or trail
+                     (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                    )
+                   || ( (items.Ocarina && items.BoleroofFire) &&
+                       (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                      )
+                  );
+               }
          },
          ['Volcano Freestanding']: {
             type: "freestanding", 
             access: "outdoor",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Glove || items.Bombs || items.Bow || (items.Bombchu && BombchuLogic)) && ((items.Bean && items.BoleroofFire) || items.HoverBoots);
+               return (OWERmap == false || dungeons[24].found == true) &&
+                  ( ( ( (items.BoleroofFire && items.Ocarina ) //Bolero warp
+                       || items.Bombs || items.Hammer || items.Bow || items.Glove || (items.Bombchu && BombchuLogic) )
+                     && items.HoverBoots  &&//access via city or trail
+                     (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                    )
+                   || ( (items.Ocarina && items.BoleroofFire) && items.Bean &&
+                       (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) && //can plant bean
+                        (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) //can get back adult
+                      )
+                  );
             }
          },
          'Red Rocks Doorway': {
             type: "simple", 
             access: "door",
             isAvailable: function () {
-               return true; }
+               return (OWERmap == false || dungeons[24].found == true) && items.Hammer &&
+                  ( ( (items.BoleroofFire && items.Ocarina && (items.Hookshot || items.HoverBoots)) //BBolero warp
+                       || items.Bow || items.Glove ) && //Bow and glove access via Goron City
+                     (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                  ); 
+            }
          },
          ['Great Fairy Fountain']: {
             type: "NPC", 
             access: "simple",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword && items.Hammer && items.Ocarina && items.ZeldasLullaby);
-            }
+               return (OWERmap == false || dungeons[24].found == true) && items.Hammer && items.Ocarina && items.ZeldasLullaby &&
+                  ( ( (items.BoleroofFire && items.Ocarina && (items.Hookshot || items.HoverBoots)) //BBolero warp
+                       || items.Bow || items.Glove ) && //Bow and glove access via Goron City
+                     (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                  ) ;}
          },
          'Bombable Grotto': {
             type: "grotto", 
@@ -5565,7 +5609,7 @@ var dungeons = [
                   );
             }
          },
-         'Bomb Grotto Gossip': {
+         'Crater Grotto Gossip': {
             type: "gossip", 
             access: "grotto",
             isAvailable: function () {
@@ -5579,7 +5623,7 @@ var dungeons = [
                   );
             }
          },
-         ['Crater Bombable Grotto']: {
+         ['Bomb Grotto Chest']: {
             type: "chest", 
             access: "grotto",
             isAvailable: function () {
@@ -5597,29 +5641,41 @@ var dungeons = [
             type: "freestanding", 
             access: "outdoor",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (OpenGate == 1 || (OpenGate == 0 && (items.Mask >= 1 || items.MasterSword || items.Bombs || (items.Dins && items.Magic) || (items.Bombchu && BombchuLogic)))) && ((items.Bombs || (items.Bombchu && BombchuLogic)) ||
-                  (items.MasterSword && ((items.BoleroofFire && (items.HoverBoots || items.Hookshot)) || items.Bow || items.Glove)));
+               return (OWERmap == false || dungeons[24].found == true) &&
+                  ( ( (items.Bombs || (items.BoleroofFire && items.Ocarina && (items.Hookshot || items.HoverBoots) ) //Bombs or Bolero warp
+                       || items.Hammer || items.Bow || items.Glove || (items.Bombchu && BombchuLogic) ) && //Bow and glove access via Goron City
+                     (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                    )
+                   || ( (items.Bombs || (items.Bombchu && BombchuLogic) ) &&
+                       (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                      )
+                  );
             }
          },
          'Crate Skulltula': {
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
-               return items.Bombs;
-            },
+               return (OWERmap == false || dungeons[24].found == true) &&
+                  (items.Bombs || (items.Bombchu && BombchuLogic) ) &&
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
+            }
          },
          'Child Climb Summit to Crater Scrub': {
             type: "scrub", 
             access: "outdoor",
             isAvailable: function () {
-               return items.Bombs;
-            },
+               return (OWERmap == false || dungeons[24].found == true) &&
+                  (items.Bombs || (items.Bombchu && BombchuLogic) ) &&
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
+            }
          },
          'Cracked Wall Gossip': {
             type: "gossip", 
             access: "outdoor",
             isAvailable: function () {
-               return true
+               return OWERmap == false || dungeons[24].found == true) &&
+                  (items.Bombs || (items.Bombchu && BombchuLogic) );
             }
          },
          'Crater to Trail': {
