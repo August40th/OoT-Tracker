@@ -5429,7 +5429,7 @@ var dungeons = [
             type: "NPC", 
             access: "outdoor",
             isAvailable: function () {
-               return OWERmap == false || dungeons[23].found == true) && 
+               return (OWERmap == false || dungeons[23].found == true) && 
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) && 
                   ( (items.Trade >= 1 && (items.Bottle && (items.ZoraLetter && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale ) && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                                           ) || OpenFountain || isBridgeOpen() || items.Wallet >= 3) && (items.EponasSong || items.Hookshot >= 2) 
