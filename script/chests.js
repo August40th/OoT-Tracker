@@ -5520,10 +5520,11 @@ var dungeons = [
             access: "outdoor",
             isAvailable: function () {
                return (OWERmap == false || dungeons[24].found == true) &&
-                  ( (items.Bombs || (items.BoleroofFire && items.Ocarina  ) //Bombs or Bolero warp
-                       || items.Hammer || items.Bow || items.Glove || (items.Bombchu && BombchuLogic) ) && //Bow and glove access via Goron City
+                    ( ( (items.BoleroofFire && items.Ocarina ) //Bolero warp
+                       || ((items.Hookshot || items.HoverBoots) && (items.Bombs || items.Hammer || items.Bow || items.Glove || (items.Bombchu && BombchuLogic) ) ))
+                     && //access via city or trail
                      (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-                    && (items.Hookshot || items.HoverBoots) ) ;
+                    ) ;
             }
          },
          'Bolero Warp': {
