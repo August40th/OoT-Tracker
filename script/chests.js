@@ -4896,8 +4896,9 @@ var dungeons = [
                         && (items.HoverBoots || (items.Ocarina && items.ZeldasLullaby) ) //Can get into domain
                         && items.Bottle //has bottle
                         && (items.Wallet >= 3 || isBridgeOpen() || OpenFountain || //Can get blue fire as adult
-                            (Age == "Child" || (OpenDoor == true || (items.Ocarina && items.SongofTime) ) //Or open fountain as child
+                            ( (Age == "Child" || (OpenDoor == true || (items.Ocarina && items.SongofTime) ) //Or open fountain as child
                              && items.ZoraLetter && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale)
+                              )
                              )
                             )
                      ) ||
@@ -4919,10 +4920,11 @@ var dungeons = [
                         && (items.HoverBoots || (items.Ocarina && items.ZeldasLullaby) ) //Can get into domain
                         && items.Bottle //has bottle
                         && (items.Wallet >= 3 || isBridgeOpen() || OpenFountain || //Can get blue fire as adult
-                            (Age == "Child" || (OpenDoor == true || (items.Ocarina && items.SongofTime) ) //Or open fountain as child
+                            ( (Age == "Child" || (OpenDoor == true || (items.Ocarina && items.SongofTime) ) //Or open fountain as child
                              && items.ZoraLetter && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale)
-                             )
+                              )
                             )
+                           )
                      ) ||
                      (
                         (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) //Can get child
@@ -5006,9 +5008,10 @@ var dungeons = [
                         && (items.HoverBoots || (items.Ocarina && items.ZeldasLullaby) ) //Can get into domain
                         && items.Bottle //has bottle
                         && (items.Wallet >= 3 || isBridgeOpen() || OpenFountain || //Can get blue fire as adult
-                            (Age == "Child" || (OpenDoor == true || (items.Ocarina && items.SongofTime) ) //Or open fountain as child
-                             && items.ZoraLetter && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale)
-                             )
+                            ( (Age == "Child" || (OpenDoor == true || (items.Ocarina && items.SongofTime) ) //Or open fountain as child
+                               && items.ZoraLetter && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale)
+                              )
+                            )
                            )
                      )
                   );
