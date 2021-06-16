@@ -5674,7 +5674,7 @@ var dungeons = [
             type: "gossip", 
             access: "outdoor",
             isAvailable: function () {
-               return OWERmap == false || dungeons[24].found == true) &&
+               return (OWERmap == false || dungeons[24].found == true) &&
                   (items.Bombs || (items.Bombchu && BombchuLogic) );
             }
          },
