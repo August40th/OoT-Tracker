@@ -122,9 +122,7 @@ var cookieDefault = {
    eggShuff: 0,
    beanShuff: 0,
    chulogic: 0,
-   forest: 1,
    tree: 1,
-   gate: 1,
    door: 1,
    fountain: 0,
    shpsize: 0,
@@ -175,18 +173,10 @@ function loadCookie() {
    document.getElementsByName('mapdivsize')[0].value = cookieobj.mZoom;
    document.getElementsByName('mapdivsize')[0].onchange();
 
-   document.getElementsByName('OpenForest')[0].checked = !!cookieobj.forest;
-   document.getElementsByName('OpenForest')[0].onchange();
-   
    document.getElementsByName('OpenDeku')[0].checked = !!cookieobj.tree;
    document.getElementsByName('OpenDeku')[0].onchange(); 
-
-   document.getElementsByName('OpenGate')[0].checked = !!cookieobj.gate;
-   document.getElementsByName('OpenGate')[0].onchange();
-
    document.getElementsByName('OpenDoor')[0].checked = !!cookieobj.door;
    document.getElementsByName('OpenDoor')[0].onchange();
-
    document.getElementsByName('OpenFountain')[0].checked = !!cookieobj.fountain;
    document.getElementsByName('OpenFountain')[0].onchange();
 
@@ -312,9 +302,7 @@ function saveCookie() {
 
     cookieobj.iZoom = document.getElementsByName('itemdivsize')[0].value;
     cookieobj.mZoom = document.getElementsByName('mapdivsize')[0].value;
-   cookieobj.forest = document.getElementsByName('OpenForest')[0].checked ? 1 : 0;
    cookieobj.tree = document.getElementsByName('OpenDeku')[0].checked ? 1 : 0; 
-   cookieobj.gate = document.getElementsByName('OpenGate')[0].checked ? 1 : 0;
    cookieobj.door = document.getElementsByName('OpenDoor')[0].checked ? 1 : 0;
    cookieobj.fountain = document.getElementsByName('OpenFountain')[0].checked ? 1 : 0;
 
@@ -874,22 +862,8 @@ function setScrub(sender) {
    saveCookie();
 }
 
-function setForest(sender) {
-   OpenForest = sender.checked;
-   updateGridItemAll();
-   updateMap();
-   saveCookie();
-}
-
 function setTree(sender) {
    OpenDeku = sender.checked;
-   updateGridItemAll();
-   updateMap();
-   saveCookie();
-}
-
-function setGate(sender) {
-   OpenGate = sender.checked;
    updateGridItemAll();
    updateMap();
    saveCookie();
