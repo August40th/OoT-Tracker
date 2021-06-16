@@ -5569,8 +5569,7 @@ var dungeons = [
                      (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                     )
                    || ( (items.Ocarina && items.BoleroofFire) && items.Bean &&
-                       (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) && //can plant bean
-                        (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) //can get back adult
+                       (OpenDoor == true || (items.Ocarina && items.SongofTime) ) //can plant bean
                       )
                   );
             }
@@ -5714,108 +5713,120 @@ var dungeons = [
             type: "simple", 
             access: "door",
             isAvailable: function () {
-               return true; }
+               return OWERmap == false || dungeons[25].found == true; }
          },
          ['Talon\'s Cucco game']: {
             type: "NPC", 
             access: "simple",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Mask >= 2;
+               return (OWERmap == false || dungeons[25].found == true) && items.Mask >= 2 && 
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
             }
          },
          'Ranch Stables': {
             type: "simple", 
             access: "door",
             isAvailable: function () {
-               return true; }
+               return OWERmap == false || dungeons[25].found == true; }
          },
          ['Stable Cow Milk 1']: {
             type: "cow", 
             access: "simple",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.EponasSong;
+               return (OWERmap == false || dungeons[25].found == true) && items.Ocarina && items.EponasSong ;
             }
          },
          ['Stable Cow Milk 2']: {
             type: "cow", 
             access: "simple",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.EponasSong;
+               return (OWERmap == false || dungeons[25].found == true) && items.Ocarina && items.EponasSong ;
             }
          },
          '2nd Floor Window Skulltula': {
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
-               return items.Boomerang
+               return (OWERmap == false || dungeons[25].found == true) && items.Boomerang &&
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
+            
             }
          },
          'Tree Skulltula': {
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
-               return true
+               return (OWERmap == false || dungeons[25].found == true) && 
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
             }
          },
          ['Song from Malon']: {
             type: "song", 
             access: "outdoor",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Mask >= 2 && items.Ocarina;
+               return (OWERmap == false || dungeons[25].found == true)  && items.Mask >= 2 && items.Ocarina && 
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
+            
             }
          },
          'Back of Coral Skulltula': {
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
-               return true
+               return (OWERmap == false || dungeons[25].found == true) && 
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
             }
          },
          'Ranch Open Grotto': {
             type: "grotto", 
             access: "grotto",
             isAvailable: function () {
-               return true; }
+               return (OWERmap == false || dungeons[25].found == true) && 
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
+            }
          },
          'Open Grotto Scrubs x3': {
             type: "scrub", 
             access: "grotto",
             isAvailable: function () {
-               return true;
+               return (OWERmap == false || dungeons[25].found == true) && 
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
             }
          },
          'Ranch Silo': {
             type: "simple", 
             access: "door",
             isAvailable: function () {
-               return true; }
+               return OWERmap == false || dungeons[25].found == true; }
          },
          ['Silo Freestanding']: {
             type: "freestanding", 
             access: "simple",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0));
+               return (OWERmap == false || dungeons[25].found == true) && 
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
             }
          },
          ['Silo Cow Milk 1']: {
             type: "cow", 
             access: "simple",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.EponasSong;
+               return (OWERmap == false || dungeons[25].found == true) && items.Ocarina && items.EponasSong ;
             }
          },
          ['Silo Cow Milk 2']: {
             type: "cow", 
             access: "simple",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.EponasSong;
+               return (OWERmap == false || dungeons[25].found == true) && items.Ocarina && items.EponasSong ;
             }
          },
          'North of Silo Skulltula': {
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
-               return items.Boomerang
+               return (OWERmap == false || dungeons[25].found == true) && items.Boomerang &&
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
             }
          },
       },
@@ -5845,21 +5856,24 @@ var dungeons = [
             type: "gossip", 
             access: "outdoor",
             isAvailable: function () {
-               return true
+               return OWERmap == false || dungeons[26].found == true ;
+            
             }
          },
          'Soil Patch Skulltula': {
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
-               return items.Bottle;
+               return (OWERmap == false || dungeons[26].found == true) && items.Bottle &&
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
             }
          },
          ['Child Underwater Freestanding']: {
             type: "freestanding", 
             access: "outdoor",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Scale;
+               return (OWERmap == false || dungeons[26].found == true) && items.Scale &&
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
             }
          },
          'Lake to Domain': {
@@ -5868,40 +5882,51 @@ var dungeons = [
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
-                  return true; }
+                  return items.Scale && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
+            ; }
          },
          'Laboratory': {
             type: "simple", 
             access: "door",
             isAvailable: function () {
-               return true; }
+               return OWERmap == false || dungeons[26].found == true; }
          },
          'Lab Crate Skulltula': {
             type: "skulltula", 
             access: "simple",
             isAvailable: function () {
-               return items.IronBoots && items.Hookshot;
+               return (OWERmap == false || dungeons[26].found == true) && items.IronBoots && items.Hookshot &&
+                  (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
             }
          },
          ['Diving in the Lab']: {
             type: "NPC", 
             access: "simple",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Scale >= 2 || (items.IronBoots && items.Hookshot));
+               return (OWERmap == false || dungeons[26].found == true) &&
+                  ( ( (items.IronBoots || items.Scale >= 2) && 
+                     (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                   || (items.Scale >= 2 && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                  );
             }
          },
          ['Lab Roof Freestanding']: {
             type: "freestanding", 
             access: "outdoor",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bean || (items.Hookshot && items.Scarecrow >= 2));
+               return (OWERmap == false || dungeons[26].found == true) &&
+                  ( ( (items.Hookshot && items.Ocarina) && 
+                     (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                   || (items.Bean && (OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                  );
             }
          },
          'Lab Wall Skulltula': {
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
-               return items.Boomerang;
+               return (OWERmap == false || dungeons[26].found == true) && items.Boomerang &&
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
             }
          },
          'Lake Owl': {
@@ -5910,19 +5935,21 @@ var dungeons = [
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
-                  return true; }
+                  return (OWERmap == false || dungeons[26].found == true) &&
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
+            }
          },
          'Lake Hylia Grave': {
             type: "simple", 
             access: "door",
             isAvailable: function () {
-               return true; }
+               return OWERmap == false || dungeons[26].found == true; }
          },
          'Grave Pull Scrub x3': {
             type: "scrub", 
             access: "grotto",
             isAvailable: function () {
-               return true;
+               return OWERmap == false || dungeons[26].found == true;
             },
          },
          'Serenade Warp': {
@@ -5935,62 +5962,81 @@ var dungeons = [
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
-               return items.Hookshot >= 2;
+               return (OWERmap == false || dungeons[26].found == true) && items.Hookshot >= 2 &&
+                  (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
             }
          },
          'Perimeter of Lake 1': {
             type: "gossip", 
             access: "outdoor",
             isAvailable: function () {
-               return true
+               return OWERmap == false || dungeons[26].found == true;
             }
          },
          'Perimeter of Lake 2': {
             type: "gossip", 
             access: "outdoor",
             isAvailable: function () {
-               return true
+               return OWERmap == false || dungeons[26].found == true;
             }
          },
          'Fishing Pond': {
             type: "simple", 
             access: "door",
             isAvailable: function () {
-               return true; }
+               return (OWERmap == false || dungeons[26].found == true) && 
+                  ( (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  )
+                   || ( (items.Hookshot && items.Ocarina) && 
+                     (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                   || (items.Bean && (OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                  )
+               ); 
+            }
          },
          ['Child Fishing']: {
             type: "NPC", 
             access: "simple",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0));
+               return (OWERmap == false || dungeons[26].found == true) &&
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
             }
          },
          ['Adult Fishing']: {
             type: "NPC", 
             access: "simple",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bean || (items.Hookshot && items.Scarecrow >= 2));
+               return (OWERmap == false || dungeons[26].found == true) &&
+                  ( ( (items.Hookshot && items.Ocarina) && 
+                     (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                   || (items.Bean && (OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                  );
             }
          },
          ['Shoot the Sun']: {
             type: "freestanding", 
             access: "outdoor",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.Bow && items.Hookshot >= 2 && items.Scarecrow >= 2;
+               return (OWERmap == false || dungeons[26].found == true) && items.Bow &&
+                  items.Hookshot >= 2 && items.Ocarina //|| 'Morpha'.isopened
+                  && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
             }
          },
          'Fire Arrow Island Skulltula': {
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
-               return true;
+               return (OWERmap == false || dungeons[26].found == true) &&
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
             }
          },
          'Water Temple': {
             type: "dungeon", 
             access: "door",
                isAvailable: function () {
-                  return true; }
+                  return (OWERmap == false || dungeons[26].found == true) && items.Hookshot &&
+                  (items.Scale >= 2 || items.IronBoots) &&
+                  (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
+            }
          },
       },
       isBeatable: function () {
@@ -6019,89 +6065,109 @@ var dungeons = [
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
-               return items.Boomerang;
-            },
+               return (OWERmap == false || dungeons[27].found == true) && items.Boomerang &&
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
+            }
          },
          ['Crate Freestanding']: {
             type: "freestanding", 
             access: "outdoor",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0));
+               return (OWERmap == false || dungeons[27].found == true) && 
+                  ( (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  )
+                   || ( items.Hookshot >= 2 && Age == "Adult" ) ) ; 
             }
          },
          ['Waterfall Freestanding']: {
             type: "freestanding", 
             access: "outdoor",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0));
-            }
+               return OWERmap == false || dungeons[27].found == true}
          },
          'Waterfall Gossip': {
             type: "gossip", 
             access: "outdoor",
             isAvailable: function () {
-               return true
+               return OWERmap == false || dungeons[27].found == true ;
             }
          },
          ['Valley Cow Milk']: {
             type: "cow", 
             access: "outdoor",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.EponasSong;
+               return (OWERmap == false || dungeons[27].found == true) && items.Ocarina && items.EponasSong &&
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ; 
             }
          },
          'Soil Patch Skulltula': {
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
-               return items.Bottle;
-            },
+               return (OWERmap == false || dungeons[27].found == true) && items.Bottle &&
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ; 
+            }
          },
          'Silver Rock Grotto': {
             type: "grotto", 
             access: "grotto",
             isAvailable: function () {
-               return items.Glove >= 2; }
+               return (OWERmap == false || dungeons[27].found == true) && items.Glove >= 2 &&
+                  (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ; 
+            }
          },
          'Above Hammer Rocks Skulltula': {
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
-               return items.Hookshot && ((items.Ocarina && items.EponasSong) || items.Hookshot >= 2);
-            },
+               return (OWERmap == false || dungeons[27].found == true) && items.Hookshot &&
+                  (items.Membership || (items.Ocarina && items.EponasSong) || items.Hookshot >= 2) &&
+                  (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ; 
+            }
          },
          ['Hammer Rocks Chest']: {
             type: "chest", 
             access: "outdoor",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.Ocarina && items.EponasSong) || items.Hookshot >= 2 || isFortressOpen()) && items.MasterSword && items.Hammer;
+               return (OWERmap == false || dungeons[27].found == true) && items.Hammer &&
+                  (items.Membership || (items.Ocarina && items.EponasSong) || items.Hookshot >= 2) &&
+                  (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ; 
             }
          },
          'Carpenter Tent': {
             type: "simple", 
             access: "door",
             isAvailable: function () {
-               return true; }
+               return (OWERmap == false || dungeons[27].found == true) &&
+                  (items.Membership || (items.Ocarina && items.EponasSong) || items.Hookshot >= 2) &&
+                  (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ; 
+            }
          },
          'Behind Tent Skulltula': {
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
-               return items.Hookshot && ((items.Ocarina && items.EponasSong) || items.Hookshot >= 2);
-            },
+               return (OWERmap == false || dungeons[27].found == true) && items.Hookshot &&
+                  (items.Membership || (items.Ocarina && items.EponasSong) || items.Hookshot >= 2) &&
+                  (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ; 
+            }
          },
          'Song of Storms Grotto': {
             type: "grotto", 
             access: "grotto",
             isAvailable: function () {
-               return true; }
+               return (OWERmap == false || dungeons[27].found == true) && items.Ocarina && items.SongofStorms &&
+                  (items.Membership || (items.Ocarina && items.EponasSong) || items.Hookshot >= 2) &&
+                  (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ; 
+            }
          },
          'Storms Grotto behind Tent': {
             type: "scrub", 
             access: "grotto",
             isAvailable: function () {
-               return (items.EponasSong || items.Hookshot >= 2) && items.Ocarina && items.SongofStorms;
-            },
+               return (OWERmap == false || dungeons[27].found == true) && items.Ocarina && items.SongofStorms &&
+                  (items.Membership || (items.Ocarina && items.EponasSong) || items.Hookshot >= 2) &&
+                  (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ; 
+            }
          },
          'Valley to Fortress': {
             x: "20.0%",
