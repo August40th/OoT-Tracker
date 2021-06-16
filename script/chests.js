@@ -5189,7 +5189,7 @@ var dungeons = [
             type: "freestanding", 
             access: "outdoor",
             isAvailable: function () {
-               return (OWERmap == false || dungeons[22].found == true) && items.IronBoots &&
+               return (OWERmap == false || dungeons[22].found == true) && 
                   (
                      (
                         (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) //Can get adult
@@ -5207,7 +5207,7 @@ var dungeons = [
             type: "freestanding", 
             access: "outdoor",
             isAvailable: function () {
-               return (OWERmap == false || dungeons[22].found == true) &&
+               return (OWERmap == false || dungeons[22].found == true) && items.IronBoots &&
                   (
                      (
                         (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) //Can get adult
