@@ -5182,18 +5182,14 @@ var dungeons = [
                                                  )
                                                ))
                             ) )
-                     ) ||
-                     (
-                        (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) //Can get child
-                        && (OpenFountain || items.ZoraLetter) && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) //Can get into domain
-               ) ;
+                     ) ;
             }
          },
          ['Iceberg Freestanding']: {
             type: "freestanding", 
             access: "outdoor",
             isAvailable: function () {
-               return (OWERmap == false || dungeons[22].found == true) &&
+               return (OWERmap == false || dungeons[22].found == true) && items.IronBoots &&
                   (
                      (
                         (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) //Can get adult
@@ -5204,11 +5200,7 @@ var dungeons = [
                                                  )
                                                ))
                             ) )
-                     ) ||
-                     (
-                        (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) //Can get child
-                        && (OpenFountain || items.ZoraLetter) && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) //Can get into domain
-                   );
+                     ) ;
             }
          },
          ['Under Icy Waters Freestanding']: {
@@ -5226,11 +5218,7 @@ var dungeons = [
                                                  )
                                                ))
                             ) )
-                     ) ||
-                     (
-                        (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) //Can get child
-                        && (OpenFountain || items.ZoraLetter) && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) //Can get into domain
-                   );
+                     ) ;
             }
          },
          'Ice Cavern': {
@@ -5248,11 +5236,7 @@ var dungeons = [
                                                  )
                                                ))
                             ) )
-                     ) ||
-                     (
-                        (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) //Can get child
-                        && (OpenFountain || items.ZoraLetter) && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) //Can get into domain
-                   );
+                     ) ;
                }
          },
       },
