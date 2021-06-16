@@ -5208,7 +5208,6 @@ var dungeons = [
                      (
                         (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) //Can get child
                         && (OpenFountain || items.ZoraLetter) && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) //Can get into domain
-                     )
                    );
             }
          },
@@ -5231,7 +5230,6 @@ var dungeons = [
                      (
                         (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) //Can get child
                         && (OpenFountain || items.ZoraLetter) && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) //Can get into domain
-                     )
                    );
             }
          },
@@ -5254,7 +5252,6 @@ var dungeons = [
                      (
                         (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) //Can get child
                         && (OpenFountain || items.ZoraLetter) && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) //Can get into domain
-                     )
                    );
                }
          },
