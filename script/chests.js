@@ -5392,7 +5392,7 @@ var dungeons = [
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
-               return OWERmap == false || dungeons[23].found == true) && 
+               return (OWERmap == false || dungeons[23].found == true) && 
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ;
             }
          },
