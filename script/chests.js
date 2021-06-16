@@ -5292,14 +5292,16 @@ var dungeons = [
             type: "freestanding", 
             access: "outdoor",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (OpenGate == 1 || (OpenGate == 0 && (items.Mask >= 1 || items.MasterSword || items.Bombs || (items.Dins && items.Magic) || (items.Bombchu && BombchuLogic))));
+               return OWERmap == false || dungeons[23].found == true ;
             }
          },
          'Cavern Soil Patch Skulltula': {
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
-               return items.Bottle
+               return items.Bottle && (OWERmap == false || dungeons[23].found == true) && 
+                  (items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove ) &&
+                       (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
             }
          },
          ['Breakable Wall Chest']: {
@@ -5352,14 +5354,16 @@ var dungeons = [
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
-               return items.Hammer
+               return (OWERmap == false || dungeons[23].found == true) && 
+                  (items.Hookshot || items.Hammer ) && 
+                     (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ;
             }
          },
          'Cow Grotto': {
             type: "grotto", 
             access: "grotto",
             isAvailable: function () {
-               return (OWERmap == false || dungeons[23].found == true) &&
+               return (OWERmap == false || dungeons[23].found == true) && 
                   ( ( (items.Bombs || items.Hammer || (items.Bombchu && BombchuLogic) ) && 
                      (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                     )
@@ -5388,10 +5392,11 @@ var dungeons = [
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
-               return items.Hammer
+               return OWERmap == false || dungeons[23].found == true) && 
+                  (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ;
             }
          },
-         'Sumit Fairy Fountain': {
+         'Summit Bombable Door': {
             type: "simple", 
             access: "door",
             isAvailable: function () {
@@ -5424,7 +5429,13 @@ var dungeons = [
             type: "NPC", 
             access: "outdoor",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword && (items.Trade >= 1 && (items.ZoraLetter || OpenFountain) && (items.EponasSong || items.Hookshot >= 2)) || (items.Trade >= 6 && (items.EponasSong || items.Hookshot >= 2)) || items.Trade >= 9);
+               return OWERmap == false || dungeons[23].found == true) && 
+                  (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) && 
+                  ( (items.Trade >= 1 && (items.Bottle && (items.ZoraLetter && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale ) && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                                          ) || OpenFountain || isBridgeOpen() || items.Wallet >= 3) && (items.EponasSong || items.Hookshot >= 2) 
+                    )//Get King Z unthawed for eyeball
+                   || (items.Trade >= 6 && (items.EponasSong || items.Hookshot >= 2)) //Valley Carpenter Foreman
+                   || items.Trade >= 9); //Claim check/eyedrops
             }
          },
          'Trail to Crater': {
@@ -5447,7 +5458,15 @@ var dungeons = [
             type: "gossip", 
             access: "outdoor",
             isAvailable: function () {
-               return true
+               return (OWERmap == false || dungeons[23].found == true) &&
+                  ( ( (items.Bombs || (items.BoleroofFire && (items.Hookshot || items.HoverBoots) ) //Bombs or Bolero warp
+                       || items.Hammer || items.Bow || items.Glove || (items.Bombchu && BombchuLogic) ) && //Bow and glove access via Goron City
+                     (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                    )
+                   || ( (items.Bombs || (items.Bombchu && BombchuLogic) ) &&
+                       (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                      )
+                  );
             }
          },
       },
