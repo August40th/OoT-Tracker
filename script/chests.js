@@ -6529,14 +6529,14 @@ var dungeons = [
             type: "chest", 
             access: "grotto",
             isAvailable: function () {
-               return (OWERmap == false || dungeons[30].found == true; ) && items.Ocarina && items.SunsSong ;
+               return (OWERmap == false || dungeons[30].found == true) && items.Ocarina && items.SunsSong ;
             }
          },
          'South Wall Skulltula': {
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
-               return (OWERmap == false || dungeons[29].found == true) && items.Boomerang &&
+               return (OWERmap == false || dungeons[30].found == true) && items.Boomerang &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) 
                && items.Ocarina && items.RequiemofSpirit && items.Bottle ;
             }
@@ -6545,21 +6545,21 @@ var dungeons = [
             type: "grotto", 
             access: "grotto",
             isAvailable: function () {
-               return (OWERmap == false || dungeons[30].found == true; ) && items.Ocarina && items.ZeldasLullaby ;
+               return (OWERmap == false || dungeons[30].found == true) && items.Ocarina && items.ZeldasLullaby ;
             }
          },
          ['Composer Brothers\' Song']: {
             type: "song", 
             access: "grotto",
             isAvailable: function () {
-               return (OWERmap == false || dungeons[30].found == true; ) && items.Ocarina && items.ZeldasLullaby ;
+               return (OWERmap == false || dungeons[30].found == true) && items.Ocarina && items.ZeldasLullaby ;
             }
          },
          ['Royal Tomb Chest']: {
             type: "chest", 
             access: "grotto",
             isAvailable: function () {
-               return (OWERmap == false || dungeons[30].found == true; ) && items.Ocarina && items.ZeldasLullaby && 
+               return (OWERmap == false || dungeons[30].found == true) && items.Ocarina && items.ZeldasLullaby && 
                   items.Magic && (items.Dins || 
                  (items.Bow && items.Fire && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                  );
@@ -6569,21 +6569,23 @@ var dungeons = [
             type: "warp",
             access: "warp",
             isAvailable: function () {
-               return items.Ocarina && items.NocturneofShadow ;
+               return (OWERmap == false || dungeons[30].found == true) && items.Ocarina && items.NocturneofShadow ;
             }
          },
          'Noturne Gossip': {
             type: "gossip",
             access: "outdoor",
             isAvailable: function () {
-               return items.Ocarina && items.NocturneofShadow
+               return (OWERmap == false || dungeons[30].found == true) && items.Ocarina && items.NocturneofShadow
             }
          },
          'Shadow Temple': {
             type: "dungeon", 
             access: "door",
                isAvailable: function () {
-                  return items.Ocarina && items.NocturneofShadow && items.Magic && (items.Dins || items.Fire) ;
+                  return (OWERmap == false || dungeons[30].found == true) && 
+                     (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                     && items.Ocarina && items.NocturneofShadow && items.Magic && (items.Dins || items.Fire) ;
                }
          },
       },
@@ -6613,21 +6615,33 @@ var dungeons = [
             type: "carpet", 
             access: "outdoor",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword && (((items.EponasSong || isFortressOpen()) && items.HoverBoots) || items.Hookshot >= 2))
+               return (OWERmap == false || dungeons[31].found == true) && 
+                  (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) &&
+                   items.Wallet >= 2 && ( (items.Ocarina && items.RequiemofSpirit) 
+                                      || (items.Membership && (items.HoverBoots || items.Hookshot >= 2) ) ) ;
             }
          },
          ['Torch Chest']: {
             type: "chest", 
             access: "outdoor",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword && (((items.EponasSong || isFortressOpen()) && items.HoverBoots) || items.Hookshot >= 2) && (items.Magic && (items.Dins || (items.Bow && items.Fire))))
+               return (OWERmap == false || dungeons[31].found == true) && items.Magic
+               && ( (items.Membership && (items.HoverBoots || items.Hookshot >= 2) && (items.Dins || (items.Bow && items.Fire) )
+                    && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )  
+                   ) || (items.Ocarina && items.RequiemofSpirit && items.Dins) 
+                 ) ;
             }
          },
          'Structure Skulltula': {
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.MasterSword && (((items.EponasSong || isFortressOpen()) && items.HoverBoots) || items.Hookshot >= 2))
+               return (OWERmap == false || dungeons[31].found == true) && 
+                  ( (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) &&
+                   items.Hookshot && ( (items.Ocarina && items.RequiemofSpirit) 
+                                      || (items.Membership && (items.HoverBoots || items.Hookshot >= 2) ) ) 
+                  ) || ( (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) &&
+                        items.Boomerang && items.Ocarina && items.RequiemofSpirit) ;
             }
          },
          'Wasteland to Desert': {
