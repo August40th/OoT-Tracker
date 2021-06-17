@@ -6203,55 +6203,72 @@ var dungeons = [
             type: "grotto", 
             access: "grotto",
             isAvailable: function () {
-               return true; }
+               return (OWERmap == false || dungeons[28].found == true) && items.Ocarina && items.SongofStorms &&
+                  (items.Membership || (items.Ocarina && items.EponasSong) || 
+                   (items.Ocarina && items.RequiemofSpirit && items.HoverBoots) || items.Hookshot >= 2) &&
+                  (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ; 
+            }
          },
          ['Guard Fight']: {
             type: "guard", 
             access: "outdoor",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.Ocarina && items.EponasSong) || items.Hookshot >= 2 || isFortressOpen()) && items.MasterSword && smallkeys == 'Keysanity';
+               return (OWERmap == false || dungeons[28].found == true) &&
+                  ( (items.Ocarina && items.EponasSong) || (items.Ocarina && items.RequiemofSpirit && items.HoverBoots) 
+                   || items.Hookshot >= 2) &&
+                  (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ; 
             }
          },
          'Fortress Skulltula': {
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
-               return (items.Ocarina && items.EponasSong) || items.Hookshot >= 2;
-            },
+               return (OWERmap == false || dungeons[28].found == true) &&
+                  (items.Membership || (items.Ocarina && items.EponasSong) || 
+                   (items.Ocarina && items.RequiemofSpirit && items.HoverBoots) || items.Hookshot >= 2) &&
+                  (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ; 
+            }
          },
          ['Rooftop Chest']: {
             type: "chest", 
             access: "outdoor",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.Ocarina && items.EponasSong) || items.Hookshot >= 2 || isFortressOpen()) && items.MasterSword && (items.HoverBoots || (items.Scarecrow >= 2 && items.Hookshot) || items.Hookshot >= 2);
+               return (OWERmap == false || dungeons[28].found == true) && (items.HoverBoots || (items.Hookshot && items.Scarecrow >= 2) ) &&
+                  (items.Membership || (items.Ocarina && items.EponasSong) || 
+                   (items.Ocarina && items.RequiemofSpirit && items.HoverBoots) || items.Hookshot >= 2) &&
+                  (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ; 
             }
          },
          'Gerudo Training Grounds': {
             type: "dungeon", 
             access: "door",
                isAvailable: function () {
-                  return true; }
+                  return (OWERmap == false || dungeons[28].found == true) && items.Membership; 
+            }
          },
          ['Horseback Archery 1000 pts']: {
             type: "NPC", 
             access: "outdoor",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && isFortressOpen() && items.MasterSword && items.Bow && items.EponasSong && items.Ocarina;
+               return (OWERmap == false || dungeons[28].found == true) && items.Membership && items.Bow && items.EponasSong && items.Ocarina;
             }
          },
          ['Horseback Archery 1500 pts']: {
             type: "NPC", 
             access: "outdoor",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && isFortressOpen() && items.MasterSword && items.Bow && items.EponasSong && items.Ocarina;
+               return (OWERmap == false || dungeons[28].found == true) && items.Membership && items.Bow && items.EponasSong && items.Ocarina;
             }
          },
          'Archery Target Skulltula': {
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
-               return items.Hookshot && ((items.Ocarina && items.EponasSong) || items.Hookshot >= 2);
-            },
+               return (OWERmap == false || dungeons[28].found == true) && items.Hookshot &&
+                  (items.Membership || (items.Ocarina && items.EponasSong) || 
+                   (items.Ocarina && items.RequiemofSpirit && items.HoverBoots) || items.Hookshot >= 2) &&
+                  (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ; 
+            }
          },
          'Fortress to Wasteland': {
             x: "17.0%",
@@ -6259,7 +6276,8 @@ var dungeons = [
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
-                  return true; }
+                  return (OWERmap == false || dungeons[28].found == true) && items.Membership; 
+             }
          },
       },
       isBeatable: function () {
@@ -6288,27 +6306,34 @@ var dungeons = [
             type: "simple", 
             access: "door",
             isAvailable: function () {
-               return true; }
+               return (OWERmap == false || dungeons[29].found == true) && (items.Bombs || (items.Bombchu && BombchuLogic))
+               && ( (items.Membership && (items.HoverBoots || items.Hookshot >= 2) 
+                    && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )  
+                   ) || (items.Ocarina && items.RequiemofSpirit) 
+                 ) ;
+            }
          },
          'Nayru\'s Great Fairy Fountain': {
-            type: "simple", 
-            access: "door",
-            isAvailable: function () {
-               return true; }
-         },
-         ['Nayru\'s Great Fairy Fountain']: {
             type: "NPC", 
             access: "simple",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Ocarina && items.ZeldasLullaby && (items.Bombs || (items.Bombchu && BombchuLogic))) && (items.MasterSword && (((items.EponasSong || isFortressOpen()) && items.HoverBoots) || items.Hookshot >= 2) || items.RequiemofSpirit)
+               return (OWERmap == false || dungeons[29].found == true) && (items.Bombs || (items.Bombchu && BombchuLogic))
+               && items.Ocarina && items.ZeldasLullaby &&
+                 ( (items.Membership && (items.HoverBoots || items.Hookshot >= 2) 
+                    && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )  
+                   ) || (items.Ocarina && items.RequiemofSpirit) 
+                 ) ;
             }
          },
          'Water Hole Tree Skulltula': {
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
-               return items.Hookshot && (items.Membership >= 5 && (items.HoverBoots || items.Hookshot >= 2)) || (items.Ocarina && items.RequiemofSpirit);
-            },
+               return (OWERmap == false || dungeons[29].found == true) && items.Hookshot &&
+                  ( (items.Membership && (items.HoverBoots || items.Hookshot >= 2) ) 
+                   || (items.Ocarina && items.RequiemofSpirit) ) &&
+                  (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
+            }
          },
          'Requiem Warp': {
             type: "warp", 
@@ -6320,54 +6345,83 @@ var dungeons = [
             type: "grotto", 
             access: "grotto",
             isAvailable: function () {
-               return true; }
+               return (OWERmap == false || dungeons[29].found == true) && items.Glove >= 2 &&
+                  ( (items.Membership && (items.HoverBoots || items.Hookshot >= 2) ) 
+                   || (items.Ocarina && items.RequiemofSpirit) ) &&
+                  (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
+            }
          },
          'Silver Rock Scrub Grotto': {
             type: "scrub", 
             access: "grotto",
             isAvailable: function () {
-               return items.Glove >= 2 && ((items.Membership >= 5 && (items.HoverBoots || items.Hookshot >= 2)) || (items.Ocarina && items.RequiemofSpirit));
-            },
+               return (OWERmap == false || dungeons[29].found == true) && items.Glove >= 2 &&
+                  ( (items.Membership && (items.HoverBoots || items.Hookshot >= 2) ) 
+                   || (items.Ocarina && items.RequiemofSpirit) ) &&
+                  (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
+            }
          },
          'Northwest Desert Gossip': {
             type: "gossip", 
             access: "outdoor",
             isAvailable: function () {
-               return true
+               return (OWERmap == false || dungeons[29].found == true)
+               && ( (items.Membership && (items.HoverBoots || items.Hookshot >= 2) 
+                    && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )  
+                   ) || (items.Ocarina && items.RequiemofSpirit) 
+                 ) ;
             }
          },
          'Spirit Temple': {
             type: "dungeon", 
             access: "door",
                isAvailable: function () {
-                  return true; }
+                  return (OWERmap == false || dungeons[29].found == true)
+               && ( (items.Membership && (items.HoverBoots || items.Hookshot >= 2) 
+                    && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )  
+                   ) || (items.Ocarina && items.RequiemofSpirit) 
+                 ) ;
+               }
          },
          ['Song from Sheik']: {
             type: "song", 
             access: "outdoor",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.MasterSword && (((items.Ocarina && items.EponasSong) || isFortressOpen()) && items.HoverBoots) || items.Hookshot >= 2) || (items.Ocarina && items.RequiemofSpirit));
+               return (OWERmap == false || dungeons[29].found == true)
+               && ( (items.Membership && (items.HoverBoots || items.Hookshot >= 2) 
+                    && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )  
+                   ) || (items.Ocarina && items.RequiemofSpirit) 
+                 ) ;
             }
          },
          'Soil Patch Skulltula': {
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
-               return items.Ocarina && items.RequiemofSpirit && items.Bottle
+               return (OWERmap == false || dungeons[29].found == true) && 
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) 
+               && items.Ocarina && items.RequiemofSpirit && items.Bottle ;
             }
          },
          'Bean Ride Skulltula': {
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
-               return items.Ocarina && items.RequiemofSpirit && (items.Bombs || items.Scale)
+               return (OWERmap == false || dungeons[29].found == true) && 
+                  ( (items.Hookshot && ( (items.Membership && (items.HoverBoots || items.Hookshot >= 2) ) 
+                                        || (items.Ocarina && items.RequiemofSpirit) ) 
+                     && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                    ) || ((OpenDoor == true || (items.Ocarina && items.SongofTime) ) 
+                          && items.Ocarina && items.RequiemofSpirit && items.Bean ) );
             }
          },
          ['Bean to Arch Freestanding']: {
             type: "freestanding", 
             access: "outdoor",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.Bean && items.Ocarina && items.RequiemofSpirit
+               return (OWERmap == false || dungeons[29].found == true) && 
+                  (OpenDoor == true || (items.Ocarina && items.SongofTime) ) 
+               && items.Ocarina && items.RequiemofSpirit && items.Bean ;
             }
          },
       },
