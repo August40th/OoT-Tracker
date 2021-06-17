@@ -6451,107 +6451,125 @@ var dungeons = [
             type: "simple", 
             access: "door",
             isAvailable: function () {
-               return true; }
+               return OWERmap == false || dungeons[30].found == true; 
+            }
          },
          ['Dampe Digging']: {
             type: "NPC", 
             access: "outdoor",
             isAvailable: function () {
-               return ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)));
+               return (OWERmap == false || dungeons[29].found == true) && 
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ;
             }
          },
          'Free Chest Grave': {
             type: "grotto", 
             access: "grotto",
             isAvailable: function () {
-               return true; }
+               return OWERmap == false || dungeons[30].found == true; 
+            }
          },
          ['Free Chest Grave']: {
             type: "chest", 
             access: "grotto",
             isAvailable: function () {
-               return ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)));
+               return OWERmap == false || dungeons[30].found == true; 
             }
          },
          ['Magic Bean Freestanding']: {
             type: "freestanding", 
             access: "outdoor",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && ((items.MasterSword && (items.Bean || items.Hookshot >= 2)) || items.Boomerang);
+               return (OWERmap == false || dungeons[29].found == true) && 
+                  ( ( (OpenDoor == true || (items.Ocarina && items.SongofTime) ) && items.Bean )
+                   || (items.Boomerang && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                   || (items.Hookshot >= 2 && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ) 
+                  );
             }
          },
          'Soil Patch Skulltula': {
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
-               return items.Bottle;
-            },
+               return (OWERmap == false || dungeons[29].found == true) && items.Bottle && 
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ;
+            }
          },
          'Dampe\'s Grave': {
             type: "grotto", 
             access: "grotto",
             isAvailable: function () {
-               return true; }
+               return OWERmap == false || dungeons[30].found == true; 
+            }
          },
          ['Dampe Race 1']: {
             type: "NPC", 
             access: "grotto",
             isAvailable: function () {
-               return ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword);
+               return (OWERmap == false || dungeons[29].found == true) && 
+                  (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ;
             }
          },
          ['Dampe Race 2']: {
             type: "NPC", 
             access: "grotto",
             isAvailable: function () {
-               return ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword);
+               return (OWERmap == false || dungeons[29].found == true) && 
+                  (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ;
             }
          },
          'Redead Grave': {
             type: "grotto", 
             access: "grotto",
             isAvailable: function () {
-               return true; }
+               return OWERmap == false || dungeons[30].found == true; 
+            }
          },
          ['Redead Grave Chest']: {
             type: "chest", 
             access: "grotto",
             isAvailable: function () {
-               return ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.SunsSong);
+               return (OWERmap == false || dungeons[30].found == true; ) && items.Ocarina && items.SunsSong ;
             }
          },
          'South Wall Skulltula': {
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
-               return items.Boomerang;
-            },
+               return (OWERmap == false || dungeons[29].found == true) && items.Boomerang &&
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) 
+               && items.Ocarina && items.RequiemofSpirit && items.Bottle ;
+            }
          },
          'Royal Tomb': {
             type: "grotto", 
             access: "grotto",
             isAvailable: function () {
-               return true; }
+               return (OWERmap == false || dungeons[30].found == true; ) && items.Ocarina && items.ZeldasLullaby ;
+            }
          },
          ['Composer Brothers\' Song']: {
             type: "song", 
             access: "grotto",
             isAvailable: function () {
-               return ((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.ZeldasLullaby);
+               return (OWERmap == false || dungeons[30].found == true; ) && items.Ocarina && items.ZeldasLullaby ;
             }
          },
          ['Royal Tomb Chest']: {
             type: "chest", 
             access: "grotto",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Ocarina && items.ZeldasLullaby && ((items.Dins || (items.Fire && items.Bow)) && items.Magic));
+               return (OWERmap == false || dungeons[30].found == true; ) && items.Ocarina && items.ZeldasLullaby && 
+                  items.Magic && (items.Dins || 
+                 (items.Bow && items.Fire && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                 );
             }
          },
          'Noturne Warp': {
             type: "warp",
             access: "warp",
             isAvailable: function () {
-               return items.Ocarina && items.NocturneofShadow
+               return items.Ocarina && items.NocturneofShadow ;
             }
          },
          'Noturne Gossip': {
@@ -6565,7 +6583,8 @@ var dungeons = [
             type: "dungeon", 
             access: "door",
                isAvailable: function () {
-                  return true; }
+                  return items.Ocarina && items.NocturneofShadow && items.Magic && (items.Dins || items.Fire) ;
+               }
          },
       },
       isBeatable: function () {
