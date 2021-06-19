@@ -86,55 +86,55 @@ var dungeons = [
           type: "entrance",
           access: "entrance",
           isAvailable: function () {
-               return OWERmap == false && dungeons[0].found == false ; }
+               return dungeons[0].found == true ; }
        },
          'Fairy Ocarina': {
             type: "ocarina",
             access: "no OWER",
             isAvailable: function () {
-               return OWERmap == false || dungeons[0].found == true ; }
+               return dungeons[0].found == true ; }
          },
          'Mido\'s House': {
             type: "simple",
             access: "door",
             isAvailable: function () {
-               return OWERmap == false || dungeons[0].found == true ; }
+               return dungeons[0].found == true ; }
          },
          'Mido\'s House 1': {
             type: "chest",
             access: "simple",
             isAvailable: function () {
-               return OWERmap == false || dungeons[0].found == true ; }
+               return dungeons[0].found == true ; }
          },
          'Mido\'s House 2': {
             type: "chest",
             access: "simple",
             isAvailable: function () {
-               return OWERmap == false || dungeons[0].found == true ; }
+               return dungeons[0].found == true ; }
          },
          'Mido\'s House 3': {
             type: "chest",
             access: "simple",
             isAvailable: function () {
-               return OWERmap == false || dungeons[0].found == true ; }
+               return dungeons[0].found == true ; }
          },
          'Mido\'s House 4': {
             type: "chest",
             access: "simple",
             isAvailable: function () {
-               return OWERmap == false || dungeons[0].found == true ; }
+               return dungeons[0].found == true ; }
          },
          'Know It All Bro\'s': {
             type: "simple",
             access: "door",
             isAvailable: function () {
-               return OWERmap == false || dungeons[0].found == true ; }
+               return dungeons[0].found == true ; }
          },
          'Child Know it All Bros Skulltula': {
             type: "skulltula",
             access: "outdoor",
             isAvailable: function () { //Child only outdoor
-               return (OWERmap == false || dungeons[0].found == true) && 
+               return dungeons[0].found == true && 
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) 
                   ); }
          },
@@ -142,20 +142,20 @@ var dungeons = [
             type: "ksword",
             access: "outdoor",
             isAvailable: function () {
-               return (OWERmap == false || dungeons[0].found == true) && 
+               return dungeons[0].found == true && 
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); }
          },
          'Link\'s House': {
             type: "alldoor",
             access: "door",
             isAvailable: function () {
-               return OWERmap == false || dungeons[0].found == true ; }
+               return dungeons[0].found == true ; }
          },
          'Link\'s House Cow': {
             type: "cow",
             access: "alldoor",
             isAvailable: function () { //Child only indoor
-               return (OWERmap == false || dungeons[0].found == true) && IndoorER !== "Full" && Cowsanity == false
+               return dungeons[0].found == true
                  && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) &&
                   items.Ocarina && items.EponasSong; }
          },
@@ -163,19 +163,19 @@ var dungeons = [
             type: "simple",
             access: "door",
             isAvailable: function () {
-               return OWERmap == false || dungeons[0].found == true ; }
+               return dungeons[0].found == true ; }
          },
          'Twin\'s House': {
             type: "simple",
             access: "door",
             isAvailable: function () {
-               return OWERmap == false || dungeons[0].found == true ; }
+               return dungeons[0].found == true ; }
          },
          'Adult Twin\'s House Roof Skulltula': {
             type: "skulltula",
             access: "outdoor",
             isAvailable: function () { //Adult only outdoor
-               return (OWERmap == false || dungeons[0].found == true)
+               return dungeons[0].found == true
                  && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) 
                && items.Hookshot; }
          },
@@ -183,46 +183,46 @@ var dungeons = [
             type: "skulltula",
             access: "outdoor",
             isAvailable: function () {
-               return (OWERmap == false || dungeons[0].found == true) && 
+               return dungeons[0].found == true && 
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) && items.Bottle; }
          },
          'Kokiri Shop': {
             type: "simple",
             access: "door",
             isAvailable: function () {
-               return OWERmap == false || dungeons[0].found == true ; }
+               return dungeons[0].found == true ; }
          },
          'Kokiri Sale': {
             type: "shop",
             access: "simple",
             isAvailable: function () {
-               return OWERmap == false || dungeons[0].found == true ; }
+               return dungeons[0].found == true ; }
          },
          'Infront Storms Grotto': {
             type: "gossip",
             access: "outdoor",
             isAvailable: function () {
-               return OWERmap == false || dungeons[0].found == true ; }
+               return dungeons[0].found == true ; }
          },
          'Song of Storms Grotto': {
             type: "grotto",
             access: "grotto",
             isAvailable: function () {
-               return (OWERmap == false || dungeons[0].found == true)
+               return dungeons[0].found == true
                && items.Ocarina && items.SongofStorms; }
          },
          'Storms Grotto Chest': {
             type: "chest",
             access: "grotto",
             isAvailable: function () {
-               return (OWERmap == false || dungeons[0].found == true) &&
+               return dungeons[0].found == true &&
                   items.Ocarina && items.SongofStorms; }
          },
          'Storms Grotto Gossip': {
             type: "gossip",
             access: "outdoor",
             isAvailable: function () {
-               return (OWERmap == false || dungeons[0].found == true) &&
+               return dungeons[0].found == true &&
                   items.Ocarina && items.SongofStorms; }
          },
          'Forest to Woods': {
@@ -231,27 +231,27 @@ var dungeons = [
           type: "entrance",
           access: "entrance",
           isAvailable: function () {
-               return OWERmap == false && dungeons[0].found == false; }
+               return dungeons[0].found == true ; }
        },
          'Left of Deku Tree Gossip': {
             type: "gossip",
             access: "outdoor",
             isAvailable: function () {
-               return OWERmap == false && dungeons[0].found == false && 
+               return dungeons[0].found == true && 
                   (items.DekuShield && OpenDeku == 1) || (items.KokiriSword && items.DekuShield); }
          },
          'Behind Deku Tree Gossip': {
             type: "gossip",
             access: "outdoor",
             isAvailable: function () {
-               return OWERmap == false && dungeons[0].found == false && 
+               return dungeons[0].found == true && 
                   (items.DekuShield && OpenDeku == 1) || (items.KokiriSword && items.DekuShield); }
          },
          'Inside the Deku Tree': {
             type: "dungeon",
             access: "door",
             isAvailable: function () {
-               return OWERmap == false && dungeons[0].found == false && 
+               return dungeons[0].found == true && 
                   OpenDeku == 1 || (items.KokiriSword && items.DekuShield);}
          },
       },
@@ -274,7 +274,7 @@ var dungeons = [
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
-               return (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
+               return dungeons[0].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
          },
          '2nd Floor Chest': {
             type: "chest",
