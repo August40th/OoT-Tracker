@@ -5182,7 +5182,7 @@ var dungeons = [
             type: "gossip", 
             access: "outdoor",
             isAvailable: function () {
-               return dungeons[22].found == true) &&
+               return dungeons[22].found == true &&
                   (
                      (
                         (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) //Can get adult
