@@ -509,9 +509,13 @@ function clickDungeon(d) {
     regionSelected.onclick = bulkDCSelect();
     
     if (OWERmap == true && dungeons[dungeonSelect].type == "overworld" && dungeons[dungeonSelect].found == false) {
-        dungeons[dungeonSelect].found = true ; }
+        dungeons[dungeonSelect].found = true ;
+        updateMap();
+    }
     if (DungeonER == true  && dungeons[dungeonSelect].type == "dungeon" && dungeons[dungeonSelect].found == false) {
-        dungeons[dungeonSelect].found = true ; }
+        dungeons[dungeonSelect].found = true ;
+        updateMap();
+    }
         
     for (var key in dungeons[dungeonSelect].chestlist) {
         if ( dungeons[dungeonSelect].type == "dungeon" && quest == "Mixed" && dungeons[dungeonSelect].mixedtype == "master" && dungeons[dungeonSelect].chestlist[key].access == "master") { //Mixed quest checks
@@ -1015,7 +1019,8 @@ function setAge(sender) {
        clickDungeon(14);
    else if (RndmStart == true)
        clickDungeon(32);
-   saveCookie();
+   saveCookie();    
+   updateMap();
 }
 
 function setERTracker(sender) {
@@ -1787,7 +1792,7 @@ function populateMapdiv() {
                 if ( document.getElementById('submaparea').className == "DCopened") {
                 bulkDCSelect(); }
             }
-        clickDungeon(dungeonSelect);
+        //clickDungeon(dungeonSelect);
         updateMap();
     }
     
@@ -1962,18 +1967,12 @@ function isKeysanity() {
 }
 
 function init() {
-   quest = null;
+   //quest = null;
    populateMapdiv();
    populateItemconfig();
    
    loadCookie();
    saveCookie();
-   if (Age === "Child" && RndmStart == false)
-       clickDungeon(0);
-   else if (Age === "Adult" && RndmStart == false)
-       clickDungeon(14);
-   else if (RndmStart == true)
-       clickDungeon(32);
 }
 
 function preloader() {
