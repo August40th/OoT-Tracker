@@ -508,10 +508,10 @@ function clickDungeon(d) {
     var regionSelected = document.getElementById('submaparea').innerHTML;
     regionSelected.onclick = bulkDCSelect();
     
-    if (OWERmap == true && dungeons.[dungeonSelect].type == "overworld" && dungeons.[dungeonSelect].found == false) {
-        dungeons.[dungeonSelect].found = true ; }
-    if (DungeonER == true  && dungeons.[dungeonSelect].type == "dungeon" && dungeons.[dungeonSelect].found == false) {
-        dungeons.[dungeonSelect].found = true ; }
+    if (OWERmap == true && dungeons[dungeonSelect].type == "overworld" && dungeons[dungeonSelect].found == false) {
+        dungeons[dungeonSelect].found = true ; }
+    if (DungeonER == true  && dungeons[dungeonSelect].type == "dungeon" && dungeons[dungeonSelect].found == false) {
+        dungeons[dungeonSelect].found = true ; }
         
     for (var key in dungeons[dungeonSelect].chestlist) {
         if ( dungeons[dungeonSelect].type == "dungeon" && quest == "Mixed" && dungeons[dungeonSelect].mixedtype == "master" && dungeons[dungeonSelect].chestlist[key].access == "master") { //Mixed quest checks
