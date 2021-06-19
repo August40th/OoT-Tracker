@@ -274,13 +274,13 @@ var dungeons = [
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
-               return dungeons[0].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
+               return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
          },
          '2nd Floor Chest': {
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
-               return (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) &&
+               return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) &&
                 ( ( items.DekuShield && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                  ||( items.HylianShield && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                  ); 
@@ -290,7 +290,7 @@ var dungeons = [
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
-               return (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) &&
+               return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) &&
                 ( ( items.DekuShield && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                  ||( items.HylianShield && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                  ); 
@@ -300,49 +300,49 @@ var dungeons = [
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
-               return (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
+               return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
          },
          'Top Floor Side Chest': {
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
-               return (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
+               return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
          },
          'Top Floor Skulltula': {
             type: "skulltula",
             access: "vanilla",
             isAvailable: function () {
-               return (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
+               return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
          },
          'Basement Chest': {
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
-               return (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
+               return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
          },
          'Basement 1st Skulltula': {
             type: "skulltula",
             access: "vanilla",
             isAvailable: function () {
-               return (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
+               return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
          },
          'Basement 2nd Skulltula': {
             type: "skulltula",
             access: "vanilla",
             isAvailable: function () {
-               return (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
+               return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
          },
          'Queen Gohma': {
             type: "boss",
             access: "vanilla",
             isAvailable: function () {
-               return (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
+               return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
          },
          'Basement Bomb Wall Skulltula': {
             type: "skulltula",
             access: "vanilla",
             isAvailable: function () {
-               return (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) &&
+               return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) &&
                   items.Boomerang && (items.Bombs || (items.Bombchu && BombchuLogic)) ;}
          },
@@ -350,31 +350,31 @@ var dungeons = [
             type: "skulltula",
             access: "master",
             isAvailable: function () {
-               return (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
+               return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
          },
          'MQ Lobby Chest': {
             type: "chest",
             access: "master",
             isAvailable: function () {
-               return (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
+               return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
          },
          'Top Floor Torch Chest': {
             type: "chest",
             access: "master",
             isAvailable: function () {
-               return (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
+               return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
          },
          'Top Floor Larva Kill': {
             type: "chest",
             access: "master",
             isAvailable: function () {
-               return (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
+               return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
          },
          'MQ 2nd Floor Chest': {
             type: "chest",
             access: "master",
             isAvailable: function () {
-               return (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) &&
+               return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) &&
                 ( (items.Slingshot && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                  ||(items.Bow && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                  ); 
@@ -384,7 +384,7 @@ var dungeons = [
             type: "skulltula",
             access: "master",
             isAvailable: function () {
-               return (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) &&
+               return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) &&
                 ( ( items.Boomerang && (items.Bombchu || items.Bombs) && items.Slingshot && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                  ||( items.Hookshot && (items.Bombchu || items.Bombs) && items.Bow && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                  ); 
@@ -394,45 +394,45 @@ var dungeons = [
             type: "chest",
             access: "master",
             isAvailable: function () {
-               return (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
+               return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
          },
          'Spiked Log Open Chest': {
             type: "chest",
             access: "master",
             isAvailable: function () {
-               return items.Slingshot && (OpenDeku == 1 || (items.KokiriSword&& items.DekuShield)); }
+               return dungeons[1].found == true && items.Slingshot && (OpenDeku == 1 || (items.KokiriSword&& items.DekuShield)); }
          },
          'Song of Time Chest': {
             access: "master",
             type: "chest",
             isAvailable: function () {
-               return items.Slingshot && items.Ocarina && items.SongofTime && ( OpenDeku == 1 || (items.KokiriSword&& items.DekuShield)); 
+               return dungeons[1].found == true && items.Slingshot && items.Ocarina && items.SongofTime && ( OpenDeku == 1 || (items.KokiriSword&& items.DekuShield)); 
             }
          },
          'Basement Ceiling Skulltule': {
             type: "skulltula",
             access: "master",
             isAvailable:function () {
-               return items.Boomerang && items.Ocarina && items.SongofTime && (OpenDeku == 1 || (items.KokiriSword&& items.DekuShield));
+               return dungeons[1].found == true && items.Boomerang && items.Ocarina && items.SongofTime && (OpenDeku == 1 || (items.KokiriSword&& items.DekuShield));
             }
          },
          'Back Room Skulltula': {
             type: "skulltula",
             access: "master",
             isAvailable: function () {
-               return items.Bombs && (OpenDeku == 1 || (items.KokiriSword&& items.DekuShield)); }
+               return dungeons[1].found == true && items.Bombs && (OpenDeku == 1 || (items.KokiriSword&& items.DekuShield)); }
          },
          'Basement Scrub': {
             type: "scrub",
             access: "master",
             isAvailable: function () {
-               return (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
+               return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
          },
          'MQ Queen Gohma': {
             type: "boss",
             access: "master",
             isAvailable: function () {
-               return (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
+               return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
          },
       },
       isBeatable: function () {
