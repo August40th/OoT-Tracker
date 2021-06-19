@@ -454,101 +454,198 @@ var dungeons = [
             type: "gossip",
             access: "vanilla",
             isAvailable: function () {
-               return items.Glove || items.Bombs || items.Hammer; }
+               return dungeons[2].found == true &&
+                ( ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove) && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                 || ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Hammer || items.Glove) && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                 ); 
+            }
          },
          'Baby Dodongos Skulltula': {
             type: "skulltula",
             access: "vanilla",
             isAvailable: function () {
-               return items.Bombs || items.Hammer || items.Glove; }
+               return dungeons[2].found == true &&
+                ( ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove) && 
+                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                 || ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Hammer || items.Glove) && 
+                     (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                ); 
+            }
          },
          'Scarecrow Skulltula': {
             type: "skulltula",
             access: "vanilla",
             isAvailable: function () {
-               return items.Bombs || items.Hammer || items.Glove && items.Ocarina && items.Hookshot; }
+               return dungeons[2].found == true && items.Hookshot && items.Scarecrow >= 2 &&
+                (items.Bombs || (items.Bombchu && BombchuLogic) || items.Hammer || items.Glove) 
+               && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ; 
+            }
          },
          '1F Right Scrub Room': {
             type: "scrub",
             access: "vanilla",
             isAvailable: function () {
-               return items.Bombs || items.Hammer || items.Glove; }
+               return dungeons[2].found == true &&
+                ( ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove) && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                 || ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Hammer || items.Glove) && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                 ); 
+            }
          },
          'Lobby Chest': {
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (OpenGate == 1 || (OpenGate == 0 && (items.Mask >= 1 || items.MasterSword || items.Bombs || (items.Dins && items.Magic) || (items.Bombchu && BombchuLogic)))) && (items.Bombs || (items.MasterSword && items.Hammer) || items.Glove || (items.Bombchu && BombchuLogic)); }
+               return dungeons[2].found == true &&
+                ( ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove) && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                 || ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Hammer || items.Glove) && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                 ); 
+            }
          },
          'Lobby Scrub': {
             type: "scrub",
             access: "vanilla",
             isAvailable: function () {
-               return items.Bombs || items.Hammer || items.Glove; }
+               return dungeons[2].found == true &&
+                ( ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove) && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                 || ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Hammer || items.Glove) && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                 ); 
+            }
          },
          'Armos Chest': {
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (OpenGate == 1 || (OpenGate == 0 && (items.Mask >= 1 || items.MasterSword || items.Bombs || (items.Dins && items.Magic) || (items.Bombchu && BombchuLogic)))) && (items.Bombs || (items.MasterSword && items.Hammer) || items.Glove || (items.Bombchu && BombchuLogic)); }
+               return dungeons[2].found == true &&
+                ( ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove) && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                 || ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Hammer || items.Glove) && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                 ); 
+            }
          },
          'Top of the Stairs Skulltula': {
             type: "skulltula",
             access: "vanilla",
             isAvailable: function () {
-               return (items.Bombs || items.Glove) || (items.Hammer && (items.Bow || (items.Magic && items.Dins))); }
+               return dungeons[2].found == true &&
+                ( ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove) && 
+                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                 || ( (items.Bombs || (items.Bombchu && BombchuLogic) 
+                       || (items.Hammer && (items.Bow || (items.Magic && items.Dins) ) ) || items.Glove) 
+                     && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                 ); 
+            }
          },
          'Behind Stairs Skulltula': {
             type: "skulltula",
             access: "vanilla",
             isAvailable: function () {
-               return (items.Bombs || items.Glove) || (items.Hammer && (items.Bow || (items.Magic && items.Dins))); }
+               return dungeons[2].found == true &&
+                ( ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove) && 
+                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                 || ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Hookshot >= 2 ||
+                       || (items.Hammer && (items.Bow || (items.Magic && items.Dins) ) ) || items.Glove) 
+                     && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                 ); 
+            }
          },
          'Bomb Flower Platform': {
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (OpenGate == 1 || (OpenGate == 0 && (items.Mask >= 1 || items.MasterSword || items.Bombs || (items.Dins && items.Magic) || (items.Bombchu && BombchuLogic)))) && (items.Bombs || (items.MasterSword && items.Hammer && items.Bow) || items.Glove || (items.Bombchu && BombchuLogic)); }
+               return dungeons[2].found == true &&
+                ( ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove) && 
+                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                 || ( (items.Bombs || (items.Bombchu && BombchuLogic) 
+                       || (items.Hammer && (items.Bow || (items.Magic && items.Dins) ) ) || items.Glove) 
+                     && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                 ); 
+            }
          },
          'Top Floor Big Chest': {
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (OpenGate == 1 || (OpenGate == 0 && (items.Mask >= 1 || items.MasterSword || items.Bombs || (items.Dins && items.Magic) || (items.Bombchu && BombchuLogic)))) && ((items.MasterSword || items.Slingshot) && (items.Bombs || (items.Hammer && items.Bow) || items.Glove || (items.Bombchu && BombchuLogic)));
+               return dungeons[2].found == true &&
+                ( ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove) && items.Slingshot &&
+                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                 || ( (items.Bombs || (items.Bombchu && BombchuLogic) 
+                       || (items.Hammer && (items.Bow || (items.Magic && items.Dins) ) ) || items.Glove) 
+                     && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                 ); 
             }
          },
-         '2F Scrubs x2': {
+         '2F Scrubs 1': {
             type: "scrub",
             access: "vanilla",
             isAvailable: function () {
-               return (items.Bombs || items.Glove || items.Hammer) && (items.Slingshot || items.Bow || items.HoverBoots) && (items.Bow || (items.Magic && items.Dins)); }
+               return dungeons[2].found == true &&
+                ( ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove) &&
+                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                 || ( (items.Bombs || (items.Bombchu && BombchuLogic) 
+                       || (items.Hammer && (items.Bow || (items.Magic && items.Dins) ) ) || items.Glove) 
+                     && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                 ); 
+            }
+         },
+         '2F Scrubs 2': {
+            type: "scrub",
+            access: "vanilla",
+            isAvailable: function () {
+               return dungeons[2].found == true &&
+                ( ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove) &&
+                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                 || ( (items.Bombs || (items.Bombchu && BombchuLogic) 
+                       || (items.Hammer && (items.Bow || (items.Magic && items.Dins) ) ) || items.Glove) 
+                     && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                 ); 
+            }
          },
          'End of Bridge Chest': {
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (OpenGate == 1 || (OpenGate == 0 && (items.Mask >= 1 || items.MasterSword || items.Bombs || (items.Dins && items.Magic) || (items.Bombchu && BombchuLogic)))) && ((items.MasterSword || items.Slingshot) && (items.Bombs || (items.Hammer && items.Bow) || (items.Bombchu && BombchuLogic)));
+               return dungeons[2].found == true &&
+                ( ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove) &&
+                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                 || ( (items.Bombs || (items.Bombchu && BombchuLogic) 
+                       || (items.Hammer && (items.Bow || (items.Magic && items.Dins) ) ) || (items.Hammer && items.Glove) ) 
+                     && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                 ); 
             }
          },
          'Behind Pushblocks Skulltula': {
             type: "skulltula",
             access: "vanilla",
             isAvailable: function () {
-               return (items.Bombs || items.Glove) && ((items.Slingshot && items.Glove) || items.Bow);
+               return dungeons[2].found == true &&
+                ( ( (items.Bombs || (items.Bombchu && BombchuLogic) ) && items.Slingshot && items.Glove &&
+                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                 || ( (items.Bombs || (items.Bombchu && BombchuLogic) ) 
+                     && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                 ); 
             }
          },
          'Chest Above King Dodongo': {
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (OpenGate == 1 || (OpenGate == 0 && (items.Mask >= 1 || items.MasterSword || items.Bombs || (items.Dins && items.Magic) || (items.Bombchu && BombchuLogic)))) && ((items.MasterSword || items.Slingshot) && (items.Bombs || (items.Bombchu && BombchuLogic)));
+               return dungeons[2].found == true &&
+                ( ( (items.Bombs || (items.Bombchu && BombchuLogic) ) && items.Slingshot && items.Glove &&
+                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                 || ( (items.Bombs || (items.Bombchu && BombchuLogic) ) 
+                     && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                 ); 
             }
          },
          'King Dodongo': {
             type: "boss",
             access: "vanilla",
             isAvailable: function () {
-               return (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (OpenGate == 1 || (OpenGate == 0 && (items.Mask >= 1 || items.MasterSword || items.Bombs || (items.Dins && items.Magic) || (items.Bombchu && BombchuLogic)))) && ((items.MasterSword || items.Slingshot) && ((items.Glove && (items.Bombchu && BombchuLogic)) || items.Bombs));
+               return dungeons[2].found == true &&
+                ( ( (items.Bombs || (items.Bombchu && BombchuLogic) ) && items.Slingshot && items.Glove &&
+                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                 || ( (items.Bombs || (items.Bombchu && BombchuLogic && items.Glove) ) 
+                     && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                 ); 
             }
          },
          'Lobby Scrubs x2': {
