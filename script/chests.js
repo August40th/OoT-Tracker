@@ -4330,11 +4330,11 @@ var dungeons = [
             type: "shop", 
             access: "simple",
             isAvailable: function () {
-               return (OWERmap == false || dungeons[17].found == true) &&
+               return dungeons[17].found == true &&
                   ( items.Bombs || (items.Bow && 
                        (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                       )
-                  ) || ((items.Glove || (items.Ocarina && items.ZeldasLullaby) || (items.Dins && items.Magic) && 
+                  ) || ((items.Glove || items.Bombs || (items.Ocarina && items.ZeldasLullaby) || (items.Dins && items.Magic) && 
                        (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                       )
                   );
@@ -5233,7 +5233,7 @@ var dungeons = [
             type: "gossip", 
             access: "outdoor",
             isAvailable: function () {
-               return (OWERmap == false || dungeons[22].found == true) &&
+               return dungeons[22].found == true &&
                   (
                      (
                         (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) //Can get adult
@@ -6745,7 +6745,7 @@ var dungeons = [
             type: "carpet", 
             access: "outdoor",
             isAvailable: function () {
-               return (OWERmap == false || dungeons[31].found == true) && 
+               return dungeons[31].found == true && 
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) &&
                    items.Wallet >= 2 && ( (items.Ocarina && items.RequiemofSpirit) 
                                       || (items.Membership && (items.HoverBoots || items.Hookshot >= 2) ) ) ;
@@ -6755,7 +6755,7 @@ var dungeons = [
             type: "chest", 
             access: "outdoor",
             isAvailable: function () {
-               return (OWERmap == false || dungeons[31].found == true) && items.Magic
+               return dungeons[31].found == true && items.Magic
                && ( (items.Membership && (items.HoverBoots || items.Hookshot >= 2) && (items.Dins || (items.Bow && items.Fire) )
                     && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )  
                    ) || (items.Ocarina && items.RequiemofSpirit && items.Dins) 
@@ -6766,7 +6766,7 @@ var dungeons = [
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
-               return (OWERmap == false || dungeons[31].found == true) && 
+               return dungeons[31].found == true && 
                   ( (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) &&
                    items.Hookshot && ( (items.Ocarina && items.RequiemofSpirit) 
                                       || (items.Membership && (items.HoverBoots || items.Hookshot >= 2) ) ) 
