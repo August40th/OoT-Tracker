@@ -541,7 +541,7 @@ var dungeons = [
                return dungeons[2].found == true &&
                 ( ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove) && 
                    (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
-                 || ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Hookshot >= 2 ||
+                 || ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Hookshot >= 2
                        || (items.Hammer && (items.Bow || (items.Magic && items.Dins) ) ) || items.Glove) 
                      && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                  ); 
