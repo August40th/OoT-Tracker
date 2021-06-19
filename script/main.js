@@ -507,6 +507,11 @@ function clickDungeon(d) {
     DClist.innerHTML = '';
     var regionSelected = document.getElementById('submaparea').innerHTML;
     regionSelected.onclick = bulkDCSelect();
+    
+    if (OWERmap && dungeons.[dungeonSelect].type == "overworld" && dungeons.[dungeonSelect].found == false) {
+        dungeons.[dungeonSelect].found = true ; }
+    if (DungeonER && dungeons.[dungeonSelect].type == "dungeon" && dungeons.[dungeonSelect].found == false) {
+        dungeons.[dungeonSelect].found = true ; }
         
     for (var key in dungeons[dungeonSelect].chestlist) {
         if ( dungeons[dungeonSelect].type == "dungeon" && quest == "Mixed" && dungeons[dungeonSelect].mixedtype == "master" && dungeons[dungeonSelect].chestlist[key].access == "master") { //Mixed quest checks
@@ -952,6 +957,11 @@ function setIndoorER(sender) {
 
 function setOWER(sender) {
    OWERmap = sender.checked;
+    for (k = 0; k < dungeons.length; k++) {
+        if ( dungeons[k].type = "overworld" && OWERmap) {
+            dungeons[k].found = false ; }
+    }
+
    updateMap();
     
    saveCookie();
@@ -959,6 +969,10 @@ function setOWER(sender) {
 
 function setDER(sender) {
    DungeonER = sender.checked;
+   for (k = 1; k < 13; k++) {
+        if ( dungeons[k].type = "dungeon" && DungeonER) {
+            dungeons[k].found = false ; }
+    }
    updateMap();
     
    saveCookie();
