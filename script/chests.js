@@ -252,7 +252,7 @@ var dungeons = [
             access: "door",
             isAvailable: function () {
                return dungeons[0].found == true && 
-                  OpenDeku == 1 || (items.KokiriSword && items.DekuShield);}
+                  (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) ) ; }
          },
       },
       isBeatable: function () {
@@ -692,73 +692,73 @@ var dungeons = [
             type: "scrub",
             access: "master",
             isAvailable: function () {
-               return items.Glove || items.Bombs || items.Hammer; }
+               return dungeons[2].found == true && items.Glove || items.Bombs || items.Hammer; }
          },
          'Teen Dodongo Chest': {
             type: "chest",
             access: "master",
             isAvailable: function () {
-               return items.Glove || items.Bombs || items.Hammer; }
+               return dungeons[2].found == true && items.Glove || items.Bombs || items.Hammer; }
          },
          'Baby Gohma Chest': {
             type: "chest",
             access: "master",
             isAvailable: function () {
-               return items.Glove || items.Bombs || items.Hammer; }
+               return dungeons[2].found == true && items.Glove || items.Bombs || items.Hammer; }
          },
          'Crate Skulltula': {
             type: "skulltula",
             access: "master",
             isAvailable: function () {
-               return items.Glove || items.Bombs || items.Hammer; }
+               return dungeons[2].found == true && items.Glove || items.Bombs || items.Hammer; }
          },
          '2F Lizalfos Skulltula': {
             type: "skulltula",
             access: "master",
             isAvailable: function () {
-               return items.Bombs || items.Hammer; }
+               return dungeons[2].found == true && items.Bombs || items.Hammer; }
          },
          '2F Platform Chest': {
             type: "chest",
             access: "master",
             isAvailable: function () {
-               return items.Glove || items.Bombs || items.Hammer; }
+               return dungeons[2].found == true && items.Glove || items.Bombs || items.Hammer; }
          },
          '1F Side Route Scrub': {
             type: "scrub",
             access: "master",
             isAvailable: function () {
-               return items.Glove || items.Bombs || items.Hammer; }
+               return dungeons[2].found == true && items.Glove || items.Bombs || items.Hammer; }
          },
          '1F Scrub Keese Room Skulltula': {
             type: "skulltula",
             access: "master",
             isAvailable: function () {
-               return items.Bombs && items.Boomerang; }
+               return dungeons[2].found == true && items.Bombs && items.Boomerang; }
          },
          'Poe fight Chest': {
             type: "chest",
             access: "master",
             isAvailable: function () {
-               return items.Bombs; }
+               return dungeons[2].found == true && items.Bombs; }
          },
          'Back Room Skulltula': {
             type: "skulltula",
             access: "master",
             isAvailable: function () {
-               return items.Bombs; }
+               return dungeons[2].found == true && items.Bombs; }
          },
          'Chest Above Boss Room': {
             type: "chest",
             access: "master",
             isAvailable: function () {
-               return items.Bombs; }
+               return dungeons[2].found == true && items.Bombs; }
          },
          'MQ King Dodongo': {
             type: "boss",
             access: "master",
             isAvailable: function () {
-               return items.Bombs; }
+               return dungeons[2].found == true && items.Bombs; }
          }
       },
       isBeatable: function () {
@@ -5278,7 +5278,7 @@ var dungeons = [
             type: "NPC", 
             access: "simple",
             isAvailable: function () {
-               return (OWERmap == false || dungeons[22].found == true) && items.Ocarina && items.ZeldasLullaby &&
+               return dungeons[22].found == true && items.Ocarina && items.ZeldasLullaby &&
                   (
                      (
                         (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) //Can get adult
