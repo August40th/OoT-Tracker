@@ -508,11 +508,11 @@ function clickDungeon(d) {
     var regionSelected = document.getElementById('submaparea').innerHTML;
     regionSelected.onclick = bulkDCSelect();
     
-    if (OWERmap == true && dungeons[dungeonSelect].type == "overworld" && dungeons[dungeonSelect].found === false) {
+    if (OWERmap == true && dungeons[dungeonSelect].type == "overworld" && dungeons[dungeonSelect].found == false) {
         dungeons[dungeonSelect].found = true ;
         updateMap();
     }
-    if (DungeonER == true  && dungeons[dungeonSelect].type == "dungeon" && dungeons[dungeonSelect].found === false) {
+    if (DungeonER == true  && dungeons[dungeonSelect].type == "dungeon" && dungeons[dungeonSelect].found == false) {
         dungeons[dungeonSelect].found = true ;
         updateMap();
     }
@@ -962,7 +962,7 @@ function setIndoorER(sender) {
 function setOWER(sender) {
    OWERmap = sender.checked;
     for (k = 0; k < dungeons.length; k++) {
-        if (dungeons[k].type = "overworld" && OWERmap  == true) {
+        if (dungeons[k].type == "overworld" && OWERmap  == true) {
             dungeons[k].found = false ; }
     }
 
@@ -974,7 +974,7 @@ function setOWER(sender) {
 function setDER(sender) {
    DungeonER = sender.checked;
    for (k = 1; k < 13; k++) {
-        if (dungeons[k].type = "dungeon" && DungeonER == true) {
+        if (dungeons[k].type == "dungeon" && DungeonER == true) {
             dungeons[k].found = false ; }
     }
    updateMap();
