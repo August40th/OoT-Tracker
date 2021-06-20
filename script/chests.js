@@ -5169,15 +5169,16 @@ var dungeons = [
             access: "outdoor",
             isAvailable: function () {
                return dungeons[22].found == true &&
-                  ( ( (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) 
-                     && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale || OWERmap) )
+                  ( OWERmap
+                   || ( (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) 
+                     && items.ZoraLetter && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) )
                    || ( (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-                       && (items.HoverBoots || (items.Ocarina && items.ZeldasLullaby) || OWERmap )
-                       && items.Bottle && 
-                       (items.Wallet >= 3 || isBridgeOpen() || OpenFountain || (dungeons[9].mixedtype == "master" && (DungeonER || items.Membership) )
+                       && (items.HoverBoots || (items.Ocarina && items.ZeldasLullaby) )
+                       && 
+                       ((items.Bottle && items.Wallet >= 3) || (items.Bottle && isBridgeOpen()) || OpenFountain || (dungeons[9].mixedtype == "master" && (DungeonER || items.Membership) )
                         || ( (OpenDoor == true || (items.Ocarina && items.SongofTime) )
                             && items.ZoraLetter && 
-                            (items.Bombs || OWERmap || (items.Bombchu && BombchuLogic) || items.Scale) ) )
+                            (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) ) )
                        )
                    ) ;
             }
@@ -5214,15 +5215,16 @@ var dungeons = [
             access: "outdoor",
             isAvailable: function () {
                return dungeons[22].found == true &&
-                  ( ( (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) 
-                     && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale || OWERmap) )
+                  ( OWERmap
+                   || ( (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) 
+                     && items.ZoraLetter && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) )
                    || ( (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-                       && (items.HoverBoots || (items.Ocarina && items.ZeldasLullaby) || OWERmap )
-                       && items.Bottle && 
-                       (items.Wallet >= 3 || isBridgeOpen() || OpenFountain || (dungeons[9].mixedtype == "master" && (DungeonER || items.Membership) )
+                       && (items.HoverBoots || (items.Ocarina && items.ZeldasLullaby) )
+                       && 
+                       ((items.Bottle && items.Wallet >= 3) || (items.Bottle && isBridgeOpen()) || OpenFountain || (dungeons[9].mixedtype == "master" && (DungeonER || items.Membership) )
                         || ( (OpenDoor == true || (items.Ocarina && items.SongofTime) )
                             && items.ZoraLetter && 
-                            (items.Bombs || OWERmap || (items.Bombchu && BombchuLogic) || items.Scale) ) )
+                            (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) ) )
                        )
                    ) ;
             }
@@ -5238,7 +5240,7 @@ var dungeons = [
                              ( (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) 
                               && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Hammer ) ) ) )
                    || ( (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) 
-                     && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) )
+                     && items.ZoraLetter && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) )
                    || ( (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                        && (items.HoverBoots || (items.Ocarina && items.ZeldasLullaby) )
                        && 
@@ -5261,7 +5263,7 @@ var dungeons = [
                              ( (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) 
                               && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Hammer ) ) ) )
                    || ( (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) 
-                     && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) )
+                     && items.ZoraLetter && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) )
                    || ( (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                        && (items.HoverBoots || (items.Ocarina && items.ZeldasLullaby) )
                        && 
