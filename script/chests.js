@@ -238,14 +238,14 @@ var dungeons = [
             access: "outdoor",
             isAvailable: function () {
                return dungeons[0].found == true && 
-                  (items.DekuShield && OpenDeku == 1) || (items.KokiriSword && items.DekuShield); }
+                  (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) ) ; }
          },
          'Behind Deku Tree Gossip': {
             type: "gossip",
             access: "outdoor",
             isAvailable: function () {
                return dungeons[0].found == true && 
-                  (items.DekuShield && OpenDeku == 1) || (items.KokiriSword && items.DekuShield); }
+                  (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) ) ; }
          },
          'Inside the Deku Tree': {
             type: "dungeon",
@@ -5020,23 +5020,17 @@ var dungeons = [
             access: "door",
                isAvailable: function () {
                   return dungeons[21].found == true &&
-                  (
-                     (
-                        (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) //Can get adult
-                        && (items.HoverBoots || (items.Ocarina && items.ZeldasLullaby) || OWERmap ) //Can get into domain
-                        && ( (items.Bottle && (items.Wallet >= 3 || isBridgeOpen() || OpenFountain 
-                                               ||
-                                               ( (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) //Or open fountain as child
-                                                  && items.ZoraLetter && (items.Bombs || OWERmap || (items.Bombchu && BombchuLogic) || items.Scale)
-                                                 )
-                                               )
-                            ) )
-                     ) ||
-                     (
-                        (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) //Can get child
-                        && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale || OWERmap) //Can get into domain
-                     )
-                   );
+                  ( ( (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) 
+                     && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale || OWERmap) )
+                   || ( (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                       && (items.HoverBoots || (items.Ocarina && items.ZeldasLullaby) || OWERmap )
+                       && items.Bottle && 
+                       (items.Wallet >= 3 || isBridgeOpen() || OpenFountain || (dungeons[9].mixedtype == "master" && (DungeonER || items.Membership) )
+                        || ( (OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                            && items.ZoraLetter && 
+                            (items.Bombs || OWERmap || (items.Bombchu && BombchuLogic) || items.Scale) ) )
+                       )
+                   ) ;
             }
          },
          'Zora Sale': {
@@ -5044,22 +5038,14 @@ var dungeons = [
             access: "simple",
             isAvailable: function () {
                return dungeons[21].found == true &&
-                  (
-                     (
-                        (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) //Can get adult
-                        && (items.HoverBoots || (items.Ocarina && items.ZeldasLullaby) || OWERmap ) //Can get into domain
-                        && ( (items.Bottle && (items.Wallet >= 3 || isBridgeOpen() || OpenFountain 
-                                               ||
-                                               ( (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) //Or open fountain as child
-                                                  && items.ZoraLetter && (items.Bombs || OWERmap || (items.Bombchu && BombchuLogic) || items.Scale)
-                                                 )
-                                               )
-                            ) )
-                     ) ||
-                     (
-                        (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) //Can get child
-                        && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale || OWERmap) //Can get into domain
-                     )
+                  ( ( (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) 
+                     && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale || OWERmap) )
+                   || ( (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                       && (items.HoverBoots || (items.Ocarina && items.ZeldasLullaby) || OWERmap )
+                       && items.Bottle && 
+                       (items.Wallet >= 3 || isBridgeOpen() || OpenFountain 
+                        || (dungeons[9].mixedtype == "master" && (DungeonER || items.Membership )) ) 
+                       )
                    );
             }
          },
@@ -5141,7 +5127,7 @@ var dungeons = [
                                  && (OpenFountain || items.ZoraLetter) && (items.Bombs || OWERmap || (items.Bombchu && BombchuLogic) || items.Scale )
                               ) 
                               || 
-                              (items.Bottle && (items.Wallet >= 3 || isBridgeOpen() || OpenFountain ) )
+                              (items.Bottle && (items.Wallet >= 3 || isBridgeOpen() || OpenFountain || (dungeons[9].mixedtype == "master" && (DungeonER || items.Membership )) ) )
                            )
                      )
                   );
