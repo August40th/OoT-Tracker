@@ -964,6 +964,8 @@ function setOWER(sender) {
     for (k = 0; k < dungeons.length; k++) {
         if (dungeons[k].type == "overworld" && OWERmap  == true) {
             dungeons[k].found = false ; }
+        if (dungeons[k].type == "overworld" && OWERmap  == false) {
+            dungeons[k].found = true ; }
     }
 
    updateMap();
@@ -976,6 +978,8 @@ function setDER(sender) {
    for (k = 1; k < 13; k++) {
         if (dungeons[k].type == "dungeon" && DungeonER == true) {
             dungeons[k].found = false ; }
+       if (dungeons[k].type == "dungeon" && DungeonER == false) {
+            dungeons[k].found = true ; }
     }
    updateMap();
     
