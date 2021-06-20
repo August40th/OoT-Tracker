@@ -5232,20 +5232,21 @@ var dungeons = [
             access: "door",
                isAvailable: function () {
                   return dungeons[22].found == true &&
-                  ( ( (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) 
-                     && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) )
-                   || ( (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-                       && (items.HoverBoots || (items.Ocarina && items.ZeldasLullaby) )
-                       && items.Bottle && 
-                       (items.Wallet >= 3 || isBridgeOpen() || OpenFountain || (dungeons[9].mixedtype == "master" && (DungeonER || items.Membership) )
-                        || ( (OpenDoor == true || (items.Ocarina && items.SongofTime) )
-                            && items.ZoraLetter && 
-                            (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) ) )
-                       ) || (OWERmap && (
+                  ( (OWERmap && (
                              ( (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) 
                               && (items.Bombs || (items.Bombchu && BombchuLogic) ) ) ||
                              ( (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) 
                               && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Hammer ) ) ) )
+                   || ( (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) 
+                     && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) )
+                   || ( (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                       && (items.HoverBoots || (items.Ocarina && items.ZeldasLullaby) )
+                       && 
+                       ((items.Bottle && items.Wallet >= 3) || (items.Bottle && isBridgeOpen()) || OpenFountain || (dungeons[9].mixedtype == "master" && (DungeonER || items.Membership) )
+                        || ( (OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                            && items.ZoraLetter && 
+                            (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) ) )
+                       )
                    ) ;
                }
          },
@@ -5254,22 +5255,22 @@ var dungeons = [
             access: "simple",
             isAvailable: function () {
                return dungeons[22].found == true && items.Ocarina && items.ZeldasLullaby &&
-                  (
-                     (
-                        (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) //Can get adult
-                        && (items.HoverBoots || (items.Ocarina && items.ZeldasLullaby || OWERmap) ) //Can get into domain
-                        && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Hammer) && ( ( (OpenFountain || OWERmap ||
-                                               ( (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) //Or open fountain as child
-                                                  && (OpenFountain || items.ZoraLetter || OWERmap) && (items.Bombs || OWERmap || (items.Bombchu && BombchuLogic) || items.Scale)
-                                                 )
-                                               ))
-                            ) )
-                     ) ||
-                     (
-                        (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) //Can get child
-                        && (OpenFountain || items.ZoraLetter) && (items.Bombs || (items.Bombchu && BombchuLogic) && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) //Can get into domain
-                     )
-                   );
+                  ( (OWERmap && (
+                             ( (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) 
+                              && (items.Bombs || (items.Bombchu && BombchuLogic) ) ) ||
+                             ( (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) 
+                              && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Hammer ) ) ) )
+                   || ( (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) 
+                     && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) )
+                   || ( (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                       && (items.HoverBoots || (items.Ocarina && items.ZeldasLullaby) )
+                       && 
+                       ((items.Bottle && items.Wallet >= 3) || (items.Bottle && isBridgeOpen()) || OpenFountain || (dungeons[9].mixedtype == "master" && (DungeonER || items.Membership) )
+                        || ( (OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                            && items.ZoraLetter && 
+                            (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) ) )
+                       )
+                   ) ;
             }
          },
          'Silver Rock Skulltula': {
@@ -6742,11 +6743,11 @@ var dungeons = [
             access: "outdoor",
             isAvailable: function () {
                return dungeons[31].found == true && 
-                  ( (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) &&
-                   items.Hookshot && ( (items.Ocarina && items.RequiemofSpirit) 
-                                      || (items.Membership && (items.HoverBoots || items.Hookshot >= 2) ) ) 
-                  ) || ( (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) &&
-                        items.Boomerang && items.Ocarina && items.RequiemofSpirit) ;
+                  ( ( (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) && 
+                     items.Hookshot && ( (items.Ocarina && items.RequiemofSpirit) 
+                                        || (items.Membership && (items.HoverBoots || items.Hookshot >= 2) ) ) ) 
+                   || ( (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) 
+                       && items.Boomerang && items.Ocarina && items.RequiemofSpirit) ) ;
             }
          },
          'Wasteland to Desert': {
