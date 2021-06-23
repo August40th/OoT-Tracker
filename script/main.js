@@ -760,6 +760,15 @@ function setQuest(sender) {
    }
    updateGridItemAll();
     
+   for (k = 1; k < 13; k++) {
+        if (dungeons[k].type == "dungeon" && quest == "Vanilla") {
+            dungeons[k].mixedtype = "Vanilla" ; }
+       else if (dungeons[k].type == "dungeon" && quest == "Master") {
+            dungeons[k].mixedtype = "Master" ; }
+       else if (dungeons[k].type == "dungeon" && quest == "Mixed") {
+            dungeons[k].mixedtype = "default" ; }
+    } 
+    
    updateMap();
    saveCookie();
 }
@@ -1769,7 +1778,7 @@ function populateMapdiv() {
     
     
     document.getElementById('submaparea').oncontextmenu = function(e) {
-         e.preventDefault(); // oncontextmenu = setQuestType(this, dungeonSelect); 
+         e.preventDefault();
         if ( dungeons[dungeonSelect].mixedtype == "default" ) {
                 if ( document.getElementById('submaparea').className == "DCpossible") {
                 bulkDCSelect();
