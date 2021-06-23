@@ -1780,32 +1780,13 @@ function populateMapdiv() {
     document.getElementById('submaparea').oncontextmenu = function(e) {
          e.preventDefault();
         if ( dungeons[dungeonSelect].mixedtype == "default" ) {
-                if ( document.getElementById('submaparea').className == "DCpossible") {
-                bulkDCSelect();
-                bulkDCSelect();
-                } else { bulkDCSelect(); }
-                dungeons[dungeonSelect].mixedtype = "vanilla";
-                bulkDCSelect();
-            } else if ( dungeons[dungeonSelect].mixedtype == "vanilla" ) {
-                if ( document.getElementById('submaparea').className == "DCpossible") {
-                bulkDCSelect();
-                bulkDCSelect();
-                } else if ( document.getElementById('submaparea').className == "DCunavailable" || document.getElementById('submaparea').className == "DCavailable")  {
-                bulkDCSelect(); }
-                dungeons[dungeonSelect].mixedtype = "master"; 
-                if ( document.getElementById('submaparea').className == "DCopened") {
-                bulkDCSelect(); }
-            } else if ( dungeons[dungeonSelect].mixedtype == "master" ) {
-                if ( document.getElementById('submaparea').className == "DCpossible") {
-                bulkDCSelect();
-                bulkDCSelect();
-                } else if ( document.getElementById('submaparea').className == "DCunavailable" || document.getElementById('submaparea').className == "DCavailable")  {
-                bulkDCSelect(); }
-                dungeons[dungeonSelect].mixedtype = "vanilla"; 
-                if ( document.getElementById('submaparea').className == "DCopened") {
-                bulkDCSelect(); }
-            }
-        //clickDungeon(dungeonSelect);
+            dungeons[dungeonSelect].mixedtype = "vanilla";
+        } else if ( dungeons[dungeonSelect].mixedtype == "vanilla" ) {
+            dungeons[dungeonSelect].mixedtype = "master"; 
+        } else if ( dungeons[dungeonSelect].mixedtype == "master" ) {
+            dungeons[dungeonSelect].mixedtype = "vanilla"; 
+        }
+        clickDungeon(dungeonSelect);
         updateMap();
     }
     
