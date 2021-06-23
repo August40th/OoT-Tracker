@@ -54,9 +54,9 @@ function generalCanGetChest(chestlist) {
             continue;}
         if (chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
             continue;}
-        if (chestlist[key].access == "vanilla" && chestlist.parent.mixedtype == "master") {
+        if (chestlist[key].access == "vanilla" && dungeons[this].mixedtype == "master") {
             continue;}
-        if (chestlist[key].access == "master" && chestlist.parent.mixedtype == "vanilla") {
+        if (chestlist[key].access == "master" && dungeons[this].mixedtype == "vanilla") {
             continue;}
       }
       if (chestlist.hasOwnProperty(key)) {
