@@ -3487,9 +3487,8 @@ var dungeons = [
             type: "chest", 
             access: "simple",
             isAvailable: function () {
-               return dungeons[13].found == true
-                 && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) 
-                    && items.Magic >= 1 && items.Lens);
+               return dungeons[13].found == true && items.Magic && items.Lens
+                 && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
          },
          'Bombchu Shop': {
@@ -4250,7 +4249,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[17].found == true
                && (items.Bombs || (items.Bombchu && BombchuLogic) || 
-                  (items.Hammer && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )) 
+                  ((items.Hammer || items.Glove >= 2) && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )) 
                    );
             }
          },
@@ -4269,7 +4268,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[17].found == true
                && (items.Bombs || (items.Bombchu && BombchuLogic) || 
-                  (items.Hammer && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )) 
+                  ((items.Hammer || items.Glove >= 2) && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )) 
                    );
             }
          },
@@ -4279,7 +4278,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[17].found == true
                && (items.Bombs || (items.Bombchu && BombchuLogic) || 
-                  (items.Hammer && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )) 
+                  ((items.Hammer || items.Glove >= 2) && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )) 
                    );
             }
          },
