@@ -1452,8 +1452,12 @@ var dungeons = [
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
-               return dungeons[5].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.Hookshot && (items.Bow || (items.Ocarina && items.SongofTime) || (items.ForestKey && items.HoverBoots) || (items.ForestKey >= 2 && items.Bow && items.Glove));
-            },
+               return dungeons[5].found == true && (DungeonER || (items.Hookshot && 
+                      (Age == "Ault" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ) )
+               && ( ( ( (items.Hookshot && items.Bow) || (items.Ocarina && items.SongofTime) )
+                     && (Age == "Ault" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) 
+                    ) || (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) );
+            }
          },
          'Courtyard Island Chest': {
             type: "chest",
@@ -1466,15 +1470,24 @@ var dungeons = [
             type: "skulltula",
             access: "vanilla",
             isAvailable: function () {
-               return dungeons[5].found == true && items.Hookshot && items.Ocarina && (items.SariasSong || items.MinuetofForest) && (items.Bow || items.SongofTime);
-            },
+               return dungeons[5].found == true && (DungeonER || (items.Hookshot && 
+                      (Age == "Ault" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ) )
+               && ( ( ( (items.Hookshot && items.Bow) || (items.Ocarina && items.SongofTime) || ) // ???? hovers
+                     && (Age == "Ault" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) 
+                    ) || (items.Boomerang && items.Slingshot && items.Magic && items.Dins && items.ForestKey >= 5
+                     && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ) );
+            }
          },
          'Well Chest': {
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
-               return dungeons[5].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.Hookshot && (items.Bow || (items.Ocarina && items.SongofTime) || (items.ForestKey && items.HoverBoots) || (items.ForestKey >= 2 && items.Bow && items.Glove));
-            },
+               return dungeons[5].found == true && (DungeonER || (items.Hookshot && 
+                      (Age == "Ault" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ) )
+               && ( ( ( (items.Hookshot && items.Bow) || (items.Ocarina && items.SongofTime) )
+                     && (Age == "Ault" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) 
+                    ) || (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) );
+            }
          },
          'Push Block Room Chest': {
             type: "chest",
@@ -1529,7 +1542,9 @@ var dungeons = [
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
-               return dungeons[5].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.ForestKey >= 5 || (items.ForestKey >= 3 && items.HoverBoots)) && items.Hookshot && items.Glove && (items.Bow || (items.Dins && items.Magic));
+               return dungeons[5].found == true && 
+                  (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) &&
+                  items.MasterSword && (items.ForestKey >= 5 || (items.ForestKey >= 3 && items.HoverBoots)) && items.Hookshot && items.Glove && (items.Bow || (items.Dins && items.Magic));
             }
          },
          'Near Boss Chest': {
