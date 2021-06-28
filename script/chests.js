@@ -1333,7 +1333,7 @@ var dungeons = [
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && ( (items.Ocarina && items.ZeldasLullaby) 
                    || (items.Bombs || (items.Bombchu && BombchuLogic) ) ) && 
-                  (items.Slingshot || tems.Boomerang || items.Bombs || (items.Bombchu && BombchuLogic) );
+                  (items.Slingshot || items.Boomerang || items.Bombs || (items.Bombchu && BombchuLogic) );
             }
          },
          'Deadhand Freestanding': {
@@ -1355,7 +1355,7 @@ var dungeons = [
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && ( (items.Ocarina && items.ZeldasLullaby) 
                    || (items.Bombs || (items.Bombchu && BombchuLogic) ) ) && 
-                  (items.Slingshot || tems.Boomerang || items.Bombs || (items.Bombchu && BombchuLogic) );
+                  (items.Slingshot || items.Boomerang || items.Bombs || (items.Bombchu && BombchuLogic) );
             }
          },
          'MQ Basement Chest': {
