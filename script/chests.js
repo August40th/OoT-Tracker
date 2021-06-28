@@ -1321,7 +1321,8 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-               && items.Ocarina && items.ZeldasLullaby;
+               && ( (items.Ocarina && items.ZeldasLullaby) 
+                   || (items.Bombs || (items.Bombchu && BombchuLogic) ) );
             }
          },
          'MQ Deadhand Chest': {
@@ -1330,7 +1331,8 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-               && items.Ocarina && items.ZeldasLullaby && 
+               && ( (items.Ocarina && items.ZeldasLullaby) 
+                   || (items.Bombs || (items.Bombchu && BombchuLogic) ) ) && 
                   (items.Slingshot || tems.Boomerang || items.Bombs || (items.Bombchu && BombchuLogic) );
             }
          },
@@ -1340,7 +1342,8 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-               && items.Ocarina && items.ZeldasLullaby && 
+               && ( (items.Ocarina && items.ZeldasLullaby) 
+                   || (items.Bombs || (items.Bombchu && BombchuLogic) ) ) && 
                   (items.Bombs || (items.Bombchu && BombchuLogic) );
             }
          },
@@ -1350,7 +1353,8 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-               && items.Ocarina && items.ZeldasLullaby && 
+               && ( (items.Ocarina && items.ZeldasLullaby) 
+                   || (items.Bombs || (items.Bombchu && BombchuLogic) ) ) && 
                   (items.Slingshot || tems.Boomerang || items.Bombs || (items.Bombchu && BombchuLogic) );
             }
          },
@@ -1360,7 +1364,8 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-               && items.Ocarina && items.ZeldasLullaby && items.WellKey &&
+               && ( (items.Ocarina && items.ZeldasLullaby) 
+                   || (items.Bombs || (items.Bombchu && BombchuLogic) ) ) && items.WellKey &&
                   (items.Bombs || (items.Bombchu && BombchuLogic) );
             }
          },
@@ -1368,8 +1373,11 @@ var dungeons = [
             type: "skulltula",
             access: "master",
             isAvailable: function () { //?
-               return dungeons[4].found == true && items.Ocarina && items.SongofStorms 
-               && items.Slingshot; }
+               return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
+               && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+               && ( (items.Ocarina && items.ZeldasLullaby) 
+                   || (items.Bombs || (items.Bombchu && BombchuLogic) ) );
+            }
          },
          'Coffin Room Skulltula': {
             type: "skulltula",
@@ -1377,7 +1385,7 @@ var dungeons = [
             isAvailable: function () { //?
                return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-               && items.Ocarina && items.ZeldasLullaby;
+               && items.WellKey;
             }
          },
          'Basement Skulltula': {
@@ -1386,7 +1394,8 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-               && items.Ocarina && items.ZeldasLullaby && items.WellKey &&
+               && ( (items.Ocarina && items.ZeldasLullaby) 
+                   || (items.Bombs || (items.Bombchu && BombchuLogic) ) ) && items.WellKey &&
                   (items.Bombs || (items.Bombchu && BombchuLogic) );
             }
          },
