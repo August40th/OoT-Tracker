@@ -1472,7 +1472,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[5].found == true && (DungeonER || (items.Hookshot && 
                       (Age == "Ault" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ) )
-               && ( ( ( (items.Hookshot && items.Bow) || (items.Ocarina && items.SongofTime) || ) // ???? hovers
+               && ( ( ( (items.Hookshot && items.Bow) || (items.Ocarina && items.SongofTime) ) // ???? hovers
                      && (Age == "Ault" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) 
                     ) || (items.Boomerang && items.Slingshot && items.Magic && items.Dins && items.ForestKey >= 5
                      && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ) );
