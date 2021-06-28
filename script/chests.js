@@ -1331,9 +1331,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-               && ( (items.Ocarina && items.ZeldasLullaby) 
-                   || (items.Bombs || (items.Bombchu && BombchuLogic) ) ) && 
-                  (items.Slingshot || items.Boomerang || items.Bombs || (items.Bombchu && BombchuLogic) );
+               && (items.Slingshot || items.Boomerang || items.KokiriSword || items.Bombs || (items.Bombchu && BombchuLogic) );
             }
          },
          'Deadhand Freestanding': {
@@ -1342,9 +1340,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-               && ( (items.Ocarina && items.ZeldasLullaby) 
-                   || (items.Bombs || (items.Bombchu && BombchuLogic) ) ) && 
-                  (items.Bombs || (items.Bombchu && BombchuLogic) );
+               && (items.Bombs || (items.Bombchu && BombchuLogic) );
             }
          },
          'Inner Room Freestanding': {
@@ -1353,9 +1349,9 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-               && ( (items.Ocarina && items.ZeldasLullaby) 
-                   || (items.Bombs || (items.Bombchu && BombchuLogic) ) ) && 
-                  (items.Slingshot || items.Boomerang || items.Bombs || (items.Bombchu && BombchuLogic) );
+               && ( ( (items.Ocarina && items.ZeldasLullaby) || (items.Bombchu && BombchuLogic) 
+                     && (items.Slingshot || items.Boomerang) ) 
+                   || items.Bombs );
             }
          },
          'MQ Basement Chest': {
@@ -1364,9 +1360,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-               && ( (items.Ocarina && items.ZeldasLullaby) 
-                   || (items.Bombs || (items.Bombchu && BombchuLogic) ) ) && items.WellKey &&
-                  (items.Bombs || (items.Bombchu && BombchuLogic) );
+               && items.WellKey && (items.Bombs || (items.Bombchu && BombchuLogic) );
             }
          },
          'Tombstone Skulltula': {
@@ -1394,9 +1388,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-               && ( (items.Ocarina && items.ZeldasLullaby) 
-                   || (items.Bombs || (items.Bombchu && BombchuLogic) ) ) && items.WellKey &&
-                  (items.Bombs || (items.Bombchu && BombchuLogic) );
+               && (items.Bombs || (items.Bombchu && BombchuLogic) );
             }
          },
       },
@@ -1419,28 +1411,41 @@ var dungeons = [
             type: "skulltula",
             access: "vanilla",
             isAvailable: function () {
-               return dungeons[5].found == true && items.Hookshot && items.Ocarina && (items.SariasSong || items.MinuetofForest);
+               return dungeons[5].found == true && (DungeonER || (items.Hookshot && 
+                      (Age == "Ault" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ) )
+               && ( ( (items.Bow || items.Hookshot) 
+                     && (Age == "Ault" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) 
+                    ) || ( (items.Slingshot || items.Boomerang) 
+                     && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) 
+                    ) || (items.Bombs || (items.Bombchu && BombchuLogic) ) );
             }
-         },
+          },
          'Lobby Chest': {
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
-               return dungeons[5].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.Hookshot;
+               return dungeons[5].found == true && (DungeonER || (items.Hookshot && 
+                      (Age == "Ault" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ) );
             }
          },
          'Torch Room Skulltula': {
             type: "skulltula",
             access: "vanilla",
             isAvailable: function () {
-               return dungeons[5].found == true && items.Hookshot && items.Ocarina && (items.SariasSong || items.MinuetofForest);
-            },
+               return dungeons[5].found == true && (DungeonER || (items.Hookshot && 
+                      (Age == "Ault" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ) )
+               && ( (items.Hookshot
+                     && (Age == "Ault" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) 
+                    ) || (items.Boomerang
+                     && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ) );
+            }
          },
          '1st Floor Stalfos': {
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
-               return dungeons[5].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.Hookshot;
+               return dungeons[5].found == true && (DungeonER || (items.Hookshot && 
+                      (Age == "Ault" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ) );
             }
          },
          'Bubble Chest': {
