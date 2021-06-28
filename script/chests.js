@@ -818,7 +818,7 @@ var dungeons = [
             access: "master",
             isAvailable: function () {
                return dungeons[2].found == true &&
-                ( ( (items.Bombs || (items.Bombchu && BombchuLogic) ) && items.Boomerang &&
+                ( ( (items.Bombs || (items.Bombchu && BombchuLogic) ) &&
                    (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                  || ( (items.Bombs || (items.Bombchu && BombchuLogic) ) 
                      && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
@@ -870,7 +870,7 @@ var dungeons = [
                   ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) 
                    && (items.ZoraLetter || OpenFountain) &&
                    (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
-                   || DungeonER ) && (items.Scae || (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ); 
+                   || DungeonER ) && (items.Scale || (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ); 
             }
          },
          'StingRay Chest': {
@@ -906,7 +906,21 @@ var dungeons = [
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
             }
          },
-         'Before Big Octo x2 Skulltula': {
+         'Before Big Octo Skull 1': {
+            type: "skulltula",
+            access: "vanilla",
+            isAvailable: function () {
+               return dungeons[3].found == true && ( 
+                  ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) 
+                   && (items.ZoraLetter || OpenFountain) &&
+                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                   || DungeonER ) && ( (items.Boomerang &&
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                                      || (items.Hookshot &&
+                  (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ) ); 
+            }
+         },
+         'Before Big Octo Skull 2': {
             type: "skulltula",
             access: "vanilla",
             isAvailable: function () {
@@ -946,101 +960,196 @@ var dungeons = [
             type: "chest",
             access: "master",
             isAvailable: function () {
-               return dungeons[3].found == true && (items.Bombs || items.Scale) && items.ZoraLetter && items.Bombs;
-            },
+               return dungeons[3].found == true && ( 
+                  ( (items.Bombs || (items.Bombchu && BombchuLogic) ) 
+                   && (items.ZoraLetter || OpenFountain) &&
+                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                   || DungeonER ) && ( ( (items.Bombs || (items.Bombchu && BombchuLogic) ) &&
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                                      || ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Hammer) 
+                                          &&
+                  (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ) ); 
+            }
          },
          'Lobby Cow Chest': {
             type: "chest",
             access: "master",
             isAvailable: function () {
-               return dungeons[3].found == true && (items.Bombs || items.Scale) && items.ZoraLetter && items.Slingshot; 
+               return dungeons[3].found == true && ( 
+                  ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) 
+                   && (items.ZoraLetter || OpenFountain) )
+                   || DungeonER ) && items.Slingshot &&
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
             }
          },
          'Underwater Cow Chest': {
             type: "chest",
             access: "master",
             isAvailable: function () {
-               return dungeons[3].found == true && (items.Bombs || items.Scale) && items.ZoraLetter && items.Slingshot; }
+               return dungeons[3].found == true && ( 
+                  ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) 
+                   && (items.ZoraLetter || OpenFountain) )
+                   || DungeonER ) && items.Slingshot &&
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
+            }
          },
          'Elevator Room Lower Chest': {
             type: "chest",
             access: "master",
             isAvailable: function () {
-               return dungeons[3].found == true && (items.Bombs || items.Scale) && items.ZoraLetter && items.Slingshot; 
+               return dungeons[3].found == true && ( 
+                  ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) 
+                   && (items.ZoraLetter || OpenFountain) )
+                   || DungeonER ) && items.Slingshot &&
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
             }
          },
-         'Basement Chest x2': {
+         'Basement Cow Chest 1': {
             type: "chest",
             access: "master",
             isAvailable: function () {
-               return dungeons[3].found == true && (items.Bombs || items.Scale) && items.ZoraLetter && items.Slingshot; }
+               return dungeons[3].found == true && ( 
+                  ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) 
+                   && (items.ZoraLetter || OpenFountain) )
+                   || DungeonER ) && items.Slingshot &&
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
+            }
+         },
+         'Basement Cow Chest 2': {
+            type: "chest",
+            access: "master",
+            isAvailable: function () {
+               return dungeons[3].found == true && ( 
+                  ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) 
+                   && (items.ZoraLetter || OpenFountain) )
+                   || DungeonER ) && items.Slingshot &&
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
+            }
          },
          'Basement Open Chest': {
             type: "chest",
             access: "master",
             isAvailable: function () {
-               return dungeons[3].found == true && (items.Bombs || items.Scale) && items.ZoraLetter; }
+               return dungeons[3].found == true && ( 
+                  ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) 
+                   && (items.ZoraLetter || OpenFountain) )
+                   || DungeonER ) && items.Slingshot &&
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
+            }
          },
          'Basement Battle Chest': {
             type: "chest",
             access: "master",
             isAvailable: function () {
-               return dungeons[3].found == true && (items.Bombs || items.Scale) && items.ZoraLetter; }
+               return dungeons[3].found == true && ( 
+                  ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) 
+                   && (items.ZoraLetter || OpenFountain) )
+                   || DungeonER ) && items.Slingshot &&
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
+            }
          },
          'Song of Time Skulltula': {
             type: "skulltula",
             access: "master",
             isAvailable: function () {
-               return dungeons[3].found == true && (items.Bombs || items.Scale) && items.ZoraLetter && items.Slingshot && items.Ocarina && items.SongofTime;
-            },
+               return dungeons[3].found == true && ( 
+                  ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) 
+                   && (items.ZoraLetter || OpenFountain) )
+                   || DungeonER ) && items.Slingshot && (items.Boomerang || (items.Ocarina && items.SongofTime) )
+               && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
+            }
          },
          'Bubble Battle Skulltula': {
             type: "skulltula",
             access: "master",
             isAvailable: function () {
-               return dungeons[3].found == true && (items.Bombs || items.Scale) && items.ZoraLetter && items.Slingshot && items.Boomerang; }
+               return dungeons[3].found == true && ( 
+                  ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) 
+                   && (items.ZoraLetter || OpenFountain) )
+                   || DungeonER ) 
+               && items.Slingshot && items.Boomerang && (items.Bombs || (items.Bombchu && BombchuLogic) ) 
+               && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
+            }
          },
          'Invisible Enemies Skulltula': {
             type: "skulltula",
             access: "master",
             isAvailable: function () {
-               return dungeons[3].found == true && (items.Bombs || items.Scale) && items.ZoraLetter && items.Slingshot && items.Boomerang; }
+               return dungeons[3].found == true && ( 
+                  ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) 
+                   && (items.ZoraLetter || OpenFountain) )
+                   || DungeonER ) 
+               && items.Slingshot && items.Boomerang && (items.Bombs || (items.Bombchu && BombchuLogic) ) 
+               && items.Magic && items.Dins 
+               && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
+            }
          },
          'Falling Like Like Chest': {
             type: "chest",
             access: "master",
             isAvailable: function () {
-               return dungeons[3].found == true && (items.Bombs || items.Scale) && items.ZoraLetter && items.Slingshot && items.Boomerang; }
+               return dungeons[3].found == true && ( 
+                  ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) 
+                   && (items.ZoraLetter || OpenFountain) )
+                   || DungeonER ) && items.Slingshot && items.Boomerang &&
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
+            }
          },
          'Elevator Room Upper Chest': {
             type: "chest",
             access: "master",
             isAvailable: function () {
-               return dungeons[3].found == true && (items.Bombs || items.Scale) && items.ZoraLetter && items.Slingshot && items.Boomerang; }
+               return dungeons[3].found == true && ( 
+                  ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) 
+                   && (items.ZoraLetter || OpenFountain) )
+                   || DungeonER ) && items.Slingshot && items.Boomerang && (items.Bombs || (items.Bombchu && BombchuLogic) ) &&
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
+            }
          },
          'Top Floor Standing Cow': {
             type: "cow",
             access: "master",
             isAvailable: function () {
-               return dungeons[3].found == true && (items.Bombs || items.Scale) && items.ZoraLetter && items.Slingshot && items.Boomerang && items.Ocarina && items.EponasSong; }
+               return dungeons[3].found == true && ( 
+                  ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) 
+                   && (items.ZoraLetter || OpenFountain) )
+                   || DungeonER ) && items.Slingshot && items.Ocarina && items.EponasSong
+                  && items.Boomerang && (items.Bombs || (items.Bombchu && BombchuLogic) ) &&
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
+            }
          },
          'Chest Near Boss Door': {
             type: "chest",
             access: "master",
             isAvailable: function () {
-               return dungeons[3].found == true && (items.Bombs || items.Scale) && items.ZoraLetter && items.Slingshot && items.Boomerang; }
+               return dungeons[3].found == true && ( 
+                  ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) 
+                   && (items.ZoraLetter || OpenFountain) )
+                   || DungeonER ) && items.Slingshot && items.Boomerang && (items.Bombs || (items.Bombchu && BombchuLogic) ) &&
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
+            }
          },
          'Skulltula Near Boos Door': {
             type: "skulltula",
             access: "master",
             isAvailable: function () {
-               return dungeons[3].found == true && (items.Bombs || items.Scale) && items.ZoraLetter && items.Slingshot && items.Boomerang; }
+               return dungeons[3].found == true && ( 
+                  ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) 
+                   && (items.ZoraLetter || OpenFountain) )
+                   || DungeonER ) && items.Slingshot && items.Boomerang && (items.Bombs || (items.Bombchu && BombchuLogic) ) &&
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
+            }
          },
          'MQ Barinade': {
             type: "boss",
             access: "master",
             isAvailable: function () {
-               return dungeons[3].found == true && (items.Bombs || items.Scale) && items.ZoraLetter && items.Slingshot && items.Boomerang; }
+               return dungeons[3].found == true && ( 
+                  ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) 
+                   && (items.ZoraLetter || OpenFountain) )
+                   || DungeonER ) && items.Slingshot && items.Boomerang && (items.Bombs || (items.Bombchu && BombchuLogic) ) &&
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
+            }
          },
       },
       isBeatable: function () {
@@ -1062,168 +1171,224 @@ var dungeons = [
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
-               return dungeons[4].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.SongofStorms;
+               return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
+               && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
          },
          'Front Center Bombable': {
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
-               return dungeons[4].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.SongofStorms && (items.Bombs || (items.Bombchu && BombchuLogic));
+               return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
+               && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+               && (items.Bombs || (items.Bombchu && BombchuLogic) );
             }
          },
          'Center Large Chest': {
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
-               return dungeons[4].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.SongofStorms;
+               return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
+               && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
          },
          'Underwater Left Chest': {
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
-               return dungeons[4].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.SongofStorms && items.Ocarina && items.ZeldasLullaby;
+               return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
+               && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+               && items.Ocarina && items.ZeldasLullaby;
             }
          },
          'Coffin Key': {
             type: "freestanding",
             access: "vanilla",
             isAvailable: function () {
-               return dungeons[4].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.SongofStorms;
+               return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
+               && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
          },
          'Center Small Chest': {
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
-               return dungeons[4].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.SongofStorms;
+               return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
+               && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
          },
          'Back Left Bombable': {
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
-               return dungeons[4].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.SongofStorms && (items.Bombs || (items.Bombchu && BombchuLogic));
+               return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
+               && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+               && (items.Bombs || (items.Bombchu && BombchuLogic) );
             }
          },
          'West Key Door Skulltula': {
             type: "skulltula",
             access: "vanilla",
             isAvailable: function () {
-               return dungeons[4].found == true && items.Boomerang && items.Ocarina && items.SongofStorms && (items.WellKey >= 3 || smallkeys === "Remove");
-            },
+               return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
+               && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+               && (smallkeys == "Remove" || items.WellKey ) && items.Boomerang;
+            }
          },
          'East Key Door Skulltula': {
             type: "skulltula",
             access: "vanilla",
             isAvailable: function () {
-               return dungeons[4].found == true && items.Boomerang && items.Ocarina && items.SongofStorms && (items.WellKey >= 3 || smallkeys === "Remove");
-            },
+               return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
+               && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+               && (smallkeys == "Remove" || items.WellKey ) && items.Boomerang;
+            }
          },
          'Right Bottom Hidden Wall': {
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
-               return dungeons[4].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.SongofStorms;
+               return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
+               && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
          },
          'Locked Pits': {
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
-               return dungeons[4].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.SongofStorms && (items.WellKey >= 1 || smallkeys === "Remove");
+               return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
+               && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+               && (smallkeys == "Remove" || items.WellKey );
             }
          },
          'Like Like Chest': {
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
-               return dungeons[4].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.SongofStorms && (items.WellKey >= 1 || smallkeys === "Remove");
+               return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
+               && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+               && (smallkeys == "Remove" || items.WellKey );
             }
          },
          'Like Like Skulltula': {
             type: "skulltula",
             access: "vanilla",
             isAvailable: function () {
-               return dungeons[4].found == true && items.Boomerang && items.Ocarina && items.SongofStorms && (items.WellKey >= 3 || smallkeys === "Remove");
-            },
+               return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
+               && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+               && (smallkeys == "Remove" || items.WellKey ) && items.Boomerang;
+            }
          },
          'Basement Chest': {
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
-               return dungeons[4].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.SongofStorms && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove);
+               return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
+               && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+               && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove );
             }
          },
          'Underwater Front Chest': {
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
-               return dungeons[4].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.SongofStorms && items.Ocarina && items.ZeldasLullaby;
+               return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
+               && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+               && items.Ocarina && items.ZeldasLullaby;
             }
          },
          'Dead Hand': {
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
-               return dungeons[4].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.SongofStorms && items.Ocarina && items.ZeldasLullaby && (items.KokiriSword || items.Stick);
+               return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
+               && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+               && items.Ocarina && items.ZeldasLullaby;
             }
          },
          ['Invisible Chest']: {
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
-               return dungeons[4].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.SongofStorms && items.Ocarina && items.ZeldasLullaby;
+               return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
+               && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+               && items.Ocarina && items.ZeldasLullaby;
             }
          },
          'Center Chest': {
             type: "chest",
             access: "master",
             isAvailable: function () {
-               return dungeons[4].found == true && items.Ocarina && items.SongofStorms && items.ZeldasLullaby; }
+               return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
+               && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+               && items.Ocarina && items.ZeldasLullaby;
+            }
          },
          'MQ Deadhand Chest': {
             type: "chest",
             access: "master",
             isAvailable: function () {
-               return dungeons[4].found == true && items.Ocarina && items.SongofStorms && items.ZeldasLullaby; }
+               return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
+               && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+               && items.Ocarina && items.ZeldasLullaby && 
+                  (items.Slingshot || tems.Boomerang || items.Bombs || (items.Bombchu && BombchuLogic) );
+            }
          },
          'Deadhand Freestanding': {
             type: "freestanding",
             access: "master",
             isAvailable: function () {
-               return dungeons[4].found == true && items.Ocarina && items.SongofStorms && items.ZeldasLullaby && items.Bombs; }
+               return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
+               && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+               && items.Ocarina && items.ZeldasLullaby && 
+                  (items.Bombs || (items.Bombchu && BombchuLogic) );
+            }
          },
          'Inner Room Freestanding': {
             type: "freestanding",
             access: "master",
             isAvailable: function () {
-               return dungeons[4].found == true && items.Ocarina && items.SongofStorms && items.ZeldasLullaby; }
+               return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
+               && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+               && items.Ocarina && items.ZeldasLullaby && 
+                  (items.Slingshot || tems.Boomerang || items.Bombs || (items.Bombchu && BombchuLogic) );
+            }
          },
          'MQ Basement Chest': {
             type: "chest",
             access: "master",
             isAvailable: function () {
-               return dungeons[4].found == true && items.Ocarina && items.SongofStorms && items.ZeldasLullaby && items.Bombs && items.Slingshot && (items.WellKey >= 1 || smallkeys === "Remove"); }
+               return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
+               && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+               && items.Ocarina && items.ZeldasLullaby && items.WellKey &&
+                  (items.Bombs || (items.Bombchu && BombchuLogic) );
+            }
          },
          'Tombstone Skulltula': {
             type: "skulltula",
             access: "master",
-            isAvailable: function () {
-               return dungeons[4].found == true && items.Ocarina && items.SongofStorms && items.Slingshot; }
+            isAvailable: function () { //?
+               return dungeons[4].found == true && items.Ocarina && items.SongofStorms 
+               && items.Slingshot; }
          },
          'Coffin Room Skulltula': {
             type: "skulltula",
             access: "master",
-            isAvailable: function () {
-               return dungeons[4].found == true && items.Ocarina && items.SongofStorms && items.ZeldasLullaby && items.Bombs && (items.WellKey >= 3 || smallkeys === "Remove"); }
+            isAvailable: function () { //?
+               return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
+               && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+               && items.Ocarina && items.ZeldasLullaby;
+            }
          },
          'Basement Skulltula': {
             type: "skulltula",
             access: "master",
             isAvailable: function () {
-               return dungeons[4].found == true && items.Ocarina && items.SongofStorms && items.ZeldasLullaby && items.Bombs && items.Slingshot && (items.WellKey >= 3 || smallkeys === "Remove"); }
+               return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
+               && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+               && items.Ocarina && items.ZeldasLullaby && items.WellKey &&
+                  (items.Bombs || (items.Bombchu && BombchuLogic) );
+            }
          },
       },
       isBeatable: function () {
