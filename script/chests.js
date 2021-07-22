@@ -6353,8 +6353,8 @@ var dungeons = [
             }
          },
          'Lake Hylia Grave': {
-            type: "simple", 
-            access: "door",
+            type: "grotto", 
+            access: "grotto",
             isAvailable: function () {
                return OWERmap == false || dungeons[26].found == true; }
          },
