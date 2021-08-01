@@ -4650,7 +4650,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[17].found == true && 
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-               && (items.Bombs || (items.Bombchu && BombchuLogic) ) ;
+               && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove) ;
             }
          },
          ['Spinning Pot Freestanding']: {
@@ -4659,7 +4659,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[17].found == true && 
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-               && (items.Glove || items.Bombs ) ;
+               && (items.Glove || items.Bombs ) && ( (items.Ocarina && items.ZeldasLullaby) || (items.Dins && items.Magic) );
             }
          },
          ['Darunia\'s Dance']: {
@@ -5154,7 +5154,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[20].found == true && 
                   (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale || OWERmap ) &&
-                  items.Ocarina && items.SongofStorms &&
+                  items.Ocarina && items.SongofStorms && items.SunsSong && items.SariasSong && items.EponasSong && items.ZeldasLullaby && items.SongofTime &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
          },
