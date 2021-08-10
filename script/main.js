@@ -546,8 +546,8 @@ function clickDungeon(d) {
         c.id = dungeons[dungeonSelect].chestlist[key].type;
         c.className = s.className;
         c.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
-        c.onmouseover = new Function('highlightDungeonChest(this)');
-        c.onmouseout = new Function('unhighlightDungeonChest(this)');
+        c.onmouseover = new Function('highlight(' + key + ')');
+        c.onmouseout = new Function('unhighlight(' + key + ')');
         c.style.cursor = 'pointer';
         c.style.position = 'relative';
         c.style.top = dungeons[dungeonSelect].chestlist[key].y;
@@ -556,8 +556,8 @@ function clickDungeon(d) {
         document.getElementById('minimapdiv').appendChild(c);
         
         var cc = document.createElement('span');
-        cc.className = 'tooltipgray';
-        cc.innerHTML = key;
+        cc.className = 'minimapspan ' + 'tooltipgray';
+        cc.id = key;
         c.appendChild(cc);
     }
 }
