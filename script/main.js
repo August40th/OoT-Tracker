@@ -508,6 +508,9 @@ function clickDungeon(d) {
     var regionSelected = document.getElementById('submaparea').innerHTML;
     regionSelected.onclick = bulkDCSelect();
     
+    var minimapdiv = document.getElementById('minimapdiv');
+    minimapdiv.style.backgroundImage = 'url(images/' + regionSelected + '.png)';
+    
     if (OWERmap == true && dungeons[dungeonSelect].type == "overworld" && dungeons[dungeonSelect].found == false) {
         dungeons[dungeonSelect].found = true ;
         updateMap();
