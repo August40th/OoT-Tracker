@@ -1513,6 +1513,18 @@ function updateMap() {
                 if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable()) {
                     DCcount++;
                 }
+                var check = document.getElementById(key);
+                for (key in dungeons[dungeonSelect].chestlist) {
+                    if (dungeons[dungeonSelect].chestlist[key].isOpened) {
+                        check.className = 'DCopened';
+                    }
+                    else if ( dungeons[dungeonSelect].chestlist[key].isAvailable() ) {
+                        check.className = 'DCavailable';
+                    }
+                    else {
+                        check.className = 'DCunavailable';
+                    }
+                }
             }
         }
 
