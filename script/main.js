@@ -1879,17 +1879,14 @@ function populateMapdiv() {
 
 function populateItemconfig() {
     var grid = document.getElementById('itemconfig');
-    var gridP2 = document.getElementById('itemconfig');
 
     var i = 0;
 
     var row;
-    var rowP2;
 
     for (var key in items) {
         if (i % 10 == 0) {
             row = document.createElement('tr');
-            rowP2 = document.createElement('tr');
             grid.appendChild(row);
             gridP2.appendChild(rowP2);
         }
@@ -1906,18 +1903,6 @@ function populateItemconfig() {
             rowitem.style.backgroundImage = 'url(images/' + key + itemsMax[key] + '.png)';
         }
         row.appendChild(rowitem);
-        
-        var P2rowitem = document.createElement('td');
-        P2rowitem.className = 'corner';
-        P2rowitem.id = key;
-        P2rowitem.style.backgroundSize = '100% 100%';
-        P2rowitem.onclick = new Function('itemConfigClick(this)');
-        if ((typeof items[key]) == 'boolean') {
-            P2rowitem.style.backgroundImage = 'url(images/' + key + '.png)';
-        } else {
-            P2rowitem.style.backgroundImage = 'url(images/' + key + itemsMax[key] + '.png)';
-        }
-        rowP2.appendChild(P2rowitem);
     }
 }
 
