@@ -601,14 +601,14 @@ function clickDungeon(d) {
         DClist.appendChild(s);
         
         var c = document.createElement('chest');
-        c.style.backgroundImage = 'url(images/Guru.png)';
-        c.style.color = 'black';
+        //c.style.backgroundImage = 'url(images/Guru.png)';
+        //c.style.color = 'black';
         c.id = key;
         c.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
         c.onmouseover = new Function('highlightDungeonChest(this)');
         c.onmouseout = new Function('unhighlightDungeonChest(this)');
-        c.style.left = "50.0%"; //dungeons[dungeonSelect].chestlist[key]
-        c.style.top = "50.0%"; //dungeons[dungeonSelect].chestlist[key]
+        c.style.left = "10.0%" + key //dungeons[dungeonSelect].chestlist[key].x;
+        c.style.top = "80.0%"//dungeons[dungeonSelect].chestlist[key].y;
         if (dungeons[dungeonSelect].chestlist[key].isOpened) {            
             c.className = "DCopened";
         } else if ( dungeons[dungeonSelect].chestlist[key].isAvailable()) {
@@ -618,11 +618,6 @@ function clickDungeon(d) {
         }
         
         minimap.appendChild(c);
-
-        var ss = document.createElement('span');
-        ss.className = 'tooltip';
-        ss.innerHTML = dungeons[dungeonSelect].chestlist[key].name;
-        c.appendChild(ss);
     }
 }
 
