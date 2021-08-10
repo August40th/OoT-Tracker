@@ -1515,6 +1515,8 @@ function updateMap() {
                 }
                 var check = document.getElementById(key);
                 for (key in dungeons[dungeonSelect].chestlist) {
+                    if (check == null) {
+                        continue;}
                     if (dungeons[dungeonSelect].chestlist[key].isOpened) {
                         check.className = 'DCopened';
                     }
