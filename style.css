@@ -301,7 +301,7 @@ label {
 
 #chest, #NPC, #freestanding, #ksword, #skulltula, #scrub, #ocarina, #egg, #song, #cow, #bean, #simple, #grotto, #dungeon, #entrance, #alldoor, #boss{
     background-repeat: no-repeat;
-    font-size: 48;
+    font-size: 24;
 
     position: absolute;
     cursor: pointer;
