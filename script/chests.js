@@ -107,7 +107,7 @@ var dungeons = [
                return dungeons[0].found == true ; }
          },
          'Mido\'s House 1': {
-            x: "15.0%",
+            x: "14.0%",
             y: "38.0%",
             type: "chest",
             access: "simple",
@@ -116,23 +116,23 @@ var dungeons = [
          },
          'Mido\'s House 2': {
             x: "15.0%",
-            y: "36.0%",
+            y: "32.0%",
             type: "chest",
             access: "simple",
             isAvailable: function () {
                return dungeons[0].found == true ; }
          },
          'Mido\'s House 3': {
-            x: "12.0%",
-            y: "37.0%",
+            x: "17.0%",
+            y: "38.0%",
             type: "chest",
             access: "simple",
             isAvailable: function () {
                return dungeons[0].found == true ; }
          },
          'Mido\'s House 4': {
-            x: "10.5%",
-            y: "35.0%",
+            x: "17.5%",
+            y: "32.0%",
             type: "chest",
             access: "simple",
             isAvailable: function () {
@@ -157,8 +157,8 @@ var dungeons = [
                   ); }
          },
          'Kokiri Sword Chest': {
-            x: "15.0%",
-            y: "72.0%",
+            x: "13.7%",
+            y: "82.0%",
             type: "ksword",
             access: "outdoor",
             isAvailable: function () {
@@ -252,8 +252,8 @@ var dungeons = [
                && items.Ocarina && items.SongofStorms; }
          },
          'Storms Grotto Chest': {
-            x: "8.0%",
-            y: "34.0%",
+            x: "6.8%",
+            y: "28.0%",
             type: "chest",
             access: "grotto",
             isAvailable: function () {
