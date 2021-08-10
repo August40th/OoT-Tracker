@@ -322,7 +322,6 @@ label {
 }
 
 .minimapdiv{
-    background-image: url('images/' + regionSelected + '.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
 
