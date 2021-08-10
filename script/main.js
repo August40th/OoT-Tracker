@@ -541,8 +541,8 @@ function clickDungeon(d) {
 
         DClist.appendChild(s);
         
-        var c = document.createElement('chest');
-        //c.style.backgroundImage = 'url(images/Guru.png)';
+        var c = document.createElement('span');
+        c.style.backgroundImage = 'url(images/Guru.png)';
         //c.style.color = 'black';
         c.id = key;
         c.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
