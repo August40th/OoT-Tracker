@@ -76,7 +76,7 @@ function generalCanGetChest(chestlist) {
 // (OWER == false || (OWER == true && dungeon[].found == true) ) && (Randomstart == false || (Randomstart == true && dungeon[].entrance[].access == true) )
 // define dungeon chests
 var dungeons = [
-   { name: "Kokiri Forest",
+   { name: 'Kokiri Forest',
       x: "78.9%",
       y: "63.9%",
       type: "overworld",
