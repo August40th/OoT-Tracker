@@ -416,6 +416,15 @@ function deserializeDungeonChests(serializedDungeons) {
     }
 }
 
+function highlight(x) {
+    document.getElementById(x).style.backgroundImage = 'url(images/highlighted.png)';
+    document.getElementById(x).style.visibility = 'visible';
+}
+
+function unhighlight(x) {
+    document.getElementById(x).style.visibility = 'none';
+}
+
 // Highlights a dungeons)
 function highlightDungeon(x) {
     document.getElementById('dungeon' + x).style.backgroundImage = 'url(images/highlighted.png)';
