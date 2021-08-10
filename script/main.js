@@ -600,10 +600,10 @@ function clickDungeon(d) {
 
         DClist.appendChild(s);
         
-        var c = document.createElement('span');
-        c.style.backgroundImage = 'url(images/poi.png)';
+        var c = document.createElement('chest');
+        c.style.backgroundImage = 'url(images/Guru.png)';
         c.style.color = 'black';
-        c.id = k;
+        c.id = key;
         c.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
         c.onmouseover = new Function('highlightDungeonChest(this)');
         c.onmouseout = new Function('unhighlightDungeonChest(this)');
