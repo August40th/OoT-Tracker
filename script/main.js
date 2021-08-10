@@ -552,7 +552,7 @@ function clickDungeon(d) {
         c.style.position = 'relative';
         c.style.top = dungeons[dungeonSelect].chestlist[key].y;
         c.style.left = dungeons[dungeonSelect].chestlist[key].x;
-        c.style.backgroundImage = 'url(images/Unknown.png)';
+        //c.style.backgroundImage = 'url(images/Unknown.png)';
         document.getElementById('minimapdiv').appendChild(c);
         
     }
