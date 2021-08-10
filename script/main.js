@@ -541,24 +541,6 @@ function clickDungeon(d) {
 
         DClist.appendChild(s);
         
-        var c = document.createElement('span');
-        c.style.backgroundImage = 'url(images/Guru.png)';
-        //c.style.color = 'black';
-        c.id = key;
-        c.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
-        c.onmouseover = new Function('highlightDungeonChest(this)');
-        c.onmouseout = new Function('unhighlightDungeonChest(this)');
-        c.style.left = "10.0%" + key //dungeons[dungeonSelect].chestlist[key].x;
-        c.style.top = "80.0%"//dungeons[dungeonSelect].chestlist[key].y;
-        if (dungeons[dungeonSelect].chestlist[key].isOpened) {            
-            c.className = "DCopened";
-        } else if ( dungeons[dungeonSelect].chestlist[key].isAvailable()) {
-            c.className = "DCavailable";
-        } else {
-            c.className = "DCunavailable";
-        }
-        
-        minimap.appendChild(c);
     }
 }
 
