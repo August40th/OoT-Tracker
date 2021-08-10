@@ -1803,6 +1803,7 @@ function populateMapdiv() {
         c.onmouseover = new Function('highlightDungeonChest(this)');
         c.onmouseout = new Function('unhighlightDungeonChest(this)');
         c.style.cursor = 'pointer';
+        c.style.position = 'relative';
         c.style.top = "50.0%";
         c.style.left = "50.0%";
         c.style.backgroundImage = 'url(images/Unknown.png)';
