@@ -1786,6 +1786,7 @@ function populateMapdiv() {
         var c =document.createElement('span');
         s.innerHTML = key;
         c.innerHTML = key;
+        c.id = key;
 
         if (dungeons[dungeonSelect].chestlist[key].isOpened) {
             s.className = 'DCopened';
