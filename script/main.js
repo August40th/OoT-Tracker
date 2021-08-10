@@ -542,7 +542,7 @@ function clickDungeon(d) {
         DClist.appendChild(s);
         
         c = document.createElement('span');
-        c.innerHTML = key;
+        c.innerHTML = '';
         c.id = dungeons[dungeonSelect].chestlist[key].type;
         c.className = s.className;
         c.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
