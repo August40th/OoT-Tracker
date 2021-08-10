@@ -416,11 +416,6 @@ function deserializeDungeonChests(serializedDungeons) {
     }
 }
 
-function refreshChest(x) {
-    var stateClass = chests[x].isOpened ? 'opened' : chests[x].isAvailable();
-    document.getElementById(x).className = 'mapspan chest ' + stateClass;
-}
-
 // Highlights a dungeons)
 function highlightDungeon(x) {
     document.getElementById('dungeon' + x).style.backgroundImage = 'url(images/highlighted.png)';
