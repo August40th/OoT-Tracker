@@ -552,8 +552,8 @@ function clickDungeon(d) {
         
         c = document.createElement('span');
         c.innerHTML = ' ? ';
-        c.id = key // + ' ' + dungeons[dungeonSelect].chestlist[key].type;
-        c.className = s.className;
+        c.id = dungeons[dungeonSelect].chestlist[key].type;
+        c.className = key;
         c.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
         c.onmouseover = new Function('highlight(' + c.className + ')');
         c.onmouseout = new Function('unhighlight(' + c.className + ')');
