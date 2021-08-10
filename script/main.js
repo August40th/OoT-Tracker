@@ -508,7 +508,9 @@ function clickDungeon(d) {
     var regionSelected = document.getElementById('submaparea').innerHTML;
     regionSelected.onclick = bulkDCSelect();
     
-    document.getElementById('minimapdiv').style.backgroundImage = 'url(images/' + dungeons[dungeonSelect].name + '.png)';
+    if (dungeonSelect == 0) {
+        document.getElementById('minimapdiv').style.backgroundImage = 'url(images/Kokiri Forest.png)';
+    }
     
     if (OWERmap == true && dungeons[dungeonSelect].type == "overworld" && dungeons[dungeonSelect].found == false) {
         dungeons[dungeonSelect].found = true ;
