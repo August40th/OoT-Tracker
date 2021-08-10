@@ -514,7 +514,8 @@ function clickDungeon(d) {
     var regionSelected = document.getElementById('submaparea').innerHTML;
     regionSelected.onclick = bulkDCSelect();
     
-    document.getElementById('minimapdiv').style.backgroundImage = 'url(images/' + minimaps[dungeonSelect] + '.png)';
+    var minimap = document.getElementById('minimapdiv');
+    minimap.style.backgroundImage = 'url(images/' + minimaps[dungeonSelect] + '.png)';
     
     if (OWERmap == true && dungeons[dungeonSelect].type == "overworld" && dungeons[dungeonSelect].found == false) {
         dungeons[dungeonSelect].found = true ;
@@ -598,6 +599,30 @@ function clickDungeon(d) {
         s.style.cursor = "pointer";
 
         DClist.appendChild(s);
+        
+        var c = document.createElement('span');
+        c.style.backgroundImage = 'url(images/poi.png)';
+        c.style.color = 'black';
+        c.id = k;
+        c.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
+        c.onmouseover = new Function('highlightDungeonChest(this)');
+        c.onmouseout = new Function('unhighlightDungeonChest(this)');
+        c.style.left = "50.0%"; //dungeons[dungeonSelect].chestlist[key]
+        c.style.top = "50.0%"; //dungeons[dungeonSelect].chestlist[key]
+        if (dungeons[dungeonSelect].chestlist[key].isOpened) {            
+            c.className = "DCopened";
+        } else if ( dungeons[dungeonSelect].chestlist[key].isAvailable()) {
+            c.className = "DCavailable";
+        } else {
+            c.className = "DCunavailable";
+        }
+        
+        minimap.appendChild(c);
+
+        var ss = document.createElement('span');
+        ss.className = 'tooltip';
+        ss.innerHTML = dungeons[dungeonSelect].chestlist[key].name;
+        c.appendChild(ss);
     }
 }
 
