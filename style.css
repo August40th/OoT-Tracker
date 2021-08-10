@@ -321,9 +321,13 @@ label {
     font-size: 24;
 }
 
-.doorcheck{
-    width: 32px;
-    height: 32px;
-    backgroundImage = 'url(images/Guru.png)';
-    background-color: blue;
+.minimapdiv{
+    background-image: url("images/ermap.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    position: relative;
+    width: 700px;
+    height: 420;
+    left: 830px;
 }
