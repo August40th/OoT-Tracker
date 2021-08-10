@@ -18,6 +18,8 @@ var keyimg = ['Membership0', 'Membership1', 'Membership2', 'Membership3', 'Membe
 var songs = [];
 var songimg = ['Unknown', 'Impa', 'Malon', 'SariasSong2', 'Guru', 'CompBro', 'TempleofTime', 'Forest', 'Crater', 'IceSong', 'Desert', 'BurningKak', 'Ocarina2'];
 
+var minimaps = ['Kokiri Forest', 'GoronCity'];
+
 var doorimg = [];
 var doortype = ['Unknown', 'Guru'];
 
@@ -508,7 +510,7 @@ function clickDungeon(d) {
     var regionSelected = document.getElementById('submaparea').innerHTML;
     regionSelected.onclick = bulkDCSelect();
     
-    //document.getElementById('minimapdiv').style.backgroundImage = 'url(images/Kokiri Forest.png)';
+    document.getElementById('minimapdiv').style.backgroundImage = 'url(images/' + minimaps[dungeonSelect] + '.png)';
     
     if (OWERmap == true && dungeons[dungeonSelect].type == "overworld" && dungeons[dungeonSelect].found == false) {
         dungeons[dungeonSelect].found = true ;
