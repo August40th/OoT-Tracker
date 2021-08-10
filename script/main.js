@@ -417,12 +417,12 @@ function deserializeDungeonChests(serializedDungeons) {
 }
 
 function highlight(x) {
-    document.getElementById(x).style.backgroundImage = 'url(images/highlighted.png)';
-    document.getElementById(x).style.visibility = 'visible';
+    document.getElementByclassName(x).style.backgroundImage = 'url(images/highlighted.png)';
+    document.getElementByclassName(x).style.visibility = 'visible';
 }
 
 function unhighlight(x) {
-    document.getElementById(x).style.visibility = 'none';
+    document.getElementByclassName(x).style.visibility = 'none';
 }
 
 // Highlights a dungeons)
@@ -552,11 +552,11 @@ function clickDungeon(d) {
         
         c = document.createElement('span');
         c.innerHTML = ' ? ';
-        c.id = key// + ' ' + dungeons[dungeonSelect].chestlist[key].type;
+        c.id = key // + ' ' + dungeons[dungeonSelect].chestlist[key].type;
         c.className = s.className;
         c.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
-        c.onmouseover = new Function('highlight(' + key + ')');
-        c.onmouseout = new Function('unhighlight(' + key + ')');
+        c.onmouseover = new Function('highlight(' + c.className + ')');
+        c.onmouseout = new Function('unhighlight(' + c.className + ')');
         c.style.cursor = 'pointer';
         c.style.position = 'relative';
         c.style.top = dungeons[dungeonSelect].chestlist[key].y;
