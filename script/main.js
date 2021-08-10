@@ -1783,7 +1783,9 @@ function populateMapdiv() {
             continue;}
         
         var s = document.createElement('li');
-        s.innerHTML = key
+        var c =document.createElement('span');
+        s.innerHTML = key;
+        c.innerHTML = key;
 
         if (dungeons[dungeonSelect].chestlist[key].isOpened) {
             s.className = 'DCopened';
@@ -1800,6 +1802,16 @@ function populateMapdiv() {
         s.onmouseout = new Function('unhighlightDungeonChest(this)');
         s.style.cursor = 'pointer';
         document.getElementById('submaplist').appendChild(s);
+        
+        c.className = s.className;
+        c.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
+        c.onmouseover = new Function('highlightDungeonChest(this)');
+        c.onmouseout = new Function('unhighlightDungeonChest(this)');
+        c.style.cursor = 'pointer';
+        c.style.top = "50.0%";
+        c.style.left = "50.0%";
+        c.style.backgroundImage = 'url(images/Unknown.png)';
+        document.getElementById('minimapdiv').appendChild(c);
     }
 }
 
