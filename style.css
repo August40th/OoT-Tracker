@@ -311,31 +311,7 @@ label {
     top: -420px;
 }
 
-#chest{
-    background-repeat: no-repeat;
-    font-size: 48;
-
-    position: absolute;
-    cursor: pointer;
-}
-
-#ksword{
-    background-repeat: no-repeat;
-    font-size: 48;
-
-    position: absolute;
-    cursor: pointer;
-}
-
-#NPC{
-    background-repeat: no-repeat;
-    font-size: 48;
-
-    position: absolute;
-    cursor: pointer;
-}
-
-#freestanding{
+#chest, #NPC, #freestanding, #ksword, #skulltula, #scrub, #ocarina, #egg,, #cow, #bean, #simple, #grotto, #dungeon, #entrance, #alldoor{
     background-repeat: no-repeat;
     font-size: 48;
 
