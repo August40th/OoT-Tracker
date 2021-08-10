@@ -4249,7 +4249,7 @@ var dungeons = [
                }
          },
          ['Redead Chest']: {
-            type: "unique", 
+            type: "grotto", 
             access: "grotto",
             isAvailable: function () {
                return dungeons[16].found == true &&
@@ -5024,7 +5024,7 @@ var dungeons = [
                   );}
          },
          ['Wolfos Grotto']: {
-            type: "unique", 
+            type: "grotto", 
             access: "grotto",
             isAvailable: function () {
                return dungeons[19].found == true &&
