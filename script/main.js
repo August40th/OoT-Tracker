@@ -1781,7 +1781,7 @@ function populateMapdiv() {
         var s = document.createElement('li');
         var c =document.createElement('span');
         s.innerHTML = key;
-        c.id = key;
+        c.id = key.type;
 
         if (dungeons[dungeonSelect].chestlist[key].isOpened) {
             s.className = 'DCopened';
@@ -1799,7 +1799,7 @@ function populateMapdiv() {
         s.style.cursor = 'pointer';
         document.getElementById('submaplist').appendChild(s);
         
-        c.className = 'mapspan chest ' + s.className;
+        c.className = s.className;
         c.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
         c.onmouseover = new Function('highlightDungeonChest(this)');
         c.onmouseout = new Function('unhighlightDungeonChest(this)');
