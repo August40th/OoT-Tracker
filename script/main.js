@@ -1913,7 +1913,6 @@ function populateItemconfig() {
         if (i % 10 == 0) {
             row = document.createElement('tr');
             grid.appendChild(row);
-            gridP2.appendChild(rowP2);
         }
         i++;
 
