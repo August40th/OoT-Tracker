@@ -92,7 +92,7 @@ var dungeons = [
        },
          'Fairy Ocarina': {
             x: "4.0%",
-            y: "58.0%",
+            y: "39.0%",
             type: "ocarina",
             access: "no OWER",
             isAvailable: function () {
@@ -107,48 +107,48 @@ var dungeons = [
                return dungeons[0].found == true ; }
          },
          'Mido\'s House 1': {
-            x: "18.0%",
-            y: "46.0%",
+            x: "15.0%",
+            y: "38.0%",
             type: "chest",
             access: "simple",
             isAvailable: function () {
                return dungeons[0].found == true ; }
          },
          'Mido\'s House 2': {
-            x: "18.0%",
-            y: "47.0%",
+            x: "15.0%",
+            y: "36.0%",
             type: "chest",
             access: "simple",
             isAvailable: function () {
                return dungeons[0].found == true ; }
          },
          'Mido\'s House 3': {
-            x: "20.0%",
-            y: "46.0%",
+            x: "12.0%",
+            y: "37.0%",
             type: "chest",
             access: "simple",
             isAvailable: function () {
                return dungeons[0].found == true ; }
          },
          'Mido\'s House 4': {
-            x: "20.0%",
-            y: "47.0%",
+            x: "10.5%",
+            y: "35.0%",
             type: "chest",
             access: "simple",
             isAvailable: function () {
                return dungeons[0].found == true ; }
          },
          'Know It All Bro\'s': {
-            x: "15.0%",
-            y: "88.0%",
+            x: "8.0%",
+            y: "42.0%",
             type: "simple",
             access: "door",
             isAvailable: function () {
                return dungeons[0].found == true ; }
          },
          'Child Know it All Bros Skulltula': {
-            x: "14.0%",
-            y: "67.0%",
+            x: "7.0%",
+            y: "41.8%",
             type: "skulltula",
             access: "outdoor",
             isAvailable: function () { //Child only outdoor
@@ -157,8 +157,8 @@ var dungeons = [
                   ); }
          },
          'Kokiri Sword Chest': {
-            x: "28.0%",
-            y: "88.0%",
+            x: "15.0%",
+            y: "72.0%",
             type: "ksword",
             access: "outdoor",
             isAvailable: function () {
@@ -166,16 +166,16 @@ var dungeons = [
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); }
          },
          'Link\'s House': {
-            x: "75.0%",
-            y: "58.0%",
+            x: "16.0%",
+            y: "67.0%",
             type: "alldoor",
             access: "door",
             isAvailable: function () {
                return dungeons[0].found == true ; }
          },
          'Link\'s House Cow': {
-            x: "75.0%",
-            y: "58.0%",
+            x: "16.0%",
+            y: "69.6%",
             type: "cow",
             access: "alldoor",
             isAvailable: function () { //Child only indoor
@@ -184,24 +184,24 @@ var dungeons = [
                   items.Ocarina && items.EponasSong; }
          },
          'Saria\'s House': {
-            x: "75.0%",
-            y: "58.0%",
+            x: "19.0%",
+            y: "63.0%",
             type: "simple",
             access: "door",
             isAvailable: function () {
                return dungeons[0].found == true ; }
          },
          'Twin\'s House': {
-            x: "75.0%",
-            y: "58.0%",
+            x: "22.0%",
+            y: "60.0%",
             type: "simple",
             access: "door",
             isAvailable: function () {
                return dungeons[0].found == true ; }
          },
          'Adult Twin\'s House Roof Skulltula': {
-            x: "75.0%",
-            y: "58.0%",
+            x: "23.0%",
+            y: "59.5%",
             type: "skulltula",
             access: "outdoor",
             isAvailable: function () { //Adult only outdoor
@@ -210,8 +210,8 @@ var dungeons = [
                && items.Hookshot; }
          },
          'Soil Patch Skulltula': {
-            x: "75.0%",
-            y: "58.0%",
+            x: "12.0%",
+            y: "38.0%",
             type: "skulltula",
             access: "outdoor",
             isAvailable: function () {
@@ -219,16 +219,16 @@ var dungeons = [
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) && items.Bottle; }
          },
          'Kokiri Shop': {
-            x: "75.0%",
-            y: "58.0%",
+            x: "10.5%",
+            y: "37.5%",
             type: "simple",
             access: "door",
             isAvailable: function () {
                return dungeons[0].found == true ; }
          },
          'Kokiri Sale': {
-            x: "75.0%",
-            y: "58.0%",
+            x: "10.0%",
+            y: "38.0%",
             type: "shop",
             access: "simple",
             isAvailable: function () {
@@ -243,8 +243,8 @@ var dungeons = [
                return dungeons[0].found == true ; }
          },
          'Song of Storms Grotto': {
-            x: "12.0%",
-            y: "38.0%",
+            x: "8.0%",
+            y: "34.0%",
             type: "grotto",
             access: "grotto",
             isAvailable: function () {
@@ -252,8 +252,8 @@ var dungeons = [
                && items.Ocarina && items.SongofStorms; }
          },
          'Storms Grotto Chest': {
-            x: "12.0%",
-            y: "38.0%",
+            x: "8.0%",
+            y: "34.0%",
             type: "chest",
             access: "grotto",
             isAvailable: function () {
@@ -261,8 +261,8 @@ var dungeons = [
                   items.Ocarina && items.SongofStorms; }
          },
          'Storms Grotto Gossip': {
-            x: "75.0%",
-            y: "58.0%",
+            x: "7.0%",
+            y: "34.0%",
             type: "gossip",
             access: "outdoor",
             isAvailable: function () {
@@ -270,8 +270,8 @@ var dungeons = [
                   items.Ocarina && items.SongofStorms; }
          },
          'Forest to Woods': {
-          x: "78.9%",
-          y: "56.0%",
+          x: "28.9%",
+          y: "12.0%",
           type: "entrance",
           access: "entrance",
           isAvailable: function () {
