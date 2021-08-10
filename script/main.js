@@ -555,6 +555,10 @@ function clickDungeon(d) {
         //c.style.backgroundImage = 'url(images/Unknown.png)';
         document.getElementById('minimapdiv').appendChild(c);
         
+        var cc = document.createElement('span');
+        cc.className = 'tooltipgray';
+        cc.innerHTML = key;
+        c.appendChild(ss);
     }
 }
 
