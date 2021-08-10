@@ -497,8 +497,8 @@ function toggleMarkDungeon(x) {
 }
 
 function clickDungeon(d) {
-    document.getElementById('dungeon' + dungeonSelect).style.backgroundImage = 'url(images/poi.png)';
     dungeonSelect = d;
+    document.getElementById('dungeon' + dungeonSelect).style.backgroundImage = 'url(images/poi.png)';
     document.getElementById('dungeon' + dungeonSelect).style.backgroundImage = 'url(images/highlighted.png)';
 
     document.getElementById('submaparea').innerHTML = dungeons[dungeonSelect].name;
@@ -508,8 +508,7 @@ function clickDungeon(d) {
     var regionSelected = document.getElementById('submaparea').innerHTML;
     regionSelected.onclick = bulkDCSelect();
     
-    var minimapdiv = document.getElementById('minimapdiv');
-    minimapdiv.style.backgroundImage = 'url(images/' + dungeons[dungeonSelect].name + '.png)';
+    document.getElementById('minimapdiv').style.backgroundImage = 'url(images/' + dungeons[dungeonSelect].name + '.png)';
     
     if (OWERmap == true && dungeons[dungeonSelect].type == "overworld" && dungeons[dungeonSelect].found == false) {
         dungeons[dungeonSelect].found = true ;
