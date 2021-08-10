@@ -1996,12 +1996,12 @@ function preloader() {
    }
 
    for (fortresskey in keyimg) {
-      var fort = new Image();
+      var img = new Image();
       img.src = "images/" + keyimg[fortresskeys] + ".png";
    }
 
    for (song in songimg) {
-      var teacher = new Image();
+      var img = new Image();
       img.src = "images/" + songimg[songs] + ".png";
    }
 
