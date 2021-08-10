@@ -146,7 +146,6 @@ var cookieDefault = {
     medallions: defaultMedallions,
     items: defaultItemGrid,
     obtainedItems: items,
-    chests: serializeChests(),
     dungeonChests: serializeDungeonChests(),
 }
 
@@ -169,7 +168,6 @@ function loadCookie() {
     medallions = JSON.parse(JSON.stringify(cookieobj.medallions));
     initGridRow(JSON.parse(JSON.stringify(cookieobj.items)));
     items = JSON.parse(JSON.stringify(cookieobj.obtainedItems));
-    deserializeChests(JSON.parse(JSON.stringify(cookieobj.chests)));
     deserializeDungeonChests(JSON.parse(JSON.stringify(cookieobj.dungeonChests)));
 
     updateGridItemAll();
@@ -396,7 +394,6 @@ function saveCookie() {
     cookieobj.medallions = JSON.parse(JSON.stringify(medallions));
     cookieobj.items = JSON.parse(JSON.stringify(itemLayout));
     cookieobj.obtainedItems = JSON.parse(JSON.stringify(items));
-    cookieobj.chests = JSON.parse(JSON.stringify(serializeChests()));
     cookieobj.dungeonChests = JSON.parse(JSON.stringify(serializeDungeonChests()));
 
     setCookie(cookieobj);
@@ -404,19 +401,8 @@ function saveCookie() {
     cookielock = false;
 }
 
-function serializeChests() {
-    return chests.map(chest => chest.isOpened || false);
-}
-
 function serializeDungeonChests() {
     return dungeons.map(dungeon => Object.values(dungeon.chestlist).map(chest => chest.isOpened || false));
-}
-
-function deserializeChests(serializedChests) {
-    for (var i = 0; i < chests.length; i++) {
-        chests[i].isOpened = serializedChests[i];
-        refreshChest(i);
-    }
 }
 
 function deserializeDungeonChests(serializedDungeons) {
@@ -430,52 +416,12 @@ function deserializeDungeonChests(serializedDungeons) {
     }
 }
 
-// Event of clicking a chest on the map
-function toggleChest(x) {
-    chests[x].isOpened = !chests[x].isOpened;
-   if (chests[x].isOpened){
-      if (document.getElementById(x).classList.contains('wayofhero'))
-         document.getElementById(x).className = "mapspan chest opened wayofhero";
-      else
-         document.getElementById(x).className = "mapspan chest opened";
-   }
-   else
-      document.getElementById(x).className = "mapspan chest " + chests[x].isAvailable();
-    refreshChest(x);
-    saveCookie();
-}
-
 function refreshChest(x) {
     var stateClass = chests[x].isOpened ? 'opened' : chests[x].isAvailable();
     document.getElementById(x).className = 'mapspan chest ' + stateClass;
 }
 
-function toggleMarkedChest(x) {
-   window.event.preventDefault()
-   var elem = document.getElementById(x);
-   if (chestMarked.indexOf(x) > -1) {
-      chestMarked.splice(chestMarked.indexOf(x), 1);
-   }
-   if (elem) {
-      if (elem.classList.contains('wayofhero')) {
-         elem.classList.remove('wayofhero');
-      } else {
-         elem.className += " " + 'wayofhero';
-         chestMarked.push(x);
-      }
-   }
-}
-
-// Highlights a chest location
-function highlight(x) {
-    document.getElementById(x).style.backgroundImage = 'url(images/highlighted.png)';
-}
-
-function unhighlight(x) {
-    document.getElementById(x).style.backgroundImage = 'url(images/poi.png)';
-}
-
-// Highlights a chest location (but for dungeons)
+// Highlights a dungeons)
 function highlightDungeon(x) {
     document.getElementById('dungeon' + x).style.backgroundImage = 'url(images/highlighted.png)';
 }
@@ -1143,7 +1089,6 @@ function ResetLayout() {
 
 
 function ResetTracker() {
-    chests.forEach(chest => delete chest.isOpened);
     dungeons.forEach(dungeon => Object.values(dungeon.chestlist).forEach(chest => delete chest.isOpened));
     items = Object.assign({}, baseItems);
 
@@ -1529,10 +1474,6 @@ function gridItemRClick(row, col, corner) {
 }
 
 function updateMap() {
-    for (k = 0; k < chests.length; k++) {
-        if (!chests[k].isOpened)
-            document.getElementById(k).className = "mapspan chest " + chests[k].isAvailable() + ((chestMarked.indexOf(k) > -1) ? " wayofhero" : " ");
-    }
     for (k = 0; k < dungeons.length; k++) {
         document.getElementById("dungeon" + k).className = "mapspan dungeon " + dungeons[k].canGetChest() + ((dungeonMarked.indexOf(k) > -1) ? " wayofhero" : " ");
         var DCcount = 0;
@@ -1668,37 +1609,7 @@ function itemConfigClick (sender) {
 function populateMapdiv() {
     var mapdiv = document.getElementById('mapdiv');
 
-    // Initialize all chests on the map
-    for (k = 0; k < chests.length; k++) {
-        var s = document.createElement('span');
-        s.style.backgroundImage = 'url(images/poi.png)';
-        s.style.color = 'black';
-        s.id = k;
-        s.onclick = new Function('toggleChest(' + k + ')');
-        s.onmouseover = new Function('highlight(' + k + ')');
-        s.onmouseout = new Function('unhighlight(' + k + ')');
-        s.oncontextmenu = new Function('toggleMarkedChest(' + k + ')');
-        s.style.left = chests[k].x;
-        s.style.top = chests[k].y;
-        if (chests[k].isOpened) {
-            s.className = 'mapspan chest opened';
-        } 
-        else {
-            s.className = 'mapspan chest ' + chests[k].isAvailable();
-        }
-        if (chestMarked.indexOf(k) > -1) {
-         s.className += " wayofhero";
-      }
-
-        var ss = document.createElement('span');
-        ss.className = 'tooltip';
-        ss.innerHTML = chests[k].name;
-        s.appendChild(ss);
-
-        mapdiv.appendChild(s);
-    }
-
-    // Dungeon bosses & chests
+    // Dungeon bosses & checks
     for (k=0; k<dungeons.length; k++) {
         s = document.createElement('span');
         s.style.backgroundImage = 'url(images/poi.png)';
