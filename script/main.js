@@ -457,6 +457,9 @@ function clickDungeon(d) {
     
     var minimap = document.getElementById('minimapdiv');
     minimap.style.backgroundImage = 'url(images/' + minimaps[dungeonSelect] + '.png)';
+    for (var thing in minimap) {
+        minimap.removeChild(thing);   
+    }
     
     if (OWERmap == true && dungeons[dungeonSelect].type == "overworld" && dungeons[dungeonSelect].found == false) {
         dungeons[dungeonSelect].found = true ;
@@ -523,7 +526,6 @@ function clickDungeon(d) {
         if (dungeons[dungeonSelect].chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
             continue;}
         
-        
         var s = document.createElement('li');
         s.innerHTML = key;
         if (dungeons[dungeonSelect].chestlist[key].isOpened) {            
@@ -540,6 +542,19 @@ function clickDungeon(d) {
         s.style.cursor = "pointer";
 
         DClist.appendChild(s);
+        
+        c.innerHTML = key;
+        c.id = dungeons[dungeonSelect].chestlist[key].type;
+        c.className = s.className;
+        c.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
+        c.onmouseover = new Function('highlightDungeonChest(this)');
+        c.onmouseout = new Function('unhighlightDungeonChest(this)');
+        c.style.cursor = 'pointer';
+        c.style.position = 'relative';
+        c.style.top = dungeons[dungeonSelect].chestlist[key].y;
+        c.style.left = dungeons[dungeonSelect].chestlist[key].x;
+        c.style.backgroundImage = 'url(images/Unknown.png)';
+        document.getElementById('minimapdiv').appendChild(c);
         
     }
 }
@@ -1779,10 +1794,7 @@ function populateMapdiv() {
             continue;}
         
         var s = document.createElement('li');
-        var c =document.createElement('span');
         s.innerHTML = key;
-        c.innerHTML = key;
-        c.id = dungeons[dungeonSelect].chestlist[key].type;
 
         if (dungeons[dungeonSelect].chestlist[key].isOpened) {
             s.className = 'DCopened';
@@ -1800,16 +1812,6 @@ function populateMapdiv() {
         s.style.cursor = 'pointer';
         document.getElementById('submaplist').appendChild(s);
         
-        c.className = s.className;
-        c.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
-        c.onmouseover = new Function('highlightDungeonChest(this)');
-        c.onmouseout = new Function('unhighlightDungeonChest(this)');
-        c.style.cursor = 'pointer';
-        c.style.position = 'relative';
-        c.style.top = dungeons[dungeonSelect].chestlist[key].y;
-        c.style.left = dungeons[dungeonSelect].chestlist[key].x;
-        c.style.backgroundImage = 'url(images/Unknown.png)';
-        document.getElementById('minimapdiv').appendChild(c);
     }
 }
 
