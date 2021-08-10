@@ -457,9 +457,6 @@ function clickDungeon(d) {
     
     var minimap = document.getElementById('minimapdiv');
     minimap.style.backgroundImage = 'url(images/' + minimaps[dungeonSelect] + '.png)';
-    for ( var chest in minimap) {
-        document.getElementById('minimapdiv').removeChild(chest);   
-    }
     
     if (OWERmap == true && dungeons[dungeonSelect].type == "overworld" && dungeons[dungeonSelect].found == false) {
         dungeons[dungeonSelect].found = true ;
