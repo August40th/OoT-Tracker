@@ -312,14 +312,33 @@ label {
 }
 
 #chest{
-    width: 16;
-    height: 16;
-    background-size: 100% 100%;
-    background-image: url("images/Unknown.png");
     background-repeat: no-repeat;
+    font-size: 48;
 
     position: absolute;
-    margin-left: -8px;
-    margin-top: -8px;
+    cursor: pointer;
+}
+
+#ksword{
+    background-repeat: no-repeat;
+    font-size: 48;
+
+    position: absolute;
+    cursor: pointer;
+}
+
+#NPC{
+    background-repeat: no-repeat;
+    font-size: 48;
+
+    position: absolute;
+    cursor: pointer;
+}
+
+#freestanding{
+    background-repeat: no-repeat;
+    font-size: 48;
+
+    position: absolute;
     cursor: pointer;
 }
