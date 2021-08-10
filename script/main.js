@@ -540,6 +540,7 @@ function clickDungeon(d) {
 
         DClist.appendChild(s);
         
+        c = document.createElement('span');
         c.innerHTML = key;
         c.id = dungeons[dungeonSelect].chestlist[key].type;
         c.className = s.className;
