@@ -558,7 +558,7 @@ function clickDungeon(d) {
         var cc = document.createElement('span');
         cc.className = 'tooltipgray';
         cc.innerHTML = key;
-        c.appendChild(ss);
+        c.appendChild(cc);
     }
 }
 
