@@ -306,3 +306,17 @@ label {
     position: absolute;
     cursor: pointer;
 }
+
+.minimapdiv .DCopened {
+    background-color: gray;
+}
+
+.minimapdiv .DCunavailable {
+    background-repeat: no-repeat;
+    background-color: rgb(255,0,0);   
+}
+
+.minimapdiv .DCavailable {
+    background-repeat: no-repeat;
+    background-color: rgb(0,255,0);   
+}
