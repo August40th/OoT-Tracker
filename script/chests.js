@@ -91,8 +91,8 @@ var dungeons = [
                return dungeons[0].found == true ; }
        },
          'Fairy Ocarina': {
-            x: "4.0%",
-            y: "39.0%",
+            x: "3.6%",
+            y: "40.0%",
             type: "ocarina",
             access: "no OWER",
             isAvailable: function () {
@@ -107,7 +107,7 @@ var dungeons = [
                return dungeons[0].found == true ; }
          },
          'Mido\'s House 1': {
-            x: "14.0%",
+            x: "15.0%",
             y: "38.0%",
             type: "chest",
             access: "simple",
@@ -123,7 +123,7 @@ var dungeons = [
                return dungeons[0].found == true ; }
          },
          'Mido\'s House 3': {
-            x: "17.0%",
+            x: "16.0%",
             y: "38.0%",
             type: "chest",
             access: "simple",
@@ -131,7 +131,7 @@ var dungeons = [
                return dungeons[0].found == true ; }
          },
          'Mido\'s House 4': {
-            x: "17.5%",
+            x: "16.5%",
             y: "32.0%",
             type: "chest",
             access: "simple",
@@ -147,8 +147,8 @@ var dungeons = [
                return dungeons[0].found == true ; }
          },
          'Child Know it All Bros Skulltula': {
-            x: "7.0%",
-            y: "41.8%",
+            x: "5.0%",
+            y: "58.8%",
             type: "skulltula",
             access: "outdoor",
             isAvailable: function () { //Child only outdoor
@@ -157,8 +157,8 @@ var dungeons = [
                   ); }
          },
          'Kokiri Sword Chest': {
-            x: "13.7%",
-            y: "82.0%",
+            x: "12.8%",
+            y: "84.0%",
             type: "ksword",
             access: "outdoor",
             isAvailable: function () {
@@ -174,7 +174,7 @@ var dungeons = [
                return dungeons[0].found == true ; }
          },
          'Link\'s House Cow': {
-            x: "16.0%",
+            x: "14.5%",
             y: "69.6%",
             type: "cow",
             access: "alldoor",
@@ -210,7 +210,7 @@ var dungeons = [
                && items.Hookshot; }
          },
          'Soil Patch Skulltula': {
-            x: "12.0%",
+            x: "20.0%",
             y: "38.0%",
             type: "skulltula",
             access: "outdoor",
@@ -252,8 +252,8 @@ var dungeons = [
                && items.Ocarina && items.SongofStorms; }
          },
          'Storms Grotto Chest': {
-            x: "6.8%",
-            y: "28.0%",
+            x: "5.7%",
+            y: "26.4%",
             type: "chest",
             access: "grotto",
             isAvailable: function () {
