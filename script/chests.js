@@ -549,6 +549,8 @@ var dungeons = [
       found: true,
       chestlist: {
          'Lobby Gossip': {
+            x: "5.0%",
+            y: "5.0%",
             type: "gossip",
             access: "vanilla",
             isAvailable: function () {
@@ -559,6 +561,8 @@ var dungeons = [
             }
          },
          'Baby Dodongos Skulltula': {
+           x: "10.0%",
+            y: "5.0%",
             type: "skulltula",
             access: "vanilla",
             isAvailable: function () {
@@ -571,6 +575,8 @@ var dungeons = [
             }
          },
          'Scarecrow Skulltula': {
+           x: "15.0%",
+            y: "5.0%",
             type: "skulltula",
             access: "vanilla",
             isAvailable: function () {
@@ -580,6 +586,8 @@ var dungeons = [
             }
          },
          '1F Right Scrub Room': {
+           x: "20.0%",
+            y: "5.0%",
             type: "scrub",
             access: "vanilla",
             isAvailable: function () {
@@ -590,6 +598,8 @@ var dungeons = [
             }
          },
          'Lobby Chest': {
+           x: "25.0%",
+            y: "5.0%",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
@@ -600,6 +610,8 @@ var dungeons = [
             }
          },
          'Lobby Scrub': {
+           x: "30.0%",
+            y: "5.0%",
             type: "scrub",
             access: "vanilla",
             isAvailable: function () {
@@ -610,6 +622,8 @@ var dungeons = [
             }
          },
          'Armos Chest': {
+           x: "35.0%",
+            y: "5.0%",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
@@ -620,6 +634,8 @@ var dungeons = [
             }
          },
          'Top of the Stairs Skulltula': {
+           x: "40.0%",
+            y: "5.0%",
             type: "skulltula",
             access: "vanilla",
             isAvailable: function () {
@@ -633,6 +649,8 @@ var dungeons = [
             }
          },
          'Behind Stairs Skulltula': {
+           x: "45.0%",
+            y: "5.0%",
             type: "skulltula",
             access: "vanilla",
             isAvailable: function () {
@@ -646,6 +664,8 @@ var dungeons = [
             }
          },
          '2F Bomb Flower Platform': {
+           x: "50.0%",
+            y: "5.0%",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
@@ -659,6 +679,8 @@ var dungeons = [
             }
          },
          '2F before Elevator Switch': {
+           x: "55.0%",
+            y: "5.0%",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
@@ -672,6 +694,8 @@ var dungeons = [
             }
          },
          '2F Scrubs 1': {
+           x: "60.0%",
+            y: "5.0%",
             type: "scrub",
             access: "vanilla",
             isAvailable: function () {
@@ -685,6 +709,8 @@ var dungeons = [
             }
          },
          '2F Scrubs 2': {
+           x: "65.0%",
+            y: "5.0%",
             type: "scrub",
             access: "vanilla",
             isAvailable: function () {
@@ -698,6 +724,8 @@ var dungeons = [
             }
          },
          'End of Bridge Chest': {
+           x: "70.0%",
+            y: "5.0%",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
@@ -711,6 +739,8 @@ var dungeons = [
             }
          },
          'Behind Pushblocks Skulltula': {
+           x: "75.0%",
+            y: "5.0%",
             type: "skulltula",
             access: "vanilla",
             isAvailable: function () {
@@ -723,6 +753,8 @@ var dungeons = [
             }
          },
          'Chest Above King Dodongo': {
+           x: "80.0%",
+            y: "5.0%",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
@@ -735,6 +767,8 @@ var dungeons = [
             }
          },
          'King Dodongo': {
+           x: "85.0%",
+            y: "5.0%",
             type: "boss",
             access: "vanilla",
             isAvailable: function () {
@@ -747,6 +781,8 @@ var dungeons = [
             }
          },
          'Lobby Scrub 1': {
+           x: "5.0%",
+            y: "25.0%",
             type: "scrub",
             access: "master",
             isAvailable: function () {
@@ -759,6 +795,8 @@ var dungeons = [
             }
          },
          'Lobby Scrub 2': {
+           x: "5.0%",
+            y: "45.0%",
             type: "scrub",
             access: "master",
             isAvailable: function () {
@@ -771,6 +809,8 @@ var dungeons = [
             }
          },
          'Lobby Mud Wall Chest': {
+           x: "15.0%",
+            y: "25.0%",
             type: "chest",
             access: "master",
             isAvailable: function () {
@@ -783,6 +823,8 @@ var dungeons = [
             }
          },
          'MQ Lobby Chest': {
+           x: "15.0%",
+            y: "45.0%",
             type: "chest",
             access: "master",
             isAvailable: function () {
@@ -795,6 +837,8 @@ var dungeons = [
             }
          },
          'Song of Time Skulltula': {
+           x: "25.0%",
+            y: "25.0%",
             type: "skulltula",
             access: "master",
             isAvailable: function () {
@@ -807,6 +851,8 @@ var dungeons = [
             }
          },
          'Stair Master Scrub': {
+           x: "25.0%",
+            y: "45.0%",
             type: "scrub",
             access: "master",
             isAvailable: function () {
@@ -819,6 +865,8 @@ var dungeons = [
             }
          },
          'Teen Dodongo Chest': {
+           x: "35.0%",
+            y: "25.0%",
             type: "chest",
             access: "master",
             isAvailable: function () {
@@ -831,6 +879,8 @@ var dungeons = [
             }
          },
          'Baby Gohma Chest': {
+           x: "35.0%",
+            y: "45.0%",
             type: "chest",
             access: "master",
             isAvailable: function () {
@@ -843,6 +893,8 @@ var dungeons = [
             }
          },
          'Crate Skulltula': {
+           x: "45.0%",
+            y: "25.0%",
             type: "skulltula",
             access: "master",
             isAvailable: function () {
@@ -855,6 +907,8 @@ var dungeons = [
             }
          },
          '2F Lizalfos Skulltula': {
+           x: "45.0%",
+            y: "45.0%",
             type: "skulltula",
             access: "master",
             isAvailable: function () {
@@ -867,6 +921,8 @@ var dungeons = [
             }
          },
          '2F Platform Chest': {
+           x: "55.0%",
+            y: "25.0%",
             type: "chest",
             access: "master",
             isAvailable: function () {
@@ -879,6 +935,8 @@ var dungeons = [
             }
          },
          '1F Side Route Scrub': {
+           x: "55.0%",
+            y: "45.0%",
             type: "scrub",
             access: "master",
             isAvailable: function () {
@@ -891,6 +949,8 @@ var dungeons = [
             }
          },
          '1F Scrub Keese Room Skulltula': {
+           x: "65.0%",
+            y: "25.0%",
             type: "skulltula",
             access: "master",
             isAvailable: function () {
@@ -904,12 +964,16 @@ var dungeons = [
             }
          },
          'Poe fight Chest': {
+           x: "65.0%",
+            y: "45.0%",
             type: "chest",
             access: "master",
             isAvailable: function () {
                return dungeons[2].found == true && (items.Bombs || (items.Bombchu && BombchuLogic) ); }
          },
          'Back Room Skulltula': {
+           x: "75.0%",
+            y: "25.0%",
             type: "skulltula",
             access: "master",
             isAvailable: function () {
@@ -921,12 +985,16 @@ var dungeons = [
                  ); }
          },
          'Chest Above Boss Room': {
+           x: "75.0%",
+            y: "45.0%",
             type: "chest",
             access: "master",
             isAvailable: function () {
                return dungeons[2].found == true && (items.Bombs || (items.Bombchu && BombchuLogic) ); }
          },
          'MQ King Dodongo': {
+           x: "85.0%",
+            y: "85.0%",
             type: "boss",
             access: "master",
             isAvailable: function () {
@@ -948,6 +1016,8 @@ var dungeons = [
       found: true,
       chestlist: {
          'Water Switch Skulltula': {
+           x: "5.0%",
+            y: "5.0%",
             type: "skulltula",
             access: "vanilla",
             isAvailable: function () {
@@ -959,6 +1029,8 @@ var dungeons = [
             }
          },
          'Basement Dive to Scrub': {
+           x: "5.0%",
+            y: "5.0%",
             type: "scrub",
             access: "vanilla",
             isAvailable: function () {
@@ -970,6 +1042,8 @@ var dungeons = [
             }
          },
          'StingRay Chest': {
+           x: "15.0%",
+            y: "5.0%",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
@@ -981,6 +1055,8 @@ var dungeons = [
             }
          },
          'Tentacle Chest': {
+           x: "25.0%",
+            y: "5.0%",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
@@ -992,6 +1068,8 @@ var dungeons = [
             }
          },
          'Bubble Pop Chest': {
+           x: "35.0%",
+            y: "5.0%",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
@@ -1003,6 +1081,8 @@ var dungeons = [
             }
          },
          'Before Big Octo Skull 1': {
+           x: "45.0%",
+            y: "5.0%",
             type: "skulltula",
             access: "vanilla",
             isAvailable: function () {
@@ -1017,6 +1097,8 @@ var dungeons = [
             }
          },
          'Before Big Octo Skull 2': {
+           x: "55.0%",
+            y: "5.0%",
             type: "skulltula",
             access: "vanilla",
             isAvailable: function () {
@@ -1031,6 +1113,8 @@ var dungeons = [
             }
          },
          'Before Brainade Skulltula': {
+           x: "65.0%",
+            y: "5.0%",
             type: "skulltula",
             access: "vanilla",
             isAvailable: function () {
@@ -1042,6 +1126,8 @@ var dungeons = [
             }
          },
          'Barinade': {
+           x: "75.0%",
+            y: "5.0%",
             type: "boss",
             access: "vanilla",
             isAvailable: function () {
@@ -1053,6 +1139,8 @@ var dungeons = [
             }
          },
          'Lobby Switch Chest': {
+           x: "15.0%",
+            y: "15.0%",
             type: "chest",
             access: "master",
             isAvailable: function () {
@@ -1068,6 +1156,8 @@ var dungeons = [
             }
          },
          'Lobby Cow Chest': {
+           x: "25.0%",
+            y: "15.0%",
             type: "chest",
             access: "master",
             isAvailable: function () {
@@ -1079,6 +1169,8 @@ var dungeons = [
             }
          },
          'Underwater Cow Chest': {
+           x: "35.0%",
+            y: "15.0%",
             type: "chest",
             access: "master",
             isAvailable: function () {
@@ -1090,6 +1182,8 @@ var dungeons = [
             }
          },
          'Elevator Room Lower Chest': {
+           x: "45.0%",
+            y: "15.0%",
             type: "chest",
             access: "master",
             isAvailable: function () {
@@ -1101,6 +1195,8 @@ var dungeons = [
             }
          },
          'Basement Cow Chest 1': {
+           x: "55.0%",
+            y: "15.0%",
             type: "chest",
             access: "master",
             isAvailable: function () {
@@ -1112,6 +1208,8 @@ var dungeons = [
             }
          },
          'Basement Cow Chest 2': {
+           x: "65.0%",
+            y: "15.0%",
             type: "chest",
             access: "master",
             isAvailable: function () {
@@ -1123,6 +1221,8 @@ var dungeons = [
             }
          },
          'Basement Open Chest': {
+           x: "75.0%",
+            y: "15.0%",
             type: "chest",
             access: "master",
             isAvailable: function () {
@@ -1134,6 +1234,8 @@ var dungeons = [
             }
          },
          'Basement Battle Chest': {
+           x: "85.0%",
+            y: "15.0%",
             type: "chest",
             access: "master",
             isAvailable: function () {
@@ -1145,6 +1247,8 @@ var dungeons = [
             }
          },
          'Song of Time Skulltula': {
+           x: "35.0%",
+            y: "25.0%",
             type: "skulltula",
             access: "master",
             isAvailable: function () {
@@ -1156,6 +1260,8 @@ var dungeons = [
             }
          },
          'Bubble Battle Skulltula': {
+           x: "45.0%",
+            y: "25.0%",
             type: "skulltula",
             access: "master",
             isAvailable: function () {
@@ -1168,6 +1274,8 @@ var dungeons = [
             }
          },
          'Invisible Enemies Skulltula': {
+           x: "25.0%",
+            y: "35.0%",
             type: "skulltula",
             access: "master",
             isAvailable: function () {
@@ -1181,6 +1289,8 @@ var dungeons = [
             }
          },
          'Falling Like Like Chest': {
+           x: "35.0%",
+            y: "35.0%",
             type: "chest",
             access: "master",
             isAvailable: function () {
@@ -1192,6 +1302,8 @@ var dungeons = [
             }
          },
          'Elevator Room Upper Chest': {
+           x: "45.0%",
+            y: "35.0%",
             type: "chest",
             access: "master",
             isAvailable: function () {
@@ -1203,6 +1315,8 @@ var dungeons = [
             }
          },
          'Top Floor Standing Cow': {
+           x: "55.0%",
+            y: "35.0%",
             type: "cow",
             access: "master",
             isAvailable: function () {
@@ -1215,6 +1329,8 @@ var dungeons = [
             }
          },
          'Chest Near Boss Door': {
+           x: "65.0%",
+            y: "35.0%",
             type: "chest",
             access: "master",
             isAvailable: function () {
@@ -1226,6 +1342,8 @@ var dungeons = [
             }
          },
          'Skulltula Near Boos Door': {
+           x: "75.0%",
+            y: "35.0%",
             type: "skulltula",
             access: "master",
             isAvailable: function () {
@@ -1237,6 +1355,8 @@ var dungeons = [
             }
          },
          'MQ Barinade': {
+           x: "85.0%",
+            y: "35.0%",
             type: "boss",
             access: "master",
             isAvailable: function () {
@@ -4127,14 +4247,16 @@ var dungeons = [
       found: true,
       chestlist: {
          'Castle to Market': {
-            x: "52.5%",
-            y: "16.0%",
+            x: "16.0%",
+            y: "95.0%",
             type: "entrance",
             access: "entrance",
              isAvailable: function () {
                   return true; }
          },
          'Tree to Castle Skulltula': {
+           x: "14.0%",
+            y: "68.0%",
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
@@ -4144,6 +4266,8 @@ var dungeons = [
             }
          },
          'Malon\s Weird Egg': {
+           x: "22.0%",
+            y: "65.0%",
             type: "egg", 
             access: "outdoor",
             isAvailable: function () {
@@ -4154,6 +4278,8 @@ var dungeons = [
          },
          'Above Malon': {
             type: "gossip",
+           x: "25.0%",
+            y: "65.0%",
             access: "outdoor",
             isAvailable: function () {
                return dungeons[15].found == true && 
@@ -4162,6 +4288,8 @@ var dungeons = [
             }
          },
          'Din\'s Fairy Fountain': {
+           x: "75.0%",
+            y: "64.0%",
             type: "simple", 
             access: "door",
                isAvailable: function () {
@@ -4171,6 +4299,8 @@ var dungeons = [
                }
          },
          'Dins Great Fairy': {
+           x: "86.0%",
+            y: "64.0%",
             type: "NPC", 
             access: "simple",
             isAvailable: function () {
@@ -4180,6 +4310,8 @@ var dungeons = [
             }
          },
          'Castle Moat Stone': {
+           x: "8.0%",
+            y: "32.0%",
             type: "gossip",
             access: "outdoor",
             isAvailable: function () {
@@ -4189,6 +4321,8 @@ var dungeons = [
             }
          },
          'Castle Moat Storms Grotto': {
+           x: "55.0%",
+            y: "24.0%",
             type: "grotto", 
             access: "grotto",
                isAvailable: function () {
@@ -4198,6 +4332,8 @@ var dungeons = [
                }
          },
          'Moat Storms Grotto Skull': {
+           x: "55.0%",
+            y: "24.0%",
             type: "skulltula", 
             access: "grotto",
             isAvailable: function () {
@@ -4207,6 +4343,8 @@ var dungeons = [
             }
          },
          'Storms Grotto Gossip': {
+           x: "55.0%",
+            y: "24.0%",
             type: "gossip",
             access: "grotto",
             isAvailable: function () {
@@ -4216,6 +4354,8 @@ var dungeons = [
             }
          },
          'Song from Impa': {
+           x: "69.0%",
+            y: "16.0%",
             type: "song", 
             access: "outdoor",
             isAvailable: function () {
@@ -4224,7 +4364,19 @@ var dungeons = [
                   ) && items.Mask >= 1;
             }
          },
+        'Outside Ganons Skulltula' : {
+           x: "55.0%",
+            y: "50.0%",
+            type: "skulltula", 
+            access: "outdoor",
+               isAvailable: function () {
+                  return dungeons[15].found == true &&
+                     (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
+               }
+         },
          'Gold Gauntlets Doorway': {
+           x: "75.0%",
+            y: "72.0%",
             type: "simple", 
             access: "door",
                isAvailable: function () {
@@ -4234,6 +4386,8 @@ var dungeons = [
                }
          },
          'Gold Gauntlets Fairy' : {
+           x: "75.0%",
+            y: "72.0%",
             x: "55.5%",
             y: "13.5%",
             type: "NPC", 
