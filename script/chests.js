@@ -83,15 +83,15 @@ var dungeons = [
       found: true,
       chestlist: {
          'Forest to Field': {
-          x: "0.0%",
-          y: "58.0%",
+          x: "3.5%",
+          y: "40.0%",
           type: "entrance",
           access: "entrance",
           isAvailable: function () {
                return dungeons[0].found == true ; }
        },
          'Fairy Ocarina': {
-            x: "3.6%",
+            x: "0.6%",
             y: "40.0%",
             type: "ocarina",
             access: "no OWER",
@@ -235,8 +235,8 @@ var dungeons = [
                return dungeons[0].found == true ; }
          },
          'Infront Storms Grotto': {
-            x: "75.0%",
-            y: "58.0%",
+            x: "7.0%",
+            y: "26.0%",
             type: "gossip",
             access: "outdoor",
             isAvailable: function () {
@@ -262,7 +262,7 @@ var dungeons = [
          },
          'Storms Grotto Gossip': {
             x: "7.0%",
-            y: "34.0%",
+            y: "26.0%",
             type: "gossip",
             access: "outdoor",
             isAvailable: function () {
@@ -270,16 +270,16 @@ var dungeons = [
                   items.Ocarina && items.SongofStorms; }
          },
          'Forest to Woods': {
-          x: "28.9%",
-          y: "12.0%",
+          x: "16.0%",
+          y: "8.0%",
           type: "entrance",
           access: "entrance",
           isAvailable: function () {
                return dungeons[0].found == true ; }
        },
          'Left of Deku Tree Gossip': {
-            x: "75.0%",
-            y: "58.0%",
+            x: "69.0%",
+            y: "8.0%",
             type: "gossip",
             access: "outdoor",
             isAvailable: function () {
@@ -287,8 +287,8 @@ var dungeons = [
                   (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) ) ; }
          },
          'Behind Deku Tree Gossip': {
-            x: "75.0%",
-            y: "58.0%",
+            x: "70.0%",
+            y: "32.0%",
             type: "gossip",
             access: "outdoor",
             isAvailable: function () {
@@ -296,8 +296,8 @@ var dungeons = [
                   (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) ) ; }
          },
          'Inside the Deku Tree': {
-            x: "75.0%",
-            y: "58.0%",
+            x: "67.0%",
+            y: "27.0%",
             type: "dungeon",
             access: "door",
             isAvailable: function () {
