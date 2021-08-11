@@ -299,11 +299,13 @@ label {
     top: -420px;
 }
 
-#chest, #NPC, #freestanding, #ksword, #skulltula, #scrub, #ocarina, #egg, #song, #cow, #bean, #simple, #grotto, #dungeon, #entrance, #alldoor, #boss{
+#chest, #NPC, #freestanding, #ksword, #skulltula, #scrub, 
+#ocarina, #egg, #song, #cow, #bean, #gossip, #knife, #carpet
+#alldoor, #simple, #grotto, #entrance, #dungeon, #boss{
     background-repeat: no-repeat;
     font-size: 12;
 
-    position: absolute;
+    position: fixed;
     cursor: pointer;
 }
 
