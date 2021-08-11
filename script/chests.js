@@ -321,12 +321,16 @@ var dungeons = [
       found: true,
       chestlist: {
          'Lobby Chest': {
+            x: "5.0%",
+            y: "5.0%",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
                return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
          },
          '2nd Floor Chest': {
+            x: "5.0%",
+            y: "10.0%",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
@@ -337,6 +341,8 @@ var dungeons = [
             }
          },
          '2nd Floor Side Chest': {
+            x: "5.0%",
+            y: "15.0%",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
@@ -347,48 +353,64 @@ var dungeons = [
             }
          },
          'Top Floor Chest': {
+            x: "5.0%",
+            y: "20.0%",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
                return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
          },
          'Top Floor Side Chest': {
+            x: "5.0%",
+            y: "25.0%",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
                return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
          },
          'Top Floor Skulltula': {
+            x: "5.0%",
+            y: "30.0%",
             type: "skulltula",
             access: "vanilla",
             isAvailable: function () {
                return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
          },
          'Basement Chest': {
+            x: "5.0%",
+            y: "35.0%",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
                return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
          },
          'Basement 1st Skulltula': {
+            x: "5.0%",
+            y: "40.0%",
             type: "skulltula",
             access: "vanilla",
             isAvailable: function () {
                return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
          },
          'Basement 2nd Skulltula': {
+            x: "5.0%",
+            y: "45.0%",
             type: "skulltula",
             access: "vanilla",
             isAvailable: function () {
                return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
          },
          'Queen Gohma': {
+            x: "5.0%",
+            y: "50.0%",
             type: "boss",
             access: "vanilla",
             isAvailable: function () {
                return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
          },
          'Basement Bomb Wall Skulltula': {
+            x: "5.0%",
+            y: "55.0%",
             type: "skulltula",
             access: "vanilla",
             isAvailable: function () {
@@ -397,30 +419,40 @@ var dungeons = [
                   items.Boomerang && (items.Bombs || (items.Bombchu && BombchuLogic)) ;}
          },
          'Lobby Skull in Crate': {
+            x: "25.0%",
+            y: "15.0%",
             type: "skulltula",
             access: "master",
             isAvailable: function () {
                return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
          },
          'MQ Lobby Chest': {
+            x: "25.0%",
+            y: "25.0%",
             type: "chest",
             access: "master",
             isAvailable: function () {
                return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
          },
          'Top Floor Torch Chest': {
+            x: "25.0%",
+            y: "35.0%",
             type: "chest",
             access: "master",
             isAvailable: function () {
                return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
          },
          'Top Floor Larva Kill': {
+            x: "25.0%",
+            y: "45.0%",
             type: "chest",
             access: "master",
             isAvailable: function () {
                return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
          },
          'MQ 2nd Floor Chest': {
+            x: "25.0%",
+            y: "55.0%",
             type: "chest",
             access: "master",
             isAvailable: function () {
@@ -431,6 +463,8 @@ var dungeons = [
             }
          },
          '2nd Floor Skulltule': {
+            x: "25.0%",
+            y: "65.0%",
             type: "skulltula",
             access: "master",
             isAvailable: function () {
@@ -441,18 +475,24 @@ var dungeons = [
             }
          },
          'Basement Chest 1': {
+            x: "25.0%",
+            y: "75.0%",
             type: "chest",
             access: "master",
             isAvailable: function () {
                return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
          },
          'Spiked Log Open Chest': {
+            x: "25.0%",
+            y: "85.0%",
             type: "chest",
             access: "master",
             isAvailable: function () {
                return dungeons[1].found == true && items.Slingshot && (OpenDeku == 1 || (items.KokiriSword&& items.DekuShield)); }
          },
          'Song of Time Chest': {
+            x: "25.0%",
+            y: "85.0%",
             access: "master",
             type: "chest",
             isAvailable: function () {
@@ -460,6 +500,8 @@ var dungeons = [
             }
          },
          'Basement Ceiling Skulltule': {
+            x: "45.0%",
+            y: "25.0%",
             type: "skulltula",
             access: "master",
             isAvailable:function () {
@@ -467,18 +509,24 @@ var dungeons = [
             }
          },
          'Back Room Skulltula': {
+            x: "45.0%",
+            y: "45.0%",
             type: "skulltula",
             access: "master",
             isAvailable: function () {
                return dungeons[1].found == true && items.Bombs && (OpenDeku == 1 || (items.KokiriSword&& items.DekuShield)); }
          },
          'Basement Scrub': {
+            x: "45.0%",
+            y: "55.0%",
             type: "scrub",
             access: "master",
             isAvailable: function () {
                return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
          },
          'MQ Queen Gohma': {
+            x: "45.0%",
+            y: "66.0%",
             type: "boss",
             access: "master",
             isAvailable: function () {
@@ -5010,7 +5058,7 @@ var dungeons = [
              isAvailable: function () {
                   return true; }
          },
-         'Wolfos Grotto': {
+         'Meadow Bomb Grotto': {
             x: "8.0%",
             y: "43.0%",
             type: "grotto", 
@@ -5161,14 +5209,16 @@ var dungeons = [
       found: true,
       chestlist: {
          'River to Field': {
-            x: "70.0%",
-            y: "35.0%",
+            x: "4.0%",
+            y: "90.0%",
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
                   return true; }
          },
          'Tree by Entrance Skulltula': {
+            x: "4.0%",
+            y: "58.0%",
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
@@ -5178,6 +5228,8 @@ var dungeons = [
             }
          },
          'Song of Storms Grotto': {
+            x: "4.0%",
+            y: "40.0%",
             type: "grotto", 
             access: "grotto",
             isAvailable: function () {
@@ -5191,6 +5243,8 @@ var dungeons = [
             }
          },
          'Storms Grotto Scrubs x3': {
+            x: "4.0%",
+            y: "40.0%",
             type: "scrub", 
             access: "grotto",
             isAvailable: function () {
@@ -5204,6 +5258,8 @@ var dungeons = [
             }
          },
          'Bean Salesman': {
+            x: "18.0%",
+            y: "40.0%",
             type: "bean", 
             access: "outdoor",
             isAvailable: function () {
@@ -5213,6 +5269,8 @@ var dungeons = [
             }
          },
          'Frogs in the Rain': {
+            x: "32.0%",
+            y: "12.0%",
             type: "NPC", 
             access: "outdoor",
             isAvailable: function () {
@@ -5223,6 +5281,8 @@ var dungeons = [
             }
          },
          'Frogs Mini Game': {
+            x: "36.0%",
+            y: "12.0%",
             type: "NPC", 
             access: "outdoor",
             isAvailable: function () {
@@ -5233,6 +5293,8 @@ var dungeons = [
             }
          },
          'Adult Skulltula by Grotto': {
+            x: "17.0%",
+            y: "47.0%",
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
@@ -5241,6 +5303,8 @@ var dungeons = [
             }
          },
          'Open Grotto': {
+            x: "19.0%",
+            y: "47.0%",
             type: "grotto", 
             access: "grotto",
             isAvailable: function () {
@@ -5253,6 +5317,8 @@ var dungeons = [
             }
          },
          'River Open Grotto': {
+            x: "19.0%",
+            y: "48.0%",
             type: "chest", 
             access: "grotto",
             isAvailable: function () {
@@ -5265,6 +5331,8 @@ var dungeons = [
             }
          },
          'Grotto Gossip': {
+            x: "20.0%",
+            y: "47.0%",
             type: "gossip", 
             access: "grotto",
             isAvailable: function () {
@@ -5277,6 +5345,8 @@ var dungeons = [
             }
          },
          'Boulder Grotto': {
+            x: "44.0%",
+            y: "40.0%",
             type: "grotto", 
             access: "grotto",
             isAvailable: function () {
@@ -5291,6 +5361,8 @@ var dungeons = [
             }
          },
          'Above Frogs Gossip': {
+            x: "44.0%",
+            y: "14.0%",
             type: "gossip", 
             access: "outdoor",
             isAvailable: function () {
@@ -5303,6 +5375,8 @@ var dungeons = [
             }
          },
          'Freestanding Lower Ledge': {
+            x: "40.0%",
+            y: "14.0%",
             type: "freestanding", 
             access: "outdoor",
             isAvailable: function () {
@@ -5315,6 +5389,8 @@ var dungeons = [
             }
          },
          'Adult above Bridge Skulltula': {
+            x: "68.0%",
+            y: "8.0%",
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
@@ -5323,6 +5399,8 @@ var dungeons = [
             }
          },
          'Child Ladder Skulltula': {
+            x: "80.0%",
+            y: "2.0%",
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
@@ -5332,6 +5410,8 @@ var dungeons = [
             }
          },
          'Freestanding Upper Ledge': {
+            x: "77.0%",
+            y: "2.0%",
             type: "freestanding", 
             access: "outdoor",
             isAvailable: function () {
@@ -5344,14 +5424,16 @@ var dungeons = [
             }
          },
          'River to Woods': {
-            x: "87.8%",
-            y: "33.3%",
+            x: "84.8%",
+            y: "25.3%",
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
                   return true; }
          },
          'Waterfall Gossip': {
+            x: "82.0%",
+            y: "2.0%",
             type: "gossip", 
             access: "outdoor",
             isAvailable: function () {
@@ -5365,7 +5447,7 @@ var dungeons = [
          },
          'River to Domain': {
             x: "87.0%",
-            y: "28.0%",
+            y: "5.0%",
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
