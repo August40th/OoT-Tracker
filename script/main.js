@@ -488,7 +488,7 @@ function clickDungeon(d) {
             continue;}
         if ( dungeons[dungeonSelect] == dungeons[12] && dungeons[dungeonSelect].chestlist[key].type == "trial" && trialsize == 0 ) { //Castle trials
             continue;}
-        if ( dungeons[dungeonSelect].chestlist[key].type == "entrance" || dungeons[dungeonSelect].chestlist[key].type == "owl"  && OWERmap == false) { //Do Nothing
+        if ( ( dungeons[dungeonSelect].chestlist[key].type == "entrance" || dungeons[dungeonSelect].chestlist[key].type == "owl" ) && OWERmap == false) { //Do Nothing
             continue;}
         if ( dungeons[dungeonSelect].chestlist[key].type == "warp" ) { //Do Nothing
             continue;}
