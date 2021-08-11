@@ -301,7 +301,7 @@ label {
 
 #chest, #NPC, #freestanding, #ksword, #skulltula, #scrub, #ocarina, #egg, #song, #cow, #bean, #simple, #grotto, #dungeon, #entrance, #alldoor, #boss{
     background-repeat: no-repeat;
-    font-size: 24;
+    font-size: 12;
 
     position: absolute;
     cursor: pointer;
@@ -319,4 +319,8 @@ label {
 .minimapdiv .DCavailable {
     background-repeat: no-repeat;
     background-color: rgb(0,255,0);   
+}
+
+#gossip {
+    background-color: rgb(0,0,255);   
 }
