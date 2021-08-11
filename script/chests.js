@@ -2045,7 +2045,8 @@ var dungeons = [
       found: true,
       chestlist: {
          'Chest Near Boss': {
-            
+             x: "5.0%",
+            y: "5.0%",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
@@ -2053,6 +2054,8 @@ var dungeons = [
             }
          },
          'Before 1st Fire Dancer Skulltula': {
+            x: "10.0%",
+            y: "5.0%",
             type: "skulltula",
             access: "vanilla",
             isAvailable: function () {
@@ -2060,6 +2063,8 @@ var dungeons = [
             }
          },
          'Flare Dancer Chest': {
+            x: "15.0%",
+            y: "5.0%",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
@@ -2067,6 +2072,8 @@ var dungeons = [
             }
          },
          'Under Lobby Chest': {
+            x: "20.0%",
+            y: "5.0%",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
@@ -2074,6 +2081,8 @@ var dungeons = [
             }
          },
          'Song of Time Lava Room Skulltula': {
+            x: "25.0%",
+            y: "5.0%",
             type: "skulltula",
             access: "vanilla",
             isAvailable: function () {
@@ -2081,6 +2090,8 @@ var dungeons = [
             }
          },
          'Lava Room Open Chest': {
+            x: "30.0%",
+            y: "5.0%",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
@@ -2088,6 +2099,8 @@ var dungeons = [
             }
          },
          'Lava Room Bombable Wall': {
+            x: "35.0%",
+            y: "5.0%",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
@@ -2095,6 +2108,8 @@ var dungeons = [
             }
          },
          'Maze Lower Chest': {
+            x: "40.0%",
+            y: "5.0%",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
@@ -2102,6 +2117,8 @@ var dungeons = [
             }
          },
          'Maze Bombable Wall Skulltula': {
+            x: "45.0%",
+            y: "5.0%",
             type: "skulltula",
             access: "vanilla",
             isAvailable: function () {
@@ -2109,6 +2126,8 @@ var dungeons = [
             }
          },
          'Maze Side Room': {
+            x: "50.0%",
+            y: "5.0%",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
@@ -2116,6 +2135,8 @@ var dungeons = [
             }
          },
          'Eye Switch Chest': {
+            x: "55.0%",
+            y: "5.0%",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
@@ -2123,6 +2144,8 @@ var dungeons = [
             }
          },
          'Maze Upper Chest': {
+            x: "60.0%",
+            y: "5.0%",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
@@ -2130,6 +2153,8 @@ var dungeons = [
             }
          },
          'Maze Bombable Pit': {
+            x: "65.0%",
+            y: "5.0%",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
@@ -2137,6 +2162,8 @@ var dungeons = [
             }
          },
          '1st Scarecrow Skulltula': {
+            x: "70.0%",
+            y: "5.0%",
             type: "skulltula",
             access: "vanilla",
             isAvailable: function () {
@@ -2144,6 +2171,8 @@ var dungeons = [
             }
          },
          '2nd Scarecrow Skulltula': {
+            x: "75.0%",
+            y: "5.0%",
             type: "skulltula",
             access: "vanilla",
             isAvailable: function () {
@@ -2151,6 +2180,8 @@ var dungeons = [
             }
          },
          'Scarecrow Chest': {
+            x: "80.0%",
+            y: "5.0%",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
@@ -2158,6 +2189,8 @@ var dungeons = [
             }
          },
          'Flame Maze Side Room': {
+            x: "85.0%",
+            y: "5.0%",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
@@ -2165,6 +2198,8 @@ var dungeons = [
             }
          },
          'Song of Time Chest': {
+            x: "90.0%",
+            y: "5.0%",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
@@ -2172,6 +2207,8 @@ var dungeons = [
             }
          },
          'Topmost Chest': {
+            x: "10.0%",
+            y: "10.0%",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
@@ -2179,6 +2216,8 @@ var dungeons = [
             }
          },
          'Volvagia': {
+            x: "20.0%",
+            y: "10.0%",
             type: "boss",
             access: "vanilla",
             isAvailable: function () {
@@ -2186,6 +2225,8 @@ var dungeons = [
             }
          },
          'Like Like Chest': {
+            x: "15.0%",
+            y: "20.0%",
             type: "chest",
             access: "master",
             isAvailable: function () { 
@@ -2198,6 +2239,8 @@ var dungeons = [
             }
          },
          'MQ Chest Near Boss Door': {
+            x: "20.0%",
+            y: "20.0%",
             type: "chest",
             access: "master",
             isAvailable: function () {
@@ -2212,6 +2255,8 @@ var dungeons = [
             }
          },
          'MQ Flare Dancer Chest': {
+            x: "25.0%",
+            y: "20.0%",
             type: "chest",
             access: "master",
             isAvailable: function () {
@@ -2223,6 +2268,8 @@ var dungeons = [
             }
          },
          'Rusted Switch Chest': {
+            x: "30.0%",
+            y: "20.0%",
             type: "chest",
             access: "master",
             isAvailable: function () {
@@ -2234,6 +2281,8 @@ var dungeons = [
             }
          },
          'Lava Green Room Chest': {
+            x: "35.0%",
+            y: "20.0%",
             type: "chest",
             access: "master",
             isAvailable: function () {
@@ -2246,6 +2295,8 @@ var dungeons = [
             }
          },
          'MQ Lava Bombable Room': {
+            x: "40.0%",
+            y: "20.0%",
             type: "chest",
             access: "master",
             isAvailable: function () {
@@ -2260,6 +2311,8 @@ var dungeons = [
             }
          },
          'Lava Side Room Skulltula': {
+            x: "45.0%",
+            y: "20.0%",
             type: "skulltula",
             access: "master",
             isAvailable: function () {
@@ -2271,6 +2324,8 @@ var dungeons = [
             }
          },
          'Song of Time Climb Skulltula': {
+            x: "50.0%",
+            y: "20.0%",
             type: "skulltula",
             access: "master",
             isAvailable: function () {
@@ -2286,6 +2341,8 @@ var dungeons = [
             }
          },
          'Bombable Shortcut Chest': {
+            x: "55.0%",
+            y: "20.0%",
             type: "chest",
             access: "master",
             isAvailable: function () {
@@ -2300,6 +2357,8 @@ var dungeons = [
             }
          },
          'Maze Upper Gate': {
+            x: "60.0%",
+            y: "20.0%",
             type: "chest",
             access: "master",
             isAvailable: function () {
@@ -2314,6 +2373,8 @@ var dungeons = [
             }
          },
          'Maze Lower Gate': {
+            x: "65.0%",
+            y: "20.0%",
             type: "chest",
             access: "master",
             isAvailable: function () {
@@ -2327,6 +2388,8 @@ var dungeons = [
             }
          },
          'MQ Maze Side Room': {
+            x: "70.0%",
+            y: "20.0%",
             type: "chest",
             access: "master",
             isAvailable: function () {
@@ -2341,6 +2404,8 @@ var dungeons = [
             }
          },
          'MQ Flame Maze Side Room': {
+            x: "75.0%",
+            y: "20.0%",
             type: "skulltula",
             access: "master",
             isAvailable: function () {
@@ -2355,6 +2420,8 @@ var dungeons = [
             }
          },
          'Bombwall Skulltula': {
+            x: "80.0%",
+            y: "20.0%",
             type: "skulltula",
             access: "master",
             isAvailable: function () {
@@ -2370,6 +2437,8 @@ var dungeons = [
             }
          },
          'Flare Dancer Freestanding': {
+            x: "85.0%",
+            y: "20.0%",
             type: "freestanding",
             access: "master",
             isAvailable: function () {
@@ -2384,6 +2453,8 @@ var dungeons = [
             }
          },
          'MQ Highest Chest': {
+            x: "20.0%",
+            y: "25.0%",
             type: "chest",
             access: "master",
             isAvailable: function () {
@@ -2399,6 +2470,8 @@ var dungeons = [
             }
          },
          'Highest Skulltula': {
+            x: "30.0%",
+            y: "25.0%",
             type: "skulltula",
             access: "master",
             isAvailable: function () {
@@ -2413,6 +2486,8 @@ var dungeons = [
             }
          },
          'MQ Volvagia': {
+            x: "40.0%",
+            y: "25.0%",
             type: "boss",
             access: "master",
             isAvailable: function () {
@@ -2446,6 +2521,8 @@ var dungeons = [
       found: true,
       chestlist: {
          'Above Silver Rupee Skulltula': {
+            x: "5.0%",
+            y: "5.0%",
             type: "skulltula",
             access: "vanilla",
             isAvailable: function () {
@@ -2453,6 +2530,8 @@ var dungeons = [
             },
          },
          ['1st Chest']: {
+            x: "10.0%",
+            y: "5.0%",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
@@ -2460,6 +2539,8 @@ var dungeons = [
             }
          },
          ['Alcove Chest']: {
+            x: "15.0%",
+            y: "5.0%",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
@@ -2467,6 +2548,8 @@ var dungeons = [
             }
          },
          ['Alcove Freestanding']: {
+            x: "20.0%",
+            y: "5.0%",
             type: "freestanding",
             access: "vanilla",
             isAvailable: function () {
@@ -2474,6 +2557,8 @@ var dungeons = [
             }
          },
          'Alcove Skulltula': {
+            x: "25.0%",
+            y: "5.0%",
             type: "skulltula",
             access: "vanilla",
             isAvailable: function () {
@@ -2481,6 +2566,8 @@ var dungeons = [
             },
          },
          'Ice Block Puzzle Skulltula': {
+            x: "30.0%",
+            y: "5.0%",
             type: "skulltula",
             access: "vanilla",
             isAvailable: function () {
@@ -2488,6 +2575,8 @@ var dungeons = [
             },
          },
          ['White Wolfos']: {
+            x: "35.0%",
+            y: "5.0%",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
@@ -2495,6 +2584,8 @@ var dungeons = [
             }
          },
          ['Song from Sheik']: {
+            x: "40.0%",
+            y: "5.0%",
             type: "song",
             access: "vanilla",
             isAvailable: function () {
@@ -2502,6 +2593,8 @@ var dungeons = [
             }
          },
          'Alcove Switch Chest': {
+            x: "10.0%",
+            y: "15.0%",
             type: "chest",
             access: "master",
             isAvailable: function () {
@@ -2509,6 +2602,8 @@ var dungeons = [
             }
          },
          'Red Ice Skulltula': {
+            x: "20.0%",
+            y: "15.0%",
             type: "skulltula",
             access: "master",
             isAvailable: function () {
@@ -2516,6 +2611,8 @@ var dungeons = [
             }
          },
          'Pilar Chest': {
+            x: "30.0%",
+            y: "15.0%",
             type: "chest",
             access: "master",
             isAvailable: function () {
@@ -2523,6 +2620,8 @@ var dungeons = [
             }
          },
          'Frozen Freestanding': {
+            x: "40.0%",
+            y: "15.0%",
             type: "freestanding",
             access: "master",
             isAvailable: function () {
@@ -2530,6 +2629,8 @@ var dungeons = [
             }
          },
          'Scarecrow Skulltula': {
+            x: "50.0%",
+            y: "15.0%",
             type: "skulltula",
             access: "master",
             isAvailable: function () {
@@ -2537,6 +2638,8 @@ var dungeons = [
             }
          },
          'Crystal Switch Skulltula': {
+            x: "60.0%",
+            y: "15.0%",
             type: "skulltula",
             access: "master",
             isAvailable: function () {
@@ -2544,6 +2647,8 @@ var dungeons = [
             }
          },
          'Stalfos Chest': {
+            x: "70.0%",
+            y: "15.0%",
             type: "chest",
             access: "master",
             isAvailable: function () {
@@ -2551,6 +2656,8 @@ var dungeons = [
             }
          },
          'MQ Sheik Song': {
+            x: "80.0%",
+            y: "15.0%",
             type: "song",
             access: "master",
             isAvailable: function () {
@@ -2575,6 +2682,8 @@ var dungeons = [
       found: true,
       chestlist: {
          'Water Jet Chest': {
+            x: "5.0%",
+            y: "5.0%",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
@@ -2582,6 +2691,8 @@ var dungeons = [
             }
          },
          'Spike Ball Chest': {
+            x: "10.0%",
+            y: "5.0%",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
@@ -2589,6 +2700,8 @@ var dungeons = [
             }
          },
          'Torches to Shellblades': {
+            x: "15.0%",
+            y: "5.0%",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
@@ -2596,6 +2709,8 @@ var dungeons = [
             }
          },
          'Cracked Wall': {
+            x: "20.0%",
+            y: "5.0%",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
@@ -2603,6 +2718,8 @@ var dungeons = [
             }
          },
          'Central Bow Target': {
+            x: "25.0%",
+            y: "5.0%",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
@@ -2610,6 +2727,8 @@ var dungeons = [
             }
          },
          'Basement Key Door to Skulltula': {
+            x: "30.0%",
+            y: "5.0%",
             type: "skulltula",
             access: "vanilla",
             isAvailable: function () {
@@ -2617,6 +2736,8 @@ var dungeons = [
             }
          },
          'Boulder Hall Skulltula': {
+            x: "35.0%",
+            y: "5.0%",
             type: "skulltula",
             access: "vanilla",
             isAvailable: function () {
@@ -2624,6 +2745,8 @@ var dungeons = [
             }
          },
          'Boulder Hall Chest': {
+            x: "40.0%",
+            y: "5.0%",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
@@ -2631,6 +2754,8 @@ var dungeons = [
             }
          },
          'Top of Central Pillar Skulltula': {
+            x: "45.0%",
+            y: "5.0%",
             type: "skulltula",
             access: "vanilla",
             isAvailable: function () {
@@ -2638,6 +2763,8 @@ var dungeons = [
             }
          },
          'Central Pillar Basement': {
+            x: "50.0%",
+            y: "5.0%",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
@@ -2645,6 +2772,8 @@ var dungeons = [
             }
          },
          'Dragon Mouth Switch Chest': {
+            x: "55.0%",
+            y: "5.0%",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
@@ -2652,6 +2781,8 @@ var dungeons = [
             }
          },
          'Platform Room Skulltula': {
+            x: "60.0%",
+            y: "5.0%",
             type: "skulltula",
             access: "vanilla",
             isAvailable: function () {
@@ -2659,6 +2790,8 @@ var dungeons = [
             }
          },
          'Dark Link': {
+            x: "65.0%",
+            y: "5.0%",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
@@ -2666,6 +2799,8 @@ var dungeons = [
             }
          },
          'River Skulltula': {
+            x: "70.0%",
+            y: "5.0%",
             type: "skulltula",
             access: "vanilla",
             isAvailable: function () {
@@ -2673,6 +2808,8 @@ var dungeons = [
             }
          },
          'River Eye Switch Chest': {
+            x: "75.0%",
+            y: "5.0%",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
@@ -2680,6 +2817,8 @@ var dungeons = [
             }
          },
          'Morpha': {
+            x: "80.0%",
+            y: "5.0%",
             type: "boss",
             access: "vanilla",
             isAvailable: function () {
@@ -2687,6 +2826,8 @@ var dungeons = [
             }
          },
          'Stalfos Chest': {
+            x: "10.0%",
+            y: "25.0%",
             type: "chest",
             access: "master",
             isAvailable: function () {
@@ -2696,6 +2837,8 @@ var dungeons = [
             }
          },
          'Open Wall Chest': {
+            x: "20.0%",
+            y: "25.0%",
             type: "chest",
             access: "master",
             isAvailable: function () {
@@ -2706,6 +2849,8 @@ var dungeons = [
             }
          },
          'Scarecrow Skulltula': {
+            x: "30.0%",
+            y: "25.0%",
             type: "skulltula",
             access: "master",
             isAvailable: function () {
@@ -2713,6 +2858,8 @@ var dungeons = [
             }
          },
          'Blue Switch Skulltula': {
+            x: "40.0%",
+            y: "25.0%",
             type: "skulltula",
             access: "master",
             isAvailable: function () {
@@ -2720,6 +2867,8 @@ var dungeons = [
             }
          },
          'Lizalfos Hallway Skulltula': {
+            x: "50.0%",
+            y: "25.0%",
             type: "skulltula",
             access: "master",
             isAvailable: function () {
@@ -2729,6 +2878,8 @@ var dungeons = [
             }
          },
          'Lizalfos Chest': {
+            x: "60.0%",
+            y: "25.0%",
             type: "chest",
             access: "master",
             isAvailable: function () {
@@ -2738,6 +2889,8 @@ var dungeons = [
             }
          },
          'MQ Central Pillar Basement': {
+            x: "70.0%",
+            y: "25.0%",
             type: "chest",
             access: "master",
             isAvailable: function () {
@@ -2747,6 +2900,8 @@ var dungeons = [
             }
          },
          'Dins Ontop Water Jet': {
+            x: "80.0%",
+            y: "25.0%",
             type: "chest",
             access: "master",
             isAvailable: function () {
@@ -2756,6 +2911,8 @@ var dungeons = [
             }
          },
          'Basement Crate Freestanding': {
+            x: "10.0%",
+            y: "20.0%",
             type: "freestanding",
             access: "master",
             isAvailable: function () {
@@ -2765,6 +2922,8 @@ var dungeons = [
             }
          },
          'MQ Morpha': {
+            x: "20.0%",
+            y: "20.0%",
             type: "boss",
             access: "master",
             isAvailable: function () {
@@ -2774,6 +2933,8 @@ var dungeons = [
             }
          },
          'MQ River Skulltula': {
+            x: "30.0%",
+            y: "20.0%",
             type: "skulltula",
             access: "master",
             isAvailable: function () {
@@ -2783,6 +2944,8 @@ var dungeons = [
             }
          },
          'Dodongo Skulltula': {
+            x: "40.0%",
+            y: "20.0%",
             type: "skulltula",
             access: "master",
             isAvailable: function () {
