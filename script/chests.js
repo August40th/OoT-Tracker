@@ -1386,6 +1386,8 @@ var dungeons = [
       found: true,
       chestlist: {
          'Front Left Hidden Wall': {
+            x: "5.0%",
+            y: "5.0%",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
@@ -1394,6 +1396,8 @@ var dungeons = [
             }
          },
          'Front Center Bombable': {
+            x: "10.0%",
+            y: "5.0%",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
@@ -1403,6 +1407,8 @@ var dungeons = [
             }
          },
          'Center Large Chest': {
+            x: "15.0%",
+            y: "5.0%",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
@@ -1411,6 +1417,8 @@ var dungeons = [
             }
          },
          'Underwater Left Chest': {
+            x: "20.0%",
+            y: "5.0%",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
@@ -1420,6 +1428,7 @@ var dungeons = [
             }
          },
          'Coffin Key': {
+            
             type: "freestanding",
             access: "vanilla",
             isAvailable: function () {
