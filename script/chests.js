@@ -1650,7 +1650,7 @@ var dungeons = [
          },
          'Basement Skulltula': {
             x: "80.0%",
-            y: "15.0%"
+            y: "15.0%",
             type: "skulltula",
             access: "master",
             isAvailable: function () {
@@ -2045,6 +2045,7 @@ var dungeons = [
       found: true,
       chestlist: {
          'Chest Near Boss': {
+            
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
