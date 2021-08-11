@@ -8,7 +8,9 @@ function generalCanGetChest(chestlist) {
             continue;}
         if ( chestlist[key].type == "trial" && trialsize == 0 ) { //Castle trials
             continue;}
-        if ( chestlist[key].type == "entrance" || chestlist[key].type == "warp" || chestlist[key].type == "owl" ) { //Do Nothing
+        if ( chestlist[key].type == "entrance" && OWERmap == false ) { //Do Nothing
+            continue;}
+       if ( chestlist[key].type == "warp" || chestlist[key].type == "owl" ) { //Do Nothing
             continue;}
         if ( chestlist[key].access == "door" && chestlist[key].type == "simple" && IndoorER == "Off" ) { //Simple Doorways
             continue;}
