@@ -140,7 +140,7 @@ var dungeons = [
          },
          'Know It All Bro\'s': {
             x: "8.0%",
-            y: "42.0%",
+            y: "56.0%",
             type: "simple",
             access: "door",
             isAvailable: function () {
@@ -158,7 +158,7 @@ var dungeons = [
          },
          'Kokiri Sword Chest': {
             x: "12.8%",
-            y: "84.0%",
+            y: "88.0%",
             type: "ksword",
             access: "outdoor",
             isAvailable: function () {
@@ -184,7 +184,7 @@ var dungeons = [
                   items.Ocarina && items.EponasSong; }
          },
          'Saria\'s House': {
-            x: "19.0%",
+            x: "24.0%",
             y: "63.0%",
             type: "simple",
             access: "door",
@@ -192,7 +192,7 @@ var dungeons = [
                return dungeons[0].found == true ; }
          },
          'Twin\'s House': {
-            x: "22.0%",
+            x: "27.0%",
             y: "60.0%",
             type: "simple",
             access: "door",
@@ -200,7 +200,7 @@ var dungeons = [
                return dungeons[0].found == true ; }
          },
          'Adult Twin\'s House Roof Skulltula': {
-            x: "23.0%",
+            x: "28.0%",
             y: "59.5%",
             type: "skulltula",
             access: "outdoor",
@@ -210,7 +210,7 @@ var dungeons = [
                && items.Hookshot; }
          },
          'Soil Patch Skulltula': {
-            x: "20.0%",
+            x: "32.0%",
             y: "38.0%",
             type: "skulltula",
             access: "outdoor",
@@ -219,7 +219,7 @@ var dungeons = [
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) && items.Bottle; }
          },
          'Kokiri Shop': {
-            x: "10.5%",
+            x: "28.5%",
             y: "37.5%",
             type: "simple",
             access: "door",
@@ -227,7 +227,7 @@ var dungeons = [
                return dungeons[0].found == true ; }
          },
          'Kokiri Sale': {
-            x: "10.0%",
+            x: "28.0%",
             y: "38.0%",
             type: "shop",
             access: "simple",
@@ -5003,14 +5003,16 @@ var dungeons = [
       found: true,
       chestlist: {
          'Meadow to Woods': {
-            x: "80.0%",
-            y: "46.0%",
+            x: "4.0%",
+            y: "43.0%",
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
                   return true; }
          },
          'Wolfos Grotto': {
+            x: "8.0%",
+            y: "43.0%",
             type: "grotto", 
             access: "grotto",
                isAvailable: function () {
@@ -5024,6 +5026,8 @@ var dungeons = [
                   );}
          },
          ['Wolfos Grotto']: {
+            x: "9.0%",
+            y: "43.0%",
             type: "chest", 
             access: "grotto",
             isAvailable: function () {
@@ -5038,6 +5042,8 @@ var dungeons = [
             }
          },
          'Maze Gossip 1': {
+            x: "25.0%",
+            y: "66.0%",
             type: "gossip", 
             access: "outdoor",
             isAvailable: function () {
@@ -5045,6 +5051,8 @@ var dungeons = [
             }
          },
          'Meadow Maze Skulltula': {
+            x: "32.0%",
+            y: "78.0%",
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
@@ -5053,6 +5061,8 @@ var dungeons = [
             },
          },
          'Meadow Open Grotto': {
+            x: "32.0%",
+            y: "58.0%",
             type: "grotto", 
             access: "grotto",
                isAvailable: function () {
@@ -5060,6 +5070,8 @@ var dungeons = [
                }
          },
          'Maze Gossip 2': {
+            x: "35.0%",
+            y: "43.0%",
             type: "gossip", 
             access: "outdoor",
             isAvailable: function () {
@@ -5067,6 +5079,8 @@ var dungeons = [
             }
          },
          ['Song from Sheik']: {
+            x: "74.0%",
+            y: "43.0%",
             type: "song", 
             access: "outdoor",
             isAvailable: function () {
@@ -5075,12 +5089,16 @@ var dungeons = [
             }
          },
          'Minuet Warp': {
+            x: "80.0%",
+            y: "43.0%",
             type: "warp", 
             access: "warp",
                isAvailable: function () {
                   return items.Ocarina && items.MinuetofForest; }
          },
          'Meadow Storms Grotto': {
+            x: "73.0%",
+            y: "68.0%",
             type: "grotto", 
             access: "grotto",
                isAvailable: function () {
@@ -5089,6 +5107,8 @@ var dungeons = [
                }
          },
          'Storms Grotto by Temple': {
+            x: "72.0%",
+            y: "69.0%",
             type: "scrub", 
             access: "grotto",
             isAvailable: function () {
@@ -5097,6 +5117,8 @@ var dungeons = [
             }
          },
          ['Song from Saria']: {
+            x: "70.0%",
+            y: "43.0%",
             type: "song", 
             access: "outdoor",
             isAvailable: function () {
@@ -5105,6 +5127,8 @@ var dungeons = [
             }
          },
          'Temple Gossip': {
+            x: "72.0%",
+            y: "32.0%",
             type: "gossip", 
             access: "outdoor",
             isAvailable: function () {
@@ -5112,6 +5136,8 @@ var dungeons = [
             }
          },
          'Forest Temple': {
+            x: "78.0%",
+            y: "43.0%",
             type: "dungeon", 
             access: "door",
                isAvailable: function () {
