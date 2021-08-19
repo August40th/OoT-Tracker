@@ -6439,14 +6439,16 @@ var dungeons = [
       found: true,
       chestlist: {
          'Domain to River': {
-            x: "90.0%",
-            y: "29.5%",
+            x: "2.0%",
+            y: "78.5%",
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
                   return true; }
          },
          'Zora Shop': {
+            x: "68.0%",
+            y: "82.5%",
             type: "simple", 
             access: "door",
                isAvailable: function () {
@@ -6465,6 +6467,8 @@ var dungeons = [
             }
          },
          'Zora Sale': {
+            x: "68.0%",
+            y: "82.5%",
             type: "shop", 
             access: "simple",
             isAvailable: function () {
@@ -6481,6 +6485,8 @@ var dungeons = [
             }
          },
          'Storms Grotto': {
+            x: "20.0%",
+            y: "55.5%",
             type: "grotto", 
             access: "grotto",
             isAvailable: function () {
@@ -6496,6 +6502,8 @@ var dungeons = [
             }
          },
          'Royal Zora Gossip': {
+            x: "72.0%",
+            y: "45.5%",
             type: "gossip", 
             access: "outdoor",
             isAvailable: function () {
@@ -6510,6 +6518,8 @@ var dungeons = [
             }
          },
          ['Diving Mini Game']: {
+            x: "45.0%",
+            y: "48.5%",
             type: "NPC", 
             access: "outdoor",
             isAvailable: function () {
@@ -6519,6 +6529,8 @@ var dungeons = [
             }
          },
          ['Torch Run']: {
+            x: "45.0%",
+            y: "52.5%",
             type: "chest", 
             access: "outdoor",
             isAvailable: function () {
@@ -6528,14 +6540,16 @@ var dungeons = [
             }
          },
          'Domain to Lake': {
-            x: "92.9%",
-            y: "32.0%",
+            x: "50.9%",
+            y: "75.0%",
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
                   return true; }
          },
          'Frozen Waterfall Skulltula': {
+            x: "48.0%",
+            y: "45.5%",
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
@@ -6545,6 +6559,8 @@ var dungeons = [
             }
          },
          ['Thaw King Zora']: {
+            x: "72.0%",
+            y: "42.0%",
             type: "NPC", 
             access: "outdoor",
             isAvailable: function () {
@@ -6565,8 +6581,8 @@ var dungeons = [
             }
          },
          'Domain to Fountain': {
-            x: "94.9%",
-            y: "22.5%",
+            x: "45.9%",
+            y: "2.5%",
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
@@ -6588,14 +6604,16 @@ var dungeons = [
       found: true,
       chestlist: {
          'Fountain to Domain': {
+            x: "12.0%",
+            y: "52.5%",
             type: "entrance", 
             access: "entrance",
-            x: "92.5%",
-            y: "21.0%",
              isAvailable: function () {
                   return true; }
          },
          'West Fountain Gossip': {
+            x: "35.0%",
+            y: "45.5%",
             type: "gossip", 
             access: "outdoor",
             isAvailable: function () {
@@ -6615,6 +6633,8 @@ var dungeons = [
             }
          },
          'Lord Jabu Jabu\'s Belly': {
+            x: "35.0%",
+            y: "50.5%",
             type: "dungeon", 
             access: "door",
                isAvailable: function () {
@@ -6624,6 +6644,8 @@ var dungeons = [
                }
          },
          'Stand on the Log Skulltula': {
+            x: "42.0%",
+            y: "55.5%",
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
@@ -6633,6 +6655,8 @@ var dungeons = [
                }
          },
          'Tree by Great Fairy Skulltula': {
+            x: "75.0%",
+            y: "75.5%",
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
@@ -6642,6 +6666,8 @@ var dungeons = [
                }
          },
          'Great Fairy Gossip': {
+            x: "72.0%",
+            y: "72.5%",
             type: "gossip", 
             access: "outdoor",
             isAvailable: function () {
@@ -6661,6 +6687,8 @@ var dungeons = [
             }
          },
          'Bombable Doorway': {
+            x: "75.0%",
+            y: "85.5%",
             type: "simple", 
             access: "door",
                isAvailable: function () {
@@ -6684,6 +6712,8 @@ var dungeons = [
                }
          },
          ['Farore\'s Great Fairy Fountain']: {
+            x: "75.0%",
+            y: "85.5%",
             type: "NPC", 
             access: "simple",
             isAvailable: function () {
@@ -6707,6 +6737,8 @@ var dungeons = [
             }
          },
          'Silver Rock Skulltula': {
+            x: "85.0%",
+            y: "75.5%",
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
@@ -6725,6 +6757,8 @@ var dungeons = [
             }
          },
          ['Iceberg Freestanding']: {
+            x: "65.0%",
+            y: "45.5%",
             type: "freestanding", 
             access: "outdoor",
             isAvailable: function () {
@@ -6743,6 +6777,8 @@ var dungeons = [
             }
          },
          ['Under Icy Waters Freestanding']: {
+            x: "60.0%",
+            y: "50.5%",
             type: "freestanding", 
             access: "outdoor",
             isAvailable: function () {
@@ -6761,6 +6797,8 @@ var dungeons = [
             }
          },
          'Ice Cavern': {
+            x: "2.0%",
+            y: "60.5%",
             type: "dungeon", 
             access: "door",
                isAvailable: function () {
