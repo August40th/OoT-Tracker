@@ -5485,8 +5485,8 @@ var dungeons = [
    },
    {
       name: "Goron City",
-      x: "50.0%",
-      y: "96.3%",
+      x: "70.0%",
+      y: "06.3%",
       type: "overworld",
       found: true,
       chestlist: {
@@ -5723,28 +5723,32 @@ var dungeons = [
       found: true,
       chestlist: {
          'Bridge to Forest': {
-            x: "72.7%",
-            y: "50.0%",
+            x: "2.0%",
+            y: "78.0%",
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
                   return true; }
          },
          'Fairy Ocarina': {
+            x: "5.0%",
+            y: "78.0%",
             type: "ocarina",
             access: "OWER",
             isAvailable: function () {
                return dungeons[18].found == true; }
          },
          'Bridge to Field': {
-            x: "69.0%",
-            y: "48.0%",
+            x: "15.0%",
+            y: "78.0%",
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
                   return true; }
          },
          ['Deku Sale $40']: {
+            x: "15.0%",
+            y: "96.0%",
             type: "NPC", 
             access: "outdoor",
             isAvailable: function () {
@@ -5753,6 +5757,8 @@ var dungeons = [
             }
          },
          'Bridge Stone': {
+            x: "6.0%",
+            y: "96.0%",
             type: "gossip",
             access: "outdoor",
             isAvailable: function () {
@@ -5760,6 +5766,8 @@ var dungeons = [
             }
          },
          'Bridge Soil Patch Skulltula': {
+            x: "6.0%",
+            y: "55.0%",
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
@@ -5769,6 +5777,8 @@ var dungeons = [
             }
          },
          ['Skull Kid']: {
+            x: "15.0%",
+            y: "42.0%",
             type: "NPC", 
             access: "outdoor",
             isAvailable: function () {
@@ -5778,14 +5788,16 @@ var dungeons = [
             }
          },
          'Woods to Forest': {
-            x: "78.7%",
-            y: "52.0%",
+            x: "50.7%",
+            y: "64.0%",
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
                   return true; }
          },
          ['Slingshot Target']: {
+            x: "64.0%",
+            y: "55.0%",
             type: "NPC", 
             access: "outdoor",
             isAvailable: function () {
@@ -5795,6 +5807,8 @@ var dungeons = [
             }
          },
          ['Ocarina Memory Game']: {
+            x: "68.0%",
+            y: "58.0%",
             type: "NPC", 
             access: "outdoor",
             isAvailable: function () {
@@ -5804,6 +5818,8 @@ var dungeons = [
             }
          },
          'Bomb Grotto by City': {
+            x: "64.0%",
+            y: "42.0%",
             type: "grotto", 
             access: "grotto",
                isAvailable: function () {
@@ -5818,6 +5834,8 @@ var dungeons = [
                }
          },
          ['City Grotto Chest']: {
+            x: "64.0%",
+            y: "42.0%",
             type: "chest", 
             access: "grotto",
             isAvailable: function () {
@@ -5832,6 +5850,8 @@ var dungeons = [
             }
          },
          'City Grotto Gossip': {
+            x: "64.0%",
+            y: "44.0%",
             type: "gossip",
             access: "outdoor",
             isAvailable: function () {
@@ -5846,16 +5866,16 @@ var dungeons = [
             }
          },
          'Woods to City': {
-            x: "80.8%",
-            y: "49.0%",
+            x: "62.8%",
+            y: "42.0%",
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
                   return true; }
          },
          'Woods to River': {
-            x: "82.8%",
-            y: "51.5%",
+            x: "69.8%",
+            y: "39.5%",
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
@@ -5865,6 +5885,8 @@ var dungeons = [
                    ) || items.Scale) ; }
          },
          'Theatre Scrub x2': {
+            x: "45.0%",
+            y: "32.0%",
             type: "scrub", 
             access: "outdoor",
             isAvailable: function () {
@@ -5873,6 +5895,8 @@ var dungeons = [
             },
          },
          'Theatre Soil Patch Skulltula': {
+            x: "48.0%",
+            y: "34.0%",
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
@@ -5882,6 +5906,8 @@ var dungeons = [
             },
          },
          'Bean Ride Skulltula': {
+            x: "56.0%",
+            y: "40.0%",
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
@@ -5892,6 +5918,8 @@ var dungeons = [
             },
          },
          'Deku Theatre Grotto': {
+            x: "50.0%",
+            y: "32.0%",
             type: "grotto", 
             access: "grotto",
                isAvailable: function () {
@@ -5900,6 +5928,8 @@ var dungeons = [
                }
          },
          ['Deku Theater Skull Mask']: {
+            x: "50.0%",
+            y: "32.0%",
             type: "NPC", 
             access: "grotto",
             isAvailable: function () {
@@ -5909,6 +5939,8 @@ var dungeons = [
             }
          },
          ['Deku Theater Mask of Truth']: {
+            x: "50.0%",
+            y: "34.0%",
             type: "NPC", 
             access: "grotto",
             isAvailable: function () {
@@ -5918,6 +5950,8 @@ var dungeons = [
             }
          },
          'Bomb Grotto by Meadow': {
+            x: "50.0%",
+            y: "14.0%",
             type: "grotto", 
             access: "grotto",
                isAvailable: function () {
@@ -5932,6 +5966,8 @@ var dungeons = [
                }
          },
          ['Deku Sale Grotto $40']: {
+            x: "50.0%",
+            y: "14.0%",
             type: "NPC", 
             access: "grotto",
             isAvailable: function () {
@@ -5946,6 +5982,8 @@ var dungeons = [
             }
          },
          '2nd Scrub in Grotto': {
+            x: "50.0%",
+            y: "18.0%",
             type: "scrub", 
             access: "grotto",
             isAvailable: function () {
@@ -5960,8 +5998,8 @@ var dungeons = [
             }
          },
          'Woods to Meadow': {
-            x: "82.8%",
-            y: "46.0%",
+            x: "50.0%",
+            y: "4.0%",
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
