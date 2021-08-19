@@ -4572,7 +4572,7 @@ var dungeons = [
           type: "entrance",
           access: "entrance",
           isAvailable: function () {
-               return true; }
+               return dungeons[13].found == true; }
          },
          'Guard/Ghostbuster House': {
             x: "10.0%",
@@ -4609,7 +4609,7 @@ var dungeons = [
           type: "entrance",
           access: "entrance",
           isAvailable: function () {
-               return true; }
+               return dungeons[13].found == true; }
        },
        'Market to Topdown': {
           x: "30.0%",
@@ -4617,7 +4617,7 @@ var dungeons = [
           type: "entrance",
           access: "entrance",
           isAvailable: function () {
-               return true; }
+               return dungeons[13].found == true; }
          },
          'Treasure game': {
             x: "35.0%",
@@ -4738,7 +4738,7 @@ var dungeons = [
             type: "entrance",
             access: "entrance",
             isAvailable: function () {
-               return true; }
+               return dungeons[13].found == true; }
          },
          'Happy Mask Shop': {
             x: "90.0%",
@@ -4756,7 +4756,7 @@ var dungeons = [
             type: "entrance",
             access: "entrance",
             isAvailable: function () {
-               return true; }
+               return dungeons[13].found == true; }
          },
          'Potion Shop': {
             x: "20.0%",
@@ -4924,7 +4924,7 @@ var dungeons = [
             type: "entrance",
             access: "entrance",
              isAvailable: function () {
-                  return true; }
+                  return dungeons[15].found == true; }
          },
          'Tree to Castle Skulltula': {
            x: "14.0%",
@@ -5091,7 +5091,7 @@ var dungeons = [
             type: "entrance",
             access: "entrance",
              isAvailable: function () {
-                  return true; }
+                  return dungeons[16] == true; }
          },
          ['Song from Sheik']: {
             x: "50.0%",
@@ -5300,7 +5300,7 @@ var dungeons = [
             type: "entrance",
             access: "entrance",
              isAvailable: function () {
-                  return true; }
+                  return dungeons[16].found == true; }
          },
          'Archery Foundation Skulltula': {
             x: "55.0%",
@@ -5485,20 +5485,22 @@ var dungeons = [
    },
    {
       name: "Goron City",
-      x: "70.0%",
-      y: "06.3%",
+      x: "50.0%",
+      y: "96.3%",
       type: "overworld",
       found: true,
       chestlist: {
          'City to Trail': {
-            x: "65.0%",
-            y: "10.5%",
+            x: "50.0%",
+            y: "95.0%",
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
-                  return true; }
+                  return dungeons[17].found == true; }
          },
          'Ruby Pedestal Skulltula': {
+            x: "48.0%",
+            y: "48.0%",
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
@@ -5507,6 +5509,8 @@ var dungeons = [
             }
          },
          ['Little Rolling Goron']: {
+            x: "37.0%",
+            y: "50.0%",
             type: "NPC", 
             access: "outdoor",
             isAvailable: function () {
@@ -5516,6 +5520,8 @@ var dungeons = [
             }
          },
          ['Medigoron']: {
+            x: "37.0%",
+            y: "60.0%",
             type: "knife", 
             access: "outdoor",
             isAvailable: function () {
@@ -5525,6 +5531,8 @@ var dungeons = [
             }
          },
          'Medigoron Gossip': {
+            x: "36.0%",
+            y: "60.0%",
             type: "gossip", 
             access: "outdoor",
             isAvailable: function () {
@@ -5533,6 +5541,8 @@ var dungeons = [
             }
          },
          ['Left Boulder Maze Chest']: {
+            x: "4.0%",
+            y: "10.0%",
             type: "chest", 
             access: "outdoor",
             isAvailable: function () {
@@ -5544,6 +5554,8 @@ var dungeons = [
             }
          },
          ['Center Boulder Maze Chest']: {
+            x: "6.0%",
+            y: "8.0%",
             type: "chest", 
             access: "outdoor",
             isAvailable: function () {
@@ -5554,6 +5566,8 @@ var dungeons = [
             }
          },
          'Maze Crate Skulltula': {
+            x: "8.0%",
+            y: "6.0%",
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
@@ -5563,6 +5577,8 @@ var dungeons = [
             }
          },
          'Maze Gossip': {
+            x: "10.0%",
+            y: "7.0%",
             type: "gossip", 
             access: "outdoor",
             isAvailable: function () {
@@ -5573,6 +5589,8 @@ var dungeons = [
             }
          },
          ['Right Boulder Maze Chest']: {
+            x: "12.0%",
+            y: "8.0%",
             type: "chest", 
             access: "outdoor",
             isAvailable: function () {
@@ -5583,6 +5601,8 @@ var dungeons = [
             }
          },
          'Lava Cross Grotto': {
+            x: "85.0%",
+            y: "11.0%",
             type: "grotto", 
             access: "grotto",
                isAvailable: function () {
@@ -5594,6 +5614,8 @@ var dungeons = [
                }
          },
          'Lava Scrubs x3': {
+            x: "88.0%",
+            y: "11.0%",
             type: "scrub", 
             access: "grotto",
             isAvailable: function () {
@@ -5605,14 +5627,16 @@ var dungeons = [
                }
          },
          'City to Woods': {
-            x: "69.0%",
-            y: "18.0%",
+            x: "69.9%",
+            y: "98.0%",
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
                   return true; }
          },
          'Goron Shop': {
+            x: "45.0%",
+            y: "50.0%",
             type: "simple", 
             access: "door",
                isAvailable: function () {
@@ -5627,6 +5651,8 @@ var dungeons = [
                }
          },
          'Goron Sale': {
+            x: "45.0%",
+            y: "50.0%",
             type: "shop", 
             access: "simple",
             isAvailable: function () {
@@ -5641,6 +5667,8 @@ var dungeons = [
                }
          },
          ['Big Rolling Goron']: {
+            x: "40.0%",
+            y: "20.0%",
             type: "NPC", 
             access: "outdoor",
             isAvailable: function () {
@@ -5650,6 +5678,8 @@ var dungeons = [
             }
          },
          ['Spinning Pot Freestanding']: {
+            x: "50.0%",
+            y: "50.0%",
             type: "freestanding", 
             access: "outdoor",
             isAvailable: function () {
@@ -5659,6 +5689,8 @@ var dungeons = [
             }
          },
          ['Darunia\'s Dance']: {
+            x: "50.0%",
+            y: "6.0%",
             type: "NPC", 
             access: "outdoor",
             isAvailable: function () {
@@ -5668,8 +5700,8 @@ var dungeons = [
             }
          },
          'City to Crater': {
-            x: "69.0%",
-            y: "09.0%",
+            x: "50.0%",
+            y: "4.0%",
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
