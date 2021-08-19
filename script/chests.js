@@ -110,14 +110,14 @@ var dungeons = [
          },
          'Mido\'s House 1': {
             x: "15.0%",
-            y: "38.0%",
+            y: "39.0%",
             type: "chest",
             access: "simple",
             isAvailable: function () {
                return dungeons[0].found == true ; }
          },
          'Mido\'s House 2': {
-            x: "15.0%",
+            x: "14.5%",
             y: "32.0%",
             type: "chest",
             access: "simple",
@@ -126,14 +126,14 @@ var dungeons = [
          },
          'Mido\'s House 3': {
             x: "16.0%",
-            y: "38.0%",
+            y: "39.0%",
             type: "chest",
             access: "simple",
             isAvailable: function () {
                return dungeons[0].found == true ; }
          },
          'Mido\'s House 4': {
-            x: "16.5%",
+            x: "15.5%",
             y: "32.0%",
             type: "chest",
             access: "simple",
@@ -245,8 +245,8 @@ var dungeons = [
                return dungeons[0].found == true ; }
          },
          'Song of Storms Grotto': {
-            x: "8.0%",
-            y: "34.0%",
+            x: "12.0%",
+            y: "26.4%",
             type: "grotto",
             access: "grotto",
             isAvailable: function () {
@@ -254,7 +254,7 @@ var dungeons = [
                && items.Ocarina && items.SongofStorms; }
          },
          'Storms Grotto Chest': {
-            x: "5.7%",
+            x: "9.7%",
             y: "26.4%",
             type: "chest",
             access: "grotto",
@@ -2972,6 +2972,8 @@ var dungeons = [
       found: true,
       chestlist: {
          'Lobby Right Chest': {
+            x: "5.0%",
+            y: "5.0%",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
@@ -2979,6 +2981,8 @@ var dungeons = [
             }
          },
          'Lobby Left Chest': {
+            x: "10.0%",
+            y: "5.0%",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
@@ -2986,6 +2990,8 @@ var dungeons = [
             }
          },
          'Stalfos Room': {
+            x: "15.0%",
+            y: "5.0%",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
