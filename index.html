@@ -54,6 +54,24 @@
                         <input type='radio' name='quest' value='Master' onclick="setQuest(this)">Master 
                         <input type='radio' name='quest' value='Mixed' onclick="setQuest(this)">Mixed </legend>
                         </center> </fieldset>
+                        <fieldset>
+                            <legend>Fortress Logic</legend>
+                                Fort Keys: 
+                                    <input type='radio' name='fortkeys' value='Fight' checked='true' onclick="setFortKeys(this)">Guard Fight
+                                    <input type='radio' name='fortkeys' value='Overworld' checked='true' onclick="setFortKeys(this)">Overworld<br>
+                                    <center><input type='radio' name='fortkeys' value='Dungeons' checked='true' onclick="setFortKeys(this)">Dungeons
+                                    <input type='radio' name='fortkeys' value='Keysanity' checked='true' onclick="setFortKeys(this)">Keysanity<br>
+                                <hr
+                                 Carpenters: 
+                                    <input type='radio' name='carpenters' value=4 onchange="setCarpenter(this)">All 4
+                                    <input type='radio' name='carpenters' value=1 onchange="setCarpenter(this)">Just 1                          
+                                    <input type='radio' name='carpenters' value=0 onchange="setCarpenter(this)">None<br>  
+                                    </center>
+                                <hr>
+                                Membership:
+                                    <input type='radio' name='gerudobridge' value='Shuffle' onclick="setFortressLogic(this)">Shuffle
+                                    <input type='radio' name='gerudobridge' value='Start' onclick="setFortressLogic(this)">Start with<br>
+                        </fieldset>
                         <fieldset> <Legend>Ganon's Castle</legend>
                         <legend>Rainbow Bridge</legend> 
                             <center><input type='radio' name='rainbowbridge' value='Open' checked='true' onclick="setRainbow(this)">Open
@@ -77,24 +95,6 @@
                             <input type='radio' name='castlelogic' value='LACSMeds' onclick="setCastle(this)">LACS Medallions
                             <input type='radio' name='castlelogic' value='LACSAD' onclick="setCastle(this)">LACS All Dungeons
                         </center> </fieldset>
-                    <fieldset>
-                            <legend>Fortress Logic</legend>
-                                Fort Keys: 
-                                    <input type='radio' name='fortkeys' value='Fight' checked='true' onclick="setFortKeys(this)">Guard Fight
-                                    <input type='radio' name='fortkeys' value='Overworld' checked='true' onclick="setFortKeys(this)">Overworld<br>
-                                    <center><input type='radio' name='fortkeys' value='Dungeons' checked='true' onclick="setFortKeys(this)">Dungeons
-                                    <input type='radio' name='fortkeys' value='Keysanity' checked='true' onclick="setFortKeys(this)">Keysanity<br>
-                                Carpenters: 
-                                    <input type='radio' name='carpenters' value=4 onchange="setCarpenter(this)">All 4
-                                    <input type='radio' name='carpenters' value=1 onchange="setCarpenter(this)">Just 1                          
-                                    <input type='radio' name='carpenters' value=0 onchange="setCarpenter(this)">None<br>  
-                                    </center>
-                                <hr>
-                                Membership:
-                                    <input type='radio' name='gerudobridge' value='Shuffle' onclick="setFortressLogic(this)">Shuffle
-                                    <input type='radio' name='gerudobridge' value='Start' onclick="setFortressLogic(this)">Start with<br>
-
-                        </fieldset>
                 </div>
                 <div class="column">
                 <fieldset>
@@ -137,15 +137,15 @@
                         <input type='checkbox' name='Ksword' checked='false' onchange="setKsword(this)">Kokiki Sword
                         <input type='checkbox' name='OcarinaShuffle' checked='false' onchange="setOcarina(this)">Ocarina
                         <input type='checkbox' name='WeirdEgg' checked='false' onchange="setEgg(this)">Weird Egg <br>
-                        <input type='checkbox' name='BeanShuffle' checked='false' onchange="setBean(this)">Bean Pack
+                        <input type='checkbox' name='BeanShuffle' checked='false' onchange="setBean(this)">Beans
                         <input type='checkbox' name='Medigoron' checked='false' onchange="setMedigoron(this)">Medigoron           
                         <input type='checkbox' name='Aladdin' checked='false' onchange="setCarpet(this)">Carpet Sale<br>            
                         <input type='checkbox' name='BombchuLogic' checked='false' onchange="setBombchu(this)">Bombchu IN Logic
                     </fieldset>
                     <fieldset> <legend>Losing Your Mind</legend>
-                        <legend>Songs: <input type='radio' name='SongShuffle' value='Songs' onchange="setSongs(this)">Song Pool</legend>
+                        <legend>Songs: <input type='radio' name='SongShuffle' value='Songs' onchange="setSongs(this)">Song Pool
                         <input type='radio' name='SongShuffle' value='Bosses' onchange="setSongs(this)">Dungeons
-                        <input type='radio' name='SongShuffle' value='Songsanity' onchange="setSongs(this)">Songsanity<be>
+                        <input type='radio' name='SongShuffle' value='Songsanity' onchange="setSongs(this)">Songsanity</legend><be>
                         <hr>
                         <legend>Entrance Randomizer</legend>
                             <input type='checkbox' name='Owls' checked='false' onchange="setOwls(this)">Owl Drops
