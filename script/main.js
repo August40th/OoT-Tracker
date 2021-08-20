@@ -38,12 +38,15 @@ castlelogic = 'Removed';
 trialsize = 0;
 prizesize = 0;
 maxprize = 0;
+
 gerudobridge = 'Default';
-Rescue1 = true;
+fortkeys = 'Fight'
+carpenters = true;
 smallkeys = 'Dungeons';
+
 bosskeys = 'Dungeons';
 skulltula = 'Off';
-scrubs = 'Off';
+scrubs = false;
 Shopsanity = false;
 shopsize = 0;
 Cowsanity = false;
@@ -63,6 +66,7 @@ OpenDeku = true;
 OpenGate = true;
 OpenDoor = true;
 OpenFountain = false;
+poecount = 1;
 
 GrottoER = false;
 IndoorER = 'Off';
@@ -118,7 +122,7 @@ var cookieDefault = {
    rainlogic: 'Open',
    qlogic: 'Vanilla',
    flogic: 'Default',
-   carp: 1,
+   carp: '1',
    smallk: 'Dungeons',
    bossk: 'Dungeons',
    sclogic: 'Major Item',
@@ -222,11 +226,14 @@ function loadCookie() {
     
    document.getElementsByName('RndmStart')[0].checked = !!cookieobj.rstrt;
    document.getElementsByName('RndmStart')[0].onchange();
-
-   document.getElementsByName('Rescue1')[0].checked = !!cookieobj.carp;
-   document.getElementsByName('Rescue1')[0].onchange();
    
-   for (rbuttonID in document.getElementsByName('rainbowbridge')) {
+   for (rbuttonID in document.getElementsByName('carpenters')) {
+      rbutton = document.getElementsByName('carpenters')[rbuttonID]
+      if (rbutton.value == cookieobj.carp)
+         rbutton.click();
+   }
+    
+    for (rbuttonID in document.getElementsByName('rainbowbridge')) {
       rbutton = document.getElementsByName('rainbowbridge')[rbuttonID]
       if (rbutton.value == cookieobj.rainlogic)
          rbutton.click();
@@ -329,9 +336,13 @@ function saveCookie() {
    cookieobj.ladin = document.getElementsByName('Aladdin')[0].checked ? 1 : 0;
    cookieobj.rstrt = document.getElementsByName('RndmStart')[0].checked ? 1 : 0;
     
-   cookieobj.carp = document.getElementsByName('Rescue1')[0].checked ? 1 : 0;
-
-   for (rbuttonID in document.getElementsByName('rainbowbridge')) {
+   for (rbuttonID in document.getElementsByName('carpenters')) {
+      rbutton = document.getElementsByName('carpenters')[rbuttonID]
+      if (rbutton.checked)
+         cookieobj.carp = rbutton.value;
+   }
+    
+    for (rbuttonID in document.getElementsByName('rainbowbridge')) {
       rbutton = document.getElementsByName('rainbowbridge')[rbuttonID]
       if (rbutton.checked)
          cookieobj.rainlogic = rbutton.value;
@@ -765,8 +776,11 @@ function setFortressLogic(sender) {
 }
 
 function setCarpenter(sender) {
-   Rescue1 = sender.checked;
-   if (Rescue1 == 1 && keyimg >= 2) {
+   carpenters = sender.checked;
+   if (carpenters == 1 && keyimg >= 2) {
+      keyimg = 0;
+   }
+   else if (carpenters == 4 && keyimg >= 5) {
       keyimg = 0;
    }
    updateGridItemAll();
@@ -1392,15 +1406,15 @@ function gridItemClick(row, col, corner) {
             }
         }
         else if (fortresskeys[item] !== undefined) {
-            if (smallkeys == "Keysanity") {
+            if (fortkeys !== "Fight") {
                 if (corner == 3) {
                     fortresskeys[item]++;
-                    if (Rescue1) {
+                    if (carpenters == 1) {
                         if (fortresskeys[item] >= 2) {
                             fortresskeys[item] = 0;
                         }
                     }
-                    if (!Rescue1) {
+                    if (carpenters == 4) {
                         if (fortresskeys[item] >= 5) {
                             fortresskeys[item] = 0;
                         }
