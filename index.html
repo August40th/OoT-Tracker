@@ -38,7 +38,6 @@
                         <legend>Items: 
                         <input type="range" name='itemdivsize' value='100' max='200' min='1' onchange="setZoom('itemdiv', this)">
                         <span id='itemdivsize'>100%</span> </legend>
-                        <input type="checkbox" name="showmap" checked='true' onchange="showTracker('mapdiv', this)">Map
                         <legend>Map: <input type="range" name='mapdivsize' value='100' max='200' min='1' onchange="setZoom('mapdiv', this)">
                         <span id='mapdivsize'>100%</span> </legend>
                     </fieldset>    
@@ -47,7 +46,7 @@
                                 <center> <input type='checkbox' name='OpenDeku' checked='true' onchange="setTree(this)">Open Deku Tree
                                 <input type='checkbox' name='OpenDoor' checked='true' onchange="setDoor(this)">Open Door of Time <br>
                                 <input type='checkbox' name='OpenFountain' checked='false' onchange="setFountain(this)">Open Zora Fountain
-                        <legend>Big Poes: 2 <input type="range" name='poecount' value='1' max='9' min='1' onchange="setPoes(this)">
+                        <legend>Big Poes: 1 <input type="range" name='poecount' value='1' max='9' min='1' onchange="setPoes(this)">
                         <span id='poecount'> 9 </span> </legend>
                         <hr>
                         <legend> Quest 
@@ -85,7 +84,6 @@
                                     <input type='radio' name='fortkeys' value='Overworld' checked='true' onclick="setFortKeys(this)">Overworld<br>
                                     <center><input type='radio' name='fortkeys' value='Dungeons' checked='true' onclick="setFortKeys(this)">Dungeons
                                     <input type='radio' name='fortkeys' value='Keysanity' checked='true' onclick="setFortKeys(this)">Keysanity<br>
-                                <hr>
                                 Carpenters: 
                                     <input type='radio' name='carpenters' value=4 onchange="setCarpenter(this)">All 4
                                     <input type='radio' name='carpenters' value=1 onchange="setCarpenter(this)">Just 1                          
@@ -103,7 +101,6 @@
                     <legend>Sanity</legend>
                     <fieldset>
                         <legend>Dungeon Keys</legend>
-                        Small:
                             <input type='radio' name='smallkeys' value='Remove' onclick="setSmallKeys(this)">Keysy
                             <input type='radio' name='smallkeys' value='Vanilla' checked='true' onclick="setSmallKeys(this)">Van. chest
                             <input type='radio' name='smallkeys' value='Dungeon' checked='true' onclick="setSmallKeys(this)">Van. Dungon<br>
@@ -123,10 +120,9 @@
                         Skulltula: 
                         <input type='radio' name='skulltula' value='Off' checked='true' onclick="setSkulltula(this)">Off
                         <input type='radio' name='skulltula' value='Dungeons' onclick="setSkulltula(this)">Dungeons <br>
-                        <input type='radio' name='skulltula' value='Overworld' onclick="setSkulltula(this)">Overworld
+                        <center><input type='radio' name='skulltula' value='Overworld' onclick="setSkulltula(this)">Overworld
                         <input type='radio' name='skulltula' value='All' onclick="setSkulltula(this)">All<br>
                         <hr>
-                        <center>
                         <input type='checkbox' name='scrubs' checked='false' onclick="setScrub(this)">Scrubs
                         <input type='checkbox' name='Cowsanity' checked='false' onchange="setCows(this)">Cow Milk<br>
                         </center>
@@ -147,17 +143,20 @@
                         <input type='checkbox' name='BombchuLogic' checked='false' onchange="setBombchu(this)">Bombchu IN Logic
                     </fieldset>
                     <fieldset> <legend>Losing Your Mind</legend>
-                        Songs<input type='radio' name='SongShuffle' value='Songs' onchange="setSongs(this)">Song Pool
+                        <legend>Songs: <input type='radio' name='SongShuffle' value='Songs' onchange="setSongs(this)">Song Pool</legend>
                         <input type='radio' name='SongShuffle' value='Bosses' onchange="setSongs(this)">Dungeons
                         <input type='radio' name='SongShuffle' value='Songsanity' onchange="setSongs(this)">Songsanity<be>
+                        <hr>
                         <legend>Entrance Randomizer</legend>
+                            <input type='checkbox' name='Owls' checked='false' onchange="setOwls(this)">Owl Drops
+                            <input type='checkbox' name='Warps' checked='false' onchange="setWarps(this)">Warp Songs<br>
                             <input type='radio' name='IndoorER' value='Simple' onclick="setIndoorER(this)">Simple Indoors
                             <input type='radio' name='IndoorER' value='Full' onclick="setIndoorER(this)">All Indoors
                             <input type='radio' name='IndoorER' value='Off' onclick="setIndoorER(this)">Off<br>
                             <input type='checkbox' name='GrottoER' checked='false' onchange="setGrottoER(this)">Grottos
                             <input type='checkbox' name='DungeonER' checked='false' onchange="setDER(this)">Dungeons
                             <input type='checkbox' name='OWERmap' checked='false' onchange="setOWER(this)">Overworld <br>
-                            <input type='checkbox' name='Decouple' checked='false' onchange="setDecouple(this)">Mix ER Pools<br>
+                            <input type='checkbox' name='Decouple' checked='false' onchange="setMixed(this)">Mix ER Pools<br>
                     </fieldset>    
                     </fieldset>
                     </fieldset>
