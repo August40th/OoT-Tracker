@@ -568,7 +568,7 @@ function clickDungeon(d) {
             continue;}
         if ( dungeons[dungeonSelect] == dungeons[28] && dungeons[dungeonSelect].chestlist[key].type == "guard" && fortkeys !== "Fight" ) { //Fortress Guard checks
             continue;}
-        if ( dungeons[dungeonSelect] == dungeons[28] && dungeons[dungeonSelect].chestlist[key].type == "membership" && gerudobridge !== "Shuffle" && fortkeys !== "Fight" && ( carpenters ==0 || (carpenters == 1 && keyimg == 1) || (carpenters == 4 && keyimg == 4) ) ) { //Fortress Guard checks
+        if ( dungeons[dungeonSelect] == dungeons[28] && dungeons[dungeonSelect].chestlist[key].type == "membership" && gerudobridge !== "Shuffle" ) { //Fortress Guard checks
             continue;}
         if (dungeons[dungeonSelect].chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
             continue;}
@@ -1618,7 +1618,7 @@ function updateMap() {
                 continue;}
             if ( dungeons[k] == dungeons[28] && dungeons[k].chestlist[key].type == "guard" && fortkeys !== "Fight" ) { //Fortress Guard checks
                 continue;}
-            if ( dungeons[k] == dungeons[28] && dungeons[k].chestlist[key].type == "membership" && gerudobridge !== "Shuffle" && fortkeys !== "Fight" && ( carpenters ==0 || (carpenters == 1 && keyimg == 1) || (carpenters == 4 && keyimg == 4) ) ) { //Fortress Guard checks
+            if ( dungeons[k] == dungeons[28] && dungeons[k].chestlist[key].type == "membership" && gerudobridge !== "Shuffle" ) { //Fortress Guard checks
                 continue;}
             if (dungeons[k].chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
                 continue;}
@@ -1789,7 +1789,7 @@ function populateMapdiv() {
                 continue;}
             if ( dungeons[k] == dungeons[28] && dungeons[k].chestlist[key].type == "guard" && fortkeys !== "Fight" ) { //Fortress Guard checks
                 continue;}
-            if ( dungeons[k] == dungeons[28] && dungeons[k].chestlist[key].type == "membership" && gerudobridge !== "Shuffle" && fortkeys !== "Fight" && ( carpenters ==0 || (carpenters == 1 && keyimg == 1) || (carpenters == 4 && keyimg == 4) ) ) { //Fortress Guard checks
+            if ( dungeons[k] == dungeons[28] && dungeons[k].chestlist[key].type == "membership" && gerudobridge !== "Shuffle" ) { //Fortress Guard checks
                 continue;}
             if (dungeons[k].chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
                 continue;}
@@ -1902,7 +1902,7 @@ function populateMapdiv() {
             continue;}
         if ( dungeons[dungeonSelect] == dungeons[28] && dungeons[dungeonSelect].chestlist[key].type == "guard" && fortkeys !== "Fight" ) { //Fortress Guard checks
             continue;}
-        if ( dungeons[dungeonSelect] == dungeons[28] && dungeons[dungeonSelect].chestlist[key].type == "membership" && gerudobridge !== "Shuffle" && fortkeys !== "Fight" && ( carpenters ==0 || (carpenters == 1 && keyimg == 1) || (carpenters == 4 && keyimg == 4) ) ) { //Fortress Guard checks
+        if ( dungeons[dungeonSelect] == dungeons[28] && dungeons[dungeonSelect].chestlist[key].type == "membership" && gerudobridge !== "Shuffle" ) { //Fortress Guard checks
             continue;}
         if (dungeons[dungeonSelect].chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
             continue;}
