@@ -1462,26 +1462,16 @@ function gridItemClick(row, col, corner) {
             else {
                 items[item] = !items[item];
             }
-        }
-        else if (fortresskeys[item] !== undefined) {
-            if (fortkeys !== "Fight") {
-                if (corner == 3) {
-                    fortresskeys[item]++;
-                    if (carpenters == 1) {
-                        if (fortresskeys[item] >= 2) {
-                            fortresskeys[item] = 0;
-                        }
-                    }
-                    else if (carpenters == 4) {
-                        if (fortresskeys[item] >= 5) {
-                            fortresskeys[item] = 0;
-                        }
-                    }
-                    else {
-                        items[item] = !items[item];
-                    }
-                }
-            }
+        } else if (fortresskeys[item] !== undefined) {
+          if (corner == 3) {
+             fortresskeys[item]++;
+             if (fortresskeys[item] >= 2 && carpenters == 1)
+                fortresskeys[item] = 0;
+             else if (fortresskeys[item] >= 5  && carpenters == 4)
+                fortresskeys[item] = 0;
+          } else {
+             items[item] = !items[item];
+          }
        } else if (songs[item] !== undefined) {
           if (corner == 3) {
              songs[item]++;
