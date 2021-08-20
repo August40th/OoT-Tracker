@@ -1477,11 +1477,10 @@ function gridItemClick(row, col, corner) {
                             fortresskeys[item] = 0;
                         }
                     }
-                } else {
-                    items[item] = !items[item];
+                    else {
+                        items[item] = !items[item];
+                    }
                 }
-            } else {
-                items[item] = !items[item];
             }
        } else if (songs[item] !== undefined) {
           if (corner == 3) {
