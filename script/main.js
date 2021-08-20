@@ -52,8 +52,9 @@ shopsize = 0;
 Cowsanity = false;
 quest = 'Vanilla';
 
+Ksword = false;
 OcarinaShuffle = false;
-SongShuffle = false;
+SongShuffle = 'Songs';
 WeirdEgg = false;
 BeanShuffle = false;
 
@@ -72,6 +73,8 @@ GrottoER = false;
 IndoorER = 'Off';
 OWERmap = false;
 DungeonER = false;
+Owls = false;
+Warps = false;
 
 Age = 'Child';
 RndmStart = false;
@@ -668,14 +671,14 @@ function unhighlightDungeonChest(x) {
     x.style.backgroundColor = '';
 }
 
-function setOrder(H) {
-   if (H) {
-      document.getElementById('layoutdiv').classList.remove('flexcontainer');
-   } else {
-      document.getElementById('layoutdiv').classList.add('flexcontainer');
-   }
-   saveCookie();
-}
+//function setOrder(H) {
+/   if (H) {
+ //     document.getElementById('layoutdiv').classList.remove('flexcontainer');
+   //} else {
+     // document.getElementById('layoutdiv').classList.add('flexcontainer');
+//   }
+ //  saveCookie();
+//}
 
 function setRainbow(sender) {
    rainbowbridge = sender.value;
@@ -711,9 +714,7 @@ function setTrialSize(sender) {
 
 function setprizesize(sender) {
    prizesize = sender.value;
-    
    updateMap();
-    
    saveCookie();
 }
 
@@ -764,10 +765,24 @@ function setQuest(sender) {
    saveCookie();
 }
 
+function setPoes(sender) {
+    poecount = sender.value;
+    itemsMax.BigPoe = poecount;
+    updateGridItemAll();
+   saveCookie();
+}
+
+function setFortKeys(sender) {
+    fortkeys = sender.value;
+   updateMap();
+   saveCookie();
+}
+
 function setFortressLogic(sender) {
    gerudobridge = sender.value;
    if (gerudobridge == 'Start') {
       items.Membership = true;
+       setFortKeys('Fight');
    }
    updateGridItemAll();
     
@@ -783,7 +798,10 @@ function setCarpenter(sender) {
    else if (carpenters == 4 && keyimg >= 5) {
       keyimg = 0;
    }
-   updateGridItemAll();
+   if (carpenters == 0) {
+      setFortKeys('Fight');
+    }
+    updateGridItemAll();
     
    updateMap();
    saveCookie();
@@ -792,34 +810,34 @@ function setCarpenter(sender) {
 function setSmallKeys(sender) {
    smallkeys = sender.value;
    if (smallkeys == 'Remove') {
-      items.ForestKey = 5;
-      items.FireKey = 8;
-      items.WaterKey = 6;
-      items.ShadowKey = 5;
-      items.SpiritKey = 5;
-      items.CastleKey = 2;
-      items.GTGKey = 9;
-      items.WellKey = 3;
+      itemsMax.ForestKey = 0;
+      itemsMax.FireKey = 0;
+      itemsMax.WaterKey = 0;
+      itemsMax.ShadowKey = 0;
+      itemsMax.SpiritKey = 0;
+      itemsMax.CastleKey = 0;
+      itemsMax.GTGKey = 0;
+      itemsMax.WellKey = 0;
    }
    if (smallkeys == 'Dungeons') {
-      items.ForestKey = 5;
-      items.FireKey = 8;
-      items.WaterKey = 6;
-      items.ShadowKey = 5;
-      items.SpiritKey = 5;
-      items.CastleKey = 2;
-      items.GTGKey = 9;
-      items.WellKey = 3;
+      itemsMax.ForestKey = 5;
+      itemsMax.FireKey = 8;
+      itemsMax.WaterKey = 6;
+      itemsMax.ShadowKey = 5;
+      itemsMax.SpiritKey = 5;
+      itemsMax.CastleKey = 2;
+      itemsMax.GTGKey = 9;
+      itemsMax.WellKey = 3;
    }
    if (smallkeys == 'Keysanity') {
-      items.ForestKey = 0;
-      items.FireKey = 0;
-      items.WaterKey = 0;
-      items.ShadowKey = 0;
-      items.SpiritKey = 0;
-      items.CastleKey = 0;
-      items.GTGKey = 0;
-      items.WellKey = 0;
+      itemsMax.ForestKey = 5;
+      itemsMax.FireKey = 8;
+      itemsMax.WaterKey = 6;
+      itemsMax.ShadowKey = 5;
+      itemsMax.SpiritKey = 5;
+      itemsMax.CastleKey = 2;
+      itemsMax.GTGKey = 9;
+      itemsMax.WellKey = 3;
    }
    updateGridItemAll();
     
@@ -830,25 +848,25 @@ function setSmallKeys(sender) {
 function setBossKeys(sender) {
    bosskeys = sender.value;
    if (bosskeys == 'Remove') {
-      items.BossForest = 1;
-      items.BossFire = 1;
-      items.BossWater = 1;
-      items.BossShadow = 1;
-      items.BossSpirit = 1;
+      itemsMax.BossForest = 0;
+      itemsMax.BossFire = 0;
+      itemsMax.BossWater = 0;
+      itemsMax.BossShadow = 0;
+      itemsMax.BossSpirit = 0;
    }
    if (bosskeys == 'Dungeons') {
-      items.BossForest = 1;
-      items.BossFire = 1;
-      items.BossWater = 1;
-      items.BossShadow = 1;
-      items.BossSpirit = 1;
+      itemsMax.BossForest = 1;
+      itemsMax.BossFire = 1;
+      itemsMax.BossWater = 1;
+      itemsMax.BossShadow = 1;
+      itemsMax.BossSpirit = 1;
    }
    if (bosskeys == 'Keysanity') {
-      items.BossForest = 0;
-      items.BossFire = 0;
-      items.BossWater = 0;
-      items.BossShadow = 0;
-      items.BossSpirit = 0;
+      itemsMax.BossForest = 1;
+      itemsMax.BossFire = 1;
+      itemsMax.BossWater = 1;
+      itemsMax.BossShadow = 1;
+      itemsMax.BossSpirit = 1;
    }
    updateGridItemAll();
    updateMap();
@@ -863,7 +881,7 @@ function setSkulltula(sender) {
 }
 
 function setScrub(sender) {
-   scrubs = sender.value;
+   scrubs = sender.checked;
     
    updateMap();
    saveCookie();
@@ -907,7 +925,7 @@ function setOcarina(sender) {
 }
 
 function setSongs(sender) {
-   SongShuffle = sender.checked;
+   SongShuffle = sender.value;
    updateGridItemAll();
    saveCookie();
 }
@@ -950,7 +968,6 @@ function setGrottoER(sender) {
    GrottoER = sender.checked;
    updateMap();
     
-   //if (IndoorER !== "Off") drawIndoorChecks();
    saveCookie();
 }
 
@@ -958,7 +975,6 @@ function setIndoorER(sender) {
    IndoorER = sender.value;
    updateMap();
     
-   //if (IndoorER !== "Off") drawIndoorChecks();
    saveCookie();
 }
 
@@ -1013,6 +1029,24 @@ function setCarpet(sender) {
 
 function setBombchu(sender) {
    BombchuLogic = sender.checked;
+   updateMap();
+   saveCookie();
+}
+
+function setKsword(sender) {
+   Ksword = sender.checked;
+   updateMap();
+   saveCookie();
+}
+
+function setOwls(sender) {
+   Owls = sender.checked;
+   updateMap();
+   saveCookie();
+}
+
+function setWarps(sender) {
+   Warps = sender.checked;
    updateMap();
    saveCookie();
 }
