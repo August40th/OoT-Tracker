@@ -1053,10 +1053,6 @@ function setBombchu(sender) {
 
 function setKsword(sender) {
    Ksword = sender.checked;
-    if (Ksword)
-      itemsMin.KokiriSword = 0;
-   else itemsMin.KokiriSword = 1;
-   items.KokiriSword = itemsMin.KokiriSword;
     
    updateMap();
    saveCookie();
