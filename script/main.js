@@ -42,7 +42,7 @@ maxprize = 0;
 
 gerudobridge = 'Default';
 fortkeys = 'Fight'
-carpenters = true;
+carpenters = 1;
 smallkeys = 'Dungeons';
 
 bosskeys = 'Dungeons';
@@ -806,9 +806,8 @@ function setFortressLogic(sender) {
    gerudobridge = sender.value;
    if (gerudobridge == 'Start') {
       items.Membership = true;
-       setFortKeys('Fight');
-       setCarpenter(0);
    }
+    else items.Membership = false;
    updateGridItemAll();
     
    updateMap();
@@ -823,10 +822,7 @@ function setCarpenter(sender) {
    else if (carpenters == 4 && keyimg >= 5) {
       keyimg = 0;
    }
-   if (carpenters == 0) {
-      setFortKeys('Fight');
-      setFortressLogic('Start');
-    }
+  
     updateGridItemAll();
     
    updateMap();
@@ -1476,7 +1472,7 @@ function gridItemClick(row, col, corner) {
                             fortresskeys[item] = 0;
                         }
                     }
-                    if (carpenters == 4) {
+                    else if (carpenters == 4) {
                         if (fortresskeys[item] >= 5) {
                             fortresskeys[item] = 0;
                         }
