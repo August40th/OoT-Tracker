@@ -1465,10 +1465,10 @@ function gridItemClick(row, col, corner) {
         } else if (fortresskeys[item] !== undefined) {
           if (corner == 3) {
              fortresskeys[item]++;
-             if (fortresskeys[item] >= 2 && carpenters == 1)
-                fortresskeys[item] = 0;
-             if (fortresskeys[item] >= 5 && carpenters == 4)
-                fortresskeys[item] = 0;
+             if (keyimg >= 2 && carpenters == 1)
+                keyimg = 0;
+             if (keyimg >= 5 && carpenters == 4)
+                keyimg = 0;
           } else {
              items[item] = !items[item];
           }
