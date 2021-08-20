@@ -7518,14 +7518,16 @@ var dungeons = [
       found: true,
       chestlist: {
          'Lake to Field': {
-            x: "39.0%",
-            y: "70.0%",
+            x: "32.0%",
+            y: "02.0%",
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
                   return true; }
          },
          'Beside Lab Gossip': {
+            x: "10.0%",
+            y: "48.0%",
             type: "gossip", 
             access: "outdoor",
             isAvailable: function () {
@@ -7534,6 +7536,8 @@ var dungeons = [
             }
          },
          'Soil Patch Skulltula': {
+            x: "25.0%",
+            y: "48.0%",
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
@@ -7542,6 +7546,8 @@ var dungeons = [
             }
          },
          ['Child Underwater Freestanding']: {
+            x: "46.0%",
+            y: "46.0%",
             type: "freestanding", 
             access: "outdoor",
             isAvailable: function () {
@@ -7550,8 +7556,8 @@ var dungeons = [
             }
          },
          'Lake to Domain': {
-            x: "39.3%",
-            y: "80.0%",
+            x: "46.3%",
+            y: "48.0%",
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
@@ -7559,12 +7565,16 @@ var dungeons = [
             ; }
          },
          'Laboratory': {
+            x: "27.0%",
+            y: "50.0%",
             type: "simple", 
             access: "door",
             isAvailable: function () {
                return OWERmap == false || dungeons[26].found == true; }
          },
          'Lab Crate Skulltula': {
+            x: "24.0%",
+            y: "46.0%",
             type: "skulltula", 
             access: "simple",
             isAvailable: function () {
@@ -7573,6 +7583,8 @@ var dungeons = [
             }
          },
          ['Diving in the Lab']: {
+            x: "27.0%",
+            y: "50.0%",
             type: "NPC", 
             access: "simple",
             isAvailable: function () {
@@ -7584,6 +7596,8 @@ var dungeons = [
             }
          },
          ['Lab Roof Freestanding']: {
+            x: "24.0%",
+            y: "48.0%",
             type: "freestanding", 
             access: "outdoor",
             isAvailable: function () {
@@ -7595,6 +7609,8 @@ var dungeons = [
             }
          },
          'Lab Wall Skulltula': {
+            x: "24.0%",
+            y: "52.0%",
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
@@ -7603,9 +7619,9 @@ var dungeons = [
             }
          },
          'Lake Owl': {
-            x: "32.0%",
-            y: "83.5%",
-            type: "entrance", 
+            x: "19.0%",
+            y: "62.5%",
+            type: "owl", 
             access: "entrance",
              isAvailable: function () {
                   return (OWERmap == false || dungeons[26].found == true) &&
@@ -7613,12 +7629,16 @@ var dungeons = [
             }
          },
          'Lake Hylia Grave': {
+            x: "16.4%",
+            y: "65.0%",
             type: "grotto", 
             access: "grotto",
             isAvailable: function () {
                return OWERmap == false || dungeons[26].found == true; }
          },
          'Grave Pull Scrub x3': {
+            x: "16.4%",
+            y: "65.0%",
             type: "scrub", 
             access: "grotto",
             isAvailable: function () {
@@ -7626,12 +7646,16 @@ var dungeons = [
             },
          },
          'Serenade Warp': {
+            x: "46.4%",
+            y: "68.0%",
             type: "warp", 
             access: "warp",
                isAvailable: function () {
                   return items.Ocarina && items.SerenadeoffWater; }
          },
          'Top of Tree Skulltula': {
+            x: "50.0%",
+            y: "68.0%",
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
@@ -7640,6 +7664,8 @@ var dungeons = [
             }
          },
          'Perimeter of Lake 1': {
+            x: "15.0%",
+            y: "78.0%",
             type: "gossip", 
             access: "outdoor",
             isAvailable: function () {
@@ -7647,6 +7673,8 @@ var dungeons = [
             }
          },
          'Perimeter of Lake 2': {
+            x: "75.4%",
+            y: "80.0%",
             type: "gossip", 
             access: "outdoor",
             isAvailable: function () {
@@ -7654,6 +7682,8 @@ var dungeons = [
             }
          },
          'Fishing Pond': {
+            x: "70.4%",
+            y: "52.0%",
             type: "simple", 
             access: "door",
             isAvailable: function () {
@@ -7666,6 +7696,8 @@ var dungeons = [
             }
          },
          ['Child Fishing']: {
+            x: "74.7%",
+            y: "52.0%",
             type: "NPC", 
             access: "simple",
             isAvailable: function () {
@@ -7674,6 +7706,8 @@ var dungeons = [
             }
          },
          ['Adult Fishing']: {
+            x: "74.7%",
+            y: "47.4%",
             type: "NPC", 
             access: "simple",
             isAvailable: function () {
@@ -7685,6 +7719,8 @@ var dungeons = [
             }
          },
          ['Shoot the Sun']: {
+            x: "63.6%",
+            y: "66.0%",
             type: "freestanding", 
             access: "outdoor",
             isAvailable: function () {
@@ -7694,6 +7730,8 @@ var dungeons = [
             }
          },
          'Fire Arrow Island Skulltula': {
+            x: "63.0%",
+            y: "63.0%",
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
@@ -7702,6 +7740,8 @@ var dungeons = [
             }
          },
          'Water Temple': {
+            x: "48.4%",
+            y: "72.0%",
             type: "dungeon", 
             access: "door",
                isAvailable: function () {
@@ -7726,14 +7766,16 @@ var dungeons = [
       found: true,
       chestlist: {
          'Valley to Field': {
-            x: "30.0%",
-            y: "37.5%",
+            x: "87.0%",
+            y: "50.0%",
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
                   return true; }
          },
          'Right of Plank Skulltula': {
+            x: "70.0%",
+            y: "42.0%",
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
@@ -7742,6 +7784,8 @@ var dungeons = [
             }
          },
          ['Crate Freestanding']: {
+            x: "45.0%",
+            y: "68.0%",
             type: "freestanding", 
             access: "outdoor",
             isAvailable: function () {
@@ -7751,12 +7795,16 @@ var dungeons = [
             }
          },
          ['Waterfall Freestanding']: {
+            x: "50.0%",
+            y: "02.0%",
             type: "freestanding", 
             access: "outdoor",
             isAvailable: function () {
                return OWERmap == false || dungeons[27].found == true}
          },
          'Waterfall Gossip': {
+            x: "42.0%",
+            y: "12.0%",
             type: "gossip", 
             access: "outdoor",
             isAvailable: function () {
@@ -7764,6 +7812,8 @@ var dungeons = [
             }
          },
          ['Valley Cow Milk']: {
+            x: "46.0%",
+            y: "54.0%",
             type: "cow", 
             access: "outdoor",
             isAvailable: function () {
@@ -7772,6 +7822,8 @@ var dungeons = [
             }
          },
          'Soil Patch Skulltula': {
+            x: "42.0%",
+            y: "58.0%",
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
@@ -7780,6 +7832,8 @@ var dungeons = [
             }
          },
          'Silver Rock Grotto': {
+            x: "58.0%",
+            y: "63.0%",
             type: "grotto", 
             access: "grotto",
             isAvailable: function () {
@@ -7788,6 +7842,8 @@ var dungeons = [
             }
          },
          'Above Hammer Rocks Skulltula': {
+            x: "38.0%",
+            y: "48.0%",
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
@@ -7797,6 +7853,8 @@ var dungeons = [
             }
          },
          ['Hammer Rocks Chest']: {
+            x: "32.0%",
+            y: "52.0%",
             type: "chest", 
             access: "outdoor",
             isAvailable: function () {
@@ -7806,6 +7864,8 @@ var dungeons = [
             }
          },
          'Carpenter Tent': {
+            x: "42.0%",
+            y: "42.0%",
             type: "simple", 
             access: "door",
             isAvailable: function () {
@@ -7815,6 +7875,8 @@ var dungeons = [
             }
          },
          'Behind Tent Skulltula': {
+            x: "25.0%",
+            y: "28.0%",
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
@@ -7824,6 +7886,8 @@ var dungeons = [
             }
          },
          'Song of Storms Grotto': {
+            x: "29.0%",
+            y: "29.0%",
             type: "grotto", 
             access: "grotto",
             isAvailable: function () {
@@ -7833,6 +7897,8 @@ var dungeons = [
             }
          },
          'Storms Grotto behind Tent': {
+            x: "29.0%",
+            y: "29.0%",
             type: "scrub", 
             access: "grotto",
             isAvailable: function () {
@@ -7842,8 +7908,8 @@ var dungeons = [
             }
          },
          'Valley to Fortress': {
-            x: "20.0%",
-            y: "37.0%",
+            x: "02.0%",
+            y: "30.0%",
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
@@ -7865,14 +7931,16 @@ var dungeons = [
       found: true,
       chestlist: {
          'Fortress to Valley': {
-            x: "18.0%",
-            y: "31.5%",
+            x: "32.0%",
+            y: "82.0%",
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
                   return true; }
          },
          'Fortress Storms Grotto': {
+            x: "42.0%",
+            y: "57.0%",
             type: "grotto", 
             access: "grotto",
             isAvailable: function () {
@@ -7883,6 +7951,8 @@ var dungeons = [
             }
          },
          ['Guard Fight']: {
+            x: "42.0%",
+            y: "48.0%",
             type: "guard", 
             access: "outdoor",
             isAvailable: function () {
@@ -7893,6 +7963,8 @@ var dungeons = [
             }
          },
          'Fortress Skulltula': {
+            x: "54.0%",
+            y: "50.0%",
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
@@ -7903,6 +7975,8 @@ var dungeons = [
             }
          },
          ['Rooftop Chest']: {
+            x: "46.0%",
+            y: "46.0%",
             type: "chest", 
             access: "outdoor",
             isAvailable: function () {
@@ -7913,6 +7987,8 @@ var dungeons = [
             }
          },
          'Gerudo Training Grounds': {
+            x: "37.0%",
+            y: "67.0%",
             type: "dungeon", 
             access: "door",
                isAvailable: function () {
@@ -7920,6 +7996,8 @@ var dungeons = [
             }
          },
          ['Horseback Archery 1000 pts']: {
+            x: "78.0%",
+            y: "72.0%",
             type: "NPC", 
             access: "outdoor",
             isAvailable: function () {
@@ -7927,6 +8005,8 @@ var dungeons = [
             }
          },
          ['Horseback Archery 1500 pts']: {
+            x: "72.0%",
+            y: "72.0%",
             type: "NPC", 
             access: "outdoor",
             isAvailable: function () {
@@ -7934,6 +8014,8 @@ var dungeons = [
             }
          },
          'Archery Target Skulltula': {
+            x: "70.0%",
+            y: "14.0%",
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
@@ -7944,8 +8026,8 @@ var dungeons = [
             }
          },
          'Fortress to Wasteland': {
-            x: "17.0%",
-            y: "23.4%",
+            x: "04.0%",
+            y: "37.0%",
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
