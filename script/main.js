@@ -1314,7 +1314,7 @@ function updateGridItem(row, index) {
 
     itemGrid[row][index]['item'].className = 'griditem ' + !!items[item];
    if (fortresskeys[item] !== undefined) {
-      if (smallkeys == 'Keysanity' && gerudobridge != 'Start')
+      if (fortkeys !== 'Fight' && gerudobridge !== 'Start')
          itemGrid[row][index][3].style.backgroundImage = "url(images/" + keyimg[fortresskeys[item]] + ".png)";
       else
          itemGrid[row][index][3].style.backgroundImage = "";
