@@ -56,7 +56,7 @@ function generalCanGetChest(chestlist) {
             continue;}
         if ( chestlist[key].access == "no OWER" && chestlist[key].type == "ocarina" && ((OWERmap == true && OcarinaShuffle == true) || OcarinaShuffle == false) ) { //OWER Ocarina shuffle
             continue;}
-        if ( chestlist[key].type == "guard" && fortkeys !== "Fight" ) { //Fortress Guard checks
+        if ( chestlist[key].type == "guard" && fortkeys == "Fight" ) { //Fortress Guard checks
             continue;}
         if ( chestlist[key].type == "membership" && gerudobridge !== "Shuffle" ) { //Fortress Guard checks
             continue;}
