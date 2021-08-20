@@ -566,7 +566,9 @@ function clickDungeon(d) {
             continue;}
         if ( dungeons[dungeonSelect].chestlist[key].type == "ocarina" && dungeons[dungeonSelect] == dungeons[0] && ((OWERmap == true && OcarinaShuffle == true) || OcarinaShuffle == false) ) { //Ocarina shuffle for no OWER
             continue;}
-        if ( dungeons[dungeonSelect] == dungeons[28] && dungeons[dungeonSelect].chestlist[key].type == "guard" && gerudobridge !== "Default" && smallkeys == "Keysanity" ) { //Fortress Guard checks
+        if ( dungeons[dungeonSelect] == dungeons[28] && dungeons[dungeonSelect].chestlist[key].type == "guard" && fortkeys !== "Fight" ) { //Fortress Guard checks
+            continue;}
+        if ( dungeons[dungeonSelect] == dungeons[28] && dungeons[dungeonSelect].chestlist[key].type == "membership" && gerudobridge !== "Shuffle" && fortkeys !== "Fight" && ( carpenters ==0 || (carpenters == 1 && keyimg == 1) || (carpenters == 4 && keyimg == 4) ) ) { //Fortress Guard checks
             continue;}
         if (dungeons[dungeonSelect].chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
             continue;}
@@ -796,7 +798,7 @@ function setPoes(sender) {
 
 function setFortKeys(sender) {
     fortkeys = sender.value;
-   updateMap();
+    updateGridItemAll();
    saveCookie();
 }
 
@@ -805,6 +807,7 @@ function setFortressLogic(sender) {
    if (gerudobridge == 'Start') {
       items.Membership = true;
        setFortKeys('Fight');
+       setCarpenter(0);
    }
    updateGridItemAll();
     
@@ -822,6 +825,7 @@ function setCarpenter(sender) {
    }
    if (carpenters == 0) {
       setFortKeys('Fight');
+      setFortressLogic('Start');
     }
     updateGridItemAll();
     
@@ -1612,7 +1616,9 @@ function updateMap() {
                 continue;}
             if ( dungeons[k].chestlist[key].type == "ocarina" && dungeons[k] == dungeons[0] && ((OWERmap == true && OcarinaShuffle == true) || OcarinaShuffle == false) ) { //Ocarina shuffle for no OWER
                 continue;}
-            if ( dungeons[k] == dungeons[28] && dungeons[k].chestlist[key].type == "guard" && gerudobridge !== "Default" && smallkeys == "Keysanity" ) { //Fortress Guard checks
+            if ( dungeons[k] == dungeons[28] && dungeons[k].chestlist[key].type == "guard" && fortkeys !== "Fight" ) { //Fortress Guard checks
+                continue;}
+            if ( dungeons[k] == dungeons[28] && dungeons[k].chestlist[key].type == "membership" && gerudobridge !== "Shuffle" && fortkeys !== "Fight" && ( carpenters ==0 || (carpenters == 1 && keyimg == 1) || (carpenters == 4 && keyimg == 4) ) ) { //Fortress Guard checks
                 continue;}
             if (dungeons[k].chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
                 continue;}
@@ -1781,7 +1787,9 @@ function populateMapdiv() {
                 continue;}
             if ( dungeons[k].chestlist[key].type == "ocarina" && dungeons[k] == dungeons[0] && ((OWERmap == true && OcarinaShuffle == true) || OcarinaShuffle == false) ) { //Ocarina shuffle for no OWER
                 continue;}
-            if ( dungeons[k] == dungeons[28] && dungeons[k].chestlist[key].type == "guard" && gerudobridge !== "Default" && smallkeys == "Keysanity" ) { //Fortress Guard checks
+            if ( dungeons[k] == dungeons[28] && dungeons[k].chestlist[key].type == "guard" && fortkeys !== "Fight" ) { //Fortress Guard checks
+                continue;}
+            if ( dungeons[k] == dungeons[28] && dungeons[k].chestlist[key].type == "membership" && gerudobridge !== "Shuffle" && fortkeys !== "Fight" && ( carpenters ==0 || (carpenters == 1 && keyimg == 1) || (carpenters == 4 && keyimg == 4) ) ) { //Fortress Guard checks
                 continue;}
             if (dungeons[k].chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
                 continue;}
@@ -1892,7 +1900,9 @@ function populateMapdiv() {
             continue;}
         if ( dungeons[dungeonSelect].chestlist[key].type == "ocarina" && dungeons[dungeonSelect] == dungeons[0] && ((OWERmap == true && OcarinaShuffle == true) || OcarinaShuffle == false) ) { //Ocarina shuffle for no OWER
             continue;}
-        if ( dungeons[dungeonSelect] == dungeons[28] && dungeons[dungeonSelect].chestlist[key].type == "guard" && gerudobridge !== "Default" && smallkeys == "Keysanity" ) { //Fortress Guard checks
+        if ( dungeons[dungeonSelect] == dungeons[28] && dungeons[dungeonSelect].chestlist[key].type == "guard" && fortkeys !== "Fight" ) { //Fortress Guard checks
+            continue;}
+        if ( dungeons[dungeonSelect] == dungeons[28] && dungeons[dungeonSelect].chestlist[key].type == "membership" && gerudobridge !== "Shuffle" && fortkeys !== "Fight" && ( carpenters ==0 || (carpenters == 1 && keyimg == 1) || (carpenters == 4 && keyimg == 4) ) ) { //Fortress Guard checks
             continue;}
         if (dungeons[dungeonSelect].chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
             continue;}
