@@ -815,7 +815,7 @@ function setFortressLogic(sender) {
 }
 
 function setCarpenter(sender) {
-   carpenters = sender.checked;
+   carpenters = sender.value;
    if (carpenters == 1 && fortresskeys[item] >= 2) {
       fortresskeys[item] = 0;
    }
