@@ -7523,7 +7523,7 @@ var dungeons = [
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
-                  return true; }
+                  return dungeons[26].found == true; }
          },
          'Beside Lab Gossip': {
             x: "10.0%",
@@ -7771,7 +7771,7 @@ var dungeons = [
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
-                  return true; }
+                  return dungeons[27].found == true; }
          },
          'Right of Plank Skulltula': {
             x: "70.0%",
@@ -7913,7 +7913,7 @@ var dungeons = [
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
-                  return true; }
+                  return dungeons[27].found == true; }
          },
       },
       isBeatable: function () {
@@ -7936,7 +7936,7 @@ var dungeons = [
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
-                  return true; }
+                  return dungeons[28].found == true; }
          },
          'Fortress Storms Grotto': {
             x: "42.0%",
@@ -8050,14 +8050,16 @@ var dungeons = [
       found: true,
       chestlist: {
          'Desert to Wasteland': {
-            x: "8.4%",
-            y: "25.0%",
+            x: "82.0%",
+            y: "46.0%",
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
-                  return true; }
+                  return dungeons[29].found == true; }
          },
          'Cracked Wall Doorway': {
+            x: "60.0%",
+            y: "20.0%",
             type: "simple", 
             access: "door",
             isAvailable: function () {
@@ -8069,6 +8071,8 @@ var dungeons = [
             }
          },
          'Nayru\'s Great Fairy Fountain': {
+            x: "60.0%",
+            y: "20.0%",
             type: "NPC", 
             access: "simple",
             isAvailable: function () {
@@ -8081,6 +8085,8 @@ var dungeons = [
             }
          },
          'Water Hole Tree Skulltula': {
+            x: "45.0%",
+            y: "75.0%",
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
@@ -8091,12 +8097,16 @@ var dungeons = [
             }
          },
          'Requiem Warp': {
+            x: "25.0%",
+            y: "18.0%",
             type: "warp", 
             access: "warp",
                isAvailable: function () {
                   return items.Ocarina && items.RequiemofSpirit; }
          },
          'Desert Strength Grotto': {
+            x: "37.0%",
+            y: "22.0%",
             type: "grotto", 
             access: "grotto",
             isAvailable: function () {
@@ -8107,6 +8117,8 @@ var dungeons = [
             }
          },
          'Silver Rock Scrub Grotto': {
+            x: "36.0%",
+            y: "22.0%",
             type: "scrub", 
             access: "grotto",
             isAvailable: function () {
@@ -8117,6 +8129,8 @@ var dungeons = [
             }
          },
          'Northwest Desert Gossip': {
+            x: "74.0%",
+            y: "04.0%",
             type: "gossip", 
             access: "outdoor",
             isAvailable: function () {
@@ -8128,6 +8142,8 @@ var dungeons = [
             }
          },
          'Spirit Temple': {
+            x: "12.0%",
+            y: "50.0%",
             type: "dungeon", 
             access: "door",
                isAvailable: function () {
@@ -8139,6 +8155,8 @@ var dungeons = [
                }
          },
          ['Song from Sheik']: {
+            x: "16.0%",
+            y: "52.0%",
             type: "song", 
             access: "outdoor",
             isAvailable: function () {
@@ -8150,6 +8168,8 @@ var dungeons = [
             }
          },
          'Soil Patch Skulltula': {
+            x: "14.0%",
+            y: "55.0%",
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
@@ -8159,6 +8179,8 @@ var dungeons = [
             }
          },
          'Bean Ride Skulltula': {
+            x: "25.0%",
+            y: "48.0%",
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
@@ -8171,6 +8193,8 @@ var dungeons = [
             }
          },
          ['Bean to Arch Freestanding']: {
+            x: "50.0%",
+            y: "45.0%",
             type: "freestanding", 
             access: "outdoor",
             isAvailable: function () {
@@ -8195,14 +8219,16 @@ var dungeons = [
       found: true,
       chestlist: {
          'Graveyard to Village': {
-            x: "72.7%",
-            y: "25.5%",
+            x: "5.0%",
+            y: "55.0%",
             type: "entrance",
             access: "entrance",
              isAvailable: function () {
-                  return true; }
+                  return dungeons[30].found == true; }
          },
          'Dampe\'s Hut': {
+            x: "18.0%",
+            y: "62.0%",
             type: "simple", 
             access: "door",
             isAvailable: function () {
@@ -8210,6 +8236,8 @@ var dungeons = [
             }
          },
          ['Dampe Digging']: {
+            x: "22.0%",
+            y: "50.0%",
             type: "NPC", 
             access: "outdoor",
             isAvailable: function () {
@@ -8218,6 +8246,8 @@ var dungeons = [
             }
          },
          'Free Chest Grave': {
+            x: "25.0%",
+            y: "52.0%",
             type: "grotto", 
             access: "grotto",
             isAvailable: function () {
@@ -8225,6 +8255,8 @@ var dungeons = [
             }
          },
          ['Free Chest Grave']: {
+            x: "25.0%",
+            y: "52.0%",
             type: "chest", 
             access: "grotto",
             isAvailable: function () {
@@ -8232,6 +8264,8 @@ var dungeons = [
             }
          },
          ['Magic Bean Freestanding']: {
+            x: "15.0%",
+            y: "15.0%",
             type: "freestanding", 
             access: "outdoor",
             isAvailable: function () {
@@ -8243,6 +8277,8 @@ var dungeons = [
             }
          },
          'Soil Patch Skulltula': {
+            x: "20.0%",
+            y: "15.0%",
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
@@ -8251,6 +8287,8 @@ var dungeons = [
             }
          },
          'Dampe\'s Grave': {
+            x: "24.0%",
+            y: "16.0%",
             type: "grotto", 
             access: "grotto",
             isAvailable: function () {
@@ -8258,6 +8296,8 @@ var dungeons = [
             }
          },
          ['Dampe Race 1']: {
+            x: "24.0%",
+            y: "16.0%",
             type: "NPC", 
             access: "grotto",
             isAvailable: function () {
@@ -8266,6 +8306,8 @@ var dungeons = [
             }
          },
          ['Dampe Race 2']: {
+            x: "27.0%",
+            y: "14.5%",
             type: "NPC", 
             access: "grotto",
             isAvailable: function () {
@@ -8274,6 +8316,8 @@ var dungeons = [
             }
          },
          'Redead Grave': {
+            x: "40.0%",
+            y: "58.0%",
             type: "grotto", 
             access: "grotto",
             isAvailable: function () {
@@ -8281,6 +8325,8 @@ var dungeons = [
             }
          },
          ['Redead Grave Chest']: {
+            x: "40.0%",
+            y: "58.0%",
             type: "chest", 
             access: "grotto",
             isAvailable: function () {
@@ -8288,6 +8334,8 @@ var dungeons = [
             }
          },
          'South Wall Skulltula': {
+            x: "50.0%",
+            y: "60.0%",
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
@@ -8297,6 +8345,8 @@ var dungeons = [
             }
          },
          'Royal Tomb': {
+            x: "55.0%",
+            y: "50.0%",
             type: "grotto", 
             access: "grotto",
             isAvailable: function () {
@@ -8304,6 +8354,8 @@ var dungeons = [
             }
          },
          ['Composer Brothers\' Song']: {
+            x: "58.0%",
+            y: "50.0%",
             type: "song", 
             access: "grotto",
             isAvailable: function () {
@@ -8311,6 +8363,8 @@ var dungeons = [
             }
          },
          ['Royal Tomb Chest']: {
+            x: "52.0%",
+            y: "50.0%",
             type: "chest", 
             access: "grotto",
             isAvailable: function () {
@@ -8321,6 +8375,8 @@ var dungeons = [
             }
          },
          'Noturne Warp': {
+            x: "64.0%",
+            y: "50.0%",
             type: "warp",
             access: "warp",
             isAvailable: function () {
@@ -8328,6 +8384,8 @@ var dungeons = [
             }
          },
          'Noturne Gossip': {
+            x: "65.0%",
+            y: "47.0%",
             type: "gossip",
             access: "outdoor",
             isAvailable: function () {
@@ -8335,6 +8393,8 @@ var dungeons = [
             }
          },
          'Shadow Temple': {
+            x: "85.0%",
+            y: "50.0%",
             type: "dungeon", 
             access: "door",
                isAvailable: function () {
@@ -8364,7 +8424,7 @@ var dungeons = [
             type: "entrance",
             access: "entrance",
             isAvailable: function () {
-                  return true; }
+                  return dungeons[31].found == true; }
          },
          ['Carpet Salesman']: {
             x: "72.0%",
@@ -8408,12 +8468,10 @@ var dungeons = [
          'Wasteland to Desert': {
             x: "2.0%",
             y: "50.0%",
-            x: "11.0%",
-            y: "25.0%",
             type: "entrance",
             access: "entrance",
             isAvailable: function () {
-                  return true; }
+                  return dungeons[31].found == true; }
          },
       },
       isBeatable: function () {
@@ -8720,7 +8778,7 @@ var dungeons = [
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
-                  return true; }
+                  return dungeons[32].found == true; }
          },
          'Field to Ranch': {
             x: "55.4%",
@@ -8728,7 +8786,7 @@ var dungeons = [
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
-                  return true; }
+                  return dungeons[32].found == true; }
          },
          'Field to River': {
             x: "95.6%",
@@ -8736,7 +8794,7 @@ var dungeons = [
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
-                  return true; }
+                  return dungeons[32].found == true; }
          },
          'Field to Village': {
             x: "95.0%",
@@ -8744,7 +8802,7 @@ var dungeons = [
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
-                  return true; }
+                  return dungeons[32].found == true; }
          },
          'Drawbridge to Topdown': {
             x: "64.0%",
@@ -8752,7 +8810,7 @@ var dungeons = [
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
-                  return true; }
+                  return dungeons[32].found == true; }
          },
          'Field to Valley': {
             x: "4.0%",
@@ -8760,7 +8818,7 @@ var dungeons = [
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
-                  return true; }
+                  return dungeons[32].found == true; }
          },
          'Field to Lake': {
             x: "38.0%",
@@ -8768,7 +8826,7 @@ var dungeons = [
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
-                  return true; }
+                  return dungeons[32].found == true; }
          },
       },
       isBeatable: function () {
