@@ -672,7 +672,7 @@ function unhighlightDungeonChest(x) {
 }
 
 //function setOrder(H) {
-/   if (H) {
+//   if (H) {
  //     document.getElementById('layoutdiv').classList.remove('flexcontainer');
    //} else {
      // document.getElementById('layoutdiv').classList.add('flexcontainer');
