@@ -56,12 +56,14 @@ function generalCanGetChest(chestlist) {
             continue;}
         if ( chestlist[key].access == "no OWER" && chestlist[key].type == "ocarina" && ((OWERmap == true && OcarinaShuffle == true) || OcarinaShuffle == false) ) { //OWER Ocarina shuffle
             continue;}
-        if ( chestlist[key].type == "guard" && gerudobridge !== "Shuffle" && fortkeys == "Keysanity" ) { //Fortress Guard checks
+        if ( chestlist[key].type == "guard" && fortkeys !== "Fight" ) { //Fortress Guard checks
+            continue;}
+        if ( chestlist[key].type == "membership" && gerudobridge !== "Shuffle" && fortkeys !== "Fight" && ( carpenters ==0 || (carpenters == 1 && keyimg == 1) || (carpenters == 4 && keyimg == 4) ) ) { //Fortress Guard checks
             continue;}
         if (chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
             continue;}
-        if (chestlist == dungeons[1].chestlist && dungeons[1].mixedtype == "default" && quest == "Mixed") {
-            continue;}
+        //if (chestlist == dungeons[1].chestlist && dungeons[1].mixedtype == "default" && quest == "Mixed") {
+            //continue;}
       if (chestlist.hasOwnProperty(key)) {
          if (!chestlist[key].isOpened)
             unopened++;
