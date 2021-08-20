@@ -10,7 +10,9 @@ function generalCanGetChest(chestlist) {
             continue;}
         if ( chestlist[key].type == "entrance" && OWERmap == false ) { //Do Nothing
             continue;}
-       if ( chestlist[key].type == "warp" || chestlist[key].type == "owl" ) { //Do Nothing
+       if ( chestlist[key].type == "warp" && Warps == false) {
+            continue;}
+        if ( chestlist[key].type == "owl" && Owls == false) { //Do Nothing
             continue;}
         if ( chestlist[key].access == "door" && chestlist[key].type == "simple" && IndoorER == "Off" ) { //Simple Doorways
             continue;}
@@ -54,7 +56,7 @@ function generalCanGetChest(chestlist) {
             continue;}
         if ( chestlist[key].access == "no OWER" && chestlist[key].type == "ocarina" && ((OWERmap == true && OcarinaShuffle == true) || OcarinaShuffle == false) ) { //OWER Ocarina shuffle
             continue;}
-        if ( chestlist[key].type == "guard" && gerudobridge !== "Default" && smallkeys == "Keysanity" ) { //Fortress Guard checks
+        if ( chestlist[key].type == "guard" && gerudobridge !== "Shuffle" && fortkeys == "Keysanity" ) { //Fortress Guard checks
             continue;}
         if (chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
             continue;}
@@ -7956,6 +7958,18 @@ var dungeons = [
             x: "42.0%",
             y: "48.0%",
             type: "guard", 
+            access: "outdoor",
+            isAvailable: function () {
+               return (OWERmap == false || dungeons[28].found == true) &&
+                  ( (items.Ocarina && items.EponasSong) || (items.Ocarina && items.RequiemofSpirit && items.HoverBoots) 
+                   || items.Hookshot >= 2) &&
+                  (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ; 
+            }
+         },
+         ['Membership Token']: {
+            x: "45.0%",
+            y: "52.0%",
+            type: "membership", 
             access: "outdoor",
             isAvailable: function () {
                return (OWERmap == false || dungeons[28].found == true) &&
