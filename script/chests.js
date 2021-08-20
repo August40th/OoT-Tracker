@@ -58,7 +58,7 @@ function generalCanGetChest(chestlist) {
             continue;}
         if ( chestlist[key].type == "guard" && fortkeys !== "Fight" ) { //Fortress Guard checks
             continue;}
-        if ( chestlist[key].type == "membership" && gerudobridge !== "Shuffle" && fortkeys !== "Fight" && ( carpenters ==0 || (carpenters == 1 && keyimg == 1) || (carpenters == 4 && keyimg == 4) ) ) { //Fortress Guard checks
+        if ( chestlist[key].type == "membership" && gerudobridge !== "Shuffle" ) { //Fortress Guard checks
             continue;}
         if (chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
             continue;}
