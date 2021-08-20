@@ -32,11 +32,13 @@ function generalCanGetChest(chestlist) {
             continue;}
         if ( (chestlist[key].access == "outdoor" || chestlist[key].access == "simple" || chestlist[key].access == "grotto") && chestlist[key].type == "skulltula" && skulltula == "Dungeons" ) { // OW Skulls
             continue;}
-        if (chestlist[key].type == "scrub" && scrubs == "Off") { //Scrubs 
+        if (chestlist[key].type == "scrub" && scrubs == false) { //Scrubs 
             continue;}
         if (chestlist[key].type == "shop" && shopsize == 0) { //Shops 
             continue;}
         if (chestlist[key].type == "cow" && Cowsanity == false) { //Cows
+            continue;}
+        if ( chestlist[key].type == "ksword" && Ksword == false ) { //kokiri shuffle
             continue;}
         if ( chestlist[key].type == "bean" && BeanShuffle == false ) { //Bean shuffle
             continue;}
