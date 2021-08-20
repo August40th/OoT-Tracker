@@ -52,7 +52,7 @@ shopsize = 0;
 Cowsanity = false;
 quest = 'Vanilla';
 
-Ksword = false;
+Ksword = true;
 OcarinaShuffle = false;
 SongShuffle = 'Songs';
 WeirdEgg = false;
@@ -128,7 +128,7 @@ var cookieDefault = {
    carp: '1',
    smallk: 'Dungeons',
    bossk: 'Dungeons',
-   sclogic: 'Major Item',
+   sclogic: '0',
    sklogic: 'Off',
    ocShuff: 0,
    sngShuff: 0,
@@ -150,6 +150,10 @@ var cookieDefault = {
    ladin: 0,
    age: 'Child',
    rstrt: 0,
+    owl: 0,
+    warp: 0,
+    ksword: 1,
+    
     medallions: defaultMedallions,
     items: defaultItemGrid,
     obtainedItems: items,
@@ -194,8 +198,8 @@ function loadCookie() {
    document.getElementsByName('OcarinaShuffle')[0].checked = !!cookieobj.ocShuff;
    document.getElementsByName('OcarinaShuffle')[0].onchange();
 
-   document.getElementsByName('SongShuffle')[0].checked = !!cookieobj.sngShuff;
-   document.getElementsByName('SongShuffle')[0].onchange();
+   document.getElementsByName('scrubs')[0].checked = !!cookieobj.sclogic;
+   document.getElementsByName('scrubs')[0].onchange();
 
    document.getElementsByName('WeirdEgg')[0].checked = !!cookieobj.eggShuff;
    document.getElementsByName('WeirdEgg')[0].onchange();
@@ -229,6 +233,21 @@ function loadCookie() {
     
    document.getElementsByName('RndmStart')[0].checked = !!cookieobj.rstrt;
    document.getElementsByName('RndmStart')[0].onchange();
+    
+   document.getElementsByName('Owls')[0].checked = !!cookieobj.owl;
+   document.getElementsByName('Owls')[0].onchange();
+    
+   document.getElementsByName('Warps')[0].checked = !!cookieobj.warp;
+   document.getElementsByName('Warps')[0].onchange();
+    
+    document.getElementsByName('Ksword')[1].checked = !!cookieobj.ksword;
+   document.getElementsByName('Ksword')[1].onchange();
+    
+    for (rbuttonID in document.getElementsByName('SongShuffle')) {
+      rbutton = document.getElementsByName('SongShuffle')[rbuttonID]
+      if (rbutton.value == cookieobj.sngShuff)
+         rbutton.click();
+   }
    
    for (rbuttonID in document.getElementsByName('carpenters')) {
       rbutton = document.getElementsByName('carpenters')[rbuttonID]
@@ -277,12 +296,6 @@ function loadCookie() {
       if (rbutton.value == cookieobj.sklogic)
          rbutton.click();
    }
-
-   for (rbuttonID in document.getElementsByName('scrubs')) {
-      rbutton = document.getElementsByName('scrubs')[rbuttonID]
-      if (rbutton.value == cookieobj.sclogic)
-         rbutton.click();
-   }
     
    for (rbuttonID in document.getElementsByName('IndoorER')) {
       rbutton = document.getElementsByName('IndoorER')[rbuttonID]
@@ -321,7 +334,7 @@ function saveCookie() {
    cookieobj.fountain = document.getElementsByName('OpenFountain')[0].checked ? 1 : 0;
 
    cookieobj.ocShuff = document.getElementsByName('OcarinaShuffle')[0].checked ? 1 : 0;
-   cookieobj.sngShuff = document.getElementsByName('SongShuffle')[0].checked ? 1 : 0;
+   cookieobj.sclogic = document.getElementsByName('scrubs')[0].checked ? 1 : 0;
    cookieobj.eggShuff = document.getElementsByName('WeirdEgg')[0].checked ? 1 : 0;
    cookieobj.beanShuff = document.getElementsByName('BeanShuffle')[0].checked ? 1 : 0;
    
@@ -338,6 +351,11 @@ function saveCookie() {
    cookieobj.medi = document.getElementsByName('Medigoron')[0].checked ? 1 : 0;
    cookieobj.ladin = document.getElementsByName('Aladdin')[0].checked ? 1 : 0;
    cookieobj.rstrt = document.getElementsByName('RndmStart')[0].checked ? 1 : 0;
+    
+   cookieobj.owl = document.getElementsByName('Owls')[0].checked ? 1 : 0;
+   cookieobj.warp = document.getElementsByName('Warps')[0].checked ? 1 : 0;
+   cookieobj.ksword = document.getElementsByName('Ksword')[1].checked ? 1 : 0;
+
     
    for (rbuttonID in document.getElementsByName('carpenters')) {
       rbutton = document.getElementsByName('carpenters')[rbuttonID]
@@ -387,10 +405,10 @@ function saveCookie() {
          cookieobj.sklogic = rbutton.value;
    }
 
-   for (rbuttonID in document.getElementsByName('scrubs')) {
-      rbutton = document.getElementsByName('scrubs')[rbuttonID]
+   for (rbuttonID in document.getElementsByName('SongShuffle')) {
+      rbutton = document.getElementsByName('SongShuffle')[rbuttonID]
       if (rbutton.checked)
-         cookieobj.sclogic = rbutton.value;
+         cookieobj.sngShuff = rbutton.value;
    }
    
    for (rbuttonID in document.getElementsByName('IndoorER')) {
@@ -1304,7 +1322,7 @@ function updateGridItem(row, index) {
          itemGrid[row][index][3].style.backgroundImage = "";
    }
    if (songs[item] !== undefined) {
-      if (SongShuffle)
+      if (SongShuffle == 'Songs')
          itemGrid[row][index][3].style.backgroundImage = "";
       else
          itemGrid[row][index][3].style.backgroundImage = "url(images/" + songimg[songs[item]] + ".png)";
@@ -1332,7 +1350,6 @@ function updateGridItemAll() {
         }
     }
 }
-
 
 function setGridItem(item, row, index) {
     while (!itemLayout[row]) {
