@@ -16,7 +16,8 @@ var fortresskeys = [];
 var keyimg = ['Membership0', 'Membership1', 'Membership2', 'Membership3', 'Membership4'];
 
 var songs = [];
-var songimg = ['Unknown', 'Impa', 'Malon', 'SariasSong2', 'Guru', 'CompBro', 'TempleofTime', 'Forest', 'Crater', 'IceSong', 'Desert', 'BurningKak', 'Ocarina2'];
+var songimg = ['Unknown', 'Impa', 'Malon', 'SariasSong2', 'Guru', 'CompBro', 'Prelude', 'Forest', 'Crater', 'IceSong', 'Desert', 'BurningKak', 'Ocarina2'];
+var songdung = ['Unknown', 'Impa' 'Gohma', 'Dodongo', 'Jellyfish', 'Deadhand', 'PoeSisters', 'FireDancer', 'WhiteWolf', 'Clam', 'IronKnuckle', 'Gibdo', 'Membership'];
 
 var minimaps = ['KokiriForest', 'DekuTree', 'DodongosCavern', 'JabusBelly', 'BottomoftheWell', 
                 'ForestTemple', 'FireTemple', 'IceCavern', 'WaterTemple', 'GTG', 'SpiritTemple', 'ShadowTemple', 'OGC', 
@@ -1319,10 +1320,12 @@ function updateGridItem(row, index) {
          itemGrid[row][index][3].style.backgroundImage = "";
    }
    if (songs[item] !== undefined) {
-      if (SongShuffle !== 'Songs')
+      if (SongShuffle == 'Songsanity')
          itemGrid[row][index][3].style.backgroundImage = "";
-      else
+      else if (SongShuffle == 'Songs')
          itemGrid[row][index][3].style.backgroundImage = "url(images/" + songimg[songs[item]] + ".png)";
+      else if (SongShuffle == 'Bosses')
+         itemGrid[row][index][3].style.backgroundImage = "url(images/" + songdung[songs[item]] + ".png)";
    }
    if (medallions[item] !== undefined) {
          itemGrid[row][index][3].style.backgroundImage = "url(images/" + dungeonImg[medallions[item]] + ".png)";
@@ -2031,6 +2034,10 @@ function preloader() {
    for (song in songimg) {
       var img = new Image();
       img.src = "images/" + songimg[songs] + ".png";
+   }
+   for (song in songdung) {
+      var img = new Image();
+      img.src = "images/" + songdung[songs] + ".png";
    }
 
 }
