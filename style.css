@@ -66,7 +66,7 @@ body{
 }
 
 .unavailable.wayofhero {
-    background-color: rgb(248,24,148);
+    background-color: rgb(0,0,255);
 }
 
 .available{
@@ -82,14 +82,14 @@ body{
 }
 
 .possible.wayofhero {
-    background-color: rgb(168, 142, 200);
+    background-color: rgb(255, 90, 240);
 }
 
 .opened{
     background-color: rgb(200,200,200);
 }
 .opened.wayofhero {
-    background-color: blue;
+    background-color: rgb(255,255,255);
 }
 
 .itemconfig {
