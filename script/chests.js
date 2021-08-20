@@ -5192,7 +5192,7 @@ var dungeons = [
             type: "entrance",
             access: "entrance",
              isAvailable: function () {
-                  return true; }
+                  return dungeons[16].found == true; }
          },
          'Potion Shop front': {
             x: "55.0%",
@@ -5632,7 +5632,7 @@ var dungeons = [
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
-                  return true; }
+                  return dungeons[17].found == true; }
          },
          'Goron Shop': {
             x: "45.0%",
@@ -5705,7 +5705,7 @@ var dungeons = [
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
-                  return true; }
+                  return dungeons[17].found == true; }
          },
       },
       isBeatable: function () {
@@ -5728,7 +5728,7 @@ var dungeons = [
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
-                  return true; }
+                  return dungeons[18].found == true; }
          },
          'Fairy Ocarina': {
             x: "5.0%",
@@ -5744,7 +5744,7 @@ var dungeons = [
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
-                  return true; }
+                  return dungeons[18].found == true; }
          },
          ['Deku Sale $40']: {
             x: "15.0%",
@@ -5793,7 +5793,7 @@ var dungeons = [
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
-                  return true; }
+                  return dungeons[18].found == true; }
          },
          ['Slingshot Target']: {
             x: "64.0%",
@@ -5871,7 +5871,7 @@ var dungeons = [
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
-                  return true; }
+                  return dungeons[18].found == true; }
          },
          'Woods to River': {
             x: "69.8%",
@@ -6003,7 +6003,7 @@ var dungeons = [
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
-                  return true; }
+                  return dungeons[18].found == true; }
          },
       },
       isBeatable: function () {
@@ -6026,7 +6026,7 @@ var dungeons = [
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
-                  return true; }
+                  return dungeons[19].found == true; }
          },
          'Meadow Bomb Grotto': {
             x: "8.0%",
@@ -6184,7 +6184,7 @@ var dungeons = [
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
-                  return true; }
+                  return dungeons[20].found == true; }
          },
          'Tree by Entrance Skulltula': {
             x: "4.0%",
@@ -6399,7 +6399,7 @@ var dungeons = [
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
-                  return true; }
+                  return dungeons[20].found == true && items.Scale; }
          },
          'Waterfall Gossip': {
             x: "82.0%",
@@ -6421,7 +6421,7 @@ var dungeons = [
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
-                  return true; }
+                  return dungeons[20].found == true; }
          },
       },
       isBeatable: function () {
@@ -6444,7 +6444,7 @@ var dungeons = [
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
-                  return true; }
+                  return dungeons[21].found == true; }
          },
          'Zora Shop': {
             x: "68.0%",
@@ -6545,7 +6545,7 @@ var dungeons = [
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
-                  return true; }
+                  return items.Scale && dungeons[21].found == true; }
          },
          'Frozen Waterfall Skulltula': {
             x: "48.0%",
@@ -6586,7 +6586,7 @@ var dungeons = [
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
-                  return true; }
+                  return dungeons[21].found == true; }
          },
       },
       isBeatable: function () {
@@ -6609,7 +6609,7 @@ var dungeons = [
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
-                  return true; }
+                  return dungeons[22].found == true; }
          },
          'West Fountain Gossip': {
             x: "35.0%",
@@ -6832,14 +6832,16 @@ var dungeons = [
       found: true,
       chestlist: {
          'Trail to Village': {
-            x: "63.1%",
-            y: "18.6%",
+            x: "18.1%",
+            y: "87.6%",
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
-                  return true; }
+                  return dungeons[23].found == true; }
          },
          'Bombable Wall Skulltula': {
+            x: "16.1%",
+            y: "75.3%",
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
@@ -6854,6 +6856,8 @@ var dungeons = [
             }
          },
          'Dodongo\'s Cavern': {
+            x: "33.0%",
+            y: "50.0%",
             type: "dungeon", 
             access: "door",
                isAvailable: function () {
@@ -6866,6 +6870,8 @@ var dungeons = [
                }
          },
          ['Cavern Roof Freestanding']: {
+            x: "35.0%",
+            y: "46.0%",
             type: "freestanding", 
             access: "outdoor",
             isAvailable: function () {
@@ -6873,6 +6879,8 @@ var dungeons = [
             }
          },
          'Cavern Soil Patch Skulltula': {
+            x: "35.0%",
+            y: "48.0%",
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
@@ -6882,6 +6890,8 @@ var dungeons = [
             }
          },
          ['Breakable Wall Chest']: {
+            x: "45.0%",
+            y: "55.0%",
             type: "chest", 
             access: "outdoor",
             isAvailable: function () {
@@ -6896,6 +6906,8 @@ var dungeons = [
             }
          },
          'Song of Storms Grotto': {
+            x: "50.0%",
+            y: "48.0%",
             type: "grotto", 
             access: "grotto",
             isAvailable: function () {
@@ -6904,6 +6916,8 @@ var dungeons = [
             }
          },
          ['Trail Storms Grotto']: {
+            x: "50.0%",
+            y: "48.0%",
             type: "chest", 
             access: "grotto",
             isAvailable: function () {
@@ -6912,6 +6926,8 @@ var dungeons = [
             }
          },
          'Storms Grotto Gossip': {
+            x: "53.0%",
+            y: "48.0%",
             type: "gossip", 
             access: "grotto",
             isAvailable: function () {
@@ -6920,14 +6936,16 @@ var dungeons = [
             }
          },
          'Trail to City': {
-            x: "62.6%",
-            y: "12.0%",
+            x: "55.6%",
+            y: "50.0%",
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
-                  return true; }
+                  return dungeons[23].found == true; }
          },
          'Lower Red Rock Skulltula': {
+            x: "45.0%",
+            y: "50.0%",
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
@@ -6937,6 +6955,8 @@ var dungeons = [
             }
          },
          'Cow Grotto': {
+            x: "45.0%",
+            y: "55.0%",
             type: "grotto", 
             access: "grotto",
             isAvailable: function () {
@@ -6951,6 +6971,8 @@ var dungeons = [
             }
          },
          ['Cow Milk Grotto']: {
+            x: "43.0%",
+            y: "55.0%",
             type: "cow", 
             access: "grotto",
             isAvailable: function () {
@@ -6966,6 +6988,8 @@ var dungeons = [
             }
          },
          'Upper Red Rock Skulltula': {
+            x: "65.0%",
+            y: "40.0%",
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
@@ -6974,6 +6998,8 @@ var dungeons = [
             }
          },
          'Summit Bombable Door': {
+            x: "82.0%",
+            y: "10.0%",
             type: "simple", 
             access: "door",
             isAvailable: function () {
@@ -6988,6 +7014,8 @@ var dungeons = [
             }
          },
          ['Summit Great Fairy Fountain']: {
+            x: "82.0%",
+            y: "10.0%",
             type: "NPC", 
             access: "simple",
             isAvailable: function () {
@@ -7003,6 +7031,8 @@ var dungeons = [
             }
          },
          ['Biggoron\'s Finest Work']: {
+            x: "90.0%",
+            y: "18.0%",
             type: "NPC", 
             access: "outdoor",
             isAvailable: function () {
@@ -7017,22 +7047,24 @@ var dungeons = [
             }
          },
          'Trail to Crater': {
-            x: "64.6%",
+            x: "86.6%",
             y: "04.5%",
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
-                  return true; }
+                  return dungeons[23].found == true; }
          },
          'Trail Owl': {
-            x: "62.0%",
-            y: "02.5%",
-            type: "entrance", 
+            x: "88.0%",
+            y: "8.5%",
+            type: "owl", 
             access: "entrance",
              isAvailable: function () {
                   return true; }
          },
          'Summit Gossip': {
+            x: "88.0%",
+            y: "20.0%",
             type: "gossip", 
             access: "outdoor",
             isAvailable: function () {
@@ -7063,14 +7095,16 @@ var dungeons = [
       found: true,
       chestlist: {
          'Crater to City': {
-            x: "68.6%",
-            y: "05.5%",
+            x: "04.0%",
+            y: "50.0%",
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
-                  return true; }
+                  return dungeons[24].found == true; }
          },
          'Red Rock Grotto': {
+            x: "12.0%",
+            y: "40.0%",
             type: "grotto", 
             access: "grotto",
             isAvailable: function () {
@@ -7082,6 +7116,8 @@ var dungeons = [
             }
          },
          'Red Rock Grotto Scrubs x3': {
+            x: "12.0%",
+            y: "40.0%",
             type: "scrub", 
             access: "grotto",
             isAvailable: function () {
@@ -7093,6 +7129,8 @@ var dungeons = [
             }
          },
          ['Song from Sheik']: {
+            x: "30.0%",
+            y: "45.0%",
             type: "song", 
             access: "outdoor",
             isAvailable: function () {
@@ -7105,12 +7143,16 @@ var dungeons = [
             }
          },
          'Bolero Warp': {
+            x: "50.0%",
+            y: "48.0%",
             type: "warp", 
             access: "warp",
                isAvailable: function () {
                   return items.Ocarina && items.BoleroofFire; }
          },
          'Soil Patch Skulltula': {
+            x: "46.0%",
+            y: "48.0%",
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
@@ -7120,6 +7162,8 @@ var dungeons = [
             }
          },
          'Fire Temple': {
+            x: "50.0%",
+            y: "05.0%",
             type: "dungeon", 
             access: "door",
                isAvailable: function () {
@@ -7136,6 +7180,8 @@ var dungeons = [
                }
          },
          ['Volcano Freestanding']: {
+            x: "35.0%",
+            y: "50.0%",
             type: "freestanding", 
             access: "outdoor",
             isAvailable: function () {
@@ -7152,6 +7198,8 @@ var dungeons = [
             }
          },
          'Red Rocks Doorway': {
+            x: "15.0%",
+            y: "60.0%",
             type: "simple", 
             access: "door",
             isAvailable: function () {
@@ -7163,6 +7211,8 @@ var dungeons = [
             }
          },
          ['Great Fairy Fountain']: {
+            x: "16.0%",
+            y: "60.0%",
             type: "NPC", 
             access: "simple",
             isAvailable: function () {
@@ -7173,6 +7223,8 @@ var dungeons = [
                   ) ;}
          },
          'Bombable Grotto': {
+            x: "50.0%",
+            y: "80.0%",
             type: "grotto", 
             access: "grotto",
             isAvailable: function () {
@@ -7187,6 +7239,8 @@ var dungeons = [
             }
          },
          'Crater Grotto Gossip': {
+            x: "48.0%",
+            y: "80.0%",
             type: "gossip", 
             access: "grotto",
             isAvailable: function () {
@@ -7201,6 +7255,8 @@ var dungeons = [
             }
          },
          ['Bomb Grotto Chest']: {
+            x: "50.0%",
+            y: "80.0%",
             type: "chest", 
             access: "grotto",
             isAvailable: function () {
@@ -7215,6 +7271,8 @@ var dungeons = [
             }
          },
          ['Wall Freestanding']: {
+            x: "50.0%",
+            y: "60.0%",
             type: "freestanding", 
             access: "outdoor",
             isAvailable: function () {
@@ -7230,6 +7288,8 @@ var dungeons = [
             }
          },
          'Crate Skulltula': {
+            x: "24.0%",
+            y: "90.0%",
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
@@ -7239,6 +7299,8 @@ var dungeons = [
             }
          },
          'Child Climb Summit to Crater Scrub': {
+            x: "32.0%",
+            y: "75.0%",
             type: "scrub", 
             access: "outdoor",
             isAvailable: function () {
@@ -7248,6 +7310,8 @@ var dungeons = [
             }
          },
          'Cracked Wall Gossip': {
+            x: "90.0%",
+            y: "80.0%",
             type: "gossip", 
             access: "outdoor",
             isAvailable: function () {
@@ -7256,12 +7320,12 @@ var dungeons = [
             }
          },
          'Crater to Trail': {
-            x: "66.6%",
-            y: "02.5%",
+            x: "15.6%",
+            y: "95.5%",
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
-                  return true; }
+                  return dungeons[24].found == true; }
          },
       },
       isBeatable: function () {
@@ -7279,20 +7343,24 @@ var dungeons = [
       found: true,
       chestlist: {
          'Ranch to Field': {
-            x: "48.4%",
-            y: "38.5%",
+            x: "78.0%",
+            y: "04.0%",
             type: "entrance",
             access: "entrance",
              isAvailable: function () {
-                  return true; }
+                  return dungeons[25].found == true; }
          },
          'Talon\'s House': {
+            x: "65.0%",
+            y: "15.0%",
             type: "simple", 
             access: "door",
             isAvailable: function () {
                return OWERmap == false || dungeons[25].found == true; }
          },
          ['Talon\'s Cucco game']: {
+            x: "70.0%",
+            y: "18.0%",
             type: "NPC", 
             access: "simple",
             isAvailable: function () {
@@ -7301,12 +7369,16 @@ var dungeons = [
             }
          },
          'Ranch Stables': {
+            x: "55.0%",
+            y: "15.0%",
             type: "simple", 
             access: "door",
             isAvailable: function () {
                return OWERmap == false || dungeons[25].found == true; }
          },
          ['Stable Cow Milk 1']: {
+            x: "50.0%",
+            y: "10.0%",
             type: "cow", 
             access: "simple",
             isAvailable: function () {
@@ -7314,6 +7386,8 @@ var dungeons = [
             }
          },
          ['Stable Cow Milk 2']: {
+            x: "45.0%",
+            y: "15.0%",
             type: "cow", 
             access: "simple",
             isAvailable: function () {
@@ -7321,6 +7395,8 @@ var dungeons = [
             }
          },
          '2nd Floor Window Skulltula': {
+            x: "65.0%",
+            y: "18.0%",
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
@@ -7330,6 +7406,8 @@ var dungeons = [
             }
          },
          'Tree Skulltula': {
+            x: "70.0%",
+            y: "21.0%",
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
@@ -7338,6 +7416,8 @@ var dungeons = [
             }
          },
          ['Song from Malon']: {
+            x: "45.0%",
+            y: "50.0%",
             type: "song", 
             access: "outdoor",
             isAvailable: function () {
@@ -7347,6 +7427,8 @@ var dungeons = [
             }
          },
          'Back of Coral Skulltula': {
+            x: "60.0%",
+            y: "55.0%",
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
@@ -7355,6 +7437,8 @@ var dungeons = [
             }
          },
          'Ranch Open Grotto': {
+            x: "74.0%",
+            y: "85.0%",
             type: "grotto", 
             access: "grotto",
             isAvailable: function () {
@@ -7363,6 +7447,8 @@ var dungeons = [
             }
          },
          'Open Grotto Scrubs x3': {
+            x: "74.0%",
+            y: "85.0%",
             type: "scrub", 
             access: "grotto",
             isAvailable: function () {
@@ -7371,12 +7457,16 @@ var dungeons = [
             }
          },
          'Ranch Silo': {
+            x: "20.0%",
+            y: "75.0%",
             type: "simple", 
             access: "door",
             isAvailable: function () {
                return OWERmap == false || dungeons[25].found == true; }
          },
          ['Silo Freestanding']: {
+            x: "16.0%",
+            y: "82.0%",
             type: "freestanding", 
             access: "simple",
             isAvailable: function () {
@@ -7385,6 +7475,8 @@ var dungeons = [
             }
          },
          ['Silo Cow Milk 1']: {
+            x: "15.0%",
+            y: "78.0%",
             type: "cow", 
             access: "simple",
             isAvailable: function () {
@@ -7392,6 +7484,8 @@ var dungeons = [
             }
          },
          ['Silo Cow Milk 2']: {
+            x: "20.0%",
+            y: "83.0%",
             type: "cow", 
             access: "simple",
             isAvailable: function () {
@@ -7399,6 +7493,8 @@ var dungeons = [
             }
          },
          'North of Silo Skulltula': {
+            x: "07.0%",
+            y: "57.0%",
             type: "skulltula", 
             access: "outdoor",
             isAvailable: function () {
