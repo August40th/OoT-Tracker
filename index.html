@@ -65,9 +65,10 @@
                         <hr>
                         <legend>Castle Trials: 0 <input type="range" name='trialsize' value='0' max='6' min='0' onchange="setTrialSize(this)">
                         <span id='trialsize'> 6 </span> </legend> 
+                        <hr>
                         <legend>Ganon's Boss Key 
-                            <input type='radio' name='castlelogic' value='Removed' onclick="setCastle(this)">Removed </legend>
-                            <center><input type='radio' name='castlelogic' value='Vanilla' onclick="setCastle(this)">Vanilla
+                            <input type='radio' name='castlelogic' value='Removed' onclick="setCastle(this)">Removed 
+                            <center><input type='radio' name='castlelogic' value='Vanilla' onclick="setCastle(this)">Vanilla</legend>
                             <input type='radio' name='castlelogic' value='Castle' onclick="setCastle(this)">Ganons Castle
                             <input type='radio' name='castlelogic' value='Anywhere' onclick="setCastle(this)">Anywhere<br>
                             <input type='radio' name='castlelogic' value='LACSVan' onclick="setCastle(this)">LACS Vanilla
@@ -80,16 +81,17 @@
                                 Fort Keys: 
                                     <input type='radio' name='fortkeys' value='Fight' checked='true' onclick="setFortKeys(this)">Guard Fight
                                     <input type='radio' name='fortkeys' value='Overworld' checked='true' onclick="setFortKeys(this)">Overworld<br>
-                                    <input type='radio' name='fortkeys' value='Dungeons' checked='true' onclick="setFortKeys(this)">Dungeons
+                                    <center><input type='radio' name='fortkeys' value='Dungeons' checked='true' onclick="setFortKeys(this)">Dungeons
                                     <input type='radio' name='fortkeys' value='Keysanity' checked='true' onclick="setFortKeys(this)">Keysanity<br>
+                                    </center>
                                 Membership:
-                                    <input type='radio' name='gerudobridge' value='Shuffle' onclick="setFortressLogic(this)">Shuffle Membership
-                                    <input type='radio' name='gerudobridge' value='Start' onclick="setFortressLogic(this)">Start with Membership <br>
-                        </center>
-                                Carpenters: 
+                                    <input type='radio' name='gerudobridge' value='Shuffle' onclick="setFortressLogic(this)">Shuffle
+                                    <input type='radio' name='gerudobridge' value='Start' onclick="setFortressLogic(this)">Start with<br>
+                                <center>Carpenters: 
                                     <input type='radio' name='carpenters' value=4 onchange="setCarpenter(this)">All 4
                                     <input type='radio' name='carpenters' value=1 onchange="setCarpenter(this)">Just 1                          
-                                    <input type='radio' name='carpenters' value=0 onchange="setCarpenter(this)">None<br>                            
+                                    <input type='radio' name='carpenters' value=0 onchange="setCarpenter(this)">None<br>  
+                                    </center>
                         </fieldset>
                 </div>
                 <div class="column">
@@ -104,6 +106,7 @@
                             <input type='radio' name='smallkeys' value='Overworld' checked='true' onclick="setSmallKeys(this)">Overworld
                             <input type='radio' name='smallkeys' value='Dungeons' checked='true' onclick="setSmallKeys(this)">Dungeons
                             <input type='radio' name='smallkeys' value='Keysanity' onclick="setSmallKeys(this)">KeySanity<br>
+                        <hr>
                         Boss:
                             <input type='radio' name='bosskeys' value='Remove' onclick="setBossKeys(this)">Keysy
                             <input type='radio' name='bosskeys' value='Vanilla' onclick="setBossKeys(this)">Vanilla
@@ -118,7 +121,8 @@
                         <input type='radio' name='skulltula' value='Dungeons' onclick="setSkulltula(this)">Dungeons <br>
                         <input type='radio' name='skulltula' value='Overworld' onclick="setSkulltula(this)">Overworld
                         <input type='radio' name='skulltula' value='All' onclick="setSkulltula(this)">All<br>
-                        <center> 
+                        <hr>
+                        <center>
                         <input type='checkbox' name='scrubs' checked='false' onclick="setScrub(this)"> Scrubs
                         <input type='checkbox' name='Cowsanity' checked='false' onchange="setCows(this)">Cow Milk<br>
                         </center>
@@ -130,17 +134,17 @@
                             <center><input type='radio' name='Age' value='Child' onclick="setAge(this)">Child
                             <input type='radio' name='Age' value='Adult' onclick="setAge(this)">Adult
                             <input type='checkbox' name='RndmStart' checked='false' onchange="setERTracker(this)">Random Start </center>                       
-                        <br>
-                        <input type='checkbox' name='Ksword' checked='false' onchange="setKsword(this)">KokikiSword
+                        <hr>
+                        <input type='checkbox' name='Ksword' checked='false' onchange="setKsword(this)">Kokiki Sword
                         <input type='checkbox' name='OcarinaShuffle' checked='false' onchange="setOcarina(this)">Ocarina
                         <input type='checkbox' name='WeirdEgg' checked='false' onchange="setEgg(this)">Weird Egg <br>
                         <input type='checkbox' name='BeanShuffle' checked='false' onchange="setBean(this)">Bean Pack
                         <input type='checkbox' name='Medigoron' checked='false' onchange="setMedigoron(this)">Medigoron Sale<br>            
-                        <input type='checkbox' name='BombchuLogic' checked='false' onchange="setBombchu(this)">Bombchu IN Logic
                         <input type='checkbox' name='Aladdin' checked='false' onchange="setCarpet(this)">Magic Carpet Sale<br>            
+                        <input type='checkbox' name='BombchuLogic' checked='false' onchange="setBombchu(this)">Bombchu IN Logic
                     </fieldset>
                     <fieldset> <legend>Losing Your Mind</legend>
-                        <center><input type='radio' name='SongShuffle' value='Songs' onchange="setSongs(this)">Song Pool
+                        <center>Songs<input type='radio' name='SongShuffle' value='Songs' onchange="setSongs(this)">Song Pool
                         <input type='radio' name='SongShuffle' value='Bosses' onchange="setSongs(this)">Dungeons
                         <input type='radio' name='SongShuffle' value='Songsanity' onchange="setSongs(this)">Songsanity</center> <be>
                         <legend>Entrance Randomizer</legend>
@@ -149,7 +153,7 @@
                             <input type='radio' name='IndoorER' value='Off' onclick="setIndoorER(this)">Off<br>
                             <input type='checkbox' name='GrottoER' checked='false' onchange="setGrottoER(this)">Grottos
                             <input type='checkbox' name='DungeonER' checked='false' onchange="setDER(this)">Dungeons
-                            <input type='checkbox' name='OWERmap' checked='false' onchange="setOWER(this)">Overworld
+                            <input type='checkbox' name='OWERmap' checked='false' onchange="setOWER(this)">Overworld <br>
                             <input type='checkbox' name='Decouple' checked='false' onchange="setDecouple(this)">Mix ER Pools<br>
                     </fieldset>    
                     </fieldset>
