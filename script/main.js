@@ -1264,51 +1264,7 @@ function addItem(r) {
             itemGrid[r][i][3].onclick = new Function("gridItemClick(" + r + "," + i + ",3)");
             tdtr2.appendChild(itemGrid[r][i][3]);
 
-    updateGridItem(r, i);
-    
-    var j = i;
-
-    itemGrid[r][j] = [];
-    itemLayout[r][j] = 'blank';
-
-    itemGrid[r][j]['item'] = document.createElement('td');
-    itemGrid[r][j]['item'].className = 'griditem';
-    itemGrid[r]['row'].appendChild(itemGrid[r][j]['item']);
-
-    var tdtp2 = document.createElement('table');
-    tdtp2.className = 'lonk';
-    itemGrid[r][j]['item'].appendChild(tdtp2);
-        var tdtr1p2 = document.createElement('tr');
-        tdtp2.appendChild(tdtr1p2);
-            itemGrid[r][j][0] = document.createElement('th');
-            itemGrid[r][j][0].className = 'corner';
-            itemGrid[r][j][0].onmouseover = new Function("setMOver(" + r + "," + j + ",0)")
-            itemGrid[r][j][0].onmouseout = new Function("setMOff()")
-            itemGrid[r][j][0].onclick = new Function("gridItemClick(" + r + "," + j + ",0)");
-        tdtr1p2.appendChild(itemGrid[r][j][0]);
-            itemGrid[r][j][1] = document.createElement('th');
-            itemGrid[r][j][1].className = 'corner';
-            itemGrid[r][j][1].onmouseover = new Function("setMOver(" + r + "," + j + ",1)")
-            itemGrid[r][j][1].onmouseout = new Function("setMOff()")
-            itemGrid[r][j][1].onclick = new Function("gridItemClick(" + r + "," + j + ",1)");
-        tdtr1p2.appendChild(itemGrid[r][j][1]);
-        var tdtr2p2 = document.createElement('tr');
-        tdtp2.appendChild(tdtr2p2);
-            itemGrid[r][j][2] = document.createElement('th');
-            itemGrid[r][j][2].className = 'corner';
-            itemGrid[r][j][2].onmouseover = new Function("setMOver(" + r + "," + j + ",2)")
-            itemGrid[r][j][2].onmouseout = new Function("setMOff()")
-            itemGrid[r][j][2].onclick = new Function("gridItemClick(" + r + "," + j + ",2)");
-        tdtr2p2.appendChild(itemGrid[r][j][2]);
-            itemGrid[r][j][3] = document.createElement('th');
-            itemGrid[r][j][3].className = 'corner';
-            itemGrid[r][j][3].onmouseover = new Function("setMOver(" + r + "," + j + ",3)")
-            itemGrid[r][j][3].onmouseout = new Function("setMOff()")
-            itemGrid[r][j][3].onclick = new Function("gridItemClick(" + r + "," + j + ",3)");
-        tdtr2p2.appendChild(itemGrid[r][j][3]);
-
-    updateGridItem(r, j);
-    
+    updateGridItem(r, i); 
     saveCookie();
 }
 function removeItem(r) {
