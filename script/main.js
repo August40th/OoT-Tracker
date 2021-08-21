@@ -333,6 +333,7 @@ function saveCookie() {
     cookielock = true;
 
     cookieobj = {};
+    cookieobj2 = {};
 
     cookieobj.iZoom = document.getElementsByName('itemdivsize')[0].value;
     cookieobj.mZoom = document.getElementsByName('mapdivsize')[0].value;
@@ -438,9 +439,10 @@ function saveCookie() {
     cookieobj.medallions = JSON.parse(JSON.stringify(medallions));
     cookieobj.items = JSON.parse(JSON.stringify(itemLayout));
     cookieobj.obtainedItems = JSON.parse(JSON.stringify(items));
-    cookieobj.dungeonChests = JSON.parse(JSON.stringify(serializeDungeonChests()));
+    cookieobj2.dungeonChests = JSON.parse(JSON.stringify(serializeDungeonChests()));
 
     setCookie(cookieobj);
+    setCookie(cookieobj2);
 
     cookielock = false;
 }
