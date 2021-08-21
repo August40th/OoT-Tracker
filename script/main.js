@@ -828,15 +828,8 @@ function setFortressLogic(sender) {
 
 function setCarpenter(sender) {
    carpenters = sender.value;
-   if (carpenters == 1 && fortresskeys[item] >= 2) {
-      fortresskeys[item] = 0;
-   }
-   else if (carpenters == 4 && fortresskeys[item] >= 5) {
-      fortresskeys[item] = 0;
-   }
   
-    updateGridItemAll();
-    
+   updateGridItemAll();
    updateMap();
    saveCookie();
 }
