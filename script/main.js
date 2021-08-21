@@ -41,7 +41,7 @@ prizesize = 0;
 maxprize = 0;
 
 gerudobridge = 'Default';
-fortkeys = 'Fight'
+fortkeys = 'Fight';
 carpenters = 1;
 smallkeys = 'Dungeons';
 
