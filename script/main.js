@@ -1506,6 +1506,7 @@ function gridItemClick(row, col, corner) {
 
 
 function gridItemRClick(row, col, corner) {
+    window.event.preventDefault()
     if (editmode) {
  //Do Nothing
     } else {
