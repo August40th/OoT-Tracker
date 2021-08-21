@@ -1158,7 +1158,7 @@ function EditMode() {
     showTracker('mapdiv', {checked: false});
     document.getElementById('settings').style.display = 'none';
     document.getElementById('itemconfig').style.display = '';
-    document.getElementById('rowButtons').style.display = 'flex';
+    //document.getElementById('rowButtons').style.display = 'flex';
 
     document.getElementById('settingsbutton').innerHTML = 'Exit Edit Mode';
 }
