@@ -227,7 +227,7 @@ function loadCookie() {
    document.getElementsByName('Cowsanity')[0].checked = !!cookieobj.cowShuff;
    document.getElementsByName('Cowsanity')[0].onchange();
    document.getElementsByName('scrubs')[0].checked = !!cookieobj.scrb;
-   document.getElementsByName('scrubs')[0].onchange();
+   //document.getElementsByName('scrubs')[0].onchange();
 
    document.getElementsByName('BombchuLogic')[0].checked = !!cookieobj.chulogic;
    document.getElementsByName('BombchuLogic')[0].onchange();
