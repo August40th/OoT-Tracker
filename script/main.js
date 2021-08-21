@@ -1242,12 +1242,14 @@ function addItem(r) {
             itemGrid[r][i][0].onmouseover = new Function("setMOver(" + r + "," + i + ",0)")
             itemGrid[r][i][0].onmouseout = new Function("setMOff()")
             itemGrid[r][i][0].onclick = new Function("gridItemClick(" + r + "," + i + ",0)");
+            itemGrid[r][i][0].oncontextmenu = new Function("gridItemRClick(" + r + "," + i + ",0)");
             tdtr1.appendChild(itemGrid[r][i][0]);
             itemGrid[r][i][1] = document.createElement('th');
             itemGrid[r][i][1].className = 'corner';
             itemGrid[r][i][1].onmouseover = new Function("setMOver(" + r + "," + i + ",1)")
             itemGrid[r][i][1].onmouseout = new Function("setMOff()")
             itemGrid[r][i][1].onclick = new Function("gridItemClick(" + r + "," + i + ",1)");
+            itemGrid[r][i][0].oncontextmenu = new Function("gridItemRClick(" + r + "," + i + ",1)");
             tdtr1.appendChild(itemGrid[r][i][1]);
         var tdtr2 = document.createElement('tr');
             tdt.appendChild(tdtr2);
@@ -1256,12 +1258,14 @@ function addItem(r) {
             itemGrid[r][i][2].onmouseover = new Function("setMOver(" + r + "," + i + ",2)")
             itemGrid[r][i][2].onmouseout = new Function("setMOff()")
             itemGrid[r][i][2].onclick = new Function("gridItemClick(" + r + "," + i + ",2)");
+            itemGrid[r][i][0].oncontextmenu = new Function("gridItemRClick(" + r + "," + i + ",2)");
             tdtr2.appendChild(itemGrid[r][i][2]);
             itemGrid[r][i][3] = document.createElement('th');
             itemGrid[r][i][3].className = 'corner';
             itemGrid[r][i][3].onmouseover = new Function("setMOver(" + r + "," + i + ",3)")
             itemGrid[r][i][3].onmouseout = new Function("setMOff()")
             itemGrid[r][i][3].onclick = new Function("gridItemClick(" + r + "," + i + ",3)");
+            itemGrid[r][i][0].oncontextmenu = new Function("gridItemRClick(" + r + "," + i + ",3)");
             tdtr2.appendChild(itemGrid[r][i][3]);
 
     updateGridItem(r, i); 
@@ -1509,21 +1513,33 @@ function gridItemRClick(row, col, corner) {
 
         if (medallions[item] !== undefined) {
             if (corner == 3) {
-                //this is where the code for the dungeon list happenes
-                //corner 3 is bottom right
-                if (medallions[item] <= 0) {
+                medallions[item]--;
+                if (medallions[item] == -1) {
                     medallions[item] = 9;
-                }
-                else {
-                    medallions[item] = medallions[item] - 1;
-
                 }
             }
             else {
                 items[item] = !items[item];
             }
-        }
-        else if ((typeof items[item]) == 'boolean') {
+        } else if (fortresskeys[item] !== undefined) {
+          if (corner == 3) {
+             fortresskeys[item]--;
+             if (fortresskeys[item] == -1 && carpenters == 1)
+                fortresskeys[item] = 1;
+             if (fortresskeys[item] == -1 && carpenters == 4)
+                fortresskeys[item] = 3;
+          } else {
+             items[item] = !items[item];
+          }
+       } else if (songs[item] !== undefined) {
+          if (corner == 3) {
+             songs[item]--;
+             if (songs[item] == -1)
+                songs[item] = 12;
+          } else {
+             items[item] = !items[item];
+          }
+   } else if ((typeof items[item]) == 'boolean') {
             items[item] = !items[item];
         } else {
             if (items[item] == itemsMin[item]) {
