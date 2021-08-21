@@ -435,15 +435,12 @@ function saveCookie() {
          cookieobj.age = rbutton.value;
    }
 
-    cookieobj2.medallions = JSON.parse(JSON.stringify(medallions));
-    cookieobj2.items = JSON.parse(JSON.stringify(itemLayout));
-    cookieobj3.obtainedItems = JSON.parse(JSON.stringify(items));
-    cookieobj4.dungeonChests = JSON.parse(JSON.stringify(serializeDungeonChests()));
+    //cookieobj.medallions = JSON.parse(JSON.stringify(medallions));
+    //cookieobj.items = JSON.parse(JSON.stringify(itemLayout));
+    //cookieobj.obtainedItems = JSON.parse(JSON.stringify(items));
+    //cookieobj.dungeonChests = JSON.parse(JSON.stringify(serializeDungeonChests()));
 
     setCookie(cookieobj);
-    //setCookie(cookieobj2);
-    //setCookie(cookieobj3);
-    //setCookie(cookieobj4);
     
     cookielock = false;
 }
