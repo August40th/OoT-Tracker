@@ -1139,14 +1139,8 @@ function showSettings(sender) {
     }
 }
 
-
 function showTracker(target, sender) {
-    if (sender.checked) {
         document.getElementById(target).style.display = '';
-    }
-    else {
-        document.getElementById(target).style.display = 'none';
-    }
 }
 
 
@@ -1158,7 +1152,7 @@ function EditMode() {
     showTracker('mapdiv', {checked: false});
     document.getElementById('settings').style.display = 'none';
     document.getElementById('itemconfig').style.display = '';
-    //document.getElementById('rowButtons').style.display = 'flex';
+    document.getElementById('rowButtons').style.display = 'flex';
 
     document.getElementById('settingsbutton').innerHTML = 'Exit Edit Mode';
 }
@@ -1270,6 +1264,51 @@ function addItem(r) {
             tdtr2.appendChild(itemGrid[r][i][3]);
 
     updateGridItem(r, i);
+    
+    var q = r + 10;
+    var j = itemLayout[q].length
+
+    itemGrid[q][j] = [];
+    itemLayout[q][j] = 'blank';
+
+    itemGrid[q][j]['item'] = document.createElement('td');
+    itemGrid[q][j]['item'].className = 'griditem';
+    itemGrid[q]['row'].appendChild(itemGrid[q][j]['item']);
+
+    var tdtp2 = document.createElement('table');
+    tdtp2.className = 'lonk';
+    itemGrid[q][j]['item'].appendChild(tdtp2);
+        var tdtr1p2 = document.createElement('tr');
+        tdtp2.appendChild(tdtr1p2);
+            itemGrid[q][j][0] = document.createElement('th');
+            itemGrid[q][j][0].className = 'corner';
+            itemGrid[q][j][0].onmouseover = new Function("setMOver(" +  q + "," + j + ",0)")
+            itemGrid[q][j][0].onmouseout = new Function("setMOff()")
+            itemGrid[q][j][0].onclick = new Function("gridItemClick(" +  q + "," + j + ",0)");
+        tdtr1p2.appendChild(itemGrid[q][j][0]);
+            itemGrid[q][j][1] = document.createElement('th');
+            itemGrid[q][j][1].className = 'corner';
+            itemGrid[q][j][1].onmouseover = new Function("setMOver(" +  q + "," + j + ",1)")
+            itemGrid[q][j][1].onmouseout = new Function("setMOff()")
+            itemGrid[q][j][1].onclick = new Function("gridItemClick(" +  q + "," + j + ",1)");
+        tdtr1p2.appendChild(itemGrid[q][j][1]);
+        var tdtr2p2 = document.createElement('tr');
+        tdtp2.appendChild(tdtr2p2);
+            itemGrid[q][j][2] = document.createElement('th');
+            itemGrid[q][j][2].className = 'corner';
+            itemGrid[q][j][2].onmouseover = new Function("setMOver(" +  q + "," + j + ",2)")
+            itemGrid[q][j][2].onmouseout = new Function("setMOff()")
+            itemGrid[q][j][2].onclick = new Function("gridItemClick(" +  q + "," + j + ",2)");
+        tdtr2p2.appendChild(itemGrid[q][j][2]);
+            itemGrid[q][j][3] = document.createElement('th');
+            itemGrid[q][j][3].className = 'corner';
+            itemGrid[q][j][3].onmouseover = new Function("setMOver(" +  q + "," + j + ",3)")
+            itemGrid[q][j][3].onmouseout = new Function("setMOff()")
+            itemGrid[q][j][3].onclick = new Function("gridItemClick(" +  q + "," + j + ",3)");
+        tdtr2p2.appendChild(itemGrid[q][j][3]);
+
+    updateGridItem(q, j);
+    
     saveCookie();
 }
 function removeItem(r) {
