@@ -334,9 +334,11 @@ function saveCookie() {
 
     cookieobj = {};
     cookieobj2 = {};
+    cookieobj3 = {};
+    cookieobj4 = {};
 
-    cookieobj.iZoom = document.getElementsByName('itemdivsize')[0].value;
-    cookieobj.mZoom = document.getElementsByName('mapdivsize')[0].value;
+   cookieobj.iZoom = document.getElementsByName('itemdivsize')[0].value;
+   cookieobj.mZoom = document.getElementsByName('mapdivsize')[0].value;
    cookieobj.tree = document.getElementsByName('OpenDeku')[0].checked ? 1 : 0; 
    cookieobj.door = document.getElementsByName('OpenDoor')[0].checked ? 1 : 0;
    cookieobj.fountain = document.getElementsByName('OpenFountain')[0].checked ? 1 : 0;
@@ -436,14 +438,16 @@ function saveCookie() {
          cookieobj.age = rbutton.value;
    }
 
-    cookieobj.medallions = JSON.parse(JSON.stringify(medallions));
-    cookieobj.items = JSON.parse(JSON.stringify(itemLayout));
-    cookieobj.obtainedItems = JSON.parse(JSON.stringify(items));
-    cookieobj2.dungeonChests = JSON.parse(JSON.stringify(serializeDungeonChests()));
+    cookieobj2.medallions = JSON.parse(JSON.stringify(medallions));
+    cookieobj2.items = JSON.parse(JSON.stringify(itemLayout));
+    cookieobj3.obtainedItems = JSON.parse(JSON.stringify(items));
+    cookieobj4.dungeonChests = JSON.parse(JSON.stringify(serializeDungeonChests()));
 
     setCookie(cookieobj);
     setCookie(cookieobj2);
-
+    setCookie(cookieobj3);
+    setCookie(cookieobj4);
+    
     cookielock = false;
 }
 
