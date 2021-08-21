@@ -156,6 +156,7 @@ var cookieDefault = {
    owl: 0,
    warp: 0,
    kswrd: 1,
+   numpoe: 1,
     
     medallions: defaultMedallions,
     items: defaultItemGrid,
@@ -219,11 +220,14 @@ function loadCookie() {
    
    document.getElementsByName('trialsize')[0].value = cookieobj.numtrials;
    document.getElementsByName('trialsize')[0].onchange();
+    
+   document.getElementsByName('poecount')[0].value = cookieobj.numpoe;
+   document.getElementsByName('poecount')[0].onchange();
    
    document.getElementsByName('Cowsanity')[0].checked = !!cookieobj.cowShuff;
    document.getElementsByName('Cowsanity')[0].onchange();
    document.getElementsByName('scrubs')[0].checked = !!cookieobj.scrb;
-   //document.getElementsByName('scrubs')[0].onchange();
+   document.getElementsByName('scrubs')[0].onchange();
 
    document.getElementsByName('BombchuLogic')[0].checked = !!cookieobj.chulogic;
    document.getElementsByName('BombchuLogic')[0].onchange();
@@ -352,6 +356,7 @@ function saveCookie() {
    
    cookieobj.shpsize = document.getElementsByName('shopsize')[0].value;
    cookieobj.numtrials = document.getElementsByName('trialsize')[0].value;
+   cookieobj.numpoe = document.getElementsByName('poecount')[0].value;
 
    cookieobj.cowShuff = document.getElementsByName('Cowsanity')[0].checked ? 1 : 0;
 
