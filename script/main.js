@@ -1223,7 +1223,7 @@ function removeItemRow() {
 
 
 function addItem(r) {
-    var i = itemLayout[r].length
+    var i = itemLayout[r].length;
 
     itemGrid[r][i] = [];
     itemLayout[r][i] = 'blank';
@@ -1266,7 +1266,7 @@ function addItem(r) {
 
     updateGridItem(r, i);
     
-    var j = i + 10;
+    var j = itemLayout[r].length;
 
     itemGrid[r][j] = [];
     itemLayout[r][j] = 'blank';
