@@ -1497,13 +1497,11 @@ function gridItemClick(row, col, corner) {
             }
         }
 
-        }
+    }
     updateMap();
     updateGridItem(row,col);
     saveCookie();
-
-    }
-
+}
 
 function gridItemRClick(row, col, corner) {
     window.event.preventDefault()
@@ -1537,24 +1535,26 @@ function gridItemRClick(row, col, corner) {
              songs[item]--;
              if (songs[item] == -1)
                 songs[item] = 12;
+          } else if (corner == 2) {
+             songs[item]--;
+             if (songs[item] == -1)
+                songs[item] = 12;
           } else {
              items[item] = !items[item];
           }
    } else if ((typeof items[item]) == 'boolean') {
             items[item] = !items[item];
         } else {
-            if (items[item] == itemsMin[item]) {
-                items[item] = itemsMax[item]
-            } else {
-                items[item]--;
+            items[item]--;
+            if (items[item] < itemsMin[item]) {
+                items[item] = itemsMax[item];
             }
         }
 
-        updateMap();
-        updateGridItem(row, col);
     }
+    updateMap();
+    updateGridItem(row,col);
     saveCookie();
-
 }
 
 function updateMap() {
