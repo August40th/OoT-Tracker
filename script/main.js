@@ -125,14 +125,15 @@ var cookieDefault = {
    mZoom: 100,
    rainlogic: 'Open',
    qlogic: 'Vanilla',
-   flogic: 'Default',
+   flogic: 'Vanilla',
+   frtky: 'Fight',
    carp: '1',
    smallk: 'Dungeons',
    bossk: 'Dungeons',
    scrb: '0',
    sklogic: 'Off',
    ocShuff: 0,
-   sngShuff: 0,
+   sngShuff: 'Songs',
    eggShuff: 0,
    beanShuff: 0,
    chulogic: 0,
@@ -151,9 +152,9 @@ var cookieDefault = {
    ladin: 0,
    age: 'Child',
    rstrt: 0,
-    owl: 0,
-    warp: 0,
-    ksword: 1,
+   owl: 0,
+   warp: 0,
+   kswrd: 1,
     
     medallions: defaultMedallions,
     items: defaultItemGrid,
@@ -240,8 +241,8 @@ function loadCookie() {
    document.getElementsByName('Warps')[0].checked = !!cookieobj.warp;
    document.getElementsByName('Warps')[0].onchange();
     
-    document.getElementsByName('Ksword')[1].checked = !!cookieobj.ksword;
-   document.getElementsByName('Ksword')[1].onchange();
+   document.getElementsByName('Ksword')[0].checked = !!cookieobj.kswrd;
+   document.getElementsByName('Ksword')[0].onchange();
     
     for (rbuttonID in document.getElementsByName('SongShuffle')) {
       rbutton = document.getElementsByName('SongShuffle')[rbuttonID]
@@ -252,6 +253,12 @@ function loadCookie() {
    for (rbuttonID in document.getElementsByName('carpenters')) {
       rbutton = document.getElementsByName('carpenters')[rbuttonID]
       if (rbutton.value == cookieobj.carp)
+         rbutton.click();
+   }
+    
+    for (rbuttonID in document.getElementsByName('fortkeys')) {
+      rbutton = document.getElementsByName('fortkeys')[rbuttonID]
+      if (rbutton.value == cookieobj.frtky)
          rbutton.click();
    }
     
@@ -354,13 +361,18 @@ function saveCookie() {
     
    cookieobj.owl = document.getElementsByName('Owls')[0].checked ? 1 : 0;
    cookieobj.warp = document.getElementsByName('Warps')[0].checked ? 1 : 0;
-   cookieobj.ksword = document.getElementsByName('Ksword')[1].checked ? 1 : 0;
-
+   cookieobj.kswrd = document.getElementsByName('Ksword')[0].checked ? 1 : 0;
     
    for (rbuttonID in document.getElementsByName('carpenters')) {
       rbutton = document.getElementsByName('carpenters')[rbuttonID]
       if (rbutton.checked)
          cookieobj.carp = rbutton.value;
+   }
+    
+    for (rbuttonID in document.getElementsByName('fortkeys')) {
+      rbutton = document.getElementsByName('fortkeys')[rbuttonID]
+      if (rbutton.checked)
+         cookieobj.frtky = rbutton.value;
    }
     
     for (rbuttonID in document.getElementsByName('rainbowbridge')) {
