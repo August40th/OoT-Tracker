@@ -1266,7 +1266,7 @@ function addItem(r) {
 
     updateGridItem(r, i);
     
-    var j = itemLayout[r].length;
+    var j = i;
 
     itemGrid[r][j] = [];
     itemLayout[r][j] = 'blank';
