@@ -9,6 +9,7 @@ var defaultMedallions = {
     GoronRuby: 0,
     ZoraSapphire: 0,
 };
+
 var medallions = defaultMedallions;
 var dungeonImg = ['Unknown', 'Rauru', 'Gohma', 'Dodongo', 'Jellyfish', 'PoeSisters', 'FireDancer', 'Clam', 'IronKnuckle', 'Gibdo'];
 
