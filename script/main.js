@@ -619,7 +619,6 @@ function clickDungeon(d) {
         c.style.position = 'relative';
         c.style.top = dungeons[dungeonSelect].chestlist[key].y;
         c.style.left = dungeons[dungeonSelect].chestlist[key].x;
-        //c.style.backgroundImage = 'url(images/Unknown.png)';
         document.getElementById('minimapdiv').appendChild(c);
         
         var cc = document.createElement('span');
@@ -639,7 +638,8 @@ function setQuestType(sender, d) {
                 dungeons[d].mixedtype = "vanilla";
                 bulkDCSelect();
             } else if ( dungeons[d].mixedtype == "vanilla" ) {
-                dungeons[d].mixedtype = "master"; 
+                dungeons[d].mixedtype = "master";
+                //document.getElementById(dungeons[d].keytype);
                 if ( dungeons[d].class == "DCopened") {
                 bulkDCSelect(); }
             } else if ( dungeons[d].mixedtype == "master" ) {
