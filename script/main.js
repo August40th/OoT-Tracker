@@ -1278,7 +1278,7 @@ function addItem(r) {
 }
 function removeItem(r) {
     var i = itemLayout[r].length - 1
-
+    
     if (i < 0) {
         return
     }
@@ -1292,7 +1292,7 @@ function removeItem(r) {
 
 function updateGridItem(row, index) {
     var item = itemLayout[row][index];
-
+    var d; 
     if (editmode) {
         if (!item || item == 'blank') {
             itemGrid[row][index]['item'].style.backgroundImage = 'url(images/blank.png)';
@@ -1343,7 +1343,7 @@ function updateGridItem(row, index) {
        if ( quest == "Master")
            itemGrid[row][index][2].style.backgroundImage = "url(images/MQ.png)";
       else if ( quest == "Mixed" && itemGrid[row][index]['item'].style.backgroundImage.contains("Key") ) {
-          For (var d = 5; d < 13; d++) {
+          For ( d = 5; d < 13; d++) {
               if (dungeons[d].mixedtype == "master" && dungeons[d].keytype == items.item ) 
                   itemGrid[row][index][2].style.backgroundImage = "url(images/MQ.png)";
               else if (dungeons[d].mixedtype == "default" && dungeons[d].keytype == items.item ) 
