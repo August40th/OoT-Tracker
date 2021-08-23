@@ -1344,7 +1344,7 @@ function updateGridItem(row, index) {
    if (questdungeons[item] !== undefined) {
        if ( quest == "Master")
            itemGrid[row][index][2].style.backgroundImage = "url(images/MQ.png)";
-      else if ( quest == "Mixed" && itemGrid[row][index]['item'].name.contains("Key") ) {
+      else if ( quest == "Mixed" ) {
           for ( d = 5; d < 13; d++ ) {
               if (dungeons[d].mixedtype == "master" && dungeons[d].keytype == items[item] ) 
                   itemGrid[row][index][2].style.backgroundImage = "url(images/MQ.png)";
