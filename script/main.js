@@ -1350,7 +1350,7 @@ function updateGridItem(row, index) {
                   itemGrid[row][index][2].style.backgroundImage = "url(images/MQ.png)";
               else if (dungeons[d].mixedtype == "default" && dungeons[d].keytype == items[item] ) 
                   itemGrid[row][index][2].style.backgroundImage = "url(images/Unknown.png)";
-              else
+              else if (dungeons[d].mixedtype == "vanilla" && dungeons[d].keytype == items[item] ) 
                   itemGrid[row][index][2].style.backgroundImage = "";
           }
       } 
