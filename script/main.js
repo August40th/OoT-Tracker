@@ -1322,7 +1322,7 @@ function updateGridItem(row, index) {
     }
 
    itemGrid[row][index]['item'].className = 'griditem ' + !!items[item];
-   itemGrid[row][index]['item'].id = items[item];
+   itemGrid[row][index]['item'].name = items[item];
     
    if (fortresskeys[item] !== undefined) {
       if (fortkeys !== 'Fight' && gerudobridge !== 'Start')
@@ -1344,7 +1344,7 @@ function updateGridItem(row, index) {
    if (questdungeons[item] !== undefined) {
        if ( quest == "Master")
            itemGrid[row][index][2].style.backgroundImage = "url(images/MQ.png)";
-      else if ( quest == "Mixed" && itemGrid[row][index]['item'].id.contains("Key") ) {
+      else if ( quest == "Mixed" && itemGrid[row][index]['item'].name.contains("Key") ) {
           for ( d = 5; d < 13; d++ ) {
               if (dungeons[d].mixedtype == "master" && dungeons[d].keytype == items[item] ) 
                   itemGrid[row][index][2].style.backgroundImage = "url(images/MQ.png)";
@@ -1968,7 +1968,6 @@ function populateItemconfig() {
         i++;
 
         var rowitem = document.createElement('td');
-        var P2item = document.createElement('td');
 
         rowitem.className = 'corner';
         rowitem.id = key;
@@ -1980,17 +1979,7 @@ function populateItemconfig() {
             rowitem.style.backgroundImage = 'url(images/' + key + itemsMax[key] + '.png)';
         }
         
-        P2item.className = 'corner';
-        P2item.id = 'P2 '+ key;
-        P2item.style.backgroundSize = '100% 100%';
-        P2item.onclick = new Function('itemConfigClick(this)');
-        if ((typeof items[key]) == 'boolean') {
-            P2item.style.backgroundImage = 'url(images/' + key + '.png)';
-        } else {
-            P2item.style.backgroundImage = 'url(images/' + key + itemsMax[key] + '.png)';
-        }
         row.appendChild(rowitem);
-        row.appendChild(P2item);
     }
 }
 
