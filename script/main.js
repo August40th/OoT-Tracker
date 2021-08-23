@@ -1321,7 +1321,9 @@ function updateGridItem(row, index) {
         itemGrid[row][index]['item'].style.backgroundImage = 'url(images/' + item + items[item] + '.png)';
     }
 
-    itemGrid[row][index]['item'].className = 'griditem ' + !!items[item];
+   itemGrid[row][index]['item'].className = 'griditem ' + !!items[item];
+   itemGrid[row][index]['item'].id = items[item];
+    
    if (fortresskeys[item] !== undefined) {
       if (fortkeys !== 'Fight' && gerudobridge !== 'Start')
          itemGrid[row][index][3].style.backgroundImage = "url(images/" + keyimg[fortresskeys[item]] + ".png)";
@@ -1342,11 +1344,11 @@ function updateGridItem(row, index) {
    if (questdungeons[item] !== undefined) {
        if ( quest == "Master")
            itemGrid[row][index][2].style.backgroundImage = "url(images/MQ.png)";
-      else if ( quest == "Mixed" && itemGrid[row][index]['item'].style.backgroundImage.contains("Key") ) {
+      else if ( quest == "Mixed" && itemGrid[row][index]['item'].id.contains("Key") ) {
           for ( d = 5; d < 13; d++ ) {
-              if (dungeons[d].mixedtype == "master" && dungeons[d].keytype == items.item ) 
+              if (dungeons[d].mixedtype == "master" && dungeons[d].keytype == items[item] ) 
                   itemGrid[row][index][2].style.backgroundImage = "url(images/MQ.png)";
-              else if (dungeons[d].mixedtype == "default" && dungeons[d].keytype == items.item ) 
+              else if (dungeons[d].mixedtype == "default" && dungeons[d].keytype == items[item] ) 
                   itemGrid[row][index][2].style.backgroundImage = "url(images/Unknown.png)";
               else
                   itemGrid[row][index][2].style.backgroundImage = "";
