@@ -1339,7 +1339,7 @@ function updateGridItem(row, index) {
    if (medallions[item] !== undefined) {
          itemGrid[row][index][3].style.backgroundImage = "url(images/" + dungeonImg[medallions[item]] + ".png)";
    }
-   if (questdungeon[item] !== undefined) {
+   if (questdungeons[item] !== undefined) {
        if ( quest == "Master")
            itemGrid[row][index][2].style.backgroundImage = "url(images/MQ.png)";
       else if ( quest == "Mixed" && itemGrid[row][index]['item'].style.backgroundImage.contains("Key") ) {
