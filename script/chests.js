@@ -1388,7 +1388,7 @@ var dungeons = [
       y: "23.4%",
       type: "dungeon",
       mixedtype: "default",
-      keytype: "Well",
+      keytype: "WellKey",
       found: true,
       chestlist: {
          'Front Left Hidden Wall': {
@@ -1678,7 +1678,7 @@ var dungeons = [
       y: "39.0%",
       type: "dungeon",
       mixedtype: "default",
-      keytype: "Forest",
+      keytype: "ForestKey",
       found: true,
       chestlist: {
          'Lobby Skulltula': {
@@ -2047,7 +2047,7 @@ var dungeons = [
       y: "04.0%",
       type: "dungeon",
       mixedtype: "default",
-      keytype: "Fire",
+      keytype: "FireKey",
       found: true,
       chestlist: {
          'Chest Near Boss': {
@@ -2684,7 +2684,7 @@ var dungeons = [
       y: "91.0%",
       type: "dungeon",
       mixedtype: "default",
-      keytype: "Water",
+      keytype: "WaterKey",
       found: true,
       chestlist: {
          'Water Jet Chest': {
@@ -2974,7 +2974,7 @@ var dungeons = [
       y: "16.4%",
       type: "dungeon",
       mixedtype: "default",
-      keytype: "GTG",
+      keytype: "GTGKey",
       found: true,
       chestlist: {
          'Lobby Right Chest': {
@@ -3309,7 +3309,7 @@ var dungeons = [
       y: "17.0%",
       type: "dungeon",
       mixedtype: "default",
-      keytype: "Spirit",
+      keytype: "SpiritKey",
       found: true,
       chestlist: {
          ['Child Switch Room']: {
@@ -3839,7 +3839,7 @@ var dungeons = [
       y: "19.5%",
       type: "dungeon",
       mixedtype: "default",
-      keytype: "Shadow",
+      keytype: "ShadowKey",
       found: true,
       chestlist: {
          'Keese and Redead Chest': {
@@ -4302,7 +4302,7 @@ var dungeons = [
       y: "14.0%",
       type: "dungeon",
       mixedtype: "default",
-      keytype: "Castle",
+      keytype: "CastleKey",
       found: true,
       chestlist: {
          ['Forest Chest']: {
