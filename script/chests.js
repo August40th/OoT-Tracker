@@ -5638,7 +5638,8 @@ var dungeons = [
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
-                  return dungeons[17].found == true; }
+                  return dungeons[17].found == true && (items.Glove || items.Bow || items.Bombs || 
+                                                        (items.Dins && items.Magic) ); }
          },
          'Goron Shop': {
             x: "45.0%",
@@ -5647,7 +5648,7 @@ var dungeons = [
             access: "door",
                isAvailable: function () {
                   return dungeons[17].found == true &&
-                  ( items.Bombs || (items.Bombchu && BombchuLogic) 
+                  ( items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove
                    || (items.Bow && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                       )
                    || ( (items.Glove || (items.Ocarina && items.ZeldasLullaby) || (items.Dins && items.Magic) )
@@ -5663,7 +5664,7 @@ var dungeons = [
             access: "simple",
             isAvailable: function () {
                return dungeons[17].found == true &&
-                  ( items.Bombs || (items.Bombchu && BombchuLogic) 
+                  ( items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove
                    || (items.Bow && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                       )
                    || ( (items.Glove || (items.Ocarina && items.ZeldasLullaby) || (items.Dins && items.Magic) )
@@ -5680,7 +5681,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[17].found == true && 
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-               && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove) ;
+               && (items.Bombs || items.Bombchu || items.Glove) ;
             }
          },
          ['Spinning Pot Freestanding']: {
@@ -8666,7 +8667,7 @@ var dungeons = [
                isAvailable: function () {
                return (OWERmap == false || dungeons[32].found == true) &&
                   ( ( (items.Bombs || items.Hammer || (items.Bombchu && BombchuLogic) ) 
-                     && (items.IronBoots && items.Scale >= 2) &&
+                     && (items.IronBoots || items.Scale >= 2) &&
                      (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                     )
                    || ( (items.Bombs || (items.Bombchu && BombchuLogic) ) && items.Scale >= 2 &&
