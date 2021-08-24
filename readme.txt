@@ -37,3 +37,4 @@ Logic tweaks
 MQ Ganon's / trials
 Mark MQ by clicking small key
 Entrance tracker
+Multi floor Dungeon maps
