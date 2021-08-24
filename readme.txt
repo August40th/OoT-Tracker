@@ -2,7 +2,7 @@ Browser-based Item Tracker for Ocarina of Time Randomizer
 
 Cloned from testrunnersrl.github.io/oot-tracker
 
-I've added: 
+I've added:
 complete inventory
 keysanity
 skullsanity
@@ -16,6 +16,9 @@ Grotto ER
 Medigoron
 List Gossip Stones (does not count available or opened gossip stones)
 Indoor ER
+OW mini maps
+
+Right click items to cycle in reverse
 
 Right click a colored box to mark it WOTH/POG (Triforce counter coming)
 Click the title of an area (e.g. "Kokiri Forest") to clear any available checks, if none are available all checks in the area are marked opened (barren/foolish)
@@ -31,7 +34,6 @@ If you notice any bugs in logic please message me on Discord: August 40th#4864
 
 ****ToDo List****
 Logic tweaks
-MQ trials
+MQ Ganon's / trials
 Mark MQ by clicking small key
 Entrance tracker
-item tree
