@@ -1943,21 +1943,6 @@ function populateMapdiv() {
     }
 }
 
-function confirmQuest() {
-    if ( dungeons[dungeonSelect].mixedtype == "default" ) {
-            dungeons[dungeonSelect].mixedtype = "vanilla";
-            updateGridItemAll();
-        } else if ( dungeons[dungeonSelect].mixedtype == "vanilla" ) {
-            dungeons[dungeonSelect].mixedtype = "master"; 
-            updateGridItemAll();
-        } else if ( dungeons[dungeonSelect].mixedtype == "master" ) {
-            dungeons[dungeonSelect].mixedtype = "vanilla";
-            updateGridItemAll();
-        }
-        clickDungeon(dungeonSelect);
-        updateMap();
-}
-
 function populateItemconfig() {
     var grid = document.getElementById('itemconfig');
 
