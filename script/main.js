@@ -1501,21 +1501,16 @@ function gridItemClick(row, col, corner) {
           }
        } else if (questdungeons[item] !== undefined) {
            if (quest == "Mixed" && corner == 3 ) {
-              for ( d = 5; d < 13; d++ ) {
-                  if (dungeons[d].mixedtype == "vanilla" && items[item] == dungeons[d].keytype) {
-                      dungeons[d].mixedtype == "master";
-                      itemGrid[row][index][3].style.backgroundImage = "url(images/MQ.png)";
-                  } else if (dungeons[d].mixedtype == "master" && items[item] == dungeons[d].keytype) {
-                      dungeons[d].mixedtype == "vanilla";
-                      itemGrid[row][index][3].style.backgroundImage = "";
-                  } else if (dungeons[d].mixedtype == "default" && dungeons[d].keytype == items[item] ) {
-                      dungeons[d].mixedtype == "vanilla";
-                      itemGrid[row][index][3].style.backgroundImage = "";
-                  }
+              if (items[item] == "ForestKey") {
+                  if (dungeons[5].mixedtype == "default") {
+                      dungeons[5].mixedtype = "vanilla";
+                  } else if (dungeons[5].mixedtype == "vanilla") {
+                      dungeons[5].mixedtype = "master";
+                  } else if (dungeons[5].mixedtype == "master") {
+                      dungeons[5].mixedtype = "vanilla";
+                  } 
               }
           } 
-           else
-             itemGrid[row][index][3].style.backgroundImage = "";
        } else if (songs[item] !== undefined) {
           if (corner == 3) {
              songs[item]++;
@@ -1871,21 +1866,6 @@ function populateMapdiv() {
     
     
     document.getElementById('submaparea').oncontextmenu = new Function('confirmQuest()');
- //        e.preventDefault();
-   //     if ( dungeons[dungeonSelect].mixedtype == "default" ) {
-     //       dungeons[dungeonSelect].mixedtype = "vanilla";
-       //     updateGridItemAll();
-        //} else if ( dungeons[dungeonSelect].mixedtype == "vanilla" ) {
-          //  dungeons[dungeonSelect].mixedtype = "master"; 
-            //updateGridItemAll();
-        //} else if ( dungeons[dungeonSelect].mixedtype == "master" ) {
-          //  dungeons[dungeonSelect].mixedtype = "vanilla";
-            //updateGridItemAll();
-        //}
-        //clickDungeon(dungeonSelect);
-        //updateMap();
-    //}
-    
     
     for (var key in dungeons[dungeonSelect].chestlist) {
         
