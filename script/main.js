@@ -628,23 +628,23 @@ function clickDungeon(d) {
     }
 }
 
-function setQuestType(sender, d) {    
+function confirmQuest(sender, d) {    
         if (quest === "Mixed" && dungeons[d].type === "dungeon") {
-            if ( dungeons[d].mixedtype == "default" ) {
-                if ( dungeons[d].class == "DCpossible") {
+            if ( dungeons[d].class == "possible") {
                 bulkDCSelect();
                 bulkDCSelect();
                 } else { bulkDCSelect(); }
+            if ( dungeons[d].mixedtype == "default" ) {
                 dungeons[d].mixedtype = "vanilla";
                 bulkDCSelect();
             } else if ( dungeons[d].mixedtype == "vanilla" ) {
                 dungeons[d].mixedtype = "master";
                 //document.getElementById(dungeons[d].keytype);
-                if ( dungeons[d].class == "DCopened") {
+                if ( dungeons[d].class == "opened") {
                 bulkDCSelect(); }
             } else if ( dungeons[d].mixedtype == "master" ) {
                 dungeons[d].mixedtype = "vanilla"; 
-                if ( dungeons[d].class == "DCopened") {
+                if ( dungeons[d].class == "opened") {
                 bulkDCSelect(); }
             }
         }
@@ -1499,18 +1499,6 @@ function gridItemClick(row, col, corner) {
           } else {
              items[item] = !items[item];
           }
-       } else if (questdungeons[item] !== undefined) {
-           if (quest == "Mixed" && corner == 3 ) {
-              if (items[item] == "ForestKey") {
-                  if (dungeons[5].mixedtype == "default") {
-                      dungeons[5].mixedtype = "vanilla";
-                  } else if (dungeons[5].mixedtype == "vanilla") {
-                      dungeons[5].mixedtype = "master";
-                  } else if (dungeons[5].mixedtype == "master") {
-                      dungeons[5].mixedtype = "vanilla";
-                  } 
-              }
-          } 
        } else if (songs[item] !== undefined) {
           if (corner == 3) {
              songs[item]++;
@@ -1865,7 +1853,7 @@ function populateMapdiv() {
     document.getElementById('dungeon' + dungeonSelect).style.backgroundImage = 'url(images/highlighted.png)';
     
     
-    document.getElementById('submaparea').oncontextmenu = new Function('confirmQuest()');
+    document.getElementById('submaparea').oncontextmenu = new Function('confirmQuest(' + dungeonSelect + ')');
     
     for (var key in dungeons[dungeonSelect].chestlist) {
         
