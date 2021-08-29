@@ -699,9 +699,12 @@ function bulkDCSelect() {
    document.querySelectorAll(selector).forEach
    (function (dungeon) {
        for (let key in dungeons[dungeonSelect].chestlist) {
-           dungeon.innerHTML = key;
-           dungeons[dungeonSelect].chestlist[dungeon.innerHTML].isOpened = opening; 
-       }   }   )    ;
+           if (dungeons[dungeonSelect].chestlist[dungeon.innerHTML].isOpened !== undefined ) {
+               dungeons[dungeonSelect].chestlist[dungeon.innerHTML].isOpened = opening;
+           }
+       }   
+   }   
+   );
     updateMap();
 }
 
