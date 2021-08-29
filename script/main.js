@@ -635,17 +635,17 @@ function confirmQuest() {
                 bulkDCSelect();
                 } else { bulkDCSelect(); }
             if ( dungeons[dungeonSelect].mixedtype == "default" ) {
-                dungeons[dungeonSelect].mixedtype = "vanilla";
+                dungeons[dungeonSelect].mixedtype = "master";
+                clickDungeon(dungeonSelect);
                 bulkDCSelect();
             } else if ( dungeons[dungeonSelect].mixedtype == "vanilla" ) {
                 dungeons[dungeonSelect].mixedtype = "master";
-                //document.getElementById(dungeons[d].keytype);
-                if ( dungeons[dungeonSelect].class == "opened") {
-                bulkDCSelect(); }
+                clickDungeon(dungeonSelect);
+                bulkDCSelect();
             } else if ( dungeons[dungeonSelect].mixedtype == "master" ) {
                 dungeons[dungeonSelect].mixedtype = "vanilla"; 
-                if ( dungeons[dungeonSelect].class == "opened") {
-                bulkDCSelect(); }
+                clickDungeon(dungeonSelect);
+                bulkDCSelect();
             }
         }
 }
