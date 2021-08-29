@@ -628,13 +628,13 @@ function clickDungeon(d) {
 
 function set1Quest(i, d){
     for ( x = 4; x < 13; x++ ) {
-        if (dungeons[x].mixedtype == "master" && items[i] == dungeons[x].keytype) 
-            dungeons[x].mixedtype = "vanilla";
-        else if (dungeons[x].mixedtype == "default" && items[i] == dungeons[x].keytype)
-            dungeons[x].mixedtype = "master";
-        else if (dungeons[x].mixedtype == "vanilla" && dungeons[x].keytype == items[i] ) 
-            dungeons[x].mixedtype = "master";
+        if (items[i] == dungeons[x].keytype) {
+            dungeonSelect = x; 
+            confirmQuest();
+            dungeonSelect = d;
+        }
     }
+    clikdungeon(d);
     updateGridItemAll();   
 }
 
