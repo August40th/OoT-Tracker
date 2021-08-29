@@ -628,7 +628,8 @@ function clickDungeon(d) {
     }
 }
 
-function confirmQuest(sender, d) {    
+function confirmQuest(d) {
+       window.event.preventDefault()
         if (quest === "Mixed" && dungeons[d].type === "dungeon") {
             if ( dungeons[d].class == "possible") {
                 bulkDCSelect();
