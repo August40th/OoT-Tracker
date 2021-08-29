@@ -8264,7 +8264,7 @@ var dungeons = [
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ;
             }
          },
-         'Free Chest Grave': {
+         'First Row 2nd Grave': {
             x: "25.0%",
             y: "52.0%",
             type: "grotto", 
@@ -8334,7 +8334,7 @@ var dungeons = [
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ;
             }
          },
-         'Redead Grave': {
+         '2nd Row 4th Grave': {
             x: "40.0%",
             y: "58.0%",
             type: "grotto", 
