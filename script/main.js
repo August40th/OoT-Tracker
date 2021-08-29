@@ -632,6 +632,7 @@ function set1Quest(i, d){
             dungeonSelect = x;
             clickDungeon(x);
             confirmQuest();
+            bulkDCSelect();
             dungeonSelect = d;
             clickDungeon(d);
         }
