@@ -1870,7 +1870,7 @@ function populateMapdiv() {
     document.getElementById('dungeon' + dungeonSelect).style.backgroundImage = 'url(images/highlighted.png)';
     
     
-    document.getElementById('submaparea').oncontextmenu = new Function('confirmQuest(' + dungeons[dungeonSelect] + ')');
+    document.getElementById('submaparea').oncontextmenu = new Function('confirmQuest()');
  //        e.preventDefault();
    //     if ( dungeons[dungeonSelect].mixedtype == "default" ) {
      //       dungeons[dungeonSelect].mixedtype = "vanilla";
@@ -1974,7 +1974,7 @@ function populateMapdiv() {
     }
 }
 
-function confirmQuest(dungeons[dungeonSelect]) {
+function confirmQuest() {
     if ( dungeons[dungeonSelect].mixedtype == "default" ) {
             dungeons[dungeonSelect].mixedtype = "vanilla";
             updateGridItemAll();
