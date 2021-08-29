@@ -613,8 +613,8 @@ function clickDungeon(d) {
         c.id = dungeons[dungeonSelect].chestlist[key].type;
         c.className = key + ' ' + s.className;
         c.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
-        //c.onmouseover = new Function('highlight(' + c.className + ')');
-        //c.onmouseout = new Function('unhighlight(' + c.className + ')');
+        c.onmouseover = new Function('highlight(' + c.className + ')');
+        c.onmouseout = new Function('unhighlight(' + c.className + ')');
         c.style.cursor = 'pointer';
         c.style.position = 'relative';
         c.style.top = dungeons[dungeonSelect].chestlist[key].y;
@@ -632,7 +632,7 @@ function confirmQuest() {
        window.event.preventDefault()
        var dun = document.getElementById('submaparea');
         if (quest === "Mixed" && dungeons[dungeonSelect].type === "dungeon") {
-            if ( dun.class == "DCpossible" ) {
+            if ( dun.className == "DCpossible" ) {
                 bulkDCSelect();
                 bulkDCSelect();
                 } else { bulkDCSelect(); }
