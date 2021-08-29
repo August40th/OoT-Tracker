@@ -628,24 +628,24 @@ function clickDungeon(d) {
     }
 }
 
-function confirmQuest(d) {
+function confirmQuest() {
        window.event.preventDefault()
-        if (quest === "Mixed" && dungeons[d].type === "dungeon") {
-            if ( dungeons[d].class == "possible") {
+        if (quest === "Mixed" && dungeons[dungeonSelect].type === "dungeon") {
+            if ( dungeons[dungeonSelect].class == "possible") {
                 bulkDCSelect();
                 bulkDCSelect();
                 } else { bulkDCSelect(); }
-            if ( dungeons[d].mixedtype == "default" ) {
-                dungeons[d].mixedtype = "vanilla";
+            if ( dungeons[dungeonSelect].mixedtype == "default" ) {
+                dungeons[dungeonSelect].mixedtype = "vanilla";
                 bulkDCSelect();
-            } else if ( dungeons[d].mixedtype == "vanilla" ) {
-                dungeons[d].mixedtype = "master";
+            } else if ( dungeons[dungeonSelect].mixedtype == "vanilla" ) {
+                dungeons[dungeonSelect].mixedtype = "master";
                 //document.getElementById(dungeons[d].keytype);
-                if ( dungeons[d].class == "opened") {
+                if ( dungeons[dungeonSelect].class == "opened") {
                 bulkDCSelect(); }
-            } else if ( dungeons[d].mixedtype == "master" ) {
-                dungeons[d].mixedtype = "vanilla"; 
-                if ( dungeons[d].class == "opened") {
+            } else if ( dungeons[dungeonSelect].mixedtype == "master" ) {
+                dungeons[dungeonSelect].mixedtype = "vanilla"; 
+                if ( dungeons[dungeonSelect].class == "opened") {
                 bulkDCSelect(); }
             }
         }
@@ -1854,7 +1854,7 @@ function populateMapdiv() {
     document.getElementById('dungeon' + dungeonSelect).style.backgroundImage = 'url(images/highlighted.png)';
     
     
-    document.getElementById('submaparea').oncontextmenu = new Function('confirmQuest(' + dungeonSelect + ')');
+    document.getElementById('submaparea').oncontextmenu = new Function('confirmQuest()');
     
     for (var key in dungeons[dungeonSelect].chestlist) {
         
