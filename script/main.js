@@ -512,7 +512,7 @@ function clickDungeon(d) {
     var DClist = document.getElementById('submaplist');
     DClist.innerHTML = '';
     var regionSelected = document.getElementById('submaparea').innerHTML;
-    regionSelected.onclick = bulkDCSelect(dungeonSelect);
+    regionSelected.onclick = new Function('bulkDCSelect(' + dungeonSelect + ')');
     
     var minimap = document.getElementById('minimapdiv');
     minimap.style.backgroundImage = 'url(images/' + minimaps[dungeonSelect] + '.png)';
