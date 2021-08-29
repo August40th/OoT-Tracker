@@ -512,7 +512,7 @@ function clickDungeon(d) {
     var DClist = document.getElementById('submaplist');
     DClist.innerHTML = '';
     var regionSelected = document.getElementById('submaparea').innerHTML;
-    regionSelected.onclick = new Function('bulkDCSelect(' + dungeonSelect + ')');
+    regionSelected.onclick = bulkDCSelect();
     
     var minimap = document.getElementById('minimapdiv');
     minimap.style.backgroundImage = 'url(images/' + minimaps[dungeonSelect] + '.png)';
@@ -631,8 +631,8 @@ function set1Quest(i, d){
         if (i in items && i in questdungeons && dungeons[x].keytype == i) {
             dungeonSelect = x;
             clickDungeon(x);
-            confirmQuest(dungeonSelect);
-            bulkDCSelect(dungeonSelect);
+            confirmQuest();
+            bulkDCSelect();
             dungeonSelect = d;
             clickDungeon(d);
         }
@@ -640,31 +640,31 @@ function set1Quest(i, d){
     updateGridItemAll();   
 }
 
-function confirmQuest(x) {
+function confirmQuest() {
        window.event.preventDefault()
        var dun = document.getElementById('submaparea');
-        if (quest === "Mixed" && dungeons[x].type === "dungeon") {
+        if (quest === "Mixed" && dungeons[dungeonSelect].type === "dungeon") {
             if ( dun.className == "DCpossible" ) {
-                bulkDCSelect(x);
-                bulkDCSelect(x);
-                } else { bulkDCSelect(x); }
-            if ( dungeons[x].mixedtype == "default" ) {
-                dungeons[x].mixedtype = "master";
-                clickDungeon(x);
-                bulkDCSelect(x);
-            } else if ( dungeons[x].mixedtype == "vanilla" ) {
-                dungeons[x].mixedtype = "master";
-                clickDungeon(x);
-                bulkDCSelect(x);
-            } else if ( dungeons[x].mixedtype == "master" ) {
-                dungeons[x].mixedtype = "vanilla"; 
-                clickDungeon(x);
-                bulkDCSelect(x);
+                bulkDCSelect();
+                bulkDCSelect();
+                } else { bulkDCSelect(); }
+            if ( dungeons[dungeonSelect].mixedtype == "default" ) {
+                dungeons[dungeonSelect].mixedtype = "master";
+                clickDungeon(dungeonSelect);
+                bulkDCSelect();
+            } else if ( dungeons[dungeonSelect].mixedtype == "vanilla" ) {
+                dungeons[dungeonSelect].mixedtype = "master";
+                clickDungeon(dungeonSelect);
+                bulkDCSelect();
+            } else if ( dungeons[dungeonSelect].mixedtype == "master" ) {
+                dungeons[dungeonSelect].mixedtype = "vanilla"; 
+                clickDungeon(dungeonSelect);
+                bulkDCSelect();
             }
         }
 }
 
-function bulkDCSelect(x) {
+function bulkDCSelect() {
 
    const total = document.querySelectorAll('#submaplist li:not(.d-none)').length;
    const available = document.querySelectorAll('#submaplist li.DCavailable:not(.d-none)').length;
@@ -700,10 +700,10 @@ function bulkDCSelect(x) {
    
    document.querySelectorAll(selector).forEach
    (function (dungeon) {
-       for (let key in dungeons[x].chestlist) {
+       for (let key in dungeons[dungeonSelect].chestlist) {
            dungeon.innerHTML = key;
-           if (dungeons[x].chestlist[dungeon.innerHTML].isOpened !== undefined ) {
-               dungeons[x].chestlist[dungeon.innerHTML].isOpened = opening;
+           if (dungeons[dungeonSelect].chestlist[dungeon.innerHTML].isOpened !== undefined ) {
+               dungeons[dungeonSelect].chestlist[dungeon.innerHTML].isOpened = opening;
            }
        }   
    }   
@@ -1878,7 +1878,7 @@ function populateMapdiv() {
     document.getElementById('dungeon' + dungeonSelect).style.backgroundImage = 'url(images/highlighted.png)';
     
     
-    document.getElementById('submaparea').oncontextmenu = new Function('confirmQuest(' + dungeonSelect + ')');
+    document.getElementById('submaparea').oncontextmenu = new Function('confirmQuest()');
     
     for (var key in dungeons[dungeonSelect].chestlist) {
         
