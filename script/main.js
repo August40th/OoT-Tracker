@@ -626,6 +626,18 @@ function clickDungeon(d) {
     }
 }
 
+function set1Quest(i, d){
+    for ( x = 4; x < 13; x++ ) {
+        if (dungeons[x].mixedtype == "master" && items.i == dungeons[x].keytype) 
+            dungeons[x].mixedtype = "vanilla";
+        else if (dungeons[x].mixedtype == "default" && items.i == dungeons[x].keytype)
+            dungeons[x].mixedtype = "master";
+        else if (dungeons[x].mixedtype == "vanilla" && dungeons[x].keytype == items.i ) 
+            dungeons[x].mixedtype = "master";
+    }
+    updateGridItemAll();   
+}
+
 function confirmQuest() {
        window.event.preventDefault()
        var dun = document.getElementById('submaparea');
@@ -1496,6 +1508,12 @@ function gridItemClick(row, col, corner) {
                 fortresskeys[item] = 0;
              if (fortresskeys[item] >= 5 && carpenters == 4)
                 fortresskeys[item] = 0;
+          } else {
+             items[item] = !items[item];
+          }
+       } else if (questdungeons[item] !== undefined) {
+          if (corner == 3) {
+             set1Quest(item, dungeonSelect);
           } else {
              items[item] = !items[item];
           }
