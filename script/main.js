@@ -628,13 +628,13 @@ function clickDungeon(d) {
 
 function set1Quest(i, d){
     for ( x = 4; x < 13; x++ ) {
-        if (items.contains(i) && questdungeons.contains(i) ) {
+        if (i in items && i in questdungeons) {
             dungeonSelect = x; 
             confirmQuest();
             dungeonSelect = d;
         }
     }
-    clikdungeon(d);
+    clickDungeon(d);
     updateGridItemAll();   
 }
 
