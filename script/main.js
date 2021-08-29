@@ -628,7 +628,7 @@ function clickDungeon(d) {
 
 function set1Quest(i, d){
     for ( x = 4; x < 13; x++ ) {
-        if (items[i] == dungeons[x].keytype) {
+        if (dungeons[x].keytype === items[i]) {
             dungeonSelect = x; 
             confirmQuest();
             dungeonSelect = d;
