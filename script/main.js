@@ -630,8 +630,9 @@ function clickDungeon(d) {
 
 function confirmQuest() {
        window.event.preventDefault()
+       var dun = document.getElementById('submaparea');
         if (quest === "Mixed" && dungeons[dungeonSelect].type === "dungeon") {
-            if ( dungeons[dungeonSelect].class.contains('possible') ) {
+            if ( dun.class == "DCpossible" ) {
                 bulkDCSelect();
                 bulkDCSelect();
                 } else { bulkDCSelect(); }
