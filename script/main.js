@@ -1369,11 +1369,11 @@ function updateGridItem(row, index) {
       else if ( quest == "Mixed" ) {
           itemGrid[row][index][3].style.backgroundImage = "url(images/Unknown.png)";
           for ( d = 5; d < 13; d++ ) {
-              if (dungeons[d].mixedtype == "master" && items[item] == dungeons[d].keytype) 
+              if (dungeons[d].mixedtype == "master" && dungeons[d].keytype == item) 
                   itemGrid[row][index][3].style.backgroundImage = "url(images/MQ.png)";
-              else if (dungeons[d].mixedtype == "default" && items[item] == dungeons[d].keytype) 
+              else if (dungeons[d].mixedtype == "default" && dungeons[d].keytype == item) 
                   itemGrid[row][index][3].style.backgroundImage = "url(images/Unknown.png)";
-              else if (dungeons[d].mixedtype == "vanilla" && dungeons[d].keytype == items[item] ) 
+              else if (dungeons[d].mixedtype == "vanilla" && dungeons[d].keytype == item) 
                   itemGrid[row][index][3].style.backgroundImage = "";
           }
       } 
@@ -1522,10 +1522,8 @@ function gridItemClick(row, col, corner) {
              items[item] = !items[item];
           }
        } else if (questdungeons[item] !== undefined) {
-          if (corner == 3) {
+          if (corner == 3 && quest == "Mixed") {
              set1Quest(item, dungeonSelect);
-          } else {
-             items[item] = !items[item];
           }
        } else if (songs[item] !== undefined) {
           if (corner == 3) {
