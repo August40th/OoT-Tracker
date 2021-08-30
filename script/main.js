@@ -667,7 +667,7 @@ function confirmQuest() {
                 }
             }
     }
-    if ( dungeons[dungeonSelect].mixedtype == "master" ) {
+    if ( dungeons[dungeonSelect].mixedtype == "vanilla" ) {
         if (dungeonSelect == 4) {
             itemsMax.WellKey = 2;
         } else if (dungeonSelect == 5) {
@@ -1356,9 +1356,9 @@ function updateGridItem(row, index) {
               if (dungeons[d].mixedtype == "default" && dungeons[d].keytype == item) 
                   itemGrid[row][index][3].style.backgroundImage = "url(images/Unknown.png)";
               else if (dungeons[d].mixedtype == "vanilla" && dungeons[d].keytype == item) 
-                  itemGrid[row][index][3].style.backgroundImage = "";
-              else if (dungeons[d].mixedtype == "master" && dungeons[d].keytype == item) 
                   itemGrid[row][index][3].style.backgroundImage = "url(images/MQ.png)";
+              else if (dungeons[d].mixedtype == "master" && dungeons[d].keytype == item) 
+                  itemGrid[row][index][3].style.backgroundImage = "";
           }
       } else if ( quest == "Vanilla" ) {
           itemGrid[row][index][3].style.backgroundImage = "";
