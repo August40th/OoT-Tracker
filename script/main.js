@@ -623,8 +623,8 @@ function clickDungeon(d) {
         cc.className = 'tooltipgray';
         cc.innerHTML = key;
         c.appendChild(cc);
-        cc.onmouseover = c.className + ' tooltipgray'; 
-        cc.onmouseout = c.className;
+        cc.onmouseover = cc.className = c.className + ' tooltipgray'; 
+        cc.onmouseout = cc.className = c.className;
     }
 }
 
