@@ -638,10 +638,10 @@ function set1Quest(i, d){
 }
 
 function confirmQuest() {
-       window.event.preventDefault()
-       var dun = document.getElementById('submaparea');
-        if (quest === "Mixed" && dungeons[dungeonSelect].type === "dungeon") {
-            if ( dungeons[dungeonSelect].mixedtype == "default" ) {
+    window.event.preventDefault();
+    var dun = document.getElementById('submaparea');
+    if (quest === "Mixed" && dungeons[dungeonSelect].type === "dungeon") {
+        if ( dungeons[dungeonSelect].mixedtype == "default" ) {
                 dungeons[dungeonSelect].mixedtype = "vanilla";
                 for (var key in dungeons[dungeonSelect].chestlist) {
                     if ( dungeons[dungeonSelect].chestlist[key].access == "master")
@@ -666,8 +666,45 @@ function confirmQuest() {
                         dungeons[dungeonSelect].chestlist[key].isOpened = true;
                 }
             }
+    }
+    if ( dungeons[dungeonSelect].mixedtype == "master" ) {
+        if (dungeonSelect == 4) {
+            itemsMax.WellKey = 2;
+        } else if (dungeonSelect == 5) {
+            itemsMax.ForestKey = 6;
+        } else if (dungeonSelect == 6) {
+            itemsMax.FireKey = 5;
+        } else if (dungeonSelect == 8) {
+            itemsMax.WaterKey = 2;
+        } else if (dungeonSelect == 9) {
+            itemsMax.GTGKey = 3;
+        } else if (dungeonSelect == 10) {
+            itemsMax.SpiritKey = 7;
+        } else if (dungeonSelect == 11) {
+            itemsMax.ShadowKey = 6;
+        } else if (dungeonSelect == 12) {
+            itemsMax.CastleKey = 3;
         }
-        clickDungeon(dungeonSelect);
+    } else { 
+        if (dungeonSelect == 4) {
+            itemsMax.WellKey = 3;
+        } else if (dungeonSelect == 5) {
+            itemsMax.ForestKey = 5;
+        } else if (dungeonSelect == 6) {
+            itemsMax.FireKey = 8;
+        } else if (dungeonSelect == 8) {
+            itemsMax.WaterKey = 6;
+        } else if (dungeonSelect == 9) {
+            itemsMax.GTGKey = 9;
+        } else if (dungeonSelect == 10) {
+            itemsMax.SpiritKey = 5;
+        } else if (dungeonSelect == 11) {
+            itemsMax.ShadowKey = 5;
+        } else if (dungeonSelect == 12) {
+            itemsMax.CastleKey = 2;
+        }
+    }
+    clickDungeon(dungeonSelect);
 }
 
 function bulkDCSelect() {
