@@ -1628,7 +1628,7 @@ function updateMap() {
                 continue;}
             if ( dungeons[k].type == "dungeon" && quest == "Mixed" && dungeons[k].mixedtype == "vanilla" && dungeons[k].chestlist[key].access == "vanilla") { //Mixed quest checks
                 continue;}
-            if ( dungeons[k].type == "dungeon" && quest == "Mixed" dungeons[k].chestlist[key].access == "none") { //Mixed quest checks
+            if ( dungeons[k].type == "dungeon" && quest == "Mixed" && dungeons[k].chestlist[key].access == "none" ) { //Mixed quest checks
                 continue;}
             if ( dungeons[k].type == "dungeon" && dungeons[k].chestlist[key].access == "master" && quest == "Vanilla" ) { //Master checks
                 continue;}
@@ -1801,7 +1801,7 @@ function populateMapdiv() {
                 continue;}
             if ( dungeons[k].type == "dungeon" && quest == "Mixed" && dungeons[k].mixedtype == "vanilla" && dungeons[k].chestlist[key].access == "vanilla") { //Mixed quest vanilla checks
                 continue;}
-            if ( dungeons[k].type == "dungeon" && quest == "Mixed" dungeons[k].chestlist[key].access == "none") { //Mixed quest checks
+            if ( dungeons[k].type == "dungeon" && quest == "Mixed" && dungeons[k].chestlist[key].access == "none") { //Mixed quest checks
                 continue;}
             if ( dungeons[k].type == "dungeon" && dungeons[k].chestlist[key].access == "master" && quest == "Vanilla" ) { //Master checks
                 continue;}
