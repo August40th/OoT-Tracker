@@ -816,9 +816,9 @@ function setQuest(sender) {
     
    for (k = 1; k < 13; k++) {
         if (dungeons[k].type == "dungeon" && quest == "Vanilla") {
-            dungeons[k].mixedtype = "Vanilla" ; }
+            dungeons[k].mixedtype = "vanilla" ; }
        else if (dungeons[k].type == "dungeon" && quest == "Master") {
-            dungeons[k].mixedtype = "Master" ; }
+            dungeons[k].mixedtype = "master" ; }
        else if (dungeons[k].type == "dungeon" && quest == "Mixed") {
             dungeons[k].mixedtype = "default" ; }
     } 
