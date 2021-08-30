@@ -646,19 +646,24 @@ function confirmQuest() {
                 for (var key in dungeons[dungeonSelect].chestlist) {
                     if ( dungeons[dungeonSelect].chestlist[key].access == "master")
                         dungeons[dungeonSelect].chestlist[key].isOpened = true;
+                    if ( dungeons[dungeonSelect].chestlist[key].access == "vanilla")
+                        dungeons[dungeonSelect].chestlist[key].isOpened = false;
                 }
             } else if ( dungeons[dungeonSelect].mixedtype == "vanilla" ) {
                 dungeons[dungeonSelect].mixedtype = "master";
                 for (var key in dungeons[dungeonSelect].chestlist) {
                     if ( dungeons[dungeonSelect].chestlist[key].access == "vanilla")
                         dungeons[dungeonSelect].chestlist[key].isOpened = true;
+                    if ( dungeons[dungeonSelect].chestlist[key].access == "master")
+                        dungeons[dungeonSelect].chestlist[key].isOpened = false;
                 }
             } else if ( dungeons[dungeonSelect].mixedtype == "master" ) {
                 dungeons[dungeonSelect].mixedtype = "vanilla";
                 for (var key in dungeons[dungeonSelect].chestlist) {
-                    if ( dungeons[dungeonSelect].chestlist[key].access == "master") {
+                    if ( dungeons[dungeonSelect].chestlist[key].access == "master")
                         dungeons[dungeonSelect].chestlist[key].isOpened = true;
-                    }
+                    if ( dungeons[dungeonSelect].chestlist[key].access == "vanilla")
+                        dungeons[dungeonSelect].chestlist[key].isOpened = false;
                 }
             }
         }
@@ -702,10 +707,7 @@ function bulkDCSelect() {
    document.querySelectorAll(selector).forEach
    (function (dungeon) {
        for (let key in dungeons[dungeonSelect].chestlist) {
-           dungeon.innerHTML = key;
-           if (dungeons[dungeonSelect].chestlist[dungeon.innerHTML].isOpened !== undefined ) {
-               dungeons[dungeonSelect].chestlist[dungeon.innerHTML].isOpened = opening;
-           }
+           dungeons[dungeonSelect].chestlist[dungeon.innerHTML].isOpened = opening;
        }   
    }   
    );
