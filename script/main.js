@@ -620,7 +620,7 @@ function clickDungeon(d) {
         document.getElementById('minimapdiv').appendChild(c);
         
         var cc = document.createElement('span');
-        cc.className = 'mapspan tooltipgray';
+        cc.className = 'minimapspan tooltipgray';
         cc.innerHTML = key;
         c.appendChild(cc);
     }
