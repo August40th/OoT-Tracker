@@ -4,18 +4,15 @@ Cloned from testrunnersrl.github.io/oot-tracker
 
 I've added:
 complete inventory
-keysanity
-skullsanity
-scrubsanity
+keysanity, skullsanity, scrubsanity
 Bean, Ocarina, Egg Shuffle
 Shopsanity
 Cowsanity
-Keysanity Fortress checks
-List for trials
-Grotto ER
-Medigoron
-List Gossip Stones (does not count available or opened gossip stones)
-Indoor ER
+Keysanity & Membership Fortress checks
+List trials
+Grotto, Dungeon, Indoor ER
+Medigoron, Carpet sale
+List Gossip Stones
 OW mini maps
 
 Right click items to cycle in reverse
@@ -33,6 +30,6 @@ If you notice any bugs in logic please message me on Discord: August 40th#4864
 
 ****ToDo List****
 Logic tweaks
-MQ Ganon's / trials
-Entrance tracker
+Separate areas for Market guard house & LW bridge checks for OWER
+Entrance tracker - lines connecting selected region with found paths
 Multi floor Dungeon maps
