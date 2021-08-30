@@ -620,11 +620,9 @@ function clickDungeon(d) {
         document.getElementById('minimapdiv').appendChild(c);
         
         var cc = document.createElement('span');
-        cc.className = 'tooltipgray';
-        cc.innerHTML = key;
+        cc.className = 'minimap span tooltipgray';
+        cc.id = key;
         cc.style.visibility = 'hidden';
-        c.onmouseover = cc.style.visibility = 'visible';
-        c.onmouseout = cc.style.visibility = 'hidden';
         c.appendChild(cc);
     }
 }
