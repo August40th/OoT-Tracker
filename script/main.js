@@ -631,11 +631,8 @@ function clickDungeon(d) {
 function set1Quest(i, d){
     for ( x = 4; x < 13; x++ ) {
         if (i in items && i in questdungeons && dungeons[x].keytype == i) {
-            dungeonSelect = x;
             clickDungeon(x);
             confirmQuest();
-            bulkDCSelect();
-            dungeonSelect = d;
             clickDungeon(d);
         }
     }
@@ -654,26 +651,26 @@ function confirmQuest() {
                 dungeons[dungeonSelect].mixedtype = "vanilla";
                 for (var key in dungeons[dungeonSelect].chestlist) {
                     if ( dungeons[dungeonSelect].chestlist[key].access == "master") {
-                        dungeons[dungeonSelect].chestlist[key].access == "none" } 
+                        dungeons[dungeonSelect].chestlist[key].isOpened;
+                        dungeons[dungeonSelect].chestlist[key].access == "none"; } 
                 }
                 clickDungeon(dungeonSelect);
-                bulkDCSelect();
             } else if ( dungeons[dungeonSelect].mixedtype == "vanilla" ) {
                 dungeons[dungeonSelect].mixedtype = "master";
                 for (var key in dungeons[dungeonSelect].chestlist) {
                     if ( dungeons[dungeonSelect].chestlist[key].access == "vanilla") {
-                        dungeons[dungeonSelect].chestlist[key].access == "none" } 
+                        dungeons[dungeonSelect].chestlist[key].isOpened;
+                        dungeons[dungeonSelect].chestlist[key].access == "none"; } 
                 }
                 clickDungeon(dungeonSelect);
-                bulkDCSelect();
             } else if ( dungeons[dungeonSelect].mixedtype == "master" ) {
                 dungeons[dungeonSelect].mixedtype = "vanilla";
                 for (var key in dungeons[dungeonSelect].chestlist) {
                     if ( dungeons[dungeonSelect].chestlist[key].access == "master") {
-                        dungeons[dungeonSelect].chestlist[key].access == "none" } 
+                        dungeons[dungeonSelect].chestlist[key].isOpened;
+                        dungeons[dungeonSelect].chestlist[key].access == "none"; } 
                 }
                 clickDungeon(dungeonSelect);
-                bulkDCSelect();
             }
         }
 }
