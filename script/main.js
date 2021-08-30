@@ -901,37 +901,6 @@ function setCarpenter(sender) {
 
 function setSmallKeys(sender) {
    smallkeys = sender.value;
-   if (smallkeys == 'Remove') {
-      itemsMax.ForestKey = 0;
-      itemsMax.FireKey = 0;
-      itemsMax.WaterKey = 0;
-      itemsMax.ShadowKey = 0;
-      itemsMax.SpiritKey = 0;
-      itemsMax.CastleKey = 0;
-      itemsMax.GTGKey = 0;
-      itemsMax.WellKey = 0;
-   }
-   if (smallkeys == 'Dungeons') {
-      itemsMax.ForestKey = 5;
-      itemsMax.FireKey = 8;
-      itemsMax.WaterKey = 6;
-      itemsMax.ShadowKey = 5;
-      itemsMax.SpiritKey = 5;
-      itemsMax.CastleKey = 2;
-      itemsMax.GTGKey = 9;
-      itemsMax.WellKey = 3;
-   }
-   if (smallkeys == 'Keysanity') {
-      itemsMax.ForestKey = 5;
-      itemsMax.FireKey = 8;
-      itemsMax.WaterKey = 6;
-      itemsMax.ShadowKey = 5;
-      itemsMax.SpiritKey = 5;
-      itemsMax.CastleKey = 2;
-      itemsMax.GTGKey = 9;
-      itemsMax.WellKey = 3;
-   }
-   updateGridItemAll();
     
    updateMap();
    saveCookie();
@@ -939,28 +908,6 @@ function setSmallKeys(sender) {
 
 function setBossKeys(sender) {
    bosskeys = sender.value;
-   if (bosskeys == 'Remove') {
-      itemsMax.BossForest = 0;
-      itemsMax.BossFire = 0;
-      itemsMax.BossWater = 0;
-      itemsMax.BossShadow = 0;
-      itemsMax.BossSpirit = 0;
-   }
-   if (bosskeys == 'Dungeons') {
-      itemsMax.BossForest = 1;
-      itemsMax.BossFire = 1;
-      itemsMax.BossWater = 1;
-      itemsMax.BossShadow = 1;
-      itemsMax.BossSpirit = 1;
-   }
-   if (bosskeys == 'Keysanity') {
-      itemsMax.BossForest = 1;
-      itemsMax.BossFire = 1;
-      itemsMax.BossWater = 1;
-      itemsMax.BossShadow = 1;
-      itemsMax.BossSpirit = 1;
-   }
-   updateGridItemAll();
    updateMap();
    saveCookie();
 }
@@ -1405,7 +1352,7 @@ function updateGridItem(row, index) {
            itemGrid[row][index][3].style.backgroundImage = "url(images/MQ.png)";
       else if ( quest == "Mixed" ) {
           itemGrid[row][index][3].style.backgroundImage = "url(images/Unknown.png)";
-          for ( d = 5; d < 13; d++ ) {
+          for ( d = 4; d < 13; d++ ) {
               if (dungeons[d].mixedtype == "master" && dungeons[d].keytype == item) 
                   itemGrid[row][index][3].style.backgroundImage = "url(images/MQ.png)";
               else if (dungeons[d].mixedtype == "default" && dungeons[d].keytype == item) 
