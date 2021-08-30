@@ -1353,15 +1353,15 @@ function updateGridItem(row, index) {
       else if ( quest == "Mixed" ) {
           itemGrid[row][index][3].style.backgroundImage = "url(images/Unknown.png)";
           for ( d = 4; d < 13; d++ ) {
-              if (dungeons[d].mixedtype == "master" && dungeons[d].keytype == item) 
-                  itemGrid[row][index][3].style.backgroundImage = "url(images/MQ.png)";
-              else if (dungeons[d].mixedtype == "default" && dungeons[d].keytype == item) 
-                  itemGrid[row][index][3].style.backgroundImage = "url(images/Unknown.png)";
+              if (dungeons[d].mixedtype == "default" && dungeons[d].keytype == item) 
+                  itemGrid[row][index][3].style.backgroundImage = "url(images/Unknown.png)=";
               else if (dungeons[d].mixedtype == "vanilla" && dungeons[d].keytype == item) 
                   itemGrid[row][index][3].style.backgroundImage = "";
+              else if (dungeons[d].mixedtype == "master" && dungeons[d].keytype == item) 
+                  itemGrid[row][index][3].style.backgroundImage = "url(images/MQ.png)";
           }
       } 
-       else
+      else if ( quest == "Vanilla" ) {
          itemGrid[row][index][3].style.backgroundImage = "";
    }
 }
