@@ -611,18 +611,13 @@ function clickDungeon(d) {
         c = document.createElement('span');
         c.innerHTML = 'x';
         c.id = dungeons[dungeonSelect].chestlist[key].type;
-        c.className = key + ' ' + s.className;
+        c.className = 'minimapspan tooltipgray' + ' ' + key + ' ' + s.className;
         c.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
         c.style.cursor = 'pointer';
         c.style.position = 'relative';
         c.style.top = dungeons[dungeonSelect].chestlist[key].y;
         c.style.left = dungeons[dungeonSelect].chestlist[key].x;
         document.getElementById('minimapdiv').appendChild(c);
-        
-        var cc = document.createElement('span');
-        cc.className = 'minimapspan tooltipgray';
-        cc.innerHTML = key;
-        c.appendChild(cc);
     }
 }
 
