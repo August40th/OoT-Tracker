@@ -4742,7 +4742,7 @@ var dungeons = [
       keytype: "CastleKey",
       found: true,
       chestlist: {
-         ['Forest Chest']: {
+         ['Forest 1']: {
             x: "5.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -4752,7 +4752,7 @@ var dungeons = [
                return dungeons[12].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen();
             }
          },
-         ['Forest Trial Clear']: {
+         ['Forest Trial']: {
             x: "10.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -4762,7 +4762,7 @@ var dungeons = [
                return dungeons[12].found == true && isBridgeOpen() && items.Magic && items.Bow && items.Light && (items.Fire || (items.Hookshot && items.Dins));
             }
          },
-         ['Ice Chest 1']: {
+         ['Ice 1']: {
             x: "15.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -4772,7 +4772,7 @@ var dungeons = [
                return dungeons[12].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen();
             }
          },
-         ['Ice Chest 2']: {
+         ['Ice 2']: {
             x: "20.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -4782,7 +4782,7 @@ var dungeons = [
                return dungeons[12].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen();
             }
          },
-         ['Ice Trial Clear']: {
+         ['Ice Trial']: {
             x: "25.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -4792,7 +4792,7 @@ var dungeons = [
                return dungeons[12].found == true && isBridgeOpen() && items.Bottle && items.Hammer && items.Magic && items.Bow && items.Light;
             }
          },
-         ['Shadow Chest 1']: {
+         ['Shadow 1']: {
             x: "30.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -4807,7 +4807,7 @@ var dungeons = [
                   (items.Ocarina >= 1 && items.SongofTime));
             }
          },
-         ['Shadow Chest 2']: {
+         ['Shadow 2']: {
             x: "35.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -4821,7 +4821,7 @@ var dungeons = [
                      items.Magic && items.Dins) || items.Hookshot >= 2);
             }
          },
-         ['Shadow Trial Clear']: {
+         ['Shadow Trial']: {
             x: "40.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -4831,7 +4831,7 @@ var dungeons = [
                return dungeons[12].found == true && isBridgeOpen() && items.Magic && items.Bow && items.Light && items.Hammer && (items.Fire || items.Hookshot >= 2) && (items.Lens || (items.HoverBoots && items.Hookshot >= 2));
             }
          },
-         ['Fire Trial Clear']: {
+         ['Fire Trial']: {
             x: "45.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -4841,7 +4841,7 @@ var dungeons = [
                return dungeons[12].found == true && isBridgeOpen() && items.Glove >= 3 && items.Magic && items.Bow && items.Light && items.Hookshot >= 2;
             }
          },
-         ['Spirit Chest 1']: {
+         ['Spirit 1']: {
             x: "50.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -4851,7 +4851,7 @@ var dungeons = [
                return dungeons[12].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && items.Hookshot && (items.Bombchu || items.Bow);
             }
          },
-         ['Spirit Chest 2']: {
+         ['Spirit 2']: {
             x: "55.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -4861,7 +4861,7 @@ var dungeons = [
                return dungeons[12].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && items.Hookshot && (items.Bombchu || items.Bow);
             }
          },
-         ['Spirit Trial Clear']: {
+         ['Spirit Trial']: {
             x: "60.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -4871,7 +4871,7 @@ var dungeons = [
                return dungeons[12].found == true && isBridgeOpen() && items.Magic && items.Bow && items.Light && items.MirrorShield && items.Bombs && items.Hookshot >= 1;
             }
          },
-         ['Light Chest 1']: {
+         ['Light 1']: {
             x: "65.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -4881,7 +4881,7 @@ var dungeons = [
                return dungeons[12].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && items.Glove >= 3;
             }
          },
-         ['Light Chest 2']: {
+         ['Light 2']: {
             x: "70.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -4891,7 +4891,7 @@ var dungeons = [
                return dungeons[12].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && items.Glove >= 3;
             }
          },
-         ['Light Chest 3']: {
+         ['Light 3']: {
             x: "75.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -4901,7 +4901,7 @@ var dungeons = [
                return dungeons[12].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && items.Glove >= 3;
             }
          },
-         ['Light Chest 4']: {
+         ['Light 4']: {
             x: "80.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -4911,7 +4911,7 @@ var dungeons = [
                return dungeons[12].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && items.Glove >= 3;
             }
          },
-         ['Light Chest 5']: {
+         ['Light 5']: {
             x: "85.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -4921,7 +4921,7 @@ var dungeons = [
                return dungeons[12].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && items.Glove >= 3;
             }
          },
-         ['Light Chest 6']: {
+         ['Light 6']: {
             x: "90.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -4931,7 +4931,7 @@ var dungeons = [
                return dungeons[12].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && items.Glove >= 3;
             }
          },
-         ['Light Invisible Chest']: {
+         ['Light Invisible']: {
             x: "95.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -4941,7 +4941,7 @@ var dungeons = [
                return dungeons[12].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && items.Glove >= 3;
             }
          },
-         ['Light Lullaby Chest']: {
+         ['Light Lullaby']: {
             x: "5.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -4951,7 +4951,7 @@ var dungeons = [
                return dungeons[12].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && items.Glove >= 3 && items.Ocarina && items.ZeldasLullaby && items.CastleKey;
             }
          },
-         ['Light Trial Clear']: {
+         ['Light Trial']: {
             x: "10.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -4961,7 +4961,7 @@ var dungeons = [
                return dungeons[12].found == true && isBridgeOpen() && items.Glove >= 3 && items.Magic && items.Bow && items.Hookshot && items.Light && items.CastleKey >= 2;
             }
          },
-         ['Boss Key Chest']: {
+         ['Stalfos Fire Trap']: {
             x: "15.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -4981,7 +4981,7 @@ var dungeons = [
                return dungeons[12].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && generalCanGetChest(this.trials) && items.BossCastle && items.Bow && items.Magic && items.Light;
             }
          },
-         'Invisible Wall Scrub': {
+         'Invisible Wall Scrub 1': {
             x: "30.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -5058,7 +5058,7 @@ var dungeons = [
             type: "trial",
             access: "master",
             isAvailable: function () {
-               return dungeons[12].found == true && isBridgeOpen() && items.Ocarina && items.SongofTime && items.Bow && items.Magic && items.Light';
+               return dungeons[12].found == true && isBridgeOpen() && items.Ocarina && items.SongofTime && items.Bow && items.Magic && items.Light;
             },
          },
          'MQ Ice chest ': {
