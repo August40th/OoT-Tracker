@@ -645,19 +645,19 @@ function confirmQuest() {
                 dungeons[dungeonSelect].mixedtype = "vanilla";
                 for (var key in dungeons[dungeonSelect].chestlist) {
                     if ( dungeons[dungeonSelect].chestlist[key].access == "master")
-                        dungeons[dungeonSelect].chestlist[key].isOpened;
+                        dungeons[dungeonSelect].chestlist[key].isOpened = true;
                 }
             } else if ( dungeons[dungeonSelect].mixedtype == "vanilla" ) {
                 dungeons[dungeonSelect].mixedtype = "master";
                 for (var key in dungeons[dungeonSelect].chestlist) {
                     if ( dungeons[dungeonSelect].chestlist[key].access == "vanilla")
-                        dungeons[dungeonSelect].chestlist[key].isOpened;
+                        dungeons[dungeonSelect].chestlist[key].isOpened = true;
                 }
             } else if ( dungeons[dungeonSelect].mixedtype == "master" ) {
                 dungeons[dungeonSelect].mixedtype = "vanilla";
                 for (var key in dungeons[dungeonSelect].chestlist) {
                     if ( dungeons[dungeonSelect].chestlist[key].access == "master") {
-                        dungeons[dungeonSelect].chestlist[key].isOpened;
+                        dungeons[dungeonSelect].chestlist[key].isOpened = true;
                     }
                 }
             }
