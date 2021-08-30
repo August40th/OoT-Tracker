@@ -623,8 +623,8 @@ function clickDungeon(d) {
         cc.className = 'tooltipgray';
         cc.innerHTML = key;
         c.appendChild(cc);
-        c.onmouseover = new Function('minihigh(' + cc + ')'); 
-        c.onmouseout = new Function('miniunhigh(' + cc + ')');
+        c.onmouseover = new Function('minihigh(cc)'); 
+        c.onmouseout = new Function('miniunhigh(cc)');
     }
 }
 
@@ -1852,7 +1852,7 @@ function populateMapdiv() {
 
         var ss = document.createElement('span');
         ss.className = 'chestCount';
-        if ( quest == "Mixed" && dungeons[k].mixedttype == "default" ) {
+        if ( quest == "Mixed" && dungeons[k].mixedtype == "default" ) {
             ss.innerHTML = '?';
         } else if (DCcount == 0) {
             ss.innerHTML = '';
