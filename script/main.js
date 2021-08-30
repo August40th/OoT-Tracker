@@ -611,17 +611,31 @@ function clickDungeon(d) {
         c = document.createElement('span');
         c.innerHTML = 'x';
         c.id = dungeons[dungeonSelect].chestlist[key].type;
-        c.className = 'minimapspan tooltipgray' + ' ' + key + ' ' + s.className;
+        c.className = key + ' ' + s.className;
         c.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
         c.style.cursor = 'pointer';
         c.style.position = 'relative';
         c.style.top = dungeons[dungeonSelect].chestlist[key].y;
         c.style.left = dungeons[dungeonSelect].chestlist[key].x;
         document.getElementById('minimapdiv').appendChild(c);
+        
+        var cc = document.createElement('span');
+        cc.className = 'tooltipgray';
+        cc.innerHTML = key;
+        c.appendChild(cc);
+        c.onmouseover = new Function('minihigh(' + cc + ')'); 
+        c.onmouseout = new Function('miniunhigh(' + cc + ')');
     }
 }
 
-function set1Quest(i, d){
+function minihigh(n) {
+    n.className = 'hovertooltipgray';
+}
+function miniunhigh(n) {
+    n.className = 'tooltipgray';
+}
+
+function set1Quest(i, d) {
     for ( x = 4; x < 13; x++ ) {
         if (i in items && i in questdungeons && dungeons[x].keytype == i) {
             clickDungeon(x);
