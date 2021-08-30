@@ -644,13 +644,13 @@ function confirmQuest() {
             if ( dungeons[dungeonSelect].mixedtype == "default" ) {
                 dungeons[dungeonSelect].mixedtype = "vanilla";
                 for (var key in dungeons[dungeonSelect].chestlist) {
-                    if ( dungeons[dungeonSelect].chestlist[key].access == "master") {
+                    if ( dungeons[dungeonSelect].chestlist[key].access == "master")
                         dungeons[dungeonSelect].chestlist[key].isOpened;
                 }
             } else if ( dungeons[dungeonSelect].mixedtype == "vanilla" ) {
                 dungeons[dungeonSelect].mixedtype = "master";
                 for (var key in dungeons[dungeonSelect].chestlist) {
-                    if ( dungeons[dungeonSelect].chestlist[key].access == "vanilla") {
+                    if ( dungeons[dungeonSelect].chestlist[key].access == "vanilla")
                         dungeons[dungeonSelect].chestlist[key].isOpened;
                 }
             } else if ( dungeons[dungeonSelect].mixedtype == "master" ) {
