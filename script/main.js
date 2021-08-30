@@ -622,6 +622,9 @@ function clickDungeon(d) {
         var cc = document.createElement('span');
         cc.className = 'tooltipgray';
         cc.innerHTML = key;
+        cc.style.visibility = 'hidden';
+        c.onmouseover = cc.style.visibility:'visible';
+        c.onmouseout = cc.style.visibility: 'hidden';
         c.appendChild(cc);
     }
 }
