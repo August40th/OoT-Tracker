@@ -620,8 +620,8 @@ function clickDungeon(d) {
         document.getElementById('minimapdiv').appendChild(c);
         
         var cc = document.createElement('span');
-        cc.className = 'tooltipgray';
-        cc.innerHTML = dungeons[k].name;
+        cc.className = 'mapspan tooltipgray';
+        cc.innerHTML = key;
         c.appendChild(cc);
     }
 }
