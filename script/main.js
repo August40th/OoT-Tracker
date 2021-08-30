@@ -1562,6 +1562,12 @@ function gridItemClick(row, col, corner) {
           if (corner == 3 && quest == "Mixed") {
              set1Quest(item, dungeonSelect);
           }
+          else {
+            items[item]++;
+            if (items[item] > itemsMax[item]) {
+                items[item] = itemsMin[item];
+            }
+          }
        } else if (songs[item] !== undefined) {
           if (corner == 3) {
              songs[item]++;
