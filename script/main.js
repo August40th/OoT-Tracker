@@ -623,16 +623,9 @@ function clickDungeon(d) {
         cc.className = 'tooltipgray';
         cc.innerHTML = key;
         c.appendChild(cc);
-        c.onmouseover = new Function('minihigh(cc)'); 
-        c.onmouseout = new Function('miniunhigh(cc)');
+        cc.onmouseover = c.className + ' tooltipgray'; 
+        cc.onmouseout = c.className;
     }
-}
-
-function minihigh(n) {
-    n.className = 'hovertooltipgray';
-}
-function miniunhigh(n) {
-    n.className = 'tooltipgray';
 }
 
 function set1Quest(i, d) {
