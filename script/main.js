@@ -525,7 +525,8 @@ function clickDungeon(d) {
             ub.style.backgroundImage = 'url(images/Up.png)';
             var db = document.createElement('button');
             db.style.backgroundImage = 'url(images/Down.png)';
-
+        document.getElementById('minimapdiv').appendChild(ub);
+        document.getElementById('minimapdiv').appendChild(db);
         }
     
     if (OWERmap == true && dungeons[dungeonSelect].type == "overworld" && dungeons[dungeonSelect].found == false) {
