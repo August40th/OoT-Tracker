@@ -30,9 +30,9 @@ body{
 #button{
     position: fixed;
     left: 830px;
-    top: -420px;
-    width: 16px;
-    height: 8px;
+    top: -220px;
+    width: 60px;
+    height: 40px;
 }
 
 .column {
