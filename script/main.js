@@ -620,8 +620,14 @@ function clickDungeon(d) {
         document.getElementById('minimapdiv').appendChild(c);
         if (dungeons[dungeonSelect].type == "overworld")
             document.getElementById('minimapdiv').style.backgroundColor = "maroon";
-        else
+        else if (dungeons[dungeonSelect].type == "dungeon") {
             document.getElementById('minimapdiv').style.backgroundColor = "red";
+            var ub = document.createElement('button');
+            ub.style.backgroundImage = 'url(images/Up.png)';
+            var db = document.createElement('button');
+            db.style.backgroundImage = 'url(images/Down.png)';
+
+        }
         
         var cc = document.createElement('span');
         cc.className = 'minimap span tooltipgray';
