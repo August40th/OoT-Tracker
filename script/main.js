@@ -517,6 +517,16 @@ function clickDungeon(d) {
     var minimap = document.getElementById('minimapdiv');
     minimap.style.backgroundImage = 'url(images/' + minimaps[dungeonSelect] + '.png)';
     minimap.innerHTML = '';
+    if (dungeons[dungeonSelect].type == "overworld")
+            document.getElementById('minimapdiv').style.backgroundColor = "maroon";
+        else if (dungeons[dungeonSelect].type == "dungeon") {
+            document.getElementById('minimapdiv').style.backgroundColor = "red";
+            var ub = document.createElement('button');
+            ub.style.backgroundImage = 'url(images/Up.png)';
+            var db = document.createElement('button');
+            db.style.backgroundImage = 'url(images/Down.png)';
+
+        }
     
     if (OWERmap == true && dungeons[dungeonSelect].type == "overworld" && dungeons[dungeonSelect].found == false) {
         dungeons[dungeonSelect].found = true ;
@@ -618,16 +628,6 @@ function clickDungeon(d) {
         c.style.top = dungeons[dungeonSelect].chestlist[key].y;
         c.style.left = dungeons[dungeonSelect].chestlist[key].x;
         document.getElementById('minimapdiv').appendChild(c);
-        if (dungeons[dungeonSelect].type == "overworld")
-            document.getElementById('minimapdiv').style.backgroundColor = "maroon";
-        else if (dungeons[dungeonSelect].type == "dungeon") {
-            document.getElementById('minimapdiv').style.backgroundColor = "red";
-            var ub = document.createElement('button');
-            ub.style.backgroundImage = 'url(images/Up.png)';
-            var db = document.createElement('button');
-            db.style.backgroundImage = 'url(images/Down.png)';
-
-        }
         
         var cc = document.createElement('span');
         cc.className = 'minimap span tooltipgray';
