@@ -790,7 +790,7 @@ function toggleDungeonMapUp() {
     here++;
     if (here > floortop)
         here = 0;
-    m.style.backgroundImage = 'url(images/' + minimaps[dungeonSelect]here + '.png)';
+    m.style.backgroundImage = 'url(images/' + minimaps[dungeonSelect] + here + '.png)';
     last = dungeonSelect;
 }
 
