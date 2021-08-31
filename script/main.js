@@ -779,7 +779,7 @@ function bulkDCSelect() {
 }
 
 function toggleDungeonMapUp() {
-    var m = document.getElementById.('minimapdiv');
+    var m = document.getElementById('minimapdiv');
     var enter, here, floortop, last;
     if (dungeonSelect == 1) {
         enter = 2;
