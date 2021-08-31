@@ -515,7 +515,7 @@ function clickDungeon(d) {
     regionSelected.onclick = bulkDCSelect();
     
     var minimap = document.getElementById('minimapdiv');
-    minimap.style.backgroundImage = 'url(images/' + minimaps[dungeonSelect] + '.png)';
+    minimap.style.backgroundImage = 'url(images/' + minimaps[dungeonSelect] + '0.png)';
     minimap.innerHTML = '';
     if (dungeons[dungeonSelect].type == "overworld")
             document.getElementById('minimapdiv').style.backgroundColor = "maroon";
