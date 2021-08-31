@@ -618,6 +618,10 @@ function clickDungeon(d) {
         c.style.top = dungeons[dungeonSelect].chestlist[key].y;
         c.style.left = dungeons[dungeonSelect].chestlist[key].x;
         document.getElementById('minimapdiv').appendChild(c);
+        if (dungeons[dungeonSelect].type == "overworld")
+            document.getElementById('minimapdiv').style.backgroundColor = rgb (180, 40, 40);
+        else
+            document.getElementById('minimapdiv').style.backgroundColor = rgb(255,255,222);
         
         var cc = document.createElement('span');
         cc.className = 'minimap span tooltipgray';
