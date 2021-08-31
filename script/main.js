@@ -523,7 +523,7 @@ function clickDungeon(d) {
             document.getElementById('minimapdiv').style.backgroundColor = "red";
             var ub = document.createElement('button');
             ub.style.backgroundImage = 'url(images/Up.png)';
-            ub.style.height = '32px;
+            ub.style.height = '32px';
             ub.style.width = '48px';
             ub.style.position = 'absolute';
             ub.style.top = '369px';
@@ -533,7 +533,7 @@ function clickDungeon(d) {
             ub.onclick = new Function('toggleDungeonMapUp()');
             var db = document.createElement('button');
             db.style.backgroundImage = 'url(images/Down.png)';
-            db.style.height = '32px;
+            db.style.height = '32px';
             db.style.width = '48px';
             db.style.position = 'absolute';
             db.style.top = '369px';
