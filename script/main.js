@@ -523,10 +523,25 @@ function clickDungeon(d) {
             document.getElementById('minimapdiv').style.backgroundColor = "red";
             var ub = document.createElement('button');
             ub.style.backgroundImage = 'url(images/Up.png)';
+            ub.style.height: '32px;
+            ub.style.width: '48px';
+            ub.style.position: 'absolute';
+            ub.style.top: '369px';
+            ub.style.left: '22px';
+            ub.style.backgroundPosition: 'center';
+            ub.style.backgroundSize: '160%';
+            ub.onclick = new Function('toggleDungeonMapUp()');
             var db = document.createElement('button');
             db.style.backgroundImage = 'url(images/Down.png)';
-        document.getElementById('minimapdiv').appendChild(ub);
-        document.getElementById('minimapdiv').appendChild(db);
+            db.style.height: '32px;
+            db.style.width: '48px';
+            db.style.position: 'absolute';
+            db.style.top: '369px';
+            db.style.left: '22px';
+            db.style.backgroundPosition: 'center';
+            db.style.backgroundSize: '160%';
+            document.getElementById('minimapdiv').appendChild(ub);
+         document.getElementById('minimapdiv').appendChild(db);
         }
     
     if (OWERmap == true && dungeons[dungeonSelect].type == "overworld" && dungeons[dungeonSelect].found == false) {
@@ -761,6 +776,22 @@ function bulkDCSelect() {
    }   
    );
     updateMap();
+}
+
+function toggleDungeonMapUp() {
+    var m = document.getElementById.('minimapdiv');
+    var enter, here, floortop, last;
+    if (dungeonSelect == 1) {
+        enter = 2;
+        floortop = 4;
+        if (last !== dungeonSelect)
+            here = enter;
+    }
+    here++;
+    if (here > floortop)
+        here = 0;
+    m.style.backgroundImage = 'url(images/' + minimaps[dungeonSelect]here + '.png)';
+    last = dungeonSelect;
 }
 
 function toggleDungeonChest(sender, d, c) {
