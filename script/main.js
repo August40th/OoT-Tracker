@@ -526,7 +526,7 @@ function clickDungeon(d) {
             ub.style.height = '32px';
             ub.style.width = '48px';
             ub.style.position = 'absolute';
-            ub.style.top = '369px';
+            ub.style.top = '345px';
             ub.style.left = '22px';
             ub.style.backgroundPosition = 'center';
             ub.style.backgroundSize = '160%';
@@ -540,6 +540,7 @@ function clickDungeon(d) {
             db.style.left = '22px';
             db.style.backgroundPosition = 'center';
             db.style.backgroundSize = '160%';
+            db.onclick = new Function('toggleDungeonMapDown()');
             document.getElementById('minimapdiv').appendChild(ub);
          document.getElementById('minimapdiv').appendChild(db);
         }
@@ -790,6 +791,22 @@ function toggleDungeonMapUp() {
     here++;
     if (here > floortop)
         here = 0;
+    m.style.backgroundImage = 'url(images/' + minimaps[dungeonSelect] + here + '.png)';
+    last = dungeonSelect;
+}
+
+function toggleDungeonMapDown() {
+    var m = document.getElementById('minimapdiv');
+    var enter, here, floortop, last;
+    if (dungeonSelect == 1) {
+        enter = 2;
+        floortop = 4;
+        if (last !== dungeonSelect)
+            here = enter;
+    }
+    here--;
+    if (here < 0)
+        here = floortop;
     m.style.backgroundImage = 'url(images/' + minimaps[dungeonSelect] + here + '.png)';
     last = dungeonSelect;
 }
