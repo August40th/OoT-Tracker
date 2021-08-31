@@ -619,7 +619,7 @@ function clickDungeon(d) {
         c.style.left = dungeons[dungeonSelect].chestlist[key].x;
         document.getElementById('minimapdiv').appendChild(c);
         if (dungeons[dungeonSelect].type == "overworld")
-            document.getElementById('minimapdiv').style.backgroundColor = rgb (180, 40, 40);
+            document.getElementById('minimapdiv').style.backgroundColor = rgb(180, 40, 40);
         else
             document.getElementById('minimapdiv').style.backgroundColor = rgb(255,255,222);
         
