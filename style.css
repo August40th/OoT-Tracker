@@ -289,9 +289,9 @@ label {
 }
 
 .minimapdiv{
-    background-color: rgb(178,34,34);
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    background-color: rgb(140,40,40);
 
     position: relative;
     width: 700px;
