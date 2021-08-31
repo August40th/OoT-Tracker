@@ -20,7 +20,7 @@ var songs = [];
 var songimg = ['Unknown', 'Impa', 'Malon', 'SariasSong2', 'Guru', 'CompBro', 'Prelude', 'Forest', 'Crater', 'IceSong', 'Desert', 'BurningKak', 'Ocarina2'];
 var songdung = ['Unknown', 'Impa', 'Gohma', 'Dodongo', 'Jellyfish', 'Deadhand', 'PoeSisters', 'FireDancer', 'WhiteWolf', 'Clam', 'IronKnuckle', 'Gibdo', 'Membership'];
 
-var minimaps = ['KokiriForest', 'DekuTree2', 'DodongosCavern0', 'JabusBelly1', 'BottomoftheWell2', 
+var minimaps = ['KokiriForest', 'DekuTree2', 'DodongosCavern0', 'JabusBelly1', 'BottomOfTheWell2', 
                 'ForestTemple2', 'FireTemple0', 'IceCavern', 'WaterTemple3', 'GTG', 'SpiritTemple0', 'ShadowTemple3', 'OGC', 
                 'The Market', 'TempleofTime', 'HyruleCastle', 'KakarikoVillage', 'GoronCity', 'LostWoods', 'SacredForestMeadow',
                'ZorasRiver', 'ZorasDomain', 'ZorasFountain', 'DeathMountainTrail', 'DeathMountainCrater', 'LonLonRanch', 'LakeHylia',
