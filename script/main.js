@@ -546,8 +546,10 @@ function clickDungeon(d) {
             db.style.backgroundPosition = 'center';
             db.style.backgroundSize = '160%';
             db.onclick = new Function('toggleDungeonMapDown(last)');
-            document.getElementById('minimapdiv').appendChild(ub);
-         document.getElementById('minimapdiv').appendChild(db);
+            if (dungeonSelect !== 7) { //not needed in ice
+                document.getElementById('minimapdiv').appendChild(ub);
+                document.getElementById('minimapdiv').appendChild(db);
+            }
         }
     
     if (OWERmap == true && dungeons[dungeonSelect].type == "overworld" && dungeons[dungeonSelect].found == false) {
