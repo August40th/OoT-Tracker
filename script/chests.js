@@ -5713,8 +5713,8 @@ var dungeons = [
             }
          },
          'Malon\s Weird Egg': {
-           x: "22.0%",
-            y: "65.0%",
+           x: "32.0%",
+            y: "80.0%",
             leadsto: "unknown",
             type: "egg", 
             access: "outdoor",
@@ -5726,7 +5726,7 @@ var dungeons = [
          },
          'Above Malon': {
             type: "gossip",
-           x: "31.0%",
+           x: "39.0%",
             y: "75.0%",
             access: "outdoor",
             isAvailable: function () {
@@ -5891,8 +5891,8 @@ var dungeons = [
             }
          },
          'Tree Skulltula': {
-            x: "43.0%",
-            y: "50.0%",
+            x: "40.0%",
+            y: "58.0%",
             leadsto: "unknown",
             type: "skulltula", 
             access: "outdoor",
@@ -5941,8 +5941,8 @@ var dungeons = [
                   return dungeons[16].found == true; }
          },
          'Behind Shop Skulltula': {
-            x: "44.0%",
-            y: "24.0%",
+            x: "48.0%",
+            y: "25.0%",
             leadsto: "unknown",
             type: "skulltula", 
             access: "outdoor",
@@ -5952,8 +5952,8 @@ var dungeons = [
             }
          },
          'Tower Skulltula': {
-            x: "45.0%",
-            y: "50.0%",
+            x: "42.0%",
+            y: "53.0%",
             leadsto: "unknown",
             type: "skulltula", 
             access: "outdoor",
@@ -6535,7 +6535,7 @@ var dungeons = [
                }
          },
          ['Big Rolling Goron']: {
-            x: "4.0%",
+            x: "42.0%",
             y: "28.0%",
             leadsto: "unknown",
             type: "NPC", 
@@ -6929,8 +6929,8 @@ var dungeons = [
       found: true,
       chestlist: {
          'Meadow to Woods': {
-            x: "4.0%",
-            y: "43.0%",
+            x: "2.0%",
+            y: "38.0%",
             leadsto: "unknown",
             type: "entrance", 
             access: "entrance",
@@ -6938,8 +6938,8 @@ var dungeons = [
                   return dungeons[19].found == true; }
          },
          'Meadow Bomb Grotto': {
-            x: "8.0%",
-            y: "43.0%",
+            x: "10.0%",
+            y: "39.0%",
             leadsto: "unknown",
             type: "grotto", 
             access: "grotto",
@@ -6954,8 +6954,8 @@ var dungeons = [
                   );}
          },
          ['Wolfos Grotto']: {
-            x: "9.0%",
-            y: "43.0%",
+            x: "10.0%",
+            y: "39.0%",
             leadsto: "unknown",
             type: "chest", 
             access: "grotto",
@@ -6971,8 +6971,8 @@ var dungeons = [
             }
          },
          'Maze Gossip 1': {
-            x: "25.0%",
-            y: "66.0%",
+            x: "18.5%",
+            y: "62.0%",
             leadsto: "unknown",
             type: "gossip", 
             access: "outdoor",
@@ -6981,8 +6981,8 @@ var dungeons = [
             }
          },
          'Meadow Maze Skulltula': {
-            x: "32.0%",
-            y: "78.0%",
+            x: "40.0%",
+            y: "76.0%",
             leadsto: "unknown",
             type: "skulltula", 
             access: "outdoor",
@@ -6992,8 +6992,8 @@ var dungeons = [
             },
          },
          'Meadow Open Grotto': {
-            x: "32.0%",
-            y: "58.0%",
+            x: "37.0%",
+            y: "53.0%",
             leadsto: "unknown",
             type: "grotto", 
             access: "grotto",
@@ -7002,8 +7002,8 @@ var dungeons = [
                }
          },
          'Maze Gossip 2': {
-            x: "35.0%",
-            y: "43.0%",
+            x: "29.5%",
+            y: "28.0%",
             leadsto: "unknown",
             type: "gossip", 
             access: "outdoor",
@@ -7012,8 +7012,8 @@ var dungeons = [
             }
          },
          ['Song from Sheik']: {
-            x: "74.0%",
-            y: "43.0%",
+            x: "87.0%",
+            y: "50.0%",
             leadsto: "unknown",
             type: "song", 
             access: "outdoor",
@@ -7023,8 +7023,8 @@ var dungeons = [
             }
          },
          'Minuet Warp': {
-            x: "80.0%",
-            y: "43.0%",
+            x: "84.0%",
+            y: "50.0%",
             leadsto: "unknown",
             type: "warp", 
             access: "warp",
@@ -7032,8 +7032,8 @@ var dungeons = [
                   return items.Ocarina && items.MinuetofForest; }
          },
          'Meadow Storms Grotto': {
-            x: "73.0%",
-            y: "68.0%",
+            x: "80.0%",
+            y: "75.0%",
             leadsto: "unknown",
             type: "grotto", 
             access: "grotto",
@@ -7042,9 +7042,20 @@ var dungeons = [
                      items.Ocarina && items.SongofStorms ;
                }
          },
-         'Storms Grotto by Temple': {
-            x: "72.0%",
-            y: "69.0%",
+         'Storms Grotto Scrub 1': {
+            x: "82.5.0%",
+            y: "75.0%",
+            leadsto: "unknown",
+            type: "scrub", 
+            access: "grotto",
+            isAvailable: function () {
+               return dungeons[19].found == true && 
+                     items.Ocarina && items.SongofStorms ;
+            }
+         },
+         'Storms Grotto Scrub 2': {
+            x: "77.5.0%",
+            y: "75.0%",
             leadsto: "unknown",
             type: "scrub", 
             access: "grotto",
@@ -7054,8 +7065,8 @@ var dungeons = [
             }
          },
          ['Song from Saria']: {
-            x: "70.0%",
-            y: "43.0%",
+            x: "80.0%",
+            y: "50.0%",
             leadsto: "unknown",
             type: "song", 
             access: "outdoor",
@@ -7065,8 +7076,8 @@ var dungeons = [
             }
          },
          'Temple Gossip': {
-            x: "72.0%",
-            y: "32.0%",
+            x: "80.0%",
+            y: "23.0%",
             leadsto: "unknown",
             type: "gossip", 
             access: "outdoor",
@@ -7075,8 +7086,8 @@ var dungeons = [
             }
          },
          'Forest Temple': {
-            x: "78.0%",
-            y: "43.0%",
+            x: "95.0%",
+            y: "47.0%",
             leadsto: "unknown",
             type: "dungeon", 
             access: "door",
