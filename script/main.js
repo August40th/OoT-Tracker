@@ -520,7 +520,7 @@ function clickDungeon(d) {
     if (dungeons[dungeonSelect].type == "overworld")
         minimap.style.backgroundImage = 'url(images/' + minimaps[dungeonSelect] + '.png)';
     if (dungeons[dungeonSelect].type == "dungeon")
-        minimap.style.backgroundImage = 'url(images/' + minimaps[dungeonSelect] + (dungeons[dungeonSelect].floorwdoor + '.png)';
+        minimap.style.backgroundImage = 'url(images/' + minimaps[dungeonSelect] + dungeons[dungeonSelect].floorwdoor + '.png)';
     minimap.innerHTML = '';
     if (dungeons[dungeonSelect].type == "overworld")
             document.getElementById('minimapdiv').style.backgroundColor = "maroon";
