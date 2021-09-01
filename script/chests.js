@@ -252,7 +252,7 @@ var dungeons = [
                return dungeons[0].found == true ; }
          },
          'Kokiri Sale': {
-            x: "28.0%",
+            x: "34.0%",
             y: "38.0%",
             leadsto: "unknown",
             type: "shop",
@@ -261,8 +261,8 @@ var dungeons = [
                return dungeons[0].found == true ; }
          },
          'Infront Storms Grotto': {
-            x: "7.0%",
-            y: "26.0%",
+            x: "14.0%",
+            y: "25.0%",
             leadsto: "unknown",
             type: "gossip",
             access: "outdoor",
@@ -290,8 +290,8 @@ var dungeons = [
                   items.Ocarina && items.SongofStorms; }
          },
          'Storms Grotto Gossip': {
-            x: "7.0%",
-            y: "26.0%",
+            x: "17.0%",
+            y: "25.0%",
             leadsto: "unknown",
             type: "gossip",
             access: "outdoor",
@@ -308,8 +308,8 @@ var dungeons = [
                return dungeons[0].found == true ; }
        },
          'Left of Deku Tree Gossip': {
-            x: "70.0%",
-            y: "20.0%",
+            x: "73.0%",
+            y: "8.0%",
             leadsto: "unknown",
             type: "gossip",
             access: "outdoor",
@@ -318,8 +318,8 @@ var dungeons = [
                   (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) ) ; }
          },
          'Behind Deku Tree Gossip': {
-            x: "70.0%",
-            y: "32.0%",
+            x: "84.0%",
+            y: "38.0%",
             leadsto: "unknown",
             type: "gossip",
             access: "outdoor",
@@ -5692,8 +5692,8 @@ var dungeons = [
       found: true,
       chestlist: {
          'Castle to Market': {
-            x: "16.0%",
-            y: "95.0%",
+            x: "27.0%",
+            y: "93.0%",
             leadsto: "unknown",
             type: "entrance",
             access: "entrance",
@@ -5701,8 +5701,8 @@ var dungeons = [
                   return dungeons[15].found == true; }
          },
          'Tree to Castle Skulltula': {
-           x: "14.0%",
-            y: "68.0%",
+           x: "25.0%",
+            y: "75.0%",
             leadsto: "unknown",
             type: "skulltula", 
             access: "outdoor",
@@ -5726,8 +5726,8 @@ var dungeons = [
          },
          'Above Malon': {
             type: "gossip",
-           x: "25.0%",
-            y: "65.0%",
+           x: "31.0%",
+            y: "75.0%",
             access: "outdoor",
             isAvailable: function () {
                return dungeons[15].found == true && 
@@ -5736,7 +5736,7 @@ var dungeons = [
             }
          },
          'Din\'s Fairy Fountain': {
-           x: "75.0%",
+           x: "94.0%",
             y: "64.0%",
             leadsto: "unknown",
             type: "simple", 
@@ -5748,7 +5748,7 @@ var dungeons = [
                }
          },
          'Dins Great Fairy': {
-           x: "86.0%",
+           x: "93.0%",
             y: "64.0%",
             leadsto: "unknown",
             type: "NPC", 
@@ -5760,8 +5760,8 @@ var dungeons = [
             }
          },
          'Castle Moat Stone': {
-           x: "8.0%",
-            y: "32.0%",
+           x: "18.0%",
+            y: "36.0%",
             leadsto: "unknown",
             type: "gossip",
             access: "outdoor",
@@ -5771,9 +5771,9 @@ var dungeons = [
                   );
             }
          },
-         'Castle Moat Storms Grotto': {
-           x: "55.0%",
-            y: "24.0%",
+         'Moat Storms Grotto': {
+           x: "53.0%",
+            y: "38.0%",
             leadsto: "unknown",
             type: "grotto", 
             access: "grotto",
@@ -5783,9 +5783,9 @@ var dungeons = [
                   ) && items.Ocarina >= 1 && items.SongofStorms;
                }
          },
-         'Moat Storms Grotto Skull': {
+         'Storms Grotto Skull': {
            x: "55.0%",
-            y: "24.0%",
+            y: "38.0%",
             leadsto: "unknown",
             type: "skulltula", 
             access: "grotto",
@@ -5796,8 +5796,8 @@ var dungeons = [
             }
          },
          'Storms Grotto Gossip': {
-           x: "55.0%",
-            y: "24.0%",
+           x: "53.0%",
+            y: "38.0%",
             leadsto: "unknown",
             type: "gossip",
             access: "grotto",
@@ -5808,8 +5808,8 @@ var dungeons = [
             }
          },
          'Song from Impa': {
-           x: "69.0%",
-            y: "16.0%",
+           x: "43.0%",
+            y: "12.0%",
             leadsto: "unknown",
             type: "song", 
             access: "outdoor",
@@ -5820,8 +5820,8 @@ var dungeons = [
             }
          },
         'Outside Ganons Skulltula' : {
-           x: "55.0%",
-            y: "50.0%",
+           x: "64.0%",
+            y: "68.0%",
             leadsto: "unknown",
             type: "skulltula", 
             access: "outdoor",
@@ -5831,8 +5831,8 @@ var dungeons = [
                }
          },
          'Gold Gauntlets Doorway': {
-           x: "75.0%",
-            y: "72.0%",
+           x: "94.0%",
+            y: "59.0%",
             leadsto: "unknown",
             type: "simple", 
             access: "door",
@@ -5843,10 +5843,8 @@ var dungeons = [
                }
          },
          'Gold Gauntlets Fairy' : {
-           x: "75.0%",
-            y: "72.0%",
-            x: "55.5%",
-            y: "13.5%",
+            x: "93.0%",
+            y: "59.5%",
             leadsto: "unknown",
             type: "NPC", 
             access: "simple",
@@ -5872,8 +5870,8 @@ var dungeons = [
       found: true,
       chestlist: {
          'Village to Field': {
-            x: "4.0%",
-            y: "74.0%",
+            x: "2.0%",
+            y: "75.0%",
             leadsto: "unknown",
             type: "entrance",
             access: "entrance",
@@ -5881,8 +5879,8 @@ var dungeons = [
                   return dungeons[16] == true; }
          },
          ['Song from Sheik']: {
-            x: "50.0%",
-            y: "50.0%",
+            x: "59.0%",
+            y: "58.0%",
             leadsto: "unknown",
             type: "song", 
             access: "outdoor",
@@ -5893,7 +5891,7 @@ var dungeons = [
             }
          },
          'Tree Skulltula': {
-            x: "32.0%",
+            x: "43.0%",
             y: "50.0%",
             leadsto: "unknown",
             type: "skulltula", 
@@ -5904,8 +5902,8 @@ var dungeons = [
             }
          },
          'Redead Grotto': {
-            x: "40.0%",
-            y: "50.0%",
+            x: "48.0%",
+            y: "58.0%",
             leadsto: "unknown",
             type: "grotto", 
             access: "grotto",
@@ -5919,8 +5917,8 @@ var dungeons = [
                }
          },
          ['Redead Chest']: {
-            x: "40.0%",
-            y: "50.0%",
+            x: "48.0%",
+            y: "58.0%",
             leadsto: "unknown",
             type: "chest", 
             access: "grotto",
@@ -5934,8 +5932,8 @@ var dungeons = [
                   }
          },
          'Tower House': {
-            x: "45.0%",
-            y: "50.0%",
+            x: "54.0%",
+            y: "48.0%",
             leadsto: "unknown",
             type: "simple", 
             access: "door",
@@ -5965,8 +5963,8 @@ var dungeons = [
             }
          },
          'Kakariko Bazar': {
-            x: "44.0%",
-            y: "24.0%",
+            x: "51.0%",
+            y: "33.0%",
             leadsto: "unknown",
             type: "simple", 
             access: "door",
@@ -5974,8 +5972,8 @@ var dungeons = [
                   return dungeons[16].found == true; }
          },
          'Bazar Sale': {
-            x: "44.0%",
-            y: "24.0%",
+            x: "46.0%",
+            y: "33.0%",
             leadsto: "unknown",
             type: "shop", 
             access: "simple",
@@ -5983,7 +5981,7 @@ var dungeons = [
                return dungeons[16].found == true; }
          },
          'Village to Trail': {
-            x: "52.2%",
+            x: "52.6%",
             y: "2.0%",
             leadsto: "unknown",
             type: "entrance",
@@ -5992,8 +5990,8 @@ var dungeons = [
                   return dungeons[16].found == true; }
          },
          'Potion Shop front': {
-            x: "55.0%",
-            y: "28.0%",
+            x: "59.0%",
+            y: "34.0%",
             leadsto: "unknown",
             type: "alldoor", 
             access: "door",
@@ -6003,8 +6001,8 @@ var dungeons = [
             }
          },
          ['Man on Roof']: {
-            x: "64.0%",
-            y: "36.0%",
+            x: "622.0%",
+            y: "50.0%",
             leadsto: "unknown",
             type: "NPC", 
             access: "outdoor",
@@ -6013,8 +6011,8 @@ var dungeons = [
             }
          },
          'Potion Sale': {
-            x: "55.0%",
-            y: "28.0%",
+            x: "65.0%",
+            y: "33.0%",
             leadsto: "unknown",
             type: "shop", 
             access: "simple",
@@ -6024,8 +6022,8 @@ var dungeons = [
             }
          },
          'Potion Shop back': {
-            x: "57.0%",
-            y: "28.0%",
+            x: "63.0%",
+            y: "33.0%",
             leadsto: "unknown",
             type: "alldoor", 
             access: "door",
@@ -6035,8 +6033,8 @@ var dungeons = [
             }
          },
          'Granny\'s Shop': {
-            x: "58.0%",
-            y: "78.0%",
+            x: "68.0%",
+            y: "45.0%",
             leadsto: "unknown",
             type: "simple", 
             access: "door",
@@ -6045,8 +6043,8 @@ var dungeons = [
                }
          },
          'Kakariko Open Grotto': {
-            x: "55.0%",
-            y: "76.0%",
+            x: "39.0%",
+            y: "67.3%",
             leadsto: "unknown",
             type: "grotto", 
             access: "grotto",
@@ -6055,8 +6053,8 @@ var dungeons = [
                }
          },
          ['Village Open Grotto']: {
-            x: "55.0%",
-            y: "77.0%",
+            x: "39.0%",
+            y: "67.3%",
             leadsto: "unknown",
             type: "chest", 
             access: "grotto",
@@ -6065,8 +6063,8 @@ var dungeons = [
             }
          },
          'Windmill': {
-            x: "60.0%",
-            y: "80.0%",
+            x: "78.0%",
+            y: "59.0%",
             leadsto: "unknown",
             type: "alldoor", 
             access: "door",
@@ -6075,8 +6073,8 @@ var dungeons = [
                }
          },
          ['Windmill Song']: {
-            x: "62.0%",
-            y: "81.0%",
+            x: "82.0%",
+            y: "64.0%",
             leadsto: "unknown",
             type: "song", 
             access: "alldoor",
@@ -6087,8 +6085,8 @@ var dungeons = [
             }
          },
          ['Windmill Freestanding']: {
-            x: "62.0%",
-            y: "76.0%",
+            x: "82.0%",
+            y: "55.0%",
             leadsto: "unknown",
             type: "freestanding", 
             access: "alldoor",
@@ -6102,8 +6100,8 @@ var dungeons = [
             }
          },
          'Village to Graveyard': {
-            x: "88.0%",
-            y: "77.0%",
+            x: "95.0%",
+            y: "80.5%",
             leadsto: "unknown",
             type: "entrance",
             access: "entrance",
@@ -6111,8 +6109,8 @@ var dungeons = [
                   return dungeons[16].found == true; }
          },
          'Archery Foundation Skulltula': {
-            x: "55.0%",
-            y: "60.0%",
+            x: "60.0%",
+            y: "76.0%",
             leadsto: "unknown",
             type: "skulltula", 
             access: "outdoor",
@@ -6122,8 +6120,8 @@ var dungeons = [
             }
          },
          'Archery': {
-            x: "55.0%",
-            y: "65.0%",
+            x: "60.0%",
+            y: "70.0%",
             leadsto: "unknown",
             type: "simple", 
             access: "door",
@@ -6133,8 +6131,8 @@ var dungeons = [
                }
          },
          ['Bow Mini Game']: {
-            x: "55.0%",
-            y: "68.0%",
+            x: "60.0%",
+            y: "70.0%",
             leadsto: "unknown",
             type: "NPC", 
             access: "simple",
@@ -6145,8 +6143,8 @@ var dungeons = [
                }
          },
          ['Anju\'s Chickens']: {
-            x: "52.0%",
-            y: "88.0%",
+            x: "63.0%",
+            y: "82.0%",
             leadsto: "unknown",
             type: "NPC", 
             access: "outdoor",
@@ -6156,8 +6154,8 @@ var dungeons = [
             }
          },
          ['Anju\'s Adult item']: {
-            x: "57.0%",
-            y: "88.0%",
+            x: "65.0%",
+            y: "85.0%",
             leadsto: "unknown",
             type: "NPC", 
             access: "outdoor",
@@ -6166,8 +6164,8 @@ var dungeons = [
             }
          },
          'Impa\'s House back': {
-            x: "52.0%",
-            y: "90.0%",
+            x: "58.0%",
+            y: "91.0%",
             leadsto: "unknown",
             type: "simple", 
             access: "door",
@@ -6176,8 +6174,8 @@ var dungeons = [
                }
          },
          ['Impa\'s House Freestanding']: {
-            x: "52.0%",
-            y: "90.0%",
+            x: "55.0%",
+            y: "87.0%",
             leadsto: "unknown",
             type: "freestanding", 
             access: "simple",
@@ -6185,8 +6183,8 @@ var dungeons = [
                return dungeons[16].found == true}
          },
          ['Impa\'s House Cow Milk']: {
-            x: "46.0%",
-            y: "90.0%",
+            x: "55.0%",
+            y: "93.0%",
             leadsto: "unknown",
             type: "cow", 
             access: "simple",
@@ -6196,8 +6194,8 @@ var dungeons = [
             }
          },
          'Impa’s Roof Skulltula': {
-            x: "44.0%",
-            y: "94.0%",
+            x: "52.0%",
+            y: "92.0%",
             leadsto: "unknown",
             type: "skulltula", 
             access: "outdoor",
@@ -6208,8 +6206,8 @@ var dungeons = [
             }
          },
          'Impa\'s House front': {
-            x: "44.0%",
-            y: "88.0%",
+            x: "49.0%",
+            y: "91.0%",
             leadsto: "unknown",
             type: "simple", 
             access: "door",
@@ -6218,8 +6216,8 @@ var dungeons = [
                }
          },
          'Skull House Skulltula': {
-            x: "48.0%",
-            y: "68.0%",
+            x: "43.0%",
+            y: "76.0%",
             leadsto: "unknown",
             type: "skulltula", 
             access: "outdoor",
@@ -6229,8 +6227,8 @@ var dungeons = [
             }
          },
          'Skulltula House': {
-            x: "52.0%",
-            y: "65.0%",
+            x: "48.0%",
+            y: "73.0%",
             leadsto: "unknown",
             type: "simple", 
             access: "door",
@@ -6239,8 +6237,8 @@ var dungeons = [
                }
          },
          ['Skulltula House 10']: {
-            x: "47.0%",
-            y: "60.0%",
+            x: "50.0%",
+            y: "69.0%",
             leadsto: "unknown",
             type: "NPC", 
             access: "simple",
@@ -6249,8 +6247,8 @@ var dungeons = [
             }
          },
          ['Skulltula House 20']: {
-            x: "52.0%",
-            y: "60.0%",
+            x: "45.0%",
+            y: "74.0%",
             leadsto: "unknown",
             type: "NPC", 
             access: "simple",
@@ -6259,8 +6257,8 @@ var dungeons = [
             }
          },
          ['Skulltula House 30']: {
-            x: "41.0%",
-            y: "65.0%",
+            x: "42.0%",
+            y: "71.5%",
             leadsto: "unknown",
             type: "NPC", 
             access: "simple",
@@ -6269,8 +6267,8 @@ var dungeons = [
             }
          },
          ['Skulltula House 40']: {
-            x: "44.0%",
-            y: "70.0%",
+            x: "45.0%",
+            y: "74.0%",
             leadsto: "unknown",
             type: "NPC", 
             access: "simple",
@@ -6280,8 +6278,8 @@ var dungeons = [
             }
          },
          ['Skulltula House 50']: {
-            x: "44.0%",
-            y: "60.0%",
+            x: "50.0%",
+            y: "74.0%",
             leadsto: "unknown",
             type: "NPC", 
             access: "simple",
@@ -6291,7 +6289,7 @@ var dungeons = [
          },
          'Bottom of The Well': {
             x: "69.0%",
-            y: "50.0%",
+            y: "61.6%",
             leadsto: "unknown",
             type: "dungeon", 
             access: "door",
@@ -6317,8 +6315,8 @@ var dungeons = [
       found: true,
       chestlist: {
          'City to Trail': {
-            x: "50.0%",
-            y: "95.0%",
+            x: "55.5%",
+            y: "92.0%",
             leadsto: "unknown",
             type: "entrance", 
             access: "entrance",
@@ -6326,8 +6324,8 @@ var dungeons = [
                   return dungeons[17].found == true; }
          },
          'Ruby Pedestal Skulltula': {
-            x: "48.0%",
-            y: "48.0%",
+            x: "55.5%",
+            y: "42.0%",
             leadsto: "unknown",
             type: "skulltula", 
             access: "outdoor",
@@ -6337,8 +6335,8 @@ var dungeons = [
             }
          },
          ['Little Rolling Goron']: {
-            x: "37.0%",
-            y: "50.0%",
+            x: "40.0%",
+            y: "65.0%",
             leadsto: "unknown",
             type: "NPC", 
             access: "outdoor",
@@ -6349,8 +6347,8 @@ var dungeons = [
             }
          },
          ['Medigoron']: {
-            x: "37.0%",
-            y: "60.0%",
+            x: "28.0%",
+            y: "85.0%",
             leadsto: "unknown",
             type: "knife", 
             access: "outdoor",
@@ -6361,8 +6359,8 @@ var dungeons = [
             }
          },
          'Medigoron Gossip': {
-            x: "36.0%",
-            y: "60.0%",
+            x: "28.0%",
+            y: "90.0%",
             leadsto: "unknown",
             type: "gossip", 
             access: "outdoor",
@@ -6373,7 +6371,7 @@ var dungeons = [
          },
          ['Left Boulder Maze Chest']: {
             x: "4.0%",
-            y: "10.0%",
+            y: "11.0%",
             leadsto: "unknown",
             type: "chest", 
             access: "outdoor",
@@ -6386,8 +6384,8 @@ var dungeons = [
             }
          },
          ['Center Boulder Maze Chest']: {
-            x: "6.0%",
-            y: "8.0%",
+            x: "7.0%",
+            y: "14.0%",
             leadsto: "unknown",
             type: "chest", 
             access: "outdoor",
@@ -6399,8 +6397,8 @@ var dungeons = [
             }
          },
          'Maze Crate Skulltula': {
-            x: "8.0%",
-            y: "6.0%",
+            x: "14.5%",
+            y: "11.5%",
             leadsto: "unknown",
             type: "skulltula", 
             access: "outdoor",
@@ -6411,8 +6409,8 @@ var dungeons = [
             }
          },
          'Maze Gossip': {
-            x: "10.0%",
-            y: "7.0%",
+            x: "9.0%",
+            y: "11.0%",
             leadsto: "unknown",
             type: "gossip", 
             access: "outdoor",
@@ -6424,8 +6422,8 @@ var dungeons = [
             }
          },
          ['Right Boulder Maze Chest']: {
-            x: "12.0%",
-            y: "8.0%",
+            x: "11.0%",
+            y: "13.0%",
             leadsto: "unknown",
             type: "chest", 
             access: "outdoor",
@@ -6437,8 +6435,8 @@ var dungeons = [
             }
          },
          'Lava Cross Grotto': {
-            x: "85.0%",
-            y: "11.0%",
+            x: "89.0%",
+            y: "12.0%",
             leadsto: "unknown",
             type: "grotto", 
             access: "grotto",
@@ -6451,8 +6449,8 @@ var dungeons = [
                }
          },
          'Lava Scrub 1': {
-            x: "88.0%",
-            y: "11.0%",
+            x: "86.4%",
+            y: "12.0%",
             leadsto: "unknown",
             type: "scrub", 
             access: "grotto",
@@ -6465,8 +6463,8 @@ var dungeons = [
                }
          },
          'Lava Scrub 2': {
-            x: "88.0%",
-            y: "11.0%",
+            x: "89.0%",
+            y: "12.0%",
             leadsto: "unknown",
             type: "scrub", 
             access: "grotto",
@@ -6479,8 +6477,8 @@ var dungeons = [
                }
          },
          'Lava Scrub 3': {
-            x: "88.0%",
-            y: "11.0%",
+            x: "91.5%",
+            y: "12.0%",
             leadsto: "unknown",
             type: "scrub", 
             access: "grotto",
@@ -6493,8 +6491,8 @@ var dungeons = [
                }
          },
          'City to Woods': {
-            x: "69.9%",
-            y: "98.0%",
+            x: "73.5%",
+            y: "93.0%",
             leadsto: "unknown",
             type: "entrance", 
             access: "entrance",
@@ -6503,8 +6501,8 @@ var dungeons = [
                                                         (items.Dins && items.Magic) ); }
          },
          'Goron Shop': {
-            x: "45.0%",
-            y: "50.0%",
+            x: "47.0%",
+            y: "47.0%",
             leadsto: "unknown",
             type: "simple", 
             access: "door",
@@ -6521,7 +6519,7 @@ var dungeons = [
          },
          'Goron Sale': {
             x: "45.0%",
-            y: "50.0%",
+            y: "45.0%",
             leadsto: "unknown",
             type: "shop", 
             access: "simple",
@@ -6537,8 +6535,8 @@ var dungeons = [
                }
          },
          ['Big Rolling Goron']: {
-            x: "40.0%",
-            y: "20.0%",
+            x: "4.0%",
+            y: "28.0%",
             leadsto: "unknown",
             type: "NPC", 
             access: "outdoor",
@@ -6549,8 +6547,8 @@ var dungeons = [
             }
          },
          ['Spinning Pot Freestanding']: {
-            x: "50.0%",
-            y: "50.0%",
+            x: "54.5%",
+            y: "52.0%",
             leadsto: "unknown",
             type: "freestanding", 
             access: "outdoor",
@@ -6561,8 +6559,8 @@ var dungeons = [
             }
          },
          ['Darunia\'s Dance']: {
-            x: "50.0%",
-            y: "6.0%",
+            x: "56.5%",
+            y: "8.0%",
             leadsto: "unknown",
             type: "NPC", 
             access: "outdoor",
@@ -6573,8 +6571,8 @@ var dungeons = [
             }
          },
          'City to Crater': {
-            x: "50.0%",
-            y: "4.0%",
+            x: "56.5%",
+            y: "2.0%",
             leadsto: "unknown",
             type: "entrance", 
             access: "entrance",
