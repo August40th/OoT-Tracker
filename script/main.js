@@ -97,7 +97,8 @@ var chestMarked = [];
 var linestart = 0;
 var tempx = '0.0%';
 var tempy = '0.0%';
-var last;
+var last = 0;
+var here;
     
 function setCookie(obj) {
     var d = new Date();
@@ -780,27 +781,26 @@ function bulkDCSelect() {
     updateMap();
 }
 
-function toggleDungeonMapUp(l) {
+function toggleDungeonMapUp() {
     var m = document.getElementById('minimapdiv');
     var enter;
-    var here; 
     var floortop; 
     if (dungeonSelect == 1) {
         enter = 2;
         floortop = 4;
-        if (l !== dungeonSelect)
+        if (last !== dungeonSelect)
             here = enter;
     }
     here++;
     if (here > floortop)
         here = 0;
     m.style.backgroundImage = 'url(images/' + minimaps[dungeonSelect] + here + '.png)';
-    l = dungeonSelect;
+    last = dungeonSelect;
 }
 
 function toggleDungeonMapDown() {
     var m = document.getElementById('minimapdiv');
-    var enter, here, floortop;
+    var enter, floortop;
     if (dungeonSelect == 1) {
         enter = 2;
         floortop = 4;
