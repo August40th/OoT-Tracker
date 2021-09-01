@@ -781,7 +781,7 @@ function bulkDCSelect() {
 
 function toggleDungeonMapUp() {
     var m = document.getElementById('minimapdiv');
-    var enter, here, floortop, last;
+    var enter, var here, var floortop, var last;
     if (dungeonSelect == 1) {
         enter = 2;
         floortop = 4;
