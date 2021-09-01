@@ -517,7 +517,10 @@ function clickDungeon(d) {
     regionSelected.onclick = bulkDCSelect();
     
     var minimap = document.getElementById('minimapdiv');
-    minimap.style.backgroundImage = 'url(images/' + minimaps[dungeonSelect] + '0.png)';
+    if (dungeons[dungeonSelect].type == "overworld")
+        minimap.style.backgroundImage = 'url(images/' + minimaps[dungeonSelect] + '.png)';
+    if (dungeons[dungeonSelect].type == "dungeon")
+        minimap.style.backgroundImage = 'url(images/' + minimaps[dungeonSelect] + (dungeons[dungeonSelect].floorwdoor + '.png)';
     minimap.innerHTML = '';
     if (dungeons[dungeonSelect].type == "overworld")
             document.getElementById('minimapdiv').style.backgroundColor = "maroon";
@@ -783,16 +786,10 @@ function bulkDCSelect() {
 
 function toggleDungeonMapUp() {
     var m = document.getElementById('minimapdiv');
-    var enter;
-    var floortop; 
-    if (dungeonSelect == 1) {
-        enter = 2;
-        floortop = 4;
-        if (last !== dungeonSelect)
-            here = enter;
-    }
+    if (last !== dungeonSelect)
+        here = dungeons[dungeonSelect].floorwdoor;
     here++;
-    if (here > floortop)
+    if (here > dungeons[dungeonSelect].topfloor)
         here = 0;
     m.style.backgroundImage = 'url(images/' + minimaps[dungeonSelect] + here + '.png)';
     last = dungeonSelect;
@@ -800,16 +797,12 @@ function toggleDungeonMapUp() {
 
 function toggleDungeonMapDown() {
     var m = document.getElementById('minimapdiv');
-    var enter, floortop;
-    if (dungeonSelect == 1) {
-        enter = 2;
-        floortop = 4;
-        if (last !== dungeonSelect)
-            here = enter;
+    if (last !== dungeonSelect)
+        here = dungeons[dungeonSelect].floorwdoor;
     }
     here--;
     if (here < 0)
-        here = floortop;
+        here = dungeons[dungeonSelect].topfloor;
     m.style.backgroundImage = 'url(images/' + minimaps[dungeonSelect] + here + '.png)';
     last = dungeonSelect;
 }
