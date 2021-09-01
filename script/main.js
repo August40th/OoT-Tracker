@@ -660,7 +660,7 @@ function clickDungeon(d) {
         cc.style.width = '160px';
         cc.style.visibility = 'visible';
         c.appendChild(cc);
-        cc.onmouseover = new Funtion('highlight(this)');
+        cc.onmouseover = new Function('highlight(this)');
     }
 }
 
