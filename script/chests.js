@@ -352,6 +352,8 @@ var dungeons = [
       mixedtype: "default",
       keytype: "none",
       found: true,
+      topfloor: 4, //include floor 0
+      floorwdoor: 2,
       chestlist: {
          'Lobby Chest': {
             x: "5.0%",
@@ -603,6 +605,8 @@ var dungeons = [
       mixedtype: "default",
       keytype: "none",
       found: true,
+      topfloor: 1, //include floor 0
+      floorwdoor: 0,
       chestlist: {
          'Lobby Gossip': {
             x: "5.0%",
@@ -1104,6 +1108,8 @@ var dungeons = [
       mixedtype: "default",
       keytype: "none",
       found: true,
+      topfloor: 1, //include floor 0
+      floorwdoor: 1,
       chestlist: {
          'Water Switch Skulltula': {
            x: "5.0%",
@@ -1498,6 +1504,8 @@ var dungeons = [
       mixedtype: "default",
       keytype: "WellKey",
       found: true,
+      topfloor: 2, //include floor 0
+      floorwdoor: 2,
       chestlist: {
          'Front Left Hidden Wall': {
             x: "5.0%",
@@ -1813,6 +1821,8 @@ var dungeons = [
       mixedtype: "default",
       keytype: "ForestKey",
       found: true,
+      topfloor: 3, //include floor 0
+      floorwdoor: 2,
       chestlist: {
          'Lobby Skulltula': {
             x: "10.0%",
@@ -2220,6 +2230,8 @@ var dungeons = [
       mixedtype: "default",
       keytype: "FireKey",
       found: true,
+      topfloor: 4, //include floor 0
+      floorwdoor: 0,
       chestlist: {
          'Chest Near Boss': {
              x: "5.0%",
@@ -2734,6 +2746,8 @@ var dungeons = [
       mixedtype: "default",
       keytype: "none",
       found: true,
+      topfloor: 0, //include floor 0
+      floorwdoor: 0,
       chestlist: {
          'Above Silver Rupee Skulltula': {
             x: "5.0%",
@@ -2911,6 +2925,8 @@ var dungeons = [
       mixedtype: "default",
       keytype: "WaterKey",
       found: true,
+      topfloor: 3, //include floor 0
+      floorwdoor: 3,
       chestlist: {
          'Water Jet Chest': {
             x: "5.0%",
@@ -3229,6 +3245,8 @@ var dungeons = [
       mixedtype: "default",
       keytype: "GTGKey",
       found: true,
+      topfloor: 1, //include floor 0
+      floorwdoor: 0,
       chestlist: {
          'Lobby Right Chest': {
             x: "5.0%",
@@ -3617,6 +3635,8 @@ var dungeons = [
       mixedtype: "default",
       keytype: "SpiritKey",
       found: true,
+      topfloor: 3, //include floor 0
+      floorwdoor: 0,
       chestlist: {
          ['Child Switch Room']: {
             x: "5.0%",
@@ -4210,6 +4230,8 @@ var dungeons = [
       mixedtype: "default",
       keytype: "ShadowKey",
       found: true,
+      topfloor: 3, //include floor 0
+      floorwdoor: 3,
       chestlist: {
          'Keese and Redead': {
             x: "5.0%",
@@ -4741,6 +4763,8 @@ var dungeons = [
       mixedtype: "default",
       keytype: "CastleKey",
       found: true,
+      topfloor: 5, //include floor 0
+      floorwdoor: 1,
       chestlist: {
          ['Forest 1']: {
             x: "5.0%",
