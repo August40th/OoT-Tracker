@@ -7840,8 +7840,8 @@ var dungeons = [
       found: true,
       chestlist: {
          'Trail to Village': {
-            x: "18.1%",
-            y: "87.6%",
+            x: "15%",
+            y: "84.5%",
             leadsto: "unknown",
             type: "entrance", 
             access: "entrance",
@@ -7849,8 +7849,8 @@ var dungeons = [
                   return dungeons[23].found == true; }
          },
          'Bombable Wall Skulltula': {
-            x: "16.1%",
-            y: "75.3%",
+            x: "15%",
+            y: "73.5%",
             leadsto: "unknown",
             type: "skulltula", 
             access: "outdoor",
@@ -7866,8 +7866,8 @@ var dungeons = [
             }
          },
          'Dodongo\'s Cavern': {
-            x: "33.0%",
-            y: "50.0%",
+            x: "36.0%",
+            y: "47.0%",
             leadsto: "unknown",
             type: "dungeon", 
             access: "door",
@@ -7881,8 +7881,8 @@ var dungeons = [
                }
          },
          ['Cavern Roof Freestanding']: {
-            x: "35.0%",
-            y: "46.0%",
+            x: "40.0%",
+            y: "43.0%",
             leadsto: "unknown",
             type: "freestanding", 
             access: "outdoor",
@@ -7891,8 +7891,8 @@ var dungeons = [
             }
          },
          'Cavern Soil Patch Skulltula': {
-            x: "35.0%",
-            y: "48.0%",
+            x: "33.0%",
+            y: "47.0%",
             leadsto: "unknown",
             type: "skulltula", 
             access: "outdoor",
@@ -7904,7 +7904,7 @@ var dungeons = [
          },
          ['Breakable Wall Chest']: {
             x: "45.0%",
-            y: "55.0%",
+            y: "60.0%",
             leadsto: "unknown",
             type: "chest", 
             access: "outdoor",
@@ -7921,7 +7921,7 @@ var dungeons = [
          },
          'Song of Storms Grotto': {
             x: "50.0%",
-            y: "48.0%",
+            y: "58.0%",
             leadsto: "unknown",
             type: "grotto", 
             access: "grotto",
@@ -7930,9 +7930,9 @@ var dungeons = [
                   items.Ocarina && items.SongofStorms ;
             }
          },
-         ['Trail Storms Grotto']: {
-            x: "50.0%",
-            y: "48.0%",
+         ['Storms Grotto chest']: {
+            x: "53.0%",
+            y: "58.0%",
             leadsto: "unknown",
             type: "chest", 
             access: "grotto",
@@ -7942,8 +7942,8 @@ var dungeons = [
             }
          },
          'Storms Grotto Gossip': {
-            x: "53.0%",
-            y: "48.0%",
+            x: "48.0%",
+            y: "58.0%",
             leadsto: "unknown",
             type: "gossip", 
             access: "grotto",
@@ -7953,8 +7953,8 @@ var dungeons = [
             }
          },
          'Trail to City': {
-            x: "55.6%",
-            y: "50.0%",
+            x: "54.5%",
+            y: "53.0%",
             leadsto: "unknown",
             type: "entrance", 
             access: "entrance",
@@ -7962,8 +7962,8 @@ var dungeons = [
                   return dungeons[23].found == true; }
          },
          'Lower Red Rock Skulltula': {
-            x: "45.0%",
-            y: "50.0%",
+            x: "42.0%",
+            y: "51.0%",
             leadsto: "unknown",
             type: "skulltula", 
             access: "outdoor",
@@ -7991,7 +7991,7 @@ var dungeons = [
             }
          },
          ['Cow Milk Grotto']: {
-            x: "43.0%",
+            x: "45.0%",
             y: "55.0%",
             leadsto: "unknown",
             type: "cow", 
@@ -8009,8 +8009,8 @@ var dungeons = [
             }
          },
          'Upper Red Rock Skulltula': {
-            x: "65.0%",
-            y: "40.0%",
+            x: "73.0%",
+            y: "34.0%",
             leadsto: "unknown",
             type: "skulltula", 
             access: "outdoor",
@@ -8021,7 +8021,7 @@ var dungeons = [
          },
          'Summit Bombable Door': {
             x: "82.0%",
-            y: "10.0%",
+            y: "13.0%",
             leadsto: "unknown",
             type: "simple", 
             access: "door",
@@ -8038,7 +8038,7 @@ var dungeons = [
          },
          ['Summit Great Fairy Fountain']: {
             x: "82.0%",
-            y: "10.0%",
+            y: "13.0%",
             leadsto: "unknown",
             type: "NPC", 
             access: "simple",
@@ -8055,8 +8055,8 @@ var dungeons = [
             }
          },
          ['Biggoron\'s Finest Work']: {
-            x: "90.0%",
-            y: "18.0%",
+            x: "91.0%",
+            y: "23.0%",
             leadsto: "unknown",
             type: "NPC", 
             access: "outdoor",
@@ -8072,8 +8072,8 @@ var dungeons = [
             }
          },
          'Trail to Crater': {
-            x: "86.6%",
-            y: "04.5%",
+            x: "87.5%",
+            y: "12.5%",
             leadsto: "unknown",
             type: "entrance", 
             access: "entrance",
@@ -8081,8 +8081,8 @@ var dungeons = [
                   return dungeons[23].found == true; }
          },
          'Trail Owl': {
-            x: "88.0%",
-            y: "8.5%",
+            x: "84.0%",
+            y: "12.5%",
             leadsto: "unknown",
             type: "owl", 
             access: "entrance",
@@ -8090,8 +8090,8 @@ var dungeons = [
                   return true; }
          },
          'Summit Gossip': {
-            x: "88.0%",
-            y: "20.0%",
+            x: "85.0%",
+            y: "25.0%",
             leadsto: "unknown",
             type: "gossip", 
             access: "outdoor",
@@ -8123,8 +8123,8 @@ var dungeons = [
       found: true,
       chestlist: {
          'Crater to City': {
-            x: "04.0%",
-            y: "50.0%",
+            x: "2.0%",
+            y: "46.0%",
             leadsto: "unknown",
             type: "entrance", 
             access: "entrance",
@@ -8132,8 +8132,8 @@ var dungeons = [
                   return dungeons[24].found == true; }
          },
          'Red Rock Grotto': {
-            x: "12.0%",
-            y: "40.0%",
+            x: "10.5%",
+            y: "36.0%",
             leadsto: "unknown",
             type: "grotto", 
             access: "grotto",
@@ -8146,8 +8146,8 @@ var dungeons = [
             }
          },
          'Red Rock Grotto Scrub 1': {
-            x: "12.0%",
-            y: "40.0%",
+            x: "8.5%",
+            y: "37.0%",
             leadsto: "unknown",
             type: "scrub", 
             access: "grotto",
@@ -8160,8 +8160,8 @@ var dungeons = [
             }
          },
          'Red Rock Grotto Scrub 2': {
-            x: "12.0%",
-            y: "40.0%",
+            x: "11.5%",
+            y: "37.0%",
             leadsto: "unknown",
             type: "scrub", 
             access: "grotto",
@@ -8174,8 +8174,8 @@ var dungeons = [
             }
          },
          'Red Rock Grotto Scrub 3': {
-            x: "12.0%",
-            y: "40.0%",
+            x: "9.0%",
+            y: "34.0%",
             leadsto: "unknown",
             type: "scrub", 
             access: "grotto",
@@ -8188,8 +8188,8 @@ var dungeons = [
             }
          },
          ['Song from Sheik']: {
-            x: "30.0%",
-            y: "45.0%",
+            x: "34.0%",
+            y: "36.3%",
             leadsto: "unknown",
             type: "song", 
             access: "outdoor",
@@ -8203,8 +8203,8 @@ var dungeons = [
             }
          },
          'Bolero Warp': {
-            x: "50.0%",
-            y: "48.0%",
+            x: "53.0%",
+            y: "41.0%",
             leadsto: "unknown",
             type: "warp", 
             access: "warp",
@@ -8212,8 +8212,8 @@ var dungeons = [
                   return items.Ocarina && items.BoleroofFire; }
          },
          'Soil Patch Skulltula': {
-            x: "46.0%",
-            y: "48.0%",
+            x: "42.0%",
+            y: "47.0%",
             leadsto: "unknown",
             type: "skulltula", 
             access: "outdoor",
@@ -8224,8 +8224,8 @@ var dungeons = [
             }
          },
          'Fire Temple': {
-            x: "50.0%",
-            y: "05.0%",
+            x: "54.0%",
+            y: "3.0%",
             leadsto: "unknown",
             type: "dungeon", 
             access: "door",
@@ -8243,8 +8243,8 @@ var dungeons = [
                }
          },
          ['Volcano Freestanding']: {
-            x: "35.0%",
-            y: "50.0%",
+            x: "36.0%",
+            y: "47.0%",
             leadsto: "unknown",
             type: "freestanding", 
             access: "outdoor",
@@ -8262,8 +8262,8 @@ var dungeons = [
             }
          },
          'Red Rocks Doorway': {
-            x: "15.0%",
-            y: "60.0%",
+            x: "19.0%",
+            y: "67.0%",
             leadsto: "unknown",
             type: "simple", 
             access: "door",
@@ -8276,8 +8276,8 @@ var dungeons = [
             }
          },
          ['Great Fairy Fountain']: {
-            x: "16.0%",
-            y: "60.0%",
+            x: "19.0%",
+            y: "67.0%",
             leadsto: "unknown",
             type: "NPC", 
             access: "simple",
@@ -8289,8 +8289,8 @@ var dungeons = [
                   ) ;}
          },
          'Bombable Grotto': {
-            x: "50.0%",
-            y: "80.0%",
+            x: "54.0%",
+            y: "82.0%",
             leadsto: "unknown",
             type: "grotto", 
             access: "grotto",
@@ -8306,8 +8306,8 @@ var dungeons = [
             }
          },
          'Crater Grotto Gossip': {
-            x: "48.0%",
-            y: "80.0%",
+            x: "48.5%",
+            y: "82.0%",
             leadsto: "unknown",
             type: "gossip", 
             access: "grotto",
@@ -8323,8 +8323,8 @@ var dungeons = [
             }
          },
          ['Bomb Grotto Chest']: {
-            x: "50.0%",
-            y: "80.0%",
+            x: "54.0%",
+            y: "82.0%",
             leadsto: "unknown",
             type: "chest", 
             access: "grotto",
@@ -8340,8 +8340,8 @@ var dungeons = [
             }
          },
          ['Wall Freestanding']: {
-            x: "50.0%",
-            y: "60.0%",
+            x: "54.0%",
+            y: "69.0%",
             leadsto: "unknown",
             type: "freestanding", 
             access: "outdoor",
@@ -8358,8 +8358,8 @@ var dungeons = [
             }
          },
          'Crate Skulltula': {
-            x: "24.0%",
-            y: "90.0%",
+            x: "27.0%",
+            y: "89.0%",
             leadsto: "unknown",
             type: "skulltula", 
             access: "outdoor",
@@ -8369,9 +8369,9 @@ var dungeons = [
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
          },
-         'Child Climb Summit to Crater Scrub': {
-            x: "32.0%",
-            y: "75.0%",
+         'Child Crater Scrub': {
+            x: "34.0%",
+            y: "73.0%",
             leadsto: "unknown",
             type: "scrub", 
             access: "outdoor",
@@ -8382,8 +8382,8 @@ var dungeons = [
             }
          },
          'Cracked Wall Gossip': {
-            x: "90.0%",
-            y: "80.0%",
+            x: "89.0%",
+            y: "79.0%",
             leadsto: "unknown",
             type: "gossip", 
             access: "outdoor",
@@ -8393,8 +8393,8 @@ var dungeons = [
             }
          },
          'Crater to Trail': {
-            x: "15.6%",
-            y: "95.5%",
+            x: "21.5%",
+            y: "93.5%",
             leadsto: "unknown",
             type: "entrance", 
             access: "entrance",
