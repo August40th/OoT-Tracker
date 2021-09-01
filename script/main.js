@@ -664,7 +664,7 @@ function clickDungeon(d) {
         cc.style.visibility = 'hidden';
         cc.style.position = 'absolute';
         c.appendChild(cc);
-        c.onmouseover = new Function('highlight((minimap ' + key + ')');
+        c.onmouseover = new Function('highlight(minimap ' + key + ')');
         c.onmouseout = new Function('unhighlight(minimap ' + key + ')');
     }
 }
