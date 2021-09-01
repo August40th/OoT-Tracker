@@ -263,7 +263,7 @@ label {
     visibility: visible;
 }
 
-.minimapspan .tooltipgray {
+.minimap {
     visibility: hidden;
     width: 160px;
     font-size: 20;
@@ -279,11 +279,11 @@ label {
     margin-left: -60px;
 }
 
-.minimapspan .tooltipgray:hover {
+.minimap:hover {
     display: none;
 }
 
-.minimapspan:hover .tooltipgray {
+.minimap:hover {
     visibility: visible;
 }
 
