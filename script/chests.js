@@ -6248,7 +6248,7 @@ var dungeons = [
          },
          ['Skulltula House 20']: {
             x: "45.0%",
-            y: "74.0%",
+            y: "69.0%",
             leadsto: "unknown",
             type: "NPC", 
             access: "simple",
@@ -7043,8 +7043,8 @@ var dungeons = [
                }
          },
          'Storms Grotto Scrub 1': {
-            x: "82.5.0%",
-            y: "75.0%",
+            x: "79.0%",
+            y: "76.0%",
             leadsto: "unknown",
             type: "scrub", 
             access: "grotto",
@@ -7054,8 +7054,8 @@ var dungeons = [
             }
          },
          'Storms Grotto Scrub 2': {
-            x: "77.5.0%",
-            y: "75.0%",
+            x: "82.0%",
+            y: "76.0%",
             leadsto: "unknown",
             type: "scrub", 
             access: "grotto",
@@ -7112,8 +7112,8 @@ var dungeons = [
       found: true,
       chestlist: {
          'River to Field': {
-            x: "4.0%",
-            y: "90.0%",
+            x: "2.0%",
+            y: "91.0%",
             leadsto: "unknown",
             type: "entrance", 
             access: "entrance",
@@ -7121,8 +7121,8 @@ var dungeons = [
                   return dungeons[20].found == true; }
          },
          'Tree by Entrance Skulltula': {
-            x: "4.0%",
-            y: "58.0%",
+            x: "3.0%",
+            y: "61.0%",
             leadsto: "unknown",
             type: "skulltula", 
             access: "outdoor",
@@ -7134,7 +7134,7 @@ var dungeons = [
          },
          'Song of Storms Grotto': {
             x: "4.0%",
-            y: "40.0%",
+            y: "42.0%",
             leadsto: "unknown",
             type: "grotto", 
             access: "grotto",
@@ -7149,8 +7149,8 @@ var dungeons = [
             }
          },
          'Storms Grotto Scrub 1': {
-            x: "4.0%",
-            y: "40.0%",
+            x: "2.0%",
+            y: "44.0%",
             leadsto: "unknown",
             type: "scrub", 
             access: "grotto",
@@ -7165,8 +7165,8 @@ var dungeons = [
             }
          },
          'Storms Grotto Scrub 2': {
-            x: "4.0%",
-            y: "40.0%",
+            x: "5.0%",
+            y: "44.0%",
             leadsto: "unknown",
             type: "scrub", 
             access: "grotto",
@@ -7181,7 +7181,7 @@ var dungeons = [
             }
          },
          'Storms Grotto Scrub 3': {
-            x: "4.0%",
+            x: "3.5%",
             y: "40.0%",
             leadsto: "unknown",
             type: "scrub", 
@@ -7197,7 +7197,7 @@ var dungeons = [
             }
          },
          'Bean Salesman': {
-            x: "18.0%",
+            x: "16.0%",
             y: "40.0%",
             leadsto: "unknown",
             type: "bean", 
@@ -7209,8 +7209,8 @@ var dungeons = [
             }
          },
          'Frogs in the Rain': {
-            x: "32.0%",
-            y: "12.0%",
+            x: "47.0%",
+            y: "16.0%",
             leadsto: "unknown",
             type: "NPC", 
             access: "outdoor",
@@ -7222,8 +7222,8 @@ var dungeons = [
             }
          },
          'Frogs Mini Game': {
-            x: "36.0%",
-            y: "12.0%",
+            x: "44.0%",
+            y: "16.0%",
             leadsto: "unknown",
             type: "NPC", 
             access: "outdoor",
@@ -7235,8 +7235,8 @@ var dungeons = [
             }
          },
          'Adult Skulltula by Grotto': {
-            x: "17.0%",
-            y: "47.0%",
+            x: "27.0%",
+            y: "53.0%",
             leadsto: "unknown",
             type: "skulltula", 
             access: "outdoor",
@@ -7246,8 +7246,8 @@ var dungeons = [
             }
          },
          'Open Grotto': {
-            x: "19.0%",
-            y: "47.0%",
+            x: "33.0%",
+            y: "51.0%",
             leadsto: "unknown",
             type: "grotto", 
             access: "grotto",
@@ -7261,7 +7261,7 @@ var dungeons = [
             }
          },
          'River Open Grotto': {
-            x: "19.0%",
+            x: "35.0%",
             y: "48.0%",
             leadsto: "unknown",
             type: "chest", 
@@ -7276,8 +7276,8 @@ var dungeons = [
             }
          },
          'Grotto Gossip': {
-            x: "20.0%",
-            y: "47.0%",
+            x: "31.0%",
+            y: "52.0%",
             leadsto: "unknown",
             type: "gossip", 
             access: "grotto",
@@ -7291,8 +7291,8 @@ var dungeons = [
             }
          },
          'Boulder Grotto': {
-            x: "44.0%",
-            y: "40.0%",
+            x: "38.0%",
+            y: "37.0%",
             leadsto: "unknown",
             type: "grotto", 
             access: "grotto",
@@ -7308,8 +7308,8 @@ var dungeons = [
             }
          },
          'Above Frogs Gossip': {
-            x: "44.0%",
-            y: "14.0%",
+            x: "40.0%",
+            y: "17.0%",
             leadsto: "unknown",
             type: "gossip", 
             access: "outdoor",
@@ -7323,8 +7323,8 @@ var dungeons = [
             }
          },
          'Freestanding Lower Ledge': {
-            x: "40.0%",
-            y: "14.0%",
+            x: "29.5%",
+            y: "17.0%",
             leadsto: "unknown",
             type: "freestanding", 
             access: "outdoor",
@@ -7338,8 +7338,8 @@ var dungeons = [
             }
          },
          'Adult above Bridge Skulltula': {
-            x: "68.0%",
-            y: "8.0%",
+            x: "70.0%",
+            y: "18.0%",
             leadsto: "unknown",
             type: "skulltula", 
             access: "outdoor",
@@ -7349,8 +7349,8 @@ var dungeons = [
             }
          },
          'Child Ladder Skulltula': {
-            x: "80.0%",
-            y: "2.0%",
+            x: "86.0%",
+            y: "3.0%",
             leadsto: "unknown",
             type: "skulltula", 
             access: "outdoor",
@@ -7361,8 +7361,8 @@ var dungeons = [
             }
          },
          'Freestanding Upper Ledge': {
-            x: "77.0%",
-            y: "2.0%",
+            x: "80.0%",
+            y: "3.0%",
             leadsto: "unknown",
             type: "freestanding", 
             access: "outdoor",
@@ -7376,8 +7376,8 @@ var dungeons = [
             }
          },
          'River to Woods': {
-            x: "84.8%",
-            y: "25.3%",
+            x: "91.0%",
+            y: "26.5%",
             leadsto: "unknown",
             type: "entrance", 
             access: "entrance",
@@ -7385,8 +7385,8 @@ var dungeons = [
                   return dungeons[20].found == true && items.Scale; }
          },
          'Waterfall Gossip': {
-            x: "82.0%",
-            y: "2.0%",
+            x: "92.0%",
+            y: "4.0%",
             leadsto: "unknown",
             type: "gossip", 
             access: "outdoor",
@@ -7400,8 +7400,8 @@ var dungeons = [
             }
          },
          'River to Domain': {
-            x: "87.0%",
-            y: "5.0%",
+            x: "97.0%",
+            y: "9.0%",
             leadsto: "unknown",
             type: "entrance", 
             access: "entrance",
@@ -7425,7 +7425,7 @@ var dungeons = [
       chestlist: {
          'Domain to River': {
             x: "2.0%",
-            y: "78.5%",
+            y: "73.5%",
             leadsto: "unknown",
             type: "entrance", 
             access: "entrance",
@@ -7433,8 +7433,8 @@ var dungeons = [
                   return dungeons[21].found == true; }
          },
          'Zora Shop': {
-            x: "68.0%",
-            y: "82.5%",
+            x: "71.0%",
+            y: "84.5%",
             leadsto: "unknown",
             type: "simple", 
             access: "door",
@@ -7454,8 +7454,8 @@ var dungeons = [
             }
          },
          'Zora Sale': {
-            x: "68.0%",
-            y: "82.5%",
+            x: "67.0%",
+            y: "84.0%",
             leadsto: "unknown",
             type: "shop", 
             access: "simple",
@@ -7473,8 +7473,8 @@ var dungeons = [
             }
          },
          'Storms Grotto': {
-            x: "20.0%",
-            y: "55.5%",
+            x: "19.0%",
+            y: "64%",
             leadsto: "unknown",
             type: "grotto", 
             access: "grotto",
@@ -7491,8 +7491,8 @@ var dungeons = [
             }
          },
          'Royal Zora Gossip': {
-            x: "72.0%",
-            y: "45.5%",
+            x: "75.0%",
+            y: "35.5%",
             leadsto: "unknown",
             type: "gossip", 
             access: "outdoor",
@@ -7508,8 +7508,8 @@ var dungeons = [
             }
          },
          ['Diving Mini Game']: {
-            x: "45.0%",
-            y: "48.5%",
+            x: "43.0%",
+            y: "46.5%",
             leadsto: "unknown",
             type: "NPC", 
             access: "outdoor",
@@ -7520,8 +7520,8 @@ var dungeons = [
             }
          },
          ['Torch Run']: {
-            x: "45.0%",
-            y: "52.5%",
+            x: "43.0%",
+            y: "51.5%",
             leadsto: "unknown",
             type: "chest", 
             access: "outdoor",
@@ -7532,8 +7532,8 @@ var dungeons = [
             }
          },
          'Domain to Lake': {
-            x: "50.9%",
-            y: "75.0%",
+            x: "48%",
+            y: "77.0%",
             leadsto: "unknown",
             type: "entrance", 
             access: "entrance",
@@ -7541,8 +7541,8 @@ var dungeons = [
                   return items.Scale && dungeons[21].found == true; }
          },
          'Frozen Waterfall Skulltula': {
-            x: "48.0%",
-            y: "45.5%",
+            x: "47.0%",
+            y: "51.5%",
             leadsto: "unknown",
             type: "skulltula", 
             access: "outdoor",
@@ -7553,8 +7553,8 @@ var dungeons = [
             }
          },
          ['Thaw King Zora']: {
-            x: "72.0%",
-            y: "42.0%",
+            x: "76.0%",
+            y: "28.0%",
             leadsto: "unknown",
             type: "NPC", 
             access: "outdoor",
@@ -7576,8 +7576,8 @@ var dungeons = [
             }
          },
          'Domain to Fountain': {
-            x: "45.9%",
-            y: "2.5%",
+            x: "40%",
+            y: "4.5%",
             leadsto: "unknown",
             type: "entrance", 
             access: "entrance",
@@ -7600,8 +7600,8 @@ var dungeons = [
       found: true,
       chestlist: {
          'Fountain to Domain': {
-            x: "12.0%",
-            y: "52.5%",
+            x: "14.0%",
+            y: "58.5%",
             leadsto: "unknown",
             type: "entrance", 
             access: "entrance",
@@ -7610,7 +7610,7 @@ var dungeons = [
          },
          'West Fountain Gossip': {
             x: "35.0%",
-            y: "45.5%",
+            y: "25.5%",
             leadsto: "unknown",
             type: "gossip", 
             access: "outdoor",
@@ -7631,8 +7631,8 @@ var dungeons = [
             }
          },
          'Lord Jabu Jabu\'s Belly': {
-            x: "35.0%",
-            y: "50.5%",
+            x: "39.0%",
+            y: "38%",
             leadsto: "unknown",
             type: "dungeon", 
             access: "door",
@@ -7643,8 +7643,8 @@ var dungeons = [
                }
          },
          'Stand on the Log Skulltula': {
-            x: "42.0%",
-            y: "55.5%",
+            x: "27.0%",
+            y: "69.5%",
             leadsto: "unknown",
             type: "skulltula", 
             access: "outdoor",
@@ -7655,8 +7655,8 @@ var dungeons = [
                }
          },
          'Tree by Great Fairy Skulltula': {
-            x: "75.0%",
-            y: "75.5%",
+            x: "72.0%",
+            y: "80.5%",
             leadsto: "unknown",
             type: "skulltula", 
             access: "outdoor",
@@ -7667,8 +7667,8 @@ var dungeons = [
                }
          },
          'Great Fairy Gossip': {
-            x: "72.0%",
-            y: "72.5%",
+            x: "76.0%",
+            y: "78.5%",
             leadsto: "unknown",
             type: "gossip", 
             access: "outdoor",
@@ -7689,8 +7689,8 @@ var dungeons = [
             }
          },
          'Bombable Doorway': {
-            x: "75.0%",
-            y: "85.5%",
+            x: "70.0%",
+            y: "88.5%",
             leadsto: "unknown",
             type: "simple", 
             access: "door",
@@ -7715,8 +7715,8 @@ var dungeons = [
                }
          },
          ['Farore\'s Great Fairy Fountain']: {
-            x: "75.0%",
-            y: "85.5%",
+            x: "70.0%",
+            y: "88.5%",
             leadsto: "unknown",
             type: "NPC", 
             access: "simple",
@@ -7741,8 +7741,8 @@ var dungeons = [
             }
          },
          'Silver Rock Skulltula': {
-            x: "85.0%",
-            y: "75.5%",
+            x: "80.0%",
+            y: "74.5%",
             leadsto: "unknown",
             type: "skulltula", 
             access: "outdoor",
@@ -7762,8 +7762,8 @@ var dungeons = [
             }
          },
          ['Iceberg Freestanding']: {
-            x: "65.0%",
-            y: "45.5%",
+            x: "82.0%",
+            y: "32.5%",
             leadsto: "unknown",
             type: "freestanding", 
             access: "outdoor",
@@ -7783,8 +7783,8 @@ var dungeons = [
             }
          },
          ['Under Icy Waters Freestanding']: {
-            x: "60.0%",
-            y: "50.5%",
+            x: "63.0%",
+            y: "32.5%",
             leadsto: "unknown",
             type: "freestanding", 
             access: "outdoor",
@@ -7804,8 +7804,8 @@ var dungeons = [
             }
          },
          'Ice Cavern': {
-            x: "2.0%",
-            y: "60.5%",
+            x: "60.0%",
+            y: "2.5%",
             leadsto: "unknown",
             type: "dungeon", 
             access: "door",
