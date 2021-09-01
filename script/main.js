@@ -656,7 +656,7 @@ function clickDungeon(d) {
         var cc = document.createElement('span');
         cc.className = 'minimap ' + key;
         cc.innerHTML = key;
-        cc.id = 'minimap ' + key;
+        cc.id = key;
         cc.style.height = '32px';
         cc.style.width = '160px';
         cc.style.backgroundColor = 'black';
@@ -664,8 +664,8 @@ function clickDungeon(d) {
         cc.style.visibility = 'hidden';
         cc.style.position = 'absolute';
         c.appendChild(cc);
-        c.onmouseover = new Function('highlight(minimap ' + key + ')');
-        c.onmouseout = new Function('unhighlight(minimap ' + key + ')');
+        c.onmouseover = new Function('highlight(' + key + ')');
+        c.onmouseout = new Function('unhighlight(' + key + ')');
     }
 }
 
