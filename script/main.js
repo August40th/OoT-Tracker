@@ -468,11 +468,11 @@ function deserializeDungeonChests(serializedDungeons) {
     }
 }
 
-function highlight(sender, a, b) {
+function highlight(b) {
     document.getElementById(b).style.visibility = 'visible';
 }
 
-function unhighlight(sender, a, b) {
+function unhighlight(b) {
     document.getElementById(b).style.visibility = 'none';
 }
 
