@@ -32,4 +32,5 @@ If you notice any bugs in logic please message me on Discord: August 40th#4864
 Logic tweaks
 Separate areas for Market guard house & LW bridge checks for OWER
 Entrance tracker - lines connecting selected region with found paths
-Multi floor Dungeon maps
+Mini map co ordinates
+Floor lvl dependent dungeon chests on minimaps
