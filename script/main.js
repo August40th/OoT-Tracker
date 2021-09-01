@@ -531,7 +531,7 @@ function clickDungeon(d) {
             ub.style.left = '22px';
             ub.style.backgroundPosition = 'center';
             ub.style.backgroundSize = '160%';
-            ub.onclick = new Function('toggleDungeonMapUp()');
+            ub.onclick = new Function('toggleDungeonMapUp(last)');
             var db = document.createElement('button');
             db.style.backgroundImage = 'url(images/Down.png)';
             db.style.height = '32px';
@@ -541,7 +541,7 @@ function clickDungeon(d) {
             db.style.left = '22px';
             db.style.backgroundPosition = 'center';
             db.style.backgroundSize = '160%';
-            db.onclick = new Function('toggleDungeonMapDown()');
+            db.onclick = new Function('toggleDungeonMapDown(last)');
             document.getElementById('minimapdiv').appendChild(ub);
          document.getElementById('minimapdiv').appendChild(db);
         }
@@ -780,7 +780,7 @@ function bulkDCSelect() {
     updateMap();
 }
 
-function toggleDungeonMapUp() {
+function toggleDungeonMapUp(l) {
     var m = document.getElementById('minimapdiv');
     var enter;
     var here; 
@@ -788,14 +788,14 @@ function toggleDungeonMapUp() {
     if (dungeonSelect == 1) {
         enter = 2;
         floortop = 4;
-        if (last !== dungeonSelect)
+        if (l !== dungeonSelect)
             here = enter;
     }
     here++;
     if (here > floortop)
         here = 0;
     m.style.backgroundImage = 'url(images/' + minimaps[dungeonSelect] + here + '.png)';
-    last = dungeonSelect;
+    l = dungeonSelect;
 }
 
 function toggleDungeonMapDown() {
