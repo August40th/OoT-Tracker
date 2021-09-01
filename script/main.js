@@ -483,7 +483,7 @@ function highlightDungeon(x) {
 
 function unhighlightDungeon(x) {
    if (dungeonSelect != x)
-      document.getElementById("dungeon" + x).style.backgroundImage = "url(images/poi.png)";
+      document.getElementById('dungeon' + x).style.backgroundImage = "url(images/poi.png)";
 }
 
 // mark dungeon as
@@ -660,13 +660,13 @@ function clickDungeon(d) {
         cc.style.width = '160px';
         cc.style.backgroundColor = 'black';
         cc.style.color = '#fff';
-        cc.style.visibility = 'hidden';
+        //cc.style.visibility = 'hidden';
         cc.style.position = 'absolute';
         cc.style.textAlign = 'center';
         cc.style.fontSize = '20px';
         c.appendChild(cc);
-        c.onmouseover = new Function('highlight('key')');
-        c.onmouseout = new Function('unhighlight('key')');
+        c.onmouseover = highlight(key);
+        c.onmouseout = unhighlight(key);
     }
 }
 
