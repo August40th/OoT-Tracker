@@ -473,7 +473,7 @@ function highlight(b) {
 }
 
 function unhighlight(b) {
-    document.getElementById('minimap ' + b).style.visibility = 'none';
+    document.getElementById('minimap ' + b).style.visibility = 'hidden';
 }
 
 // Highlights a dungeons)
@@ -657,7 +657,7 @@ function clickDungeon(d) {
         cc.className = 'minimap ' + key;
         cc.innerHTML = key;
         cc.id = 'minimap ' + key;
-        cc.style.width = 'auto';
+        cc.style.width = '160px';
         cc.style.backgroundColor = 'black';
         cc.style.color = '#fff';
         cc.style.visibility = 'hidden';
