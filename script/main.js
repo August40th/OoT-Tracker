@@ -643,7 +643,7 @@ function clickDungeon(d) {
         DClist.appendChild(s);
         
         c = document.createElement('span');
-        c.innerHTML = 'x';
+        c.innerHTML = '';
         c.id = dungeons[dungeonSelect].chestlist[key].type;
         c.className = key + ' ' + s.className;
         c.style.cursor = 'pointer';
@@ -655,7 +655,7 @@ function clickDungeon(d) {
         
         var cc = document.createElement('span');
         cc.className = 'minimap span tooltipgray';
-        cc.id = key;
+        cc.innerHTML = key;
         cc.style.height = '32px';
         cc.style.width = '160px';
         cc.style.visibility = 'visible';
