@@ -648,16 +648,17 @@ function clickDungeon(d) {
         c.className = key + ' ' + s.className;
         c.style.cursor = 'pointer';
         c.style.position = 'relative';
+        c.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
         c.style.top = dungeons[dungeonSelect].chestlist[key].y;
         c.style.left = dungeons[dungeonSelect].chestlist[key].x;
-        document.getElementById('minimapdiv').appendChild(c);
+        minimap.appendChild(c);
         
         var cc = document.createElement('span');
         cc.className = 'minimap span tooltipgray';
         cc.id = key;
         cc.style.visibility = 'hidden';
-        document.getElementById('minimapdiv').appendChild(cc);
-        c.onclick = new Function('highlight(' + cc + ')');
+        minimap.appendChild(cc);
+        c.onmouseover = new Function('highlight(' + cc + ')');
     }
 }
 
