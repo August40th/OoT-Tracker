@@ -665,8 +665,8 @@ function clickDungeon(d) {
         cc.style.textAlign = 'center';
         cc.style.fontSize = '20px';
         c.appendChild(cc);
-        c.onmouseover = highlight(key);
-        c.onmouseout = unhighlight(key);
+        c.onmouseover = new Function('highlight(key)');
+        c.onmouseout = new Function('unhighlight(key)');
     }
 }
 
