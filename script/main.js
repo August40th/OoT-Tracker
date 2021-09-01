@@ -664,8 +664,8 @@ function clickDungeon(d) {
         cc.style.visibility = 'hidden';
         cc.style.position = 'absolute';
         c.appendChild(cc);
-        c.onmouseover = new Function('highlight(this,' + cc + ',"' + key + '")');
-        c.onmouseout = new Function('unhighlight(this,' + cc + ',"' + key + '")');
+        c.onmouseover = highlight(key);
+        c.onmouseout = unhighlight(key);
     }
 }
 
