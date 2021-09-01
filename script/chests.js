@@ -5952,8 +5952,8 @@ var dungeons = [
             }
          },
          'Tower Skulltula': {
-            x: "42.0%",
-            y: "53.0%",
+            x: "55.0%",
+            y: "41.0%",
             leadsto: "unknown",
             type: "skulltula", 
             access: "outdoor",
@@ -6001,7 +6001,7 @@ var dungeons = [
             }
          },
          ['Man on Roof']: {
-            x: "622.0%",
+            x: "62.0%",
             y: "50.0%",
             leadsto: "unknown",
             type: "NPC", 
@@ -6043,8 +6043,8 @@ var dungeons = [
                }
          },
          'Kakariko Open Grotto': {
-            x: "39.0%",
-            y: "67.3%",
+            x: "69.0%",
+            y: "39.3%",
             leadsto: "unknown",
             type: "grotto", 
             access: "grotto",
@@ -6053,8 +6053,8 @@ var dungeons = [
                }
          },
          ['Village Open Grotto']: {
-            x: "39.0%",
-            y: "67.3%",
+            x: "69.0%",
+            y: "39.3%",
             leadsto: "unknown",
             type: "chest", 
             access: "grotto",
@@ -6174,8 +6174,8 @@ var dungeons = [
                }
          },
          ['Impa\'s House Freestanding']: {
-            x: "55.0%",
-            y: "87.0%",
+            x: "57.0%",
+            y: "88.0%",
             leadsto: "unknown",
             type: "freestanding", 
             access: "simple",
@@ -6183,7 +6183,7 @@ var dungeons = [
                return dungeons[16].found == true}
          },
          ['Impa\'s House Cow Milk']: {
-            x: "55.0%",
+            x: "57.0%",
             y: "93.0%",
             leadsto: "unknown",
             type: "cow", 
@@ -6237,7 +6237,7 @@ var dungeons = [
                }
          },
          ['Skulltula House 10']: {
-            x: "50.0%",
+            x: "48.0%",
             y: "69.0%",
             leadsto: "unknown",
             type: "NPC", 
@@ -6247,8 +6247,8 @@ var dungeons = [
             }
          },
          ['Skulltula House 20']: {
-            x: "45.0%",
-            y: "69.0%",
+            x: "48.0%",
+            y: "74.0%",
             leadsto: "unknown",
             type: "NPC", 
             access: "simple",
@@ -6268,7 +6268,7 @@ var dungeons = [
          },
          ['Skulltula House 40']: {
             x: "45.0%",
-            y: "74.0%",
+            y: "73.0%",
             leadsto: "unknown",
             type: "NPC", 
             access: "simple",
@@ -6278,8 +6278,8 @@ var dungeons = [
             }
          },
          ['Skulltula House 50']: {
-            x: "50.0%",
-            y: "74.0%",
+            x: "45.0%",
+            y: "69.0%",
             leadsto: "unknown",
             type: "NPC", 
             access: "simple",
