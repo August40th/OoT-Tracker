@@ -92,7 +92,7 @@ var dungeons = [
       chestlist: {
          'Forest to Field': {
           x: "3.5%",
-          y: "40.0%",
+          y: "45.0%",
           leadsto: "unknown",
           type: "entrance",
           access: "entrance",
@@ -100,8 +100,8 @@ var dungeons = [
                return dungeons[0].found == true ; }
        },
          'Fairy Ocarina': {
-            x: "0.6%",
-            y: "40.0%",
+            x: "0%",
+            y: "45.0%",
             leadsto: "unknown",
             type: "ocarina",
             access: "no OWER",
@@ -109,8 +109,8 @@ var dungeons = [
                return dungeons[0].found == true ; }
          },
          'Mido\'s House': {
-            x: "20.0%",
-            y: "48.0%",
+            x: "16.75%",
+            y: "38.0%",
             leadsto: "unknown",
             type: "simple",
             access: "door",
@@ -119,7 +119,7 @@ var dungeons = [
          },
          'Mido\'s House 1': {
             x: "15.0%",
-            y: "39.0%",
+            y: "40.0%",
             leadsto: "unknown",
             type: "chest",
             access: "simple",
@@ -127,8 +127,8 @@ var dungeons = [
                return dungeons[0].found == true ; }
          },
          'Mido\'s House 2': {
-            x: "14.5%",
-            y: "32.0%",
+            x: "15%",
+            y: "35.0%",
             leadsto: "unknown",
             type: "chest",
             access: "simple",
@@ -136,8 +136,8 @@ var dungeons = [
                return dungeons[0].found == true ; }
          },
          'Mido\'s House 3': {
-            x: "16.0%",
-            y: "39.0%",
+            x: "18.0%",
+            y: "40.0%",
             leadsto: "unknown",
             type: "chest",
             access: "simple",
@@ -145,8 +145,8 @@ var dungeons = [
                return dungeons[0].found == true ; }
          },
          'Mido\'s House 4': {
-            x: "15.5%",
-            y: "32.0%",
+            x: "18%",
+            y: "35.0%",
             leadsto: "unknown",
             type: "chest",
             access: "simple",
@@ -155,7 +155,7 @@ var dungeons = [
          },
          'Know It All Bro\'s': {
             x: "8.0%",
-            y: "56.0%",
+            y: "57.0%",
             leadsto: "unknown",
             type: "simple",
             access: "door",
@@ -163,8 +163,8 @@ var dungeons = [
                return dungeons[0].found == true ; }
          },
          'Child Know it All Bros Skulltula': {
-            x: "5.0%",
-            y: "58.8%",
+            x: "5.4%",
+            y: "58%",
             leadsto: "unknown",
             type: "skulltula",
             access: "outdoor",
@@ -174,8 +174,8 @@ var dungeons = [
                   ); }
          },
          'Kokiri Sword Chest': {
-            x: "12.8%",
-            y: "88.0%",
+            x: "19%",
+            y: "94%",
             leadsto: "unknown",
             type: "ksword",
             access: "outdoor",
@@ -184,8 +184,8 @@ var dungeons = [
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); }
          },
          'Link\'s House': {
-            x: "16.0%",
-            y: "67.0%",
+            x: "22.2%",
+            y: "71.0%",
             leadsto: "unknown",
             type: "alldoor",
             access: "door",
@@ -193,8 +193,8 @@ var dungeons = [
                return dungeons[0].found == true ; }
          },
          'Link\'s House Cow': {
-            x: "14.5%",
-            y: "69.6%",
+            x: "22.4%",
+            y: "72%",
             leadsto: "unknown",
             type: "cow",
             access: "alldoor",
@@ -204,8 +204,8 @@ var dungeons = [
                   items.Ocarina && items.EponasSong; }
          },
          'Saria\'s House': {
-            x: "24.0%",
-            y: "63.0%",
+            x: "2950%",
+            y: "65.0%",
             leadsto: "unknown",
             type: "simple",
             access: "door",
@@ -213,8 +213,8 @@ var dungeons = [
                return dungeons[0].found == true ; }
          },
          'Twin\'s House': {
-            x: "27.0%",
-            y: "60.0%",
+            x: "37.5%",
+            y: "61.0%",
             leadsto: "unknown",
             type: "simple",
             access: "door",
@@ -222,8 +222,8 @@ var dungeons = [
                return dungeons[0].found == true ; }
          },
          'Adult Twin\'s House Roof Skulltula': {
-            x: "28.0%",
-            y: "59.5%",
+            x: "38.5%",
+            y: "64.5%",
             leadsto: "unknown",
             type: "skulltula",
             access: "outdoor",
@@ -233,8 +233,8 @@ var dungeons = [
                && items.Hookshot; }
          },
          'Soil Patch Skulltula': {
-            x: "32.0%",
-            y: "38.0%",
+            x: "39.0%",
+            y: "42.0%",
             leadsto: "unknown",
             type: "skulltula",
             access: "outdoor",
@@ -243,8 +243,8 @@ var dungeons = [
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) && items.Bottle; }
          },
          'Kokiri Shop': {
-            x: "28.5%",
-            y: "37.5%",
+            x: "35.3%",
+            y: "42.5%",
             leadsto: "unknown",
             type: "simple",
             access: "door",
@@ -270,7 +270,7 @@ var dungeons = [
                return dungeons[0].found == true ; }
          },
          'Song of Storms Grotto': {
-            x: "12.0%",
+            x: "16.7%",
             y: "26.4%",
             leadsto: "unknown",
             type: "grotto",
@@ -280,8 +280,8 @@ var dungeons = [
                && items.Ocarina && items.SongofStorms; }
          },
          'Storms Grotto Chest': {
-            x: "9.7%",
-            y: "26.4%",
+            x: "16.7%",
+            y: "27.4%",
             leadsto: "unknown",
             type: "chest",
             access: "grotto",
@@ -300,16 +300,16 @@ var dungeons = [
                   items.Ocarina && items.SongofStorms; }
          },
          'Forest to Woods': {
-          x: "16.0%",
-          y: "8.0%",
+          x: "17.0%",
+          y: "19.5%",
           type: "entrance",
           access: "entrance",
           isAvailable: function () {
                return dungeons[0].found == true ; }
        },
          'Left of Deku Tree Gossip': {
-            x: "69.0%",
-            y: "8.0%",
+            x: "70.0%",
+            y: "20.0%",
             leadsto: "unknown",
             type: "gossip",
             access: "outdoor",
@@ -328,8 +328,8 @@ var dungeons = [
                   (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) ) ; }
          },
          'Inside the Deku Tree': {
-            x: "67.0%",
-            y: "27.0%",
+            x: "74.0%",
+            y: "28.0%",
             leadsto: "unknown",
             type: "dungeon",
             access: "door",
