@@ -785,7 +785,6 @@ function toggleDungeonMapUp() {
     var enter;
     var here; 
     var floortop; 
-    var last;
     if (dungeonSelect == 1) {
         enter = 2;
         floortop = 4;
@@ -801,7 +800,7 @@ function toggleDungeonMapUp() {
 
 function toggleDungeonMapDown() {
     var m = document.getElementById('minimapdiv');
-    var enter, here, floortop, last;
+    var enter, here, floortop;
     if (dungeonSelect == 1) {
         enter = 2;
         floortop = 4;
