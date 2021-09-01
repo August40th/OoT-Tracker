@@ -646,7 +646,6 @@ function clickDungeon(d) {
         c.innerHTML = 'x';
         c.id = dungeons[dungeonSelect].chestlist[key].type;
         c.className = key + ' ' + s.className;
-        c.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
         c.style.cursor = 'pointer';
         c.style.position = 'relative';
         c.style.top = dungeons[dungeonSelect].chestlist[key].y;
@@ -658,6 +657,7 @@ function clickDungeon(d) {
         cc.id = key;
         cc.style.visibility = 'hidden';
         document.getElementById('minimapdiv').appendChild(cc);
+        c.onclick = new Function('highlight(' + cc + ')');
     }
 }
 
