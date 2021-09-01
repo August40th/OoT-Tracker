@@ -799,7 +799,6 @@ function toggleDungeonMapDown() {
     var m = document.getElementById('minimapdiv');
     if (last !== dungeonSelect)
         here = dungeons[dungeonSelect].floorwdoor;
-    }
     here--;
     if (here < 0)
         here = dungeons[dungeonSelect].topfloor;
