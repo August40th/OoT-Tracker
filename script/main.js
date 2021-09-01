@@ -470,11 +470,11 @@ function deserializeDungeonChests(serializedDungeons) {
 
 function highlight(x) {
     //document.getElementByclassName(x).style.backgroundImage = 'url(images/highlighted.png)';
-    document.className(x).style.visibility = 'visible';
+    document.getElementById(x).style.visibility = 'visible';
 }
 
 function unhighlight(x) {
-    document.className(x).style.visibility = 'none';
+    document.getElementById(x).style.visibility = 'none';
 }
 
 // Highlights a dungeons)
@@ -643,7 +643,7 @@ function clickDungeon(d) {
         DClist.appendChild(s);
         
         c = document.createElement('span');
-        c.innerHTML = '  ';
+        c.innerHTML = 'x';
         c.id = dungeons[dungeonSelect].chestlist[key].type;
         c.className = key + ' ' + s.className;
         c.style.cursor = 'pointer';
