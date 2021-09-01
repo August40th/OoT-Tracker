@@ -656,7 +656,7 @@ function clickDungeon(d) {
         var cc = document.createElement('span');
         cc.className = 'minimap ' + key;
         cc.innerHTML = key;
-        cc.id = 'minimap ' + key;
+        cc.id = key;
         cc.style.height = '32px';
         cc.style.width = '160px';
         cc.style.backgroundColor = 'black';
