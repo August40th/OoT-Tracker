@@ -469,11 +469,11 @@ function deserializeDungeonChests(serializedDungeons) {
 }
 
 function highlight(b) {
-    document.getElementById(b).style.visibility = 'visible';
+    document.getElementById('minimap ' + b).style.visibility = 'visible';
 }
 
 function unhighlight(b) {
-    document.getElementById(b).style.visibility = 'none';
+    document.getElementById('minimap ' + b).style.visibility = 'none';
 }
 
 // Highlights a dungeons)
@@ -656,13 +656,14 @@ function clickDungeon(d) {
         var cc = document.createElement('span');
         cc.className = 'minimap ' + key;
         cc.innerHTML = key;
-        cc.id = key;
-        cc.style.height = '32px';
-        cc.style.width = '160px';
+        cc.id = 'minimap ' + key;
+        cc.style.width = 'auto';
         cc.style.backgroundColor = 'black';
         cc.style.color = '#fff';
         cc.style.visibility = 'hidden';
         cc.style.position = 'absolute';
+        cc.style.textAlign = 'center';
+        cc.style.fontSize = '20px';
         c.appendChild(cc);
         c.onmouseover = highlight(key);
         c.onmouseout = unhighlight(key);
