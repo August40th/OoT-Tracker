@@ -97,6 +97,7 @@ var chestMarked = [];
 var linestart = 0;
 var tempx = '0.0%';
 var tempy = '0.0%';
+var last;
     
 function setCookie(obj) {
     var d = new Date();
