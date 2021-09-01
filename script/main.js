@@ -469,7 +469,7 @@ function deserializeDungeonChests(serializedDungeons) {
 }
 
 function highlight(x) {
-    document.getElementByclassName(x).style.backgroundImage = 'url(images/highlighted.png)';
+    //document.getElementByclassName(x).style.backgroundImage = 'url(images/highlighted.png)';
     document.getElementByclassName(x).style.visibility = 'visible';
 }
 
@@ -657,7 +657,7 @@ function clickDungeon(d) {
         cc.className = 'minimap span tooltipgray';
         cc.id = key;
         cc.style.visibility = 'hidden';
-        c.appendChild(cc);
+        document.getElementById('minimapdiv').appendChild(cc);
     }
 }
 
