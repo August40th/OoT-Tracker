@@ -8212,8 +8212,8 @@ var dungeons = [
                   return items.Ocarina && items.BoleroofFire; }
          },
          'Soil Patch Skulltula': {
-            x: "42.0%",
-            y: "47.0%",
+            x: "47.0%",
+            y: "42.0%",
             leadsto: "unknown",
             type: "skulltula", 
             access: "outdoor",
@@ -8306,7 +8306,7 @@ var dungeons = [
             }
          },
          'Crater Grotto Gossip': {
-            x: "48.5%",
+            x: "51.5%",
             y: "82.0%",
             leadsto: "unknown",
             type: "gossip", 
@@ -8417,8 +8417,8 @@ var dungeons = [
       found: true,
       chestlist: {
          'Ranch to Field': {
-            x: "78.0%",
-            y: "04.0%",
+            x: "82.0%",
+            y: "3.0%",
             leadsto: "unknown",
             type: "entrance",
             access: "entrance",
@@ -8426,8 +8426,8 @@ var dungeons = [
                   return dungeons[25].found == true; }
          },
          'Talon\'s House': {
-            x: "65.0%",
-            y: "15.0%",
+            x: "70.0%",
+            y: "14.0%",
             leadsto: "unknown",
             type: "simple", 
             access: "door",
@@ -8435,7 +8435,7 @@ var dungeons = [
                return OWERmap == false || dungeons[25].found == true; }
          },
          ['Talon\'s Cucco game']: {
-            x: "70.0%",
+            x: "76.0%",
             y: "18.0%",
             leadsto: "unknown",
             type: "NPC", 
@@ -8446,8 +8446,8 @@ var dungeons = [
             }
          },
          'Ranch Stables': {
-            x: "55.0%",
-            y: "15.0%",
+            x: "60.0%",
+            y: "14.0%",
             leadsto: "unknown",
             type: "simple", 
             access: "door",
@@ -8455,8 +8455,8 @@ var dungeons = [
                return OWERmap == false || dungeons[25].found == true; }
          },
          ['Stable Cow Milk 1']: {
-            x: "50.0%",
-            y: "10.0%",
+            x: "51.0%",
+            y: "19.5%",
             leadsto: "unknown",
             type: "cow", 
             access: "simple",
@@ -8465,8 +8465,8 @@ var dungeons = [
             }
          },
          ['Stable Cow Milk 2']: {
-            x: "45.0%",
-            y: "15.0%",
+            x: "51.0%",
+            y: "14.0%",
             leadsto: "unknown",
             type: "cow", 
             access: "simple",
@@ -8475,8 +8475,8 @@ var dungeons = [
             }
          },
          '2nd Floor Window Skulltula': {
-            x: "65.0%",
-            y: "18.0%",
+            x: "69.0%",
+            y: "20.0%",
             leadsto: "unknown",
             type: "skulltula", 
             access: "outdoor",
@@ -8487,8 +8487,8 @@ var dungeons = [
             }
          },
          'Tree Skulltula': {
-            x: "70.0%",
-            y: "21.0%",
+            x: "76.0%",
+            y: "26.0%",
             leadsto: "unknown",
             type: "skulltula", 
             access: "outdoor",
@@ -8510,8 +8510,8 @@ var dungeons = [
             }
          },
          'Back of Coral Skulltula': {
-            x: "60.0%",
-            y: "55.0%",
+            x: "65.0%",
+            y: "64.5%",
             leadsto: "unknown",
             type: "skulltula", 
             access: "outdoor",
@@ -8521,8 +8521,8 @@ var dungeons = [
             }
          },
          'Ranch Open Grotto': {
-            x: "74.0%",
-            y: "85.0%",
+            x: "73.5%",
+            y: "88.0%",
             leadsto: "unknown",
             type: "grotto", 
             access: "grotto",
@@ -8532,8 +8532,8 @@ var dungeons = [
             }
          },
          'Open Grotto Scrub 1': {
-            x: "74.0%",
-            y: "85.0%",
+            x: "72.0%",
+            y: "89.0%",
             leadsto: "unknown",
             type: "scrub", 
             access: "grotto",
@@ -8543,8 +8543,8 @@ var dungeons = [
             }
          },
          'Open Grotto Scrub 2': {
-            x: "74.0%",
-            y: "85.0%",
+            x: "75.0%",
+            y: "89.0%",
             leadsto: "unknown",
             type: "scrub", 
             access: "grotto",
@@ -8554,7 +8554,7 @@ var dungeons = [
             }
          },
          'Open Grotto Scrub 3': {
-            x: "74.0%",
+            x: "73.5%",
             y: "85.0%",
             leadsto: "unknown",
             type: "scrub", 
@@ -8565,8 +8565,8 @@ var dungeons = [
             }
          },
          'Ranch Silo': {
-            x: "20.0%",
-            y: "75.0%",
+            x: "19.5%",
+            y: "84.5%",
             leadsto: "unknown",
             type: "simple", 
             access: "door",
@@ -8574,8 +8574,8 @@ var dungeons = [
                return OWERmap == false || dungeons[25].found == true; }
          },
          ['Silo Freestanding']: {
-            x: "16.0%",
-            y: "82.0%",
+            x: "17.0%",
+            y: "89.0%",
             leadsto: "unknown",
             type: "freestanding", 
             access: "simple",
@@ -8585,8 +8585,8 @@ var dungeons = [
             }
          },
          ['Silo Cow Milk 1']: {
-            x: "15.0%",
-            y: "78.0%",
+            x: "14.0%",
+            y: "84.5%",
             leadsto: "unknown",
             type: "cow", 
             access: "simple",
@@ -8595,8 +8595,8 @@ var dungeons = [
             }
          },
          ['Silo Cow Milk 2']: {
-            x: "20.0%",
-            y: "83.0%",
+            x: "17.5%",
+            y: "84.5%",
             leadsto: "unknown",
             type: "cow", 
             access: "simple",
@@ -8605,8 +8605,8 @@ var dungeons = [
             }
          },
          'North of Silo Skulltula': {
-            x: "07.0%",
-            y: "57.0%",
+            x: "5.0%",
+            y: "74.0%",
             leadsto: "unknown",
             type: "skulltula", 
             access: "outdoor",
@@ -8631,8 +8631,8 @@ var dungeons = [
       found: true,
       chestlist: {
          'Lake to Field': {
-            x: "32.0%",
-            y: "02.0%",
+            x: "35.0%",
+            y: "2.0%",
             leadsto: "unknown",
             type: "entrance", 
             access: "entrance",
@@ -8640,8 +8640,8 @@ var dungeons = [
                   return dungeons[26].found == true; }
          },
          'Beside Lab Gossip': {
-            x: "10.0%",
-            y: "48.0%",
+            x: "9.0%",
+            y: "41.0%",
             leadsto: "unknown",
             type: "gossip", 
             access: "outdoor",
@@ -8651,8 +8651,8 @@ var dungeons = [
             }
          },
          'Soil Patch Skulltula': {
-            x: "25.0%",
-            y: "48.0%",
+            x: "24.0%",
+            y: "36.0%",
             leadsto: "unknown",
             type: "skulltula", 
             access: "outdoor",
@@ -8662,8 +8662,8 @@ var dungeons = [
             }
          },
          ['Child Underwater Freestanding']: {
-            x: "46.0%",
-            y: "46.0%",
+            x: "47.0%",
+            y: "49.0%",
             leadsto: "unknown",
             type: "freestanding", 
             access: "outdoor",
@@ -8673,8 +8673,8 @@ var dungeons = [
             }
          },
          'Lake to Domain': {
-            x: "46.3%",
-            y: "48.0%",
+            x: "47%",
+            y: "39.0%",
             leadsto: "unknown",
             type: "entrance", 
             access: "entrance",
@@ -8683,8 +8683,8 @@ var dungeons = [
             ; }
          },
          'Laboratory': {
-            x: "27.0%",
-            y: "50.0%",
+            x: "26.5%",
+            y: "41.5%",
             leadsto: "unknown",
             type: "simple", 
             access: "door",
@@ -8692,8 +8692,8 @@ var dungeons = [
                return OWERmap == false || dungeons[26].found == true; }
          },
          'Lab Crate Skulltula': {
-            x: "24.0%",
-            y: "46.0%",
+            x: "26.5%",
+            y: "41.5%",
             leadsto: "unknown",
             type: "skulltula", 
             access: "simple",
@@ -8703,8 +8703,8 @@ var dungeons = [
             }
          },
          ['Diving in the Lab']: {
-            x: "27.0%",
-            y: "50.0%",
+            x: "22.0%",
+            y: "41.0%",
             leadsto: "unknown",
             type: "NPC", 
             access: "simple",
@@ -8717,8 +8717,8 @@ var dungeons = [
             }
          },
          ['Lab Roof Freestanding']: {
-            x: "24.0%",
-            y: "48.0%",
+            x: "24.5%",
+            y: "43.0%",
             leadsto: "unknown",
             type: "freestanding", 
             access: "outdoor",
@@ -8731,8 +8731,8 @@ var dungeons = [
             }
          },
          'Lab Wall Skulltula': {
-            x: "24.0%",
-            y: "52.0%",
+            x: "22.0%",
+            y: "45.0%",
             leadsto: "unknown",
             type: "skulltula", 
             access: "outdoor",
@@ -8742,8 +8742,8 @@ var dungeons = [
             }
          },
          'Lake Owl': {
-            x: "19.0%",
-            y: "62.5%",
+            x: "18.5%",
+            y: "58.5%",
             leadsto: "unknown",
             type: "owl", 
             access: "entrance",
@@ -8753,7 +8753,7 @@ var dungeons = [
             }
          },
          'Lake Hylia Grave': {
-            x: "16.4%",
+            x: "19.0%",
             y: "65.0%",
             leadsto: "unknown",
             type: "grotto", 
@@ -8762,8 +8762,8 @@ var dungeons = [
                return OWERmap == false || dungeons[26].found == true; }
          },
          'Grave Pull Scrub 1': {
-            x: "16.4%",
-            y: "65.0%",
+            x: "17.5%",
+            y: "67.0%",
             leadsto: "unknown",
             type: "scrub", 
             access: "grotto",
@@ -8772,8 +8772,8 @@ var dungeons = [
             },
          },
          'Grave Pull Scrub 2': {
-            x: "16.4%",
-            y: "65.0%",
+            x: "17.5%",
+            y: "67.0%",
             leadsto: "unknown",
             type: "scrub", 
             access: "grotto",
@@ -8782,8 +8782,8 @@ var dungeons = [
             },
          },
          'Grave Pull Scrub 3': {
-            x: "16.4%",
-            y: "65.0%",
+            x: "19.0%",
+            y: "64.0%",
             leadsto: "unknown",
             type: "scrub", 
             access: "grotto",
@@ -8792,8 +8792,8 @@ var dungeons = [
             },
          },
          'Serenade Warp': {
-            x: "46.4%",
-            y: "68.0%",
+            x: "44.5%",
+            y: "87.0%",
             leadsto: "unknown",
             type: "warp", 
             access: "warp",
@@ -8801,8 +8801,8 @@ var dungeons = [
                   return items.Ocarina && items.SerenadeoffWater; }
          },
          'Top of Tree Skulltula': {
-            x: "50.0%",
-            y: "68.0%",
+            x: "49.5%",
+            y: "79.0%",
             leadsto: "unknown",
             type: "skulltula", 
             access: "outdoor",
@@ -8812,8 +8812,8 @@ var dungeons = [
             }
          },
          'Perimeter of Lake 1': {
-            x: "15.0%",
-            y: "78.0%",
+            x: "13.0%",
+            y: "82.0%",
             leadsto: "unknown",
             type: "gossip", 
             access: "outdoor",
@@ -8822,8 +8822,8 @@ var dungeons = [
             }
          },
          'Perimeter of Lake 2': {
-            x: "75.4%",
-            y: "80.0%",
+            x: "80.0%",
+            y: "86.0%",
             leadsto: "unknown",
             type: "gossip", 
             access: "outdoor",
@@ -8832,8 +8832,8 @@ var dungeons = [
             }
          },
          'Fishing Pond': {
-            x: "70.4%",
-            y: "52.0%",
+            x: "75.0%",
+            y: "41.0%",
             leadsto: "unknown",
             type: "simple", 
             access: "door",
@@ -8847,8 +8847,8 @@ var dungeons = [
             }
          },
          ['Child Fishing']: {
-            x: "74.7%",
-            y: "52.0%",
+            x: "75.0%",
+            y: "39.0%",
             leadsto: "unknown",
             type: "NPC", 
             access: "simple",
@@ -8858,8 +8858,8 @@ var dungeons = [
             }
          },
          ['Adult Fishing']: {
-            x: "74.7%",
-            y: "47.4%",
+            x: "75.0%",
+            y: "43.5%",
             leadsto: "unknown",
             type: "NPC", 
             access: "simple",
@@ -8872,8 +8872,8 @@ var dungeons = [
             }
          },
          ['Shoot the Sun']: {
-            x: "63.6%",
-            y: "66.0%",
+            x: "65.5%",
+            y: "77.0%",
             leadsto: "unknown",
             type: "freestanding", 
             access: "outdoor",
@@ -8884,8 +8884,8 @@ var dungeons = [
             }
          },
          'Fire Arrow Island Skulltula': {
-            x: "63.0%",
-            y: "63.0%",
+            x: "68.0%",
+            y: "75.0%",
             leadsto: "unknown",
             type: "skulltula", 
             access: "outdoor",
@@ -8895,8 +8895,8 @@ var dungeons = [
             }
          },
          'Water Temple': {
-            x: "48.4%",
-            y: "72.0%",
+            x: "46.5%",
+            y: "71.0%",
             leadsto: "unknown",
             type: "dungeon", 
             access: "door",
