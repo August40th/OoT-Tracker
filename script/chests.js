@@ -8793,7 +8793,7 @@ var dungeons = [
          },
          'Serenade Warp': {
             x: "44.5%",
-            y: "87.0%",
+            y: "78.0%",
             leadsto: "unknown",
             type: "warp", 
             access: "warp",
@@ -8922,8 +8922,8 @@ var dungeons = [
       found: true,
       chestlist: {
          'Valley to Field': {
-            x: "87.0%",
-            y: "50.0%",
+            x: "94.0%",
+            y: "53.0%",
             leadsto: "unknown",
             type: "entrance", 
             access: "entrance",
@@ -8931,8 +8931,8 @@ var dungeons = [
                   return dungeons[27].found == true; }
          },
          'Right of Plank Skulltula': {
-            x: "70.0%",
-            y: "42.0%",
+            x: "79.0%",
+            y: "36.0%",
             leadsto: "unknown",
             type: "skulltula", 
             access: "outdoor",
@@ -8942,8 +8942,8 @@ var dungeons = [
             }
          },
          ['Crate Freestanding']: {
-            x: "45.0%",
-            y: "68.0%",
+            x: "47.0%",
+            y: "66.0%",
             leadsto: "unknown",
             type: "freestanding", 
             access: "outdoor",
@@ -8954,8 +8954,8 @@ var dungeons = [
             }
          },
          ['Waterfall Freestanding']: {
-            x: "50.0%",
-            y: "02.0%",
+            x: "54.0%",
+            y: "2.0%",
             leadsto: "unknown",
             type: "freestanding", 
             access: "outdoor",
@@ -8963,8 +8963,8 @@ var dungeons = [
                return OWERmap == false || dungeons[27].found == true}
          },
          'Waterfall Gossip': {
-            x: "42.0%",
-            y: "12.0%",
+            x: "46.0%",
+            y: "6.0%",
             leadsto: "unknown",
             type: "gossip", 
             access: "outdoor",
@@ -8973,8 +8973,8 @@ var dungeons = [
             }
          },
          ['Valley Cow Milk']: {
-            x: "46.0%",
-            y: "54.0%",
+            x: "47.0%",
+            y: "56.0%",
             leadsto: "unknown",
             type: "cow", 
             access: "outdoor",
@@ -8984,8 +8984,8 @@ var dungeons = [
             }
          },
          'Soil Patch Skulltula': {
-            x: "42.0%",
-            y: "58.0%",
+            x: "47.0%",
+            y: "60.0%",
             leadsto: "unknown",
             type: "skulltula", 
             access: "outdoor",
@@ -8995,8 +8995,8 @@ var dungeons = [
             }
          },
          'Silver Rock Grotto': {
-            x: "58.0%",
-            y: "63.0%",
+            x: "57.0%",
+            y: "66.0%",
             leadsto: "unknown",
             type: "grotto", 
             access: "grotto",
@@ -9006,8 +9006,8 @@ var dungeons = [
             }
          },
          'Above Hammer Rocks Skulltula': {
-            x: "38.0%",
-            y: "48.0%",
+            x: "35.0%",
+            y: "45.0%",
             leadsto: "unknown",
             type: "skulltula", 
             access: "outdoor",
@@ -9018,8 +9018,8 @@ var dungeons = [
             }
          },
          ['Hammer Rocks Chest']: {
-            x: "32.0%",
-            y: "52.0%",
+            x: "31.0%",
+            y: "49.0%",
             leadsto: "unknown",
             type: "chest", 
             access: "outdoor",
@@ -9030,8 +9030,8 @@ var dungeons = [
             }
          },
          'Carpenter Tent': {
-            x: "42.0%",
-            y: "42.0%",
+            x: "40.0%",
+            y: "30.0%",
             leadsto: "unknown",
             type: "simple", 
             access: "door",
@@ -9042,8 +9042,8 @@ var dungeons = [
             }
          },
          'Behind Tent Skulltula': {
-            x: "25.0%",
-            y: "28.0%",
+            x: "30.0%",
+            y: "25.0%",
             leadsto: "unknown",
             type: "skulltula", 
             access: "outdoor",
@@ -9054,8 +9054,8 @@ var dungeons = [
             }
          },
          'Song of Storms Grotto': {
-            x: "29.0%",
-            y: "29.0%",
+            x: "33.0%",
+            y: "27.0%",
             leadsto: "unknown",
             type: "grotto", 
             access: "grotto",
@@ -9065,9 +9065,21 @@ var dungeons = [
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ; 
             }
          },
-         'Storms Grotto behind Tent': {
-            x: "29.0%",
-            y: "29.0%",
+         'Storms Grotto Scrub 1': {
+            x: "33.0%",
+            y: "27.0%",
+            leadsto: "unknown",
+            type: "scrub", 
+            access: "grotto",
+            isAvailable: function () {
+               return (OWERmap == false || dungeons[27].found == true) && items.Ocarina && items.SongofStorms &&
+                  (items.Membership || (items.Ocarina && items.EponasSong) || items.Hookshot >= 2) &&
+                  (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ; 
+            }
+         },
+         'Storms Grotto Scrub 2': {
+            x: "36.0%",
+            y: "27.0%",
             leadsto: "unknown",
             type: "scrub", 
             access: "grotto",
@@ -9079,7 +9091,7 @@ var dungeons = [
          },
          'Valley to Fortress': {
             x: "02.0%",
-            y: "30.0%",
+            y: "27.0%",
             leadsto: "unknown",
             type: "entrance", 
             access: "entrance",
@@ -9103,7 +9115,7 @@ var dungeons = [
       chestlist: {
          'Fortress to Valley': {
             x: "32.0%",
-            y: "82.0%",
+            y: "84.0%",
             leadsto: "unknown",
             type: "entrance", 
             access: "entrance",
@@ -9111,8 +9123,8 @@ var dungeons = [
                   return dungeons[28].found == true; }
          },
          'Fortress Storms Grotto': {
-            x: "42.0%",
-            y: "57.0%",
+            x: "37.0%",
+            y: "55.0%",
             leadsto: "unknown",
             type: "grotto", 
             access: "grotto",
@@ -9124,8 +9136,8 @@ var dungeons = [
             }
          },
          ['Guard Fight']: {
-            x: "42.0%",
-            y: "48.0%",
+            x: "38.0%",
+            y: "42.0%",
             leadsto: "unknown",
             type: "guard", 
             access: "outdoor",
@@ -9137,8 +9149,8 @@ var dungeons = [
             }
          },
          ['Membership Token']: {
-            x: "45.0%",
-            y: "52.0%",
+            x: "38.0%",
+            y: "47.0%",
             leadsto: "unknown",
             type: "membership", 
             access: "outdoor",
@@ -9151,7 +9163,7 @@ var dungeons = [
          },
          'Fortress Skulltula': {
             x: "54.0%",
-            y: "50.0%",
+            y: "49.0%",
             leadsto: "unknown",
             type: "skulltula", 
             access: "outdoor",
@@ -9163,8 +9175,8 @@ var dungeons = [
             }
          },
          ['Rooftop Chest']: {
-            x: "46.0%",
-            y: "46.0%",
+            x: "45.0%",
+            y: "42.0%",
             leadsto: "unknown",
             type: "chest", 
             access: "outdoor",
@@ -9176,8 +9188,8 @@ var dungeons = [
             }
          },
          'Gerudo Training Grounds': {
-            x: "37.0%",
-            y: "67.0%",
+            x: "33.0%",
+            y: "65.0%",
             leadsto: "unknown",
             type: "dungeon", 
             access: "door",
@@ -9186,8 +9198,8 @@ var dungeons = [
             }
          },
          ['Horseback Archery 1000 pts']: {
-            x: "78.0%",
-            y: "72.0%",
+            x: "85.0%",
+            y: "68.0%",
             leadsto: "unknown",
             type: "NPC", 
             access: "outdoor",
@@ -9196,7 +9208,7 @@ var dungeons = [
             }
          },
          ['Horseback Archery 1500 pts']: {
-            x: "72.0%",
+            x: "85.0%",
             y: "72.0%",
             leadsto: "unknown",
             type: "NPC", 
@@ -9206,8 +9218,8 @@ var dungeons = [
             }
          },
          'Archery Target Skulltula': {
-            x: "70.0%",
-            y: "14.0%",
+            x: "80.0%",
+            y: "12.0%",
             leadsto: "unknown",
             type: "skulltula", 
             access: "outdoor",
@@ -9219,8 +9231,8 @@ var dungeons = [
             }
          },
          'Fortress to Wasteland': {
-            x: "04.0%",
-            y: "37.0%",
+            x: "1.0%",
+            y: "32.0%",
             leadsto: "unknown",
             type: "entrance", 
             access: "entrance",
@@ -9244,8 +9256,8 @@ var dungeons = [
       found: true,
       chestlist: {
          'Desert to Wasteland': {
-            x: "82.0%",
-            y: "46.0%",
+            x: "93.0%",
+            y: "41.0%",
             leadsto: "unknown",
             type: "entrance", 
             access: "entrance",
@@ -9253,7 +9265,7 @@ var dungeons = [
                   return dungeons[29].found == true; }
          },
          'Cracked Wall Doorway': {
-            x: "60.0%",
+            x: "64.0%",
             y: "20.0%",
             leadsto: "unknown",
             type: "simple", 
@@ -9267,7 +9279,7 @@ var dungeons = [
             }
          },
          'Nayru\'s Great Fairy Fountain': {
-            x: "60.0%",
+            x: "64.0%",
             y: "20.0%",
             leadsto: "unknown",
             type: "NPC", 
@@ -9282,8 +9294,8 @@ var dungeons = [
             }
          },
          'Water Hole Tree Skulltula': {
-            x: "45.0%",
-            y: "75.0%",
+            x: "43.0%",
+            y: "82.0%",
             leadsto: "unknown",
             type: "skulltula", 
             access: "outdoor",
@@ -9295,8 +9307,8 @@ var dungeons = [
             }
          },
          'Requiem Warp': {
-            x: "25.0%",
-            y: "18.0%",
+            x: "20.0%",
+            y: "14.0%",
             leadsto: "unknown",
             type: "warp", 
             access: "warp",
@@ -9304,8 +9316,8 @@ var dungeons = [
                   return items.Ocarina && items.RequiemofSpirit; }
          },
          'Desert Strength Grotto': {
-            x: "37.0%",
-            y: "22.0%",
+            x: "28.0%",
+            y: "20.0%",
             leadsto: "unknown",
             type: "grotto", 
             access: "grotto",
@@ -9316,9 +9328,22 @@ var dungeons = [
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
             }
          },
-         'Silver Rock Scrub Grotto': {
-            x: "36.0%",
-            y: "22.0%",
+         'Silver Rock Scrub 1': {
+            x: "26.0%",
+            y: "20.0%",
+            leadsto: "unknown",
+            type: "scrub", 
+            access: "grotto",
+            isAvailable: function () {
+               return (OWERmap == false || dungeons[29].found == true) && items.Glove >= 2 &&
+                  ( (items.Membership && (items.HoverBoots || items.Hookshot >= 2) ) 
+                   || (items.Ocarina && items.RequiemofSpirit) ) &&
+                  (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
+            }
+         },
+         'Silver Rock Scrub 2': {
+            x: "30.0%",
+            y: "20.0%",
             leadsto: "unknown",
             type: "scrub", 
             access: "grotto",
@@ -9330,8 +9355,8 @@ var dungeons = [
             }
          },
          'Northwest Desert Gossip': {
-            x: "74.0%",
-            y: "04.0%",
+            x: "3.0%",
+            y: "63.0%",
             leadsto: "unknown",
             type: "gossip", 
             access: "outdoor",
@@ -9344,8 +9369,8 @@ var dungeons = [
             }
          },
          'Spirit Temple': {
-            x: "12.0%",
-            y: "50.0%",
+            x: "9.0%",
+            y: "45.0%",
             leadsto: "unknown",
             type: "dungeon", 
             access: "door",
@@ -9358,8 +9383,8 @@ var dungeons = [
                }
          },
          ['Song from Sheik']: {
-            x: "16.0%",
-            y: "52.0%",
+            x: "13.0%",
+            y: "45.0%",
             leadsto: "unknown",
             type: "song", 
             access: "outdoor",
@@ -9372,8 +9397,8 @@ var dungeons = [
             }
          },
          'Soil Patch Skulltula': {
-            x: "14.0%",
-            y: "55.0%",
+            x: "12.0%",
+            y: "51.0%",
             leadsto: "unknown",
             type: "skulltula", 
             access: "outdoor",
@@ -9384,8 +9409,8 @@ var dungeons = [
             }
          },
          'Bean Ride Skulltula': {
-            x: "25.0%",
-            y: "48.0%",
+            x: "52.0%",
+            y: "36.0%",
             leadsto: "unknown",
             type: "skulltula", 
             access: "outdoor",
@@ -9399,7 +9424,7 @@ var dungeons = [
             }
          },
          ['Bean to Arch Freestanding']: {
-            x: "50.0%",
+            x: "20.5%",
             y: "45.0%",
             leadsto: "unknown",
             type: "freestanding", 
@@ -9426,8 +9451,8 @@ var dungeons = [
       found: true,
       chestlist: {
          'Graveyard to Village': {
-            x: "5.0%",
-            y: "55.0%",
+            x: "2.0%",
+            y: "58.0%",
             leadsto: "unknown",
             type: "entrance",
             access: "entrance",
@@ -9435,8 +9460,8 @@ var dungeons = [
                   return dungeons[30].found == true; }
          },
          'Dampe\'s Hut': {
-            x: "18.0%",
-            y: "62.0%",
+            x: "17.0%",
+            y: "73.0%",
             leadsto: "unknown",
             type: "simple", 
             access: "door",
@@ -9445,8 +9470,8 @@ var dungeons = [
             }
          },
          ['Dampe Digging']: {
-            x: "22.0%",
-            y: "50.0%",
+            x: "26.0%",
+            y: "51.0%",
             leadsto: "unknown",
             type: "NPC", 
             access: "outdoor",
@@ -9456,8 +9481,8 @@ var dungeons = [
             }
          },
          'First Row 2nd Grave': {
-            x: "25.0%",
-            y: "52.0%",
+            x: "29.0%",
+            y: "43.0%",
             leadsto: "unknown",
             type: "grotto", 
             access: "grotto",
@@ -9466,8 +9491,8 @@ var dungeons = [
             }
          },
          ['Free Chest Grave']: {
-            x: "25.0%",
-            y: "52.0%",
+            x: "29.0%",
+            y: "43.0%",
             leadsto: "unknown",
             type: "chest", 
             access: "grotto",
@@ -9476,7 +9501,7 @@ var dungeons = [
             }
          },
          ['Magic Bean Freestanding']: {
-            x: "15.0%",
+            x: "12.0%",
             y: "15.0%",
             leadsto: "unknown",
             type: "freestanding", 
@@ -9491,7 +9516,7 @@ var dungeons = [
          },
          'Soil Patch Skulltula': {
             x: "20.0%",
-            y: "15.0%",
+            y: "20.0%",
             leadsto: "unknown",
             type: "skulltula", 
             access: "outdoor",
@@ -9502,7 +9527,7 @@ var dungeons = [
          },
          'Dampe\'s Grave': {
             x: "24.0%",
-            y: "16.0%",
+            y: "13.0%",
             leadsto: "unknown",
             type: "grotto", 
             access: "grotto",
@@ -9511,8 +9536,8 @@ var dungeons = [
             }
          },
          ['Dampe Race 1']: {
-            x: "24.0%",
-            y: "16.0%",
+            x: "23.0%",
+            y: "13.0%",
             leadsto: "unknown",
             type: "NPC", 
             access: "grotto",
@@ -9522,8 +9547,8 @@ var dungeons = [
             }
          },
          ['Dampe Race 2']: {
-            x: "27.0%",
-            y: "14.5%",
+            x: "26.0%",
+            y: "13.0%",
             leadsto: "unknown",
             type: "NPC", 
             access: "grotto",
@@ -9533,8 +9558,8 @@ var dungeons = [
             }
          },
          '2nd Row 4th Grave': {
-            x: "40.0%",
-            y: "58.0%",
+            x: "39.0%",
+            y: "66.0%",
             leadsto: "unknown",
             type: "grotto", 
             access: "grotto",
@@ -9543,8 +9568,8 @@ var dungeons = [
             }
          },
          ['Redead Grave Chest']: {
-            x: "40.0%",
-            y: "58.0%",
+            x: "39.0%",
+            y: "66.0%",
             leadsto: "unknown",
             type: "chest", 
             access: "grotto",
@@ -9553,8 +9578,8 @@ var dungeons = [
             }
          },
          'South Wall Skulltula': {
-            x: "50.0%",
-            y: "60.0%",
+            x: "41.0%",
+            y: "87.0%",
             leadsto: "unknown",
             type: "skulltula", 
             access: "outdoor",
@@ -9565,8 +9590,8 @@ var dungeons = [
             }
          },
          'Royal Tomb': {
-            x: "55.0%",
-            y: "50.0%",
+            x: "50.0%",
+            y: "47.0%",
             leadsto: "unknown",
             type: "grotto", 
             access: "grotto",
@@ -9575,8 +9600,8 @@ var dungeons = [
             }
          },
          ['Composer Brothers\' Song']: {
-            x: "58.0%",
-            y: "50.0%",
+            x: "53.0%",
+            y: "47.0%",
             leadsto: "unknown",
             type: "song", 
             access: "grotto",
@@ -9585,8 +9610,8 @@ var dungeons = [
             }
          },
          ['Royal Tomb Chest']: {
-            x: "52.0%",
-            y: "50.0%",
+            x: "49.0%",
+            y: "47.0%",
             leadsto: "unknown",
             type: "chest", 
             access: "grotto",
@@ -9598,8 +9623,8 @@ var dungeons = [
             }
          },
          'Noturne Warp': {
-            x: "64.0%",
-            y: "50.0%",
+            x: "61.0%",
+            y: "45.0%",
             leadsto: "unknown",
             type: "warp",
             access: "warp",
@@ -9608,8 +9633,8 @@ var dungeons = [
             }
          },
          'Noturne Gossip': {
-            x: "65.0%",
-            y: "47.0%",
+            x: "63.0%",
+            y: "34.0%",
             leadsto: "unknown",
             type: "gossip",
             access: "outdoor",
@@ -9618,8 +9643,8 @@ var dungeons = [
             }
          },
          'Shadow Temple': {
-            x: "85.0%",
-            y: "50.0%",
+            x: "95.0%",
+            y: "45.0%",
             leadsto: "unknown",
             type: "dungeon", 
             access: "door",
