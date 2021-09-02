@@ -634,8 +634,8 @@ var dungeons = [
       floorwdoor: 0,
       chestlist: {
          'Lobby Gossip': {
-            x: "5.0%",
-            y: "5.0%",
+            x: "47.0%",
+            y: "54.0%",
             leadsto: "unknown",
             type: "gossip",
             access: "vanilla",
@@ -647,8 +647,8 @@ var dungeons = [
             }
          },
          'Baby Dodongos Skulltula': {
-           x: "10.0%",
-            y: "5.0%",
+           x: "65.0%",
+            y: "87.0%",
             leadsto: "unknown",
             type: "skulltula",
             access: "vanilla",
@@ -662,8 +662,8 @@ var dungeons = [
             }
          },
          'Scarecrow Skulltula': {
-           x: "15.0%",
-            y: "5.0%",
+           x: "55.0%",
+            y: "72.0%",
             leadsto: "unknown",
             type: "skulltula",
             access: "vanilla",
@@ -674,8 +674,8 @@ var dungeons = [
             }
          },
          '1F Right Scrub Room': {
-           x: "20.0%",
-            y: "5.0%",
+           x: "63.0%",
+            y: "31.0%",
             leadsto: "unknown",
             type: "scrub",
             access: "vanilla",
@@ -687,8 +687,8 @@ var dungeons = [
             }
          },
          'Lobby Chest': {
-           x: "25.0%",
-            y: "5.0%",
+           x: "63.0%",
+            y: "22.0%",
             leadsto: "unknown",
             type: "chest",
             access: "vanilla",
@@ -700,8 +700,8 @@ var dungeons = [
             }
          },
          'Lobby Scrub': {
-           x: "30.0%",
-            y: "5.0%",
+           x: "74.0%",
+            y: "22.0%",
             leadsto: "unknown",
             type: "scrub",
             access: "vanilla",
@@ -713,8 +713,8 @@ var dungeons = [
             }
          },
          'Armos Chest': {
-           x: "35.0%",
-            y: "5.0%",
+           x: "12.0%",
+            y: "77.0%",
             leadsto: "unknown",
             type: "chest",
             access: "vanilla",
@@ -726,8 +726,8 @@ var dungeons = [
             }
          },
          'Top of the Stairs Skulltula': {
-           x: "40.0%",
-            y: "5.0%",
+           x: "10.0%",
+            y: "60.0%",
             leadsto: "unknown",
             type: "skulltula",
             access: "vanilla",
@@ -742,8 +742,8 @@ var dungeons = [
             }
          },
          'Behind Stairs Skulltula': {
-           x: "45.0%",
-            y: "5.0%",
+           x: "11.0%",
+            y: "48.0%",
             leadsto: "unknown",
             type: "skulltula",
             access: "vanilla",
@@ -758,8 +758,8 @@ var dungeons = [
             }
          },
          '2F Bomb Flower Platform': {
-           x: "50.0%",
-            y: "5.0%",
+           x: "56.0%",
+            y: "76.0%",
             leadsto: "unknown",
             type: "chest",
             access: "vanilla",
@@ -774,8 +774,8 @@ var dungeons = [
             }
          },
          '2F before Elevator Switch': {
-           x: "55.0%",
-            y: "5.0%",
+           x: "53.0%",
+            y: "60.0%",
             leadsto: "unknown",
             type: "chest",
             access: "vanilla",
@@ -790,8 +790,8 @@ var dungeons = [
             }
          },
          '2F Scrubs 1': {
-           x: "60.0%",
-            y: "5.0%",
+           x: "53.0%",
+            y: "48.0%",
             leadsto: "unknown",
             type: "scrub",
             access: "vanilla",
@@ -806,8 +806,8 @@ var dungeons = [
             }
          },
          '2F Scrubs 2': {
-           x: "65.0%",
-            y: "5.0%",
+           x: "58.0%",
+            y: "48.0%",
             leadsto: "unknown",
             type: "scrub",
             access: "vanilla",
@@ -822,8 +822,8 @@ var dungeons = [
             }
          },
          'End of Bridge Chest': {
-           x: "70.0%",
-            y: "5.0%",
+           x: "53.0%",
+            y: "22.0%",
             leadsto: "unknown",
             type: "chest",
             access: "vanilla",
@@ -838,8 +838,8 @@ var dungeons = [
             }
          },
          'Behind Pushblocks Skulltula': {
-           x: "75.0%",
-            y: "5.0%",
+           x: "52.0%",
+            y: "10.0%",
             leadsto: "unknown",
             type: "skulltula",
             access: "vanilla",
@@ -853,8 +853,8 @@ var dungeons = [
             }
          },
          'Chest Above King Dodongo': {
-           x: "80.0%",
-            y: "5.0%",
+           x: "27.0%",
+            y: "35.5%",
             leadsto: "unknown",
             type: "chest",
             access: "vanilla",
@@ -868,8 +868,8 @@ var dungeons = [
             }
          },
          'King Dodongo': {
-           x: "85.0%",
-            y: "5.0%",
+           x: "30.0%",
+            y: "35.5%",
             leadsto: "unknown",
             type: "boss",
             access: "vanilla",
