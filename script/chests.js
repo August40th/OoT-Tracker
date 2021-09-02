@@ -356,8 +356,8 @@ var dungeons = [
       floorwdoor: 2,
       chestlist: {
          'Lobby Chest': {
-            x: "5.0%",
-            y: "5.0%",
+            x: "76.0%",
+            y: "55.0%",
             leadsto: "unknown",
             type: "chest",
             access: "vanilla",
@@ -365,8 +365,8 @@ var dungeons = [
                return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
          },
          '2nd Floor Chest': {
-            x: "5.0%",
-            y: "10.0%",
+            x: "48.0%",
+            y: "80.0%",
             leadsto: "unknown",
             type: "chest",
             access: "vanilla",
@@ -378,8 +378,8 @@ var dungeons = [
             }
          },
          '2nd Floor Side Chest': {
-            x: "5.0%",
-            y: "15.0%",
+            x: "50.0%",
+            y: "83.0%",
             leadsto: "unknown",
             type: "chest",
             access: "vanilla",
@@ -391,8 +391,8 @@ var dungeons = [
             }
          },
          'Top Floor Chest': {
-            x: "5.0%",
-            y: "20.0%",
+            x: "39.0%",
+            y: "45.0%",
             leadsto: "unknown",
             type: "chest",
             access: "vanilla",
@@ -400,8 +400,8 @@ var dungeons = [
                return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
          },
          'Top Floor Side Chest': {
-            x: "5.0%",
-            y: "25.0%",
+            x: "49.0%",
+            y: "50.0%",
             leadsto: "unknown",
             type: "chest",
             access: "vanilla",
@@ -409,8 +409,8 @@ var dungeons = [
                return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
          },
          'Top Floor Skulltula': {
-            x: "5.0%",
-            y: "30.0%",
+            x: "49.0%",
+            y: "52.0%",
             leadsto: "unknown",
             type: "skulltula",
             access: "vanilla",
@@ -418,8 +418,8 @@ var dungeons = [
                return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
          },
          'Basement Chest': {
-            x: "5.0%",
-            y: "35.0%",
+            x: "77.0%",
+            y: "37.0%",
             leadsto: "unknown",
             type: "chest",
             access: "vanilla",
@@ -427,8 +427,8 @@ var dungeons = [
                return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
          },
          'Basement 1st Skulltula': {
-            x: "5.0%",
-            y: "40.0%",
+            x: "78.0%",
+            y: "44.0%",
             leadsto: "unknown",
             type: "skulltula",
             access: "vanilla",
@@ -436,8 +436,8 @@ var dungeons = [
                return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
          },
          'Basement 2nd Skulltula': {
-            x: "5.0%",
-            y: "45.0%",
+            x: "71.0%",
+            y: "33.0%",
             leadsto: "unknown",
             type: "skulltula",
             access: "vanilla",
@@ -445,8 +445,8 @@ var dungeons = [
                return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
          },
          'Queen Gohma': {
-            x: "5.0%",
-            y: "50.0%",
+            x: "55.0%",
+            y: "15.0%",
             leadsto: "unknown",
             type: "boss",
             access: "vanilla",
@@ -454,8 +454,8 @@ var dungeons = [
                return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
          },
          'Basement Bomb Wall Skulltula': {
-            x: "5.0%",
-            y: "55.0%",
+            x: "20.0%",
+            y: "34.0%",
             leadsto: "unknown",
             type: "skulltula",
             access: "vanilla",
@@ -465,8 +465,8 @@ var dungeons = [
                   items.Boomerang && (items.Bombs || (items.Bombchu && BombchuLogic)) ;}
          },
          'Lobby Skull in Crate': {
-            x: "25.0%",
-            y: "15.0%",
+            x: "79.0%",
+            y: "55.0%",
             leadsto: "unknown",
             type: "skulltula",
             access: "master",
@@ -474,8 +474,8 @@ var dungeons = [
                return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
          },
          'MQ Lobby Chest': {
-            x: "25.0%",
-            y: "25.0%",
+            x: "76.0%",
+            y: "55.0%",
             leadsto: "unknown",
             type: "chest",
             access: "master",
@@ -483,16 +483,7 @@ var dungeons = [
                return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
          },
          'Top Floor Torch Chest': {
-            x: "25.0%",
-            y: "35.0%",
-            leadsto: "unknown",
-            type: "chest",
-            access: "master",
-            isAvailable: function () {
-               return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
-         },
-         'Top Floor Larva Kill': {
-            x: "25.0%",
+            x: "39.0%",
             y: "45.0%",
             leadsto: "unknown",
             type: "chest",
@@ -500,9 +491,18 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
          },
+         'Top Floor Larva Kill': {
+            x: "49.0%",
+            y: "52.0%",
+            leadsto: "unknown",
+            type: "chest",
+            access: "master",
+            isAvailable: function () {
+               return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
+         },
          'MQ 2nd Floor Chest': {
-            x: "25.0%",
-            y: "55.0%",
+            x: "48.0%",
+            y: "80.0%",
             leadsto: "unknown",
             type: "chest",
             access: "master",
@@ -514,8 +514,8 @@ var dungeons = [
             }
          },
          '2nd Floor Skulltule': {
-            x: "25.0%",
-            y: "65.0%",
+            x: "50.0%",
+            y: "83.0%",
             leadsto: "unknown",
             type: "skulltula",
             access: "master",
@@ -527,8 +527,8 @@ var dungeons = [
             }
          },
          'Basement Chest 1': {
-            x: "25.0%",
-            y: "75.0%",
+            x: "77.0%",
+            y: "37.0%",
             leadsto: "unknown",
             type: "chest",
             access: "master",
@@ -536,27 +536,31 @@ var dungeons = [
                return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
          },
          'Spiked Log Open Chest': {
-            x: "25.0%",
-            y: "85.0%",
+            x: "67.0%",
+            y: "77.0%",
             leadsto: "unknown",
+            floor: "1",
             type: "chest",
             access: "master",
             isAvailable: function () {
                return dungeons[1].found == true && items.Slingshot && (OpenDeku == 1 || (items.KokiriSword&& items.DekuShield)); }
          },
          'Song of Time Chest': {
-            x: "25.0%",
-            y: "85.0%",
-            access: "master",
+            x: "45.0%",
+            y: "76.0%",
+            leadsto: "unknown",
+            floor: "1",
             type: "chest",
+            access: "master",
             isAvailable: function () {
                return dungeons[1].found == true && items.Slingshot && items.Ocarina && items.SongofTime && ( OpenDeku == 1 || (items.KokiriSword&& items.DekuShield)); 
             }
          },
          'Basement Ceiling Skulltule': {
-            x: "45.0%",
-            y: "25.0%",
+            x: "28.0%",
+            y: "46.0%",
             leadsto: "unknown",
+            floor: "1",
             type: "skulltula",
             access: "master",
             isAvailable:function () {
@@ -564,27 +568,30 @@ var dungeons = [
             }
          },
          'Back Room Skulltula': {
-            x: "45.0%",
-            y: "45.0%",
+            x: "20.0%",
+            y: "34.0%",
             leadsto: "unknown",
+            floor: "1",
             type: "skulltula",
             access: "master",
             isAvailable: function () {
                return dungeons[1].found == true && items.Bombs && (OpenDeku == 1 || (items.KokiriSword&& items.DekuShield)); }
          },
          'Basement Scrub': {
-            x: "45.0%",
-            y: "55.0%",
+            x: "63.0%",
+            y: "51.0%",
             leadsto: "unknown",
+            floor: "1",
             type: "scrub",
             access: "master",
             isAvailable: function () {
                return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
          },
          'MQ Queen Gohma': {
-            x: "45.0%",
-            y: "66.0%",
+            x: "55.0%",
+            y: "15.0%",
             leadsto: "unknown",
+            floor: "0",
             type: "boss",
             access: "master",
             isAvailable: function () {
