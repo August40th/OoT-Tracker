@@ -2750,8 +2750,8 @@ var dungeons = [
       floorwdoor: 0,
       chestlist: {
          'Above Silver Rupee Skulltula': {
-            x: "5.0%",
-            y: "5.0%",
+            x: "49.0%",
+            y: "40.0%",
             leadsto: "unknown",
             type: "skulltula",
             access: "vanilla",
@@ -2760,8 +2760,8 @@ var dungeons = [
             },
          },
          ['1st Chest']: {
-            x: "10.0%",
-            y: "5.0%",
+            x: "71.0%",
+            y: "7.0%",
             leadsto: "unknown",
             type: "chest",
             access: "vanilla",
@@ -2770,8 +2770,8 @@ var dungeons = [
             }
          },
          ['Alcove Chest']: {
-            x: "15.0%",
-            y: "5.0%",
+            x: "79.0%",
+            y: "62.0%",
             leadsto: "unknown",
             type: "chest",
             access: "vanilla",
@@ -2780,8 +2780,8 @@ var dungeons = [
             }
          },
          ['Alcove Freestanding']: {
-            x: "20.0%",
-            y: "5.0%",
+            x: "76.5%",
+            y: "52.0%",
             leadsto: "unknown",
             type: "freestanding",
             access: "vanilla",
@@ -2790,8 +2790,8 @@ var dungeons = [
             }
          },
          'Alcove Skulltula': {
-            x: "25.0%",
-            y: "5.0%",
+            x: "79.0%",
+            y: "52.0%",
             leadsto: "unknown",
             type: "skulltula",
             access: "vanilla",
@@ -2800,8 +2800,8 @@ var dungeons = [
             },
          },
          'Ice Block Puzzle Skulltula': {
-            x: "30.0%",
-            y: "5.0%",
+            x: "31.0%",
+            y: "32.0%",
             leadsto: "unknown",
             type: "skulltula",
             access: "vanilla",
@@ -2810,8 +2810,8 @@ var dungeons = [
             },
          },
          ['White Wolfos']: {
-            x: "35.0%",
-            y: "5.0%",
+            x: "29.0%",
+            y: "62.0%",
             leadsto: "unknown",
             type: "chest",
             access: "vanilla",
@@ -2820,8 +2820,8 @@ var dungeons = [
             }
          },
          ['Song from Sheik']: {
-            x: "40.0%",
-            y: "5.0%",
+            x: "31.0%",
+            y: "64.0%",
             leadsto: "unknown",
             type: "song",
             access: "vanilla",
@@ -2830,8 +2830,8 @@ var dungeons = [
             }
          },
          'Alcove Switch Chest': {
-            x: "10.0%",
-            y: "15.0%",
+            x: "79.0%",
+            y: "62.0%",
             leadsto: "unknown",
             type: "chest",
             access: "master",
@@ -2840,8 +2840,8 @@ var dungeons = [
             }
          },
          'Red Ice Skulltula': {
-            x: "20.0%",
-            y: "15.0%",
+            x: "66.0%",
+            y: "16.0%",
             leadsto: "unknown",
             type: "skulltula",
             access: "master",
@@ -2850,8 +2850,8 @@ var dungeons = [
             }
          },
          'Pilar Chest': {
-            x: "30.0%",
-            y: "15.0%",
+            x: "69.0%",
+            y: "7.0%",
             leadsto: "unknown",
             type: "chest",
             access: "master",
@@ -2860,7 +2860,7 @@ var dungeons = [
             }
          },
          'Frozen Freestanding': {
-            x: "40.0%",
+            x: "79.0%",
             y: "15.0%",
             leadsto: "unknown",
             type: "freestanding",
@@ -2870,8 +2870,8 @@ var dungeons = [
             }
          },
          'Scarecrow Skulltula': {
-            x: "50.0%",
-            y: "15.0%",
+            x: "26.0%",
+            y: "10.0%",
             leadsto: "unknown",
             type: "skulltula",
             access: "master",
@@ -2880,8 +2880,8 @@ var dungeons = [
             }
          },
          'Crystal Switch Skulltula': {
-            x: "60.0%",
-            y: "15.0%",
+            x: "21.5%",
+            y: "35.0%",
             leadsto: "unknown",
             type: "skulltula",
             access: "master",
@@ -2890,8 +2890,8 @@ var dungeons = [
             }
          },
          'Stalfos Chest': {
-            x: "70.0%",
-            y: "15.0%",
+            x: "28.0%",
+            y: "60.0%",
             leadsto: "unknown",
             type: "chest",
             access: "master",
@@ -2900,8 +2900,8 @@ var dungeons = [
             }
          },
          'MQ Sheik Song': {
-            x: "80.0%",
-            y: "15.0%",
+            x: "30.0%",
+            y: "62.0%",
             leadsto: "unknown",
             type: "song",
             access: "master",
