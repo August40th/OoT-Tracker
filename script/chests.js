@@ -633,7 +633,7 @@ var dungeons = [
    },{ name: "Jabu Jabu's Belly", x: "88.4%", y: "18.0%", type: "dungeon", mixedtype: "default", keytype: "none", found: true, topfloor: 1, floorwdoor: 1,
       chestlist: {
          'Water Switch Skulltula': {
-           x: "5.0%", y: "5.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
+           x: "61.0%", y: "54.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
             isAvailable: function () {
                return dungeons[3].found == true && ( 
                   ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) 
@@ -642,7 +642,7 @@ var dungeons = [
                    || DungeonER ); 
             }
          }, 'Basement Dive to Scrub': {
-           x: "5.0%", y: "5.0%", leadsto: "unknown", type: "scrub", access: "vanilla",
+           x: "37.0%", y: "64.0%", leadsto: "unknown", type: "scrub", access: "vanilla",
             isAvailable: function () {
                return dungeons[3].found == true && ( 
                   ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) 
@@ -651,7 +651,7 @@ var dungeons = [
                    || DungeonER ) && (items.Scale || (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ); 
             }
          }, 'StingRay Chest': {
-           x: "15.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+           x: "68.0%", y: "21.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[3].found == true && ( 
                   ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) 
@@ -660,7 +660,7 @@ var dungeons = [
                    || DungeonER ); 
             }
          }, 'Tentacle Chest': {
-           x: "25.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+           x: "27.0%", y: "22.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[3].found == true && ( 
                   ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) 
@@ -669,7 +669,7 @@ var dungeons = [
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
             }
          }, 'Bubble Pop Chest': {
-           x: "35.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+           x: "38.0%", y: "6.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[3].found == true && ( 
                   ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) 
@@ -678,7 +678,7 @@ var dungeons = [
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
             }
          }, 'Before Big Octo Skull 1': {
-           x: "45.0%", y: "5.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
+           x: "52.0%", y: "38.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
             isAvailable: function () {
                return dungeons[3].found == true && ( 
                   ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) 
@@ -690,7 +690,7 @@ var dungeons = [
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ) ); 
             }
          }, 'Before Big Octo Skull 2': {
-           x: "55.0%", y: "5.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
+           x: "51.0%", y: "46.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
             isAvailable: function () {
                return dungeons[3].found == true && ( 
                   ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) 
@@ -702,7 +702,7 @@ var dungeons = [
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ) ); 
             }
          }, 'Before Brainade Skulltula': {
-           x: "65.0%", y: "5.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
+           x: "32.0%", y: "66.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
             isAvailable: function () {
                return dungeons[3].found == true && ( 
                   ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) 
@@ -711,7 +711,7 @@ var dungeons = [
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
             }
          }, 'Barinade': {
-           x: "75.0%", y: "5.0%", leadsto: "unknown", type: "boss", access: "vanilla",
+           x: "65.5%", y: "54.0%", leadsto: "unknown", type: "boss", access: "vanilla",
             isAvailable: function () {
                return dungeons[3].found == true && ( 
                   ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) 
