@@ -687,8 +687,8 @@ var dungeons = [
             }
          },
          'Lobby Chest': {
-           x: "63.0%",
-            y: "22.0%",
+           x: "22.0%",
+            y: "63.0%",
             leadsto: "unknown",
             type: "chest",
             access: "vanilla",
@@ -700,8 +700,8 @@ var dungeons = [
             }
          },
          'Lobby Scrub': {
-           x: "74.0%",
-            y: "22.0%",
+           x: "22.0%",
+            y: "74.0%",
             leadsto: "unknown",
             type: "scrub",
             access: "vanilla",
@@ -822,8 +822,8 @@ var dungeons = [
             }
          },
          'End of Bridge Chest': {
-           x: "53.0%",
-            y: "22.0%",
+           x: "22.0%",
+            y: "54.0%",
             leadsto: "unknown",
             type: "chest",
             access: "vanilla",
@@ -882,39 +882,9 @@ var dungeons = [
                  ); 
             }
          },
-         'Lobby Scrub 1': {
-           x: "5.0%",
-            y: "25.0%",
-            leadsto: "unknown",
-            type: "scrub",
-            access: "master",
-            isAvailable: function () {
-               return dungeons[2].found == true &&
-                ( ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove) 
-                   && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
-                 || ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Hammer || items.Glove) 
-                     && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
-                 ); 
-            }
-         },
-         'Lobby Scrub 2': {
-           x: "5.0%",
-            y: "45.0%",
-            leadsto: "unknown",
-            type: "scrub",
-            access: "master",
-            isAvailable: function () {
-               return dungeons[2].found == true &&
-                ( ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove) 
-                   && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
-                 || ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Hammer || items.Glove)
-                     && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
-                 ); 
-            }
-         },
          'Lobby Mud Wall Chest': {
-           x: "15.0%",
-            y: "25.0%",
+           x: "47.0%",
+            y: "54.0%",
             leadsto: "unknown",
             type: "chest",
             access: "master",
@@ -928,8 +898,8 @@ var dungeons = [
             }
          },
          'MQ Lobby Chest': {
-           x: "15.0%",
-            y: "45.0%",
+           x: "47.0%",
+            y: "63.0%",
             leadsto: "unknown",
             type: "chest",
             access: "master",
@@ -942,9 +912,52 @@ var dungeons = [
                  ); 
             }
          },
+         'MQ Lobby Gossip': {
+            x: "22.0%",
+            y: "63.0%",
+            leadsto: "unknown",
+            type: "gossip",
+            access: "vanilla",
+            isAvailable: function () {
+               return dungeons[2].found == true &&
+                ( ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove) && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                 || ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Hammer || items.Glove) && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                 ); 
+            }
+         },
+         'Lobby Scrub 1': {
+           x: "22.0%",
+            y: "73.0%",
+            leadsto: "unknown",
+            type: "scrub",
+            access: "master",
+            isAvailable: function () {
+               return dungeons[2].found == true &&
+                ( ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove) 
+                   && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                 || ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Hammer || items.Glove) 
+                     && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                 ); 
+            }
+         },
+         'Lobby Scrub 2': {
+           x: "22.0%",
+            y: "77.0%",
+            leadsto: "unknown",
+            type: "scrub",
+            access: "master",
+            isAvailable: function () {
+               return dungeons[2].found == true &&
+                ( ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove) 
+                   && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                 || ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Hammer || items.Glove)
+                     && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
+                 ); 
+            }
+         },
          'Song of Time Skulltula': {
-           x: "25.0%",
-            y: "25.0%",
+           x: "14.5%",
+            y: "78.0%",
             leadsto: "unknown",
             type: "skulltula",
             access: "master",
@@ -958,8 +971,8 @@ var dungeons = [
             }
          },
          'Stair Master Scrub': {
-           x: "25.0%",
-            y: "45.0%",
+           x: "11.0%",
+            y: "48.0%",
             leadsto: "unknown",
             type: "scrub",
             access: "master",
@@ -973,8 +986,8 @@ var dungeons = [
             }
          },
          'Teen Dodongo Chest': {
-           x: "35.0%",
-            y: "25.0%",
+           x: "12.0%",
+            y: "75.0%",
             leadsto: "unknown",
             type: "chest",
             access: "master",
@@ -988,8 +1001,8 @@ var dungeons = [
             }
          },
          'Baby Gohma Chest': {
-           x: "35.0%",
-            y: "45.0%",
+           x: "55.5%",
+            y: "48.0%",
             leadsto: "unknown",
             type: "chest",
             access: "master",
@@ -1003,8 +1016,8 @@ var dungeons = [
             }
          },
          'Crate Skulltula': {
-           x: "45.0%",
-            y: "25.0%",
+           x: "58.0%",
+            y: "49.0%",
             leadsto: "unknown",
             type: "skulltula",
             access: "master",
@@ -1018,8 +1031,8 @@ var dungeons = [
             }
          },
          '2F Lizalfos Skulltula': {
-           x: "45.0%",
-            y: "45.0%",
+           x: "74.0%",
+            y: "44.0%",
             leadsto: "unknown",
             type: "skulltula",
             access: "master",
@@ -1034,7 +1047,7 @@ var dungeons = [
          },
          '2F Platform Chest': {
            x: "55.0%",
-            y: "25.0%",
+            y: "73.0%",
             leadsto: "unknown",
             type: "chest",
             access: "master",
@@ -1048,8 +1061,8 @@ var dungeons = [
             }
          },
          '1F Side Route Scrub': {
-           x: "55.0%",
-            y: "45.0%",
+           x: "63.0%",
+            y: "32.0%",
             leadsto: "unknown",
             type: "scrub",
             access: "master",
@@ -1063,8 +1076,8 @@ var dungeons = [
             }
          },
          '1F Scrub Keese Room Skulltula': {
-           x: "65.0%",
-            y: "25.0%",
+           x: "68.0%",
+            y: "88.0%",
             leadsto: "unknown",
             type: "skulltula",
             access: "master",
@@ -1079,8 +1092,8 @@ var dungeons = [
             }
          },
          'Poe fight Chest': {
-           x: "65.0%",
-            y: "45.0%",
+           x: "52.0%",
+            y: "11.0%",
             leadsto: "unknown",
             type: "chest",
             access: "master",
@@ -1088,8 +1101,8 @@ var dungeons = [
                return dungeons[2].found == true && (items.Bombs || (items.Bombchu && BombchuLogic) ); }
          },
          'Back Room Skulltula': {
-           x: "75.0%",
-            y: "25.0%",
+           x: "52.0%",
+            y: "23.0%",
             leadsto: "unknown",
             type: "skulltula",
             access: "master",
@@ -1102,8 +1115,8 @@ var dungeons = [
                  ); }
          },
          'Chest Above Boss Room': {
-           x: "75.0%",
-            y: "45.0%",
+           x: "37.5%",
+            y: "28.0%",
             leadsto: "unknown",
             type: "chest",
             access: "master",
@@ -1111,8 +1124,8 @@ var dungeons = [
                return dungeons[2].found == true && (items.Bombs || (items.Bombchu && BombchuLogic) ); }
          },
          'MQ King Dodongo': {
-           x: "85.0%",
-            y: "85.0%",
+           x: "35.5%",
+            y: "30.0%",
             leadsto: "unknown",
             type: "boss",
             access: "master",
