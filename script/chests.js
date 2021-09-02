@@ -9745,8 +9745,8 @@ var dungeons = [
       found: true,
       chestlist: {
          'Ocarina of Time': {
-            x: "64.3%",
-            y: "12.0%",
+            x: "62%",
+            y: "9.0%",
             leadsto: "unknown",
             type: "ocarina", 
             access: "outdoor",
@@ -9757,8 +9757,8 @@ var dungeons = [
                }
          },
          'Song from Zelda': {
-            x: "62.3%",
-            y: "12.0%",
+            x: "58.5%",
+            y: "11.0%",
             leadsto: "unknown",
             type: "song", 
             access: "outdoor",
@@ -9768,15 +9768,24 @@ var dungeons = [
                      items.KokiriEmerald && items.GoronRuby && items.ZoraSapphire ;
                }
          },
-         'North West of Castle Grotto' : {
-            x: "55.0%",
-            y: "9.0%",
+         'Drawbridge to Street': {
+            x: "58.5%",
+            y: "5.5%",
+            leadsto: "unknown",
+            type: "entrance", 
+            access: "entrance",
+             isAvailable: function () {
+                  return dungeons[32].found == true; }
+         },
+         'NE Lone Tree Grotto' : {
+            x: "72%",
+            y: "5.0%",
             leadsto: "unknown",
             type: "grotto", 
             access: "grotto",
                isAvailable: function () {
                   return (OWERmap == false || dungeons[32].found == true) &&
-                  ( ( (items.Bombs || items.Hammer || (items.Bombchu && BombchuLogic) ) && 
+                  ( ( (items.Bombs || items.Hammer || (items.Bombchu && BombchuLogic) ) &&
                      (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                     )
                    || ( (items.Bombs || (items.Bombchu && BombchuLogic) ) &&
@@ -9785,26 +9794,52 @@ var dungeons = [
                   );
                }
          },
-         'Grotto West of Castle Gate' : {
-            x: "55.0%",
+         'NE Skulltula Grotto' : {
+            x: "72%",
+            y: "5.0%",
+            leadsto: "unknown",
+            type: "skulltula", 
+            access: "grotto",
+               isAvailable: function () {
+                  return (OWERmap == false || dungeons[32].found == true) &&
+                  ( ( (items.Bombs || items.Hammer || (items.Bombchu && BombchuLogic) ) && items.Hookshot &&
+                     (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                    )
+                   || ( (items.Bombs || (items.Bombchu && BombchuLogic) ) && items.Boomerang &&
+                       (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                      )
+                  );}
+         },
+         'Field to Village': {
+            x: "87.5%",
             y: "8.0%",
             leadsto: "unknown",
-            type: "chest", 
-            access: "grotto",
-               isAvailable: function () {
-                  return (OWERmap == false || dungeons[32].found == true) &&
-                  ( ( (items.Bombs || items.Hammer || (items.Bombchu && BombchuLogic) ) && 
-                     (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-                    )
-                   || ( (items.Bombs || (items.Bombchu && BombchuLogic) ) &&
-                       (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-                      )
-                  );
-               }
+            type: "entrance", 
+            access: "entrance",
+             isAvailable: function () {
+                  return dungeons[32].found == true; }
          },
-         'South East Remote Grotto' : {
-            x: "60.0%",
-            y: "82.0%",
+         'Field to River': {
+            x: "95%",
+            y: "26.0%",
+            leadsto: "unknown",
+            type: "entrance", 
+            access: "entrance",
+             isAvailable: function () {
+                  return dungeons[32].found == true; }
+         },
+         'Field to Forest': {
+            x: "92.0%",
+            y: "52.5%",
+            leadsto: "unknown",
+            type: "entrance", 
+            access: "entrance",
+             isAvailable: function () {
+                  return dungeons[32].found == true; }
+         },
+         'SE Remote Grotto' : {
+            x: "58.0%",
+            y: "75.0%",
             leadsto: "unknown",
             type: "grotto", 
             access: "grotto",
@@ -9819,9 +9854,9 @@ var dungeons = [
                   );
                }
          },
-         'South East Grotto' : {
-            x: "60.0%",
-            y: "82.0%",
+         'SE Grotto Chest' : {
+            x: "58.0%",
+            y: "75.0%",
             leadsto: "unknown",
             type: "chest", 
             access: "grotto",
@@ -9837,8 +9872,8 @@ var dungeons = [
                }
          },
          'South Open Grotto' : {
-            x: "34.5%",
-            y: "84.0%",
+            x: "35%",
+            y: "83.0%",
             leadsto: "unknown",
             type: "grotto", 
             access: "grotto",
@@ -9847,8 +9882,8 @@ var dungeons = [
                }
          },
          'Southern Open Grotto' : {
-            x: "34.5%",
-            y: "84.0%",
+            x: "35%",
+            y: "83.0%",
             leadsto: "unknown",
             type: "chest", 
             access: "grotto",
@@ -9857,8 +9892,8 @@ var dungeons = [
                }
          },
          'Fenced Bomb Grotto' : {
-            x: "32.0%",
-            y: "88.0%",
+            x: "30.0%",
+            y: "85.0%",
             leadsto: "unknown",
             type: "grotto", 
             access: "grotto",
@@ -9873,9 +9908,9 @@ var dungeons = [
                   );
                }
          },
-         'Bomb Grotto Deku Sale 10$' : {
-            x: "32.0%",
-            y: "88.0%",
+         'Fenced Grotto Scrub 10$' : {
+            x: "30.0%",
+            y: "85.0%",
             leadsto: "unknown",
             type: "NPC", 
             access: "grotto",
@@ -9890,44 +9925,27 @@ var dungeons = [
                   );
                }
          },
-         'North West Lone Tree Grotto' : {
-            x: "30.0%",
-            y: "12.0%",
+         'Field to Lake': {
+            x: "25.5%",
+            y: "92%",
             leadsto: "unknown",
-            type: "grotto", 
-            access: "grotto",
-               isAvailable: function () {
-                  return (OWERmap == false || dungeons[32].found == true) &&
-                  ( ( (items.Bombs || items.Hammer || (items.Bombchu && BombchuLogic) ) && 
-                     (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-                    )
-                   || ( (items.Bombs || (items.Bombchu && BombchuLogic) ) &&
-                       (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-                      )
-                  );
-               }
+            type: "entrance", 
+            access: "entrance",
+             isAvailable: function () {
+                  return dungeons[32].found == true; }
          },
-         'Tektite Grotto' : {
-            x: "30.0%",
-            y: "12.0%",
+         'Field to Valley': {
+            x: "2.0%",
+            y: "44.5%",
             leadsto: "unknown",
-            type: "freestanding", 
-            access: "grotto",
-               isAvailable: function () {
-               return (OWERmap == false || dungeons[32].found == true) &&
-                  ( ( (items.Bombs || items.Hammer || (items.Bombchu && BombchuLogic) ) 
-                     && (items.IronBoots || items.Scale >= 2) &&
-                     (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-                    )
-                   || ( (items.Bombs || (items.Bombchu && BombchuLogic) ) && items.Scale >= 2 &&
-                       (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-                      )
-                  );
-               }
+            type: "entrance", 
+            access: "entrance",
+             isAvailable: function () {
+                  return dungeons[32].found == true; }
          },
-         'Paradox Grotto' : {
-            x: "12.1%",
-            y: "50.0%",
+         'Red Rock Grotto' : {
+            x: "12%",
+            y: "43.0%",
             leadsto: "unknown",
             type: "grotto", 
             access: "grotto",
@@ -9943,8 +9961,8 @@ var dungeons = [
                }
          },
          'Web Grotto Skulltula' : {
-            x: "16.1%",
-            y: "50.0%",
+            x: "13%",
+            y: "40.5%",
             leadsto: "unknown",
             type: "skulltula", 
             access: "grotto",
@@ -9962,8 +9980,8 @@ var dungeons = [
                }
          },
          'Web Grotto Cow' : {
-            x: "8.1%",
-            y: "50.0%",
+            x: "13%",
+            y: "43.5%",
             leadsto: "unknown",
             type: "cow", 
             access: "grotto",
@@ -9980,8 +9998,8 @@ var dungeons = [
                }
          },
          'Web Grotto Gossip' : {
-            x: "12.1%",
-            y: "46.0%",
+            x: "11%",
+            y: "43.5%",
             leadsto: "unknown",
             type: "gossip", 
             access: "grotto",
@@ -9997,9 +10015,44 @@ var dungeons = [
                   );
                }
          },
-         'North East Lone Tree Grotto' : {
-            x: "34.3%",
-            y: "6.0%",
+         'NW Lone Tree Grotto' : {
+            x: "29.0%",
+            y: "19.0%",
+            leadsto: "unknown",
+            type: "grotto", 
+            access: "grotto",
+               isAvailable: function () {
+                  return (OWERmap == false || dungeons[32].found == true) &&
+                  ( ( (items.Bombs || items.Hammer || (items.Bombchu && BombchuLogic) ) && 
+                     (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                    )
+                   || ( (items.Bombs || (items.Bombchu && BombchuLogic) ) &&
+                       (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                      )
+                  );
+               }
+         },
+         'Tektite Grotto' : {
+            x: "29.0%",
+            y: "19.0%",
+            leadsto: "unknown",
+            type: "freestanding", 
+            access: "grotto",
+               isAvailable: function () {
+               return (OWERmap == false || dungeons[32].found == true) &&
+                  ( ( (items.Bombs || items.Hammer || (items.Bombchu && BombchuLogic) ) 
+                     && (items.IronBoots || items.Scale >= 2) &&
+                     (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                    )
+                   || ( (items.Bombs || (items.Bombchu && BombchuLogic) ) && items.Scale >= 2 &&
+                       (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                      )
+                  );
+               }
+         },
+         'NW GetWet Grotto' : {
+            x: "32.0%",
+            y: "4.5%",
             leadsto: "unknown",
             type: "grotto", 
             access: "grotto",
@@ -10013,102 +10066,49 @@ var dungeons = [
                       )
                   );
                }
-         },
-         'Skulltula Grotto' : {
-            x: "67.3%",
-            y: "26.0%",
-            leadsto: "unknown",
-            type: "skulltula", 
-            access: "grotto",
-               isAvailable: function () {
-                  return (OWERmap == false || dungeons[32].found == true) &&
-                  ( ( (items.Bombs || items.Hammer || (items.Bombchu && BombchuLogic) ) && items.Hookshot &&
-                     (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-                    )
-                   || ( (items.Bombs || (items.Bombchu && BombchuLogic) ) && items.Boomerang &&
-                       (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-                      )
-                  );}
-         },
-         'Fairy Fountain Grotto' : {
-            x: "34.0%",
-            y: "6.0%",
-            leadsto: "unknown",
-            type: "grotto", 
-            access: "grotto",
-               isAvailable: function () {
-                  return (OWERmap == false || dungeons[32].found == true) &&
-                  ( ( (items.Bombs || items.Hammer || (items.Bombchu && BombchuLogic) ) &&
-                     (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-                    )
-                   || ( (items.Bombs || (items.Bombchu && BombchuLogic) ) &&
-                       (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-                      )
-                  );
-               }
-         },
-         'Field to Forest': {
-            x: "95.0%",
-            y: "55.4%",
-            leadsto: "unknown",
-            type: "entrance", 
-            access: "entrance",
-             isAvailable: function () {
-                  return dungeons[32].found == true; }
          },
          'Field to Ranch': {
-            x: "55.4%",
-            y: "32.5%",
+            x: "46.5%",
+            y: "39.5%",
             leadsto: "unknown",
             type: "entrance", 
             access: "entrance",
              isAvailable: function () {
                   return dungeons[32].found == true; }
          },
-         'Field to River': {
-            x: "95.6%",
-            y: "28.0%",
+         'Due North Boulder' : {
+            x: "51.0%",
+            y: "10.0%",
             leadsto: "unknown",
-            type: "entrance", 
-            access: "entrance",
-             isAvailable: function () {
-                  return dungeons[32].found == true; }
+            type: "grotto", 
+            access: "grotto",
+               isAvailable: function () {
+                  return (OWERmap == false || dungeons[32].found == true) &&
+                  ( ( (items.Bombs || items.Hammer || (items.Bombchu && BombchuLogic) ) && 
+                     (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                    )
+                   || ( (items.Bombs || (items.Bombchu && BombchuLogic) ) &&
+                       (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                      )
+                  );
+               }
          },
-         'Field to Village': {
-            x: "95.0%",
-            y: "12.0%",
+         'Boula NW of Castle' : {
+            x: "51.0%",
+            y: "10.0%",
             leadsto: "unknown",
-            type: "entrance", 
-            access: "entrance",
-             isAvailable: function () {
-                  return dungeons[32].found == true; }
-         },
-         'Drawbridge to Topdown': {
-            x: "64.0%",
-            y: "12.5%",
-            leadsto: "unknown",
-            type: "entrance", 
-            access: "entrance",
-             isAvailable: function () {
-                  return dungeons[32].found == true; }
-         },
-         'Field to Valley': {
-            x: "4.0%",
-            y: "52.5%",
-            leadsto: "unknown",
-            type: "entrance", 
-            access: "entrance",
-             isAvailable: function () {
-                  return dungeons[32].found == true; }
-         },
-         'Field to Lake': {
-            x: "38.0%",
-            y: "95.6%",
-            leadsto: "unknown",
-            type: "entrance", 
-            access: "entrance",
-             isAvailable: function () {
-                  return dungeons[32].found == true; }
+            type: "chest", 
+            access: "grotto",
+               isAvailable: function () {
+                  return (OWERmap == false || dungeons[32].found == true) &&
+                  ( ( (items.Bombs || items.Hammer || (items.Bombchu && BombchuLogic) ) && 
+                     (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                    )
+                   || ( (items.Bombs || (items.Bombchu && BombchuLogic) ) &&
+                       (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                      )
+                  );
+               }
          },
       },
       isBeatable: function () {
