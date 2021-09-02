@@ -98,8 +98,7 @@ var dungeons = [
           access: "entrance",
           isAvailable: function () {
                return dungeons[0].found == true ; }
-       },
-         'Fairy Ocarina': {
+       }, 'Fairy Ocarina': {
             x: "0%",
             y: "45.0%",
             leadsto: "unknown",
@@ -107,8 +106,7 @@ var dungeons = [
             access: "no OWER",
             isAvailable: function () {
                return dungeons[0].found == true ; }
-         },
-         'Mido\'s House': {
+         }, Mido\'s House': {
             x: "16.75%",
             y: "38.0%",
             leadsto: "unknown",
@@ -116,8 +114,7 @@ var dungeons = [
             access: "door",
             isAvailable: function () {
                return dungeons[0].found == true ; }
-         },
-         'Mido\'s House 1': {
+         }, Mido\'s House 1': {
             x: "15.0%",
             y: "40.0%",
             leadsto: "unknown",
@@ -125,8 +122,7 @@ var dungeons = [
             access: "simple",
             isAvailable: function () {
                return dungeons[0].found == true ; }
-         },
-         'Mido\'s House 2': {
+         }, Mido\'s House 2': {
             x: "15%",
             y: "35.0%",
             leadsto: "unknown",
@@ -134,8 +130,7 @@ var dungeons = [
             access: "simple",
             isAvailable: function () {
                return dungeons[0].found == true ; }
-         },
-         'Mido\'s House 3': {
+         }, Mido\'s House 3': {
             x: "18.0%",
             y: "40.0%",
             leadsto: "unknown",
@@ -143,8 +138,7 @@ var dungeons = [
             access: "simple",
             isAvailable: function () {
                return dungeons[0].found == true ; }
-         },
-         'Mido\'s House 4': {
+         }, Mido\'s House 4': {
             x: "18%",
             y: "35.0%",
             leadsto: "unknown",
@@ -152,8 +146,7 @@ var dungeons = [
             access: "simple",
             isAvailable: function () {
                return dungeons[0].found == true ; }
-         },
-         'Know It All Bro\'s': {
+         }, Know It All Bro\'s': {
             x: "8.0%",
             y: "57.0%",
             leadsto: "unknown",
@@ -161,8 +154,7 @@ var dungeons = [
             access: "door",
             isAvailable: function () {
                return dungeons[0].found == true ; }
-         },
-         'Child Know it All Bros Skulltula': {
+         }, Child Know it All Bros Skulltula': {
             x: "5.4%",
             y: "58%",
             leadsto: "unknown",
@@ -172,8 +164,7 @@ var dungeons = [
                return dungeons[0].found == true && 
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) 
                   ); }
-         },
-         'Kokiri Sword Chest': {
+         }, Kokiri Sword Chest': {
             x: "19%",
             y: "94%",
             leadsto: "unknown",
@@ -182,8 +173,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[0].found == true && 
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); }
-         },
-         'Link\'s House': {
+         }, Link\'s House': {
             x: "22.2%",
             y: "71.0%",
             leadsto: "unknown",
@@ -191,8 +181,7 @@ var dungeons = [
             access: "door",
             isAvailable: function () {
                return dungeons[0].found == true ; }
-         },
-         'Link\'s House Cow': {
+         }, Link\'s House Cow': {
             x: "22.4%",
             y: "72%",
             leadsto: "unknown",
@@ -202,8 +191,7 @@ var dungeons = [
                return dungeons[0].found == true
                  && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) &&
                   items.Ocarina && items.EponasSong; }
-         },
-         'Saria\'s House': {
+         }, Saria\'s House': {
             x: "2950%",
             y: "65.0%",
             leadsto: "unknown",
@@ -211,8 +199,7 @@ var dungeons = [
             access: "door",
             isAvailable: function () {
                return dungeons[0].found == true ; }
-         },
-         'Twin\'s House': {
+         }, Twin\'s House': {
             x: "37.5%",
             y: "61.0%",
             leadsto: "unknown",
@@ -220,8 +207,7 @@ var dungeons = [
             access: "door",
             isAvailable: function () {
                return dungeons[0].found == true ; }
-         },
-         'Adult Twin\'s House Roof Skulltula': {
+         }, Adult Twin\'s House Roof Skulltula': {
             x: "38.5%",
             y: "64.5%",
             leadsto: "unknown",
@@ -231,8 +217,7 @@ var dungeons = [
                return dungeons[0].found == true
                  && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) 
                && items.Hookshot; }
-         },
-         'Soil Patch Skulltula': {
+         }, Soil Patch Skulltula': {
             x: "39.0%",
             y: "42.0%",
             leadsto: "unknown",
@@ -241,8 +226,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[0].found == true && 
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) && items.Bottle; }
-         },
-         'Kokiri Shop': {
+         }, Kokiri Shop': {
             x: "35.3%",
             y: "42.5%",
             leadsto: "unknown",
@@ -250,8 +234,7 @@ var dungeons = [
             access: "door",
             isAvailable: function () {
                return dungeons[0].found == true ; }
-         },
-         'Kokiri Sale': {
+         }, Kokiri Sale': {
             x: "34.0%",
             y: "38.0%",
             leadsto: "unknown",
@@ -259,8 +242,7 @@ var dungeons = [
             access: "simple",
             isAvailable: function () {
                return dungeons[0].found == true ; }
-         },
-         'Infront Storms Grotto': {
+         }, Infront Storms Grotto': {
             x: "14.0%",
             y: "25.0%",
             leadsto: "unknown",
@@ -268,8 +250,7 @@ var dungeons = [
             access: "outdoor",
             isAvailable: function () {
                return dungeons[0].found == true ; }
-         },
-         'Song of Storms Grotto': {
+         }, Song of Storms Grotto': {
             x: "16.7%",
             y: "26.4%",
             leadsto: "unknown",
@@ -278,8 +259,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[0].found == true
                && items.Ocarina && items.SongofStorms; }
-         },
-         'Storms Grotto Chest': {
+         }, Storms Grotto Chest': {
             x: "16.7%",
             y: "27.4%",
             leadsto: "unknown",
@@ -288,8 +268,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[0].found == true &&
                   items.Ocarina && items.SongofStorms; }
-         },
-         'Storms Grotto Gossip': {
+         }, Storms Grotto Gossip': {
             x: "17.0%",
             y: "25.0%",
             leadsto: "unknown",
@@ -298,16 +277,14 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[0].found == true &&
                   items.Ocarina && items.SongofStorms; }
-         },
-         'Forest to Woods': {
+         }, Forest to Woods': {
           x: "17.0%",
           y: "19.5%",
           type: "entrance",
           access: "entrance",
           isAvailable: function () {
                return dungeons[0].found == true ; }
-       },
-         'Left of Deku Tree Gossip': {
+       }, Left of Deku Tree Gossip': {
             x: "73.0%",
             y: "8.0%",
             leadsto: "unknown",
@@ -316,8 +293,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[0].found == true && 
                   (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) ) ; }
-         },
-         'Behind Deku Tree Gossip': {
+         }, Behind Deku Tree Gossip': {
             x: "84.0%",
             y: "38.0%",
             leadsto: "unknown",
@@ -326,8 +302,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[0].found == true && 
                   (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) ) ; }
-         },
-         'Inside the Deku Tree': {
+         }, Inside the Deku Tree': {
             x: "74.0%",
             y: "28.0%",
             leadsto: "unknown",
@@ -364,8 +339,7 @@ var dungeons = [
             access: "vanilla",
             isAvailable: function () {
                return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
-         },
-         '2nd Floor Chest': {
+         }, 2nd Floor Chest': {
             x: "48.0%",
             y: "80.0%",
             leadsto: "unknown",
@@ -378,8 +352,7 @@ var dungeons = [
                  ||( items.HylianShield && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                  ); 
             }
-         },
-         '2nd Floor Side Chest': {
+         }, 2nd Floor Side Chest': {
             x: "50.0%",
             y: "83.0%",
             leadsto: "unknown",
@@ -392,8 +365,7 @@ var dungeons = [
                  ||( items.HylianShield && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                  ); 
             }
-         },
-         'Top Floor Chest': {
+         }, Top Floor Chest': {
             x: "39.0%",
             y: "45.0%",
             leadsto: "unknown",
@@ -402,8 +374,7 @@ var dungeons = [
             access: "vanilla",
             isAvailable: function () {
                return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
-         },
-         'Top Floor Side Chest': {
+         }, Top Floor Side Chest': {
             x: "49.0%",
             y: "50.0%",
             leadsto: "unknown",
@@ -412,8 +383,7 @@ var dungeons = [
             access: "vanilla",
             isAvailable: function () {
                return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
-         },
-         'Top Floor Skulltula': {
+         }, Top Floor Skulltula': {
             x: "49.0%",
             y: "52.0%",
             leadsto: "unknown",
@@ -422,8 +392,7 @@ var dungeons = [
             access: "vanilla",
             isAvailable: function () {
                return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
-         },
-         'Basement Chest': {
+         }, Basement Chest': {
             x: "77.0%",
             y: "37.0%",
             leadsto: "unknown",
@@ -432,8 +401,7 @@ var dungeons = [
             access: "vanilla",
             isAvailable: function () {
                return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
-         },
-         'Basement 1st Skulltula': {
+         }, Basement 1st Skulltula': {
             x: "78.0%",
             y: "44.0%",
             leadsto: "unknown",
@@ -442,8 +410,7 @@ var dungeons = [
             access: "vanilla",
             isAvailable: function () {
                return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
-         },
-         'Basement 2nd Skulltula': {
+         }, Basement 2nd Skulltula': {
             x: "71.0%",
             y: "33.0%",
             leadsto: "unknown",
@@ -452,8 +419,7 @@ var dungeons = [
             access: "vanilla",
             isAvailable: function () {
                return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
-         },
-         'Queen Gohma': {
+         }, Queen Gohma': {
             x: "55.0%",
             y: "15.0%",
             leadsto: "unknown",
@@ -462,8 +428,7 @@ var dungeons = [
             access: "vanilla",
             isAvailable: function () {
                return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
-         },
-         'Basement Bomb Wall Skulltula': {
+         }, Basement Bomb Wall Skulltula': {
             x: "20.0%",
             y: "34.0%",
             leadsto: "unknown",
@@ -474,8 +439,7 @@ var dungeons = [
                return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) &&
                   items.Boomerang && (items.Bombs || (items.Bombchu && BombchuLogic)) ;}
-         },
-         'Lobby Skull in Crate': {
+         }, Lobby Skull in Crate': {
             x: "79.0%",
             y: "55.0%",
             leadsto: "unknown",
@@ -484,8 +448,7 @@ var dungeons = [
             access: "master",
             isAvailable: function () {
                return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
-         },
-         'MQ Lobby Chest': {
+         }, MQ Lobby Chest': {
             x: "76.0%",
             y: "55.0%",
             leadsto: "unknown",
@@ -494,8 +457,7 @@ var dungeons = [
             access: "master",
             isAvailable: function () {
                return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
-         },
-         'Top Floor Torch Chest': {
+         }, Top Floor Torch Chest': {
             x: "39.0%",
             y: "45.0%",
             leadsto: "unknown",
@@ -504,8 +466,7 @@ var dungeons = [
             access: "master",
             isAvailable: function () {
                return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
-         },
-         'Top Floor Larva Kill': {
+         }, Top Floor Larva Kill': {
             x: "49.0%",
             y: "52.0%",
             leadsto: "unknown",
@@ -514,8 +475,7 @@ var dungeons = [
             access: "master",
             isAvailable: function () {
                return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
-         },
-         'MQ 2nd Floor Chest': {
+         }, MQ 2nd Floor Chest': {
             x: "48.0%",
             y: "80.0%",
             leadsto: "unknown",
@@ -528,8 +488,7 @@ var dungeons = [
                  ||(items.Bow && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                  ); 
             }
-         },
-         '2nd Floor Skulltule': {
+         }, 2nd Floor Skulltule': {
             x: "50.0%",
             y: "83.0%",
             leadsto: "unknown",
@@ -542,8 +501,7 @@ var dungeons = [
                  ||( items.Hookshot && (items.Bombchu || items.Bombs) && items.Bow && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                  ); 
             }
-         },
-         'Basement Chest 1': {
+         }, Basement Chest 1': {
             x: "77.0%",
             y: "37.0%",
             leadsto: "unknown",
@@ -552,8 +510,7 @@ var dungeons = [
             access: "master",
             isAvailable: function () {
                return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
-         },
-         'Spiked Log Open Chest': {
+         }, Spiked Log Open Chest': {
             x: "67.0%",
             y: "77.0%",
             leadsto: "unknown",
@@ -562,8 +519,7 @@ var dungeons = [
             access: "master",
             isAvailable: function () {
                return dungeons[1].found == true && items.Slingshot && (OpenDeku == 1 || (items.KokiriSword&& items.DekuShield)); }
-         },
-         'Song of Time Chest': {
+         }, Song of Time Chest': {
             x: "45.0%",
             y: "76.0%",
             leadsto: "unknown",
@@ -573,8 +529,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[1].found == true && items.Slingshot && items.Ocarina && items.SongofTime && ( OpenDeku == 1 || (items.KokiriSword&& items.DekuShield)); 
             }
-         },
-         'Basement Ceiling Skulltule': {
+         }, Basement Ceiling Skulltule': {
             x: "28.0%",
             y: "46.0%",
             leadsto: "unknown",
@@ -584,8 +539,7 @@ var dungeons = [
             isAvailable:function () {
                return dungeons[1].found == true && items.Boomerang && items.Ocarina && items.SongofTime && (OpenDeku == 1 || (items.KokiriSword&& items.DekuShield));
             }
-         },
-         'Back Room Skulltula': {
+         }, Back Room Skulltula': {
             x: "20.0%",
             y: "34.0%",
             leadsto: "unknown",
@@ -594,8 +548,7 @@ var dungeons = [
             access: "master",
             isAvailable: function () {
                return dungeons[1].found == true && items.Bombs && (OpenDeku == 1 || (items.KokiriSword&& items.DekuShield)); }
-         },
-         'Basement Scrub': {
+         }, Basement Scrub': {
             x: "63.0%",
             y: "51.0%",
             leadsto: "unknown",
@@ -604,8 +557,7 @@ var dungeons = [
             access: "master",
             isAvailable: function () {
                return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
-         },
-         'MQ Queen Gohma': {
+         }, MQ Queen Gohma': {
             x: "55.0%",
             y: "15.0%",
             leadsto: "unknown",
@@ -645,8 +597,7 @@ var dungeons = [
                  || ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Hammer || items.Glove) && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                  ); 
             }
-         },
-         'Baby Dodongos Skulltula': {
+         }, Baby Dodongos Skulltula': {
            x: "65.0%",
             y: "87.0%",
             leadsto: "unknown",
@@ -660,8 +611,7 @@ var dungeons = [
                      (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                 ); 
             }
-         },
-         'Scarecrow Skulltula': {
+         }, Scarecrow Skulltula': {
            x: "55.0%",
             y: "72.0%",
             leadsto: "unknown",
@@ -672,8 +622,7 @@ var dungeons = [
                 (items.Bombs || (items.Bombchu && BombchuLogic) || items.Hammer || items.Glove) 
                && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ; 
             }
-         },
-         '1F Right Scrub Room': {
+         }, 1F Right Scrub Room': {
            x: "63.0%",
             y: "31.0%",
             leadsto: "unknown",
@@ -685,8 +634,7 @@ var dungeons = [
                  || ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Hammer || items.Glove) && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                  ); 
             }
-         },
-         'Lobby Chest': {
+         }, Lobby Chest': {
            x: "22.0%",
             y: "63.0%",
             leadsto: "unknown",
@@ -698,8 +646,7 @@ var dungeons = [
                  || ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Hammer || items.Glove) && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                  ); 
             }
-         },
-         'Lobby Scrub': {
+         }, Lobby Scrub': {
            x: "22.0%",
             y: "74.0%",
             leadsto: "unknown",
@@ -711,8 +658,7 @@ var dungeons = [
                  || ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Hammer || items.Glove) && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                  ); 
             }
-         },
-         'Armos Chest': {
+         }, Armos Chest': {
            x: "12.0%",
             y: "77.0%",
             leadsto: "unknown",
@@ -724,8 +670,7 @@ var dungeons = [
                  || ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Hammer || items.Glove) && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                  ); 
             }
-         },
-         'Top of the Stairs Skulltula': {
+         }, Top of the Stairs Skulltula': {
            x: "10.0%",
             y: "60.0%",
             leadsto: "unknown",
@@ -740,8 +685,7 @@ var dungeons = [
                      && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                  ); 
             }
-         },
-         'Behind Stairs Skulltula': {
+         }, Behind Stairs Skulltula': {
            x: "11.0%",
             y: "48.0%",
             leadsto: "unknown",
@@ -756,8 +700,7 @@ var dungeons = [
                      && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                  ); 
             }
-         },
-         '2F Bomb Flower Platform': {
+         }, 2F Bomb Flower Platform': {
            x: "56.0%",
             y: "76.0%",
             leadsto: "unknown",
@@ -772,8 +715,7 @@ var dungeons = [
                      && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                  ); 
             }
-         },
-         '2F before Elevator Switch': {
+         }, 2F before Elevator Switch': {
            x: "53.0%",
             y: "60.0%",
             leadsto: "unknown",
@@ -788,8 +730,7 @@ var dungeons = [
                      && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                  ); 
             }
-         },
-         '2F Scrubs 1': {
+         }, 2F Scrubs 1': {
            x: "53.0%",
             y: "48.0%",
             leadsto: "unknown",
@@ -804,8 +745,7 @@ var dungeons = [
                      && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                  ); 
             }
-         },
-         '2F Scrubs 2': {
+         }, 2F Scrubs 2': {
            x: "58.0%",
             y: "48.0%",
             leadsto: "unknown",
@@ -820,8 +760,7 @@ var dungeons = [
                      && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                  ); 
             }
-         },
-         'End of Bridge Chest': {
+         }, End of Bridge Chest': {
            x: "22.0%",
             y: "54.0%",
             leadsto: "unknown",
@@ -836,8 +775,7 @@ var dungeons = [
                      && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                  ); 
             }
-         },
-         'Behind Pushblocks Skulltula': {
+         }, Behind Pushblocks Skulltula': {
            x: "52.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -851,8 +789,7 @@ var dungeons = [
                      && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                  ); 
             }
-         },
-         'Chest Above King Dodongo': {
+         }, Chest Above King Dodongo': {
            x: "27.0%",
             y: "35.5%",
             leadsto: "unknown",
@@ -866,8 +803,7 @@ var dungeons = [
                      && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                  ); 
             }
-         },
-         'King Dodongo': {
+         }, King Dodongo': {
            x: "30.0%",
             y: "35.5%",
             leadsto: "unknown",
@@ -881,8 +817,7 @@ var dungeons = [
                      && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                  ); 
             }
-         },
-         'Lobby Mud Wall Chest': {
+         }, Lobby Mud Wall Chest': {
            x: "47.0%",
             y: "54.0%",
             leadsto: "unknown",
@@ -896,8 +831,7 @@ var dungeons = [
                      && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                  ); 
             }
-         },
-         'MQ Lobby Chest': {
+         }, MQ Lobby Chest': {
            x: "47.0%",
             y: "63.0%",
             leadsto: "unknown",
@@ -911,8 +845,7 @@ var dungeons = [
                      && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                  ); 
             }
-         },
-         'MQ Lobby Gossip': {
+         }, MQ Lobby Gossip': {
             x: "22.0%",
             y: "63.0%",
             leadsto: "unknown",
@@ -924,8 +857,7 @@ var dungeons = [
                  || ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Hammer || items.Glove) && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                  ); 
             }
-         },
-         'Lobby Scrub 1': {
+         }, Lobby Scrub 1': {
            x: "22.0%",
             y: "73.0%",
             leadsto: "unknown",
@@ -939,8 +871,7 @@ var dungeons = [
                      && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                  ); 
             }
-         },
-         'Lobby Scrub 2': {
+         }, Lobby Scrub 2': {
            x: "22.0%",
             y: "77.0%",
             leadsto: "unknown",
@@ -954,8 +885,7 @@ var dungeons = [
                      && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                  ); 
             }
-         },
-         'Song of Time Skulltula': {
+         }, Song of Time Skulltula': {
            x: "14.5%",
             y: "78.0%",
             leadsto: "unknown",
@@ -969,8 +899,7 @@ var dungeons = [
                      && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                  ); 
             }
-         },
-         'Stair Master Scrub': {
+         }, Stair Master Scrub': {
            x: "11.0%",
             y: "48.0%",
             leadsto: "unknown",
@@ -984,8 +913,7 @@ var dungeons = [
                      && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                  ); 
             }
-         },
-         'Teen Dodongo Chest': {
+         }, Teen Dodongo Chest': {
            x: "12.0%",
             y: "75.0%",
             leadsto: "unknown",
@@ -999,8 +927,7 @@ var dungeons = [
                      && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                  ); 
             }
-         },
-         'Baby Gohma Chest': {
+         }, Baby Gohma Chest': {
            x: "55.5%",
             y: "48.0%",
             leadsto: "unknown",
@@ -1014,8 +941,7 @@ var dungeons = [
                      && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                  ); 
             }
-         },
-         'Crate Skulltula': {
+         }, Crate Skulltula': {
            x: "58.0%",
             y: "49.0%",
             leadsto: "unknown",
@@ -1029,8 +955,7 @@ var dungeons = [
                      && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                  ); 
             }
-         },
-         '2F Lizalfos Skulltula': {
+         }, 2F Lizalfos Skulltula': {
            x: "74.0%",
             y: "44.0%",
             leadsto: "unknown",
@@ -1044,8 +969,7 @@ var dungeons = [
                      && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                  ); 
             }
-         },
-         '2F Platform Chest': {
+         }, 2F Platform Chest': {
            x: "55.0%",
             y: "73.0%",
             leadsto: "unknown",
@@ -1059,8 +983,7 @@ var dungeons = [
                      && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                  ); 
             }
-         },
-         '1F Side Route Scrub': {
+         }, 1F Side Route Scrub': {
            x: "63.0%",
             y: "32.0%",
             leadsto: "unknown",
@@ -1074,8 +997,7 @@ var dungeons = [
                      && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                  ); 
             }
-         },
-         '1F Scrub Keese Room Skulltula': {
+         }, 1F Scrub Keese Room Skulltula': {
            x: "68.0%",
             y: "88.0%",
             leadsto: "unknown",
@@ -1090,8 +1012,7 @@ var dungeons = [
                      && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                  );
             }
-         },
-         'Poe fight Chest': {
+         }, Poe fight Chest': {
            x: "52.0%",
             y: "11.0%",
             leadsto: "unknown",
@@ -1099,8 +1020,7 @@ var dungeons = [
             access: "master",
             isAvailable: function () {
                return dungeons[2].found == true && (items.Bombs || (items.Bombchu && BombchuLogic) ); }
-         },
-         'Back Room Skulltula': {
+         }, Back Room Skulltula': {
            x: "52.0%",
             y: "23.0%",
             leadsto: "unknown",
@@ -1113,8 +1033,7 @@ var dungeons = [
                  || ( (items.Bombs || (items.Bombchu && BombchuLogic) ) 
                      && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                  ); }
-         },
-         'Chest Above Boss Room': {
+         }, Chest Above Boss Room': {
            x: "37.5%",
             y: "28.0%",
             leadsto: "unknown",
@@ -1122,8 +1041,7 @@ var dungeons = [
             access: "master",
             isAvailable: function () {
                return dungeons[2].found == true && (items.Bombs || (items.Bombchu && BombchuLogic) ); }
-         },
-         'MQ King Dodongo': {
+         }, MQ King Dodongo': {
            x: "35.5%",
             y: "30.0%",
             leadsto: "unknown",
@@ -1162,8 +1080,7 @@ var dungeons = [
                    (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                    || DungeonER ); 
             }
-         },
-         'Basement Dive to Scrub': {
+         }, Basement Dive to Scrub': {
            x: "5.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -1176,8 +1093,7 @@ var dungeons = [
                    (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                    || DungeonER ) && (items.Scale || (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ); 
             }
-         },
-         'StingRay Chest': {
+         }, StingRay Chest': {
            x: "15.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -1190,8 +1106,7 @@ var dungeons = [
                    (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                    || DungeonER ); 
             }
-         },
-         'Tentacle Chest': {
+         }, Tentacle Chest': {
            x: "25.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -1204,8 +1119,7 @@ var dungeons = [
                    || DungeonER ) && items.Boomerang &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
             }
-         },
-         'Bubble Pop Chest': {
+         }, Bubble Pop Chest': {
            x: "35.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -1218,8 +1132,7 @@ var dungeons = [
                    || DungeonER ) && items.Boomerang &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
             }
-         },
-         'Before Big Octo Skull 1': {
+         }, Before Big Octo Skull 1': {
            x: "45.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -1235,8 +1148,7 @@ var dungeons = [
                                       || (items.Hookshot &&
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ) ); 
             }
-         },
-         'Before Big Octo Skull 2': {
+         }, Before Big Octo Skull 2': {
            x: "55.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -1252,8 +1164,7 @@ var dungeons = [
                                       || (items.Hookshot &&
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ) ); 
             }
-         },
-         'Before Brainade Skulltula': {
+         }, Before Brainade Skulltula': {
            x: "65.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -1266,8 +1177,7 @@ var dungeons = [
                    || DungeonER ) && items.Boomerang &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
             }
-         },
-         'Barinade': {
+         }, Barinade': {
            x: "75.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -1280,8 +1190,7 @@ var dungeons = [
                    || DungeonER ) && items.Boomerang &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
             }
-         },
-         'Lobby Switch Chest': {
+         }, Lobby Switch Chest': {
            x: "15.0%",
             y: "15.0%",
             leadsto: "unknown",
@@ -1298,8 +1207,7 @@ var dungeons = [
                                           &&
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ) ); 
             }
-         },
-         'Lobby Cow Chest': {
+         }, Lobby Cow Chest': {
            x: "25.0%",
             y: "15.0%",
             leadsto: "unknown",
@@ -1312,8 +1220,7 @@ var dungeons = [
                    || DungeonER ) && items.Slingshot &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
             }
-         },
-         'Underwater Cow Chest': {
+         }, Underwater Cow Chest': {
            x: "35.0%",
             y: "15.0%",
             leadsto: "unknown",
@@ -1326,8 +1233,7 @@ var dungeons = [
                    || DungeonER ) && items.Slingshot &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
             }
-         },
-         'Elevator Room Lower Chest': {
+         }, Elevator Room Lower Chest': {
            x: "45.0%",
             y: "15.0%",
             leadsto: "unknown",
@@ -1340,8 +1246,7 @@ var dungeons = [
                    || DungeonER ) && items.Slingshot &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
             }
-         },
-         'Basement Cow Chest 1': {
+         }, Basement Cow Chest 1': {
            x: "55.0%",
             y: "15.0%",
             leadsto: "unknown",
@@ -1354,8 +1259,7 @@ var dungeons = [
                    || DungeonER ) && items.Slingshot &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
             }
-         },
-         'Basement Cow Chest 2': {
+         }, Basement Cow Chest 2': {
            x: "65.0%",
             y: "15.0%",
             leadsto: "unknown",
@@ -1368,8 +1272,7 @@ var dungeons = [
                    || DungeonER ) && items.Slingshot &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
             }
-         },
-         'Basement Open Chest': {
+         }, Basement Open Chest': {
            x: "75.0%",
             y: "15.0%",
             leadsto: "unknown",
@@ -1382,8 +1285,7 @@ var dungeons = [
                    || DungeonER ) && items.Slingshot &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
             }
-         },
-         'Basement Battle Chest': {
+         }, Basement Battle Chest': {
            x: "85.0%",
             y: "15.0%",
             leadsto: "unknown",
@@ -1396,8 +1298,7 @@ var dungeons = [
                    || DungeonER ) && items.Slingshot &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
             }
-         },
-         'Song of Time Skulltula': {
+         }, Song of Time Skulltula': {
            x: "35.0%",
             y: "25.0%",
             leadsto: "unknown",
@@ -1410,8 +1311,7 @@ var dungeons = [
                    || DungeonER ) && items.Slingshot && (items.Boomerang || (items.Ocarina && items.SongofTime) )
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
             }
-         },
-         'Bubble Battle Skulltula': {
+         }, Bubble Battle Skulltula': {
            x: "45.0%",
             y: "25.0%",
             leadsto: "unknown",
@@ -1425,8 +1325,7 @@ var dungeons = [
                && items.Slingshot && items.Boomerang && (items.Bombs || (items.Bombchu && BombchuLogic) ) 
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
             }
-         },
-         'Invisible Enemies Skulltula': {
+         }, Invisible Enemies Skulltula': {
            x: "25.0%",
             y: "35.0%",
             leadsto: "unknown",
@@ -1441,8 +1340,7 @@ var dungeons = [
                && items.Magic && items.Dins 
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
             }
-         },
-         'Falling Like Like Chest': {
+         }, Falling Like Like Chest': {
            x: "35.0%",
             y: "35.0%",
             leadsto: "unknown",
@@ -1455,8 +1353,7 @@ var dungeons = [
                    || DungeonER ) && items.Slingshot && items.Boomerang &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
             }
-         },
-         'Elevator Room Upper Chest': {
+         }, Elevator Room Upper Chest': {
            x: "45.0%",
             y: "35.0%",
             leadsto: "unknown",
@@ -1469,8 +1366,7 @@ var dungeons = [
                    || DungeonER ) && items.Slingshot && items.Boomerang && (items.Bombs || (items.Bombchu && BombchuLogic) ) &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
             }
-         },
-         'Top Floor Standing Cow': {
+         }, Top Floor Standing Cow': {
            x: "55.0%",
             y: "35.0%",
             leadsto: "unknown",
@@ -1484,8 +1380,7 @@ var dungeons = [
                   && items.Boomerang && (items.Bombs || (items.Bombchu && BombchuLogic) ) &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
             }
-         },
-         'Chest Near Boss Door': {
+         }, Chest Near Boss Door': {
            x: "65.0%",
             y: "35.0%",
             leadsto: "unknown",
@@ -1498,8 +1393,7 @@ var dungeons = [
                    || DungeonER ) && items.Slingshot && items.Boomerang && (items.Bombs || (items.Bombchu && BombchuLogic) ) &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
             }
-         },
-         'Skulltula Near Boos Door': {
+         }, Skulltula Near Boos Door': {
            x: "75.0%",
             y: "35.0%",
             leadsto: "unknown",
@@ -1512,8 +1406,7 @@ var dungeons = [
                    || DungeonER ) && items.Slingshot && items.Boomerang && (items.Bombs || (items.Bombchu && BombchuLogic) ) &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
             }
-         },
-         'MQ Barinade': {
+         }, MQ Barinade': {
            x: "85.0%",
             y: "35.0%",
             leadsto: "unknown",
@@ -1555,8 +1448,7 @@ var dungeons = [
                return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
-         },
-         'Front Center Bombable': {
+         }, Front Center Bombable': {
             x: "10.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -1567,8 +1459,7 @@ var dungeons = [
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && (items.Bombs || (items.Bombchu && BombchuLogic) );
             }
-         },
-         'Center Large Chest': {
+         }, Center Large Chest': {
             x: "15.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -1578,8 +1469,7 @@ var dungeons = [
                return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
-         },
-         'Underwater Left Chest': {
+         }, Underwater Left Chest': {
             x: "20.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -1590,8 +1480,7 @@ var dungeons = [
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && items.Ocarina && items.ZeldasLullaby;
             }
-         },
-         'Coffin Key': {
+         }, Coffin Key': {
             x: "25.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -1601,8 +1490,7 @@ var dungeons = [
                return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
-         },
-         'Center Small Chest': {
+         }, Center Small Chest': {
             x: "30.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -1612,8 +1500,7 @@ var dungeons = [
                return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
-         },
-         'Back Left Bombable': {
+         }, Back Left Bombable': {
             x: "35.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -1624,8 +1511,7 @@ var dungeons = [
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && (items.Bombs || (items.Bombchu && BombchuLogic) );
             }
-         },
-         'West Key Door Skulltula': {
+         }, West Key Door Skulltula': {
             x: "40.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -1636,8 +1522,7 @@ var dungeons = [
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && (smallkeys == "Remove" || items.WellKey ) && items.Boomerang;
             }
-         },
-         'East Key Door Skulltula': {
+         }, East Key Door Skulltula': {
             x: "45.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -1648,8 +1533,7 @@ var dungeons = [
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && (smallkeys == "Remove" || items.WellKey ) && items.Boomerang;
             }
-         },
-         'Right Bottom Hidden Wall': {
+         }, Right Bottom Hidden Wall': {
             x: "50.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -1659,8 +1543,7 @@ var dungeons = [
                return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
-         },
-         'Locked Pits': {
+         }, Locked Pits': {
             x: "55.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -1671,8 +1554,7 @@ var dungeons = [
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && (smallkeys == "Remove" || items.WellKey );
             }
-         },
-         'Like Like Chest': {
+         }, Like Like Chest': {
             x: "60.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -1683,8 +1565,7 @@ var dungeons = [
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && (smallkeys == "Remove" || items.WellKey );
             }
-         },
-         'Like Like Skulltula': {
+         }, Like Like Skulltula': {
             x: "65.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -1695,8 +1576,7 @@ var dungeons = [
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && (smallkeys == "Remove" || items.WellKey ) && items.Boomerang;
             }
-         },
-         'Basement Chest': {
+         }, Basement Chest': {
             x: "70.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -1707,8 +1587,7 @@ var dungeons = [
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove );
             }
-         },
-         'Underwater Front Chest': {
+         }, Underwater Front Chest': {
             x: "75.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -1719,8 +1598,7 @@ var dungeons = [
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && items.Ocarina && items.ZeldasLullaby;
             }
-         },
-         'Dead Hand': {
+         }, Dead Hand': {
             x: "80.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -1743,8 +1621,7 @@ var dungeons = [
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && items.Ocarina && items.ZeldasLullaby;
             }
-         },
-         'Center Chest': {
+         }, Center Chest': {
             x: "10.0%",
             y: "15.0%",
             leadsto: "unknown",
@@ -1756,8 +1633,7 @@ var dungeons = [
                && ( (items.Ocarina && items.ZeldasLullaby) 
                    || (items.Bombs || (items.Bombchu && BombchuLogic) ) );
             }
-         },
-         'MQ Deadhand Chest': {
+         }, MQ Deadhand Chest': {
             x: "20.0%",
             y: "15.0%",
             leadsto: "unknown",
@@ -1768,8 +1644,7 @@ var dungeons = [
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && (items.Slingshot || items.Boomerang || items.KokiriSword || items.Bombs || (items.Bombchu && BombchuLogic) );
             }
-         },
-         'Deadhand Freestanding': {
+         }, Deadhand Freestanding': {
             x: "30.0%",
             y: "15.0%",
             leadsto: "unknown",
@@ -1780,8 +1655,7 @@ var dungeons = [
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && (items.Bombs || (items.Bombchu && BombchuLogic) );
             }
-         },
-         'Inner Room Freestanding': {
+         }, Inner Room Freestanding': {
             x: "40.0%",
             y: "15.0%",
             leadsto: "unknown",
@@ -1794,8 +1668,7 @@ var dungeons = [
                      && (items.Slingshot || items.Boomerang) ) 
                    || items.Bombs );
             }
-         },
-         'MQ Basement Chest': {
+         }, MQ Basement Chest': {
             x: "50.0%",
             y: "15.0%",
             leadsto: "unknown",
@@ -1806,8 +1679,7 @@ var dungeons = [
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && items.WellKey && (items.Bombs || (items.Bombchu && BombchuLogic) );
             }
-         },
-         'Tombstone Skulltula': {
+         }, Tombstone Skulltula': {
             x: "60.0%",
             y: "15.0%",
             leadsto: "unknown",
@@ -1819,8 +1691,7 @@ var dungeons = [
                && ( (items.Ocarina && items.ZeldasLullaby) 
                    || (items.Bombs || (items.Bombchu && BombchuLogic) ) );
             }
-         },
-         'Coffin Room Skulltula': {
+         }, Coffin Room Skulltula': {
             x: "70.0%",
             y: "15.0%",
             leadsto: "unknown",
@@ -1831,8 +1702,7 @@ var dungeons = [
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && items.WellKey;
             }
-         },
-         'Basement Skulltula': {
+         }, Basement Skulltula': {
             x: "80.0%",
             y: "15.0%",
             leadsto: "unknown",
@@ -1877,8 +1747,7 @@ var dungeons = [
                      && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) 
                     ) || (items.Bombs || (items.Bombchu && BombchuLogic) ) );
             }
-          },
-         'Lobby Chest': {
+          }, Lobby Chest': {
             x: "15.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -1888,8 +1757,7 @@ var dungeons = [
                return dungeons[5].found == true && (DungeonER || (items.Hookshot && 
                       (Age == "Ault" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ) );
             }
-         },
-         'Torch Room Skulltula': {
+         }, Torch Room Skulltula': {
             x: "20.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -1903,8 +1771,7 @@ var dungeons = [
                     ) || (items.Boomerang
                      && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ) );
             }
-         },
-         '1st Floor Stalfos': {
+         }, 1st Floor Stalfos': {
             x: "25.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -1914,8 +1781,7 @@ var dungeons = [
                return dungeons[5].found == true && (DungeonER || (items.Hookshot && 
                       (Age == "Ault" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ) );
             }
-         },
-         'Bubble Chest': {
+         }, Bubble Chest': {
             x: "30.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -1928,8 +1794,7 @@ var dungeons = [
                      && (Age == "Ault" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) 
                     ) || (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) );
             }
-         },
-         'Courtyard Island Chest': {
+         }, Courtyard Island Chest': {
             x: "35.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -1938,8 +1803,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[5].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.Hookshot && (items.Bow || (items.Ocarina && items.SongofTime) || (items.ForestKey && items.HoverBoots) || (items.ForestKey >= 2 && items.Bow && items.Glove));
             },
-         },
-         'Courtyard Island Skulltula': {
+         }, Courtyard Island Skulltula': {
             x: "40.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -1953,8 +1817,7 @@ var dungeons = [
                     ) || (items.Boomerang && items.Slingshot && items.Magic && items.Dins && items.ForestKey >= 5
                      && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ) );
             }
-         },
-         'Well Chest': {
+         }, Well Chest': {
             x: "45.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -1967,8 +1830,7 @@ var dungeons = [
                      && (Age == "Ault" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) 
                     ) || (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) );
             }
-         },
-         'Push Block Room Chest': {
+         }, Push Block Room Chest': {
             x: "50.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -1977,8 +1839,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[5].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ForestKey && items.Hookshot && items.Bow && items.Glove;
             }
-         },
-         'Hallway Twist Chest': {
+         }, Hallway Twist Chest': {
             x: "55.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -1987,8 +1848,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[5].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ForestKey >= 2 && items.Hookshot && items.Bow && items.Glove;
             }
-         },
-         'Floormaster Chest': {
+         }, Floormaster Chest': {
             x: "60.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -1997,8 +1857,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[5].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.Hookshot && ((items.Bow && items.ForestKey >= 2 && items.Glove) || (items.HoverBoots && items.ForestKey));
             },
-         },
-         'West Courtyard Skulltula': {
+         }, West Courtyard Skulltula': {
             x: "65.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -2007,8 +1866,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[5].found == true && (items.ForestKey >= 2 || (items.ForestKey && items.HoverBoots)) && items.Hookshot && items.Ocarina && (items.SariasSong || items.MinuetofForest);
             },
-         },
-         'Red Poe Chest': {
+         }, Red Poe Chest': {
             x: "70.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -2017,8 +1875,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[5].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ForestKey >= 3 && items.Hookshot && items.Bow && items.Glove;
             }
-         },
-         '2nd Floor Stalfos': {
+         }, 2nd Floor Stalfos': {
             x: "75.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -2027,8 +1884,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[5].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ForestKey >= 3 && items.Hookshot && items.Glove;
             },
-         },
-         'Blue Poe Chest': {
+         }, Blue Poe Chest': {
             x: "80.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -2037,8 +1893,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[5].found == true && items.MasterSword && items.ForestKey >= 3 && items.Hookshot && items.Bow && items.Glove;
             }
-         },
-         'Checkerboard Chest': {
+         }, Checkerboard Chest': {
             x: "85.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -2049,8 +1904,7 @@ var dungeons = [
                   (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) &&
                   items.MasterSword && (items.ForestKey >= 5 || (items.ForestKey >= 3 && items.HoverBoots)) && items.Hookshot && items.Glove && (items.Bow || (items.Dins && items.Magic));
             }
-         },
-         'Near Boss Chest': {
+         }, Near Boss Chest': {
             x: "90.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -2059,8 +1913,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[5].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.ForestKey >= 5 || (items.ForestKey >= 3 && items.HoverBoots)) && items.Hookshot && items.Bow && items.Glove;
             }
-         },
-         'Basement Skulltula': {
+         }, Basement Skulltula': {
             x: "95.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -2069,8 +1922,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[5].found == true && items.Hookshot && items.Ocarina && (items.SariasSong || items.MinuetofForest) && items.Bow && items.Glove;
             },
-         },
-         'Phantom Ganon': {
+         }, Phantom Ganon': {
             x: "10.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -2079,8 +1931,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[5].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.ForestKey >= 5 || (items.ForestKey >= 3 && items.HoverBoots)) && items.BossForest && items.Hookshot && items.Bow && items.Glove;
             }
-         },
-         'MQ Lobby Chest': {
+         }, MQ Lobby Chest': {
             x: "5.0%",
             y: "15.0%",
             leadsto: "unknown",
@@ -2088,8 +1939,7 @@ var dungeons = [
             access: "master",
             isAvailable: function () {
                return dungeons[5].found == true && items.Hookshot; }
-         },
-         '1st Hallway Skulltula': {
+         }, 1st Hallway Skulltula': {
             x: "10.0%",
             y: "15.0%",
             leadsto: "unknown",
@@ -2097,8 +1947,7 @@ var dungeons = [
             access: "master",
             isAvailable: function () {
                return dungeons[5].found == true && items.Hookshot; }
-         },
-         'Wolfos Chest': {
+         }, Wolfos Chest': {
             x: "15.0%",
             y: "15.0%",
             leadsto: "unknown",
@@ -2106,8 +1955,7 @@ var dungeons = [
             access: "master",
             isAvailable: function () {
                return dungeons[5].found == true && items.Hookshot && items.Ocarina && items.SongofTime; }
-         },
-         'MQ Courtyard Island Chest': {
+         }, MQ Courtyard Island Chest': {
             x: "20.0%",
             y: "15.0%",
             leadsto: "unknown",
@@ -2115,8 +1963,7 @@ var dungeons = [
             access: "master",
             isAvailable: function () {
                return dungeons[5].found == true && items.Hookshot && items.Glove && items.ForestKey >= 5 && items.Bow; }
-         },
-         'Counrtyard Climb Chest': {
+         }, Counrtyard Climb Chest': {
             x: "25.0%",
             y: "15.0%",
             leadsto: "unknown",
@@ -2124,8 +1971,7 @@ var dungeons = [
             access: "master",
             isAvailable: function () {
                return dungeons[5].found == true && items.Hookshot && items.Bow; }
-         },
-         'MQ West Courtyard Skulltula': {
+         }, MQ West Courtyard Skulltula': {
             x: "30.0%",
             y: "15.0%",
             leadsto: "unknown",
@@ -2133,8 +1979,7 @@ var dungeons = [
             access: "master",
             isAvailable: function () {
                return dungeons[5].found == true && items.Hookshot && items.Glove && items.ForestKey >= 2 && items.Bow; }
-         },
-         'Well Skulltula': {
+         }, Well Skulltula': {
             x: "35.0%",
             y: "15.0%",
             leadsto: "unknown",
@@ -2143,8 +1988,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[5].found == true && items.Hookshot && ((items.Glove && items.ForestKey >= 2 && items.IronBoots) || items.Bow); 
             }
-         },
-         'MQ Well Chest': {
+         }, MQ Well Chest': {
             x: "40.0%",
             y: "15.0%",
             leadsto: "unknown",
@@ -2152,8 +1996,7 @@ var dungeons = [
             access: "master",
             isAvailable: function () {
                return dungeons[5].found == true && items.Hookshot && (items.Bow || items.IronBoots); }
-         },
-         'Above Well Chest': {
+         }, Above Well Chest': {
             x: "45.0%",
             y: "15.0%",
             leadsto: "unknown",
@@ -2161,8 +2004,7 @@ var dungeons = [
             access: "master",
             isAvailable: function () {
                return dungeons[5].found == true && items.Hookshot && ((items.Glove && items.ForestKey >= 2) || items.Bow); }
-         },
-         'East Courtyard Skulltula': {
+         }, East Courtyard Skulltula': {
             x: "50.0%",
             y: "15.0%",
             leadsto: "unknown",
@@ -2171,8 +2013,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[5].found == true && items.Hookshot && ((items.Glove && items.ForestKey >= 2 && (items.IronBoots || items.Scale >= 2)) || items.Bow); 
             }
-         },
-         'Gilded Chest': {
+         }, Gilded Chest': {
             x: "55.0%",
             y: "15.0%",
             leadsto: "unknown",
@@ -2180,8 +2021,7 @@ var dungeons = [
             access: "master",
             isAvailable: function () {
                return dungeons[5].found == true && items.Hookshot && items.Glove && items.ForestKey >= 1; }
-         },
-         'Redead Chest': {
+         }, Redead Chest': {
             x: "60.0%",
             y: "15.0%",
             leadsto: "unknown",
@@ -2189,8 +2029,7 @@ var dungeons = [
             access: "master",
             isAvailable: function () {
                return dungeons[5].found == true && items.Hookshot && items.Glove && items.ForestKey >= 1; }
-         },
-         'Push Block Room Skulltula': {
+         }, Push Block Room Skulltula': {
             x: "65.0%",
             y: "15.0%",
             leadsto: "unknown",
@@ -2198,8 +2037,7 @@ var dungeons = [
             access: "master",
             isAvailable: function () {
                return dungeons[5].found == true && items.Hookshot; }
-         },
-         'MQ Red Poe Chest': {
+         }, MQ Red Poe Chest': {
             x: "70.0%",
             y: "15.0%",
             leadsto: "unknown",
@@ -2207,8 +2045,7 @@ var dungeons = [
             access: "master",
             isAvailable: function () {
                return dungeons[5].found == true && items.Hookshot && items.Glove && items.ForestKey >= 2 && items.Bow; }
-         },
-         'MQ 2nd Floor Stalfos': {
+         }, MQ 2nd Floor Stalfos': {
             x: "75.0%",
             y: "15.0%",
             leadsto: "unknown",
@@ -2216,8 +2053,7 @@ var dungeons = [
             access: "master",
             isAvailable: function () {
                return dungeons[5].found == true && items.Hookshot && items.Glove && items.ForestKey >= 2; }
-         },
-         'MQ Blue Poe Chest': {
+         }, MQ Blue Poe Chest': {
             x: "80.0%",
             y: "15.0%",
             leadsto: "unknown",
@@ -2225,8 +2061,7 @@ var dungeons = [
             access: "master",
             isAvailable: function () {
                return dungeons[5].found == true && items.Hookshot && items.Glove && items.ForestKey >= 2 && items.Bow; }
-         },
-         'MQ Checkerboard Room Chest': {
+         }, MQ Checkerboard Room Chest': {
             x: "85.0%",
             y: "15.0%",
             leadsto: "unknown",
@@ -2234,8 +2069,7 @@ var dungeons = [
             access: "master",
             isAvailable: function () {
                return dungeons[5].found == true && items.Hookshot && items.Glove && items.ForestKey >= 5 && items.Bow; }
-         },
-         'MQ Chest Near Boss Door': {
+         }, MQ Chest Near Boss Door': {
             x: "90.0%",
             y: "15.0%",
             leadsto: "unknown",
@@ -2243,8 +2077,7 @@ var dungeons = [
             access: "master",
             isAvailable: function () {
                return dungeons[5].found == true && items.Hookshot && items.Glove && items.ForestKey >= 6 && items.Bow; }
-         },
-         'MQ Phantom HorsePig': {
+         }, MQ Phantom HorsePig': {
             x: "95.0%",
             y: "15.0%",
             leadsto: "unknown",
@@ -2280,8 +2113,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[6].found == true && items.MasterSword && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.BoleroofFire || ((items.HoverBoots || items.Hookshot) && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Hammer || items.Bow || (items.Magic && items.Dins))));
             }
-         },
-         'Before 1st Fire Dancer Skulltula': {
+         }, Before 1st Fire Dancer Skulltula': {
             x: "10.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -2290,8 +2122,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[6].found == true && items.Hammer && (items.Hookshot || items.HoverBoots || items.BoleroofFire)
             }
-         },
-         'Flare Dancer Chest': {
+         }, Flare Dancer Chest': {
             x: "15.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -2300,8 +2131,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[6].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)) && items.Hammer;
             }
-         },
-         'Under Lobby Chest': {
+         }, Under Lobby Chest': {
             x: "20.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -2310,8 +2140,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[6].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)) && items.Hammer;
             }
-         },
-         'Song of Time Lava Room Skulltula': {
+         }, Song of Time Lava Room Skulltula': {
             x: "25.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -2320,8 +2149,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[6].found == true && items.Ocarina && items.SongofTime && items.FireKey && (items.BoleroofFire || (items.HoverBoots || items.Hookshot))
             }
-         },
-         'Lava Room Open Chest': {
+         }, Lava Room Open Chest': {
             x: "30.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -2330,8 +2158,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[6].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.FireKey && (items.BoleroofFire || (items.HoverBoots || items.Hookshot));
             }
-         },
-         'Lava Room Bombable Wall': {
+         }, Lava Room Bombable Wall': {
             x: "35.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -2340,8 +2167,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[6].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.FireKey && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)) && (items.Bombs || (items.Bombchu && BombchuLogic));
             }
-         },
-         'Maze Lower Chest': {
+         }, Maze Lower Chest': {
             x: "40.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -2350,8 +2176,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[6].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.FireKey >= 3 && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)) && items.Glove;
             }
-         },
-         'Maze Bombable Wall Skulltula': {
+         }, Maze Bombable Wall Skulltula': {
             x: "45.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -2360,8 +2185,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[6].found == true && (items.Bombs || items.Bombchu) && items.FireKey >= 3 && (items.BoleroofFire || (items.HoverBoots || items.Hookshot))
             }
-         },
-         'Maze Side Room': {
+         }, Maze Side Room': {
             x: "50.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -2370,8 +2194,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[6].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.FireKey >= 3 && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)) && items.Glove;
             }
-         },
-         'Eye Switch Chest': {
+         }, Eye Switch Chest': {
             x: "55.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -2380,8 +2203,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[6].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && ((items.FireKey >= 4 && items.Bow) || items.FireKey >= 5) && (items.BoleroofFire || items.HoverBoots || items.Hookshot) && items.Glove;
             }
-         },
-         'Maze Upper Chest': {
+         }, Maze Upper Chest': {
             x: "60.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -2390,8 +2212,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[6].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.FireKey >= 5 && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)) && items.Glove;
             }
-         },
-         'Maze Bombable Pit': {
+         }, Maze Bombable Pit': {
             x: "65.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -2400,8 +2221,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[6].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.FireKey >= 5 && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)) && items.Glove && (items.Bombs || (items.Bombchu && BombchuLogic));
             }
-         },
-         '1st Scarecrow Skulltula': {
+         }, 1st Scarecrow Skulltula': {
             x: "70.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -2410,8 +2230,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[6].found == true && items.FireKey >= 5 && items.Glove && items.Hookshot && items.Ocarina
             }
-         },
-         '2nd Scarecrow Skulltula': {
+         }, 2nd Scarecrow Skulltula': {
             x: "75.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -2420,8 +2239,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[6].found == true && items.FireKey >= 5 && items.Glove && items.Hookshot && items.Ocarina
             }
-         },
-         'Scarecrow Chest': {
+         }, Scarecrow Chest': {
             x: "80.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -2430,8 +2248,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[6].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.FireKey >= 5 && items.Glove && items.Hookshot && items.Ocarina && items.Scarecrow >= 2;
             }
-         },
-         'Flame Maze Side Room': {
+         }, Flame Maze Side Room': {
             x: "85.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -2440,8 +2257,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[6].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.FireKey >= 6 && (items.BoleroofFire || items.HoverBoots || items.Hookshot) && items.Glove;
             }
-         },
-         'Song of Time Chest': {
+         }, Song of Time Chest': {
             x: "90.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -2450,8 +2266,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[6].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.FireKey >= 7 || (items.FireKey >= 6 && items.HoverBoots)) && (items.BoleroofFire || items.HoverBoots || items.Hookshot) && items.Glove && items.Hammer;
             }
-         },
-         'Topmost Chest': {
+         }, Topmost Chest': {
             x: "10.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -2460,8 +2275,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[6].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.FireKey >= 6 && (items.BoleroofFire || items.HoverBoots || items.Hooksho) && items.Glove && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Hammer);
             }
-         },
-         'Volvagia': {
+         }, Volvagia': {
             x: "20.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -2470,8 +2284,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[6].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.BossFire && ((items.GoronTunic || items.Bottle) && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)) && items.Hammer && (items.HoverBoots || (items.Glove && (items.Bombs || items.Hookshot) && items.Bombs)));
             }
-         },
-         'Like Like Chest': {
+         }, Like Like Chest': {
             x: "15.0%",
             y: "20.0%",
             leadsto: "unknown",
@@ -2485,8 +2298,7 @@ var dungeons = [
                             )
                       );
             }
-         },
-         'MQ Chest Near Boss Door': {
+         }, MQ Chest Near Boss Door': {
             x: "20.0%",
             y: "20.0%",
             leadsto: "unknown",
@@ -2502,8 +2314,7 @@ var dungeons = [
                         )
                       ); //Boss Door access
             }
-         },
-         'MQ Flare Dancer Chest': {
+         }, MQ Flare Dancer Chest': {
             x: "25.0%",
             y: "20.0%",
             leadsto: "unknown",
@@ -2516,8 +2327,7 @@ var dungeons = [
                                   || items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Bow || (items.Magic && items.Dins)) //:ink the Goron
                             )) && items.FireKey >= 1 ; //Iron Knuckle Access
             }
-         },
-         'Rusted Switch Chest': {
+         }, Rusted Switch Chest': {
             x: "30.0%",
             y: "20.0%",
             leadsto: "unknown",
@@ -2530,8 +2340,7 @@ var dungeons = [
                                   || items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Bow || (items.Magic && items.Dins)) //:ink the Goron
                             )) && items.FireKey >=1 && items.Hammer; //Switch
             }
-         },
-         'Lava Green Room Chest': {
+         }, Lava Green Room Chest': {
             x: "35.0%",
             y: "20.0%",
             leadsto: "unknown",
@@ -2545,8 +2354,7 @@ var dungeons = [
                             ) )
                        && items.Hammer && items.Hookshot && items.Magic && (items.Dins || (items.Bow && items.Fire)) ; //Lava Room and Torch
             }
-         },
-         'MQ Lava Bombable Room': {
+         }, MQ Lava Bombable Room': {
             x: "40.0%",
             y: "20.0%",
             leadsto: "unknown",
@@ -2562,8 +2370,7 @@ var dungeons = [
                         && items.Magic && (items.Dins || (items.Bow && items.Fire)) //Torch
                       ;
             }
-         },
-         'Lava Side Room Skulltula': {
+         }, Lava Side Room Skulltula': {
             x: "45.0%",
             y: "20.0%",
             leadsto: "unknown",
@@ -2576,8 +2383,7 @@ var dungeons = [
                                   || items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Bow || (items.Magic && items.Dins)) //:ink the Goron
                             )) && items.Hammer; //Lava Room
             }
-         },
-         'Song of Time Climb Skulltula': {
+         }, Song of Time Climb Skulltula': {
             x: "50.0%",
             y: "20.0%",
             leadsto: "unknown",
@@ -2594,8 +2400,7 @@ var dungeons = [
                       && items.SongofTime && items.Ocarina && items.Glove //Block of Time climb, strength for push block
                       ;
             }
-         },
-         'Bombable Shortcut Chest': {
+         }, Bombable Shortcut Chest': {
             x: "55.0%",
             y: "20.0%",
             leadsto: "unknown",
@@ -2611,8 +2416,7 @@ var dungeons = [
                         && items.FireKey >= 1 && (items.Bombs || (BombchuLogic && items.Bombchu)) //Keydoor, bombwall to rusted switch
                       ;
             }
-         },
-         'Maze Upper Gate': {
+         }, Maze Upper Gate': {
             x: "60.0%",
             y: "20.0%",
             leadsto: "unknown",
@@ -2628,8 +2432,7 @@ var dungeons = [
                         && (items.Bombs || (BombchuLogic && items.Bombchu)) //Bombwall to rusted switch
                       ;
             }
-         },
-         'Maze Lower Gate': {
+         }, Maze Lower Gate': {
             x: "65.0%",
             y: "20.0%",
             leadsto: "unknown",
@@ -2644,8 +2447,7 @@ var dungeons = [
                         && items.Hammer && items.Magic && (items.Dins || (items.Bow && items.Fire)) && items.FireKey >= 1 //No Hookshot needed
                        ;
             }
-         },
-         'MQ Maze Side Room': {
+         }, MQ Maze Side Room': {
             x: "70.0%",
             y: "20.0%",
             leadsto: "unknown",
@@ -2661,8 +2463,7 @@ var dungeons = [
                        && (items.Bombs || (BombchuLogic && items.Bombchu)) //Bombwall to rusted switch
                       ;
             }
-         },
-         'MQ Flame Maze Side Room': {
+         }, MQ Flame Maze Side Room': {
             x: "75.0%",
             y: "20.0%",
             leadsto: "unknown",
@@ -2678,8 +2479,7 @@ var dungeons = [
                         && items.FireKey >= 2 && items.Bow && items.Ocarina && items.SongofTime //2nd Key door, arrow torch, Block of Time
                       ;
             }
-         },
-         'Bombwall Skulltula': {
+         }, Bombwall Skulltula': {
             x: "80.0%",
             y: "20.0%",
             leadsto: "unknown",
@@ -2696,8 +2496,7 @@ var dungeons = [
                       && items.Bombs || (BombchuLogic && items.Bombchu) //Bombwall
                       ;
             }
-         },
-         'Flare Dancer Freestanding': {
+         }, Flare Dancer Freestanding': {
             x: "85.0%",
             y: "20.0%",
             leadsto: "unknown",
@@ -2713,8 +2512,7 @@ var dungeons = [
                         && items.FireKey>= 2 && items.Bow && items.Ocarina && items.SongofTime //2nd Key door, arrow torch, Block of Time
                       ;
             }
-         },
-         'MQ Highest Chest': {
+         }, MQ Highest Chest': {
             x: "20.0%",
             y: "25.0%",
             leadsto: "unknown",
@@ -2731,8 +2529,7 @@ var dungeons = [
                         && items.FireKey >= 3 //Amother KeyDoor
                       ;
             }
-         },
-         'Highest Skulltula': {
+         }, Highest Skulltula': {
             x: "30.0%",
             y: "25.0%",
             leadsto: "unknown",
@@ -2748,8 +2545,7 @@ var dungeons = [
                         && items.Bow && items.Ocarina && items.SongofTime //2nd Key door, arrow torch, Block of Time
                         && items.FireKey >= 5;
             }
-         },
-         'MQ Volvagia': {
+         }, MQ Volvagia': {
             x: "40.0%",
             y: "25.0%",
             leadsto: "unknown",
@@ -2826,8 +2622,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[7].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots);
             }
-         },
-         'Alcove Skulltula': {
+         }, Alcove Skulltula': {
             x: "79.0%",
             y: "52.0%",
             leadsto: "unknown",
@@ -2836,8 +2631,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[7].found == true && items.Hookshot && (items.Bombs || items.Scale) && items.ZoraLetter && items.Ocarina && items.ZeldasLullaby;
             },
-         },
-         'Ice Block Puzzle Skulltula': {
+         }, Ice Block Puzzle Skulltula': {
             x: "31.0%",
             y: "32.0%",
             leadsto: "unknown",
@@ -2866,8 +2660,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[7].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots);
             }
-         },
-         'Alcove Switch Chest': {
+         }, Alcove Switch Chest': {
             x: "79.0%",
             y: "62.0%",
             leadsto: "unknown",
@@ -2876,8 +2669,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[7].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots);
             }
-         },
-         'Red Ice Skulltula': {
+         }, Red Ice Skulltula': {
             x: "66.0%",
             y: "16.0%",
             leadsto: "unknown",
@@ -2886,8 +2678,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[7].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots) && items.SongofTime;
             }
-         },
-         'Pilar Chest': {
+         }, Pilar Chest': {
             x: "69.0%",
             y: "7.0%",
             leadsto: "unknown",
@@ -2896,8 +2687,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[7].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots);
             }
-         },
-         'Frozen Freestanding': {
+         }, Frozen Freestanding': {
             x: "79.0%",
             y: "15.0%",
             leadsto: "unknown",
@@ -2906,8 +2696,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[7].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots);
             }
-         },
-         'Scarecrow Skulltula': {
+         }, Scarecrow Skulltula': {
             x: "26.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -2916,8 +2705,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[7].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots);
             }
-         },
-         'Crystal Switch Skulltula': {
+         }, Crystal Switch Skulltula': {
             x: "21.5%",
             y: "35.0%",
             leadsto: "unknown",
@@ -2926,8 +2714,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[7].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots);
             }
-         },
-         'Stalfos Chest': {
+         }, Stalfos Chest': {
             x: "28.0%",
             y: "60.0%",
             leadsto: "unknown",
@@ -2936,8 +2723,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[7].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) && (items.ZoraLetter || OpenFountain) && ((items.ZeldasLullaby && items.Ocarina) || items.HoverBoots);
             }
-         },
-         'MQ Sheik Song': {
+         }, MQ Sheik Song': {
             x: "30.0%",
             y: "62.0%",
             leadsto: "unknown",
@@ -2975,8 +2761,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[8].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.IronBoots && items.Hookshot) || (items.Scale >= 2 && items.Hookshot >= 2 && items.Ocarina && items.ZeldasLullaby);
             }
-         },
-         'Spike Ball Chest': {
+         }, Spike Ball Chest': {
             x: "10.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -2985,8 +2770,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[8].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.IronBoots && items.Hookshot) || (items.Scale >= 2 && items.Hookshot >= 2);
             }
-         },
-         'Torches to Shellblades': {
+         }, Torches to Shellblades': {
             x: "15.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -2995,8 +2779,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[8].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && ((items.IronBoots && items.Hookshot) || (items.Scale >= 2 && items.Hookshot >= 2)) && (items.Bow || (items.Dins && items.Magic)) && items.Ocarina && items.ZeldasLullaby;
             }
-         },
-         'Cracked Wall': {
+         }, Cracked Wall': {
             x: "20.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -3005,8 +2788,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[8].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && ((items.IronBoots && items.Hookshot) && (items.Bombs || (items.Bombchu && BombchuLogic))) || ((items.Scale >= 2 && items.Hookshot >= 2) && items.Ocarina && items.ZeldasLullaby);
             }
-         },
-         'Central Bow Target': {
+         }, Central Bow Target': {
             x: "25.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -3015,8 +2797,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[8].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && ((items.IronBoots && items.Hookshot) || (items.Scale >= 2 && items.Hookshot >= 2)) && items.Bow && items.Glove && items.Ocarina && items.ZeldasLullaby && (items.HoverBoots || items.Hookshot >= 2);
             }
-         },
-         'Basement Key Door to Skulltula': {
+         }, Basement Key Door to Skulltula': {
             x: "30.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -3025,8 +2806,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[8].found == true && (items.IronBoots && items.Hookshot) || (items.Scale >= 2 && items.Hookshot >= 2 && items.Ocarina && items.ZeldasLullaby) && items.WaterKey && items.Bombs;
             }
-         },
-         'Boulder Hall Skulltula': {
+         }, Boulder Hall Skulltula': {
             x: "35.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -3035,8 +2815,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[8].found == true && items.WaterKey && items.IronBoots && items.Hookshot && ((items.Bombs && items.Glove) || items.HoverBoots || items.Hookshot >= 2);
             }
-         },
-         'Boulder Hall Chest': {
+         }, Boulder Hall Chest': {
             x: "40.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -3045,8 +2824,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[8].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.WaterKey >= 2 && ((items.IronBoots && items.Hookshot) || (items.Scale >= 2 && items.Hookshot >= 2)) && (((items.Bombs || (items.Bombchu && BombchuLogic)) && items.Glove) || items.HoverBoots) && (items.Hookshot >= 2 || items.HoverBoots);
             }
-         },
-         'Top of Central Pillar Skulltula': {
+         }, Top of Central Pillar Skulltula': {
             x: "45.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -3055,8 +2833,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[8].found == true && items.IronBoots && (items.WaterKey && items.Ocarina && items.ZeldasLullaby) || (items.Bow && items.Ocarina && items.ZeldasLullaby) && items.Hookshot >= 2;
             }
-         },
-         'Central Pillar Basement': {
+         }, Central Pillar Basement': {
             x: "50.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -3065,8 +2842,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[8].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.WaterKey || items.Bow) && items.IronBoots && items.Hookshot && items.Ocarina && items.ZeldasLullaby;
             }
-         },
-         'Dragon Mouth Switch Chest': {
+         }, Dragon Mouth Switch Chest': {
             x: "55.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -3075,8 +2851,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[8].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && ((items.IronBoots && items.Hookshot) || (items.Scale >= 2 && items.Hookshot >= 2)) && items.Ocarina && (((items.SongofTime && items.Bow && items.WaterKey >= 2)) || (items.ZeldasLullaby && items.Glove));
             }
-         },
-         'Platform Room Skulltula': {
+         }, Platform Room Skulltula': {
             x: "60.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -3085,8 +2860,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[8].found == true && items.WaterKey && items.Hookshot >= 2;
             }
-         },
-         'Dark Link': {
+         }, Dark Link': {
             x: "65.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -3095,8 +2869,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[8].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.WaterKey >= 2 && ((items.IronBoots && items.Hookshot) || (items.Scale >= 2 && items.Hookshot >= 2));
             }
-         },
-         'River Skulltula': {
+         }, River Skulltula': {
             x: "70.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -3105,8 +2878,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[8].found == true && items.SongofTime && items.IronBoots && items.Hookshot;
             }
-         },
-         'River Eye Switch Chest': {
+         }, River Eye Switch Chest': {
             x: "75.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -3115,8 +2887,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[8].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.WaterKey >= 2 && ((items.IronBoots && items.Hookshot) || (items.Scale >= 2 && items.Hookshot >= 2)) && items.Ocarina && items.SongofTime && items.Bow;
             }
-         },
-         'Morpha': {
+         }, Morpha': {
             x: "80.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -3125,8 +2896,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[8].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && ((items.IronBoots && items.Hookshot >= 2) || (items.Scale >= 2 && items.Hookshot >= 2)) && items.BossWater;
             }
-         },
-         'Stalfos Chest': {
+         }, Stalfos Chest': {
             x: "10.0%",
             y: "25.0%",
             leadsto: "unknown",
@@ -3137,8 +2907,7 @@ var dungeons = [
                        && items.Magic && ((items.Bow && items.Fire) || items.Dins) //Torches to enter room
                        ;
             }
-         },
-         'Open Wall Chest': {
+         }, Open Wall Chest': {
             x: "20.0%",
             y: "25.0%",
             leadsto: "unknown",
@@ -3150,8 +2919,7 @@ var dungeons = [
                         && items.Ocarina && items.ZeldasLullaby) //Underwater or Gold Scale & ZL
                        );
             }
-         },
-         'Scarecrow Skulltula': {
+         }, Scarecrow Skulltula': {
             x: "30.0%",
             y: "25.0%",
             leadsto: "unknown",
@@ -3160,8 +2928,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[8].found == true && items.IronBoots && items.Hookshot >= 1 && items.Ocarina && items.Scarecrow >=2 && items.Magic && items.Bow && items.Fire;
             }
-         },
-         'Blue Switch Skulltula': {
+         }, Blue Switch Skulltula': {
             x: "40.0%",
             y: "25.0%",
             leadsto: "unknown",
@@ -3170,8 +2937,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[8].found == true && (items.IronBoots || items.Scale >= 2) && items. Hookshot >= 2 && items.Ocarina && items.ZeldasLullaby;
             }
-         },
-         'Lizalfos Hallway Skulltula': {
+         }, Lizalfos Hallway Skulltula': {
             x: "50.0%",
             y: "25.0%",
             leadsto: "unknown",
@@ -3182,8 +2948,7 @@ var dungeons = [
                        && items.Magic && items.Dins //Torches to enter room
                        ;
             }
-         },
-         'Lizalfos Chest': {
+         }, Lizalfos Chest': {
             x: "60.0%",
             y: "25.0%",
             leadsto: "unknown",
@@ -3194,8 +2959,7 @@ var dungeons = [
                        && items.Magic && ((items.Bow && items.Fire) || items.Dins) //Torches
                        ;
             }
-         },
-         'MQ Central Pillar Basement': {
+         }, MQ Central Pillar Basement': {
             x: "70.0%",
             y: "25.0%",
             leadsto: "unknown",
@@ -3206,8 +2970,7 @@ var dungeons = [
                        && items.Magic && ( (items.Bow && items.Fire) || (items.Dins && items.Ocarina && items.SongofTime) ) //Torches at the top of Pillar
                        );
             }
-         },
-         'Dins Ontop Water Jet': {
+         }, Dins Ontop Water Jet': {
             x: "80.0%",
             y: "25.0%",
             leadsto: "unknown",
@@ -3218,8 +2981,7 @@ var dungeons = [
                        && items.Magic && items.Dins && items.WaterKey >= 1 //Jet room access
                        ;
             }
-         },
-         'Basement Crate Freestanding': {
+         }, Basement Crate Freestanding': {
             x: "10.0%",
             y: "20.0%",
             leadsto: "unknown",
@@ -3230,8 +2992,7 @@ var dungeons = [
                        && (items.Hookshot >= 2 || items.HoverBoots) //Get over the spikes
                        ;
             }
-         },
-         'MQ Morpha': {
+         }, MQ Morpha': {
             x: "20.0%",
             y: "20.0%",
             leadsto: "unknown",
@@ -3242,8 +3003,7 @@ var dungeons = [
                        && items.BossWater && items.Hookshot >= 2 //Boos door access
                        ;
             }
-         },
-         'MQ River Skulltula': {
+         }, MQ River Skulltula': {
             x: "30.0%",
             y: "20.0%",
             leadsto: "unknown",
@@ -3254,8 +3014,7 @@ var dungeons = [
                        && items.WaterKey >= 1 //Fight Stalfos and Dark Link
                        ;
             }
-         },
-         'Dodongo Skulltula': {
+         }, Dodongo Skulltula': {
             x: "40.0%",
             y: "20.0%",
             leadsto: "unknown",
@@ -3295,8 +3054,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[9].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Bow;
             }
-         },
-         'Lobby Left Chest': {
+         }, Lobby Left Chest': {
             x: "10.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -3305,8 +3063,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[9].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Bow;
             }
-         },
-         'Stalfos Room': {
+         }, Stalfos Room': {
             x: "15.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -3315,8 +3072,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[9].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen());
             }
-         },
-         'Wolfos Room': {
+         }, Wolfos Room': {
             x: "20.0%",
             y: "5.0%",
            type: "chest",
@@ -3324,8 +3080,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[9].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Hookshot;
             }
-         },
-         'Like Like Open Chest': {
+         }, Like Like Open Chest': {
             x: "25.0%",
             y: "5.0%",
            type: "chest",
@@ -3333,8 +3088,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[9].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Hookshot && items.Glove >= 2;
             }
-         },
-         'Like Like Room 1st Chest': {
+         }, Like Like Room 1st Chest': {
             x: "30.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -3343,8 +3097,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[9].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Hookshot && items.Glove >= 2;
             }
-         },
-         'Like Like Room 2nd Chest': {
+         }, Like Like Room 2nd Chest': {
             x: "35.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -3353,8 +3106,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[9].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Hookshot && items.Glove >= 2;
             }
-         },
-         'Like Like Invisible Chest': {
+         }, Like Like Invisible Chest': {
             x: "40.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -3363,8 +3115,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[9].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Hookshot && items.Glove >= 2;
             }
-         },
-         'Cyclops Statue Eyes': {
+         }, Cyclops Statue Eyes': {
             x: "45.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -3373,8 +3124,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[9].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Hookshot && items.Bow && (items.SongofTime || items.HoverBoots || items.Hookshot >= 2 || (items.Hookshot));
             }
-         },
-         'Cyclops Room Top Room': {
+         }, Cyclops Room Top Room': {
             x: "50.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -3383,8 +3133,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[9].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Hookshot && items.Bow;
             }
-         },
-         'Fire Enemies Clear': {
+         }, Fire Enemies Clear': {
             x: "55.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -3393,8 +3142,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[9].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Hookshot;
             }
-         },
-         'Fire Trap Chest': {
+         }, Fire Trap Chest': {
             x: "60.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -3403,8 +3151,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[9].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Hookshot;
             }
-         },
-         'Maze Right Freestanding': {
+         }, Maze Right Freestanding': {
             x: "65.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -3413,8 +3160,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[9].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && ((items.Ocarina && items.SongofTime) || items.GTGKey >= 2);
             }
-         },
-         'Maze Right Central Chest': {
+         }, Maze Right Central Chest': {
             x: "70.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -3423,8 +3169,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[9].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && ((items.Ocarina && items.SongofTime) || items.GTGKey >= 2);
             }
-         },
-         'Maze Right Side Chest': {
+         }, Maze Right Side Chest': {
             x: "75.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -3433,8 +3178,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[9].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && ((items.Ocarina && items.SongofTime) || items.GTGKey >= 2);
             }
-         },
-         'Underwater Silver Rupees': {
+         }, Underwater Silver Rupees': {
             x: "80.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -3443,8 +3187,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[9].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Hookshot && items.Ocarina && items.SongofTime && items.IronBoots;
             }
-         },
-         'Beamos Room': {
+         }, Beamos Room': {
             x: "85.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -3453,8 +3196,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[9].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && (items.Bombs || (items.Bombchu && BombchuLogic));
             }
-         },
-         'Left 1 Key Hidden Ceiling': {
+         }, Left 1 Key Hidden Ceiling': {
             x: "90.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -3463,8 +3205,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[9].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.GTGKey && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen());
             }
-         },
-         'Left 2 Key Chest': {
+         }, Left 2 Key Chest': {
             x: "95.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -3473,8 +3214,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[9].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.GTGKey >= 2 && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen());
             }
-         },
-         'Left 4 Key Chest': {
+         }, Left 4 Key Chest': {
             x: "5.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -3483,8 +3223,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[9].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.GTGKey >= 4 && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen());
             }
-         },
-         'Left 5 Key Chest': {
+         }, Left 5 Key Chest': {
             x: "10.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -3493,8 +3232,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[9].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.GTGKey >= 5 && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen());
             }
-         },
-         'Maze Center Chest': {
+         }, Maze Center Chest': {
             x: "15.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -3503,8 +3241,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[9].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.GTGKey >= 7 && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen());
             }
-         },
-         'MQ Lobby Left': {
+         }, MQ Lobby Left': {
             x: "20.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -3512,8 +3249,7 @@ var dungeons = [
             access: "master",
             isAvailable: function () {
                return dungeons[9].found == true && items.Membership; }
-         },
-         'MQ Lobby Right': {
+         }, MQ Lobby Right': {
             x: "25.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -3521,8 +3257,7 @@ var dungeons = [
             access: "master",
             isAvailable: function () {
                return dungeons[9].found == true && items.Membership; }
-         },
-         'White Iron Knuckle': {
+         }, White Iron Knuckle': {
             x: "30.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -3530,8 +3265,7 @@ var dungeons = [
             access: "master",
             isAvailable: function () {
                return dungeons[9].found == true && items.Membership; }
-         },
-         'Skulltula and Stalfos': {
+         }, Skulltula and Stalfos': {
             x: "35.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -3539,8 +3273,7 @@ var dungeons = [
             access: "master",
             isAvailable: function () {
                return dungeons[9].found == true && items.Membership; }
-         },
-         'Silver Block Chest': {
+         }, Silver Block Chest': {
             x: "40.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -3548,8 +3281,7 @@ var dungeons = [
             access: "master",
             isAvailable: function () {
                return dungeons[9].found == true && items.Membership; }
-         },
-         'Crystal Switch Chest': {
+         }, Crystal Switch Chest': {
             x: "45.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -3557,8 +3289,7 @@ var dungeons = [
             access: "master",
             isAvailable: function () {
                return dungeons[9].found == true && items.Membership; }
-         },
-         'Black Iron Knuckle': {
+         }, Black Iron Knuckle': {
             x: "50.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -3566,8 +3297,7 @@ var dungeons = [
             access: "master",
             isAvailable: function () {
                return dungeons[9].found == true && items.Membership; }
-         },
-         'MQ Fire Trap Chest': {
+         }, MQ Fire Trap Chest': {
             x: "55.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -3575,8 +3305,7 @@ var dungeons = [
             access: "master",
             isAvailable: function () {
                return dungeons[9].found == true && items.Membership; }
-         },
-         'MQ Underwater Silver Rupees': {
+         }, MQ Underwater Silver Rupees': {
             x: "60.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -3584,8 +3313,7 @@ var dungeons = [
             access: "master",
             isAvailable: function () {
                return dungeons[9].found == true && items.Membership; }
-         },
-         'MQ Maze Right 1': {
+         }, MQ Maze Right 1': {
             x: "65.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -3593,8 +3321,7 @@ var dungeons = [
             access: "master",
             isAvailable: function () {
                return dungeons[9].found == true && items.Membership; }
-         },
-         'MQ Maze Right 2': {
+         }, MQ Maze Right 2': {
             x: "65.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -3602,8 +3329,7 @@ var dungeons = [
             access: "master",
             isAvailable: function () {
                return dungeons[9].found == true && items.Membership; }
-         },
-         'Dinosaur Room': {
+         }, Dinosaur Room': {
             x: "70.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -3611,8 +3337,7 @@ var dungeons = [
             access: "master",
             isAvailable: function () {
                return dungeons[9].found == true && items.Membership; }
-         },
-         'Maze Left Hidden Ceiling': {
+         }, Maze Left Hidden Ceiling': {
             x: "75.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -3620,8 +3345,7 @@ var dungeons = [
             access: "master",
             isAvailable: function () {
                return dungeons[9].found == true && items.Membership; }
-         },
-         'Maze Left Unlocked 1': {
+         }, Maze Left Unlocked 1': {
             x: "80.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -3629,8 +3353,7 @@ var dungeons = [
             access: "master",
             isAvailable: function () {
                return dungeons[9].found == true && items.Membership; }
-         },
-         'Maze Left Unlocked 2': {
+         }, Maze Left Unlocked 2': {
             x: "80.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -3638,8 +3361,7 @@ var dungeons = [
             access: "master",
             isAvailable: function () {
                return dungeons[9].found == true && items.Membership; }
-         },
-         'Maze Left Locked Chest': {
+         }, Maze Left Locked Chest': {
             x: "85.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -3647,8 +3369,7 @@ var dungeons = [
             access: "master",
             isAvailable: function () {
                return dungeons[9].found == true && items.Membership && items.GTGKey >= 1; }
-         },
-         'MQ Maze Center Chest': {
+         }, MQ Maze Center Chest': {
             x: "90.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -3695,8 +3416,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[10].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.RequiemofSpirit && (items.Boomerang || items.Slingshot || (items.Bombchu && BombchuLogic));
             }
-         },
-         'Child Torch Skulltula': {
+         }, Child Torch Skulltula': {
             x: "15.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -3705,8 +3425,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[10].found == true && items.Ocarina && items.RequiemofSpirit && (items.Slingshot || items.Boomerang);
             },
-         },
-         'Child Climb Skulltula': {
+         }, Child Climb Skulltula': {
             x: "20.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -3759,8 +3478,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[10].found == true && items.SpiritKey && (((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.RequiemofSpirit && (items.Bombs || (items.Bombchu && BombchuLogic))) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && items.MasterSword && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic)) && (items.Dins || (items.Fire && items.Bow)) && items.Magic));
             }
-         },
-         'Before Child IronKnuckle Skulltula': {
+         }, Before Child IronKnuckle Skulltula': {
             x: "45.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -3789,8 +3507,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[10].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && ((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && items.Hookshot && items.Ocarina && items.ZeldasLullaby;
             }
-         },
-         'Song of Time Skulltula': {
+         }, Song of Time Skulltula': {
             x: "60.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -3849,8 +3566,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[10].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.SpiritKey && (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic))) && items.Ocarina && items.ZeldasLullaby;
             }
-         },
-         'Top Left Scarecrow Skulltula': {
+         }, Top Left Scarecrow Skulltula': {
             x: "90.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -3929,8 +3645,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[10].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.SpiritKey >= 3 && (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic)) && items.MirrorShield && items.Hookshot && items.BossSpirit);
             }
-         },
-         'Lobby Bottom Left': {
+         }, Lobby Bottom Left': {
             x: "35.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -3940,8 +3655,7 @@ var dungeons = [
                return dungeons[10].found == true && (items.Ocarina && items.RequiemofSpirit) //Child Temple access
                || (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2); // Adult Temple access
             }
-         },
-         'Lobby Top Left': {
+         }, Lobby Top Left': {
             x: "40.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -3953,8 +3667,7 @@ var dungeons = [
                || ((items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
                && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Bow); //Boulder and eye switch
             }
-         },
-         'Lobby Top Right': {
+         }, Lobby Top Right': {
             x: "45.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -3966,8 +3679,7 @@ var dungeons = [
                || ((items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
                && items.Bow); //Eye Switch
             }
-         },
-         'Slug Room Chest': {
+         }, Slug Room Chest': {
             x: "50.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -3976,8 +3688,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[10].found == true && items.Ocarina && items.RequiemofSpirit && items.Glove >= 2 && items.Hammer;
             }
-         },
-         'Anubis Free Chest': {
+         }, Anubis Free Chest': {
             x: "55.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -3986,8 +3697,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[10].found == true && items.Ocarina && items.RequiemofSpirit;
             }
-         },
-         'Anubis Fight Chest': {
+         }, Anubis Fight Chest': {
             x: "60.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -3996,8 +3706,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[10].found == true && items.Ocarina && items.RequiemofSpirit && items.Bombchu && items.Slingshot && items.Magic && items.Dins; //Kill Anubis and long way around
             }
-         },
-         'Dodongo Chest': {
+         }, Dodongo Chest': {
             x: "65.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -4008,8 +3717,7 @@ var dungeons = [
                || (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2)
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2; //Adult statue room access
             }
-         },
-         'Statue Room Eye Switch': {
+         }, Statue Room Eye Switch': {
             x: "70.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -4020,8 +3728,7 @@ var dungeons = [
                || (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2)
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.Bow;
             }
-         },
-         'Shortcut Hallway Eye Switch': {
+         }, Shortcut Hallway Eye Switch': {
             x: "75.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -4034,8 +3741,7 @@ var dungeons = [
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 
                && ((items.Slingshot && items.Ocarina && items.RequiemofSpirit) || items.Bow) && items.Magic && (items.Dins || (items.Bow && items.Fire)); //Adult opens
             }
-         },
-         'MQ Sunblock Chest': {
+         }, MQ Sunblock Chest': {
             x: "80.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -4046,8 +3752,7 @@ var dungeons = [
                || (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2)
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.Ocarina && items.SongofTime && items.SpiritKey >= 1; //As Asult
             }
-         },
-         'Sunblock Room Skulltula': {
+         }, Sunblock Room Skulltula': {
             x: "85.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -4058,8 +3763,7 @@ var dungeons = [
                || (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.Ocarina && items.SongofTime && items.SpiritKey >= 1; //As Asult
             }
-         },
-         'MQ Colossus Right Hand': {
+         }, MQ Colossus Right Hand': {
             x: "90.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -4070,8 +3774,7 @@ var dungeons = [
                || (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2)
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.Ocarina && items.SongofTime && items.SpiritKey >= 2; //As Adult
             }
-         },
-         'Dodongo Room Adult Chest': {
+         }, Dodongo Room Adult Chest': {
             x: "10.0%",
             y: "15.0%",
             leadsto: "unknown",
@@ -4081,8 +3784,7 @@ var dungeons = [
                return dungeons[10].found == true && (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.SpiritKey >= 1;
             }
-         },
-         'Statue Room Lower Chest': {
+         }, Statue Room Lower Chest': {
             x: "10.0%",
             y: "20.0%",
             leadsto: "unknown",
@@ -4092,8 +3794,7 @@ var dungeons = [
                return dungeons[10].found == true && (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.Ocarina && items.ZeldasLullaby; 
             }
-         },
-         'Statue Room Upper Chest': {
+         }, Statue Room Upper Chest': {
             x: "10.0%",
             y: "30.0%",
             leadsto: "unknown",
@@ -4103,8 +3804,7 @@ var dungeons = [
                return dungeons[10].found == true && (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.Ocarina && items.ZeldasLullaby; 
             }
-         },
-         'Leever Room Chest': {
+         }, Leever Room Chest': {
             x: "10.0%",
             y: "40.0%",
             leadsto: "unknown",
@@ -4114,8 +3814,7 @@ var dungeons = [
                return dungeons[10].found == true && (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.Bow && items.Magic && items.Fire; //Stalfos Room access
             }
-         },
-         'Leever Room Skulltula': {
+         }, Leever Room Skulltula': {
             x: "10.0%",
             y: "50.0%",
             leadsto: "unknown",
@@ -4125,8 +3824,7 @@ var dungeons = [
                return dungeons[10].found == true && (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.Bow && items.Magic && items.Fire; //Stalfos Room access
             }
-         },
-         'Child Songs Halfpipe': {
+         }, Child Songs Halfpipe': {
             x: "10.0%",
             y: "60.0%",
             leadsto: "unknown",
@@ -4137,8 +3835,7 @@ var dungeons = [
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.Bow && items.Magic && items.Fire
                && items.Ocarina && items.ZeldasLullaby && items.EponasSong && items.SunsSong && items.SongofStorms && items.SongofTime; 
             }
-         },
-         'Songs Halfpipe Skulltula': {
+         }, Songs Halfpipe Skulltula': {
             x: "10.0%",
             y: "70.0%",
             leadsto: "unknown",
@@ -4149,8 +3846,7 @@ var dungeons = [
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.Bow && items.Magic && items.Fire
                && items.Ocarina && items.ZeldasLullaby && items.EponasSong && items.SunsSong && items.SongofStorms && items.SongofTime; 
             }
-         },
-         'Lobby Bottom Right': {
+         }, Lobby Bottom Right': {
             x: "10.0%",
             y: "80.0%",
             leadsto: "unknown",
@@ -4160,8 +3856,7 @@ var dungeons = [
                return dungeons[10].found == true && (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.Bow && items.Magic && items.Fire && items.Hammer; 
             }
-         },
-         'Beamos Room Chest': {
+         }, Beamos Room Chest': {
             x: "10.0%",
             y: "90.0%",
             leadsto: "unknown",
@@ -4171,8 +3866,7 @@ var dungeons = [
                return dungeons[10].found == true && (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.SpiritKey >= 1 && items.Bombs || items.Bombchu; 
             }
-         },
-         'Dinalfos Chest': {
+         }, Dinalfos Chest': {
             x: "15.0%",
             y: "95.0%",
             leadsto: "unknown",
@@ -4183,8 +3877,7 @@ var dungeons = [
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.SpiritKey >= 1 
                && items.Ocarina && items.SongofTime; //SOT puzzle in Beamos Room
             }
-         },
-         'Gibdo Room Chest': {
+         }, Gibdo Room Chest': {
             x: "15.0%",
             y: "85.0%",
             leadsto: "unknown",
@@ -4195,8 +3888,7 @@ var dungeons = [
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.SpiritKey >= 1 
                && items.Ocarina && items.SongofTime && items.MirrorShield;
             }
-         },
-         'MQ Colossus Left Hand': {
+         }, MQ Colossus Left Hand': {
             x: "15.0%",
             y: "75.0%",
             leadsto: "unknown",
@@ -4206,8 +3898,7 @@ var dungeons = [
                return dungeons[10].found == true && (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.SpiritKey >= 1;
             }
-         },
-         'Highest Chest': {
+         }, Highest Chest': {
             x: "15.0%",
             y: "65.0%",
             leadsto: "unknown",
@@ -4217,8 +3908,7 @@ var dungeons = [
                return dungeons[10].found == true && (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.SpiritKey >= 2;
             }
-         },
-         'Knuckle Skulltula 1': {
+         }, Knuckle Skulltula 1': {
             x: "15.0%",
             y: "55.0%",
             leadsto: "unknown",
@@ -4228,8 +3918,7 @@ var dungeons = [
                return dungeons[10].found == true && (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.SpiritKey >= 3;
             }
-         },
-         'Knuckle Skulltula 2': {
+         }, Knuckle Skulltula 2': {
             x: "15.0%",
             y: "55.0%",
             leadsto: "unknown",
@@ -4239,8 +3928,7 @@ var dungeons = [
                return dungeons[10].found == true && (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.SpiritKey >= 3;
             }
-         },
-         'MQ TwinRova': {
+         }, MQ TwinRova': {
             x: "15.0%",
             y: "45.0%",
             leadsto: "unknown",
@@ -4280,8 +3968,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[11].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.NocturneofShadow && items.Magic && items.Dins && (items.HoverBoots || items.Hookshot);
             }
-         },
-         'Deadhand Chest': {
+         }, Deadhand Chest': {
             x: "10.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -4290,8 +3977,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[11].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.NocturneofShadow && items.Magic && items.Magic && items.Dins && (items.HoverBoots || items.Hookshot);
             }
-         },
-         '1st Gibdos Room': {
+         }, 1st Gibdos Room': {
             x: "15.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -4300,8 +3986,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[11].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots;
             }
-         },
-         '1st Silver Rupees': {
+         }, 1st Silver Rupees': {
             x: "20.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -4310,8 +3995,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[11].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots;
             }
-         },
-         'Silver Rupee Skulltula': {
+         }, Silver Rupee Skulltula': {
             x: "25.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -4320,8 +4004,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[11].found == true && items.ShadowKey && items.Ocarina && items.NocturneofShadow && items.Dins && items.Magic && items.Lens && items.HoverBoots && items.Bombs;
             },
-         },
-         'Like Like Visible': {
+         }, Like Like Visible': {
             x: "30.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -4330,8 +4013,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[11].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ShadowKey && items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots && (items.Bombs || (items.Bombchu && BombchuLogic));
             }
-         },
-         'Like Like Invisible': {
+         }, Like Like Invisible': {
             x: "35.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -4340,8 +4022,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[11].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ShadowKey && items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots && (items.Bombs || (items.Bombchu && BombchuLogic));
             }
-         },
-         'Crusher Skulltula': {
+         }, Crusher Skulltula': {
             x: "40.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -4350,8 +4031,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[11].found == true && items.ShadowKey && items.Ocarina && items.NocturneofShadow && items.Dins && items.Magic && items.Lens && items.HoverBoots && items.Bombs;
             },
-         },
-         'Crusher Lower Chest': {
+         }, Crusher Lower Chest': {
             x: "45.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -4360,8 +4040,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[11].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ShadowKey && items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots && (items.Bombs || (items.Bombchu && BombchuLogic));
             }
-         },
-         'Crusher Upper Chest': {
+         }, Crusher Upper Chest': {
             x: "50.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -4370,8 +4049,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[11].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ShadowKey && items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Glove;
             }
-         },
-         'Crusher Switch Chest': {
+         }, Crusher Switch Chest': {
             x: "55.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -4380,8 +4058,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[11].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ShadowKey && items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Glove;
             }
-         },
-         'Readeads and Rupees': {
+         }, Readeads and Rupees': {
             x: "60.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -4390,8 +4067,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[11].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ShadowKey >= 2 && items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots && (items.Bombs || (items.Bombchu && BombchuLogic));
             }
-         },
-         'Single Skull Pot Skulltula': {
+         }, Single Skull Pot Skulltula': {
             x: "65.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -4400,8 +4076,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[11].found == true && items.ShadowKey >= 2 && items.Ocarina && items.NocturneofShadow && items.Dins && items.Magic && items.Lens && items.HoverBoots && items.Bombs && items.Hookshot;
             },
-         },
-         'Skull Pot Bombing': {
+         }, Skull Pot Bombing': {
             x: "70.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -4410,8 +4085,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[11].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ShadowKey >= 2 && items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Hookshot;
             }
-         },
-         'Readeads and Hint': {
+         }, Readeads and Hint': {
             x: "75.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -4420,8 +4094,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[11].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ShadowKey >= 3 && items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Hookshot;
             }
-         },
-         '2nd Gibdos Room': {
+         }, 2nd Gibdos Room': {
             x: "80.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -4430,8 +4103,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[11].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ShadowKey >= 3 && items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Hookshot;
             }
-         },
-         'Gibdos Hidden Chest': {
+         }, Gibdos Hidden Chest': {
             x: "85.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -4440,8 +4112,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[11].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ShadowKey >= 3 && items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Hookshot;
             }
-         },
-         'Before Boat Skulltula': {
+         }, Before Boat Skulltula': {
             x: "90.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -4450,8 +4121,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[11].found == true && items.ShadowKey >= 3 && items.Ocarina && items.NocturneofShadow && items.Dins && items.Magic && items.Lens && items.HoverBoots && items.Bombs && items.Hookshot && items.Glove;
             },
-         },
-         'Floormaster Room': {
+         }, Floormaster Room': {
             x: "95.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -4460,8 +4130,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[11].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ShadowKey >= 4 && items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Hookshot && items.Glove && items.Ocarina && items.ZeldasLullaby;
             }
-         },
-         'Triple Skull Pot Skulltula': {
+         }, Triple Skull Pot Skulltula': {
             x: "5.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -4470,8 +4139,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[11].found == true && items.ShadowKey >= 4 && items.Ocarina && items.NocturneofShadow && items.Dins && items.Magic && items.Lens && items.HoverBoots && items.Bombs && items.Hookshot && items.Glove && items.ZeldasLullaby;
             },
-         },
-         'Spike Wall 1': {
+         }, Spike Wall 1': {
             x: "10.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -4480,8 +4148,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[11].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ShadowKey >= 4 && items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Hookshot && items.Glove && items.Ocarina && items.ZeldasLullaby;
             }
-         },
-         'Spike Wall  2': {
+         }, Spike Wall  2': {
             x: "10.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -4490,8 +4157,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[11].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ShadowKey >= 4 && items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Hookshot && items.Glove && items.Ocarina && items.ZeldasLullaby;
             }
-         },
-         'Bongo Bongo': {
+         }, Bongo Bongo': {
             x: "15.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -4500,8 +4166,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[11].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ShadowKey >= 5 && items.BossShadow && (items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Hookshot && items.Glove && items.Ocarina && items.ZeldasLullaby && (items.Bow || items.Scarecrow >= 2));
             }
-         },
-         '1st Redead Room': {
+         }, 1st Redead Room': {
             x: "20.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -4511,8 +4176,7 @@ var dungeons = [
                return dungeons[11].found == true && items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) //Temple access
                && items.Bombs && items.ShadowKey >= 1; //Bombwall + keydoor
             }
-         },
-         '1st Deadhand Chest': {
+         }, 1st Deadhand Chest': {
             x: "25.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -4523,8 +4187,7 @@ var dungeons = [
                && items.Bombs && items.ShadowKey >= 1
                && items.SongofTime && items.Bow; //Block of time + eye switch
             }
-         },
-         'MQ 1st Gibdos Room': {
+         }, MQ 1st Gibdos Room': {
             x: "30.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -4533,8 +4196,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[11].found == true && items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire; //Deeper access
             }
-         },
-         'Skulltulas and Ruppees': {
+         }, Skulltulas and Ruppees': {
             x: "35.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -4543,8 +4205,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[11].found == true && items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire; //Deeper access
             }
-         },
-         'Fall to Dock Invisible': {
+         }, Fall to Dock Invisible': {
             x: "40.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -4553,8 +4214,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[11].found == true && items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire; //Deeper access
             }
-         },
-         'MQ Like Like Visible': {
+         }, MQ Like Like Visible': {
             x: "45.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -4564,8 +4224,7 @@ var dungeons = [
                return dungeons[11].found == true && items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 1; //Deeper access
             }
-         },
-         'MQ Like Like Invisible': {
+         }, MQ Like Like Invisible': {
             x: "50.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -4575,8 +4234,7 @@ var dungeons = [
                return dungeons[11].found == true && items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 1; //Deeper access
             }
-         },
-         'Beamos Silver Rupees': {
+         }, Beamos Silver Rupees': {
             x: "55.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -4586,8 +4244,7 @@ var dungeons = [
                return dungeons[11].found == true && items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 1 && items.Hookshot >= 2; //Longshot requireq for a rupee
             }
-         },
-         'MQ Crusher Skulltula': {
+         }, MQ Crusher Skulltula': {
             x: "60.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -4597,8 +4254,7 @@ var dungeons = [
                return dungeons[11].found == true && items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 1 && items.Hookshot;
             }
-         },
-         'MQ Crusher Lower Chest': {
+         }, MQ Crusher Lower Chest': {
             x: "65.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -4608,8 +4264,7 @@ var dungeons = [
                return dungeons[11].found == true && items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 1;
             }
-         },
-         'MQ Crusher Upper Chest': {
+         }, MQ Crusher Upper Chest': {
             x: "70.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -4619,8 +4274,7 @@ var dungeons = [
                return dungeons[11].found == true && items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 1;
             }
-         },
-         'MQ Crusher Switch Chest': {
+         }, MQ Crusher Switch Chest': {
             x: "75.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -4630,8 +4284,7 @@ var dungeons = [
                return dungeons[11].found == true && items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 1;
             }
-         },
-         'MQ Redeads and Rupees': {
+         }, MQ Redeads and Rupees': {
             x: "80.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -4641,8 +4294,7 @@ var dungeons = [
                return dungeons[11].found == true && items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 2;
             }
-         },
-         'Stalfos Chest': {
+         }, Stalfos Chest': {
             x: "85.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -4652,8 +4304,7 @@ var dungeons = [
                return dungeons[11].found == true && items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 2 && items.Hookshot >= 2;
             }
-         },
-         'MQ Redeads invisible Chest': {
+         }, MQ Redeads invisible Chest': {
             x: "90.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -4663,8 +4314,7 @@ var dungeons = [
                return dungeons[11].found == true && items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 3 && items.Hookshot >= 2;
             }
-         },
-         '2nd Redead Skulltula': {
+         }, 2nd Redead Skulltula': {
             x: "95.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -4674,8 +4324,7 @@ var dungeons = [
                return dungeons[11].found == true && items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 3 && items.Hookshot >= 2;
             }
-         },
-         'MQ 2nd Gibdos Chest': {
+         }, MQ 2nd Gibdos Chest': {
             x: "5.0%",
             y: "15.0%",
             leadsto: "unknown",
@@ -4685,8 +4334,7 @@ var dungeons = [
                return dungeons[11].found == true && items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 3 && items.Hookshot >= 2;
             }
-         },
-         'MQ Gibdos Hidden Chest': {
+         }, MQ Gibdos Hidden Chest': {
             x: "10.0%",
             y: "15.0%",
             leadsto: "unknown",
@@ -4706,8 +4354,7 @@ var dungeons = [
                return dungeons[11].found == true && items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 3 && items.Hookshot >= 2;
             }
-         },
-         'Dark River Skulltula': {
+         }, Dark River Skulltula': {
             x: "25.0%",
             y: "15.0%",
             leadsto: "unknown",
@@ -4717,8 +4364,7 @@ var dungeons = [
                return dungeons[11].found == true && items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 4 && items.Hookshot >= 2 && items.ZeldasLullaby;
             }
-         },
-         'MQ Skull Pot Freestanding': {
+         }, MQ Skull Pot Freestanding': {
             x: "35.0%",
             y: "15.0%",
             leadsto: "unknown",
@@ -4729,8 +4375,7 @@ var dungeons = [
                && items.Bombs && items.ShadowKey >= 4 && items.Hookshot >= 2 && items.ZeldasLullaby
                && items.SongofTime;
             }
-         },
-         'MQ Spike Wall 1 ': {
+         }, MQ Spike Wall 1 ': {
             x: "45.0%",
             y: "15.0%",
             leadsto: "unknown",
@@ -4740,8 +4385,7 @@ var dungeons = [
                return dungeons[11].found == true && items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 5 && items.Hookshot >= 2 && items.ZeldasLullaby && items.SongofTime;
             }
-         },
-         'MQ Spike Wall 2 ': {
+         }, MQ Spike Wall 2 ': {
             x: "45.0%",
             y: "15.0%",
             leadsto: "unknown",
@@ -4751,8 +4395,7 @@ var dungeons = [
                return dungeons[11].found == true && items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 5 && items.Hookshot >= 2 && items.ZeldasLullaby && items.SongofTime;
             }
-         },
-         '2nd Deadhand': {
+         }, 2nd Deadhand': {
             x: "55.0%",
             y: "15.0%",
             leadsto: "unknown",
@@ -4762,8 +4405,7 @@ var dungeons = [
                return dungeons[11].found == true && items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 4 && items.Hookshot >= 2 && items.ZeldasLullaby && items.SongofTime;
             }
-         },
-         'Skulltula Near Boss Door': {
+         }, Skulltula Near Boss Door': {
             x: "65.0%",
             y: "15.0%",
             leadsto: "unknown",
@@ -4773,8 +4415,7 @@ var dungeons = [
                return dungeons[11].found == true && items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 4 && items.Hookshot >= 2 && items.ZeldasLullaby;
             }
-         },
-         'MQ Bongo Bongo': {
+         }, MQ Bongo Bongo': {
             x: "75.0%",
             y: "15.0%",
             leadsto: "unknown",
@@ -5042,8 +4683,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[12].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && generalCanGetChest(this.trials) && items.BossCastle && items.Bow && items.Magic && items.Light;
             }
-         },
-         'Invisible Wall Scrub 1': {
+         }, Invisible Wall Scrub 1': {
             x: "30.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -5052,8 +4692,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen();
             }
-         },
-         'Invisible Wall Scrub 2': {
+         }, Invisible Wall Scrub 2': {
             x: "30.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -5062,8 +4701,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen();
             }
-         },
-         'Invisible Wall Scrub 3': {
+         }, Invisible Wall Scrub 3': {
             x: "30.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -5072,8 +4710,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen();
             }
-         },
-         'Invisible Wall Scrub 4': {
+         }, Invisible Wall Scrub 4': {
             x: "30.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -5082,8 +4719,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen();
             }
-         },
-         'MQ Forest freestanding ': {
+         }, MQ Forest freestanding ': {
             x: "50.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -5092,8 +4728,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen() && items.Hookshot;
             },
-         },
-         'MQ Forest 1 ': {
+         }, MQ Forest 1 ': {
             x: "50.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -5102,8 +4737,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen() && items.Bow;
             },
-         },
-         'MQ Forest 2 ': {
+         }, MQ Forest 2 ': {
             x: "50.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -5112,8 +4746,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen() && items.Magic && (items.Dins || (items.Bow && items.Fire) ); 
             },
-         },
-         'MQ Forest Trial ': {
+         }, MQ Forest Trial ': {
             x: "50.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -5122,8 +4755,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen() && items.Ocarina && items.SongofTime && items.Bow && items.Magic && items.Light;
             },
-         },
-         'MQ Ice chest ': {
+         }, MQ Ice chest ': {
             x: "50.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -5132,8 +4764,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen();
             },
-         },
-         'MQ ice trial ': {
+         }, MQ ice trial ': {
             x: "50.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -5142,8 +4773,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen() && items.Bottle && items.CastleKey && items.Bow && items.Magic && items.Light;
             },
-         },
-         'MQ Shadow 1 ': {
+         }, MQ Shadow 1 ': {
             x: "50.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -5152,8 +4782,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen() && ( (items.Hovers && (items.Bow || items.Bombs || items.Glove || (items.Bombchu && BombchuLogic) ) ) || items.Hookshot && items.Bow );
             },
-         },
-         'MQ Shadow 2 ': {
+         }, MQ Shadow 2 ': {
             x: "50.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -5162,8 +4791,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen() && items.Bow && items.Magic && items.Lens && item.HoverBoots;
             },
-         },
-         'MQ Shadow trial ': {
+         }, MQ Shadow trial ': {
             x: "50.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -5172,8 +4800,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen() && item.Light && items.Bow && items.Magic && items.Lens && item.HoverBoots;
             },
-         },
-         'MQ Fire trial ': {
+         }, MQ Fire trial ': {
             x: "50.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -5182,8 +4809,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen() && items.Glove >= 3 && (items.HoverBoots || items,Hookshot >= 2) && items.Bow && items.Magic && items.Light;
             },
-         },
-         'MQ Light ZL chest ': {
+         }, MQ Light ZL chest ': {
             x: "50.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -5192,8 +4818,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen() && items.Glove >= 3 && items.Ocarina && items.ZeldasLullaby;
             },
-         },
-         'MQ Light trial ': {
+         }, MQ Light trial ': {
             x: "50.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -5202,8 +4827,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen() && items.Glove >= 3 && items.CastleKey >= 2 && items.Hookshot && items.Bow && items.Magic && items.Light;
             },
-         },
-         'MQ Spirit 1 ': {
+         }, MQ Spirit 1 ': {
             x: "50.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -5212,8 +4836,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen() && items.Hammer;
             },
-         },
-         'MQ Spirit 2 ': {
+         }, MQ Spirit 2 ': {
             x: "50.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -5222,8 +4845,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen() && items.Hammer && items.Bombchu;
             },
-         },
-         'MQ Spirit Sun 1 ': {
+         }, MQ Spirit Sun 1 ': {
             x: "50.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -5232,8 +4854,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen() && items.Hammer && items.Bombchu && items.MirrorShield && itemsm.Bow && items.Magic && items.Fire;
             },
-         },
-         'MQ Spirit Sun 2 ': {
+         }, MQ Spirit Sun 2 ': {
             x: "50.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -5242,8 +4863,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen() && items.Hammer && items.Bombchu && items.MirrorShield && itemsm.Bow && items.Magic && items.Fire;
             },
-         },
-         'MQ Spirit Sun 3 ': {
+         }, MQ Spirit Sun 3 ': {
             x: "50.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -5252,8 +4872,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen() && items.Hammer && items.Bombchu && items.MirrorShield && itemsm.Bow && items.Magic && items.Fire;
             },
-         },
-         'MQ Spirit Sun 4 ': {
+         }, MQ Spirit Sun 4 ': {
             x: "50.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -5262,8 +4881,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen() && items.Hammer && items.Bombchu && items.MirrorShield && itemsm.Bow && items.Magic && items.Fire;
             },
-         },
-         'MQ Spirit trial ': {
+         }, MQ Spirit trial ': {
             x: "50.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -5272,8 +4890,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen() && items.Light && items.Hammer && items.Bombchu && items.MirrorShield && itemsm.Bow && items.Magic && items.Fire;
             },
-         },
-         'MQ Scrub 1 ': {
+         }, MQ Scrub 1 ': {
             x: "60.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -5282,8 +4899,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen();
             },
-         },
-         'MQ Scrub 2 ': {
+         }, MQ Scrub 2 ': {
             x: "60.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -5292,8 +4908,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen();
             },
-         },
-         'MQ Scrub 3 ': {
+         }, MQ Scrub 3 ': {
             x: "60.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -5302,8 +4917,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen();
             },
-         },
-         'MQ Scrub 4 ': {
+         }, MQ Scrub 4 ': {
             x: "60.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -5312,8 +4926,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen();
             },
-         },
-         'MQ Scrub 5 ': {
+         }, MQ Scrub 5 ': {
             x: "60.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -5355,8 +4968,7 @@ var dungeons = [
           access: "entrance",
           isAvailable: function () {
                return dungeons[13].found == true; }
-         },
-         'Guard/Ghostbuster House': {
+         }, Guard/Ghostbuster House': {
             x: "10.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -5364,8 +4976,7 @@ var dungeons = [
             access: "door",
                isAvailable: function () {
                   return dungeons[13].found == true ; }
-         },
-         'Pottery Crate Skulltula': {
+         }, Pottery Crate Skulltula': {
             x: "15.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -5387,8 +4998,7 @@ var dungeons = [
                && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && items.BigPoe >= 1;
             }
-         },
-         'Topdown to Market': {
+         }, Topdown to Market': {
           x: "25.0%",
           y: "10.0%",
           type: "entrance",
@@ -5403,8 +5013,7 @@ var dungeons = [
           access: "entrance",
           isAvailable: function () {
                return dungeons[13].found == true; }
-         },
-         'Treasure game': {
+         }, Treasure game': {
             x: "35.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -5425,8 +5034,7 @@ var dungeons = [
                return dungeons[13].found == true && items.Magic && items.Lens
                  && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
-         },
-         'Bombchu Shop': {
+         }, Bombchu Shop': {
             x: "45.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -5436,8 +5044,7 @@ var dungeons = [
                return dungeons[13].found == true && 
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
             }
-         },
-         'Bombchu Sale': {
+         }, Bombchu Sale': {
             x: "50.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -5459,8 +5066,7 @@ var dungeons = [
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) 
                   );
             }
-         },
-         'Back Alley House': {
+         }, Back Alley House': {
             x: "60.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -5471,8 +5077,7 @@ var dungeons = [
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) 
                   );
             }
-         },
-         'Slingshot Shooting': {
+         }, Slingshot Shooting': {
             type: "simple", 
             x: "65.0%",
             y: "10.0%",
@@ -5492,8 +5097,7 @@ var dungeons = [
                return dungeons[13].found == true
                  && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
-         },
-         'Bowling': {
+         }, Bowling': {
             x: "75.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -5526,8 +5130,7 @@ var dungeons = [
                  && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && (items.Bombs || (items.Bombchu && BombchuLogic));
             }
-         },
-         'Market to Castle': {
+         }, Market to Castle': {
              x: "52.5%",
             y: "19.0%",
             leadsto: "unknown",
@@ -5535,8 +5138,7 @@ var dungeons = [
             access: "entrance",
             isAvailable: function () {
                return dungeons[13].found == true; }
-         },
-         'Happy Mask Shop': {
+         }, Happy Mask Shop': {
             x: "90.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -5546,8 +5148,7 @@ var dungeons = [
                return dungeons[13].found == true &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
-         },
-         'Market to Temple': {
+         }, Market to Temple': {
             x: "55.0%",
             y: "22.2%",
             leadsto: "unknown",
@@ -5555,8 +5156,7 @@ var dungeons = [
             access: "entrance",
             isAvailable: function () {
                return dungeons[13].found == true; }
-         },
-         'Potion Shop': {
+         }, Potion Shop': {
             x: "20.0%",
             y: "20.0%",
             leadsto: "unknown",
@@ -5566,8 +5166,7 @@ var dungeons = [
                return dungeons[13].found == true &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
             }
-         },
-         'Potion Sale': {
+         }, Potion Sale': {
             x: "25.0%",
             y: "20.0%",
             leadsto: "unknown",
@@ -5577,8 +5176,7 @@ var dungeons = [
                return dungeons[13].found == true
                  && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
-         },
-         'Bazar': {
+         }, Bazar': {
             x: "30.0%",
             y: "20.0%",
             leadsto: "unknown",
@@ -5588,8 +5186,7 @@ var dungeons = [
                return dungeons[13].found == true &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
-         },
-         'Bazaar Sale': {
+         }, Bazaar Sale': {
             x: "35.0%",
             y: "20.0%",
             leadsto: "unknown",
@@ -5623,8 +5220,7 @@ var dungeons = [
             access: "entrance",
              isAvailable: function () {
                   return dungeons[14].found == true; }
-          },
-         'Temple Gossip 1': {
+          }, Temple Gossip 1': {
             x: "10.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -5633,8 +5229,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[14].found == true;
             }
-         },
-         'Temple Gossip 2': {
+         }, Temple Gossip 2': {
             x: "15.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -5643,8 +5238,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[14].found == true;
             }
-         },
-         'Temple Gossip 3': {
+         }, Temple Gossip 3': {
             x: "20.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -5653,8 +5247,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[14].found == true;
             }
-         },
-         'Temple Gossip 4': {
+         }, Temple Gossip 4': {
             x: "25.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -5663,8 +5256,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[14].found == true;
             }
-         },
-         'Temple of Time': {
+         }, Temple of Time': {
             x: "30.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -5672,8 +5264,7 @@ var dungeons = [
             access: "door",
             isAvailable: function () {
                return dungeons[14].found == true; }
-         },
-         'Prelude Warp': {
+         }, Prelude Warp': {
             x: "35.0%",
             y: "5.0%",
             leadsto: "unknown",
@@ -5737,8 +5328,7 @@ var dungeons = [
             access: "entrance",
              isAvailable: function () {
                   return dungeons[15].found == true; }
-         },
-         'Tree to Castle Skulltula': {
+         }, Tree to Castle Skulltula': {
            x: "25.0%",
             y: "75.0%",
             leadsto: "unknown",
@@ -5749,8 +5339,7 @@ var dungeons = [
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) 
                   );
             }
-         },
-         'Malon\s Weird Egg': {
+         }, Malon\s Weird Egg': {
            x: "32.0%",
             y: "80.0%",
             leadsto: "unknown",
@@ -5761,8 +5350,7 @@ var dungeons = [
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) 
                   );
             }
-         },
-         'Above Malon': {
+         }, Above Malon': {
             type: "gossip",
            x: "39.0%",
             y: "75.0%",
@@ -5772,8 +5360,7 @@ var dungeons = [
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) 
                   );
             }
-         },
-         'Din\'s Fairy Fountain': {
+         }, Din\'s Fairy Fountain': {
            x: "94.0%",
             y: "64.0%",
             leadsto: "unknown",
@@ -5784,8 +5371,7 @@ var dungeons = [
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) 
                   ) && (items.Bombs || (items.Bombchu && BombchuLogic));
                }
-         },
-         'Dins Great Fairy': {
+         }, Dins Great Fairy': {
            x: "93.0%",
             y: "64.0%",
             leadsto: "unknown",
@@ -5796,8 +5382,7 @@ var dungeons = [
                  && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Ocarina >= 1 && items.ZeldasLullaby;
             }
-         },
-         'Castle Moat Stone': {
+         }, Castle Moat Stone': {
            x: "18.0%",
             y: "36.0%",
             leadsto: "unknown",
@@ -5808,8 +5393,7 @@ var dungeons = [
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) 
                   );
             }
-         },
-         'Moat Storms Grotto': {
+         }, Moat Storms Grotto': {
            x: "53.0%",
             y: "38.0%",
             leadsto: "unknown",
@@ -5820,8 +5404,7 @@ var dungeons = [
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) 
                   ) && items.Ocarina >= 1 && items.SongofStorms;
                }
-         },
-         'Storms Grotto Skull': {
+         }, Storms Grotto Skull': {
            x: "55.0%",
             y: "38.0%",
             leadsto: "unknown",
@@ -5832,8 +5415,7 @@ var dungeons = [
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) 
                   ) && items.Ocarina >= 1 && items.SongofStorms && (items.Bombs || items.Boomerang);
             }
-         },
-         'Storms Grotto Gossip': {
+         }, Storms Grotto Gossip': {
            x: "53.0%",
             y: "38.0%",
             leadsto: "unknown",
@@ -5844,8 +5426,7 @@ var dungeons = [
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) 
                   ) && items.Ocarina >= 1 && items.SongofStorms && items.Bombs;
             }
-         },
-         'Song from Impa': {
+         }, Song from Impa': {
            x: "43.0%",
             y: "12.0%",
             leadsto: "unknown",
@@ -5867,8 +5448,7 @@ var dungeons = [
                   return dungeons[15].found == true &&
                      (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
                }
-         },
-         'Gold Gauntlets Doorway': {
+         }, Gold Gauntlets Doorway': {
            x: "94.0%",
             y: "59.0%",
             leadsto: "unknown",
@@ -5879,8 +5459,7 @@ var dungeons = [
                      (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) 
                      ) && items.Glove >= 3 && items.Ocarina && items.ZeldasLullaby ;
                }
-         },
-         'Gold Gauntlets Fairy' : {
+         }, Gold Gauntlets Fairy' : {
             x: "93.0%",
             y: "59.5%",
             leadsto: "unknown",
@@ -5927,8 +5506,7 @@ var dungeons = [
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) 
                && items.ForestMedallion && items.FireMedallion && items.WaterMedallion ;
             }
-         },
-         'Tree Skulltula': {
+         }, Tree Skulltula': {
             x: "40.0%",
             y: "58.0%",
             leadsto: "unknown",
@@ -5938,8 +5516,7 @@ var dungeons = [
                return dungeons[16].found == true && 
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
             }
-         },
-         'Redead Grotto': {
+         }, Redead Grotto': {
             x: "48.0%",
             y: "58.0%",
             leadsto: "unknown",
@@ -5968,8 +5545,7 @@ var dungeons = [
                       )
                   );
                   }
-         },
-         'Tower House': {
+         }, Tower House': {
             x: "54.0%",
             y: "48.0%",
             leadsto: "unknown",
@@ -5977,8 +5553,7 @@ var dungeons = [
             access: "door",
                isAvailable: function () {
                   return dungeons[16].found == true; }
-         },
-         'Behind Shop Skulltula': {
+         }, Behind Shop Skulltula': {
             x: "48.0%",
             y: "25.0%",
             leadsto: "unknown",
@@ -5988,8 +5563,7 @@ var dungeons = [
                return dungeons[16].found == true && 
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
             }
-         },
-         'Tower Skulltula': {
+         }, Tower Skulltula': {
             x: "55.0%",
             y: "41.0%",
             leadsto: "unknown",
@@ -5999,8 +5573,7 @@ var dungeons = [
                return dungeons[16].found == true && 
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
             }
-         },
-         'Kakariko Bazar': {
+         }, Kakariko Bazar': {
             x: "51.0%",
             y: "33.0%",
             leadsto: "unknown",
@@ -6008,8 +5581,7 @@ var dungeons = [
             access: "door",
                isAvailable: function () {
                   return dungeons[16].found == true; }
-         },
-         'Bazar Sale': {
+         }, Bazar Sale': {
             x: "46.0%",
             y: "33.0%",
             leadsto: "unknown",
@@ -6017,8 +5589,7 @@ var dungeons = [
             access: "simple",
             isAvailable: function () {
                return dungeons[16].found == true; }
-         },
-         'Village to Trail': {
+         }, Village to Trail': {
             x: "52.6%",
             y: "2.0%",
             leadsto: "unknown",
@@ -6026,8 +5597,7 @@ var dungeons = [
             access: "entrance",
              isAvailable: function () {
                   return dungeons[16].found == true; }
-         },
-         'Potion Shop front': {
+         }, Potion Shop front': {
             x: "59.0%",
             y: "34.0%",
             leadsto: "unknown",
@@ -6047,8 +5617,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[16].found == true ;
             }
-         },
-         'Potion Sale': {
+         }, Potion Sale': {
             x: "65.0%",
             y: "33.0%",
             leadsto: "unknown",
@@ -6058,8 +5627,7 @@ var dungeons = [
                return dungeons[16].found == true && 
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
-         },
-         'Potion Shop back': {
+         }, Potion Shop back': {
             x: "63.0%",
             y: "33.0%",
             leadsto: "unknown",
@@ -6069,8 +5637,7 @@ var dungeons = [
                   return dungeons[16].found == true && 
                      (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
-         },
-         'Granny\'s Shop': {
+         }, Granny\'s Shop': {
             x: "68.0%",
             y: "45.0%",
             leadsto: "unknown",
@@ -6079,8 +5646,7 @@ var dungeons = [
                isAvailable: function () {
                   return dungeons[16].found == true ;
                }
-         },
-         'Kakariko Open Grotto': {
+         }, Kakariko Open Grotto': {
             x: "69.0%",
             y: "39.3%",
             leadsto: "unknown",
@@ -6099,8 +5665,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[16].found == true ;
             }
-         },
-         'Windmill': {
+         }, Windmill': {
             x: "78.0%",
             y: "59.0%",
             leadsto: "unknown",
@@ -6136,8 +5701,7 @@ var dungeons = [
                       )
                   );
             }
-         },
-         'Village to Graveyard': {
+         }, Village to Graveyard': {
             x: "95.0%",
             y: "80.5%",
             leadsto: "unknown",
@@ -6145,8 +5709,7 @@ var dungeons = [
             access: "entrance",
              isAvailable: function () {
                   return dungeons[16].found == true; }
-         },
-         'Archery Foundation Skulltula': {
+         }, Archery Foundation Skulltula': {
             x: "60.0%",
             y: "76.0%",
             leadsto: "unknown",
@@ -6156,8 +5719,7 @@ var dungeons = [
                return dungeons[16].found == true && 
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
             }
-         },
-         'Archery': {
+         }, Archery': {
             x: "60.0%",
             y: "70.0%",
             leadsto: "unknown",
@@ -6200,8 +5762,7 @@ var dungeons = [
             isAvailable: function () {
                return (OWERmap == false || dungeons[16].found == true) && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
-         },
-         'Impa\'s House back': {
+         }, Impa\'s House back': {
             x: "58.0%",
             y: "91.0%",
             leadsto: "unknown",
@@ -6230,8 +5791,7 @@ var dungeons = [
                return dungeons[16].found == true && 
                   items.Ocarina && items.EponasSong ;
             }
-         },
-         'Impa’s Roof Skulltula': {
+         }, Impa’s Roof Skulltula': {
             x: "52.0%",
             y: "92.0%",
             leadsto: "unknown",
@@ -6242,8 +5802,7 @@ var dungeons = [
                && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && items.Hookshot;
             }
-         },
-         'Impa\'s House front': {
+         }, Impa\'s House front': {
             x: "49.0%",
             y: "91.0%",
             leadsto: "unknown",
@@ -6252,8 +5811,7 @@ var dungeons = [
                isAvailable: function () {
                   return dungeons[16].found == true ;
                }
-         },
-         'Skull House Skulltula': {
+         }, Skull House Skulltula': {
             x: "43.0%",
             y: "76.0%",
             leadsto: "unknown",
@@ -6263,8 +5821,7 @@ var dungeons = [
                return dungeons[16].found == true && 
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
             }
-         },
-         'Skulltula House': {
+         }, Skulltula House': {
             x: "48.0%",
             y: "73.0%",
             leadsto: "unknown",
@@ -6324,8 +5881,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[16].found == true && items.Skulltula >= 50 ;
             }
-         },
-         'Bottom of The Well': {
+         }, Bottom of The Well': {
             x: "69.0%",
             y: "61.6%",
             leadsto: "unknown",
@@ -6360,8 +5916,7 @@ var dungeons = [
             access: "entrance",
              isAvailable: function () {
                   return dungeons[17].found == true; }
-         },
-         'Ruby Pedestal Skulltula': {
+         }, Ruby Pedestal Skulltula': {
             x: "55.5%",
             y: "42.0%",
             leadsto: "unknown",
@@ -6395,8 +5950,7 @@ var dungeons = [
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && (items.Glove || items.Hammer || items.Bombs || (items.Bombchu && BombchuLogic) ) ;
             }
-         },
-         'Medigoron Gossip': {
+         }, Medigoron Gossip': {
             x: "28.0%",
             y: "90.0%",
             leadsto: "unknown",
@@ -6433,8 +5987,7 @@ var dungeons = [
                   ((items.Hammer || items.Glove >= 2) && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )) 
                    );
             }
-         },
-         'Maze Crate Skulltula': {
+         }, Maze Crate Skulltula': {
             x: "14.5%",
             y: "11.5%",
             leadsto: "unknown",
@@ -6445,8 +5998,7 @@ var dungeons = [
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && (items.Bombs || (items.Bombchu && BombchuLogic) ) ;
             }
-         },
-         'Maze Gossip': {
+         }, Maze Gossip': {
             x: "9.0%",
             y: "11.0%",
             leadsto: "unknown",
@@ -6471,8 +6023,7 @@ var dungeons = [
                   ((items.Hammer || items.Glove >= 2) && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )) 
                    );
             }
-         },
-         'Lava Cross Grotto': {
+         }, Lava Cross Grotto': {
             x: "89.0%",
             y: "12.0%",
             leadsto: "unknown",
@@ -6485,8 +6036,7 @@ var dungeons = [
                       (items.Hookshot && (items.GoronTunic || items.Nayrus || items.Wallet >= 2) ) 
                      ) ;
                }
-         },
-         'Lava Scrub 1': {
+         }, Lava Scrub 1': {
             x: "86.4%",
             y: "12.0%",
             leadsto: "unknown",
@@ -6499,8 +6049,7 @@ var dungeons = [
                       (items.Hookshot && (items.GoronTunic || items.Nayrus || items.Wallet >= 2) ) 
                      ) ;
                }
-         },
-         'Lava Scrub 2': {
+         }, Lava Scrub 2': {
             x: "89.0%",
             y: "12.0%",
             leadsto: "unknown",
@@ -6513,8 +6062,7 @@ var dungeons = [
                       (items.Hookshot && (items.GoronTunic || items.Nayrus || items.Wallet >= 2) ) 
                      ) ;
                }
-         },
-         'Lava Scrub 3': {
+         }, Lava Scrub 3': {
             x: "91.5%",
             y: "12.0%",
             leadsto: "unknown",
@@ -6527,8 +6075,7 @@ var dungeons = [
                       (items.Hookshot && (items.GoronTunic || items.Nayrus || items.Wallet >= 2) ) 
                      ) ;
                }
-         },
-         'City to Woods': {
+         }, City to Woods': {
             x: "73.5%",
             y: "93.0%",
             leadsto: "unknown",
@@ -6537,8 +6084,7 @@ var dungeons = [
              isAvailable: function () {
                   return dungeons[17].found == true && (items.Glove || items.Bow || items.Bombs || 
                                                         (items.Dins && items.Magic) ); }
-         },
-         'Goron Shop': {
+         }, Goron Shop': {
             x: "47.0%",
             y: "47.0%",
             leadsto: "unknown",
@@ -6554,8 +6100,7 @@ var dungeons = [
                       )
                   );
                }
-         },
-         'Goron Sale': {
+         }, Goron Sale': {
             x: "45.0%",
             y: "45.0%",
             leadsto: "unknown",
@@ -6607,8 +6152,7 @@ var dungeons = [
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && items.Ocarina && items.SariasSong && items.ZeldasLullaby;
             }
-         },
-         'City to Crater': {
+         }, City to Crater': {
             x: "56.5%",
             y: "2.0%",
             leadsto: "unknown",
@@ -6640,8 +6184,7 @@ var dungeons = [
             access: "entrance",
              isAvailable: function () {
                   return dungeons[18].found == true; }
-         },
-         'Fairy Ocarina': {
+         }, Fairy Ocarina': {
             x: "5.0%",
             y: "78.0%",
             leadsto: "unknown",
@@ -6649,8 +6192,7 @@ var dungeons = [
             access: "OWER",
             isAvailable: function () {
                return dungeons[18].found == true; }
-         },
-         'Bridge to Field': {
+         }, Bridge to Field': {
             x: "15.0%",
             y: "78.0%",
             leadsto: "unknown",
@@ -6669,8 +6211,7 @@ var dungeons = [
                return dungeons[18].found == true && 
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
             }
-         },
-         'Bridge Stone': {
+         }, Bridge Stone': {
             x: "6.0%",
             y: "96.0%",
             leadsto: "unknown",
@@ -6679,8 +6220,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[18].found == true ;
             }
-         },
-         'Bridge Soil Patch Skulltula': {
+         }, Bridge Soil Patch Skulltula': {
             x: "6.0%",
             y: "55.0%",
             leadsto: "unknown",
@@ -6703,8 +6243,7 @@ var dungeons = [
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  )
                && items.Ocarina && items.SariasSong ;
             }
-         },
-         'Woods to Forest': {
+         }, Woods to Forest': {
             x: "50.7%",
             y: "64.0%",
             leadsto: "unknown",
@@ -6736,8 +6275,7 @@ var dungeons = [
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  )
                && items.Ocarina ;
             }
-         },
-         'Bomb Grotto by City': {
+         }, Bomb Grotto by City': {
             x: "64.0%",
             y: "42.0%",
             leadsto: "unknown",
@@ -6770,8 +6308,7 @@ var dungeons = [
                       )
                   );
             }
-         },
-         'City Grotto Gossip': {
+         }, City Grotto Gossip': {
             x: "64.0%",
             y: "44.0%",
             leadsto: "unknown",
@@ -6787,8 +6324,7 @@ var dungeons = [
                       )
                   );
             }
-         },
-         'Woods to City': {
+         }, Woods to City': {
             x: "62.8%",
             y: "42.0%",
             leadsto: "unknown",
@@ -6796,8 +6332,7 @@ var dungeons = [
             access: "entrance",
              isAvailable: function () {
                   return dungeons[18].found == true; }
-         },
-         'Woods to River': {
+         }, Woods to River': {
             x: "69.8%",
             y: "39.5%",
             leadsto: "unknown",
@@ -6808,8 +6343,7 @@ var dungeons = [
                 && ( (items.IronBoots
                     && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) 
                    ) || items.Scale) ; }
-         },
-         'Theatre Scrub 1': {
+         }, Theatre Scrub 1': {
             x: "45.0%",
             y: "32.0%",
             leadsto: "unknown",
@@ -6819,8 +6353,7 @@ var dungeons = [
                return dungeons[18].found == true && 
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ;
             },
-         },
-         'Theatre Scrub 2': {
+         }, Theatre Scrub 2': {
             x: "45.0%",
             y: "32.0%",
             leadsto: "unknown",
@@ -6830,8 +6363,7 @@ var dungeons = [
                return dungeons[18].found == true && 
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ;
             },
-         },
-         'Theatre Soil Patch Skulltula': {
+         }, Theatre Soil Patch Skulltula': {
             x: "48.0%",
             y: "34.0%",
             leadsto: "unknown",
@@ -6842,8 +6374,7 @@ var dungeons = [
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && items.Bottle ;
             },
-         },
-         'Bean Ride Skulltula': {
+         }, Bean Ride Skulltula': {
             x: "56.0%",
             y: "40.0%",
             leadsto: "unknown",
@@ -6855,8 +6386,7 @@ var dungeons = [
                    || (items.Bean && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                    ) ) ;
             },
-         },
-         'Deku Theatre Grotto': {
+         }, Deku Theatre Grotto': {
             x: "50.0%",
             y: "32.0%",
             leadsto: "unknown",
@@ -6890,8 +6420,7 @@ var dungeons = [
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  )
                && items.Mask >= 12;
             }
-         },
-         'Bomb Grotto by Meadow': {
+         }, Bomb Grotto by Meadow': {
             x: "50.0%",
             y: "14.0%",
             leadsto: "unknown",
@@ -6924,8 +6453,7 @@ var dungeons = [
                       )
                   );
             }
-         },
-         '2nd Scrub in Grotto': {
+         }, 2nd Scrub in Grotto': {
             x: "50.0%",
             y: "18.0%",
             leadsto: "unknown",
@@ -6941,8 +6469,7 @@ var dungeons = [
                       )
                   );
             }
-         },
-         'Woods to Meadow': {
+         }, Woods to Meadow': {
             x: "50.0%",
             y: "4.0%",
             leadsto: "unknown",
@@ -6974,8 +6501,7 @@ var dungeons = [
             access: "entrance",
              isAvailable: function () {
                   return dungeons[19].found == true; }
-         },
-         'Meadow Bomb Grotto': {
+         }, Meadow Bomb Grotto': {
             x: "10.0%",
             y: "39.0%",
             leadsto: "unknown",
@@ -7007,8 +6533,7 @@ var dungeons = [
                       )
                   );
             }
-         },
-         'Maze Gossip 1': {
+         }, Maze Gossip 1': {
             x: "18.5%",
             y: "62.0%",
             leadsto: "unknown",
@@ -7017,8 +6542,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[19].found == true;
             }
-         },
-         'Meadow Maze Skulltula': {
+         }, Meadow Maze Skulltula': {
             x: "40.0%",
             y: "76.0%",
             leadsto: "unknown",
@@ -7028,8 +6552,7 @@ var dungeons = [
                return dungeons[19].found == true && items.Hookshot &&
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             },
-         },
-         'Meadow Open Grotto': {
+         }, Meadow Open Grotto': {
             x: "37.0%",
             y: "53.0%",
             leadsto: "unknown",
@@ -7038,8 +6561,7 @@ var dungeons = [
                isAvailable: function () {
                   return dungeons[19].found == true;
                }
-         },
-         'Maze Gossip 2': {
+         }, Maze Gossip 2': {
             x: "29.5%",
             y: "28.0%",
             leadsto: "unknown",
@@ -7059,8 +6581,7 @@ var dungeons = [
                return dungeons[19].found == true && 
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
-         },
-         'Minuet Warp': {
+         }, Minuet Warp': {
             x: "84.0%",
             y: "50.0%",
             leadsto: "unknown",
@@ -7068,8 +6589,7 @@ var dungeons = [
             access: "warp",
                isAvailable: function () {
                   return items.Ocarina && items.MinuetofForest; }
-         },
-         'Meadow Storms Grotto': {
+         }, Meadow Storms Grotto': {
             x: "80.0%",
             y: "75.0%",
             leadsto: "unknown",
@@ -7079,8 +6599,7 @@ var dungeons = [
                   return dungeons[19].found == true && 
                      items.Ocarina && items.SongofStorms ;
                }
-         },
-         'Storms Grotto Scrub 1': {
+         }, Storms Grotto Scrub 1': {
             x: "79.0%",
             y: "76.0%",
             leadsto: "unknown",
@@ -7090,8 +6609,7 @@ var dungeons = [
                return dungeons[19].found == true && 
                      items.Ocarina && items.SongofStorms ;
             }
-         },
-         'Storms Grotto Scrub 2': {
+         }, Storms Grotto Scrub 2': {
             x: "82.0%",
             y: "76.0%",
             leadsto: "unknown",
@@ -7112,8 +6630,7 @@ var dungeons = [
                return dungeons[19].found == true && items.Mask >= 2 &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
-         },
-         'Temple Gossip': {
+         }, Temple Gossip': {
             x: "80.0%",
             y: "23.0%",
             leadsto: "unknown",
@@ -7122,8 +6639,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[19].found == true;
             }
-         },
-         'Forest Temple': {
+         }, Forest Temple': {
             x: "95.0%",
             y: "47.0%",
             leadsto: "unknown",
@@ -7157,8 +6673,7 @@ var dungeons = [
             access: "entrance",
              isAvailable: function () {
                   return dungeons[20].found == true; }
-         },
-         'Tree by Entrance Skulltula': {
+         }, Tree by Entrance Skulltula': {
             x: "3.0%",
             y: "61.0%",
             leadsto: "unknown",
@@ -7169,8 +6684,7 @@ var dungeons = [
                   (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale || OWERmap ) &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
-         },
-         'Song of Storms Grotto': {
+         }, Song of Storms Grotto': {
             x: "4.0%",
             y: "42.0%",
             leadsto: "unknown",
@@ -7185,8 +6699,7 @@ var dungeons = [
                       )
                   );
             }
-         },
-         'Storms Grotto Scrub 1': {
+         }, Storms Grotto Scrub 1': {
             x: "2.0%",
             y: "44.0%",
             leadsto: "unknown",
@@ -7201,8 +6714,7 @@ var dungeons = [
                       )
                   );
             }
-         },
-         'Storms Grotto Scrub 2': {
+         }, Storms Grotto Scrub 2': {
             x: "5.0%",
             y: "44.0%",
             leadsto: "unknown",
@@ -7217,8 +6729,7 @@ var dungeons = [
                       )
                   );
             }
-         },
-         'Storms Grotto Scrub 3': {
+         }, Storms Grotto Scrub 3': {
             x: "3.5%",
             y: "40.0%",
             leadsto: "unknown",
@@ -7233,8 +6744,7 @@ var dungeons = [
                       )
                   );
             }
-         },
-         'Bean Salesman': {
+         }, Bean Salesman': {
             x: "16.0%",
             y: "40.0%",
             leadsto: "unknown",
@@ -7245,8 +6755,7 @@ var dungeons = [
                   (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale || OWERmap ) &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
-         },
-         'Frogs in the Rain': {
+         }, Frogs in the Rain': {
             x: "47.0%",
             y: "16.0%",
             leadsto: "unknown",
@@ -7258,8 +6767,7 @@ var dungeons = [
                   items.Ocarina && items.SongofStorms &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
-         },
-         'Frogs Mini Game': {
+         }, Frogs Mini Game': {
             x: "44.0%",
             y: "16.0%",
             leadsto: "unknown",
@@ -7271,8 +6779,7 @@ var dungeons = [
                   items.Ocarina && items.SongofStorms && items.SunsSong && items.SariasSong && items.EponasSong && items.ZeldasLullaby && items.SongofTime &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
-         },
-         'Adult Skulltula by Grotto': {
+         }, Adult Skulltula by Grotto': {
             x: "27.0%",
             y: "53.0%",
             leadsto: "unknown",
@@ -7282,8 +6789,7 @@ var dungeons = [
                return dungeons[20].found == true && items.Hookshot &&
                   (Age == "Adut" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
-         },
-         'Open Grotto': {
+         }, Open Grotto': {
             x: "33.0%",
             y: "51.0%",
             leadsto: "unknown",
@@ -7297,8 +6803,7 @@ var dungeons = [
                       )
                   ); 
             }
-         },
-         'River Open Grotto': {
+         }, River Open Grotto': {
             x: "35.0%",
             y: "48.0%",
             leadsto: "unknown",
@@ -7312,8 +6817,7 @@ var dungeons = [
                       )
                   );
             }
-         },
-         'Grotto Gossip': {
+         }, Grotto Gossip': {
             x: "31.0%",
             y: "52.0%",
             leadsto: "unknown",
@@ -7327,8 +6831,7 @@ var dungeons = [
                       )
                   );
             }
-         },
-         'Boulder Grotto': {
+         }, Boulder Grotto': {
             x: "38.0%",
             y: "37.0%",
             leadsto: "unknown",
@@ -7344,8 +6847,7 @@ var dungeons = [
                       )
                   );
             }
-         },
-         'Above Frogs Gossip': {
+         }, Above Frogs Gossip': {
             x: "40.0%",
             y: "17.0%",
             leadsto: "unknown",
@@ -7359,8 +6861,7 @@ var dungeons = [
                       )
                   ); 
             }
-         },
-         'Freestanding Lower Ledge': {
+         }, Freestanding Lower Ledge': {
             x: "29.5%",
             y: "17.0%",
             leadsto: "unknown",
@@ -7374,8 +6875,7 @@ var dungeons = [
                       )
                   ); 
             }
-         },
-         'Adult above Bridge Skulltula': {
+         }, Adult above Bridge Skulltula': {
             x: "70.0%",
             y: "18.0%",
             leadsto: "unknown",
@@ -7385,8 +6885,7 @@ var dungeons = [
                return dungeons[20].found == true && items.Hookshot &&
                   (Age == "Adut" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
-         },
-         'Child Ladder Skulltula': {
+         }, Child Ladder Skulltula': {
             x: "86.0%",
             y: "3.0%",
             leadsto: "unknown",
@@ -7397,8 +6896,7 @@ var dungeons = [
                   (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale || OWERmap )
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
-         },
-         'Freestanding Upper Ledge': {
+         }, Freestanding Upper Ledge': {
             x: "80.0%",
             y: "3.0%",
             leadsto: "unknown",
@@ -7412,8 +6910,7 @@ var dungeons = [
                       )
                   ); 
             }
-         },
-         'River to Woods': {
+         }, River to Woods': {
             x: "91.0%",
             y: "26.5%",
             leadsto: "unknown",
@@ -7421,8 +6918,7 @@ var dungeons = [
             access: "entrance",
              isAvailable: function () {
                   return dungeons[20].found == true && items.Scale; }
-         },
-         'Waterfall Gossip': {
+         }, Waterfall Gossip': {
             x: "92.0%",
             y: "4.0%",
             leadsto: "unknown",
@@ -7436,8 +6932,7 @@ var dungeons = [
                       )
                   );
             }
-         },
-         'River to Domain': {
+         }, River to Domain': {
             x: "97.0%",
             y: "9.0%",
             leadsto: "unknown",
@@ -7469,8 +6964,7 @@ var dungeons = [
             access: "entrance",
              isAvailable: function () {
                   return dungeons[21].found == true; }
-         },
-         'Zora Shop': {
+         }, Zora Shop': {
             x: "71.0%",
             y: "84.5%",
             leadsto: "unknown",
@@ -7490,8 +6984,7 @@ var dungeons = [
                        )
                    ) ;
             }
-         },
-         'Zora Sale': {
+         }, Zora Sale': {
             x: "67.0%",
             y: "84.0%",
             leadsto: "unknown",
@@ -7509,8 +7002,7 @@ var dungeons = [
                        )
                    );
             }
-         },
-         'Storms Grotto': {
+         }, Storms Grotto': {
             x: "19.0%",
             y: "64%",
             leadsto: "unknown",
@@ -7527,8 +7019,7 @@ var dungeons = [
                       )
                   );
             }
-         },
-         'Royal Zora Gossip': {
+         }, Royal Zora Gossip': {
             x: "75.0%",
             y: "35.5%",
             leadsto: "unknown",
@@ -7568,8 +7059,7 @@ var dungeons = [
                   (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale || OWERmap ) &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
             }
-         },
-         'Domain to Lake': {
+         }, Domain to Lake': {
             x: "48%",
             y: "77.0%",
             leadsto: "unknown",
@@ -7577,8 +7067,7 @@ var dungeons = [
             access: "entrance",
              isAvailable: function () {
                   return items.Scale && dungeons[21].found == true; }
-         },
-         'Frozen Waterfall Skulltula': {
+         }, Frozen Waterfall Skulltula': {
             x: "47.0%",
             y: "51.5%",
             leadsto: "unknown",
@@ -7612,8 +7101,7 @@ var dungeons = [
                      )
                   );
             }
-         },
-         'Domain to Fountain': {
+         }, Domain to Fountain': {
             x: "40%",
             y: "4.5%",
             leadsto: "unknown",
@@ -7645,8 +7133,7 @@ var dungeons = [
             access: "entrance",
              isAvailable: function () {
                   return dungeons[22].found == true; }
-         },
-         'West Fountain Gossip': {
+         }, West Fountain Gossip': {
             x: "35.0%",
             y: "25.5%",
             leadsto: "unknown",
@@ -7667,8 +7154,7 @@ var dungeons = [
                        )
                    ) ;
             }
-         },
-         'Lord Jabu Jabu\'s Belly': {
+         }, Lord Jabu Jabu\'s Belly': {
             x: "39.0%",
             y: "38%",
             leadsto: "unknown",
@@ -7679,8 +7165,7 @@ var dungeons = [
                      (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) //Can get child
                         && (OpenFountain || items.ZoraLetter || OWERmap) && (items.Bombs || OWERmap || (items.Bombchu && BombchuLogic) || items.Scale);
                }
-         },
-         'Stand on the Log Skulltula': {
+         }, Stand on the Log Skulltula': {
             x: "27.0%",
             y: "69.5%",
             leadsto: "unknown",
@@ -7691,8 +7176,7 @@ var dungeons = [
                      (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) //Can get child
                         && items.Boomerang && (OpenFountain || items.ZoraLetter || OWERmap) && (items.Bombs || OWERmap || (items.Bombchu && BombchuLogic) || items.Scale);
                }
-         },
-         'Tree by Great Fairy Skulltula': {
+         }, Tree by Great Fairy Skulltula': {
             x: "72.0%",
             y: "80.5%",
             leadsto: "unknown",
@@ -7703,8 +7187,7 @@ var dungeons = [
                      (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) //Can get child
                         && (OpenFountain || items.ZoraLetter || OWERmap) && (items.Bombs || OWERmap || (items.Bombchu && BombchuLogic) || items.Scale);
                }
-         },
-         'Great Fairy Gossip': {
+         }, Great Fairy Gossip': {
             x: "76.0%",
             y: "78.5%",
             leadsto: "unknown",
@@ -7725,8 +7208,7 @@ var dungeons = [
                        )
                    ) ;
             }
-         },
-         'Bombable Doorway': {
+         }, Bombable Doorway': {
             x: "70.0%",
             y: "88.5%",
             leadsto: "unknown",
@@ -7777,8 +7259,7 @@ var dungeons = [
                        )
                    ) ;
             }
-         },
-         'Silver Rock Skulltula': {
+         }, Silver Rock Skulltula': {
             x: "80.0%",
             y: "74.5%",
             leadsto: "unknown",
@@ -7840,8 +7321,7 @@ var dungeons = [
                             ) )
                      ) ;
             }
-         },
-         'Ice Cavern': {
+         }, Ice Cavern': {
             x: "60.0%",
             y: "2.5%",
             leadsto: "unknown",
@@ -7885,8 +7365,7 @@ var dungeons = [
             access: "entrance",
              isAvailable: function () {
                   return dungeons[23].found == true; }
-         },
-         'Bombable Wall Skulltula': {
+         }, Bombable Wall Skulltula': {
             x: "15%",
             y: "73.5%",
             leadsto: "unknown",
@@ -7902,8 +7381,7 @@ var dungeons = [
                       )
                   );
             }
-         },
-         'Dodongo\'s Cavern': {
+         }, Dodongo\'s Cavern': {
             x: "36.0%",
             y: "47.0%",
             leadsto: "unknown",
@@ -7927,8 +7405,7 @@ var dungeons = [
             isAvailable: function () {
                return OWERmap == false || dungeons[23].found == true ;
             }
-         },
-         'Cavern Soil Patch Skulltula': {
+         }, Cavern Soil Patch Skulltula': {
             x: "33.0%",
             y: "47.0%",
             leadsto: "unknown",
@@ -7956,8 +7433,7 @@ var dungeons = [
                       )
                   );
             }
-         },
-         'Song of Storms Grotto': {
+         }, Song of Storms Grotto': {
             x: "50.0%",
             y: "58.0%",
             leadsto: "unknown",
@@ -7978,8 +7454,7 @@ var dungeons = [
                return (OWERmap == false || dungeons[23].found == true) && 
                   items.Ocarina && items.SongofStorms ;
             }
-         },
-         'Storms Grotto Gossip': {
+         }, Storms Grotto Gossip': {
             x: "48.0%",
             y: "58.0%",
             leadsto: "unknown",
@@ -7989,8 +7464,7 @@ var dungeons = [
                return (OWERmap == false || dungeons[23].found == true) && 
                   items.Ocarina && items.SongofStorms ;
             }
-         },
-         'Trail to City': {
+         }, Trail to City': {
             x: "54.5%",
             y: "53.0%",
             leadsto: "unknown",
@@ -7998,8 +7472,7 @@ var dungeons = [
             access: "entrance",
              isAvailable: function () {
                   return dungeons[23].found == true; }
-         },
-         'Lower Red Rock Skulltula': {
+         }, Lower Red Rock Skulltula': {
             x: "42.0%",
             y: "51.0%",
             leadsto: "unknown",
@@ -8010,8 +7483,7 @@ var dungeons = [
                   (items.Hookshot || items.Hammer ) && 
                      (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ;
             }
-         },
-         'Cow Grotto': {
+         }, Cow Grotto': {
             x: "45.0%",
             y: "55.0%",
             leadsto: "unknown",
@@ -8045,8 +7517,7 @@ var dungeons = [
                       )
                   );
             }
-         },
-         'Upper Red Rock Skulltula': {
+         }, Upper Red Rock Skulltula': {
             x: "73.0%",
             y: "34.0%",
             leadsto: "unknown",
@@ -8056,8 +7527,7 @@ var dungeons = [
                return (OWERmap == false || dungeons[23].found == true) && 
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ;
             }
-         },
-         'Summit Bombable Door': {
+         }, Summit Bombable Door': {
             x: "82.0%",
             y: "13.0%",
             leadsto: "unknown",
@@ -8108,8 +7578,7 @@ var dungeons = [
                    || (items.Trade >= 6 && (items.EponasSong || items.Hookshot >= 2)) //Valley Carpenter Foreman
                    || items.Trade >= 9); //Claim check/eyedrops
             }
-         },
-         'Trail to Crater': {
+         }, Trail to Crater': {
             x: "87.5%",
             y: "12.5%",
             leadsto: "unknown",
@@ -8117,8 +7586,7 @@ var dungeons = [
             access: "entrance",
              isAvailable: function () {
                   return dungeons[23].found == true; }
-         },
-         'Trail Owl': {
+         }, Trail Owl': {
             x: "84.0%",
             y: "12.5%",
             leadsto: "unknown",
@@ -8126,8 +7594,7 @@ var dungeons = [
             access: "entrance",
              isAvailable: function () {
                   return true; }
-         },
-         'Summit Gossip': {
+         }, Summit Gossip': {
             x: "85.0%",
             y: "25.0%",
             leadsto: "unknown",
@@ -8168,8 +7635,7 @@ var dungeons = [
             access: "entrance",
              isAvailable: function () {
                   return dungeons[24].found == true; }
-         },
-         'Red Rock Grotto': {
+         }, Red Rock Grotto': {
             x: "10.5%",
             y: "36.0%",
             leadsto: "unknown",
@@ -8182,8 +7648,7 @@ var dungeons = [
                      (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                   ) ;
             }
-         },
-         'Red Rock Grotto Scrub 1': {
+         }, Red Rock Grotto Scrub 1': {
             x: "8.5%",
             y: "37.0%",
             leadsto: "unknown",
@@ -8196,8 +7661,7 @@ var dungeons = [
                      (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                   ) ;
             }
-         },
-         'Red Rock Grotto Scrub 2': {
+         }, Red Rock Grotto Scrub 2': {
             x: "11.5%",
             y: "37.0%",
             leadsto: "unknown",
@@ -8210,8 +7674,7 @@ var dungeons = [
                      (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                   ) ;
             }
-         },
-         'Red Rock Grotto Scrub 3': {
+         }, Red Rock Grotto Scrub 3': {
             x: "9.0%",
             y: "34.0%",
             leadsto: "unknown",
@@ -8239,8 +7702,7 @@ var dungeons = [
                      (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                     ) ;
             }
-         },
-         'Bolero Warp': {
+         }, Bolero Warp': {
             x: "53.0%",
             y: "41.0%",
             leadsto: "unknown",
@@ -8248,8 +7710,7 @@ var dungeons = [
             access: "warp",
                isAvailable: function () {
                   return items.Ocarina && items.BoleroofFire; }
-         },
-         'Soil Patch Skulltula': {
+         }, Soil Patch Skulltula': {
             x: "47.0%",
             y: "42.0%",
             leadsto: "unknown",
@@ -8260,8 +7721,7 @@ var dungeons = [
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) &&
                   items.Ocarina && items.BoleroofFire && items.Bottle ;
             }
-         },
-         'Fire Temple': {
+         }, Fire Temple': {
             x: "54.0%",
             y: "3.0%",
             leadsto: "unknown",
@@ -8298,8 +7758,7 @@ var dungeons = [
                       )
                   );
             }
-         },
-         'Red Rocks Doorway': {
+         }, Red Rocks Doorway': {
             x: "19.0%",
             y: "67.0%",
             leadsto: "unknown",
@@ -8325,8 +7784,7 @@ var dungeons = [
                        || items.Bow || items.Glove ) && //Bow and glove access via Goron City
                      (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                   ) ;}
-         },
-         'Bombable Grotto': {
+         }, Bombable Grotto': {
             x: "54.0%",
             y: "82.0%",
             leadsto: "unknown",
@@ -8342,8 +7800,7 @@ var dungeons = [
                       )
                   );
             }
-         },
-         'Crater Grotto Gossip': {
+         }, Crater Grotto Gossip': {
             x: "51.5%",
             y: "82.0%",
             leadsto: "unknown",
@@ -8394,8 +7851,7 @@ var dungeons = [
                       )
                   );
             }
-         },
-         'Crate Skulltula': {
+         }, Crate Skulltula': {
             x: "27.0%",
             y: "89.0%",
             leadsto: "unknown",
@@ -8406,8 +7862,7 @@ var dungeons = [
                   (items.Bombs || (items.Bombchu && BombchuLogic) ) &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
-         },
-         'Child Crater Scrub': {
+         }, Child Crater Scrub': {
             x: "34.0%",
             y: "73.0%",
             leadsto: "unknown",
@@ -8418,8 +7873,7 @@ var dungeons = [
                   (items.Bombs || (items.Bombchu && BombchuLogic) ) &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
-         },
-         'Cracked Wall Gossip': {
+         }, Cracked Wall Gossip': {
             x: "89.0%",
             y: "79.0%",
             leadsto: "unknown",
@@ -8429,8 +7883,7 @@ var dungeons = [
                return (OWERmap == false || dungeons[24].found == true) &&
                   (items.Bombs || (items.Bombchu && BombchuLogic) );
             }
-         },
-         'Crater to Trail': {
+         }, Crater to Trail': {
             x: "21.5%",
             y: "93.5%",
             leadsto: "unknown",
@@ -8462,8 +7915,7 @@ var dungeons = [
             access: "entrance",
              isAvailable: function () {
                   return dungeons[25].found == true; }
-         },
-         'Talon\'s House': {
+         }, Talon\'s House': {
             x: "70.0%",
             y: "14.0%",
             leadsto: "unknown",
@@ -8482,8 +7934,7 @@ var dungeons = [
                return (OWERmap == false || dungeons[25].found == true) && items.Mask >= 2 && 
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
             }
-         },
-         'Ranch Stables': {
+         }, Ranch Stables': {
             x: "60.0%",
             y: "14.0%",
             leadsto: "unknown",
@@ -8511,8 +7962,7 @@ var dungeons = [
             isAvailable: function () {
                return (OWERmap == false || dungeons[25].found == true) && items.Ocarina && items.EponasSong ;
             }
-         },
-         '2nd Floor Window Skulltula': {
+         }, 2nd Floor Window Skulltula': {
             x: "69.0%",
             y: "20.0%",
             leadsto: "unknown",
@@ -8523,8 +7973,7 @@ var dungeons = [
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
             
             }
-         },
-         'Tree Skulltula': {
+         }, Tree Skulltula': {
             x: "76.0%",
             y: "26.0%",
             leadsto: "unknown",
@@ -8546,8 +7995,7 @@ var dungeons = [
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
             
             }
-         },
-         'Back of Coral Skulltula': {
+         }, Back of Coral Skulltula': {
             x: "65.0%",
             y: "64.5%",
             leadsto: "unknown",
@@ -8557,8 +8005,7 @@ var dungeons = [
                return (OWERmap == false || dungeons[25].found == true) && 
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
             }
-         },
-         'Ranch Open Grotto': {
+         }, Ranch Open Grotto': {
             x: "73.5%",
             y: "88.0%",
             leadsto: "unknown",
@@ -8568,8 +8015,7 @@ var dungeons = [
                return (OWERmap == false || dungeons[25].found == true) && 
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
             }
-         },
-         'Open Grotto Scrub 1': {
+         }, Open Grotto Scrub 1': {
             x: "72.0%",
             y: "89.0%",
             leadsto: "unknown",
@@ -8579,8 +8025,7 @@ var dungeons = [
                return (OWERmap == false || dungeons[25].found == true) && 
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
             }
-         },
-         'Open Grotto Scrub 2': {
+         }, Open Grotto Scrub 2': {
             x: "75.0%",
             y: "89.0%",
             leadsto: "unknown",
@@ -8590,8 +8035,7 @@ var dungeons = [
                return (OWERmap == false || dungeons[25].found == true) && 
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
             }
-         },
-         'Open Grotto Scrub 3': {
+         }, Open Grotto Scrub 3': {
             x: "73.5%",
             y: "85.0%",
             leadsto: "unknown",
@@ -8601,8 +8045,7 @@ var dungeons = [
                return (OWERmap == false || dungeons[25].found == true) && 
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
             }
-         },
-         'Ranch Silo': {
+         }, Ranch Silo': {
             x: "19.5%",
             y: "84.5%",
             leadsto: "unknown",
@@ -8641,8 +8084,7 @@ var dungeons = [
             isAvailable: function () {
                return (OWERmap == false || dungeons[25].found == true) && items.Ocarina && items.EponasSong ;
             }
-         },
-         'North of Silo Skulltula': {
+         }, North of Silo Skulltula': {
             x: "5.0%",
             y: "74.0%",
             leadsto: "unknown",
@@ -8676,8 +8118,7 @@ var dungeons = [
             access: "entrance",
              isAvailable: function () {
                   return dungeons[26].found == true; }
-         },
-         'Beside Lab Gossip': {
+         }, Beside Lab Gossip': {
             x: "9.0%",
             y: "41.0%",
             leadsto: "unknown",
@@ -8687,8 +8128,7 @@ var dungeons = [
                return OWERmap == false || dungeons[26].found == true ;
             
             }
-         },
-         'Soil Patch Skulltula': {
+         }, Soil Patch Skulltula': {
             x: "24.0%",
             y: "36.0%",
             leadsto: "unknown",
@@ -8709,8 +8149,7 @@ var dungeons = [
                return (OWERmap == false || dungeons[26].found == true) && items.Scale &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
             }
-         },
-         'Lake to Domain': {
+         }, Lake to Domain': {
             x: "47%",
             y: "39.0%",
             leadsto: "unknown",
@@ -8719,8 +8158,7 @@ var dungeons = [
              isAvailable: function () {
                   return items.Scale && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
             ; }
-         },
-         'Laboratory': {
+         }, Laboratory': {
             x: "26.5%",
             y: "41.5%",
             leadsto: "unknown",
@@ -8728,8 +8166,7 @@ var dungeons = [
             access: "door",
             isAvailable: function () {
                return OWERmap == false || dungeons[26].found == true; }
-         },
-         'Lab Crate Skulltula': {
+         }, Lab Crate Skulltula': {
             x: "26.5%",
             y: "41.5%",
             leadsto: "unknown",
@@ -8767,8 +8204,7 @@ var dungeons = [
                    || (items.Bean && (OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                   );
             }
-         },
-         'Lab Wall Skulltula': {
+         }, Lab Wall Skulltula': {
             x: "22.0%",
             y: "45.0%",
             leadsto: "unknown",
@@ -8778,8 +8214,7 @@ var dungeons = [
                return (OWERmap == false || dungeons[26].found == true) && items.Boomerang &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
             }
-         },
-         'Lake Owl': {
+         }, Lake Owl': {
             x: "18.5%",
             y: "58.5%",
             leadsto: "unknown",
@@ -8789,8 +8224,7 @@ var dungeons = [
                   return (OWERmap == false || dungeons[26].found == true) &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
             }
-         },
-         'Lake Hylia Grave': {
+         }, Lake Hylia Grave': {
             x: "19.0%",
             y: "65.0%",
             leadsto: "unknown",
@@ -8798,8 +8232,7 @@ var dungeons = [
             access: "grotto",
             isAvailable: function () {
                return OWERmap == false || dungeons[26].found == true; }
-         },
-         'Grave Pull Scrub 1': {
+         }, Grave Pull Scrub 1': {
             x: "17.5%",
             y: "67.0%",
             leadsto: "unknown",
@@ -8808,8 +8241,7 @@ var dungeons = [
             isAvailable: function () {
                return OWERmap == false || dungeons[26].found == true;
             },
-         },
-         'Grave Pull Scrub 2': {
+         }, Grave Pull Scrub 2': {
             x: "17.5%",
             y: "67.0%",
             leadsto: "unknown",
@@ -8818,8 +8250,7 @@ var dungeons = [
             isAvailable: function () {
                return OWERmap == false || dungeons[26].found == true;
             },
-         },
-         'Grave Pull Scrub 3': {
+         }, Grave Pull Scrub 3': {
             x: "19.0%",
             y: "64.0%",
             leadsto: "unknown",
@@ -8828,8 +8259,7 @@ var dungeons = [
             isAvailable: function () {
                return OWERmap == false || dungeons[26].found == true;
             },
-         },
-         'Serenade Warp': {
+         }, Serenade Warp': {
             x: "44.5%",
             y: "78.0%",
             leadsto: "unknown",
@@ -8837,8 +8267,7 @@ var dungeons = [
             access: "warp",
                isAvailable: function () {
                   return items.Ocarina && items.SerenadeoffWater; }
-         },
-         'Top of Tree Skulltula': {
+         }, Top of Tree Skulltula': {
             x: "49.5%",
             y: "79.0%",
             leadsto: "unknown",
@@ -8848,8 +8277,7 @@ var dungeons = [
                return (OWERmap == false || dungeons[26].found == true) && items.Hookshot >= 2 &&
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
             }
-         },
-         'Perimeter of Lake 1': {
+         }, Perimeter of Lake 1': {
             x: "13.0%",
             y: "82.0%",
             leadsto: "unknown",
@@ -8858,8 +8286,7 @@ var dungeons = [
             isAvailable: function () {
                return OWERmap == false || dungeons[26].found == true;
             }
-         },
-         'Perimeter of Lake 2': {
+         }, Perimeter of Lake 2': {
             x: "80.0%",
             y: "86.0%",
             leadsto: "unknown",
@@ -8868,8 +8295,7 @@ var dungeons = [
             isAvailable: function () {
                return OWERmap == false || dungeons[26].found == true;
             }
-         },
-         'Fishing Pond': {
+         }, Fishing Pond': {
             x: "75.0%",
             y: "41.0%",
             leadsto: "unknown",
@@ -8920,8 +8346,7 @@ var dungeons = [
                   items.Hookshot >= 2 && items.Ocarina //|| 'Morpha'.isopened
                   && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
             }
-         },
-         'Fire Arrow Island Skulltula': {
+         }, Fire Arrow Island Skulltula': {
             x: "68.0%",
             y: "75.0%",
             leadsto: "unknown",
@@ -8931,8 +8356,7 @@ var dungeons = [
                return (OWERmap == false || dungeons[26].found == true) &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
             }
-         },
-         'Water Temple': {
+         }, Water Temple': {
             x: "46.5%",
             y: "71.0%",
             leadsto: "unknown",
@@ -8967,8 +8391,7 @@ var dungeons = [
             access: "entrance",
              isAvailable: function () {
                   return dungeons[27].found == true; }
-         },
-         'Right of Plank Skulltula': {
+         }, Right of Plank Skulltula': {
             x: "79.0%",
             y: "36.0%",
             leadsto: "unknown",
@@ -8999,8 +8422,7 @@ var dungeons = [
             access: "outdoor",
             isAvailable: function () {
                return OWERmap == false || dungeons[27].found == true}
-         },
-         'Waterfall Gossip': {
+         }, Waterfall Gossip': {
             x: "46.0%",
             y: "6.0%",
             leadsto: "unknown",
@@ -9020,8 +8442,7 @@ var dungeons = [
                return (OWERmap == false || dungeons[27].found == true) && items.Ocarina && items.EponasSong &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ; 
             }
-         },
-         'Soil Patch Skulltula': {
+         }, Soil Patch Skulltula': {
             x: "47.0%",
             y: "60.0%",
             leadsto: "unknown",
@@ -9031,8 +8452,7 @@ var dungeons = [
                return (OWERmap == false || dungeons[27].found == true) && items.Bottle &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ; 
             }
-         },
-         'Silver Rock Grotto': {
+         }, Silver Rock Grotto': {
             x: "57.0%",
             y: "66.0%",
             leadsto: "unknown",
@@ -9042,8 +8462,7 @@ var dungeons = [
                return (OWERmap == false || dungeons[27].found == true) && items.Glove >= 2 &&
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ; 
             }
-         },
-         'Above Hammer Rocks Skulltula': {
+         }, Above Hammer Rocks Skulltula': {
             x: "35.0%",
             y: "45.0%",
             leadsto: "unknown",
@@ -9066,8 +8485,7 @@ var dungeons = [
                   (items.Membership || (items.Ocarina && items.EponasSong) || items.Hookshot >= 2) &&
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ; 
             }
-         },
-         'Carpenter Tent': {
+         }, Carpenter Tent': {
             x: "40.0%",
             y: "30.0%",
             leadsto: "unknown",
@@ -9078,8 +8496,7 @@ var dungeons = [
                   (items.Membership || (items.Ocarina && items.EponasSong) || items.Hookshot >= 2) &&
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ; 
             }
-         },
-         'Behind Tent Skulltula': {
+         }, Behind Tent Skulltula': {
             x: "30.0%",
             y: "25.0%",
             leadsto: "unknown",
@@ -9090,8 +8507,7 @@ var dungeons = [
                   (items.Membership || (items.Ocarina && items.EponasSong) || items.Hookshot >= 2) &&
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ; 
             }
-         },
-         'Song of Storms Grotto': {
+         }, Song of Storms Grotto': {
             x: "33.0%",
             y: "27.0%",
             leadsto: "unknown",
@@ -9102,8 +8518,7 @@ var dungeons = [
                   (items.Membership || (items.Ocarina && items.EponasSong) || items.Hookshot >= 2) &&
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ; 
             }
-         },
-         'Storms Grotto Scrub 1': {
+         }, Storms Grotto Scrub 1': {
             x: "33.0%",
             y: "27.0%",
             leadsto: "unknown",
@@ -9114,8 +8529,7 @@ var dungeons = [
                   (items.Membership || (items.Ocarina && items.EponasSong) || items.Hookshot >= 2) &&
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ; 
             }
-         },
-         'Storms Grotto Scrub 2': {
+         }, Storms Grotto Scrub 2': {
             x: "36.0%",
             y: "27.0%",
             leadsto: "unknown",
@@ -9126,8 +8540,7 @@ var dungeons = [
                   (items.Membership || (items.Ocarina && items.EponasSong) || items.Hookshot >= 2) &&
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ; 
             }
-         },
-         'Valley to Fortress': {
+         }, Valley to Fortress': {
             x: "02.0%",
             y: "27.0%",
             leadsto: "unknown",
@@ -9159,8 +8572,7 @@ var dungeons = [
             access: "entrance",
              isAvailable: function () {
                   return dungeons[28].found == true; }
-         },
-         'Fortress Storms Grotto': {
+         }, Fortress Storms Grotto': {
             x: "37.0%",
             y: "55.0%",
             leadsto: "unknown",
@@ -9198,8 +8610,7 @@ var dungeons = [
                    || items.Hookshot >= 2) &&
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ; 
             }
-         },
-         'Fortress Skulltula': {
+         }, Fortress Skulltula': {
             x: "54.0%",
             y: "49.0%",
             leadsto: "unknown",
@@ -9224,8 +8635,7 @@ var dungeons = [
                    (items.Ocarina && items.RequiemofSpirit && items.HoverBoots) || items.Hookshot >= 2) &&
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ; 
             }
-         },
-         'Gerudo Training Grounds': {
+         }, Gerudo Training Grounds': {
             x: "33.0%",
             y: "65.0%",
             leadsto: "unknown",
@@ -9254,8 +8664,7 @@ var dungeons = [
             isAvailable: function () {
                return (OWERmap == false || dungeons[28].found == true) && items.Membership && items.Bow && items.EponasSong && items.Ocarina;
             }
-         },
-         'Archery Target Skulltula': {
+         }, Archery Target Skulltula': {
             x: "80.0%",
             y: "12.0%",
             leadsto: "unknown",
@@ -9267,8 +8676,7 @@ var dungeons = [
                    (items.Ocarina && items.RequiemofSpirit && items.HoverBoots) || items.Hookshot >= 2) &&
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ; 
             }
-         },
-         'Fortress to Wasteland': {
+         }, Fortress to Wasteland': {
             x: "1.0%",
             y: "32.0%",
             leadsto: "unknown",
@@ -9301,8 +8709,7 @@ var dungeons = [
             access: "entrance",
              isAvailable: function () {
                   return dungeons[29].found == true; }
-         },
-         'Cracked Wall Doorway': {
+         }, Cracked Wall Doorway': {
             x: "64.0%",
             y: "20.0%",
             leadsto: "unknown",
@@ -9315,8 +8722,7 @@ var dungeons = [
                    ) || (items.Ocarina && items.RequiemofSpirit) 
                  ) ;
             }
-         },
-         'Nayru\'s Great Fairy Fountain': {
+         }, Nayru\'s Great Fairy Fountain': {
             x: "64.0%",
             y: "20.0%",
             leadsto: "unknown",
@@ -9330,8 +8736,7 @@ var dungeons = [
                    ) || (items.Ocarina && items.RequiemofSpirit) 
                  ) ;
             }
-         },
-         'Water Hole Tree Skulltula': {
+         }, Water Hole Tree Skulltula': {
             x: "43.0%",
             y: "82.0%",
             leadsto: "unknown",
@@ -9343,8 +8748,7 @@ var dungeons = [
                    || (items.Ocarina && items.RequiemofSpirit) ) &&
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
             }
-         },
-         'Requiem Warp': {
+         }, Requiem Warp': {
             x: "20.0%",
             y: "14.0%",
             leadsto: "unknown",
@@ -9352,8 +8756,7 @@ var dungeons = [
             access: "warp",
                isAvailable: function () {
                   return items.Ocarina && items.RequiemofSpirit; }
-         },
-         'Desert Strength Grotto': {
+         }, Desert Strength Grotto': {
             x: "28.0%",
             y: "20.0%",
             leadsto: "unknown",
@@ -9365,8 +8768,7 @@ var dungeons = [
                    || (items.Ocarina && items.RequiemofSpirit) ) &&
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
             }
-         },
-         'Silver Rock Scrub 1': {
+         }, Silver Rock Scrub 1': {
             x: "26.0%",
             y: "20.0%",
             leadsto: "unknown",
@@ -9378,8 +8780,7 @@ var dungeons = [
                    || (items.Ocarina && items.RequiemofSpirit) ) &&
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
             }
-         },
-         'Silver Rock Scrub 2': {
+         }, Silver Rock Scrub 2': {
             x: "30.0%",
             y: "20.0%",
             leadsto: "unknown",
@@ -9391,8 +8792,7 @@ var dungeons = [
                    || (items.Ocarina && items.RequiemofSpirit) ) &&
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
             }
-         },
-         'Northwest Desert Gossip': {
+         }, Northwest Desert Gossip': {
             x: "3.0%",
             y: "63.0%",
             leadsto: "unknown",
@@ -9405,8 +8805,7 @@ var dungeons = [
                    ) || (items.Ocarina && items.RequiemofSpirit) 
                  ) ;
             }
-         },
-         'Spirit Temple': {
+         }, Spirit Temple': {
             x: "9.0%",
             y: "45.0%",
             leadsto: "unknown",
@@ -9433,8 +8832,7 @@ var dungeons = [
                    ) || (items.Ocarina && items.RequiemofSpirit) 
                  ) ;
             }
-         },
-         'Soil Patch Skulltula': {
+         }, Soil Patch Skulltula': {
             x: "12.0%",
             y: "51.0%",
             leadsto: "unknown",
@@ -9445,8 +8843,7 @@ var dungeons = [
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) 
                && items.Ocarina && items.RequiemofSpirit && items.Bottle ;
             }
-         },
-         'Bean Ride Skulltula': {
+         }, Bean Ride Skulltula': {
             x: "52.0%",
             y: "36.0%",
             leadsto: "unknown",
@@ -9496,8 +8893,7 @@ var dungeons = [
             access: "entrance",
              isAvailable: function () {
                   return dungeons[30].found == true; }
-         },
-         'Dampe\'s Hut': {
+         }, Dampe\'s Hut': {
             x: "17.0%",
             y: "73.0%",
             leadsto: "unknown",
@@ -9517,8 +8913,7 @@ var dungeons = [
                return (OWERmap == false || dungeons[30].found == true) && 
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ;
             }
-         },
-         'First Row 2nd Grave': {
+         }, First Row 2nd Grave': {
             x: "29.0%",
             y: "43.0%",
             leadsto: "unknown",
@@ -9551,8 +8946,7 @@ var dungeons = [
                    || (items.Hookshot >= 2 && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ) 
                   );
             }
-         },
-         'Soil Patch Skulltula': {
+         }, Soil Patch Skulltula': {
             x: "20.0%",
             y: "20.0%",
             leadsto: "unknown",
@@ -9562,8 +8956,7 @@ var dungeons = [
                return (OWERmap == false || dungeons[30].found == true) && items.Bottle && 
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ;
             }
-         },
-         'Dampe\'s Grave': {
+         }, Dampe\'s Grave': {
             x: "24.0%",
             y: "13.0%",
             leadsto: "unknown",
@@ -9594,8 +8987,7 @@ var dungeons = [
                return (OWERmap == false || dungeons[30].found == true) && 
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ;
             }
-         },
-         '2nd Row 4th Grave': {
+         }, 2nd Row 4th Grave': {
             x: "39.0%",
             y: "66.0%",
             leadsto: "unknown",
@@ -9614,8 +9006,7 @@ var dungeons = [
             isAvailable: function () {
                return (OWERmap == false || dungeons[30].found == true) && items.Ocarina && items.SunsSong ;
             }
-         },
-         'South Wall Skulltula': {
+         }, South Wall Skulltula': {
             x: "41.0%",
             y: "87.0%",
             leadsto: "unknown",
@@ -9626,8 +9017,7 @@ var dungeons = [
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) 
                && items.Ocarina && items.RequiemofSpirit && items.Bottle ;
             }
-         },
-         'Royal Tomb': {
+         }, Royal Tomb': {
             x: "50.0%",
             y: "47.0%",
             leadsto: "unknown",
@@ -9659,8 +9049,7 @@ var dungeons = [
                  (items.Bow && items.Fire && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                  );
             }
-         },
-         'Noturne Warp': {
+         }, Noturne Warp': {
             x: "61.0%",
             y: "45.0%",
             leadsto: "unknown",
@@ -9669,8 +9058,7 @@ var dungeons = [
             isAvailable: function () {
                return (OWERmap == false || dungeons[30].found == true) && items.Ocarina && items.NocturneofShadow ;
             }
-         },
-         'Noturne Gossip': {
+         }, Noturne Gossip': {
             x: "63.0%",
             y: "34.0%",
             leadsto: "unknown",
@@ -9679,8 +9067,7 @@ var dungeons = [
             isAvailable: function () {
                return (OWERmap == false || dungeons[30].found == true) && items.Ocarina && items.NocturneofShadow
             }
-         },
-         'Shadow Temple': {
+         }, Shadow Temple': {
             x: "95.0%",
             y: "45.0%",
             leadsto: "unknown",
@@ -9742,8 +9129,7 @@ var dungeons = [
                    ) || (items.Ocarina && items.RequiemofSpirit && items.Dins) 
                  ) ;
             }
-         },
-         'Structure Skulltula': {
+         }, Structure Skulltula': {
             x: "45.0%",
             y: "50.0%",
             leadsto: "unknown",
@@ -9757,8 +9143,7 @@ var dungeons = [
                    || ( (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) 
                        && items.Boomerang && items.Ocarina && items.RequiemofSpirit) ) ;
             }
-         },
-         'Wasteland to Desert': {
+         }, Wasteland to Desert': {
             x: "2.0%",
             y: "50.0%",
             leadsto: "unknown",
@@ -9793,8 +9178,7 @@ var dungeons = [
                      (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) &&
                      items.KokiriEmerald && items.GoronRuby && items.ZoraSapphire ;
                }
-         },
-         'Song from Zelda': {
+         }, Song from Zelda': {
             x: "58.5%",
             y: "11.0%",
             leadsto: "unknown",
@@ -9805,8 +9189,7 @@ var dungeons = [
                      (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) &&
                      items.KokiriEmerald && items.GoronRuby && items.ZoraSapphire ;
                }
-         },
-         'Drawbridge to Street': {
+         }, Drawbridge to Street': {
             x: "58.5%",
             y: "5.5%",
             leadsto: "unknown",
@@ -9814,8 +9197,7 @@ var dungeons = [
             access: "entrance",
              isAvailable: function () {
                   return dungeons[32].found == true; }
-         },
-         'NE Lone Tree Grotto' : {
+         }, NE Lone Tree Grotto' : {
             x: "72%",
             y: "5.0%",
             leadsto: "unknown",
@@ -9831,8 +9213,7 @@ var dungeons = [
                       )
                   );
                }
-         },
-         'NE Skulltula Grotto' : {
+         }, NE Skulltula Grotto' : {
             x: "72%",
             y: "5.0%",
             leadsto: "unknown",
@@ -9847,8 +9228,7 @@ var dungeons = [
                        (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                       )
                   );}
-         },
-         'Field to Village': {
+         }, Field to Village': {
             x: "87.5%",
             y: "8.0%",
             leadsto: "unknown",
@@ -9856,8 +9236,7 @@ var dungeons = [
             access: "entrance",
              isAvailable: function () {
                   return dungeons[32].found == true; }
-         },
-         'Field to River': {
+         }, Field to River': {
             x: "95%",
             y: "26.0%",
             leadsto: "unknown",
@@ -9865,8 +9244,7 @@ var dungeons = [
             access: "entrance",
              isAvailable: function () {
                   return dungeons[32].found == true; }
-         },
-         'Field to Forest': {
+         }, Field to Forest': {
             x: "92.0%",
             y: "52.5%",
             leadsto: "unknown",
@@ -9874,8 +9252,7 @@ var dungeons = [
             access: "entrance",
              isAvailable: function () {
                   return dungeons[32].found == true; }
-         },
-         'SE Remote Grotto' : {
+         }, SE Remote Grotto' : {
             x: "58.0%",
             y: "75.0%",
             leadsto: "unknown",
@@ -9891,8 +9268,7 @@ var dungeons = [
                       )
                   );
                }
-         },
-         'SE Grotto Chest' : {
+         }, SE Grotto Chest' : {
             x: "58.0%",
             y: "75.0%",
             leadsto: "unknown",
@@ -9908,8 +9284,7 @@ var dungeons = [
                       )
                   );
                }
-         },
-         'South Open Grotto' : {
+         }, South Open Grotto' : {
             x: "35%",
             y: "83.0%",
             leadsto: "unknown",
@@ -9918,8 +9293,7 @@ var dungeons = [
                isAvailable: function () {
                   return OWERmap == false || dungeons[32].found == true ;
                }
-         },
-         'Southern Open Grotto' : {
+         }, Southern Open Grotto' : {
             x: "35%",
             y: "83.0%",
             leadsto: "unknown",
@@ -9928,8 +9302,7 @@ var dungeons = [
                isAvailable: function () {
                   return OWERmap == false || dungeons[32].found == true ;
                }
-         },
-         'Fenced Bomb Grotto' : {
+         }, Fenced Bomb Grotto' : {
             x: "30.0%",
             y: "85.0%",
             leadsto: "unknown",
@@ -9945,8 +9318,7 @@ var dungeons = [
                       )
                   );
                }
-         },
-         'Fenced Grotto Scrub 10$' : {
+         }, Fenced Grotto Scrub 10$' : {
             x: "30.0%",
             y: "85.0%",
             leadsto: "unknown",
@@ -9962,8 +9334,7 @@ var dungeons = [
                       )
                   );
                }
-         },
-         'Field to Lake': {
+         }, Field to Lake': {
             x: "25.5%",
             y: "92%",
             leadsto: "unknown",
@@ -9971,8 +9342,7 @@ var dungeons = [
             access: "entrance",
              isAvailable: function () {
                   return dungeons[32].found == true; }
-         },
-         'Field to Valley': {
+         }, Field to Valley': {
             x: "2.0%",
             y: "44.5%",
             leadsto: "unknown",
@@ -9980,8 +9350,7 @@ var dungeons = [
             access: "entrance",
              isAvailable: function () {
                   return dungeons[32].found == true; }
-         },
-         'Red Rock Grotto' : {
+         }, Red Rock Grotto' : {
             x: "12%",
             y: "43.0%",
             leadsto: "unknown",
@@ -9997,8 +9366,7 @@ var dungeons = [
                       )
                   );
                }
-         },
-         'Web Grotto Skulltula' : {
+         }, Web Grotto Skulltula' : {
             x: "13%",
             y: "40.5%",
             leadsto: "unknown",
@@ -10016,8 +9384,7 @@ var dungeons = [
                       )
                   );
                }
-         },
-         'Web Grotto Cow' : {
+         }, Web Grotto Cow' : {
             x: "13%",
             y: "43.5%",
             leadsto: "unknown",
@@ -10034,8 +9401,7 @@ var dungeons = [
                       )
                   );
                }
-         },
-         'Web Grotto Gossip' : {
+         }, Web Grotto Gossip' : {
             x: "11%",
             y: "43.5%",
             leadsto: "unknown",
@@ -10052,8 +9418,7 @@ var dungeons = [
                       )
                   );
                }
-         },
-         'NW Lone Tree Grotto' : {
+         }, NW Lone Tree Grotto' : {
             x: "29.0%",
             y: "19.0%",
             leadsto: "unknown",
@@ -10069,8 +9434,7 @@ var dungeons = [
                       )
                   );
                }
-         },
-         'Tektite Grotto' : {
+         }, Tektite Grotto' : {
             x: "29.0%",
             y: "19.0%",
             leadsto: "unknown",
@@ -10087,8 +9451,7 @@ var dungeons = [
                       )
                   );
                }
-         },
-         'NW GetWet Grotto' : {
+         }, NW GetWet Grotto' : {
             x: "32.0%",
             y: "4.5%",
             leadsto: "unknown",
@@ -10104,8 +9467,7 @@ var dungeons = [
                       )
                   );
                }
-         },
-         'Field to Ranch': {
+         }, Field to Ranch': {
             x: "46.5%",
             y: "39.5%",
             leadsto: "unknown",
@@ -10113,8 +9475,7 @@ var dungeons = [
             access: "entrance",
              isAvailable: function () {
                   return dungeons[32].found == true; }
-         },
-         'Due North Boulder' : {
+         }, Due North Boulder' : {
             x: "51.0%",
             y: "10.0%",
             leadsto: "unknown",
@@ -10130,8 +9491,7 @@ var dungeons = [
                       )
                   );
                }
-         },
-         'Boula NW of Castle' : {
+         }, Boula NW of Castle' : {
             x: "51.0%",
             y: "10.0%",
             leadsto: "unknown",
