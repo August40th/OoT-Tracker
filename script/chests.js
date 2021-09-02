@@ -359,6 +359,7 @@ var dungeons = [
             x: "76.0%",
             y: "55.0%",
             leadsto: "unknown",
+            floor: "3",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
@@ -368,6 +369,7 @@ var dungeons = [
             x: "48.0%",
             y: "80.0%",
             leadsto: "unknown",
+            floor: "3",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
@@ -381,6 +383,7 @@ var dungeons = [
             x: "50.0%",
             y: "83.0%",
             leadsto: "unknown",
+            floor: "3",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
@@ -394,6 +397,7 @@ var dungeons = [
             x: "39.0%",
             y: "45.0%",
             leadsto: "unknown",
+            floor: "4",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
@@ -403,6 +407,7 @@ var dungeons = [
             x: "49.0%",
             y: "50.0%",
             leadsto: "unknown",
+            floor: "4",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
@@ -412,6 +417,7 @@ var dungeons = [
             x: "49.0%",
             y: "52.0%",
             leadsto: "unknown",
+            floor: "4",
             type: "skulltula",
             access: "vanilla",
             isAvailable: function () {
@@ -421,6 +427,7 @@ var dungeons = [
             x: "77.0%",
             y: "37.0%",
             leadsto: "unknown",
+            floor: "1",
             type: "chest",
             access: "vanilla",
             isAvailable: function () {
@@ -430,6 +437,7 @@ var dungeons = [
             x: "78.0%",
             y: "44.0%",
             leadsto: "unknown",
+            floor: "1",
             type: "skulltula",
             access: "vanilla",
             isAvailable: function () {
@@ -439,6 +447,7 @@ var dungeons = [
             x: "71.0%",
             y: "33.0%",
             leadsto: "unknown",
+            floor: "1",
             type: "skulltula",
             access: "vanilla",
             isAvailable: function () {
@@ -448,6 +457,7 @@ var dungeons = [
             x: "55.0%",
             y: "15.0%",
             leadsto: "unknown",
+            floor: "0",
             type: "boss",
             access: "vanilla",
             isAvailable: function () {
@@ -457,6 +467,7 @@ var dungeons = [
             x: "20.0%",
             y: "34.0%",
             leadsto: "unknown",
+            floor: "1",
             type: "skulltula",
             access: "vanilla",
             isAvailable: function () {
@@ -468,6 +479,7 @@ var dungeons = [
             x: "79.0%",
             y: "55.0%",
             leadsto: "unknown",
+            floor: "3",
             type: "skulltula",
             access: "master",
             isAvailable: function () {
@@ -477,6 +489,7 @@ var dungeons = [
             x: "76.0%",
             y: "55.0%",
             leadsto: "unknown",
+            floor: "3",
             type: "chest",
             access: "master",
             isAvailable: function () {
@@ -486,6 +499,7 @@ var dungeons = [
             x: "39.0%",
             y: "45.0%",
             leadsto: "unknown",
+            floor: "4",
             type: "chest",
             access: "master",
             isAvailable: function () {
@@ -495,6 +509,7 @@ var dungeons = [
             x: "49.0%",
             y: "52.0%",
             leadsto: "unknown",
+            floor: "4",
             type: "chest",
             access: "master",
             isAvailable: function () {
@@ -504,6 +519,7 @@ var dungeons = [
             x: "48.0%",
             y: "80.0%",
             leadsto: "unknown",
+            floor: "3",
             type: "chest",
             access: "master",
             isAvailable: function () {
@@ -517,6 +533,7 @@ var dungeons = [
             x: "50.0%",
             y: "83.0%",
             leadsto: "unknown",
+            floor: "3",
             type: "skulltula",
             access: "master",
             isAvailable: function () {
@@ -530,6 +547,7 @@ var dungeons = [
             x: "77.0%",
             y: "37.0%",
             leadsto: "unknown",
+            floor: "1",
             type: "chest",
             access: "master",
             isAvailable: function () {
