@@ -5106,4 +5106,3 @@ var dungeons = [
       }, canGetChest: function () { return generalCanGetChest(this.chestlist); }
    },
 ];
-];
