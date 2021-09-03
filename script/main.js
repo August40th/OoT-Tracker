@@ -1084,8 +1084,8 @@ function setIndoorER(sender) {
 function setOWER(sender) {
    OWERmap = sender.checked;
    var l;
-   if (OWERmap == false) l = 34;
-   else if (OWERmap == true) l = 32;
+   if (OWERmap == false) l = 35;
+   else if (OWERmap == true) l = 33;
 
     for (k = 0; k < l; k++) {
         if (dungeons[k].type == "overworld" && OWERmap  == true) {
@@ -1666,8 +1666,8 @@ function gridItemRClick(row, col, corner) {
 
 function updateMap() {
     var l;
-    if (OWERmap == true) l = 34;
-    else if (OWERmap == false) l = 32;
+    if (OWERmap == true) l = 35;
+    else if (OWERmap == false) l = 33;
     for (k = 0; k < l; k++) {
         if (document.getElementById("dungeon" + k) == null) continue;
         document.getElementById("dungeon" + k).className = "mapspan dungeon " + dungeons[k].canGetChest() + ((dungeonMarked.indexOf(k) > -1) ? " wayofhero" : " ");
@@ -1826,8 +1826,8 @@ function itemConfigClick (sender) {
 function populateMapdiv() {
     var mapdiv = document.getElementById('mapdiv');
     var l;
-    if (OWERmap == true) l = 34;
-    else if (OWERmap == false) l = 32;
+    if (OWERmap == true) l = 35;
+    else if (OWERmap == false) l = 33;
     // Dungeon bosses & checks
     for (k=0; k<l; k++) {
         s = document.createElement('span');
