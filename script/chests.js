@@ -886,105 +886,105 @@ var dungeons = [
    },
    { name: "Bottom of the Well", x: "69.3%", y: "23.4%", type: "dungeon", mixedtype: "default", keytype: "WellKey", found: true, topfloor: 2, floorwdoor: 2,
       chestlist: {
-         'Front Left Hidden Wall': { x: "5.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         'Front Left Hidden Wall': { x: "45.0%", y: "41.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
-         }, 'Front Center Bombable': { x: "10.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Front Center Bombable': { x: "52.0%", y: "38.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && (items.Bombs || (items.Bombchu && BombchuLogic) );
             }
-         }, 'Center Large Chest': { x: "15.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Center Large Chest': { x: "46.0%", y: "33.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
-         }, 'Underwater Left Chest': { x: "20.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Underwater Left Chest': { x: "27.0%", y: "26.5%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && items.Ocarina && items.ZeldasLullaby;
             }
-         }, 'Coffin Key': { x: "25.0%", y: "5.0%", leadsto: "unknown", type: "freestanding", access: "vanilla",
+         }, 'Coffin Key': { x: "7.0%", y: "27.0%", leadsto: "unknown", type: "freestanding", access: "vanilla",
             isAvailable: function () {
                return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
-         }, 'Center Small Chest': { x: "30.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Center Small Chest': { x: "65.0%", y: "33.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
-         }, 'Back Left Bombable': { x: "35.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Back Left Bombable': { x: "32.0%", y: "8.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && (items.Bombs || (items.Bombchu && BombchuLogic) );
             }
-         }, 'West Key Door Skulltula': { x: "40.0%", y: "5.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
+         }, 'West Key Door Skulltula': { x: "47.0%", y: "16.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
             isAvailable: function () {
                return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && (smallkeys == "Remove" || items.WellKey ) && items.Boomerang;
             }
-         }, 'East Key Door Skulltula': { x: "45.0%", y: "5.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
+         }, 'East Key Door Skulltula': { x: "62.0%", y: "16.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
             isAvailable: function () {
                return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && (smallkeys == "Remove" || items.WellKey ) && items.Boomerang;
             }
-         }, 'Right Bottom Hidden Wall': { x: "50.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Right Bottom Hidden Wall': { x: "67.0%", y: "40.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
-         }, 'Locked Pits': { x: "55.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Locked Pits': { x: "81.5%", y: "19.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && (smallkeys == "Remove" || items.WellKey );
             }
-         }, 'Like Like Chest': { x: "60.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Like Like Chest': { x: "80.0%", y: "27.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && (smallkeys == "Remove" || items.WellKey );
             }
-         }, 'Like Like Skulltula': { x: "65.0%", y: "5.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
+         }, 'Like Like Skulltula': { x: "84.0%", y: "27.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
             isAvailable: function () {
                return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && (smallkeys == "Remove" || items.WellKey ) && items.Boomerang;
             }
-         }, 'Basement Chest': { x: "70.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Basement Chest': { x: "72.0%", y: "45.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove );
             }
-         }, 'Underwater Front Chest': { x: "75.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Underwater Front Chest': { x: "56.0%", y: "50.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && items.Ocarina && items.ZeldasLullaby;
             }
-         }, 'Dead Hand': { x: "80.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Dead Hand': { x: "84.0%", y: "50.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && items.Ocarina && items.ZeldasLullaby;
             }
          },
-         ['Invisible Chest']: { x: "85.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         ['Invisible Chest']: { x: "85.0%", y: "50.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && items.Ocarina && items.ZeldasLullaby;
             }
-         }, 'Center Chest': { x: "10.0%", y: "15.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'Center Chest': { x: "89.0%", y: "15.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
