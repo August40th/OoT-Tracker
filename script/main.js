@@ -1083,7 +1083,11 @@ function setIndoorER(sender) {
 
 function setOWER(sender) {
    OWERmap = sender.checked;
-    for (k = 0; k < dungeons.length; k++) {
+   var l;
+   if (OWERmap == false) l = 35;
+   else if (OWERmap == true) l = 33;
+
+    for (k = 0; k < l; k++) {
         if (dungeons[k].type == "overworld" && OWERmap  == true) {
             dungeons[k].found = false ; }
         if (dungeons[k].type == "overworld" && OWERmap  == false) {
