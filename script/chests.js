@@ -720,7 +720,7 @@ var dungeons = [
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
             }
          }, 'Lobby Switch Chest': {
-           x: "15.0%", y: "15.0%", leadsto: "unknown", type: "chest", access: "master",
+           x: "48.0%", y: "84.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[3].found == true && ( 
                   ( (items.Bombs || (items.Bombchu && BombchuLogic) ) 
@@ -733,7 +733,7 @@ var dungeons = [
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ) ); 
             }
          }, 'Lobby Cow Chest': {
-           x: "25.0%", y: "15.0%", leadsto: "unknown", type: "chest", access: "master",
+           x: "51.0%", y: "84.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[3].found == true && ( 
                   ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) 
@@ -742,7 +742,7 @@ var dungeons = [
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
             }
          }, 'Underwater Cow Chest': {
-           x: "35.0%", y: "15.0%", leadsto: "unknown", type: "chest", access: "master",
+           x: "37.0%", y: "64.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[3].found == true && ( 
                   ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) 
@@ -751,7 +751,7 @@ var dungeons = [
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
             }
          }, 'Elevator Room Lower Chest': {
-           x: "45.0%", y: "15.0%", leadsto: "unknown", type: "chest", access: "master",
+           x: "52.0%", y: "64.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[3].found == true && ( 
                   ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) 
@@ -760,7 +760,7 @@ var dungeons = [
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
             }
          }, 'Basement Cow Chest 1': {
-           x: "55.0%", y: "15.0%", leadsto: "unknown", type: "chest", access: "master",
+           x: "52.0%", y: "38.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[3].found == true && ( 
                   ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) 
@@ -769,7 +769,7 @@ var dungeons = [
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
             }
          }, 'Basement Cow Chest 2': {
-           x: "65.0%", y: "15.0%", leadsto: "unknown", type: "chest", access: "master",
+           x: "46.0%", y: "47.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[3].found == true && ( 
                   ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) 
@@ -778,7 +778,7 @@ var dungeons = [
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
             }
          }, 'Basement Open Chest': {
-           x: "75.0%", y: "15.0%", leadsto: "unknown", type: "chest", access: "master",
+           x: "65.0%", y: "51.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[3].found == true && ( 
                   ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) 
@@ -787,7 +787,7 @@ var dungeons = [
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
             }
          }, 'Basement Battle Chest': {
-           x: "85.0%", y: "15.0%", leadsto: "unknown", type: "chest", access: "master",
+           x: "59.0%", y: "54.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[3].found == true && ( 
                   ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) 
@@ -796,7 +796,7 @@ var dungeons = [
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
             }
          }, 'Song of Time Skulltula': {
-           x: "35.0%", y: "25.0%", leadsto: "unknown", type: "skulltula", access: "master",
+           x: "62.0%", y: "53.0%", leadsto: "unknown", type: "skulltula", access: "master",
             isAvailable: function () {
                return dungeons[3].found == true && ( 
                   ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) 
@@ -804,8 +804,8 @@ var dungeons = [
                    || DungeonER ) && items.Slingshot && (items.Boomerang || (items.Ocarina && items.SongofTime) )
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
             }
-         }, 'Bubble Battle Skulltula': {
-           x: "45.0%", y: "25.0%", leadsto: "unknown", type: "skulltula", access: "master",
+         }, 'Boulder Skulltula': {
+           x: "40.0%", y: "7.0%", leadsto: "unknown", type: "skulltula", access: "master",
             isAvailable: function () {
                return dungeons[3].found == true && ( 
                   ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) 
@@ -815,7 +815,7 @@ var dungeons = [
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
             }
          }, 'Invisible Enemies Skulltula': {
-           x: "25.0%", y: "35.0%", leadsto: "unknown", type: "skulltula", access: "master",
+           x: "35.0%", y: "55.0%", leadsto: "unknown", type: "skulltula", access: "master",
             isAvailable: function () {
                return dungeons[3].found == true && ( 
                   ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) 
@@ -826,7 +826,7 @@ var dungeons = [
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
             }
          }, 'Falling Like Like Chest': {
-           x: "35.0%", y: "35.0%", leadsto: "unknown", type: "chest", access: "master",
+           x: "58.0%", y: "6.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[3].found == true && ( 
                   ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) 
@@ -835,7 +835,7 @@ var dungeons = [
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
             }
          }, 'Elevator Room Upper Chest': {
-           x: "45.0%", y: "35.0%", leadsto: "unknown", type: "chest", access: "master",
+           x: "52.0%", y: "62.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[3].found == true && ( 
                   ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) 
@@ -844,7 +844,7 @@ var dungeons = [
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
             }
          }, 'Top Floor Standing Cow': {
-           x: "55.0%", y: "35.0%", leadsto: "unknown", type: "cow", access: "master",
+           x: "32.0%", y: "68.0%", leadsto: "unknown", type: "cow", access: "master",
             isAvailable: function () {
                return dungeons[3].found == true && ( 
                   ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) 
@@ -854,7 +854,7 @@ var dungeons = [
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
             }
          }, 'Chest Near Boss Door': {
-           x: "65.0%", y: "35.0%", leadsto: "unknown", type: "chest", access: "master",
+           x: "65.0%", y: "63.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[3].found == true && ( 
                   ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) 
@@ -863,7 +863,7 @@ var dungeons = [
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
             }
          }, 'Skulltula Near Boos Door': {
-           x: "75.0%", y: "35.0%", leadsto: "unknown", type: "skulltula", access: "master",
+           x: "64.5%", y: "66.0%", leadsto: "unknown", type: "skulltula", access: "master",
             isAvailable: function () {
                return dungeons[3].found == true && ( 
                   ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) 
@@ -872,7 +872,7 @@ var dungeons = [
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
             }
          }, 'MQ Barinade': {
-           x: "85.0%", y: "35.0%", leadsto: "unknown", type: "boss", access: "master",
+           x: "65.0%", y: "55.0%", leadsto: "unknown", type: "boss", access: "master",
             isAvailable: function () {
                return dungeons[3].found == true && ( 
                   ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) 
