@@ -1662,9 +1662,9 @@ function gridItemRClick(row, col, corner) {
 
 function updateMap() {
     var l;
-    if (OWERmap == false) l = 34;
-    else l = 32;
-    for (k = 0; k < dungeons.l; k++) {
+    if (OWERmap == false) l = 35;
+    else l = 34;
+    for (k = 0; k < l; k++) {
         document.getElementById("dungeon" + k).className = "mapspan dungeon " + dungeons[k].canGetChest() + ((dungeonMarked.indexOf(k) > -1) ? " wayofhero" : " ");
         var DCcount = 0;
         for (var key in dungeons[k].chestlist) {
@@ -1821,10 +1821,10 @@ function itemConfigClick (sender) {
 function populateMapdiv() {
     var mapdiv = document.getElementById('mapdiv');
     var l;
-    if (OWERmap == false) l = 34;
-    else l = 32;
+    if (OWERmap == false) l = 35;
+    else l = 33;
     // Dungeon bosses & checks
-    for (k=0; k<dungeons.l; k++) {
+    for (k=0; k<l; k++) {
         s = document.createElement('span');
         s.style.backgroundImage = 'url(images/poi.png)';
         s.id = 'dungeon' + k;
