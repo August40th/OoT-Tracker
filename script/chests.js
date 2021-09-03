@@ -702,7 +702,7 @@ var dungeons = [
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ) ); 
             }
          }, 'Before Brainade Skulltula': {
-           x: "32.0%", y: "66.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
+           x: "65.0%", y: "66.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
             isAvailable: function () {
                return dungeons[3].found == true && ( 
                   ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) 
