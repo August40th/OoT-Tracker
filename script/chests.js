@@ -2603,29 +2603,21 @@ var dungeons = [
    },
    { name: "The Market", x: "50.5%", y: "20.2%", type: "overworld", found: true,
       chestlist: {
-         'Street to Drawbridge': { x: "52.5%", y: "27.0%", type: "entrance", access: "entrance",
-          isAvailable: function () {
-               return dungeons[13].found == true; }
-         }, 'Guard/Ghostbuster House': { x: "92.0%", y: "16.0%", leadsto: "unknown", type: "simple", access: "door",
+         'Guard/Ghostbuster House': { x: "65.0%", y: "94.0%", leadsto: "unknown", type: "simple", access: "door",
                isAvailable: function () {
                   return dungeons[13].found == true ; }
-         }, 'Pottery Crate Skulltula': { x: "15.0%", y: "10.0%", leadsto: "unknown", type: "skulltula", access: "simple",
+         }, 'Pottery Crate Skulltula': { x: "60.0%", y: "96.5%", leadsto: "unknown", type: "skulltula", access: "simple",
             isAvailable: function () {
                return dungeons[13].found == true
                  && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
-         },
-         ['10 Big Poes']: { x: "20.0%", y: "10.0%", leadsto: "unknown", type: "NPC", access: "simple",
+         }, '10 Big Poes': { x: "60.0%", y: "97.0%", leadsto: "unknown", type: "NPC", access: "simple",
             isAvailable: function () { //Adult only indoor
                return dungeons[13].found == true
                && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && items.BigPoe >= 1;
             }
-         }, 'Streeet to Market': { x: "25.0%", y: "10.0%", type: "entrance", access: "entrance",
-          isAvailable: function () {
-               return dungeons[13].found == true; }
-       },
-       'Market to Street': { x: "60.0%", y: "96.0%", type: "entrance", access: "entrance",
+         }, 'Market to Street': { x: "60.0%", y: "96.0%", type: "entrance", access: "entrance",
           isAvailable: function () {
                return dungeons[13].found == true; }
          }, 'Treasure game': { x: "40.0%", y: "87.0%", leadsto: "unknown", type: "simple", access: "door",
