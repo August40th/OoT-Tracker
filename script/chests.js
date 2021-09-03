@@ -2603,10 +2603,10 @@ var dungeons = [
    },
    { name: "The Market", x: "50.5%", y: "20.2%", type: "overworld", found: true,
       chestlist: {
-         'Topdown to Drawbridge': { x: "52.5%", y: "27.0%", type: "entrance", access: "entrance",
+         'Street to Drawbridge': { x: "52.5%", y: "27.0%", type: "entrance", access: "entrance",
           isAvailable: function () {
                return dungeons[13].found == true; }
-         }, 'Guard/Ghostbuster House': { x: "10.0%", y: "10.0%", leadsto: "unknown", type: "simple", access: "door",
+         }, 'Guard/Ghostbuster House': { x: "92.0%", y: "16.0%", leadsto: "unknown", type: "simple", access: "door",
                isAvailable: function () {
                   return dungeons[13].found == true ; }
          }, 'Pottery Crate Skulltula': { x: "15.0%", y: "10.0%", leadsto: "unknown", type: "skulltula", access: "simple",
@@ -2621,42 +2621,42 @@ var dungeons = [
                && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && items.BigPoe >= 1;
             }
-         }, 'Topdown to Market': { x: "25.0%", y: "10.0%", type: "entrance", access: "entrance",
+         }, 'Streeet to Market': { x: "25.0%", y: "10.0%", type: "entrance", access: "entrance",
           isAvailable: function () {
                return dungeons[13].found == true; }
        },
-       'Market to Topdown': { x: "30.0%", y: "10.0%", type: "entrance", access: "entrance",
+       'Market to Street': { x: "60.0%", y: "96.0%", type: "entrance", access: "entrance",
           isAvailable: function () {
                return dungeons[13].found == true; }
-         }, 'Treasure game': { x: "35.0%", y: "10.0%", leadsto: "unknown", type: "simple", access: "door",
+         }, 'Treasure game': { x: "40.0%", y: "87.0%", leadsto: "unknown", type: "simple", access: "door",
             isAvailable: function () {
                return dungeons[13].found == true && 
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
          },
-         ['Treasure Chest Mini Game']: { x: "40.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "simple",
+         ['Treasure Chest Mini Game']: { x: "40.0%", y: "87.0%", leadsto: "unknown", type: "chest", access: "simple",
             isAvailable: function () {
                return dungeons[13].found == true && items.Magic && items.Lens
                  && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
-         }, 'Bombchu Shop': { x: "45.0%", y: "10.0%", leadsto: "unknown", type: "simple", access: "door",
+         }, 'Bombchu Shop': { x: "22.0%", y: "91.0%", leadsto: "unknown", type: "simple", access: "door",
             isAvailable: function () {
                return dungeons[13].found == true && 
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
             }
-         }, 'Bombchu Sale': { x: "50.0%", y: "10.0%", leadsto: "unknown", type: "shop", access: "simple",
+         }, 'Bombchu Sale': { x: "22.0%", y: "91.0%", leadsto: "unknown", type: "shop", access: "simple",
             isAvailable: function () {
                return dungeons[13].found == true
                  && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
             }
          },
-         ['Return Richard']: { x: "55.0%", y: "10.0%", leadsto: "unknown", type: "NPC", access: "outdoor",
+         ['Return Richard']: { x: "12.0%", y: "85.0%", leadsto: "unknown", type: "NPC", access: "outdoor",
             isAvailable: function () {
                return dungeons[13].found == true && 
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) 
                   );
             }
-         }, 'Back Alley House': { x: "60.0%", y: "10.0%", leadsto: "unknown", type: "simple", access: "door",
+         }, 'Back Alley House': { x: "21.0%", y: "13.0%", leadsto: "unknown", type: "simple", access: "door",
             isAvailable: function () {
                return dungeons[13].found == true && 
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) 
@@ -2664,63 +2664,63 @@ var dungeons = [
             }
          }, 'Slingshot Shooting': {
             type: "simple", 
-            x: "65.0%", y: "10.0%", access: "door",
+            x: "46.0%", y: "18.0%", access: "door",
             isAvailable: function () {
                return dungeons[13].found == true &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
          },
-         ['Slingshot Mini Game']: { x: "70.0%", y: "10.0%", leadsto: "unknown", type: "NPC", access: "simple",
+         ['Slingshot Mini Game']: { x: "46.0%", y: "18.0%", leadsto: "unknown", type: "NPC", access: "simple",
             isAvailable: function () {
                return dungeons[13].found == true
                  && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
-         }, 'Bowling': { x: "75.0%", y: "10.0%", leadsto: "unknown", type: "simple", access: "door",
+         }, 'Bowling': { x: "38.0%", y: "42.0%", leadsto: "unknown", type: "simple", access: "door",
             isAvailable: function () {
                return dungeons[13].found == true &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
          },
-         ['Bombchu Bowling 1']: { x: "80.0%", y: "10.0%", leadsto: "unknown", type: "NPC", access: "simple",
+         ['Bombchu Bowling 1']: { x: "34.0%", y: "40.0%", leadsto: "unknown", type: "NPC", access: "simple",
             isAvailable: function () {
                return dungeons[13].found == true
                  && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && (items.Bombs || (items.Bombchu && BombchuLogic));}
          },
-         ['Bombchu Bowling 2']: { x: "85.0%", y: "10.0%", leadsto: "unknown", type: "NPC", access: "simple",
+         ['Bombchu Bowling 2']: { x: "37.0%", y: "40.0%", leadsto: "unknown", type: "NPC", access: "simple",
             isAvailable: function () {
                return dungeons[13].found == true
                  && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && (items.Bombs || (items.Bombchu && BombchuLogic));
             }
          }, 'Market to Castle': {
-             x: "52.5%", y: "19.0%", leadsto: "unknown", type: "entrance", access: "entrance",
+             x: "59.5%", y: "4.0%", leadsto: "unknown", type: "entrance", access: "entrance",
             isAvailable: function () {
                return dungeons[13].found == true; }
-         }, 'Happy Mask Shop': { x: "90.0%", y: "10.0%", leadsto: "unknown", type: "simple", access: "door",
+         }, 'Happy Mask Shop': { x: "79.0%", y: "18.0%", leadsto: "unknown", type: "simple", access: "door",
             isAvailable: function () {
                return dungeons[13].found == true &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
-         }, 'Market to Temple': { x: "55.0%", y: "22.2%", leadsto: "unknown", type: "entrance", access: "entrance",
+         }, 'Market to Temple': { x: "91.0%", y: "28%", leadsto: "unknown", type: "entrance", access: "entrance",
             isAvailable: function () {
                return dungeons[13].found == true; }
-         }, 'Potion Shop': { x: "20.0%", y: "20.0%", leadsto: "unknown", type: "simple", access: "door",
+         }, 'Potion Shop': { x: "84.0%", y: "47.0%", leadsto: "unknown", type: "simple", access: "door",
             isAvailable: function () {
                return dungeons[13].found == true &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
             }
-         }, 'Potion Sale': { x: "25.0%", y: "20.0%", leadsto: "unknown", type: "shop", access: "simple",
+         }, 'Potion Sale': { x: "84.0%", y: "47.0%", leadsto: "unknown", type: "shop", access: "simple",
             isAvailable: function () {
                return dungeons[13].found == true
                  && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
-         }, 'Bazar': { x: "30.0%", y: "20.0%", leadsto: "unknown", type: "simple", access: "door",
+         }, 'Bazar': { x: "84.0%", y: "66.0%", leadsto: "unknown", type: "simple", access: "door",
             isAvailable: function () {
                return dungeons[13].found == true &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
-         }, 'Bazaar Sale': { x: "35.0%", y: "20.0%", leadsto: "unknown", type: "shop", access: "simple",
+         }, 'Bazaar Sale': { x: "84.0%", y: "66.0%", leadsto: "unknown", type: "shop", access: "simple",
             isAvailable: function () {
                return dungeons[13].found == true
                  && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
@@ -2731,40 +2731,40 @@ var dungeons = [
    },
    { name: "Temple of Time", x: "55.5%", y: "18.2%", type: "overworld", found: true,
       chestlist: {
-         'Temple to Market': { x: "5.0%", y: "5.0%", leadsto: "unknown", type: "entrance", access: "entrance",
+         'Temple to Market': { x: "78.0%", y: "95.0%", leadsto: "unknown", type: "entrance", access: "entrance",
              isAvailable: function () {
                   return dungeons[14].found == true; }
-          }, 'Temple Gossip 1': { x: "10.0%", y: "5.0%", leadsto: "unknown", type: "gossip", access: "outdoor",
+          }, 'Temple Gossip 1': { x: "66.0%", y: "75.0%", leadsto: "unknown", type: "gossip", access: "outdoor",
             isAvailable: function () {
                return dungeons[14].found == true;
             }
-         }, 'Temple Gossip 2': { x: "15.0%", y: "5.0%", leadsto: "unknown", type: "gossip", access: "outdoor",
+         }, 'Temple Gossip 2': { x: "70.0%", y: "75.0%", leadsto: "unknown", type: "gossip", access: "outdoor",
             isAvailable: function () {
                return dungeons[14].found == true;
             }
-         }, 'Temple Gossip 3': { x: "20.0%", y: "5.0%", leadsto: "unknown", type: "gossip", access: "outdoor",
+         }, 'Temple Gossip 3': { x: "74.0%", y: "75.0%", leadsto: "unknown", type: "gossip", access: "outdoor",
             isAvailable: function () {
                return dungeons[14].found == true;
             }
-         }, 'Temple Gossip 4': { x: "25.0%", y: "5.0%", leadsto: "unknown", type: "gossip", access: "outdoor",
+         }, 'Temple Gossip 4': { x: "80.0%", y: "75.0%", leadsto: "unknown", type: "gossip", access: "outdoor",
             isAvailable: function () {
                return dungeons[14].found == true;
             }
-         }, 'Temple of Time': { x: "30.0%", y: "5.0%", leadsto: "unknown", type: "alldoor", access: "door",
+         }, 'Temple of Time': { x: "46.0%", y: "58.0%", leadsto: "unknown", type: "alldoor", access: "door",
             isAvailable: function () {
                return dungeons[14].found == true; }
-         }, 'Prelude Warp': { x: "35.0%", y: "5.0%", leadsto: "unknown", type: "warp", access: "warp",
+         }, 'Prelude Warp': { x: "48.0%", y: "48.0%", leadsto: "unknown", type: "warp", access: "warp",
                isAvailable: function () {
                   return items.Ocarina && items.PreludeofLight; }
          },
-         ['Song for Forest Medallion']: { x: "40.0%", y: "5.0%", leadsto: "unknown", type: "song", access: "alldoor",
+         ['Song for Forest Medallion']: { x: "48.0%", y: "22.0%", leadsto: "unknown", type: "song", access: "alldoor",
             isAvailable: function () {
                return dungeons[14].found == true && 
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && items.ForestMedallion;
             }
          },
-         ['Zelda\'s Secret Weapon']: { x: "45.0%", y: "5.0%", leadsto: "unknown", type: "NPC", access: "alldoor",
+         ['Zelda\'s Secret Weapon']: { x: "48.0%", y: "48.0%", leadsto: "unknown", type: "NPC", access: "alldoor",
             isAvailable: function () {
                return dungeons[14].found == true && 
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) 
