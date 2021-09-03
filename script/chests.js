@@ -2606,12 +2606,12 @@ var dungeons = [
          'Guard/Ghostbuster House': { x: "65.0%", y: "94.0%", leadsto: "unknown", type: "simple", access: "door",
                isAvailable: function () {
                   return dungeons[13].found == true ; }
-         }, 'Pottery Crate Skulltula': { x: "60.0%", y: "96.5%", leadsto: "unknown", type: "skulltula", access: "simple",
+         }, 'Pottery Crate Skulltula': { x: "59.0%", y: "96.5%", leadsto: "unknown", type: "skulltula", access: "simple",
             isAvailable: function () {
                return dungeons[13].found == true
                  && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
-         }, '10 Big Poes': { x: "60.0%", y: "97.0%", leadsto: "unknown", type: "NPC", access: "simple",
+         }, '10 Big Poes': { x: "61.0%", y: "97.0%", leadsto: "unknown", type: "NPC", access: "simple",
             isAvailable: function () { //Adult only indoor
                return dungeons[13].found == true
                && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
@@ -2738,7 +2738,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[14].found == true;
             }
-         }, 'Temple Gossip 4': { x: "80.0%", y: "75.0%", leadsto: "unknown", type: "gossip", access: "outdoor",
+         }, 'Temple Gossip 4': { x: "79.0%", y: "75.0%", leadsto: "unknown", type: "gossip", access: "outdoor",
             isAvailable: function () {
                return dungeons[14].found == true;
             }
@@ -5063,4 +5063,47 @@ var dungeons = [
       }, isBeatable: function () { return this.canGetChest();
       }, canGetChest: function () { return generalCanGetChest(this.chestlist); }
    },
+   { name: "Market Street", x: "50.5%", y: "20.2%", type: "overworld", found: true,
+      chestlist: {
+         'Street to Drawbridge': { x: "52.5%", y: "27.0%", type: "entrance", access: "entrance",
+          isAvailable: function () {
+               return dungeons[13].found == true; }
+         }, 'Guard/Ghostbuster House': { x: "65.0%", y: "94.0%", leadsto: "unknown", type: "simple", access: "door",
+               isAvailable: function () {
+                  return dungeons[13].found == true ; }
+         }, 'Pottery Crate Skulltula': { x: "60.0%", y: "96.5%", leadsto: "unknown", type: "skulltula", access: "simple",
+            isAvailable: function () {
+               return dungeons[13].found == true
+                 && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
+            }
+         },
+         ['10 Big Poes']: { x: "60.0%", y: "97.0%", leadsto: "unknown", type: "NPC", access: "simple",
+            isAvailable: function () { //Adult only indoor
+               return dungeons[13].found == true
+               && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+               && items.BigPoe >= 1;
+            }
+         }, 'Streeet to Market': { x: "25.0%", y: "10.0%", type: "entrance", access: "entrance",
+          isAvailable: function () {
+               return dungeons[13].found == true; }
+       },
+      }, isBeatable: function () { return this.canGetChest();
+      }, canGetChest: function () { return generalCanGetChest(this.chestlist); }
+   },
+   { name: "Lost Woods Bridge", x: "75.3%", y: "47.0%", type: "overworld", found: true,
+      chestlist: {
+         'Bridge to Forest': { x: "2.0%", y: "78.0%", leadsto: "unknown", type: "entrance", access: "entrance",
+             isAvailable: function () {
+                  return dungeons[18].found == true; }
+         }, 'Fairy Ocarina': { x: "5.0%", y: "78.0%", leadsto: "unknown", type: "ocarina", access: "OWER",
+            isAvailable: function () {
+               return dungeons[18].found == true; }
+         }, 'Bridge to Field': { x: "15.0%", y: "78.0%", leadsto: "unknown", type: "entrance", access: "entrance",
+             isAvailable: function () {
+                  return dungeons[18].found == true; }
+         },
+      }, isBeatable: function () { return this.canGetChest();
+      }, canGetChest: function () { return generalCanGetChest(this.chestlist); }
+   },
+];
 ];
