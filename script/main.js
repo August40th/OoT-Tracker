@@ -1937,9 +1937,6 @@ function populateMapdiv() {
 
     document.getElementById('submaparea').innerHTML = dungeons[0].name;
     document.getElementById('submaparea').className = 'DC' + dungeons[0].isBeatable();
-    document.getElementById('dungeon' + 0).style.backgroundImage = 'url(images/highlighted.png)';
-
-
     document.getElementById('submaparea').oncontextmenu = new Function('confirmQuest()');
 
     for (var key in dungeons[dungeonSelect].chestlist) {
