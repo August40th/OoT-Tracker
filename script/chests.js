@@ -5063,7 +5063,7 @@ var dungeons = [
       }, isBeatable: function () { return this.canGetChest();
       }, canGetChest: function () { return generalCanGetChest(this.chestlist); }
    },
-   { name: "Market Street", x: "50.5%", y: "20.2%", type: "overworld", found: true,
+   { name: "Market Street", x: "53.5%", y: "24.2%", type: "overworld", found: true,
       chestlist: {
          'Street to Drawbridge': { x: "52.5%", y: "27.0%", type: "entrance", access: "entrance",
           isAvailable: function () {
@@ -5090,7 +5090,7 @@ var dungeons = [
       }, isBeatable: function () { return this.canGetChest();
       }, canGetChest: function () { return generalCanGetChest(this.chestlist); }
    },
-   { name: "Lost Woods Bridge", x: "75.3%", y: "47.0%", type: "overworld", found: true,
+   { name: "Lost Woods Bridge", x: "70%", y: "54.0%", type: "overworld", found: true,
       chestlist: {
          'Bridge to Forest': { x: "2.0%", y: "78.0%", leadsto: "unknown", type: "entrance", access: "entrance",
              isAvailable: function () {
