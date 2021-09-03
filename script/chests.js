@@ -1847,35 +1847,35 @@ var dungeons = [
    },
    { name: "Spirit Temple", x: "02.5%", y: "17.0%", type: "dungeon", mixedtype: "default", keytype: "SpiritKey", found: true, topfloor: 3, floorwdoor: 0,
       chestlist: {
-         ['Child Switch Room']: { x: "5.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         ['Child Switch Room']: { x: "11.0%", y: "22.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[10].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.RequiemofSpirit && (items.Boomerang || items.Slingshot || (items.Bombchu && BombchuLogic));
             }
          },
-         ['Child 1st Floor Torches']: { x: "10.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         ['Child 1st Floor Torches']: { x: "38.0%", y: "23.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[10].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.RequiemofSpirit && (items.Boomerang || items.Slingshot || (items.Bombchu && BombchuLogic));
             }
-         }, 'Child Torch Skulltula': { x: "15.0%", y: "5.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
+         }, 'Child Torch Skulltula': { x: "38.0%", y: "27.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
             isAvailable: function () {
                return dungeons[10].found == true && items.Ocarina && items.RequiemofSpirit && (items.Slingshot || items.Boomerang);
             },
-         }, 'Child Climb Skulltula': { x: "20.0%", y: "5.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
+         }, 'Child Climb Skulltula': { x: "24.0%", y: "26.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
             isAvailable: function () {
                return dungeons[10].found == true && items.SpiritKey && ((items.Ocarina && items.RequiemofSpirit && (items.Boomerang || items.Slingshot)) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2) && items.Lens && items.Magic) || (items.Ocarina && items.RequiemofSpirit)) && items.Glove >= 2 && (items.Hookshot || items.Bow)));
             },
          },
-         ['Child Lizalfos East Chest']: { x: "25.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         ['Child Lizalfos East Chest']: { x: "27.0%", y: "26.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[10].found == true && items.SpiritKey && (((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.RequiemofSpirit) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && items.MasterSword && (items.Hookshot || items.Bow || (items.Bombs || (items.Bombchu && BombchuLogic)))));
             }
          },
-         ['Child Lizalfos North Chest']: { x: "30.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         ['Child Lizalfos North Chest']: { x: "29.0%", y: "29.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[10].found == true && items.SpiritKey && (((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.RequiemofSpirit) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && items.MasterSword && (items.Hookshot || items.Bow || (items.Bombs || (items.Bombchu && BombchuLogic)))));
             }
          },
-         ['Large Torch Chest']: { x: "35.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         ['Large Torch Chest']: { x: "47.0%", y: "26.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[10].found == true && items.SpiritKey &&
                   (((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.RequiemofSpirit && (items.Bombs || (items.Bombchu && BombchuLogic))
@@ -1884,89 +1884,89 @@ var dungeons = [
                         items.Glove >= 2 && items.MasterSword && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic)) && (items.Magic && (items.Dins || (items.Fire && items.Bow)))));
             }
          },
-         ['Sun Block Room Chest']: { x: "40.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         ['Sun Block Room Chest']: { x: "19.0%", y: "59.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[10].found == true && items.SpiritKey && (((OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.RequiemofSpirit && (items.Bombs || (items.Bombchu && BombchuLogic))) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && items.MasterSword && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic)) && (items.Dins || (items.Fire && items.Bow)) && items.Magic));
             }
-         }, 'Before Child IronKnuckle Skulltula': { x: "45.0%", y: "5.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
+         }, 'Before Child IronKnuckle Skulltula': { x: "12.0%", y: "63.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
             isAvailable: function () {
                return dungeons[10].found == true && items.SpiritKey && (items.Ocarina && items.RequiemofSpirit && items.Bombs) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2) && items.Lens && items.Magic) || (items.Ocarina && items.RequiemofSpirit)) && items.Glove >= 2);
             },
          },
-         ['Colossus Right Hand Chest']: { x: "50.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         ['Colossus Right Hand Chest']: { x: "26.0%", y: "83.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[10].found == true && (items.RequiemofSpirit && items.SpiritKey >= 2 && items.Ocarina && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.Bombchu && BombchuLogic))) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && items.MasterSword && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic)) && items.SpiritKey >= 2);
             }
          },
-         ['Wolfos Lullaby Chest']: { x: "55.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         ['Wolfos Lullaby Chest']: { x: "54.5%", y: "22.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[10].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && ((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && items.Hookshot && items.Ocarina && items.ZeldasLullaby;
             }
-         }, 'Song of Time Skulltula': { x: "60.0%", y: "5.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
+         }, 'Song of Time Skulltula': { x: "74.0%", y: "23.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
             isAvailable: function () {
                return dungeons[10].found == true && ((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2) && items.Lens && items.Magic) || (items.Ocarina && items.RequiemofSpirit)) && items.Glove >= 2;
             },
          },
-         ['Silver Rupee Halfpipe']: { x: "65.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         ['Silver Rupee Halfpipe']: { x: "79.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[10].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && ((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic));
             }
          },
-         ['Floormaster Left Chest']: { x: "70.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         ['Floormaster Left Chest']: { x: "69.0%", y: "35.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[10].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.SpiritKey && ((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic));
             }
          },
-         ['Floormaster Right Chest']: { x: "75.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         ['Floormaster Right Chest']: { x: "66.5%", y: "35.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[10].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.SpiritKey && ((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic));
             }
          },
-         ['Top Right after Lullaby']: { x: "80.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         ['Top Right after Lullaby']: { x: "59.0%", y: "20.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[10].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.SpiritKey && (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic))) && items.Ocarina && items.ZeldasLullaby && (items.HoverBoots || items.Hookshot);
             }
          },
-         ['Statue\'s Hand after Lullaby']: { x: "85.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         ['Statue\'s Hand after Lullaby']: { x: "40.0%", y: "26.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[10].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.SpiritKey && (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic))) && items.Ocarina && items.ZeldasLullaby;
             }
-         }, 'Top Left Scarecrow Skulltula': { x: "90.0%", y: "5.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
+         }, 'Top Left Scarecrow Skulltula': { x: "36.0%", y: "19.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
             isAvailable: function () {
                return dungeons[10].found == true && items.SpiritKey && (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2) && items.Lens && items.Magic) || items.RequiemofSpirit) && items.Glove >= 2) && ((items.Ocarina && items.Hookshot) || items.Hookshot >= 2);
             },
          },
-         ['Four Armos Side Room']: { x: "95.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         ['Four Armos Side Room']: { x: "84.5%", y: "36.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[10].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.SpiritKey >= 2 && (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic))) && items.MirrorShield && (items.Bombs || (items.Bombchu && BombchuLogic));
             }
          },
-         ['Left Invisible Chest']: { x: "5.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         ['Left Invisible Chest']: { x: "87.0%", y: "71.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[10].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.SpiritKey >= 2 && items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic)) && (items.Bombs || (items.Bombchu && BombchuLogic)) && ((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2 || items.RequiemofSpirit);
             }
          },
-         ['Right Invisible Chest']: { x: "10.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         ['Right Invisible Chest']: { x: "84.0%", y: "71.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[10].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.SpiritKey >= 2 && items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic)) && (items.Bombs || (items.Bombchu && BombchuLogic)) && ((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2 || items.RequiemofSpirit);
             }
          },
-         ['Colossus Left Hand Chest']: { x: "15.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         ['Colossus Left Hand Chest']: { x: "71.0%", y: "83.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[10].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.SpiritKey >= 2 && items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic)) && (items.Bombs || (items.Bombchu && BombchuLogic)) && ((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2 || items.RequiemofSpirit);
             }
          },
-         ['Fire Trap Chest']: { x: "20.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         ['Fire Trap Chest']: { x: "60.0%", y: "16.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[10].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.SpiritKey >= 3 && items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic)) && items.ZeldasLullaby && items.Ocarina && ((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2 || items.RequiemofSpirit);
             }
          },
-         ['Adult Lizalfos Chest']: { x: "25.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         ['Adult Lizalfos Chest']: { x: "32.0%", y: "30.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[10].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.SpiritKey >= 3 && items.Glove >= 2 && items.MirrorShield && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic)) && ((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2 || items.RequiemofSpirit);
             }
          },
-         ['Twinrova']: { x: "30.0%", y: "10.0%", leadsto: "unknown", type: "bss", access: "vanilla",
+         ['Twinrova']: { x: "47.0%", y: "12.0%", leadsto: "unknown", type: "bss", access: "vanilla",
             isAvailable: function () {
                return dungeons[10].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.SpiritKey >= 3 && (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic)) && items.MirrorShield && items.Hookshot && items.BossSpirit);
             }
@@ -2118,7 +2118,7 @@ var dungeons = [
                return dungeons[10].found == true && (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.SpiritKey >= 3;
             }
-         }, 'MQ TwinRova': { x: "15.0%", y: "45.0%", leadsto: "unknown", type: "boss", access: "master",
+         }, 'MQ TwinRova': { x: "47.0%", y: "12.0%", leadsto: "unknown", type: "boss", access: "master",
             isAvailable: function () {
                return dungeons[10].found == true && (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 
@@ -2130,95 +2130,95 @@ var dungeons = [
    },
    { name: "Shadow Temple", x: "79.7%", y: "19.5%", type: "dungeon", mixedtype: "default", keytype: "ShadowKey", found: true, topfloor: 3, floorwdoor: 3,
       chestlist: {
-         'Keese and Redead': { x: "5.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         'Keese and Redead': { x: "40.5%", y: "27.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[11].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.NocturneofShadow && items.Magic && items.Dins && (items.HoverBoots || items.Hookshot);
             }
-         }, 'Deadhand Chest': { x: "10.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Deadhand Chest': { x: "26.0%", y: "35.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[11].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.NocturneofShadow && items.Magic && items.Magic && items.Dins && (items.HoverBoots || items.Hookshot);
             }
-         }, '1st Gibdos Room': { x: "15.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, '1st Gibdos Room': { x: "75.0%", y: "49.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[11].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots;
             }
-         }, '1st Silver Rupees': { x: "20.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, '1st Silver Rupees': { x: "77.0%", y: "21.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[11].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots;
             }
-         }, 'Silver Rupee Skulltula': { x: "25.0%", y: "5.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
+         }, 'Silver Rupee Skulltula': { x: "77.0%", y: "17.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
             isAvailable: function () {
                return dungeons[11].found == true && items.ShadowKey && items.Ocarina && items.NocturneofShadow && items.Dins && items.Magic && items.Lens && items.HoverBoots && items.Bombs;
             },
-         }, 'Like Like Visible': { x: "30.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Like Like Visible': { x: "95.0%", y: "67.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[11].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ShadowKey && items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots && (items.Bombs || (items.Bombchu && BombchuLogic));
             }
-         }, 'Like Like Invisible': { x: "35.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Like Like Invisible': { x: "95.0%", y: "70.5%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[11].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ShadowKey && items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots && (items.Bombs || (items.Bombchu && BombchuLogic));
             }
-         }, 'Crusher Skulltula': { x: "40.0%", y: "5.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
+         }, 'Crusher Skulltula': { x: "38.0%", y: "90.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
             isAvailable: function () {
                return dungeons[11].found == true && items.ShadowKey && items.Ocarina && items.NocturneofShadow && items.Dins && items.Magic && items.Lens && items.HoverBoots && items.Bombs;
             },
-         }, 'Crusher Lower Chest': { x: "45.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Crusher Lower Chest': { x: "38.0%", y: "86.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[11].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ShadowKey && items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots && (items.Bombs || (items.Bombchu && BombchuLogic));
             }
-         }, 'Crusher Upper Chest': { x: "50.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Crusher Upper Chest': { x: "44.0%", y: "85.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[11].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ShadowKey && items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Glove;
             }
-         }, 'Crusher Switch Chest': { x: "55.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Crusher Switch Chest': { x: "34.0%", y: "90.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[11].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ShadowKey && items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Glove;
             }
-         }, 'Readeads and Rupees': { x: "60.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Readeads and Rupees': { x: "61.5%", y: "56.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[11].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ShadowKey >= 2 && items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots && (items.Bombs || (items.Bombchu && BombchuLogic));
             }
-         }, 'Single Skull Pot Skulltula': { x: "65.0%", y: "5.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
+         }, 'Single Skull Pot Skulltula': { x: "47.0%", y: "56.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
             isAvailable: function () {
                return dungeons[11].found == true && items.ShadowKey >= 2 && items.Ocarina && items.NocturneofShadow && items.Dins && items.Magic && items.Lens && items.HoverBoots && items.Bombs && items.Hookshot;
             },
-         }, 'Skull Pot Bombing': { x: "70.0%", y: "5.0%", leadsto: "unknown", type: "freestanding", access: "vanilla",
+         }, 'Skull Pot Bombing': { x: "49.0%", y: "57.0%", leadsto: "unknown", type: "freestanding", access: "vanilla",
             isAvailable: function () {
                return dungeons[11].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ShadowKey >= 2 && items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Hookshot;
             }
-         }, 'Readeads and Hint': { x: "75.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Readeads and Hint': { x: "95.0%", y: "39.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[11].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ShadowKey >= 3 && items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Hookshot;
             }
-         }, '2nd Gibdos Room': { x: "80.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, '2nd Gibdos Room': { x: "86.5%", y: "27.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[11].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ShadowKey >= 3 && items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Hookshot;
             }
-         }, 'Gibdos Hidden Chest': { x: "85.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Gibdos Hidden Chest': { x: "88.0%", y: "30.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[11].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ShadowKey >= 3 && items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Hookshot;
             }
-         }, 'Before Boat Skulltula': { x: "90.0%", y: "5.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
+         }, 'Before Boat Skulltula': { x: "79.0%", y: "19.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
             isAvailable: function () {
                return dungeons[11].found == true && items.ShadowKey >= 3 && items.Ocarina && items.NocturneofShadow && items.Dins && items.Magic && items.Lens && items.HoverBoots && items.Bombs && items.Hookshot && items.Glove;
             },
-         }, 'Floormaster Room': { x: "95.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Floormaster Room': { x: "19.0%", y: "39.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[11].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ShadowKey >= 4 && items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Hookshot && items.Glove && items.Ocarina && items.ZeldasLullaby;
             }
-         }, 'Triple Skull Pot Skulltula': { x: "5.0%", y: "10.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
+         }, 'Triple Skull Pot Skulltula': { x: "5.0%", y: "24.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
             isAvailable: function () {
                return dungeons[11].found == true && items.ShadowKey >= 4 && items.Ocarina && items.NocturneofShadow && items.Dins && items.Magic && items.Lens && items.HoverBoots && items.Bombs && items.Hookshot && items.Glove && items.ZeldasLullaby;
             },
-         }, 'Spike Wall 1': { x: "10.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Spike Wall 1': { x: "16.0%", y: "11.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[11].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ShadowKey >= 4 && items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Hookshot && items.Glove && items.Ocarina && items.ZeldasLullaby;
             }
-         }, 'Spike Wall  2': { x: "10.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Spike Wall  2': { x: "22.0%", y: "11.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[11].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ShadowKey >= 4 && items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Hookshot && items.Glove && items.Ocarina && items.ZeldasLullaby;
             }
-         }, 'Bongo Bongo': { x: "15.0%", y: "10.0%", leadsto: "unknown", type: "boss", access: "vanilla",
+         }, 'Bongo Bongo': { x: "31.0%", y: "55.0%", leadsto: "unknown", type: "boss", access: "vanilla",
             isAvailable: function () {
                return dungeons[11].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ShadowKey >= 5 && items.BossShadow && (items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Hookshot && items.Glove && items.Ocarina && items.ZeldasLullaby && (items.Bow || items.Scarecrow >= 2));
             }
@@ -2346,7 +2346,7 @@ var dungeons = [
                return dungeons[11].found == true && items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 4 && items.Hookshot >= 2 && items.ZeldasLullaby;
             }
-         }, 'MQ Bongo Bongo': { x: "75.0%", y: "15.0%", leadsto: "unknown", type: "boss", access: "master",
+         }, 'MQ Bongo Bongo': { x: "31.0%", y: "55.0%", leadsto: "unknown", type: "boss", access: "master",
             isAvailable: function () {
                return dungeons[11].found == true && items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 4 && items.Hookshot >= 2 && items.ZeldasLullaby && items.BossShadow;
