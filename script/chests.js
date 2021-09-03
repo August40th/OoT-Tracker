@@ -984,7 +984,7 @@ var dungeons = [
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && items.Ocarina && items.ZeldasLullaby;
             }
-         }, 'Center Chest': { x: "57.0%", y: "37.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'Center Chest': { x: "57.0%", y: "35.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
@@ -1030,7 +1030,7 @@ var dungeons = [
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && items.WellKey;
             }
-         }, 'Basement Skulltula': { x: "8.0%", y: "9.0%", leadsto: "unknown", type: "skulltula", access: "master",
+         }, 'Basement Skulltula': { x: "38.0%", y: "9.0%", leadsto: "unknown", type: "skulltula", access: "master",
             isAvailable: function () {
                return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
                && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
@@ -1211,84 +1211,83 @@ var dungeons = [
    },
    { name: "Fire Temple", x: "65.4%", y: "04.0%", type: "dungeon", mixedtype: "default", keytype: "FireKey", found: true, topfloor: 4, floorwdoor: 0,
       chestlist: {
-         'Chest Near Boss': {
-             x: "5.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         'Chest Near Boss': { x: "63.5%", y: "36.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[6].found == true && items.MasterSword && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.BoleroofFire || ((items.HoverBoots || items.Hookshot) && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Hammer || items.Bow || (items.Magic && items.Dins))));
             }
-         }, 'Before 1st Fire Dancer Skulltula': { x: "10.0%", y: "5.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
+         }, 'Before 1st Fire Dancer Skulltula': { x: "57.0%", y: "23.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
             isAvailable: function () {
                return dungeons[6].found == true && items.Hammer && (items.Hookshot || items.HoverBoots || items.BoleroofFire)
             }
-         }, 'Flare Dancer Chest': { x: "15.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Flare Dancer Chest': { x: "46.5%", y: "26.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[6].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)) && items.Hammer;
             }
-         }, 'Under Lobby Chest': { x: "20.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Under Lobby Chest': { x: "47.0%", y: "35.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[6].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)) && items.Hammer;
             }
-         }, 'Song of Time Lava Room Skulltula': { x: "25.0%", y: "5.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
+         }, 'Song of Time Lava Room Skulltula': { x: "64.0%", y: "22.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
             isAvailable: function () {
                return dungeons[6].found == true && items.Ocarina && items.SongofTime && items.FireKey && (items.BoleroofFire || (items.HoverBoots || items.Hookshot))
             }
-         }, 'Lava Room Open Chest': { x: "30.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Lava Room Open Chest': { x: "75.0%", y: "23.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[6].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.FireKey && (items.BoleroofFire || (items.HoverBoots || items.Hookshot));
             }
-         }, 'Lava Room Bombable Wall': { x: "35.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Lava Room Bombable Wall': { x: "69.0%", y: "75.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[6].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.FireKey && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)) && (items.Bombs || (items.Bombchu && BombchuLogic));
             }
-         }, 'Maze Lower Chest': { x: "40.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Maze Lower Chest': { x: "76.0%", y: "62.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[6].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.FireKey >= 3 && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)) && items.Glove;
             }
-         }, 'Maze Bombable Wall Skulltula': { x: "45.0%", y: "5.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
+         }, 'Maze Bombable Wall Skulltula': { x: "77.0%", y: "29.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
             isAvailable: function () {
                return dungeons[6].found == true && (items.Bombs || items.Bombchu) && items.FireKey >= 3 && (items.BoleroofFire || (items.HoverBoots || items.Hookshot))
             }
-         }, 'Maze Side Room': { x: "50.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Maze Side Room': { x: "64.0%", y: "21.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[6].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.FireKey >= 3 && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)) && items.Glove;
             }
-         }, 'Eye Switch Chest': { x: "55.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Eye Switch Chest': { x: "61.0%", y: "44.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[6].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && ((items.FireKey >= 4 && items.Bow) || items.FireKey >= 5) && (items.BoleroofFire || items.HoverBoots || items.Hookshot) && items.Glove;
             }
-         }, 'Maze Upper Chest': { x: "60.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Maze Upper Chest': { x: "73.0%", y: "66.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[6].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.FireKey >= 5 && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)) && items.Glove;
             }
-         }, 'Maze Bombable Pit': { x: "65.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Maze Bombable Pit': { x: "77.0%", y: "46.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[6].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.FireKey >= 5 && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)) && items.Glove && (items.Bombs || (items.Bombchu && BombchuLogic));
             }
-         }, '1st Scarecrow Skulltula': { x: "70.0%", y: "5.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
+         }, '1st Scarecrow Skulltula': { x: "63.0%", y: "32.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
             isAvailable: function () {
                return dungeons[6].found == true && items.FireKey >= 5 && items.Glove && items.Hookshot && items.Ocarina
             }
-         }, '2nd Scarecrow Skulltula': { x: "75.0%", y: "5.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
+         }, '2nd Scarecrow Skulltula': { x: "68.0%", y: "44.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
             isAvailable: function () {
                return dungeons[6].found == true && items.FireKey >= 5 && items.Glove && items.Hookshot && items.Ocarina
             }
-         }, 'Scarecrow Chest': { x: "80.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Scarecrow Chest': { x: "75.0%", y: "41.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[6].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.FireKey >= 5 && items.Glove && items.Hookshot && items.Ocarina && items.Scarecrow >= 2;
             }
-         }, 'Flame Maze Side Room': { x: "85.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Flame Maze Side Room': { x: "41.0%", y: "29.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[6].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.FireKey >= 6 && (items.BoleroofFire || items.HoverBoots || items.Hookshot) && items.Glove;
             }
-         }, 'Song of Time Chest': { x: "90.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Song of Time Chest': { x: "31.0%", y: "46.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[6].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.FireKey >= 7 || (items.FireKey >= 6 && items.HoverBoots)) && (items.BoleroofFire || items.HoverBoots || items.Hookshot) && items.Glove && items.Hammer;
             }
-         }, 'Topmost Chest': { x: "10.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Topmost Chest': { x: "23.0%", y: "53.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[6].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.FireKey >= 6 && (items.BoleroofFire || items.HoverBoots || items.Hooksho) && items.Glove && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Hammer);
             }
-         }, 'Volvagia': { x: "20.0%", y: "10.0%", leadsto: "unknown", type: "boss", access: "vanilla",
+         }, 'Volvagia': { x: "29.0%", y: "46.0%", leadsto: "unknown", type: "boss", access: "vanilla",
             isAvailable: function () {
                return dungeons[6].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.BossFire && ((items.GoronTunic || items.Bottle) && (items.BoleroofFire || (items.HoverBoots || items.Hookshot)) && items.Hammer && (items.HoverBoots || (items.Glove && (items.Bombs || items.Hookshot) && items.Bombs)));
             }
@@ -1468,7 +1467,7 @@ var dungeons = [
                         && items.Bow && items.Ocarina && items.SongofTime //2nd Key door, arrow torch, Block of Time
                         && items.FireKey >= 5;
             }
-         }, 'MQ Volvagia': { x: "40.0%", y: "25.0%", leadsto: "unknown", type: "boss", access: "master",
+         }, 'MQ Volvagia': { x: "29.0%", y: "46.0%", leadsto: "unknown", type: "boss", access: "master",
             isAvailable: function () {
                return dungeons[6].found == true && ( (items.BoleroofFire && items.Ocarina) //Warp
                          || ( (items.HoverBoots || items.Hookshot) //Cross Crater Bridge
@@ -1562,67 +1561,67 @@ var dungeons = [
    },
    { name: "Water Temple", x: "36.1%", y: "91.0%", type: "dungeon", mixedtype: "default", keytype: "WaterKey", found: true, topfloor: 3, floorwdoor: 3,
       chestlist: {
-         'Water Jet Chest': { x: "5.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         'Water Jet Chest': { x: "86.0%", y: "59.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[8].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.IronBoots && items.Hookshot) || (items.Scale >= 2 && items.Hookshot >= 2 && items.Ocarina && items.ZeldasLullaby);
             }
-         }, 'Spike Ball Chest': { x: "10.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Spike Ball Chest': { x: "91.0%", y: "77.5%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[8].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.IronBoots && items.Hookshot) || (items.Scale >= 2 && items.Hookshot >= 2);
             }
-         }, 'Torches to Shellblades': { x: "15.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Torches to Shellblades': { x: "89.5%", y: "77.5%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[8].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && ((items.IronBoots && items.Hookshot) || (items.Scale >= 2 && items.Hookshot >= 2)) && (items.Bow || (items.Dins && items.Magic)) && items.Ocarina && items.ZeldasLullaby;
             }
-         }, 'Cracked Wall': { x: "20.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Cracked Wall': { x: "88.0%", y: "77.5%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[8].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && ((items.IronBoots && items.Hookshot) && (items.Bombs || (items.Bombchu && BombchuLogic))) || ((items.Scale >= 2 && items.Hookshot >= 2) && items.Ocarina && items.ZeldasLullaby);
             }
-         }, 'Central Bow Target': { x: "25.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Central Bow Target': { x: "77.0%", y: "90.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[8].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && ((items.IronBoots && items.Hookshot) || (items.Scale >= 2 && items.Hookshot >= 2)) && items.Bow && items.Glove && items.Ocarina && items.ZeldasLullaby && (items.HoverBoots || items.Hookshot >= 2);
             }
-         }, 'Basement Key Door to Skulltula': { x: "30.0%", y: "5.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
+         }, 'Cracked Floor Skulltula': { x: "34.0%", y: "86.5%", leadsto: "unknown", type: "skulltula", access: "vanilla",
             isAvailable: function () {
                return dungeons[8].found == true && (items.IronBoots && items.Hookshot) || (items.Scale >= 2 && items.Hookshot >= 2 && items.Ocarina && items.ZeldasLullaby) && items.WaterKey && items.Bombs;
             }
-         }, 'Boulder Hall Skulltula': { x: "35.0%", y: "5.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
+         }, 'Boulder Hall Skulltula': { x: "49.0%", y: "36.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
             isAvailable: function () {
                return dungeons[8].found == true && items.WaterKey && items.IronBoots && items.Hookshot && ((items.Bombs && items.Glove) || items.HoverBoots || items.Hookshot >= 2);
             }
-         }, 'Boulder Hall Chest': { x: "40.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Boulder Hall Chest': { x: "47.0%", y: "25.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[8].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.WaterKey >= 2 && ((items.IronBoots && items.Hookshot) || (items.Scale >= 2 && items.Hookshot >= 2)) && (((items.Bombs || (items.Bombchu && BombchuLogic)) && items.Glove) || items.HoverBoots) && (items.Hookshot >= 2 || items.HoverBoots);
             }
-         }, 'Top of Central Pillar Skulltula': { x: "45.0%", y: "5.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
+         }, 'Top of Central Pillar Skulltula': { x: "65.0%", y: "70.5%", leadsto: "unknown", type: "skulltula", access: "vanilla",
             isAvailable: function () {
                return dungeons[8].found == true && items.IronBoots && (items.WaterKey && items.Ocarina && items.ZeldasLullaby) || (items.Bow && items.Ocarina && items.ZeldasLullaby) && items.Hookshot >= 2;
             }
-         }, 'Central Pillar Basement': { x: "50.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Central Pillar Basement': { x: "75.0%", y: "83.5%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[8].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.WaterKey || items.Bow) && items.IronBoots && items.Hookshot && items.Ocarina && items.ZeldasLullaby;
             }
-         }, 'Dragon Mouth Switch Chest': { x: "55.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Dragon Mouth Switch Chest': { x: "35.0%", y: "42%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[8].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && ((items.IronBoots && items.Hookshot) || (items.Scale >= 2 && items.Hookshot >= 2)) && items.Ocarina && (((items.SongofTime && items.Bow && items.WaterKey >= 2)) || (items.ZeldasLullaby && items.Glove));
             }
-         }, 'Platform Room Skulltula': { x: "60.0%", y: "5.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
+         }, 'Platform Room Skulltula': { x: "44.0%", y: "67.5%", leadsto: "unknown", type: "skulltula", access: "vanilla",
             isAvailable: function () {
                return dungeons[8].found == true && items.WaterKey && items.Hookshot >= 2;
             }
-         }, 'Dark Link': { x: "65.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Dark Link': { x: "23.0%", y: "9.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[8].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.WaterKey >= 2 && ((items.IronBoots && items.Hookshot) || (items.Scale >= 2 && items.Hookshot >= 2));
             }
-         }, 'River Skulltula': { x: "70.0%", y: "5.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
+         }, 'River Skulltula': { x: "30.0%", y: "21.0%", leadsto: "unknown", type: "skulltula", access: "vanilla",
             isAvailable: function () {
                return dungeons[8].found == true && items.SongofTime && items.IronBoots && items.Hookshot;
             }
-         }, 'River Eye Switch Chest': { x: "75.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'River Eye Switch Chest': { x: "39.0%", y: "30.5%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[8].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.WaterKey >= 2 && ((items.IronBoots && items.Hookshot) || (items.Scale >= 2 && items.Hookshot >= 2)) && items.Ocarina && items.SongofTime && items.Bow;
             }
-         }, 'Morpha': { x: "80.0%", y: "5.0%", leadsto: "unknown", type: "boss", access: "vanilla",
+         }, 'Morpha': { x: "63.5%", y: "37.0%", leadsto: "unknown", type: "boss", access: "vanilla",
             isAvailable: function () {
                return dungeons[8].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && ((items.IronBoots && items.Hookshot >= 2) || (items.Scale >= 2 && items.Hookshot >= 2)) && items.BossWater;
             }
@@ -1677,7 +1676,7 @@ var dungeons = [
                        && (items.Hookshot >= 2 || items.HoverBoots) //Get over the spikes
                        ;
             }
-         }, 'MQ Morpha': { x: "20.0%", y: "20.0%", leadsto: "unknown", type: "boss", access: "master",
+         }, 'MQ Morpha': { x: "63.5%", y: "37.0%", leadsto: "unknown", type: "boss", access: "master",
             isAvailable: function () {
                return dungeons[8].found == true && ((items.IronBoots && items.Hookshot >= 1) || (items.Scale >= 2 && items. Hookshot >= 2 && items.Ocarina && items.ZeldasLullaby)) //Temple Access
                        && items.BossWater && items.Hookshot >= 2 //Boos door access
