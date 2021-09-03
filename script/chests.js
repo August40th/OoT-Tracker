@@ -488,7 +488,7 @@ var dungeons = [
                      && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                  ); 
             }
-         }, 'MQ Lobby Gossip': { x: "22.0%", y: "63.0%", leadsto: "unknown", type: "gossip", access: "vanilla",
+         }, 'MQ Lobby Gossip': { x: "22.0%", y: "63.0%", leadsto: "unknown", type: "gossip", access: "master",
             isAvailable: function () {
                return dungeons[2].found == true &&
                 ( ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove) && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
