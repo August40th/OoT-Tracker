@@ -1826,6 +1826,7 @@ function itemConfigClick (sender) {
 function populateMapdiv() {
     var mapdiv = document.getElementById('mapdiv');
     var l;
+    setOWER(OWERmap);
     if (OWERmap == true) l = 35;
     else if (OWERmap == false) l = 33;
     // Dungeon bosses & checks
