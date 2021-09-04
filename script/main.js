@@ -1668,9 +1668,9 @@ function updateMap() {
     var l;
     if (OWERmap == true) l = 35;
     else if (OWERmap == false) l = 33;
-    for (k = 0; k < l; k++) {
+    for (k = 0; k < dungeons.length; k++) {
         if (OWERmap == false && k >= 33) continue;
-        dungeons[k].className = "mapspan dungeon " + dungeons[k].canGetChest() ;
+        document.getElementById("dungeon" + k).className = "mapspan dungeon " + dungeons[k].canGetChest() + ((dungeonMarked.indexOf(k) > -1) ? " wayofhero" : " ");
         var DCcount = 0;
         for (var key in dungeons[k].chestlist) {
             if ( dungeons[k].type == "dungeon" && quest == "Mixed" && dungeons[k].mixedtype == "master" && dungeons[k].chestlist[key].access == "master") { //Mixed quest checks
@@ -1756,7 +1756,7 @@ function updateMap() {
             }
         }
 
-        var child = dungeons[k].firstChild;
+        var child = document.getElementById('dungeon' + k).firstChild;
         while (child) {
             if (child.className == 'chestCount') {
                 if ( quest == "Mixed" && dungeons[k].mixedttype == "default" ) {
