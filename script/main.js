@@ -1733,7 +1733,7 @@ function updateMap() {
                 continue;}
             if (dungeons[k].chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
                 continue;}
-            if (OWERmap == false && k >= 33) continue;
+            if (OWERmap == false && (k == 33 || k == 34) ) continue;
             if (dungeons[k].chestlist.hasOwnProperty(key)) {
                 if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable()) {
                     DCcount++;
@@ -1826,7 +1826,6 @@ function populateMapdiv() {
     var mapdiv = document.getElementById('mapdiv');
     // Dungeon bosses & checks
     for (k=0; k<dungeons.length; k++) {
-        if (OWERmap == false && k >= 33) continue;
         s = document.createElement('span');
         s.style.backgroundImage = 'url(images/poi.png)';
         s.id = 'dungeon' + k;
@@ -1906,7 +1905,7 @@ function populateMapdiv() {
                 continue;}
             if (dungeons[k].chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
                 continue;}
-            if (OWERmap == false && k >= 33) continue;
+            if (OWERmap == false && (k == 33 || k == 34) ) continue;
             if (dungeons[k].chestlist.hasOwnProperty(key)) {
                 if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable()) {
                     DCcount++;
@@ -1935,10 +1934,6 @@ function populateMapdiv() {
         s.appendChild(ss);
 
         mapdiv.appendChild(s);
-        if (OWERmap == false && k >= 33) s.style.visibility = 'hidden';
-        else if (OWERmap == true && k >= 33) s.style.visibility = 'visible';
-        if (OWERmap == false && k >= 33) ss.style.visibility = 'hidden';
-        else if (OWERmap == true && k >= 33) ss.style.visibility = 'visible';
     }
 
     document.getElementById('submaparea').innerHTML = dungeons[0].name;
