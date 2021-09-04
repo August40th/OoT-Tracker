@@ -1096,8 +1096,8 @@ function setOWER(sender) {
    document.getElementById('dungeon33').style.visibility = 'hidden';
    document.getElementById('dungeon34').style.visibility = 'hidden';
    } if (OWERmap == true) {
-   document.getElementById('dungeon33').style.visibility = 'visibile';
-   document.getElementById('dungeon34').style.visibility = 'visibile';
+   document.getElementById('dungeon33').style.visibility = 'unset';
+   document.getElementById('dungeon34').style.visibility = 'unset';
    }
 
    updateMap();
