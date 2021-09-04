@@ -1670,7 +1670,7 @@ function updateMap() {
     else if (OWERmap == false) l = 33;
     for (k = 0; k < l; k++) {
         if (document.getElementById("dungeon" + k) == null) dungeons[k].setAttribute("name", "huh");
-        document.getElementById("dungeon" + k).className = "mapspan dungeon " + dungeons[k].canGetChest() ;
+        dungeons[k].className = "mapspan dungeon " + dungeons[k].canGetChest() ;
         var DCcount = 0;
         for (var key in dungeons[k].chestlist) {
             if ( dungeons[k].type == "dungeon" && quest == "Mixed" && dungeons[k].mixedtype == "master" && dungeons[k].chestlist[key].access == "master") { //Mixed quest checks
