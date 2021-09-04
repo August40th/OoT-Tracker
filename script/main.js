@@ -621,6 +621,7 @@ function clickDungeon(d) {
             continue;}
         if (dungeons[dungeonSelect].chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
             continue;}
+        if (OWERmap == false && k >= 33) continue
 
         var s = document.createElement('li');
         s.innerHTML = key;
@@ -1732,6 +1733,7 @@ function updateMap() {
                 continue;}
             if (dungeons[k].chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
                 continue;}
+            if (OWERmap == false && k >= 33) continue;
             if (dungeons[k].chestlist.hasOwnProperty(key)) {
                 if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable()) {
                     DCcount++;
@@ -1837,7 +1839,9 @@ function populateMapdiv() {
         s.style.top = dungeons[k].y;
         s.className = 'mapspan dungeon ' + dungeons[k].canGetChest();
         if (dungeonMarked.indexOf(k) > -1) {
-         s.className += " wayofhero";
+        s.className += " wayofhero";
+        if (OWERmap == false && k >= 33) s.style.visibility = 'hidden';
+        else if (OWERmap == true && k >= 33) s.style.visibility = 'visible';
       }
         var DCcount = 0;
         for (var key in dungeons[k].chestlist) {
@@ -1903,6 +1907,7 @@ function populateMapdiv() {
                 continue;}
             if (dungeons[k].chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
                 continue;}
+            if (OWERmap == false && k >= 33) continue;
             if (dungeons[k].chestlist.hasOwnProperty(key)) {
                 if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable()) {
                     DCcount++;
@@ -2001,6 +2006,7 @@ function populateMapdiv() {
             continue;}
         if (dungeons[dungeonSelect].chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
             continue;}
+        if (OWERmap == false && k >= 33) continue
 
         var s = document.createElement('li');
         s.innerHTML = key;
