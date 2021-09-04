@@ -1669,7 +1669,7 @@ function updateMap() {
     if (OWERmap == true) l = 35;
     else if (OWERmap == false) l = 33;
     for (k = 0; k < l; k++) {
-        if (document.getElementById("dungeon" + k) == null) continue;
+        if (document.getElementById("dungeon" + k) == null && OWERmap == false) continue;
         document.getElementById("dungeon" + k).className = "mapspan dungeon " + dungeons[k].canGetChest() + ((dungeonMarked.indexOf(k) > -1) ? " wayofhero" : " ");
         var DCcount = 0;
         for (var key in dungeons[k].chestlist) {
