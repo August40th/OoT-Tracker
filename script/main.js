@@ -1840,8 +1840,7 @@ function populateMapdiv() {
         s.className = 'mapspan dungeon ' + dungeons[k].canGetChest();
         if (dungeonMarked.indexOf(k) > -1) {
         s.className += " wayofhero";
-        if (OWERmap == false && k >= 33) s.style.visibility = 'hidden';
-        else if (OWERmap == true && k >= 33) s.style.visibility = 'visible';
+
       }
         var DCcount = 0;
         for (var key in dungeons[k].chestlist) {
@@ -1936,6 +1935,10 @@ function populateMapdiv() {
         s.appendChild(ss);
 
         mapdiv.appendChild(s);
+        if (OWERmap == false && k >= 33) s.style.visibility = 'hidden';
+        else if (OWERmap == true && k >= 33) s.style.visibility = 'visible';
+        if (OWERmap == false && k >= 33) ss.style.visibility = 'hidden';
+        else if (OWERmap == true && k >= 33) ss.style.visibility = 'visible';
     }
 
     document.getElementById('submaparea').innerHTML = dungeons[0].name;
@@ -2006,7 +2009,7 @@ function populateMapdiv() {
             continue;}
         if (dungeons[dungeonSelect].chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
             continue;}
-        if (OWERmap == false && k >= 33) continue
+        if (OWERmap == false && k >= 33) continue;
 
         var s = document.createElement('li');
         s.innerHTML = key;
