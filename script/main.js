@@ -73,7 +73,7 @@ poecount = 1;
 
 GrottoER = false;
 IndoorER = 'Off';
-OWERmap = false;
+OWERmap = true;
 DungeonER = false;
 Owls = false;
 Warps = false;
