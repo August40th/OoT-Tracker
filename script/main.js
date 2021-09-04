@@ -1756,7 +1756,7 @@ function updateMap() {
             }
         }
 
-        var child = document.getElementById('dungeon' + k).firstChild;
+        var child = dungeons[k].firstChild;
         while (child) {
             if (child.className == 'chestCount') {
                 if ( quest == "Mixed" && dungeons[k].mixedttype == "default" ) {
