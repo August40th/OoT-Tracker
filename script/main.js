@@ -1669,7 +1669,7 @@ function updateMap() {
     if (OWERmap == true) l = 35;
     else if (OWERmap == false) l = 33;
     for (k = 0; k < l; k++) {
-        if (document.getElementById("dungeon" + k) == null) document.getElementById("dungeon" + k).setAttribute("name", "huh");
+        if (document.getElementById("dungeon" + k) == null) dungeona[k].setAttribute("name", "huh");
         document.getElementById("dungeon" + k).className = "mapspan dungeon " + dungeons[k].canGetChest() ;
         var DCcount = 0;
         for (var key in dungeons[k].chestlist) {
