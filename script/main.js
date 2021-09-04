@@ -1669,8 +1669,8 @@ function updateMap() {
     if (OWERmap == true) l = 35;
     else if (OWERmap == false) l = 33;
     for (k = 0; k < l; k++) {
-        if (document.getElementById("dungeon" + k) == null && OWERmap == false) continue;
-        document.getElementById("dungeon" + k).className = "mapspan dungeon " + dungeons[k].canGetChest() + ((dungeonMarked.indexOf(k) > -1) ? " wayofhero" : " ");
+        if (document.getElementById("dungeon" + k) == null) document.getElementById("dungeon" + k).setAttribute("name", "huh);;
+        document.getElementById("dungeon" + k).className = "mapspan dungeon " + dungeons[k].canGetChest() ;
         var DCcount = 0;
         for (var key in dungeons[k].chestlist) {
             if ( dungeons[k].type == "dungeon" && quest == "Mixed" && dungeons[k].mixedtype == "master" && dungeons[k].chestlist[key].access == "master") { //Mixed quest checks
