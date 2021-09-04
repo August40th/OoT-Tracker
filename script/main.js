@@ -621,7 +621,7 @@ function clickDungeon(d) {
             continue;}
         if (dungeons[dungeonSelect].chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
             continue;}
-        if (OWERmap == false && k >= 33) continue
+        if (OWERmap == false && dungeonSelect >= 33) continue;
 
         var s = document.createElement('li');
         s.innerHTML = key;
@@ -2009,7 +2009,7 @@ function populateMapdiv() {
             continue;}
         if (dungeons[dungeonSelect].chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
             continue;}
-        if (OWERmap == false && k >= 33) continue;
+        if (OWERmap == false && dungeonSelect >= 33) continue;
 
         var s = document.createElement('li');
         s.innerHTML = key;
