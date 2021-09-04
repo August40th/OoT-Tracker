@@ -1084,16 +1084,21 @@ function setIndoorER(sender) {
 
 function setOWER(sender) {
    OWERmap = sender.checked;
-   var l;
-   if (OWERmap == false) l = 35;
-   else if (OWERmap == true) l = 33;
 
-    for (k = 0; k < l; k++) {
+    for (k = 0; k < dungeons.length; k++) {
         if (dungeons[k].type == "overworld" && OWERmap  == true) {
             dungeons[k].found = false ; }
         if (dungeons[k].type == "overworld" && OWERmap  == false) {
             dungeons[k].found = true ; }
     }
+    
+   if (OWERmap == false) {
+   document.getElementById('dungeon33').style.visibility = 'hidden';
+   document.getElementById('dungeon34').style.visibility = 'hidden';
+   } else if (OWERmap == true) {
+   document.getElementById('dungeon33').style.visibility = 'visibile';
+   document.getElementById('dungeon34').style.visibility = 'visibile';
+   }
 
    updateMap();
 
