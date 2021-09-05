@@ -3315,12 +3315,12 @@ var dungeons = [
                 && ( (items.IronBoots
                     && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) 
                    ) || items.Scale) ; }
-         }, 'Theatre Scrub 1': { x: "45.0%", y: "32.0%", leadsto: "unknown", type: "scrub", access: "outdoor",
+         }, 'Theatre Scrub 1': { x: "58.0%", y: "21.0%", leadsto: "unknown", type: "scrub", access: "outdoor",
             isAvailable: function () {
                return dungeons[18].found == true && 
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ;
             },
-         }, 'Theatre Scrub 2': { x: "45.0%", y: "32.0%", leadsto: "unknown", type: "scrub", access: "outdoor",
+         }, 'Theatre Scrub 2': { x: "50.0%", y: "31.0%", leadsto: "unknown", type: "scrub", access: "outdoor",
             isAvailable: function () {
                return dungeons[18].found == true && 
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ;
