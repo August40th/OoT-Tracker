@@ -62,8 +62,8 @@ function generalCanGetChest(chestlist) {
             continue;}
         if (chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
             continue;}
-        //if (chestlist == dungeons[1].chestlist && dungeons[1].mixedtype == "default" && quest == "Mixed") {
-            //continue;}
+        if ( chestlist[key].OWER == false && OWERmap == true) ) { // OWER Market street
+            continue;}
       if (chestlist.hasOwnProperty(key)) {
          if (!chestlist[key].isOpened)
             unopened++;
@@ -2603,15 +2603,15 @@ var dungeons = [
    },
    { name: "The Market", x: "50.5%", y: "20.2%", type: "overworld", found: true,
       chestlist: {
-         'Guard/Ghostbuster House': { x: "65.0%", y: "94.0%", leadsto: "unknown", type: "simple", access: "door",
+         'Guard/Ghostbuster House': { x: "65.0%", y: "94.0%", OWER: false, leadsto: "unknown", type: "simple", access: "door",
                isAvailable: function () {
                   return dungeons[13].found == true ; }
-         }, 'Pottery Crate Skulltula': { x: "59.0%", y: "96.5%", leadsto: "unknown", type: "skulltula", access: "simple",
+         }, 'Pottery Crate Skulltula': { x: "59.0%", y: "96.5%", OWER: false, leadsto: "unknown", type: "skulltula", access: "simple",
             isAvailable: function () {
                return dungeons[13].found == true
                  && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
-         }, '10 Big Poes': { x: "61.0%", y: "97.0%", leadsto: "unknown", type: "NPC", access: "simple",
+         }, '10 Big Poes': { x: "61.0%", y: "97.0%", OWER: false, leadsto: "unknown", type: "NPC", access: "simple",
             isAvailable: function () { //Adult only indoor
                return dungeons[13].found == true
                && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
