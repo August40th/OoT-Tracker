@@ -24,7 +24,7 @@ var minimaps = ['KokiriForest', 'DekuTree', 'DodongosCavern', 'JabusBelly', 'Bot
                 'ForestTemple', 'FireTemple', 'IceCavern', 'WaterTemple', 'GTG', 'SpiritTemple', 'ShadowTemple', 'OGC', 
                 'TheMarket', 'TempleofTime', 'HyruleCastle', 'KakarikoVillage', 'GoronCity', 'LostWoods', 'SacredForestMeadow',
                'ZorasRiver', 'ZorasDomain', 'ZorasFountain', 'DeathMountainTrail', 'DeathMountainCrater', 'LonLonRanch', 'LakeHylia',
-               'GerudoValley', 'GerudoFortress', 'DesertColossus', 'Graveyard', 'HauntedWasteland', 'HyruleField'];
+               'GerudoValley', 'GerudoFortress', 'DesertColossus', 'Graveyard', 'HauntedWasteland', 'HyruleField', 'MarketStreet', 'LostWoodsBridge'];
 
 var doorimg = [];
 var doortype = ['Unknown', 'Guru'];
