@@ -62,7 +62,7 @@ function generalCanGetChest(chestlist) {
             continue;}
         if (chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
             continue;}
-        if ( chestlist[key].OWER == false && OWERmap == true) ) { // OWER Market street
+        if ( chestlist[key].OWER == false && OWERmap == true) { // OWER Market street
             continue;}
       if (chestlist.hasOwnProperty(key)) {
          if (!chestlist[key].isOpened)
