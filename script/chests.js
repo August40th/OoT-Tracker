@@ -2308,7 +2308,7 @@ var dungeons = [
                return dungeons[11].found == true && items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 3 && items.Hookshot >= 2;
             }
-         },'2nd Gibdos Skulltula': { x: "15.0%", y: "15.0%", leadsto: "unknown", type: "skulltula", access: "master",
+         }, '2nd Gibdos Skulltula': { x: "15.0%", y: "15.0%", leadsto: "unknown", type: "skulltula", access: "master",
             isAvailable: function () {
                return dungeons[11].found == true && items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 3 && items.Hookshot >= 2;
@@ -3233,10 +3233,10 @@ var dungeons = [
    },
    { name: "Lost Woods", x: "75.3%", y: "47.0%", type: "overworld", found: true,
       chestlist: {
-         'Woods to Bridge': { x: "2.0%", y: "78.0%", leadsto: "unknown", type: "entrance", access: "entrance",
+         'Woods to Bridge': { x: "11.0%", y: "87.0%", leadsto: "unknown", type: "entrance", access: "entrance",
              isAvailable: function () {
                   return dungeons[18].found == true; }
-         },'Deku Sale $40': { x: "14.0%", y: "93.0%", leadsto: "unknown", type: "NPC", access: "outdoor",
+         }, 'Deku Sale $40': { x: "14.0%", y: "93.0%", leadsto: "unknown", type: "NPC", access: "outdoor",
             isAvailable: function () {
                return dungeons[18].found == true && 
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
