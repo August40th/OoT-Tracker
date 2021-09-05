@@ -5065,42 +5065,45 @@ var dungeons = [
    },
    { name: "Market Street", x: "53.5%", y: "24.2%", type: "overworld", found: true,
       chestlist: {
-         'Street to Drawbridge': { x: "52.5%", y: "27.0%", type: "entrance", access: "entrance",
+         'Street to Drawbridge': { x: "47.5%", y: "86.0%", type: "entrance", access: "entrance",
           isAvailable: function () {
-               return dungeons[13].found == true; }
-         }, 'Guard/Ghostbuster House': { x: "65.0%", y: "94.0%", leadsto: "unknown", type: "simple", access: "door",
+               return dungeons[33].found == true; }
+         }, 'Guard/Ghostbuster House': { x: "60.0%", y: "61.0%", leadsto: "unknown", type: "simple", access: "door",
                isAvailable: function () {
-                  return dungeons[13].found == true ; }
-         }, 'Pottery Crate Skulltula': { x: "60.0%", y: "96.5%", leadsto: "unknown", type: "skulltula", access: "simple",
+                  return dungeons[33].found == true ; }
+         }, 'Pottery Crate Skulltula': { x: "90.0%", y: "63%", leadsto: "unknown", type: "skulltula", access: "simple",
             isAvailable: function () {
-               return dungeons[13].found == true
+               return dungeons[33].found == true
                  && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
             }
          },
-         ['10 Big Poes']: { x: "60.0%", y: "97.0%", leadsto: "unknown", type: "NPC", access: "simple",
+         ['10 Big Poes']: { x: "90.0%", y: "55.0%", leadsto: "unknown", type: "NPC", access: "simple",
             isAvailable: function () { //Adult only indoor
-               return dungeons[13].found == true
+               return dungeons[33].found == true
                && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && items.BigPoe >= 1;
             }
-         }, 'Streeet to Market': { x: "25.0%", y: "10.0%", type: "entrance", access: "entrance",
+         }, 'Streeet to Market': { x: "47.5%", y: "11.0%", type: "entrance", access: "entrance",
           isAvailable: function () {
-               return dungeons[13].found == true; }
+               return dungeons[33].found == true; }
        },
       }, isBeatable: function () { return this.canGetChest();
       }, canGetChest: function () { return generalCanGetChest(this.chestlist); }
    },
    { name: "Lost Woods Bridge", x: "70%", y: "54.0%", type: "overworld", found: true,
       chestlist: {
-         'Bridge to Forest': { x: "2.0%", y: "78.0%", leadsto: "unknown", type: "entrance", access: "entrance",
+         'Bridge to Forest': { x: "32.0%", y: "52.5%", leadsto: "unknown", type: "entrance", access: "entrance",
              isAvailable: function () {
-                  return dungeons[18].found == true; }
-         }, 'Fairy Ocarina': { x: "5.0%", y: "78.0%", leadsto: "unknown", type: "ocarina", access: "OWER",
+                  return dungeons[34].found == true; }
+         }, 'Fairy Ocarina': { x: "50.0%", y: "52.5%", leadsto: "unknown", type: "ocarina", access: "OWER",
             isAvailable: function () {
-               return dungeons[18].found == true; }
-         }, 'Bridge to Field': { x: "15.0%", y: "78.0%", leadsto: "unknown", type: "entrance", access: "entrance",
+               return dungeons[34].found == true; }
+         }, 'Bridge to Field': { x: "68.0%", y: "52.5%", leadsto: "unknown", type: "entrance", access: "entrance",
              isAvailable: function () {
-                  return dungeons[18].found == true; }
+                  return dungeons[34].found == true; }
+         }, 'Bridge to Woods': { x: "49.5%", y: "52.5%", leadsto: "unknown", type: "entrance", access: "entrance",
+             isAvailable: function () {
+                  return dungeons[34].found == true; }
          },
       }, isBeatable: function () { return this.canGetChest();
       }, canGetChest: function () { return generalCanGetChest(this.chestlist); }
