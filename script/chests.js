@@ -52,8 +52,6 @@ function generalCanGetChest(chestlist) {
             continue;}
         if ( chestlist[key].type == "ocarina" && OcarinaShuffle == false ) { //Ocarina shuffle in field
             continue;}
-        if ( chestlist[key].access == "OWER" && chestlist[key].type == "ocarina" && ((OWERmap == false && OcarinaShuffle == true) || OcarinaShuffle == false) ) { //Ocarina shuffle no OWER
-            continue;}
         if ( chestlist[key].access == "no OWER" && chestlist[key].type == "ocarina" && ((OWERmap == true && OcarinaShuffle == true) || OcarinaShuffle == false) ) { //OWER Ocarina shuffle
             continue;}
         if ( chestlist[key].type == "guard" && fortkeys == "Fight" ) { //Fortress Guard checks
@@ -3235,56 +3233,49 @@ var dungeons = [
    },
    { name: "Lost Woods", x: "75.3%", y: "47.0%", type: "overworld", found: true,
       chestlist: {
-         'Bridge to Forest': { x: "2.0%", y: "78.0%", leadsto: "unknown", type: "entrance", access: "entrance",
+         'Woods to Bridge': { x: "2.0%", y: "78.0%", leadsto: "unknown", type: "entrance", access: "entrance",
              isAvailable: function () {
                   return dungeons[18].found == true; }
-         }, 'Fairy Ocarina': { x: "5.0%", y: "78.0%", leadsto: "unknown", type: "ocarina", access: "OWER",
-            isAvailable: function () {
-               return dungeons[18].found == true; }
-         }, 'Bridge to Field': { x: "15.0%", y: "78.0%", leadsto: "unknown", type: "entrance", access: "entrance",
-             isAvailable: function () {
-                  return dungeons[18].found == true; }
-         },
-         ['Deku Sale $40']: { x: "15.0%", y: "96.0%", leadsto: "unknown", type: "NPC", access: "outdoor",
+         },'Deku Sale $40': { x: "14.0%", y: "93.0%", leadsto: "unknown", type: "NPC", access: "outdoor",
             isAvailable: function () {
                return dungeons[18].found == true && 
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
             }
-         }, 'Bridge Stone': { x: "6.0%", y: "96.0%", leadsto: "unknown", type: "gossip", access: "outdoor",
+         }, 'Bridge Stone': { x: "11.0%", y: "93.0%", leadsto: "unknown", type: "gossip", access: "outdoor",
             isAvailable: function () {
                return dungeons[18].found == true ;
             }
-         }, 'Bridge Soil Patch Skulltula': { x: "6.0%", y: "55.0%", leadsto: "unknown", type: "skulltula", access: "outdoor",
+         }, 'Bridge Soil Patch Skulltula': { x: "8.0%", y: "86.0%", leadsto: "unknown", type: "skulltula", access: "outdoor",
             isAvailable: function () {
                return dungeons[18].found == true && 
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  )
                && items.Bottle ;
             }
          },
-         ['Skull Kid']: { x: "15.0%", y: "42.0%", leadsto: "unknown", type: "NPC", access: "outdoor",
+         ['Skull Kid']: { x: "16.5%", y: "65.5%", leadsto: "unknown", type: "NPC", access: "outdoor",
             isAvailable: function () {
                return dungeons[18].found == true && 
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  )
                && items.Ocarina && items.SariasSong ;
             }
-         }, 'Woods to Forest': { x: "50.7%", y: "64.0%", leadsto: "unknown", type: "entrance", access: "entrance",
+         }, 'Woods to Forest': { x: "41.5%", y: "74.0%", leadsto: "unknown", type: "entrance", access: "entrance",
              isAvailable: function () {
                   return dungeons[18].found == true; }
          },
-         ['Slingshot Target']: { x: "64.0%", y: "55.0%", leadsto: "unknown", type: "NPC", access: "outdoor",
+         ['Slingshot Target']: { x: "71.0%", y: "67.0%", leadsto: "unknown", type: "NPC", access: "outdoor",
             isAvailable: function () {
                return dungeons[18].found == true && 
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  )
                && items.Slingshot ;
             }
          },
-         ['Ocarina Memory Game']: { x: "68.0%", y: "58.0%", leadsto: "unknown", type: "NPC", access: "outdoor",
+         ['Ocarina Memory Game']: { x: "67.0%", y: "73.0%", leadsto: "unknown", type: "NPC", access: "outdoor",
             isAvailable: function () {
                return dungeons[18].found == true && 
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  )
                && items.Ocarina ;
             }
-         }, 'Bomb Grotto by City': { x: "64.0%", y: "42.0%", leadsto: "unknown", type: "grotto", access: "grotto",
+         }, 'Bomb Grotto by City': { x: "63.0%", y: "42.0%", leadsto: "unknown", type: "grotto", access: "grotto",
                isAvailable: function () {
                   return dungeons[18].found == true &&
                   ( ( (items.Bombs || items.Hammer || (items.Bombchu && BombchuLogic) ) && 
@@ -3295,7 +3286,7 @@ var dungeons = [
                       ) );
                }
          },
-         ['City Grotto Chest']: { x: "64.0%", y: "42.0%", leadsto: "unknown", type: "chest", access: "grotto",
+         ['City Grotto Chest']: { x: "63.0%", y: "4.5%", leadsto: "unknown", type: "chest", access: "grotto",
             isAvailable: function () {
                return dungeons[18].found == true &&
                   ( ( (items.Bombs || items.Hammer || (items.Bombchu && BombchuLogic) ) && 
@@ -3305,7 +3296,7 @@ var dungeons = [
                        (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                       ) );
             }
-         }, 'City Grotto Gossip': { x: "64.0%", y: "44.0%", leadsto: "unknown", type: "gossip", access: "outdoor",
+         }, 'City Grotto Gossip': { x: "61.0%", y: "42.0%", leadsto: "unknown", type: "gossip", access: "outdoor",
             isAvailable: function () {
                return dungeons[18].found == true &&
                   ( ( (items.Bombs || items.Hammer || (items.Bombchu && BombchuLogic) ) && 
@@ -3315,10 +3306,10 @@ var dungeons = [
                        (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                       ) );
             }
-         }, 'Woods to City': { x: "62.8%", y: "42.0%", leadsto: "unknown", type: "entrance", access: "entrance",
+         }, 'Woods to City': { x: "60%", y: "36.0%", leadsto: "unknown", type: "entrance", access: "entrance",
              isAvailable: function () {
                   return dungeons[18].found == true; }
-         }, 'Woods to River': { x: "69.8%", y: "39.5%", leadsto: "unknown", type: "entrance", access: "entrance",
+         }, 'Woods to River': { x: "92%", y: "43%", leadsto: "unknown", type: "entrance", access: "entrance",
              isAvailable: function () {
                   return dungeons[18].found == true
                 && ( (items.IronBoots
@@ -3334,39 +3325,39 @@ var dungeons = [
                return dungeons[18].found == true && 
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ;
             },
-         }, 'Theatre Soil Patch Skulltula': { x: "48.0%", y: "34.0%", leadsto: "unknown", type: "skulltula", access: "outdoor",
+         }, 'Theatre Soil Patch Skulltula': { x: "56.0%", y: "23.0%", leadsto: "unknown", type: "skulltula", access: "outdoor",
             isAvailable: function () {
                return dungeons[18].found == true && 
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && items.Bottle ;
             },
-         }, 'Bean Ride Skulltula': { x: "56.0%", y: "40.0%", leadsto: "unknown", type: "skulltula", access: "outdoor",
+         }, 'Bean Ride Skulltula': { x: "61.0%", y: "23.0%", leadsto: "unknown", type: "skulltula", access: "outdoor",
             isAvailable: function () {
                return dungeons[18].found == true
                && (items.Hookshot 
                    || (items.Bean && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                    ) ) ;
             },
-         }, 'Deku Theatre Grotto': { x: "50.0%", y: "32.0%", leadsto: "unknown", type: "grotto", access: "grotto",
+         }, 'Deku Theatre Grotto': { x: "45.0%", y: "26.0%", leadsto: "unknown", type: "grotto", access: "grotto",
                isAvailable: function () {
                   return dungeons[18].found == true && 
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ;
                }
          },
-         ['Deku Theater Skull Mask']: { x: "50.0%", y: "32.0%", leadsto: "unknown", type: "NPC", access: "grotto",
+         ['Deku Theater Skull Mask']: { x: "45.0%", y: "28.0%", leadsto: "unknown", type: "NPC", access: "grotto",
             isAvailable: function () {
                return dungeons[18].found == true && 
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  )
                && items.Mask >= 6;
             }
          },
-         ['Deku Theater Mask of Truth']: { x: "50.0%", y: "34.0%", leadsto: "unknown", type: "NPC", access: "grotto",
+         ['Deku Theater Mask of Truth']: { x: "45.0%", y: "28.0%", leadsto: "unknown", type: "NPC", access: "grotto",
             isAvailable: function () {
                return dungeons[18].found == true && 
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  )
                && items.Mask >= 12;
             }
-         }, 'Bomb Grotto by Meadow': { x: "50.0%", y: "14.0%", leadsto: "unknown", type: "grotto", access: "grotto",
+         }, 'Bomb Grotto by Meadow': { x: "57.0%", y: "3.0%", leadsto: "unknown", type: "grotto", access: "grotto",
                isAvailable: function () {
                   return dungeons[18].found == true &&
                   ( ( (items.Bombs || items.Hammer || (items.Bombchu && BombchuLogic) ) && 
@@ -3377,7 +3368,7 @@ var dungeons = [
                       ) );
                }
          },
-         ['Deku Sale Grotto $40']: { x: "50.0%", y: "14.0%", leadsto: "unknown", type: "NPC", access: "grotto",
+         ['Deku Sale Grotto $40']: { x: "57%", y: "3.0%", leadsto: "unknown", type: "NPC", access: "grotto",
             isAvailable: function () {
                return dungeons[18].found == true &&
                   ( ( (items.Bombs || items.Hammer || (items.Bombchu && BombchuLogic) ) && 
@@ -3387,7 +3378,7 @@ var dungeons = [
                        (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                       ) );
             }
-         }, '2nd Scrub in Grotto': { x: "50.0%", y: "18.0%", leadsto: "unknown", type: "scrub", access: "grotto",
+         }, '2nd Scrub in Grotto': { x: "59.0%", y: "5.0%", leadsto: "unknown", type: "scrub", access: "grotto",
             isAvailable: function () {
                return dungeons[18].found == true &&
                   ( ( (items.Bombs || items.Hammer || (items.Bombchu && BombchuLogic) ) && 
@@ -3397,7 +3388,7 @@ var dungeons = [
                        (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                       ) );
             }
-         }, 'Woods to Meadow': { x: "50.0%", y: "4.0%", leadsto: "unknown", type: "entrance", access: "entrance",
+         }, 'Woods to Meadow': { x: "59.0%", y: "0.0%", leadsto: "unknown", type: "entrance", access: "entrance",
              isAvailable: function () {
                   return dungeons[18].found == true; }
          },
