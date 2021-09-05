@@ -617,12 +617,14 @@ function clickDungeon(d) {
             continue;}
         if ( dungeons[dungeonSelect] == dungeons[28] && dungeons[dungeonSelect].chestlist[key].type == "guard" && fortkeys == "Fight" ) { //Fortress Guard checks
             continue;}
-        if ( dungeons[dungeonSelect] == dungeons[28] && dungeons[dungeonSelect].chestlist[key].type == "membership" && gerudobridge !== "Shuffle" ) { //Fortress Guard checks
+        if ( OWERmap == true && dungeons[dungeonSelect] == dungeons[13] && (dungeons[dungeonSelect].chestlist[key] == dungeons[dungeonSelect].chestlist[0] || dungeons[dungeonSelect].chestlist[key] == dungeons[dungeonSelect].chestlist[1] || dungeons[dungeonSelect].chestlist[key] == dungeons[dungeonSelect].chestlist[2] ) { //Fortress Guard checks
             continue;}
         if (dungeons[dungeonSelect].chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
             continue;}
+        if ( dungeons[dungeonSelect] == dungeons[28] && dungeons[dungeonSelect].chestlist[key].type == "membership" && gerudobridge !== "Shuffle" ) { //Fortress Guard checks
+            continue;}
         if (OWERmap == false && dungeonSelect >= 33) continue;
-
+        
         var s = document.createElement('li');
         s.innerHTML = key;
         if (dungeons[dungeonSelect].chestlist[key].isOpened) {            
@@ -1738,6 +1740,8 @@ function updateMap() {
                 continue;}
             if (dungeons[k].chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
                 continue;}
+            if ( OWERmap == true && dungeons[k] == dungeons[13] && (dungeons[k].chestlist[key] == dungeons[k].chestlist[0] || dungeons[dungeonSelect].chestlist[key] == dungeons[dungeonSelect].chestlist[1] || dungeons[k].chestlist[key] == dungeons[k].chestlist[2] ) { //Fortress Guard checks
+                continue;}
             if (OWERmap == false && (k == 33 || k == 34) ) continue;
             if (dungeons[k].chestlist.hasOwnProperty(key)) {
                 if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable()) {
@@ -1910,6 +1914,8 @@ function populateMapdiv() {
                 continue;}
             if (dungeons[k].chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
                 continue;}
+            if ( OWERmap == true && dungeons[k] == dungeons[13] && (dungeons[k].chestlist[key] == dungeons[k].chestlist[0] || dungeons[dungeonSelect].chestlist[key] == dungeons[dungeonSelect].chestlist[1] || dungeons[k].chestlist[key] == dungeons[k].chestlist[2] ) { //Fortress Guard checks
+                continue;}
             if (OWERmap == false && (k == 33 || k == 34) ) continue;
             if (dungeons[k].chestlist.hasOwnProperty(key)) {
                 if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable()) {
@@ -2009,6 +2015,8 @@ function populateMapdiv() {
             continue;}
         if (dungeons[dungeonSelect].chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
             continue;}
+        if ( OWERmap == true && dungeons[dungeonSelect] == dungeons[13] && (dungeons[dungeonSelect].chestlist[key] == dungeons[k].chestlist[0] || dungeons[dungeonSelect].chestlist[key] == dungeons[dungeonSelect].chestlist[1] || dungeons[dungeonSelect].chestlist[key] == dungeons[dungeonSelect].chestlist[2] ) { //Markt Strt
+                continue;}
         if (OWERmap == false && dungeonSelect >= 33) continue;
 
         var s = document.createElement('li');
