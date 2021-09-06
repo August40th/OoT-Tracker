@@ -1801,7 +1801,7 @@ var dungeons = [
          }, 'Silver Block Chest': { x: "11.0%", y: "3.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[9].found == true && items.Membership; }
-         }, 'MQ Cyclops Chest': { x: "45.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'MQ Cyclops Chest': { x: "42.0%", y: "17.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[9].found == true && items.Membership; }
          }, 'Black Iron Knuckle': { x: "73.0%", y: "24.0%", leadsto: "unknown", type: "chest", access: "master",
@@ -1834,7 +1834,7 @@ var dungeons = [
          }, 'Maze Left Locked Chest': { x: "39.0%", y: "46.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[9].found == true && items.Membership && items.GTGKey >= 1; }
-         }, '2F Rudted Switch Chest': { x: "43.0%", y: "54.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, '2F Rudted Switch Chest': { x: "43.5%", y: "49.5%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[9].found == true && items.Membership && items.Hammer && items.GTGKey >= 3; }
          },
