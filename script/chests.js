@@ -1698,145 +1698,143 @@ var dungeons = [
    },
    { name: "Gerudo Training Ground", x: "20.7%", y: "16.4%", type: "dungeon", mixedtype: "default", keytype: "GTGKey", found: true, topfloor: 1, floorwdoor: 0,
       chestlist: {
-         'Lobby Right Chest': { x: "5.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         'Lobby Right Chest': { x: "49.0%", y: "81.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[9].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Bow;
             }
-         }, 'Lobby Left Chest': { x: "10.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Lobby Left Chest': { x: "39.0%", y: "81%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[9].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Bow;
             }
-         }, 'Stalfos Room': { x: "15.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Stalfos Room': { x: "10.0%", y: "81.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[9].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen());
             }
-         }, 'Wolfos Room': { x: "20.0%", y: "5.0%",
-           type: "chest", access: "vanilla",
+         }, 'Wolfos Room': { x: "17.0%", y: "28.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[9].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Hookshot;
             }
-         }, 'Like Like Open Chest': { x: "25.0%", y: "5.0%",
-           type: "chest", access: "vanilla",
+         }, 'Like Like Open Chest': { x: "11.0%", y: "3.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[9].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Hookshot && items.Glove >= 2;
             }
-         }, 'Like Like Room 1st Chest': { x: "30.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Like Like Room 1st Chest': { x: "14.0%", y: "12.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[9].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Hookshot && items.Glove >= 2;
             }
-         }, 'Like Like Room 2nd Chest': { x: "35.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Like Like Room 2nd Chest': { x: "11.0%", y: "9.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[9].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Hookshot && items.Glove >= 2;
             }
-         }, 'Like Like Invisible Chest': { x: "40.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Like Like Invisible Chest': { x: "14.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[9].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Hookshot && items.Glove >= 2;
             }
-         }, 'Cyclops Statue Eyes': { x: "45.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Cyclops Statue Eyes': { x: "42.0%", y: "23.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[9].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Hookshot && items.Bow && (items.SongofTime || items.HoverBoots || items.Hookshot >= 2 || (items.Hookshot));
             }
-         }, 'Cyclops Room Top Room': { x: "50.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Cyclops Room Top Room': { x: "43.5%", y: "50.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[9].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Hookshot && items.Bow;
             }
-         }, 'Fire Enemies Clear': { x: "55.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Fire Enemies Clear': { x: "73.0%", y: "24.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[9].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Hookshot;
             }
-         }, 'Fire Trap Chest': { x: "60.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Fire Trap Chest': { x: "74.5%", y: "29.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[9].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Hookshot;
             }
-         }, 'Maze Right Freestanding': { x: "65.0%", y: "5.0%", leadsto: "unknown", type: "freestanding", access: "vanilla",
+         }, 'Maze Right Freestanding': { x: "68.0%", y: "56.0%", leadsto: "unknown", type: "freestanding", access: "vanilla",
             isAvailable: function () {
                return dungeons[9].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && ((items.Ocarina && items.SongofTime) || items.GTGKey >= 2);
             }
-         }, 'Maze Right Central Chest': { x: "70.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Maze Right Central Chest': { x: "48.0%", y: "56.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[9].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && ((items.Ocarina && items.SongofTime) || items.GTGKey >= 2);
             }
-         }, 'Maze Right Side Chest': { x: "75.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Maze Right Side Chest': { x: "51.5%", y: "52.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[9].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && ((items.Ocarina && items.SongofTime) || items.GTGKey >= 2);
             }
-         }, 'Underwater Silver Rupees': { x: "80.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Underwater Silver Rupees': { x: "89.0%", y: "54.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[9].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Hookshot && items.Ocarina && items.SongofTime && items.IronBoots;
             }
-         }, 'Beamos Room': { x: "85.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Beamos Room': { x: "75.0%", y: "87.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[9].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && (items.Bombs || (items.Bombchu && BombchuLogic));
             }
-         }, 'Left 1 Key Hidden Ceiling': { x: "90.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Left 1 Key Hidden Ceiling': { x: "44.0%", y: "62.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[9].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.GTGKey && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen());
             }
-         }, 'Left 2 Key Chest': { x: "95.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Left 2 Key Chest': { x: "31.0%", y: "57.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[9].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.GTGKey >= 2 && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen());
             }
-         }, 'Left 4 Key Chest': { x: "5.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Left 4 Key Chest': { x: "35.5%", y: "46.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[9].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.GTGKey >= 4 && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen());
             }
-         }, 'Left 5 Key Chest': { x: "10.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Left 5 Key Chest': { x: "39.0%", y: "46.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[9].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.GTGKey >= 5 && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen());
             }
-         }, 'Maze Center Chest': { x: "15.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         }, 'Maze Center Chest': { x: "43.0%", y: "54.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[9].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.GTGKey >= 7 && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen());
             }
-         }, 'MQ Lobby Left': { x: "20.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'MQ Lobby Left': { x: "39.0%", y: "81.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[9].found == true && items.Membership; }
-         }, 'MQ Lobby Right': { x: "25.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'MQ Lobby Right': { x: "49.0%", y: "81.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[9].found == true && items.Membership; }
-         }, 'White Iron Knuckle': { x: "30.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'White Iron Knuckle': { x: "10.0%", y: "81.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[9].found == true && items.Membership; }
-         }, 'Skulltula and Stalfos': { x: "35.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'Skulltula and Stalfos': { x: "17.0%", y: "28.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[9].found == true && items.Membership; }
-         }, 'Silver Block Chest': { x: "40.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'Silver Block Chest': { x: "11.0%", y: "3.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[9].found == true && items.Membership; }
-         }, 'Crystal Switch Chest': { x: "45.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'MQ Cyclops Chest': { x: "45.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[9].found == true && items.Membership; }
-         }, 'Black Iron Knuckle': { x: "50.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'Black Iron Knuckle': { x: "73.0%", y: "24.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[9].found == true && items.Membership; }
-         }, 'MQ Fire Trap Chest': { x: "55.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'MQ Fire Trap Chest': { x: "74.0%", y: "29.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[9].found == true && items.Membership; }
-         }, 'MQ Underwater Silver Rupees': { x: "60.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'MQ Underwater Silver Rupees': { x: "89.0%", y: "54.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[9].found == true && items.Membership; }
-         }, 'MQ Maze Right 1': { x: "65.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'MQ Maze Right 1': { x: "48.0%", y: "56.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[9].found == true && items.Membership; }
-         }, 'MQ Maze Right 2': { x: "65.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'MQ Maze Right 2': { x: "51.5%", y: "52.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[9].found == true && items.Membership; }
-         }, 'Dinosaur Room': { x: "70.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'Dinosaur Room': { x: "75.0%", y: "87.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[9].found == true && items.Membership; }
-         }, 'Maze Left Hidden Ceiling': { x: "75.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'Maze Left to 2F': { x: "44.0%", y: "62.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[9].found == true && items.Membership; }
-         }, 'Maze Left Unlocked 1': { x: "80.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'Maze Left Unlocked 1': { x: "31.0%", y: "57.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[9].found == true && items.Membership; }
-         }, 'Maze Left Unlocked 2': { x: "80.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'Maze Left Unlocked 2': { x: "35.5%", y: "46.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[9].found == true && items.Membership; }
-         }, 'Maze Left Locked Chest': { x: "85.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'Maze Left Locked Chest': { x: "39.0%", y: "46.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[9].found == true && items.Membership && items.GTGKey >= 1; }
-         }, 'MQ Maze Center Chest': { x: "90.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, '2F Rudted Switch Chest': { x: "43.0%", y: "54.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[9].found == true && items.Membership && items.Hammer && items.GTGKey >= 3; }
          },
@@ -2814,28 +2812,28 @@ var dungeons = [
                && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Ocarina >= 1 && items.ZeldasLullaby;
             }
          }, 'Castle Moat Stone': {
-           x: "18.0%", y: "36.0%", leadsto: "unknown", type: "gossip", access: "outdoor",
+           x: "18.0%", y: "33.0%", leadsto: "unknown", type: "gossip", access: "outdoor",
             isAvailable: function () {
                return dungeons[15].found == true && 
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) 
                   );
             }
          }, 'Moat Storms Grotto': {
-           x: "53.0%", y: "38.0%", leadsto: "unknown", type: "grotto", access: "grotto",
+           x: "53.0%", y: "33.0%", leadsto: "unknown", type: "grotto", access: "grotto",
                isAvailable: function () {
                   return dungeons[15].found == true && 
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) 
                   ) && items.Ocarina >= 1 && items.SongofStorms;
                }
          }, 'Storms Grotto Skull': {
-           x: "55.0%", y: "38.0%", leadsto: "unknown", type: "skulltula", access: "grotto",
+           x: "55.0%", y: "33.0%", leadsto: "unknown", type: "skulltula", access: "grotto",
             isAvailable: function () {
                return dungeons[15].found == true &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) 
                   ) && items.Ocarina >= 1 && items.SongofStorms && (items.Bombs || items.Boomerang);
             }
          }, 'Storms Grotto Gossip': {
-           x: "53.0%", y: "38.0%", leadsto: "unknown", type: "gossip", access: "grotto",
+           x: "53.0%", y: "33.0%", leadsto: "unknown", type: "gossip", access: "grotto",
             isAvailable: function () {
                return dungeons[15].found == true &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) 
