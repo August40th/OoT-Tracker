@@ -2476,19 +2476,19 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[12].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && generalCanGetChest(this.trials) && items.BossCastle && items.Bow && items.Magic && items.Light;
             }
-         }, 'Invisible Wall Scrub 1': { x: "70.0%", y: "48.0%", leadsto: "unknown", type: "scrub", access: "vanilla",
+         }, 'Invisible Wall Scrub 1': { x: "48.0%", y: "70.0%", leadsto: "unknown", type: "scrub", access: "vanilla",
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen();
             }
-         }, 'Invisible Wall Scrub 2': { x: "70.0%", y: "53.0%", leadsto: "unknown", type: "scrub", access: "vanilla",
+         }, 'Invisible Wall Scrub 2': { x: "53.0%", y: "70.0%", leadsto: "unknown", type: "scrub", access: "vanilla",
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen();
             }
-         }, 'Invisible Wall Scrub 3': { x: "74.0%", y: "49.5%", leadsto: "unknown", type: "scrub", access: "vanilla",
+         }, 'Invisible Wall Scrub 3': { x: "49.5%", y: "74%", leadsto: "unknown", type: "scrub", access: "vanilla",
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen();
             }
-         }, 'Invisible Wall Scrub 4': { x: "74.0%", y: "52.0%", leadsto: "unknown", type: "scrub", access: "vanilla",
+         }, 'Invisible Wall Scrub 4': { x: "52.5%", y: "74.0%", leadsto: "unknown", type: "scrub", access: "vanilla",
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen();
             }
@@ -2548,19 +2548,19 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen() && items.Hammer && items.Bombchu;
             },
-         }, 'MQ Spirit Sun 1 ': { x: "77.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'MQ Spirit Sun 1 ': { x: "33.0%", y: "77.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen() && items.Hammer && items.Bombchu && items.MirrorShield && itemsm.Bow && items.Magic && items.Fire;
             },
-         }, 'MQ Spirit Sun 2 ': { x: "74.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'MQ Spirit Sun 2 ': { x: "35.5%", y: "74.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen() && items.Hammer && items.Bombchu && items.MirrorShield && itemsm.Bow && items.Magic && items.Fire;
             },
-         }, 'MQ Spirit Sun 3 ': { x: "76.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'MQ Spirit Sun 3 ': { x: "38.0%", y: "76.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen() && items.Hammer && items.Bombchu && items.MirrorShield && itemsm.Bow && items.Magic && items.Fire;
             },
-         }, 'MQ Spirit Sun 4 ': { x: "79.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'MQ Spirit Sun 4 ': { x: "37.0%", y: "79.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen() && items.Hammer && items.Bombchu && items.MirrorShield && itemsm.Bow && items.Magic && items.Fire;
             },
