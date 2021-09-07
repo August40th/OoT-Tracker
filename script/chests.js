@@ -2422,32 +2422,32 @@ var dungeons = [
                return dungeons[12].found == true && isBridgeOpen() && items.Magic && items.Bow && items.Light && items.MirrorShield && items.Bombs && items.Hookshot >= 1;
             }
          },
-         'Light 1': { x: "32.0%", y: "55.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         'Light 1': { x: "33.0%", y: "55.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[12].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && items.Glove >= 3;
             }
          },
-         'Light 2': { x: "30.0%", y: "55%", leadsto: "unknown", type: "chest", access: "vanilla",
+         'Light 2': { x: "30.0%", y: "56%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[12].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && items.Glove >= 3;
             }
          },
-         'Light 3': { x: "28.0%", y: "55.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         'Light 3': { x: "27.0%", y: "55.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[12].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && items.Glove >= 3;
             }
          },
-         'Light 4': { x: "28.0%", y: "50.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         'Light 4': { x: "27.0%", y: "50.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[12].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && items.Glove >= 3;
             }
          },
-         'Light 5': { x: "330.0%", y: "50.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         'Light 5': { x: "30.0%", y: "49.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[12].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && items.Glove >= 3;
             }
          },
-         'Light 6': { x: "32.0%", y: "50.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         'Light 6': { x: "33.0%", y: "50.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[12].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && items.Glove >= 3;
             }
