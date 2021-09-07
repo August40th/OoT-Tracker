@@ -2526,11 +2526,11 @@ var dungeons = [
             },
          }, 'MQ Shadow trial ': { x: "80.0%", y: "10.0%", leadsto: "unknown", type: "trial", access: "master",
             isAvailable: function () {
-               return dungeons[12].found == true && isBridgeOpen() && item.Light && items.Bow && items.Magic && items.Lens && item.HoverBoots;
+               return dungeons[12].found == true && isBridgeOpen() && items.Light && items.Bow && items.Magic && items.Lens && items.HoverBoots;
             },
          }, 'MQ Fire trial ': { x: "21.5%", y: "18.5%", leadsto: "unknown", type: "trial", access: "master",
             isAvailable: function () {
-               return dungeons[12].found == true && isBridgeOpen() && items.Glove >= 3 && (items.HoverBoots || items,Hookshot >= 2) && items.Bow && items.Magic && items.Light;
+               return dungeons[12].found == true && isBridgeOpen() && items.Glove >= 3 && (items.HoverBoots || items.Hookshot >= 2) && items.Bow && items.Magic && items.Light;
             },
          }, 'MQ Light ZL chest ': { x: "30.0%", y: "53.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
