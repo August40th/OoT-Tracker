@@ -2353,32 +2353,32 @@ var dungeons = [
    },
    { name: "Ganon's Tower", x: "44.0%", y: "14.0%", type: "dungeon", mixedtype: "default", keytype: "CastleKey", found: true, topfloor: 5, floorwdoor: 1,
       chestlist: {
-         'Forest 1': { x: "5.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         'Forest 1': { x: "64.0%", y: "69.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[12].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen();
             }
          },
-         'Forest Trial': { x: "10.0%", y: "5.0%", leadsto: "unknown", type: "trial", access: "vanilla",
+         'Forest Trial': { x: "78.0%", y: "83.0%", leadsto: "unknown", type: "trial", access: "vanilla",
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen() && items.Magic && items.Bow && items.Light && (items.Fire || (items.Hookshot && items.Dins));
             }
          },
-         'Ice 1': { x: "15.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         'Ice 1': { x: "74.0%", y: "51.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[12].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen();
             }
          },
-         'Ice 2': { x: "20.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         'Ice 2': { x: "74.0%", y: "55.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[12].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen();
             }
          },
-         'Ice Trial': { x: "25.0%", y: "5.0%", leadsto: "unknown", type: "trial", access: "vanilla",
+         'Ice Trial': { x: "95.0%", y: "52.5%", leadsto: "unknown", type: "trial", access: "vanilla",
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen() && items.Bottle && items.Hammer && items.Magic && items.Bow && items.Light;
             }
          },
-         'Shadow 1': { x: "30.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         'Shadow 1': { x: "59.0%", y: "33.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[12].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) 
                && items.MasterSword && isBridgeOpen() && (
@@ -2388,7 +2388,7 @@ var dungeons = [
                   (items.Ocarina >= 1 && items.SongofTime));
             }
          },
-         'Shadow 2': { x: "35.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         'Shadow 2': { x: "69.0%", y: "25.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[12].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) 
                && items.MasterSword && isBridgeOpen() && (
@@ -2397,199 +2397,199 @@ var dungeons = [
                      items.Magic && items.Dins) || items.Hookshot >= 2);
             }
          },
-         'Shadow Trial': { x: "40.0%", y: "5.0%", leadsto: "unknown", type: "trial", access: "vanilla",
+         'Shadow Trial': { x: "80.0%", y: "10.0%", leadsto: "unknown", type: "trial", access: "vanilla",
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen() && items.Magic && items.Bow && items.Light && items.Hammer && (items.Fire || items.Hookshot >= 2) && (items.Lens || (items.HoverBoots && items.Hookshot >= 2));
             }
          },
-         'Fire Trial': { x: "45.0%", y: "5.0%", leadsto: "unknown", type: "trial", access: "vanilla",
+         'Fire Trial': { x: "21.5%", y: "18.5%", leadsto: "unknown", type: "trial", access: "vanilla",
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen() && items.Glove >= 3 && items.Magic && items.Bow && items.Light && items.Hookshot >= 2;
             }
          },
-         'Spirit 1': { x: "50.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         'Spirit 1': { x: "34.0%", y: "67.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[12].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && items.Hookshot && (items.Bombchu || items.Bow);
             }
          },
-         'Spirit 2': { x: "55.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         'Spirit 2': { x: "31.0%", y: "72.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[12].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && items.Hookshot && (items.Bombchu || items.Bow);
             }
          },
-         'Spirit Trial': { x: "60.0%", y: "5.0%", leadsto: "unknown", type: "trial", access: "vanilla",
+         'Spirit Trial': { x: "32.0%", y: "83.0%", leadsto: "unknown", type: "trial", access: "vanilla",
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen() && items.Magic && items.Bow && items.Light && items.MirrorShield && items.Bombs && items.Hookshot >= 1;
             }
          },
-         'Light 1': { x: "65.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         'Light 1': { x: "32.0%", y: "55.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[12].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && items.Glove >= 3;
             }
          },
-         'Light 2': { x: "70.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         'Light 2': { x: "30.0%", y: "55%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[12].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && items.Glove >= 3;
             }
          },
-         'Light 3': { x: "75.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         'Light 3': { x: "28.0%", y: "55.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[12].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && items.Glove >= 3;
             }
          },
-         'Light 4': { x: "80.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         'Light 4': { x: "28.0%", y: "50.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[12].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && items.Glove >= 3;
             }
          },
-         'Light 5': { x: "85.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         'Light 5': { x: "330.0%", y: "50.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[12].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && items.Glove >= 3;
             }
          },
-         'Light 6': { x: "90.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         'Light 6': { x: "32.0%", y: "50.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[12].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && items.Glove >= 3;
             }
          },
-         'Light Invisible': { x: "95.0%", y: "5.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         'Light Invisible': { x: "30.0%", y: "53.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[12].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && items.Glove >= 3;
             }
          },
-         'Light Lullaby': { x: "5.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         'Light Lullaby': { x: "18.0%", y: "53.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[12].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && items.Glove >= 3 && items.Ocarina && items.ZeldasLullaby && items.CastleKey;
             }
          },
-         'Light Trial': { x: "10.0%", y: "10.0%", leadsto: "unknown", type: "trial", access: "vanilla",
+         'Light Trial': { x: "4.0%", y: "53.0%", leadsto: "unknown", type: "trial", access: "vanilla",
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen() && items.Glove >= 3 && items.Magic && items.Bow && items.Hookshot && items.Light && items.CastleKey >= 2;
             }
          },
-         'Stalfos Fire Trap': { x: "15.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "vanilla",
+         'Stalfos Fire Trap': { x: "50.0%", y: "53.0%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[12].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && generalCanGetChest(this.trials);
             }
          },
-         'GanonDorf': { x: "20.0%", y: "10.0%", leadsto: "unknown", type: "boss", access: "vanilla",
+         'GanonDorf': { x: "50.0%", y: "42.0%", leadsto: "unknown", type: "boss", access: "vanilla",
             isAvailable: function () {
                return dungeons[12].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && generalCanGetChest(this.trials) && items.BossCastle && items.Bow && items.Magic && items.Light;
             }
-         }, 'Invisible Wall Scrub 1': { x: "30.0%", y: "10.0%", leadsto: "unknown", type: "scrub", access: "vanilla",
+         }, 'Invisible Wall Scrub 1': { x: "70.0%", y: "48.0%", leadsto: "unknown", type: "scrub", access: "vanilla",
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen();
             }
-         }, 'Invisible Wall Scrub 2': { x: "30.0%", y: "10.0%", leadsto: "unknown", type: "scrub", access: "vanilla",
+         }, 'Invisible Wall Scrub 2': { x: "70.0%", y: "53.0%", leadsto: "unknown", type: "scrub", access: "vanilla",
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen();
             }
-         }, 'Invisible Wall Scrub 3': { x: "30.0%", y: "10.0%", leadsto: "unknown", type: "scrub", access: "vanilla",
+         }, 'Invisible Wall Scrub 3': { x: "74.0%", y: "49.5%", leadsto: "unknown", type: "scrub", access: "vanilla",
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen();
             }
-         }, 'Invisible Wall Scrub 4': { x: "30.0%", y: "10.0%", leadsto: "unknown", type: "scrub", access: "vanilla",
+         }, 'Invisible Wall Scrub 4': { x: "74.0%", y: "52.0%", leadsto: "unknown", type: "scrub", access: "vanilla",
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen();
             }
-         }, 'MQ Forest freestanding ': { x: "50.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'MQ Forest freestanding ': { x: "66.0%", y: "71.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen() && items.Hookshot;
             },
-         }, 'MQ Forest 1 ': { x: "50.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'MQ Forest 1 ': { x: "72.0%", y: "75.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen() && items.Bow;
             },
-         }, 'MQ Forest 2 ': { x: "50.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'MQ Forest 2 ': { x: "74.0%", y: "81.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen() && items.Magic && (items.Dins || (items.Bow && items.Fire) ); 
             },
-         }, 'MQ Forest Trial ': { x: "50.0%", y: "10.0%", leadsto: "unknown", type: "trial", access: "master",
+         }, 'MQ Forest Trial ': { x: "78.0%", y: "83.0%", leadsto: "unknown", type: "trial", access: "master",
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen() && items.Ocarina && items.SongofTime && items.Bow && items.Magic && items.Light;
             },
-         }, 'MQ Ice chest ': { x: "50.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'MQ Ice chest ': { x: "73.0%", y: "50.5%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen();
             },
-         }, 'MQ ice trial ': { x: "50.0%", y: "10.0%", leadsto: "unknown", type: "trial", access: "master",
+         }, 'MQ ice trial ': { x: "95.0%", y: "52.5%", leadsto: "unknown", type: "trial", access: "master",
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen() && items.Bottle && items.CastleKey && items.Bow && items.Magic && items.Light;
             },
-         }, 'MQ Shadow 1 ': { x: "50.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'MQ Shadow 1 ': { x: "59.0%", y: "33.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen() && ( (items.Hovers && (items.Bow || items.Bombs || items.Glove || (items.Bombchu && BombchuLogic) ) ) || items.Hookshot && items.Bow );
             },
-         }, 'MQ Shadow 2 ': { x: "50.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'MQ Shadow 2 ': { x: "69.0%", y: "25.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen() && items.Bow && items.Magic && items.Lens && item.HoverBoots;
             },
-         }, 'MQ Shadow trial ': { x: "50.0%", y: "10.0%", leadsto: "unknown", type: "trial", access: "master",
+         }, 'MQ Shadow trial ': { x: "80.0%", y: "10.0%", leadsto: "unknown", type: "trial", access: "master",
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen() && item.Light && items.Bow && items.Magic && items.Lens && item.HoverBoots;
             },
-         }, 'MQ Fire trial ': { x: "50.0%", y: "10.0%", leadsto: "unknown", type: "trial", access: "master",
+         }, 'MQ Fire trial ': { x: "21.5%", y: "18.5%", leadsto: "unknown", type: "trial", access: "master",
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen() && items.Glove >= 3 && (items.HoverBoots || items,Hookshot >= 2) && items.Bow && items.Magic && items.Light;
             },
-         }, 'MQ Light ZL chest ': { x: "50.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'MQ Light ZL chest ': { x: "30.0%", y: "53.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen() && items.Glove >= 3 && items.Ocarina && items.ZeldasLullaby;
             },
-         }, 'MQ Light trial ': { x: "50.0%", y: "10.0%", leadsto: "unknown", type: "trial", access: "master",
+         }, 'MQ Light trial ': { x: "4.0%", y: "53.0%", leadsto: "unknown", type: "trial", access: "master",
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen() && items.Glove >= 3 && items.CastleKey >= 2 && items.Hookshot && items.Bow && items.Magic && items.Light;
             },
-         }, 'MQ Spirit 1 ': { x: "50.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'MQ Spirit 1 ': { x: "34.0%", y: "67.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen() && items.Hammer;
             },
-         }, 'MQ Spirit 2 ': { x: "50.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'MQ Spirit 2 ': { x: "31.0%", y: "72.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen() && items.Hammer && items.Bombchu;
             },
-         }, 'MQ Spirit Sun 1 ': { x: "50.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'MQ Spirit Sun 1 ': { x: "77.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen() && items.Hammer && items.Bombchu && items.MirrorShield && itemsm.Bow && items.Magic && items.Fire;
             },
-         }, 'MQ Spirit Sun 2 ': { x: "50.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'MQ Spirit Sun 2 ': { x: "74.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen() && items.Hammer && items.Bombchu && items.MirrorShield && itemsm.Bow && items.Magic && items.Fire;
             },
-         }, 'MQ Spirit Sun 3 ': { x: "50.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'MQ Spirit Sun 3 ': { x: "76.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen() && items.Hammer && items.Bombchu && items.MirrorShield && itemsm.Bow && items.Magic && items.Fire;
             },
-         }, 'MQ Spirit Sun 4 ': { x: "50.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'MQ Spirit Sun 4 ': { x: "79.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen() && items.Hammer && items.Bombchu && items.MirrorShield && itemsm.Bow && items.Magic && items.Fire;
             },
-         }, 'MQ Spirit trial ': { x: "50.0%", y: "10.0%", leadsto: "unknown", type: "trial", access: "master",
+         }, 'MQ Spirit trial ': { x: "32.0%", y: "83.0%", leadsto: "unknown", type: "trial", access: "master",
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen() && items.Light && items.Hammer && items.Bombchu && items.MirrorShield && itemsm.Bow && items.Magic && items.Fire;
             },
-         }, 'MQ Scrub 1 ': { x: "60.0%", y: "10.0%", leadsto: "unknown", type: "scrub", access: "master",
+         }, 'MQ Scrub 1 ': { x: "53.0%", y: "70.0%", leadsto: "unknown", type: "scrub", access: "master",
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen();
             },
-         }, 'MQ Scrub 2 ': { x: "60.0%", y: "10.0%", leadsto: "unknown", type: "scrub", access: "master",
+         }, 'MQ Scrub 2 ': { x: "50.5%", y: "70.0%", leadsto: "unknown", type: "scrub", access: "master",
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen();
             },
-         }, 'MQ Scrub 3 ': { x: "60.0%", y: "10.0%", leadsto: "unknown", type: "scrub", access: "master",
+         }, 'MQ Scrub 3 ': { x: "48.0%", y: "70.0%", leadsto: "unknown", type: "scrub", access: "master",
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen();
             },
-         }, 'MQ Scrub 4 ': { x: "60.0%", y: "10.0%", leadsto: "unknown", type: "scrub", access: "master",
+         }, 'MQ Scrub 4 ': { x: "52.0%", y: "74.0%", leadsto: "unknown", type: "scrub", access: "master",
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen();
             },
-         }, 'MQ Scrub 5 ': { x: "60.0%", y: "10.0%", leadsto: "unknown", type: "scrub", access: "master",
+         }, 'MQ Scrub 5 ': { x: "49.5%", y: "74.0%", leadsto: "unknown", type: "scrub", access: "master",
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen();
             },
          },
-         'MQ GanonDorf': { x: "80.0%", y: "10.0%", leadsto: "unknown", type: "boss", access: "master",
+         'MQ GanonDorf': { x: "50.0%", y: "42.0%", leadsto: "unknown", type: "boss", access: "master",
             isAvailable: function () {
                return dungeons[12].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && generalCanGetChest(this.trials) && items.BossCastle && items.Bow && items.Magic && items.Light;
             }
