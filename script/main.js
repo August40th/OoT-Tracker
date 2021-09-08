@@ -645,7 +645,6 @@ function clickDungeon(d) {
         DClist.appendChild(s);
 
         if (dungeons[dungeonSelect].chestlist[key].floor !== here && dungeons[dungeonSelect].type == "dungeon") {
-            continue; 
         }
         else if (dungeons[dungeonSelect].chestlist[key].floor == here || dungeons[dungeonSelect].type == "overworld") {
             c = document.createElement('span');
