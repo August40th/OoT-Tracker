@@ -1963,19 +1963,19 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[10].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.SpiritKey >= 3 && (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic)) && items.MirrorShield && items.Hookshot && items.BossSpirit);
             }
-         }, 'Lobby Bottom Left': { x: "44.0%", y: "49.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'Lobby Bottom Left': { x: "44.0%", y: "53.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[10].found == true && (items.Ocarina && items.RequiemofSpirit) //Child Temple access
                || (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2); // Adult Temple access
             }
-         }, 'Lobby Top Left': { x: "47.0%", y: "49.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'Lobby Top Left': { x: "44.0%", y: "49.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[10].found == true && (items.Ocarina && items.RequiemofSpirit 
                && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Slingshot) //Boulder and eye switch
                || ((items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
                && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Bow); //Boulder and eye switch
             }
-         }, 'Lobby Top Right': { x: "25.0%", y: "48.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'Lobby Top Right': { x: "47.0%", y: "49.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[10].found == true && (items.Ocarina && items.RequiemofSpirit 
                && items.Slingshot) //Eye switch
