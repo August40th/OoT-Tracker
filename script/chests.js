@@ -2424,7 +2424,7 @@ var dungeons = [
                return dungeons[12].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && items.Glove >= 3;
             }
          },
-         'Light 2': { x: "30.0%", y: "56%", leadsto: "unknown", type: "chest", access: "vanilla",
+         'Light 2': { x: "30.0%", y: "57%", leadsto: "unknown", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[12].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && isBridgeOpen() && items.Glove >= 3;
             }
@@ -2545,7 +2545,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen() && items.Hammer && items.Bombchu;
             },
-         }, 'MQ Spirit Sun 1 ': { x: "33.0%", y: "77.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'MQ Spirit Sun 1 ': { x: "34.0%", y: "77.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen() && items.Hammer && items.Bombchu && items.MirrorShield && itemsm.Bow && items.Magic && items.Fire;
             },
@@ -2557,7 +2557,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen() && items.Hammer && items.Bombchu && items.MirrorShield && itemsm.Bow && items.Magic && items.Fire;
             },
-         }, 'MQ Spirit Sun 4 ': { x: "37.0%", y: "79.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'MQ Spirit Sun 4 ': { x: "36.0%", y: "79.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[12].found == true && isBridgeOpen() && items.Hammer && items.Bombchu && items.MirrorShield && itemsm.Bow && items.Magic && items.Fire;
             },
@@ -2809,28 +2809,28 @@ var dungeons = [
                && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Ocarina >= 1 && items.ZeldasLullaby;
             }
          }, 'Castle Moat Stone': {
-           x: "18.0%", y: "33.0%", leadsto: "unknown", type: "gossip", access: "outdoor",
+           x: "9.0%", y: "35.0%", leadsto: "unknown", type: "gossip", access: "outdoor",
             isAvailable: function () {
                return dungeons[15].found == true && 
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) 
                   );
             }
          }, 'Moat Storms Grotto': {
-           x: "53.0%", y: "33.0%", leadsto: "unknown", type: "grotto", access: "grotto",
+           x: "53.0%", y: "30.0%", leadsto: "unknown", type: "grotto", access: "grotto",
                isAvailable: function () {
                   return dungeons[15].found == true && 
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) 
                   ) && items.Ocarina >= 1 && items.SongofStorms;
                }
          }, 'Storms Grotto Skull': {
-           x: "55.0%", y: "33.0%", leadsto: "unknown", type: "skulltula", access: "grotto",
+           x: "54.0%", y: "30.0%", leadsto: "unknown", type: "skulltula", access: "grotto",
             isAvailable: function () {
                return dungeons[15].found == true &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) 
                   ) && items.Ocarina >= 1 && items.SongofStorms && (items.Bombs || items.Boomerang);
             }
          }, 'Storms Grotto Gossip': {
-           x: "53.0%", y: "33.0%", leadsto: "unknown", type: "gossip", access: "grotto",
+           x: "52.0%", y: "30.0%", leadsto: "unknown", type: "gossip", access: "grotto",
             isAvailable: function () {
                return dungeons[15].found == true &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) 
