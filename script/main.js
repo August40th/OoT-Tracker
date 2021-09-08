@@ -646,7 +646,7 @@ function clickDungeon(d) {
 
         if (dungeons[dungeonSelect].chestlist[key].floor !== here && dungeons[dungeonSelect].type == "dungeon") {
         }
-        else if (dungeons[dungeonSelect].chestlist[key].floor == here || dungeons[dungeonSelect].type == "overworld") {
+        else if ( (dungeons[dungeonSelect].chestlist[key].floor == here && dungeons[dungeonSelect].type == "dungeon") || dungeons[dungeonSelect].type == "overworld") {
             c = document.createElement('span');
             c.innerHTML = 'x';
             c.id = dungeons[dungeonSelect].chestlist[key].type;
