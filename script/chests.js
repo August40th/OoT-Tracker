@@ -1963,50 +1963,50 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[10].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.SpiritKey >= 3 && (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic)) && items.MirrorShield && items.Hookshot && items.BossSpirit);
             }
-         }, 'Lobby Bottom Left': { x: "35.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'Lobby Bottom Left': { x: "44.0%", y: "49.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[10].found == true && (items.Ocarina && items.RequiemofSpirit) //Child Temple access
                || (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2); // Adult Temple access
             }
-         }, 'Lobby Top Left': { x: "40.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'Lobby Top Left': { x: "47.0%", y: "49.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[10].found == true && (items.Ocarina && items.RequiemofSpirit 
                && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Slingshot) //Boulder and eye switch
                || ((items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
                && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Bow); //Boulder and eye switch
             }
-         }, 'Lobby Top Right': { x: "45.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'Lobby Top Right': { x: "25.0%", y: "48.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[10].found == true && (items.Ocarina && items.RequiemofSpirit 
                && items.Slingshot) //Eye switch
                || ((items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
                && items.Bow); //Eye Switch
             }
-         }, 'Slug Room Chest': { x: "50.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'Slug Room Chest': { x: "25.0%", y: "48.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[10].found == true && items.Ocarina && items.RequiemofSpirit && items.Glove >= 2 && items.Hammer;
             }
-         }, 'Anubis Free Chest': { x: "55.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'Anubis Free Chest': { x: "13.0%", y: "35.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[10].found == true && items.Ocarina && items.RequiemofSpirit;
             }
-         }, 'Anubis Fight Chest': { x: "60.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'Anubis Fight Chest': { x: "13.0%", y: "26.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[10].found == true && items.Ocarina && items.RequiemofSpirit && items.Bombchu && items.Slingshot && items.Magic && items.Dins; //Kill Anubis and long way around
             }
-         }, 'Dodongo Chest': { x: "65.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'Dodongo Chest': { x: "29.0%", y: "29.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[10].found == true && (items.Ocarina && items.RequiemofSpirit && items.Bombchu && items.SpiritKey >= 1) //Child climb
                || (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2)
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2; //Adult statue room access
             }
-         }, 'Statue Room Eye Switch': { x: "70.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'Statue Room Eye Switch': { x: "47.0%", y: "26.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[10].found == true && (items.Ocarina && items.RequiemofSpirit && items.Bombchu && items.SpiritKey >= 2) //Child Statue Room
                || (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2)
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.Bow;
             }
-         }, 'Shortcut Hallway Eye Switch': { x: "75.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'Shortcut Hallway Eye Switch': { x: "47.0%", y: "41.5%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[10].found == true && (items.Ocarina && items.RequiemofSpirit && items.Bombchu && items.SpiritKey >= 2 
                && items.Magic && items.Dins && (items.Slingshot || items.Bow) ) //Child opens shortcut hallway
@@ -2014,104 +2014,104 @@ var dungeons = [
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 
                && ((items.Slingshot && items.Ocarina && items.RequiemofSpirit) || items.Bow) && items.Magic && (items.Dins || (items.Bow && items.Fire)); //Adult opens
             }
-         }, 'MQ Sunblock Chest': { x: "80.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'MQ Sunblock Chest': { x: "23.0%", y: "44.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[10].found == true && (items.Ocarina && items.RequiemofSpirit && items.Bombchu && items.SpiritKey >= 2 && items.SongofTime) //Blue switch on statue hand
                || (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2)
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.Ocarina && items.SongofTime && items.SpiritKey >= 1; //As Asult
             }
-         }, 'Sunblock Room Skulltula': { x: "85.0%", y: "10.0%", leadsto: "unknown", type: "skulltula", access: "master",
+         }, 'Sunblock Room Skulltula': { x: "21.5%", y: "59.0%", leadsto: "unknown", type: "skulltula", access: "master",
             isAvailable: function () {
                return dungeons[10].found == true && (items.Ocarina && items.RequiemofSpirit && items.Bombchu && items.SpiritKey >= 2 && items.SongofTime && items.Boomerang) //Blue switch on statue hand
                || (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.Ocarina && items.SongofTime && items.SpiritKey >= 1; //As Asult
             }
-         }, 'MQ Colossus Right Hand': { x: "90.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'MQ Colossus Right Hand': { x: "26.0%", y: "83.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[10].found == true && (items.Ocarina && items.RequiemofSpirit && items.Bombchu && items.SpiritKey >= 3 && items.SongofTime)
                || (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2)
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.Ocarina && items.SongofTime && items.SpiritKey >= 2; //As Adult
             }
-         }, 'Dodongo Room Adult Chest': { x: "10.0%", y: "15.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'Dodongo Room Adult Chest': { x: "25.0%", y: "36.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[10].found == true && (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.SpiritKey >= 1;
             }
-         }, 'Statue Room Lower Chest': { x: "10.0%", y: "20.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'Statue Room Lower Chest': { x: "56.0%", y: "18.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[10].found == true && (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.Ocarina && items.ZeldasLullaby; 
             }
-         }, 'Statue Room Upper Chest': { x: "10.0%", y: "30.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'Statue Room Upper Chest': { x: "59.0%", y: "20.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[10].found == true && (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.Ocarina && items.ZeldasLullaby; 
             }
-         }, 'Leever Room Chest': { x: "10.0%", y: "40.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'Leever Room Chest': { x: "54.5%", y: "22.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[10].found == true && (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.Bow && items.Magic && items.Fire; //Stalfos Room access
             }
-         }, 'Leever Room Skulltula': { x: "10.0%", y: "50.0%", leadsto: "unknown", type: "skulltula", access: "master",
+         }, 'Leever Room Skulltula': { x: "56.5%", y: "32.0%", leadsto: "unknown", type: "skulltula", access: "master",
             isAvailable: function () {
                return dungeons[10].found == true && (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.Bow && items.Magic && items.Fire; //Stalfos Room access
             }
-         }, 'Child Songs Halfpipe': { x: "10.0%", y: "60.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'Child Songs Halfpipe': { x: "79.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[10].found == true && (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.Bow && items.Magic && items.Fire
                && items.Ocarina && items.ZeldasLullaby && items.EponasSong && items.SunsSong && items.SongofStorms && items.SongofTime; 
             }
-         }, 'Songs Halfpipe Skulltula': { x: "10.0%", y: "70.0%", leadsto: "unknown", type: "skulltula", access: "master",
+         }, 'Songs Halfpipe Skulltula': { x: "82.0%", y: "12.0%", leadsto: "unknown", type: "skulltula", access: "master",
             isAvailable: function () {
                return dungeons[10].found == true && (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.Bow && items.Magic && items.Fire
                && items.Ocarina && items.ZeldasLullaby && items.EponasSong && items.SunsSong && items.SongofStorms && items.SongofTime; 
             }
-         }, 'Lobby Bottom Right': { x: "10.0%", y: "80.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'Lobby Bottom Right': { x: "48.0%", y: "53%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[10].found == true && (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.Bow && items.Magic && items.Fire && items.Hammer; 
             }
-         }, 'Beamos Room Chest': { x: "10.0%", y: "90.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'Beamos Room Chest': { x: "77.0%", y: "48.5%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[10].found == true && (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.SpiritKey >= 1 && items.Bombs || items.Bombchu; 
             }
-         }, 'Dinalfos Chest': { x: "15.0%", y: "95.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'Dinalfos Chest': { x: "87.0%", y: "57.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[10].found == true && (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.SpiritKey >= 1 
                && items.Ocarina && items.SongofTime; //SOT puzzle in Beamos Room
             }
-         }, 'Gibdo Room Chest': { x: "15.0%", y: "85.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'Gibdo Room Chest': { x: "84.5%", y: "36%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[10].found == true && (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.SpiritKey >= 1 
                && items.Ocarina && items.SongofTime && items.MirrorShield;
             }
-         }, 'MQ Colossus Left Hand': { x: "15.0%", y: "75.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'MQ Colossus Left Hand': { x: "71.0%", y: "83.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[10].found == true && (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.SpiritKey >= 1;
             }
-         }, 'Highest Chest': { x: "15.0%", y: "65.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'Highest Chest': { x: "47.0%", y: "39.5%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[10].found == true && (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.SpiritKey >= 2;
             }
-         }, 'Knuckle Skulltula 1': { x: "15.0%", y: "55.0%", leadsto: "unknown", type: "skulltula", access: "master",
+         }, 'Knuckle Skulltula 1': { x: "56.0%", y: "19.0%", leadsto: "unknown", type: "skulltula", access: "master",
             isAvailable: function () {
                return dungeons[10].found == true && (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.SpiritKey >= 3;
             }
-         }, 'Knuckle Skulltula 2': { x: "15.0%", y: "55.0%", leadsto: "unknown", type: "skulltula", access: "master",
+         }, 'Knuckle Skulltula 2': { x: "64.0%", y: "19.0%", leadsto: "unknown", type: "skulltula", access: "master",
             isAvailable: function () {
                return dungeons[10].found == true && (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 && items.SpiritKey >= 3;
             }
-         }, 'MQ TwinRova': { x: "47.0%", y: "12.0%", leadsto: "unknown", type: "boss", access: "master",
+         }, 'MQ TwinRova': { x: "47.0%", y: "12.5%", leadsto: "unknown", type: "boss", access: "master",
             isAvailable: function () {
                return dungeons[10].found == true && (items.Ocarina && (items.RequiemofSpirit || (items.EponasSong && items.HoverBoots)) || items.Hookshot >= 2) // Adult Temple access
                && items.Bombchu && items.Hookshot >= 2 && items.Glove >= 2 
@@ -2215,126 +2215,126 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[11].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.ShadowKey >= 5 && items.BossShadow && (items.NocturneofShadow && items.Magic && items.Dins && items.HoverBoots && (items.Bombs || (items.Bombchu && BombchuLogic)) && items.Hookshot && items.Glove && items.Ocarina && items.ZeldasLullaby && (items.Bow || items.Scarecrow >= 2));
             }
-         }, '1st Redead Room': { x: "20.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, '1st Redead Room': { x: "40.5%", y: "27.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[11].found == true && items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) //Temple access
                && items.Bombs && items.ShadowKey >= 1; //Bombwall + keydoor
             }
-         }, '1st Deadhand Chest': { x: "25.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, '1st Deadhand Chest': { x: "26.0%", y: "35.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[11].found == true && items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots)
                && items.Bombs && items.ShadowKey >= 1
                && items.SongofTime && items.Bow; //Block of time + eye switch
             }
-         }, 'MQ 1st Gibdos Room': { x: "30.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'MQ 1st Gibdos Room': { x: "75.0%", y: "49.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[11].found == true && items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire; //Deeper access
             }
-         }, 'Skulltulas and Ruppees': { x: "35.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'Skulltulas and Ruppees': { x: "77.0%", y: "21.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[11].found == true && items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire; //Deeper access
             }
-         }, 'Fall to Dock Invisible': { x: "40.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'Fall to Dock Invisible': { x: "81.0%", y: "21.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[11].found == true && items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire; //Deeper access
             }
-         }, 'MQ Like Like Visible': { x: "45.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'MQ Like Like Visible': { x: "95.0%", y: "67.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[11].found == true && items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 1; //Deeper access
             }
-         }, 'MQ Like Like Invisible': { x: "50.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'MQ Like Like Invisible': { x: "95.0%", y: "70.5%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[11].found == true && items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 1; //Deeper access
             }
-         }, 'Beamos Silver Rupees': { x: "55.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'Beamos Silver Rupees': { x: "59.0%", y: "82.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[11].found == true && items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 1 && items.Hookshot >= 2; //Longshot requireq for a rupee
             }
-         }, 'MQ Crusher Skulltula': { x: "60.0%", y: "10.0%", leadsto: "unknown", type: "skulltula", access: "master",
+         }, 'MQ Crusher Skulltula': { x: "38.0%", y: "90.0%", leadsto: "unknown", type: "skulltula", access: "master",
             isAvailable: function () {
                return dungeons[11].found == true && items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 1 && items.Hookshot;
             }
-         }, 'MQ Crusher Lower Chest': { x: "65.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'MQ Crusher Lower Chest': { x: "38.0%", y: "86.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[11].found == true && items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 1;
             }
-         }, 'MQ Crusher Upper Chest': { x: "70.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'MQ Crusher Upper Chest': { x: "34.0%", y: "90.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[11].found == true && items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 1;
             }
-         }, 'MQ Crusher Switch Chest': { x: "75.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'MQ Crusher Switch Chest': { x: "44.0%", y: "85.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[11].found == true && items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 1;
             }
-         }, 'MQ Redeads and Rupees': { x: "80.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'MQ Redeads and Rupees': { x: "61.5%", y: "56.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[11].found == true && items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 2;
             }
-         }, 'Stalfos Chest': { x: "85.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'Stalfos Chest': { x: "46.0%", y: "56.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[11].found == true && items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 2 && items.Hookshot >= 2;
             }
-         }, 'MQ Redeads invisible Chest': { x: "90.0%", y: "10.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'MQ Redeads invisible Chest': { x: "95.0%", y: "50.5%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[11].found == true && items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 3 && items.Hookshot >= 2;
             }
-         }, '2nd Redead Skulltula': { x: "95.0%", y: "10.0%", leadsto: "unknown", type: "skulltula", access: "master",
+         }, '2nd Redead Skulltula': { x: "95.0%", y: "36.5%", leadsto: "unknown", type: "skulltula", access: "master",
             isAvailable: function () {
                return dungeons[11].found == true && items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 3 && items.Hookshot >= 2;
             }
-         }, 'MQ 2nd Gibdos Chest': { x: "5.0%", y: "15.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'MQ 2nd Gibdos Chest': { x: "86.5%", y: "27.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[11].found == true && items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 3 && items.Hookshot >= 2;
             }
-         }, 'MQ Gibdos Hidden Chest': { x: "10.0%", y: "15.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'MQ Gibdos Hidden Chest': { x: "88.0%", y: "30.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[11].found == true && items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 3 && items.Hookshot >= 2;
             }
-         }, '2nd Gibdos Skulltula': { x: "15.0%", y: "15.0%", leadsto: "unknown", type: "skulltula", access: "master",
+         }, '2nd Gibdos Skulltula': { x: "85.0%", y: "24.0%", leadsto: "unknown", type: "skulltula", access: "master",
             isAvailable: function () {
                return dungeons[11].found == true && items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 3 && items.Hookshot >= 2;
             }
-         }, 'Dark River Skulltula': { x: "25.0%", y: "15.0%", leadsto: "unknown", type: "skulltula", access: "master",
+         }, 'Dark River Skulltula': { x: "34.0%", y: "29.0%", leadsto: "unknown", type: "skulltula", access: "master",
             isAvailable: function () {
                return dungeons[11].found == true && items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 4 && items.Hookshot >= 2 && items.ZeldasLullaby;
             }
-         }, 'MQ Skull Pot Freestanding': { x: "35.0%", y: "15.0%", leadsto: "unknown", type: "freestanding", access: "master",
+         }, 'MQ Skull Pot Freestanding': { x: "5.0%", y: "24.0%", leadsto: "unknown", type: "freestanding", access: "master",
             isAvailable: function () {
                return dungeons[11].found == true && items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 4 && items.Hookshot >= 2 && items.ZeldasLullaby
                && items.SongofTime;
             }
-         }, 'MQ Spike Wall 1 ': { x: "45.0%", y: "15.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'MQ Spike Wall 1 ': { x: "16.0%", y: "11.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[11].found == true && items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 5 && items.Hookshot >= 2 && items.ZeldasLullaby && items.SongofTime;
             }
-         }, 'MQ Spike Wall 2 ': { x: "45.0%", y: "15.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, 'MQ Spike Wall 2 ': { x: "22.0%", y: "11.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[11].found == true && items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 5 && items.Hookshot >= 2 && items.ZeldasLullaby && items.SongofTime;
             }
-         }, '2nd Deadhand': { x: "55.0%", y: "15.0%", leadsto: "unknown", type: "chest", access: "master",
+         }, '2nd Deadhand': { x: "19.0%", y: "39.0%", leadsto: "unknown", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[11].found == true && items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 4 && items.Hookshot >= 2 && items.ZeldasLullaby && items.SongofTime;
             }
-         }, 'Skulltula Near Boss Door': { x: "65.0%", y: "15.0%", leadsto: "unknown", type: "skulltula", access: "master",
+         }, 'Skulltula Near Boss Door': { x: "30.0%", y: "49.0%", leadsto: "unknown", type: "skulltula", access: "master",
             isAvailable: function () {
                return dungeons[11].found == true && items.Ocarina && items.NocturneofShadow && items.Magic && items.Dins && (items.Hookshot || items.HoverBoots) && items.Bow && items.Fire
                && items.Bombs && items.ShadowKey >= 4 && items.Hookshot >= 2 && items.ZeldasLullaby;
