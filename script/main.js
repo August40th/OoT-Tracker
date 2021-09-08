@@ -645,7 +645,8 @@ function clickDungeon(d) {
         DClist.appendChild(s);
 
         if (dungeons[dungeonSelect].chestlist[key].floor !== here && dungeons[dungeonSelect].type == "dungeon") {
-            continue; }
+            continue; 
+        }
         else {
             c = document.createElement('span');
             c.innerHTML = 'x';
@@ -672,7 +673,7 @@ function clickDungeon(d) {
             c.appendChild(cc);
             c.onmouseover = new Function('highlight(this' + ',"' + key + '")');
             c.onmouseout = new Function('unhighlight(this' + ',"' + key + '")');
-        //}
+        }
     }
 }
 
