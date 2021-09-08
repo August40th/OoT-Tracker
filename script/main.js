@@ -514,10 +514,14 @@ function clickDungeon(d) {
     regionSelected.onclick = bulkDCSelect();
 
     var minimap = document.getElementById('minimapdiv');
+    if (dungeonSelect !== last) {
+        last = dungeonSelect;
+        here = dungeons[dungeonSelect].floorwdoor;}
+    if (here == undefined) here = dungeons[dungeonSelect].floorwdoor;
     if (dungeons[dungeonSelect].type == "overworld")
         minimap.style.backgroundImage = 'url(images/' + minimaps[dungeonSelect] + '.png)';
     if (dungeons[dungeonSelect].type == "dungeon")
-        minimap.style.backgroundImage = 'url(images/' + minimaps[dungeonSelect] + dungeons[dungeonSelect].floorwdoor + '.png)';
+        minimap.style.backgroundImage = 'url(images/' + minimaps[dungeonSelect] + here + '.png)';
     minimap.innerHTML = '';
     if (dungeons[dungeonSelect].type == "overworld")
             document.getElementById('minimapdiv').style.backgroundColor = "maroon";
@@ -640,7 +644,9 @@ function clickDungeon(d) {
 
         DClist.appendChild(s);
 
-        //if (dungeons[dungeonSelect].chestlist[key].floor == here) {
+        if (dungeons[dungeonSelect].chestlist[key].floor !== here && dungeons[dungeonSelect].type == "dungeon") {
+            continue; }
+        else {
             c = document.createElement('span');
             c.innerHTML = 'x';
             c.id = dungeons[dungeonSelect].chestlist[key].type;
@@ -804,6 +810,7 @@ function toggleDungeonMapUp() {
         here = 0;
     m.style.backgroundImage = 'url(images/' + minimaps[dungeonSelect] + here + '.png)';
     last = dungeonSelect;
+    clickDungeon(dungeonSelect);
 }
 
 function toggleDungeonMapDown() {
@@ -815,6 +822,7 @@ function toggleDungeonMapDown() {
         here = dungeons[dungeonSelect].topfloor;
     m.style.backgroundImage = 'url(images/' + minimaps[dungeonSelect] + here + '.png)';
     last = dungeonSelect;
+    clickDungeon(dungeonSelect);
 }
 
 function toggleDungeonChest(sender, d, c) {
