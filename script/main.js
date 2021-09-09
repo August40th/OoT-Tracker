@@ -1905,7 +1905,7 @@ function populateMapdiv() {
 
       }
         var DCcount = 0;
-        for (var key in dungeons[k].chestlist) {e
+        for (var key in dungeons[k].chestlist) {
             if ( dungeons[k].chestlist[key].access == "entrance" && dungeons[k].chestlist[key].type == "dungeon" ) { //Dungeon door  
                 continue;}
             if ( dungeons[k].chestlist[key].leadsto !== "unknown" && dungeons[k].chestlist[key].type == "entrance" ) { //  
