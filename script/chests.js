@@ -2566,23 +2566,23 @@ var dungeons = [
             },
          }, 'MQ Spirit Sun 1 ': { x: "34%", y: "77%", leadsto: "unknown", floor: "1", type: "chest", access: "master",
             isAvailable: function () {
-               return dungeons[12].found == true && isBridgeOpen() && items.Hammer && items.Bombchu && items.MirrorShield && itemsm.Bow && items.Magic && items.Fire;
+               return dungeons[12].found == true && isBridgeOpen() && items.Hammer && items.Bombchu && items.MirrorShield && items.Bow && items.Magic && items.Fire;
             },
          }, 'MQ Spirit Sun 2 ': { x: "35.5%", y: "74%", leadsto: "unknown", floor: "1", type: "chest", access: "master",
             isAvailable: function () {
-               return dungeons[12].found == true && isBridgeOpen() && items.Hammer && items.Bombchu && items.MirrorShield && itemsm.Bow && items.Magic && items.Fire;
+               return dungeons[12].found == true && isBridgeOpen() && items.Hammer && items.Bombchu && items.MirrorShield && items.Bow && items.Magic && items.Fire;
             },
          }, 'MQ Spirit Sun 3 ': { x: "38%", y: "76%", leadsto: "unknown", floor: "1", type: "chest", access: "master",
             isAvailable: function () {
-               return dungeons[12].found == true && isBridgeOpen() && items.Hammer && items.Bombchu && items.MirrorShield && itemsm.Bow && items.Magic && items.Fire;
+               return dungeons[12].found == true && isBridgeOpen() && items.Hammer && items.Bombchu && items.MirrorShield && items.Bow && items.Magic && items.Fire;
             },
          }, 'MQ Spirit Sun 4 ': { x: "36%", y: "79%", leadsto: "unknown", floor: "1", type: "chest", access: "master",
             isAvailable: function () {
-               return dungeons[12].found == true && isBridgeOpen() && items.Hammer && items.Bombchu && items.MirrorShield && itemsm.Bow && items.Magic && items.Fire;
+               return dungeons[12].found == true && isBridgeOpen() && items.Hammer && items.Bombchu && items.MirrorShield && items.Bow && items.Magic && items.Fire;
             },
          }, 'MQ Spirit trial ': { x: "32%", y: "83%", leadsto: "unknown", floor: "1", type: "trial", access: "master",
             isAvailable: function () {
-               return dungeons[12].found == true && isBridgeOpen() && items.Light && items.Hammer && items.Bombchu && items.MirrorShield && itemsm.Bow && items.Magic && items.Fire;
+               return dungeons[12].found == true && isBridgeOpen() && items.Light && items.Hammer && items.Bombchu && items.MirrorShield && items.Bow && items.Magic && items.Fire;
             },
          }, 'MQ Scrub 1 ': { x: "53%", y: "70%", leadsto: "unknown", floor: "0", type: "scrub", access: "master",
             isAvailable: function () {
