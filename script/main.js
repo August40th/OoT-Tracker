@@ -851,7 +851,7 @@ function toggleDungeonChest(sender, d, c) {
                 e.onmouseover = new Function('highlightDungeonChest(this)');
                 e.onmouseout = new Function('unhighlightDungeonChest(this)');
                 e.style.cursor = "pointer";
-                e.onclick = new Function('openarea(' + d + ',"' + c + ',' + k + '")');
+                e.onclick = new Function(openarea(d,c,k) );
                 l.appendChild(e);
             }
         }
