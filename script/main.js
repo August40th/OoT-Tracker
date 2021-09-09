@@ -837,15 +837,15 @@ function toggleDungeonChest(sender, d, c) {
         sender.className = 'DCunavailable';
     
     var printdun;
-    if (dungeons[d].chestlist[c].type == "entrance") {
-        var t = document.getElementById('submaparea');
+    if (dungeons[d].chestlist[c].type == "entrance" )//|| (dungeons[d].chestlist[c].type == "dungeon" && DungeonER == true) ) {
+        var t = document.getElementById('submaparea'));
         var l = document.getElementById('submaplist');
         t.innerHTML = c + ' leads to';
         l.innerHTML = '';
         for ( var k = 0; k < dungeons.length; k++) {
             printdun = false;
             for (var key in dungeons[k].chestlist) {
-                if (dungeons[k].chestlist[key].access == "entrance" && dungeons[k].chestlist[key].leadsto == "unknown") {
+                if (dungeons[k].chestlist[key].type == "entrance" && dungeons[k].chestlist[key].leadsto == "unknown") {
                     printdun = true; }
             }
             if (printdun == true) {
@@ -859,7 +859,7 @@ function toggleDungeonChest(sender, d, c) {
                     l.innerHTML = '';
                     var v = this.className;
                     for (var ent in dungeons[v].chestlist) {
-                        if (dungeons[v].chestlist[ent].access == "entrance" && dungeons[v].chestlist[ent].leadsto == "unknown") {
+                        if (dungeons[v].chestlist[ent].type == "entrance" && dungeons[v].chestlist[ent].leadsto == "unknown") {
                             var ee = document.createElement('li');
                             ee.innerHTML = ent;
                             ee.className = ent + ' entrance';
