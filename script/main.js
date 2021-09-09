@@ -926,7 +926,7 @@ function toggleDungeonChest(sender, d, c) {
         var l = document.getElementById('submaplist');
         t.innerHTML = c + ' leads to';
         l.innerHTML = '';
-        for ( var k = 0; k < dungeons.length;; k++) {
+        for ( var k = 0; k < dungeons.length; k++) {
             printdun =true;
             if (printdun == true) {
                 var e = document.createElement('li');
