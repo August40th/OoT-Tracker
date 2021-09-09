@@ -863,6 +863,7 @@ function toggleDungeonChest(sender, d, c) {
                             ee.onmouseout = new Function('unhighlightDungeonChest(this)');
                             ee.style.cursor = "pointer";
                             ee.onclick = function(setLeadsto){
+                                ent = this.innerHTML;
                                 dungeons[d].chestlist[c].leadsto = ent;
                                 dungeons[v].chestlist[ent].leadsto = c;
                                 clickDungeon(d);
