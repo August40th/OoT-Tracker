@@ -16,7 +16,7 @@ function generalCanGetChest(chestlist) {
          continue;}
       if ( chestlist[key].type == "warp" && Warps == false) {
          continue;}
-    f  if ( chestlist[key].type == "owl" && Owls == false) { //Do Nothing
+      if ( chestlist[key].type == "owl" && Owls == false) { //Do Nothing
             continue;}
         if ( chestlist[key].access == "door" && chestlist[key].type == "simple" && IndoorER == "Off" ) { //Simple Doorways
             continue;}
