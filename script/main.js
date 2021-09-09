@@ -871,7 +871,7 @@ function openarea(d, c, k) {
             e.onmouseover = new Function('highlightDungeonChest(this)');
             e.onmouseout = new Function('unhighlightDungeonChest(this)');
             e.style.cursor = "pointer";
-            e.onclick = new Function('setLeadsto(' + d + ',' + c + ',' + k + ',' + ent + ')');
+            e.onclick = new Function('setLeadsto(' + d + ',"' + c + ',' + k + ',' + ent + '")');
             l.appendChild(e); }
     }
 }
