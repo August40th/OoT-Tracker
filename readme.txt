@@ -14,6 +14,7 @@ Grotto, Dungeon, Indoor ER
 Medigoron, Carpet sale
 List Gossip Stones
 OW mini maps
+Multi floor dungeon maps
 
 Right click items to cycle in reverse
 
@@ -26,11 +27,8 @@ or Left click the bottom right corner of a key to swap between vanila or mq
 
 The logic assumes the runner can do simple tricks like Mido Skip, use Hover Boots or the DM Crater Bean Heart Piece, can do fire and Water Temples without a Tunic, get into Zoras Domain with a cucco or Hover Boots, get the Lab Dive check with Iron Boots & Hookshot, Lens only required for chest mini game. 
 
-If you notice any bugs in logic please message me on Discord: August 40th#4864
+If you notice any wrong mini map coordinates or bugs in logic please message me on Discord: August 40th#4864
 
 ****ToDo List****
 Logic tweaks
-Separate areas for Market guard house & LW bridge checks for OWER
 Entrance tracker - lines connecting selected region with found paths
-Mini map co ordinates
-Floor lvl dependent dungeon chests on minimaps
