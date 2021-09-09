@@ -853,7 +853,6 @@ function toggleDungeonChest(sender, d, c) {
         }
     }
 
-    updateMap();
     saveCookie();
 }
 
