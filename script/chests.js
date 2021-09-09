@@ -162,7 +162,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[0].found == true &&
                   items.Ocarina && items.SongofStorms; }
-         }, 'Forest to Woods': { x: "17%", y: "19.5%", type: "entrance", access: "entrance",
+         }, 'Forest to Woods': { x: "17%", y: "19.5%", leadsto: "unknown", type: "entrance", access: "entrance",
           isAvailable: function () {
                return dungeons[0].found == true ; }
        }, 'Left of Deku Tree Gossip': { x: "73%", y: "8%", leadsto: "unknown", type: "gossip", access: "outdoor",
@@ -2627,7 +2627,7 @@ var dungeons = [
                && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && items.BigPoe >= 1;
             }
-         }, 'Market to Street': { x: "60%", y: "96%", type: "entrance", access: "entrance",
+         }, 'Market to Street': { x: "60%", y: "96%", leadsto: "unknown", type: "entrance", access: "entrance",
           isAvailable: function () {
                return dungeons[13].found == true; }
          }, 'Treasure game': { x: "40%", y: "87%", leadsto: "unknown", type: "simple", access: "door",
@@ -5071,7 +5071,7 @@ var dungeons = [
    },
    { name: "Market Street", x: "53.5%", y: "24.2%", type: "overworld", found: true,
       chestlist: {
-         'Street to Drawbridge': { x: "47.5%", y: "86%", type: "entrance", access: "entrance",
+         'Street to Drawbridge': { x: "47.5%", y: "86%", leadsto: "unknown", type: "entrance", access: "entrance",
           isAvailable: function () {
                return dungeons[33].found == true; }
          }, 'Guard/Ghostbuster House': { x: "60%", y: "61%", leadsto: "unknown", type: "simple", access: "door",
@@ -5089,7 +5089,7 @@ var dungeons = [
                && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && items.BigPoe >= 1;
             }
-         }, 'Streeet to Market': { x: "47.5%", y: "11%", type: "entrance", access: "entrance",
+         }, 'Streeet to Market': { x: "47.5%", y: "11%", leadsto: "unknown", type: "entrance", access: "entrance",
           isAvailable: function () {
                return dungeons[33].found == true; }
        },
