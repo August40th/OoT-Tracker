@@ -838,7 +838,7 @@ function toggleDungeonChest(sender, d, c) {
     
     var printdun;
     if (dungeons[d].chestlist[c].type == "entrance" )//|| (dungeons[d].chestlist[c].type == "dungeon" && DungeonER == true) ) {
-        var t = document.getElementById('submaparea'));
+        var t = document.getElementById('submaparea');
         var l = document.getElementById('submaplist');
         t.innerHTML = c + ' leads to';
         l.innerHTML = '';
