@@ -831,9 +831,48 @@ function toggleDungeonChest(sender, d, c) {
         sender.className = 'DCavailable';
     else
         sender.className = 'DCunavailable';
+    
+    var printdun;
+    if (dungeons[d].chestlist[c].type == "entrance") {
+        var t = document.getElementById('submaparea');
+        var l = document.getElementById('submaplist');
+        t.innerHTML = c + ' leads to';
+        l.innerHTML = '';
+        for ( var k = 0; k < dungeons.length; k++) {
+            printdun = false;
+            for (var key in dungeons[k].chestlist) {
+                if (dungeons[k].chestlist[key].access == "entrance" && dungeons[k].chestlist[key].leadsto == "unknown") {
+                    printdun = true; }
+            }
+            if (printdun == true) {
+                var e = document.createElement('li');
+                e.innerHTML = dungeons[k].name;
+                e.onclick = openarea(d, c, k);
+                l.appendChild(e);
+            }
+        }
+    }
 
     updateMap();
     saveCookie();
+}
+
+function openarea(d, c, k) {
+    var l = document.getElementById('submaplist');
+    l.innerHTML = '';
+    for (var ent in dungeons[k].chestlist) {
+        if (dungeons[k].chestlist[ent].access == "entrance" && dungeons[k].chestlist[ent].leadsto == "unknown") {
+            var e = document.createElement('li');
+            e.innerHTML = ent;
+            e.onclick = setLeadsto(d, c, k, ent);
+            l.appendChild(e); }
+    }
+}
+
+function setLeadsto(d, c, k, ent) {
+    dungeons[d].chestlist[c].leadsto = ent;
+    dungeons[k].chestlist[ent].leadsto = c;
+    clickDungeon(d);
 }
 
 function highlightDungeonChest(x) {
