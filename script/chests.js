@@ -2,19 +2,21 @@ function generalCanGetChest(chestlist) {
    var canGet = 0;
    var unopened = 0
    for (var key in chestlist) {
-          if ( chestlist[key].access == "entrance" && chestlist[key].type == "dungeon" ) { //Dungeon door
+      if ( chestlist[key].access == "entrance" && chestlist[key].type == "dungeon" ) { //Dungeon door  
          continue;}
-          if ( chestlist[key].access == "master" && quest == "Vanilla" ) { //Master checks
-            continue;}
-        if ( chestlist[key].access == "vanilla" && quest == "Master" ) { //Master checks
-            continue;}
-        if ( chestlist[key].type == "trial" && trialsize == 0 ) { //Castle trials
-            continue;}
-        if ( chestlist[key].type == "entrance" && OWERmap == false ) { //Do Nothing
-            continue;}
-       if ( chestlist[key].type == "warp" && Warps == false) {
-            continue;}
-        if ( chestlist[key].type == "owl" && Owls == false) { //Do Nothing
+      if ( chestlist[key].leadsto !== "unknown" && chestlist[key].type == "entrance" ) { //  
+         continue;}
+      if ( chestlist[key].access == "master" && quest == "Vanilla" ) { //Master checks
+         continue;}
+      if ( chestlist[key].access == "vanilla" && quest == "Master" ) { //Master checks
+         continue;}
+      if ( chestlist[key].type == "trial" && trialsize == 0 ) { //Castle trials
+         continue;}
+      if ( chestlist[key].type == "entrance" && OWERmap == false ) { //Do Nothing
+         continue;}
+      if ( chestlist[key].type == "warp" && Warps == false) {
+         continue;}
+    f  if ( chestlist[key].type == "owl" && Owls == false) { //Do Nothing
             continue;}
         if ( chestlist[key].access == "door" && chestlist[key].type == "simple" && IndoorER == "Off" ) { //Simple Doorways
             continue;}
@@ -4047,10 +4049,26 @@ var dungeons = [
             }
          }, 'Trail to Crater': { x: "87.5%", y: "12.5%", leadsto: "unknown", type: "entrance", access: "entrance",
              isAvailable: function () {
-                  return dungeons[23].found == true; }
+                  return (OWERmap == false || dungeons[23].found == true) &&
+                  ( ( (items.Bombs || (items.BoleroofFire && items.Ocarina && (items.Hookshot || items.HoverBoots) ) //Bombs or Bolero warp
+                       || items.Hammer || items.Bow || items.Glove || (items.Bombchu && BombchuLogic) ) && //Bow and glove access via Goron City
+                     (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                    )
+                   || ( (items.Bombs || (items.Bombchu && BombchuLogic) ) &&
+                       (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                      ) );
+            }
          }, 'Trail Owl': { x: "84%", y: "12.5%", leadsto: "unknown", type: "owl", access: "entrance",
              isAvailable: function () {
-                  return true; }
+                  return (OWERmap == false || dungeons[23].found == true) &&
+                  ( ( (items.Bombs || (items.BoleroofFire && items.Ocarina && (items.Hookshot || items.HoverBoots) ) //Bombs or Bolero warp
+                       || items.Hammer || items.Bow || items.Glove || (items.Bombchu && BombchuLogic) ) && //Bow and glove access via Goron City
+                     (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                    )
+                   || ( (items.Bombs || (items.Bombchu && BombchuLogic) ) &&
+                       (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
+                      ) );
+            }
          }, 'Summit Gossip': { x: "85%", y: "25%", leadsto: "unknown", type: "gossip", access: "outdoor",
             isAvailable: function () {
                return (OWERmap == false || dungeons[23].found == true) &&
@@ -5107,7 +5125,7 @@ var dungeons = [
          }, 'Bridge to Field': { x: "68%", y: "52.5%", leadsto: "unknown", type: "entrance", access: "entrance",
              isAvailable: function () {
                   return dungeons[34].found == true; }
-         }, 'Bridge to Woods': { x: "49.5%", y: "52.5%", leadsto: "unknown", type: "entrance", access: "entrance",
+         }, 'Bridge to Woods': { x: "49.5%", y: "52.5%", leadsto: "Lost Woods", type: "entrance", access: "entrance",
              isAvailable: function () {
                   return dungeons[34].found == true; }
          },
