@@ -853,13 +853,13 @@ function toggleDungeonChest(sender, d, c) {
                 e.style.cursor = "pointer";
                 e.onclick = function (openarea) {
                     l.innerHTML = '';
-                    var v = e.className;
+                    var v = this.className;
                     for (var ent in dungeons[v].chestlist) {
                         if (dungeons[v].chestlist[ent].access == "entrance" && dungeons[v].chestlist[ent].leadsto == "unknown") {
                             var ee = document.createElement('li');
                             ee.innerHTML = ent;
                             ee.className = ent + ' entrance';
-                            e.onmouseover = new Function('highlightDungeonChest(this)');
+                            ee.onmouseover = new Function('highlightDungeonChest(this)');
                             ee.onmouseout = new Function('unhighlightDungeonChest(this)');
                             ee.style.cursor = "pointer";
                             ee.onclick = function(setLeadsto){
