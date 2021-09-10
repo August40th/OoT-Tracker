@@ -1432,11 +1432,19 @@ function addItem(r) {
     itemLayout[r][i] = 'blank';
 
     itemGrid[r][i]['item'] = document.createElement('td');
-    itemGrid[r][i]['item'].className = 'griditem';
+    if (i <= 9) {
+        itemGrid[r][i]['item'].className = 'griditem';
+    } else if (i >= 10) {
+        itemGrid[r][i]['item'].className = 'P2 griditem';
+    }
     itemGrid[r]['row'].appendChild(itemGrid[r][i]['item']);
 
     var tdt = document.createElement('table');
+    if (i <= 9) {
     tdt.className = 'lonk';
+    } else if (i >= 10) {
+    tdt.className = 'P2 lonk';
+    }
     itemGrid[r][i]['item'].appendChild(tdt);
         var tdtr1 = document.createElement('tr');
         tdt.appendChild(tdtr1);
