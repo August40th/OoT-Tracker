@@ -658,7 +658,8 @@ function clickDungeon(d) {
                 ctx.lineTo(120,30);
                 ctx.lineTo(220,30);
                 ctx.stroke();
-                document.getElementById('mapdiv').appendChild(ctx);
+                canvas.appendChild(ctx);
+                document.getElementById('mapdiv').appendChild(canvas);
             }
 
         if ( (dungeons[dungeonSelect].chestlist[key].floor == here && dungeons[dungeonSelect].type == "dungeon") || dungeons[dungeonSelect].type == "overworld") {
