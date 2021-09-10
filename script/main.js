@@ -563,8 +563,8 @@ function clickDungeon(d) {
     }
 
     for (var key in dungeons[dungeonSelect].chestlist) {
-        if ( dungeons[dungeonSelect].chestlist[key].access == "entrance" && dungeons[dungeonSelect].chestlist[key].type == "dungeon" ) { //Dungeon door  
-            continue;}
+        //if ( dungeons[dungeonSelect].chestlist[key].access == "entrance" && dungeons[dungeonSelect].chestlist[key].type == "dungeon" ) { //Dungeon door  
+            //continue;}
         if ( dungeons[dungeonSelect].chestlist[key].leadsto !== "unknown" && dungeons[dungeonSelect].chestlist[key].type == "entrance" ) { //  
             continue;}
         if ( dungeons[dungeonSelect].type == "dungeon" && quest == "Mixed" && dungeons[dungeonSelect].mixedtype == "master" && dungeons[dungeonSelect].chestlist[key].access == "master") { //Mixed quest checks
@@ -647,6 +647,19 @@ function clickDungeon(d) {
         s.style.cursor = "pointer";
 
         DClist.appendChild(s);
+        var canvas = document.getElementById('mycanvas');
+            if (canvas.getContext)
+            { 
+                var ctx = canvas.getContext('2d');
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+                ctx.moveTo(10,10);
+                ctx.lineTo(100,10);
+                ctx.lineTo(120,30);
+                ctx.lineTo(220,30);
+                ctx.stroke();
+                document.getElementById('mapdiv').appendChild(ctx);
+            }
 
         if ( (dungeons[dungeonSelect].chestlist[key].floor == here && dungeons[dungeonSelect].type == "dungeon") || dungeons[dungeonSelect].type == "overworld") {
             c = document.createElement('span');
