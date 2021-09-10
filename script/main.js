@@ -647,7 +647,7 @@ function clickDungeon(d) {
         s.style.cursor = "pointer";
 
         DClist.appendChild(s);
-        var canvas = document.getElementById('mycanvas');
+        var canvas = document.createElement('mycanvas');
             if (canvas.getContext)
             { 
                 var ctx = canvas.getContext('2d');
