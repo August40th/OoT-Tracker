@@ -647,9 +647,7 @@ function clickDungeon(d) {
         s.style.cursor = "pointer";
 
         DClist.appendChild(s);
-        var canvas = document.createElement('mycanvas');
-        canvas.id = 'canvas';
-                var ctx = canvas.getContext('2d');
+        var ctx = document.createElement('line');
                 ctx.lineWidth = 2;
                 ctx.beginPath();
                 ctx.moveTo(10,10);
@@ -658,8 +656,7 @@ function clickDungeon(d) {
                 ctx.lineTo(220,30);
                 ctx.stroke();
                 ctx.id = 'line';
-                canvas.appendChild(ctx);
-                document.getElementById('mapdiv').appendChild(canvas);
+                document.getElementById('mapdiv').appendChild(ctx);
 
         if ( (dungeons[dungeonSelect].chestlist[key].floor == here && dungeons[dungeonSelect].type == "dungeon") || dungeons[dungeonSelect].type == "overworld") {
             c = document.createElement('span');
