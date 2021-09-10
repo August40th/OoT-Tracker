@@ -649,10 +649,7 @@ function clickDungeon(d) {
         DClist.appendChild(s);
         var ctx = document.createElement('line');
                 ctx.lineWidth = 2;
-                ctx.beginPath();
                 ctx.moveTo(10,10);
-                ctx.lineTo(100,10);
-                ctx.lineTo(120,30);
                 ctx.lineTo(220,30);
                 ctx.stroke();
                 ctx.id = 'line';
