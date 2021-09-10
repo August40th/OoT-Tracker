@@ -648,6 +648,7 @@ function clickDungeon(d) {
 
         DClist.appendChild(s);
         var canvas = document.createElement('mycanvas');
+        canvas.id = 'canvas';
             if (canvas.getContext)
             { 
                 var ctx = canvas.getContext('2d');
@@ -658,6 +659,7 @@ function clickDungeon(d) {
                 ctx.lineTo(120,30);
                 ctx.lineTo(220,30);
                 ctx.stroke();
+                ctx.id = 'line';
                 canvas.appendChild(ctx);
                 document.getElementById('mapdiv').appendChild(canvas);
             }
