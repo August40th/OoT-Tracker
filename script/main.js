@@ -614,12 +614,18 @@ function clickDungeon(d) {
                             var l = document.createElement('line');
                             l.innerHTML = key + 'leads to ' + ent;
                             l.style.height = '0.1px';
-                            l.style.width = findAngle(parseFloat(dungeons[dungeonSelect].x), parseFloat(dungeons[dungeonSelect].y), parseFloat(dungeons[v].x), parseFloat(dungeons[v].y) );
-                            var ang = findDistance(parseFloat(dungeons[dungeonSelect].x), parseFloat(dungeons[dungeonSelect].y), parseFloat(dungeons[v].x), parseFloat(dungeons[v].y) );
+                            l.style.width = findDistance(parseFloat(dungeons[dungeonSelect].x), parseFloat(dungeons[dungeonSelect].y), parseFloat(dungeons[v].x), parseFloat(dungeons[v].y) );
+                            var ang = findAngle(parseFloat(dungeons[dungeonSelect].x), parseFloat(dungeons[dungeonSelect].y), parseFloat(dungeons[v].x), parseFloat(dungeons[v].y) );
                             l.style.transform = 'rotate('+ ang +'deg)';
                             l.style.position = 'absolute';
-                            if (parseFloat(dungeons[dungeonSelect].x) << parseFloat(dungeons[v].x) ) l.style.left = dungeons[dungeonSelect].x;
-                            if (parseFloat(dungeons[dungeonSelect].x) >> parseFloat(dungeons[v].x) ) l.style.left = dungeons[v].x;
+                            l.style.whiteSpace = 'nowrap';
+                            l.style.
+                            if (parseFloat(dungeons[dungeonSelect].x) << parseFloat(dungeons[v].x) ) {
+                                l.style.left = dungeons[dungeonSelect].x;
+                                l.style.top = dungeons[dungeonSelect].y;
+                            } if (parseFloat(dungeons[dungeonSelect].x) >> parseFloat(dungeons[v].x) ) {
+                                l.style.left = dungeons[v].x;
+                                l.style.top = dungeons[v].y; }
                             document.getElementById('mapdiv').appendChild(l);
                         } //Draw lines here dungeonSelect(x,y) k(x,y)
                 } }
