@@ -619,7 +619,7 @@ function clickDungeon(d) {
                             l.style.transform = 'rotate('+ ang +'deg)';
                             l.style.position = 'absolute';
                             l.style.whiteSpace = 'nowrap';
-                            l.style.
+                            l.style.backgroundColor = 'aqua';
                             if (parseFloat(dungeons[dungeonSelect].x) << parseFloat(dungeons[v].x) ) {
                                 l.style.left = dungeons[dungeonSelect].x;
                                 l.style.top = dungeons[dungeonSelect].y;
