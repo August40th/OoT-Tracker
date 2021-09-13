@@ -80,6 +80,8 @@ Warps = false;
 
 Age = 'Child';
 RndmStart = false;
+mixphoo = "Off";
+
 var mouseOverItem = false;
 var mouseLastOverR;
 var mouseLastOverC;
@@ -149,7 +151,7 @@ var cookieDefault = {
    pigBK: 'Removed',
    gER: 0,
    oER: 0,
-   iER: 0,
+   iER: 'Off',
    dER: 0,
    medi: 0,
    ladin: 0,
@@ -159,6 +161,7 @@ var cookieDefault = {
    warp: 0,
    kswrd: 1,
    numpoe: 1,
+   mixp: 'Off',
 
     medallions: defaultMedallions,
     items: defaultItemGrid,
@@ -250,7 +253,13 @@ function loadCookie() {
 
    document.getElementsByName('Ksword')[0].checked = !!cookieobj.kswrd;
    document.getElementsByName('Ksword')[0].onchange();
-
+    
+    for (rbuttonID in document.getElementsByName('mixphoo')) {
+      rbutton = document.getElementsByName('mixphoo')[rbuttonID]
+      if (rbutton.value == cookieobj.mixp)
+         rbutton.click();
+   }
+    
     for (rbuttonID in document.getElementsByName('SongShuffle')) {
       rbutton = document.getElementsByName('SongShuffle')[rbuttonID]
       if (rbutton.value == cookieobj.sngShuff)
@@ -424,6 +433,13 @@ function saveCookie() {
       if (rbutton.checked)
          cookieobj.sklogic = rbutton.value;
    }
+    
+    for (rbuttonID in document.getElementsByName('mixphoo')) {
+      rbutton = document.getElementsByName('mixphoo')[rbuttonID]
+      if (rbutton.checked)
+         cookieobj.mixp = rbutton.value;
+   }
+
 
    for (rbuttonID in document.getElementsByName('SongShuffle')) {
       rbutton = document.getElementsByName('SongShuffle')[rbuttonID]
@@ -911,7 +927,7 @@ function toggleDungeonChest(sender, d, c) {
             }
         }
     }
-    if (dungeons[d].chestlist[c].type == "simple" || (IndoorER == "Full" && dungeons[d].chestlist[c].type == "alldoor")) { 
+    if (dungeons[d].chestlist[c].leadsto !== "unknown" && dungeons[d].chestlist[c].type == "simple" || (IndoorER == "Full" && dungeons[d].chestlist[c].type == "alldoor")) { 
         var t = document.getElementById('submaparea');
         var l = document.getElementById('submaplist');
         t.innerHTML = c + ' leads to';
@@ -933,7 +949,7 @@ function toggleDungeonChest(sender, d, c) {
             }
         }
     }
-    if (dungeons[d].chestlist[c].type == "grotto" ) { 
+    if (dungeons[d].chestlist[c].leadsto !== "unknown" && dungeons[d].chestlist[c].type == "grotto" ) { 
         var t = document.getElementById('submaparea');
         var l = document.getElementById('submaplist');
         t.innerHTML = c + ' leads to';
@@ -997,7 +1013,7 @@ function toggleDungeonChest(sender, d, c) {
             }
         }
     }
-    if (dungeons[d].chestlist[c].type == "owl" ) { 
+    if (dungeons[d].chestlist[c].leadsto !== "unknown" && dungeons[d].chestlist[c].type == "owl" ) { 
         var t = document.getElementById('submaparea');
         var l = document.getElementById('submaplist');
         t.innerHTML = c + ' leads to';
@@ -1125,11 +1141,17 @@ function setQuest(sender) {
    saveCookie();
 }
 
+function setMixedPools(sender) {
+    mixphoo = sender.value;
+    updateMap();
+    saveCookie();
+}
+
 function setPoes(sender) {
     poecount = sender.value;
     itemsMax.BigPoe = poecount;
     updateGridItemAll();
-   saveCookie();
+    saveCookie();
 }
 
 function setFortKeys(sender) {
