@@ -1974,7 +1974,8 @@ function updateMap() {
                     DCcount++;
                 }
                 var minimap = document.getElementById('minimapdiv');
-                if (dungeons[dungeonSelect].chestlist[key] !== undefined && (dungeons[dungeonSelect].chestlist[key].floor == here && dungeons[dungeonSelect].type == "dungeon") || dungeons[dungeonSelect].type == "overworld") {
+                if (key in dungeons[dungeonSelect].chestlist) {
+                    if (dungeons[dungeonSelect].chestlist[key] !== undefined && (dungeons[dungeonSelect].chestlist[key].floor == here && dungeons[dungeonSelect].type == "dungeon") || dungeons[dungeonSelect].type == "overworld") {
                     c = document.createElement('span');
                     c.innerHTML = 'x';
                     c.id = dungeons[dungeonSelect].chestlist[key].type;
@@ -2001,7 +2002,7 @@ function updateMap() {
                     c.appendChild(cc);
                     c.onmouseover = new Function('highlight(this' + ',"' + key + '")');
                     c.onmouseout = new Function('unhighlight(this' + ',"' + key + '")');
-                }
+                } }
                 var check = document.getElementById(key);
                 for (key in dungeons[dungeonSelect].chestlist) {
                     if (check == null) {
