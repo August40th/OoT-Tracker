@@ -1974,7 +1974,7 @@ function updateMap() {
                     DCcount++;
                 }
                 var minimap = document.getElementById('minimapdiv');
-                if (key in dungeons[dungeonSelect].chestlist && (dungeons[dungeonSelect].chestlist[key].floor == here && dungeons[dungeonSelect].type == "dungeon") || dungeons[dungeonSelect].type == "overworld") {
+                if (dungeons[dungeonSelect].chestlist[key] !== undefined && (dungeons[dungeonSelect].chestlist[key].floor == here && dungeons[dungeonSelect].type == "dungeon") || dungeons[dungeonSelect].type == "overworld") {
                     c = document.createElement('span');
                     c.innerHTML = 'x';
                     c.id = dungeons[dungeonSelect].chestlist[key].type;
