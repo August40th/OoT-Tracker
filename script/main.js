@@ -570,7 +570,7 @@ function clickDungeon(d) {
                 c = document.createElement('span');
                 c.innerHTML = 'x';
                 c.id = dungeons[dungeonSelect].chestlist[key].type;
-                c.className = key + ' ' + s.className;
+                c.className = key + ' ' + c.className;
                 c.style.cursor = 'pointer';
                 c.style.position = 'absolute';
                 c.style.width = '16px';
