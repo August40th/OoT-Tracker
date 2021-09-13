@@ -915,7 +915,7 @@ function toggleDungeonChest(sender, d, c) {
         l.innerHTML = '';
         for ( var k = 0; k < dungeons.length; k++) {
             for (var g in dungeons[k].chestlist) {
-                if (dungeons[k].chestlist[g].type == "simple" || (IndoorER == "Full" && dungeons[k].chestlist[g].type == "alldoor") ) {
+                if (dungeons[k].chestlist[g].className !== "DCopened" && (dungeons[k].chestlist[g].type == "simple" || (IndoorER == "Full" && dungeons[k].chestlist[g].type == "alldoor") ) ) {
                     var e = document.createElement('li');
                     e.innerHTML = g;
                     e.className = g;
@@ -937,7 +937,7 @@ function toggleDungeonChest(sender, d, c) {
         l.innerHTML = '';
         for ( var k = 0; k < dungeons.length; k++) {
             for (var g in dungeons[k].chestlist) {
-                if (dungeons[k].chestlist[g].type == "grotto") {
+                if (dungeons[k].chestlist[g].className !== "DCopened" && dungeons[k].chestlist[g].type == "grotto" ) {
                     var e = document.createElement('li');
                     e.innerHTML = g;
                     e.className = g;
