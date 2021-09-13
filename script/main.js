@@ -616,7 +616,7 @@ function clickDungeon(d) {
                             l.style.height = '0.1px';
                             l.style.height = findAngle(dungeons[dungeonSelect].chestlist[key].x, dungeons[dungeonSelect].chestlist[key].y, dungeons[k].chestlist[key].x, dungeons[dungeonSelect].chestlist[key].y);
                             l.style.transform = 'rotate(ang)';
-                            document.getElementById('mapdiv'.appendChild(l);
+                            document.getElementById('mapdiv'.appendChild(l) );
                         }//Draw lines here dungeonSelect(x,y) k(x,y)
                 } }
             }
