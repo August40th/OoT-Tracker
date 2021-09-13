@@ -135,7 +135,7 @@ var cookieDefault = {
    carp: '1',
    smallk: 'Dungeons',
    bossk: 'Dungeons',
-   scrb: '0',
+   scrb: 0,
    sklogic: 'Off',
    ocShuff: 0,
    sngShuff: 'Songs',
@@ -232,7 +232,7 @@ function loadCookie() {
    document.getElementsByName('Cowsanity')[0].checked = !!cookieobj.cowShuff;
    document.getElementsByName('Cowsanity')[0].onchange();
    document.getElementsByName('scrubs')[0].checked = !!cookieobj.scrb;
-   //document.getElementsByName('scrubs')[0].onchange();
+   document.getElementsByName('scrubs')[0].onchange();
 
    document.getElementsByName('BombchuLogic')[0].checked = !!cookieobj.chulogic;
    document.getElementsByName('BombchuLogic')[0].onchange();
