@@ -929,7 +929,7 @@ function toggleDungeonChest(sender, d, c) {
             }
         }
     }
-    if (dungeons[d].chestlist[c].leadsto !== "unknown" && dungeons[d].chestlist[c].type == "simple" || (IndoorER == "Full" && dungeons[d].chestlist[c].type == "alldoor")) { 
+    if (dungeons[d].chestlist[c].leadsto == "unknown" && dungeons[d].chestlist[c].type == "simple" || (IndoorER == "Full" && dungeons[d].chestlist[c].type == "alldoor")) { 
         var t = document.getElementById('submaparea');
         var l = document.getElementById('submaplist');
         t.innerHTML = c + ' leads to';
@@ -951,7 +951,7 @@ function toggleDungeonChest(sender, d, c) {
             }
         }
     }
-    if (dungeons[d].chestlist[c].leadsto !== "unknown" && dungeons[d].chestlist[c].type == "grotto" ) { 
+    if (dungeons[d].chestlist[c].leadsto == "unknown" && dungeons[d].chestlist[c].type == "grotto" ) { 
         var t = document.getElementById('submaparea');
         var l = document.getElementById('submaplist');
         t.innerHTML = c + ' leads to';
@@ -973,7 +973,7 @@ function toggleDungeonChest(sender, d, c) {
             }
         }
     }
-    if (dungeons[d].chestlist[c].type == "dungeon" ) { 
+    if (dungeons[d].chestlist[c].leadsto == "unknown" && dungeons[d].chestlist[c].type == "dungeon" ) { 
         var t = document.getElementById('submaparea');
         var l = document.getElementById('submaplist');
         t.innerHTML = c + ' leads to';
@@ -1015,7 +1015,7 @@ function toggleDungeonChest(sender, d, c) {
             }
         }
     }
-    if (dungeons[d].chestlist[c].leadsto !== "unknown" && dungeons[d].chestlist[c].type == "owl" ) { 
+    if (dungeons[d].chestlist[c].leadsto == "unknown" && dungeons[d].chestlist[c].type == "owl" ) { 
         var t = document.getElementById('submaparea');
         var l = document.getElementById('submaplist');
         t.innerHTML = c + ' leads to';
