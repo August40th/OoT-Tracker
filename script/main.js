@@ -591,11 +591,11 @@ function clickDungeon(d) {
             c.appendChild(cc);
             c.onmouseover = new Function('highlight(this' + ',"' + key + '")');
             c.onmouseout = new Function('unhighlight(this' + ',"' + key + '")');
-            for ( var k = 0; k < dungeons.length; k++) {
-                for (var ent in dungeons[k].chestlist) {
-                    if (dungeons[dungeonSelect].chestlist[key].leadsto == ent) 
-                        //Draw lines here dungeonSelect(x,y) k(x,y)
-            } }
+            //for ( var k = 0; k < dungeons.length; k++) {
+            //    for (var ent in dungeons[k].chestlist) {
+              //      if (dungeons[dungeonSelect].chestlist[key].leadsto == ent) {
+                //    }//Draw lines here dungeonSelect(x,y) k(x,y)
+            //} }
             continue;}
         if ( dungeons[dungeonSelect].type == "dungeon" && quest == "Mixed" && dungeons[dungeonSelect].mixedtype == "master" && dungeons[dungeonSelect].chestlist[key].access == "master") { //Mixed quest checks
             continue;}
