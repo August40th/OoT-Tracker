@@ -608,11 +608,17 @@ function clickDungeon(d) {
                 c.appendChild(cc);
                 c.onmouseover = new Function('highlight(this' + ',"' + key + '")');
                 c.onmouseout = new Function('unhighlight(this' + ',"' + key + '")');
-                //for ( var k = 0; k < dungeons.length; k++) {
-                //    for (var ent in dungeons[k].chestlist) {
-                  //      if (dungeons[dungeonSelect].chestlist[key].leadsto == ent) {
-                    //    }//Draw lines here dungeonSelect(x,y) k(x,y)
-                //} }
+                for ( var k = 0; k < dungeons.length; k++) {
+                    for (var ent in dungeons[k].chestlist) {
+                        if (dungeons[dungeonSelect].chestlist[key].leadsto == ent) {
+                            var l = document.createElement('span');
+                            var ang = findDistance(dungeons[dungeonSelect].chestlist[key].x, dungeons[dungeonSelect].chestlist[key].y, dungeons[k].chestlist[key].x, dungeons[dungeonSelect].chestlist[key].y);
+                            l.style.height = '0.1px';
+                            l.style.height = findAngle(dungeons[dungeonSelect].chestlist[key].x, dungeons[dungeonSelect].chestlist[key].y, dungeons[k].chestlist[key].x, dungeons[dungeonSelect].chestlist[key].y);
+                            l.style.transform = 'rotate('ang')';
+                            document.getElementById('mapdiv'.appendChild(l);
+                        }//Draw lines here dungeonSelect(x,y) k(x,y)
+                } }
             }
             continue;}
         if ( dungeons[dungeonSelect].type == "dungeon" && quest == "Mixed" && dungeons[dungeonSelect].mixedtype == "master" && dungeons[dungeonSelect].chestlist[key].access == "master") { //Mixed quest checks
@@ -1039,6 +1045,28 @@ function toggleDungeonChest(sender, d, c) {
     }
     updateMap();
     saveCookie();
+}
+
+function findAngle(x1, y1, x2, y2) {
+    const distanceX = x2 - x1;
+    const distanceY = y2 - y1;
+    if (distanceX == 0) {
+        if (distanceY < 0) {
+            return (Math.PI / 2);
+        }
+        if (distanceY > 0) {
+            return (3 * Math.PI / 2);
+        }
+    }
+    angle = Math.atan(distanceY / distanceX);
+    return angle;
+}
+
+function findDistance(x1, y1, x2, y2) {
+    const distanceX = x2 - x1;
+    const distanceY = y2 - y1;
+    distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
+    return distance;
 }
 
 function highlightDungeonChest(x) {
