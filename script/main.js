@@ -647,7 +647,7 @@ function clickDungeon(d) {
             continue;}
         if (dungeons[dungeonSelect].type == "dungeon" && dungeons[dungeonSelect].chestlist[key].type == "skulltula" && (skulltula == "Off" || skulltula == "Overworld") ) { // Dungeon Skulls
             continue;}
-        if (dungeons[dungeonSelect].chestlist[key].type == "scrub" && scrubs == false) { //Scrubs 
+        if (dungeons[dungeonSelect].chestlist[key].type == "scrub" && Scrubsanity == false) { //Scrubs 
             continue;}
         if (dungeons[dungeonSelect].chestlist[key].type == "shop" && shopsize == 0) { //Shops 
             continue;}
@@ -1201,7 +1201,7 @@ function setSkulltula(sender) {
 }
 
 function setScrub(sender) {
-   scrubs = sender.checked;
+   Scrubsanity = sender.checked;
 
    updateMap();
    saveCookie();
@@ -1938,7 +1938,7 @@ function updateMap() {
                 continue;}
             if (dungeons[k].type == "dungeon" && dungeons[k].chestlist[key].type == "skulltula" && (skulltula == "Off" || skulltula == "Overworld") ) { // Dungeon Skulls
                 continue;}
-            if (dungeons[k].chestlist[key].type == "scrub" && scrubs == false) { //Scrubs 
+            if (dungeons[k].chestlist[key].type == "scrub" && Scrubsanity == false) { //Scrubs 
                 continue;}
             if (dungeons[k].chestlist[key].type == "shop" && shopsize == 0) { //Shops 
                 continue;}
@@ -2109,7 +2109,7 @@ function populateMapdiv() {
                 continue;}
             if (dungeons[k].type == "dungeon" && dungeons[k].chestlist[key].type == "skulltula" && (skulltula == "Off" || skulltula == "Overworld") ) { // Dungeon Skulls
                 continue;}
-            if (dungeons[k].chestlist[key].type == "scrub" && scrubs == false) { //Scrubs 
+            if (dungeons[k].chestlist[key].type == "scrub" && Scrubsanity == false) { //Scrubs 
                 continue;}
             if (dungeons[k].chestlist[key].type == "shop" && shopsize == 0) { //Shops 
                 continue;}
@@ -2211,7 +2211,7 @@ function populateMapdiv() {
             continue;}
         if (dungeons[dungeonSelect].type == "dungeon" && dungeons[dungeonSelect].chestlist[key].type == "skulltula" && (skulltula == "Off" || skulltula == "Overworld") ) { // Dungeon Skulls
             continue;}
-        if (dungeons[dungeonSelect].chestlist[key].type == "scrub" && scrubs == false) { //Scrubs 
+        if (dungeons[dungeonSelect].chestlist[key].type == "scrub" && Scrubsanity == false) { //Scrubs 
             continue;}
         if (dungeons[dungeonSelect].chestlist[key].type == "shop" && shopsize == 0) { //Shops 
             continue;}
