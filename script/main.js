@@ -613,8 +613,8 @@ function clickDungeon(d) {
                         if (dungeons[dungeonSelect].chestlist[key].leadsto == ent) {
                             var l = document.createElement('line');
                             l.style.height = '0.1px';
-                            l.style.height = findAngle(parseInt(dungeons[dungeonSelect].x, 10), parseInt(dungeons[dungeonSelect].y, 10), parseInt(dungeons[v].x, 10), parseInt(dungeons[v].y, 10) );
-                            var ang = findDistance(parseInt(dungeons[dungeonSelect].x, 10), parseInt(dungeons[dungeonSelect].y, 10), parseInt(dungeons[v].x, 10), parseInt(dungeons[v].y, 10) );
+                            l.style.width = findAngle(parseFloat(dungeons[dungeonSelect].x), parseFloat(dungeons[dungeonSelect].y), parseFloat(dungeons[v].x), parseFloat(dungeons[v].y) );
+                            var ang = findDistance(parseFloat(dungeons[dungeonSelect].x), parseFloat(dungeons[dungeonSelect].y), parseFloat(dungeons[v].x), parseFloat(dungeons[v].y) );
                             l.style.transform = 'rotate(ang)';
                             document.getElementById('mapdiv').appendChild(l);
                         } //Draw lines here dungeonSelect(x,y) k(x,y)
