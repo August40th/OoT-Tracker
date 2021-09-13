@@ -1987,19 +1987,14 @@ function updateMap() {
     var itemlist = document.getElementById('submaplist').children;
     for (var item in itemlist) {
         if (itemlist.hasOwnProperty(item)) {
-            let dNone = false;
-            if(itemlist[item].classList.contains("d-none")) {
-                dNone = true;
-            }
-            if ( dungeons[dungeonSelect].chestlist[itemlist[item].innerHTML].isOpened ) {
+            if ( dungeons[dungeonSelect].chestlist[itemlist[item].innerHTML].isOpened == undefined) {
+                itemlist[item].className = 'DCunavailable';
+            } if ( dungeons[dungeonSelect].chestlist[itemlist[item].innerHTML].isOpened ) {
                 itemlist[item].className = 'DCopened';
             } else if ( dungeons[dungeonSelect].chestlist[itemlist[item].innerHTML].isAvailable() && itemlist.hasOwnProperty(item) ) {
                 itemlist[item].className = 'DCavailable';
             } else {
                 itemlist[item].className = 'DCunavailable';
-            }
-            if (dNone) {
-            itemlist[item].classList.add("d-none");
             }
         }
     }
