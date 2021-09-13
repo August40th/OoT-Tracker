@@ -48,7 +48,7 @@ smallkeys = 'Dungeons';
 
 bosskeys = 'Dungeons';
 skulltula = 'Off';
-scrubs = false;
+Scrubsanity = false;
 Shopsanity = false;
 shopsize = 0;
 Cowsanity = false;
@@ -231,8 +231,8 @@ function loadCookie() {
 
    document.getElementsByName('Cowsanity')[0].checked = !!cookieobj.cowShuff;
    document.getElementsByName('Cowsanity')[0].onchange();
-   document.getElementsByName('scrubs')[0].checked = !!cookieobj.scrb;
-   document.getElementsByName('scrubs')[0].onchange();
+   document.getElementsByName('Scrubsanity')[0].checked = !!cookieobj.scrb;
+   document.getElementsByName('Scrubsanity')[0].onchange();
 
    document.getElementsByName('BombchuLogic')[0].checked = !!cookieobj.chulogic;
    document.getElementsByName('BombchuLogic')[0].onchange();
@@ -357,7 +357,7 @@ function saveCookie() {
    cookieobj.fountain = document.getElementsByName('OpenFountain')[0].checked ? 1 : 0;
 
    cookieobj.ocShuff = document.getElementsByName('OcarinaShuffle')[0].checked ? 1 : 0;
-   cookieobj.scrb = document.getElementsByName('scrubs')[0].checked ? 1 : 0;
+   cookieobj.scrb = document.getElementsByName('Scrubsanity')[0].checked ? 1 : 0;
    cookieobj.eggShuff = document.getElementsByName('WeirdEgg')[0].checked ? 1 : 0;
    cookieobj.beanShuff = document.getElementsByName('BeanShuffle')[0].checked ? 1 : 0;
 
