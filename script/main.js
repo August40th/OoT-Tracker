@@ -616,7 +616,10 @@ function clickDungeon(d) {
                             l.style.height = '0.1px';
                             l.style.width = findAngle(parseFloat(dungeons[dungeonSelect].x), parseFloat(dungeons[dungeonSelect].y), parseFloat(dungeons[v].x), parseFloat(dungeons[v].y) );
                             var ang = findDistance(parseFloat(dungeons[dungeonSelect].x), parseFloat(dungeons[dungeonSelect].y), parseFloat(dungeons[v].x), parseFloat(dungeons[v].y) );
-                            l.style.transform = 'rotate(ang)';
+                            l.style.transform = 'rotate('+ ang +'deg)';
+                            l.style.position = 'absolute';
+                            if (parseFloat(dungeons[dungeonSelect].x) << parseFloat(dungeons[v].x) ) l.style.left = dungeons[dungeonSelect].x;
+                            if (parseFloat(dungeons[dungeonSelect].x) >> parseFloat(dungeons[v].x) ) l.style.left = dungeons[v].x;
                             document.getElementById('mapdiv').appendChild(l);
                         } //Draw lines here dungeonSelect(x,y) k(x,y)
                 } }
