@@ -613,8 +613,8 @@ function clickDungeon(d) {
                         if (dungeons[dungeonSelect].chestlist[key].leadsto == ent) {
                             var l = document.createElement('line');
                             l.style.height = '0.1px';
-                            l.style.height = findAngle(document.getElementById('dungeon' + dungeonSelect).left, document.getElementById('dungeon' + dungeonSelect).top, document.getElementById('dungeon' + v).left, document.getElementById('dungeon' + v).top);
-                            var ang = findDistance(document.getElementById('dungeon' + dungeonSelect).left, document.getElementById('dungeon' + dungeonSelect).top, document.getElementById('dungeon' + v).left, document.getElementById('dungeon' + v).top);
+                            l.style.height = findAngle(document.getElementById('dungeon' + dungeonSelect).style.left, document.getElementById('dungeon' + dungeonSelect).style.top, document.getElementById('dungeon' + v).style.left, document.getElementById('dungeon' + v).style.top);
+                            var ang = findDistance(document.getElementById('dungeon' + dungeonSelect).style.left, document.getElementById('dungeon' + dungeonSelect).style.top, document.getElementById('dungeon' + v).style.left, document.getElementById('dungeon' + v).style.top);
                             l.style.transform = 'rotate(ang)';
                             document.getElementById('mapdiv').appendChild(l);
                         } //Draw lines here dungeonSelect(x,y) k(x,y)
