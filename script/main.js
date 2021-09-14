@@ -526,7 +526,7 @@ function clickDungeon(d) {
     document.getElementById('submaparea').className = 'DC' + dungeons[dungeonSelect].isBeatable();
     var DClist = document.getElementById('submaplist');
     DClist.innerHTML = '';
-    document.getElementById('line').innerHTML = '';
+    document.getElementById('eline').innerHTML = '';
     
     var regionSelected = document.getElementById('submaparea').innerHTML;
     regionSelected.onclick = bulkDCSelect();
@@ -615,7 +615,7 @@ function clickDungeon(d) {
                         if (dungeons[dungeonSelect].chestlist[key].leadsto == ent) {
                             var l = document.createElement('line');
                             //l.innerHTML = key + 'leads to ' + ent;
-                            l.id = 'line';
+                            l.id = 'eline';
                             l.style.height = '4px';
                             l.style.width = findDistance(parseFloat(dungeons[dungeonSelect].x), parseFloat(dungeons[dungeonSelect].y), parseFloat(dungeons[v].x), parseFloat(dungeons[v].y) ) + '%';
                             l.style.transform = 'rotate('+ findAngle(parseFloat(dungeons[dungeonSelect].x), parseFloat(dungeons[dungeonSelect].y), parseFloat(dungeons[v].x), parseFloat(dungeons[v].y) ) +'rad)';
