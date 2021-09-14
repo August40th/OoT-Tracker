@@ -622,10 +622,10 @@ function clickDungeon(d) {
                             l.style.position = 'fixed';
                             l.style.whiteSpace = 'nowrap';
                             l.style.backgroundColor = 'aqua';
-                            if (parseFloat(dungeons[dungeonSelect].x) << parseFloat(dungeons[v].x) ) {
+                            if (parseFloat(dungeons[dungeonSelect].x) >> parseFloat(dungeons[v].x) ) {
                                 l.style.left = dungeons[dungeonSelect].x;
                                 l.style.top = dungeons[dungeonSelect].y;
-                            } if (parseFloat(dungeons[dungeonSelect].x) >> parseFloat(dungeons[v].x) ) {
+                            } if (parseFloat(dungeons[dungeonSelect].x) << parseFloat(dungeons[v].x) ) {
                                 l.style.left = dungeons[v].x;
                                 l.style.top = dungeons[v].y; }
                             document.getElementById('mapdiv').appendChild(l);
