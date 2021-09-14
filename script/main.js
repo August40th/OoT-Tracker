@@ -2087,7 +2087,7 @@ function updateMap() {
     var itemlist = document.getElementById('submaplist').children;
     for (var item in itemlist) {
         if (itemlist.hasOwnProperty(item)) {
-            if ( dungeons[dungeonSelect].chestlist[itemlist[item].innerHTML].isOpened == undefined) {
+            if ( dungeons[dungeonSelect].chestlist[itemlist[item].innerHTML] == undefined) {
                 itemlist[item].className = 'DCunavailable';
             } if ( dungeons[dungeonSelect].chestlist[itemlist[item].innerHTML].isOpened ) {
                 itemlist[item].className = 'DCopened';
