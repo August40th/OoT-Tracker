@@ -617,9 +617,9 @@ function clickDungeon(d) {
                             //l.innerHTML = key + 'leads to ' + ent;
                             l.id = 'eline';
                             l.style.height = '4px';
-                            l.style.width = findDistance(parseFloat(dungeons[dungeonSelect].x), parseFloat(dungeons[dungeonSelect].y), parseFloat(dungeons[v].x), parseFloat(dungeons[v].y) ) + '%';
+                            l.style.width = findDistance(parseFloat(dungeons[dungeonSelect].x), parseFloat(dungeons[dungeonSelect].y), parseFloat(dungeons[v].x), parseFloat(dungeons[v].y) ) + 'px';
                             l.style.transform = 'rotate('+ findAngle(parseFloat(dungeons[dungeonSelect].x), parseFloat(dungeons[dungeonSelect].y), parseFloat(dungeons[v].x), parseFloat(dungeons[v].y) ) +'rad)';
-                            l.style.position = 'relative';
+                            l.style.position = 'fixed';
                             l.style.whiteSpace = 'nowrap';
                             l.style.backgroundColor = 'aqua';
                             if (parseFloat(dungeons[dungeonSelect].x) <= parseFloat(dungeons[v].x) ) {
@@ -628,7 +628,7 @@ function clickDungeon(d) {
                             } if (parseFloat(dungeons[dungeonSelect].x) > parseFloat(dungeons[v].x) ) {
                                 l.style.left = dungeons[v].x;
                                 l.style.top = dungeons[v].y; }
-                            document.getElementById('dungeon' + dungeonSelect).appendChild(l);
+                            document.getElementById('mapdiv').appendChild(l);
                         }
                 } }
             }
@@ -1060,6 +1060,10 @@ function toggleDungeonChest(sender, d, c) {
 }
 
 function findAngle(x1, y1, x2, y2) {
+    x2 = (x2*828)/100; 
+    x1 = (x1*828)/100;
+    y2 = (x2*420)/100; 
+    y1 = (x1*420)/100;
     const distanceX = x2 - x1;
     const distanceY = y2 - y1;
     if (distanceX == 0) {
@@ -1075,6 +1079,10 @@ function findAngle(x1, y1, x2, y2) {
 }
 
 function findDistance(x1, y1, x2, y2) {
+    x2 = (x2*828)/100; 
+    x1 = (x1*828)/100;
+    y2 = (x2*420)/100; 
+    y1 = (x1*420)/100;
     const distanceX = x2 - x1;
     const distanceY = y2 - y1;
     distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
