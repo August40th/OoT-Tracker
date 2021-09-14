@@ -3247,7 +3247,7 @@ var dungeons = [
    },
    { name: "Lost Woods", x: "75.3%", y: "47%", type: "overworld", found: true,
       chestlist: {
-         'Woods to Bridge': { x: "11%", y: "87%", leadsto: "Lost Woods Bridge", type: "entrance", access: "entrance",
+         'Woods to Bridge': { x: "11%", y: "87%", leadsto: "Bridge to Woods", type: "entrance", access: "entrance",
              isAvailable: function () {
                   return dungeons[18].found == true; }
          }, 'Deku Sale $40': { x: "14%", y: "93%", leadsto: "unknown", type: "NPC", access: "outdoor",
@@ -5128,7 +5128,7 @@ var dungeons = [
          }, 'Bridge to Field': { x: "68%", y: "52.5%", leadsto: "unknown", type: "entrance", access: "entrance",
              isAvailable: function () {
                   return dungeons[34].found == true; }
-         }, 'Bridge to Woods': { x: "49.5%", y: "52.5%", leadsto: "Lost Woods", type: "entrance", access: "entrance",
+         }, 'Bridge to Woods': { x: "49.5%", y: "52.5%", leadsto: "Woods to Bridge", type: "entrance", access: "entrance",
              isAvailable: function () {
                   return dungeons[34].found == true; }
          },
