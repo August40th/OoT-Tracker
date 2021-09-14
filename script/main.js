@@ -625,15 +625,11 @@ function clickDungeon(d) {
                             if (parseFloat(dungeons[dungeonSelect].x) << parseFloat(dungeons[v].x) ) {
                                 l.style.left = dungeons[dungeonSelect].x;
                                 l.style.top = dungeons[dungeonSelect].y;
-                                l.style.right = dungeons[v].x;
-                                l.style.bottom = dungeons[v].y; 
                             } if (parseFloat(dungeons[dungeonSelect].x) >> parseFloat(dungeons[v].x) ) {
                                 l.style.left = dungeons[v].x;
                                 l.style.top = dungeons[v].y; 
-                                l.style.right = dungeons[dungeonSelect].x;
-                                l.style.bottom = dungeons[dungeonSelect].y; }
                             document.getElementById('mapdiv').appendChild(l);
-                        } //Draw lines here dungeonSelect(x,y) k(x,y)
+                        }
                 } }
             }
             continue;}
