@@ -619,7 +619,7 @@ function clickDungeon(d) {
                             l.style.height = '4px';
                             l.style.width = findDistance(parseFloat(dungeons[dungeonSelect].x), parseFloat(dungeons[dungeonSelect].y), parseFloat(dungeons[v].x), parseFloat(dungeons[v].y) ) + '%';
                             l.style.transform = 'rotate('+ findAngle(parseFloat(dungeons[dungeonSelect].x), parseFloat(dungeons[dungeonSelect].y), parseFloat(dungeons[v].x), parseFloat(dungeons[v].y) ) +'rad)';
-                            l.style.position = 'fixed';
+                            l.style.position = 'relative';
                             l.style.whiteSpace = 'nowrap';
                             l.style.backgroundColor = 'aqua';
                             if (parseFloat(dungeons[dungeonSelect].x) <= parseFloat(dungeons[v].x) ) {
@@ -628,7 +628,7 @@ function clickDungeon(d) {
                             } if (parseFloat(dungeons[dungeonSelect].x) > parseFloat(dungeons[v].x) ) {
                                 l.style.left = dungeons[v].x;
                                 l.style.top = dungeons[v].y; }
-                            document.getElementById('mapdiv').appendChild(l);
+                            c.appendChild(l);
                         }
                 } }
             }
