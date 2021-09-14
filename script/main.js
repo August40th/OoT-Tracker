@@ -1060,9 +1060,11 @@ function toggleDungeonChest(sender, d, c) {
 }
 
 function findAngle(x1, y1, x2, y2) {
-    if (x2 > x1) const distanceX = x2 - x1;
+    var distanceX;
+    var distanceY; 
+    if (x2 > x1) distanceX = x2 - x1;
     else { distanceX = x1 - x2;}
-    if (y2 > y1) const distanceY = y2 - y1;
+    if (y2 > y1) distanceY = y2 - y1;
     else { distanceY = y1 - y2; }
     if (distanceX == 0) {
         if (distanceY < 0) {
