@@ -628,7 +628,7 @@ function clickDungeon(d) {
                             } if (parseFloat(dungeons[dungeonSelect].x) > parseFloat(dungeons[v].x) ) {
                                 l.style.left = dungeons[v].x;
                                 l.style.top = dungeons[v].y; }
-                            c.appendChild(l);
+                            document.getElementById('dungeon' + dungeonSelect).appendChild(l);
                         }
                 } }
             }
