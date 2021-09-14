@@ -623,8 +623,8 @@ function clickDungeon(d) {
                             l.style.whiteSpace = 'nowrap';
                             l.style.backgroundColor = 'aqua';
                             //if (parseFloat(dungeons[dungeonSelect].x) <= parseFloat(dungeons[v].x) ) {
-                                l.style.left = (parseFloat(dungeons[dungeonSelect].x) - parseFloat(dungeons[v].x) )/2 + '%';
-                                l.style.top = (parseFloat(dungeons[dungeonSelect].y) - parseFloat(dungeons[v].y) )/2 + '%';
+                                l.style.left = (parseFloat(dungeons[v].x) - parseFloat(dungeons[dungeonSelect].x) )/2 + '%';
+                                l.style.top = (parseFloat(dungeons[v].y) - parseFloat(dungeons[dungeonSelect].y) )/2 + '%';
                             //} if (parseFloat(dungeons[dungeonSelect].x) > parseFloat(dungeons[v].x) ) {
                             //    l.style.left = dungeons[v].x;
                             //    l.style.top = dungeons[v].y; }
