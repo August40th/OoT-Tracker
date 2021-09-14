@@ -612,11 +612,11 @@ function clickDungeon(d) {
                     for (var ent in dungeons[v].chestlist) {
                         if (dungeons[dungeonSelect].chestlist[key].leadsto == ent) {
                             var l = document.createElement('line');
-                            l.innerHTML = key + 'leads to ' + ent;
+                            //l.innerHTML = key + 'leads to ' + ent;
                             l.style.height = '4px';
                             l.style.width = findDistance(parseFloat(dungeons[dungeonSelect].x), parseFloat(dungeons[dungeonSelect].y), parseFloat(dungeons[v].x), parseFloat(dungeons[v].y) ) + '%';
                             l.style.transform = 'rotate('+ findAngle(parseFloat(dungeons[dungeonSelect].x), parseFloat(dungeons[dungeonSelect].y), parseFloat(dungeons[v].x), parseFloat(dungeons[v].y) ) +'rad)';
-                            l.style.position = 'absolute';
+                            l.style.position = 'fixed';
                             l.style.whiteSpace = 'nowrap';
                             l.style.backgroundColor = 'aqua';
                             if (parseFloat(dungeons[dungeonSelect].x) << parseFloat(dungeons[v].x) ) {
