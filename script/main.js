@@ -2088,7 +2088,7 @@ function updateMap() {
     for (var item in itemlist) {
         if (itemlist.hasOwnProperty(item)) {
             if ( dungeons[dungeonSelect].chestlist[itemlist[item].innerHTML] == undefined) {
-                itemlist[item].className = 'DCunavailable';
+                continue;
             } if ( dungeons[dungeonSelect].chestlist[itemlist[item].innerHTML].isOpened ) {
                 itemlist[item].className = 'DCopened';
             } else if ( dungeons[dungeonSelect].chestlist[itemlist[item].innerHTML].isAvailable() && itemlist.hasOwnProperty(item) ) {
