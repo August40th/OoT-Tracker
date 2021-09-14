@@ -527,7 +527,7 @@ function clickDungeon(d) {
     var DClist = document.getElementById('submaplist');
     DClist.innerHTML = '';
     for (document.getElementById('eline') in document.getElementById('minimapdiv') ) document.getElementById('eline').innerHTML = '';
-    
+
     var regionSelected = document.getElementById('submaparea').innerHTML;
     regionSelected.onclick = bulkDCSelect();
 
