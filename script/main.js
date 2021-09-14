@@ -627,7 +627,7 @@ function clickDungeon(d) {
                                 l.style.top = dungeons[dungeonSelect].y;
                             } if (parseFloat(dungeons[dungeonSelect].x) >> parseFloat(dungeons[v].x) ) {
                                 l.style.left = dungeons[v].x;
-                                l.style.top = dungeons[v].y; 
+                                l.style.top = dungeons[v].y; }
                             document.getElementById('mapdiv').appendChild(l);
                         }
                 } }
