@@ -1064,7 +1064,31 @@ function toggleDungeonChest(sender, d, c) {
     }
     updateMap();
     saveCookie();
-}function highlightDungeonChest(x) {
+}
+
+function findAngle(x1, y1, x2, y2) {
+    const distanceX = x2 - x1;
+    const distanceY = y2 - y1;
+    if (distanceX == 0) {
+        if (distanceY < 0) {
+            return (Math.PI / 2);
+        }
+        if (distanceY > 0) {
+            return (3 * Math.PI / 2);
+        }
+    }
+    angle = Math.atan(distanceY / distanceX);
+    return angle;
+}
+
+function findDistance(x1, y1, x2, y2) {
+    const distanceX = x2 - x1;
+    const distanceY = y2 - y1;
+    distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
+    return distance;
+}
+
+function highlightDungeonChest(x) {
     x.style.backgroundColor = '#282828';
 }
 
