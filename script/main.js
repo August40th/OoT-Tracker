@@ -1068,10 +1068,10 @@ function toggleDungeonChest(sender, d, c) {
 }
 
 function findAngle(x1, y1, x2, y2) {
-    if (x1 < x2) const distanceX = x2 - x1;
-    else if (x1 > x2) const distanceX = x1 - x2;
-    if (y1 < y2) const distanceY = y2 - y1;
-    else if (y1 > y2) const distanceY = y1 - y2;
+    if (x1 < x2) let distanceX = x2 - x1;
+    else if (x1 > x2) distanceX = x1 - x2;
+    if (y1 < y2) let distanceY = y2 - y1;
+    else if (y1 > y2) distanceY = y1 - y2;
     angle = Math.atan(distanceY / distanceX);
     //angle = Math.atan2(x2 - x1, y2 - y1);
     angle = angle * 180 * Math.PI;
@@ -1081,10 +1081,10 @@ function findAngle(x1, y1, x2, y2) {
 }
 
 function findDistance(x1, y1, x2, y2) {
-    if (x1 < x2) const distanceX = x2 - x1;
-    else if (x1 > x2) const distanceX = x1 - x2;
-    if (y1 < y2) const distanceY = y2 - y1;
-    else if (y1 > y2) const distanceY = y1 - y2;
+    if (x1 < x2) let distanceX = x2 - x1;
+    else if (x1 > x2) distanceX = x1 - x2;
+    if (y1 < y2) let distanceY = y2 - y1;
+    else if (y1 > y2) distanceY = y1 - y2;
     angle = findAngle(x1, y1, x2, y2);
     if ( (angle > 80 && angle < 100) || (angle > 260 && angle < 280) ) distance = distanceY;
     else if ( (angle > 350 && angle < 10) || (angle > 170 && angle < 190) ) distance = distanceX;
