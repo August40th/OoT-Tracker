@@ -4,6 +4,8 @@ function generalCanGetChest(chestlist) {
    for (var key in chestlist) {
       if ( chestlist[key].access == "entrance" && chestlist[key].type == "dungeon" ) { //Dungeon door  
          continue;}
+      if ( chestlist[key].access == "dungeon" && chestlist[key].type == "dungeon" ) { //Dungeon door  
+         continue;}
       if ( chestlist[key].leadsto !== "unknown" && chestlist[key].type == "entrance" ) { //  
          continue;}
       if ( chestlist[key].access == "master" && quest == "Vanilla" ) { //Master checks
@@ -187,7 +189,7 @@ var dungeons = [
       chestlist: {
          'Dungeon Door': { x: "99%", y: "50%", leadsto: "unknown", floor: "2", type: "dungeon", access: "dungeon",
             isAvailable: function () {
-               return true ; }
+               return false ; }
          }, 'Lobby Chest': { x: "76%", y: "55%", leadsto: "unknown", floor: "2", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[1].found == true && (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) || DungeonER) ;}
@@ -288,7 +290,7 @@ var dungeons = [
       chestlist: {
          'Dungeon Door': { x: "99%", y: "50%", leadsto: "unknown", floor: "0", type: "dungeon", access: "dungeon",
             isAvailable: function () {
-               return true ; }
+               return false ; }
          }, 'Lobby Gossip': { x: "47%", y: "54%", leadsto: "unknown", floor: "0", type: "gossip", access: "vanilla",
             isAvailable: function () {
                return dungeons[2].found == true &&
@@ -618,7 +620,7 @@ var dungeons = [
       chestlist: {
          'Dungeon Door': { x: "99%", y: "50%", leadsto: "unknown", floor: "1", type: "dungeon", access: "dungeon",
             isAvailable: function () {
-               return true ; }
+               return false ; }
          }, 'Water Switch Skulltula': {
            x: "61%", y: "54%", leadsto: "unknown", floor: "0", type: "skulltula", access: "vanilla",
             isAvailable: function () {
@@ -875,7 +877,7 @@ var dungeons = [
       chestlist: {
          'Dungeon Door': { x: "99%", y: "50%", leadsto: "unknown", floor: "2", type: "dungeon", access: "dungeon",
             isAvailable: function () {
-               return true ; }
+               return false ; }
          }, 'Front Left Hidden Wall': { x: "45%", y: "41%", leadsto: "unknown", floor: "2", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[4].found == true && ( (items.Ocarina && items.SongofStorms) || DungeonER)
@@ -1034,7 +1036,7 @@ var dungeons = [
       chestlist: {
          'Dungeon Door': { x: "99%", y: "50%", leadsto: "unknown", floor: "2", type: "dungeon", access: "dungeon",
             isAvailable: function () {
-               return true ; }
+               return false ; }
          }, 'Lobby Skulltula': { x: "54%", y: "87%", leadsto: "unknown", floor: "2", type: "skulltula", access: "vanilla",
             isAvailable: function () {
                return dungeons[5].found == true && (DungeonER || (items.Hookshot && 
@@ -1203,7 +1205,7 @@ var dungeons = [
       chestlist: {
          'Dungeon Door': { x: "99%", y: "50%", leadsto: "unknown", floor: "0", type: "dungeon", access: "dungeon",
             isAvailable: function () {
-               return true ; }
+               return false ; }
          }, 'Chest Near Boss': { x: "63.5%", y: "36%", leadsto: "unknown", floor: "0", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[6].found == true && items.MasterSword && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.BoleroofFire || ((items.HoverBoots || items.Hookshot) && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Hammer || items.Bow || (items.Magic && items.Dins))));
@@ -1481,7 +1483,7 @@ var dungeons = [
       chestlist: {
          'Dungeon Door': { x: "99%", y: "50%", leadsto: "unknown", floor: "0", type: "dungeon", access: "dungeon",
             isAvailable: function () {
-               return true ; }
+               return false ; }
          }, 'Above Silver Rupee Skulltula': { x: "49%", y: "40%", leadsto: "unknown", floor: "0", type: "skulltula", access: "vanilla",
             isAvailable: function () {
                return dungeons[7].found == true && items.Hookshot && (items.Bombs || items.Scale) && items.ZoraLetter && items.Ocarina && items.ZeldasLullaby;
@@ -1559,7 +1561,7 @@ var dungeons = [
       chestlist: {
          'Dungeon Door': { x: "99%", y: "50%", leadsto: "unknown", floor: "3", type: "dungeon", access: "dungeon",
             isAvailable: function () {
-               return true ; }
+               return false ; }
          }, 'Water Jet Chest': { x: "86%", y: "59%", leadsto: "unknown", floor: "3", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[8].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.IronBoots && items.Hookshot) || (items.Scale >= 2 && items.Hookshot >= 2 && items.Ocarina && items.ZeldasLullaby);
@@ -1701,7 +1703,7 @@ var dungeons = [
       chestlist: {
          'Dungeon Door': { x: "99%", y: "50%", leadsto: "unknown", floor: "0", type: "dungeon", access: "dungeon",
             isAvailable: function () {
-               return true ; }
+               return false ; }
          }, 'Lobby Right Chest': { x: "49%", y: "81%", leadsto: "unknown", floor: "0", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[9].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && (items.EponasSong || items.Hookshot >= 2 || isFortressOpen()) && items.Bow;
@@ -1849,7 +1851,7 @@ var dungeons = [
       chestlist: {
          'Dungeon Door': { x: "99%", y: "50%", leadsto: "unknown", floor: "0", type: "dungeon", access: "dungeon",
             isAvailable: function () {
-               return true ; }
+               return false ; }
          }, 'Child Switch Room': { x: "11%", y: "22%", leadsto: "unknown", floor: "0", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[10].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.Ocarina && items.RequiemofSpirit && (items.Boomerang || items.Slingshot || (items.Bombchu && BombchuLogic));
@@ -2141,7 +2143,7 @@ var dungeons = [
       chestlist: {
          'Dungeon Door': { x: "99%", y: "50%", leadsto: "unknown", floor: "3", type: "dungeon", access: "dungeon",
             isAvailable: function () {
-               return true ; }
+               return false ; }
          }, 'Keese and Redead': { x: "40.5%", y: "27%", leadsto: "unknown", floor: "3", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[11].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.NocturneofShadow && items.Magic && items.Dins && (items.HoverBoots || items.Hookshot);
