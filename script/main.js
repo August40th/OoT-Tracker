@@ -526,7 +526,11 @@ function clickDungeon(d) {
     document.getElementById('submaparea').className = 'DC' + dungeons[dungeonSelect].isBeatable();
     var DClist = document.getElementById('submaplist');
     DClist.innerHTML = '';
-    do { document.getElementById('eline').remove(); } while (document.getElementById('eline') !== null);
+    if (document.getElementById('eline') !== null) {
+        do {
+            document.getElementById('eline').remove(); 
+        } while (document.getElementById('eline') !== null);
+    )
 
     var regionSelected = document.getElementById('submaparea').innerHTML;
     regionSelected.onclick = bulkDCSelect();
