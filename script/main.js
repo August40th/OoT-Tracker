@@ -1068,10 +1068,8 @@ function toggleDungeonChest(sender, d, c) {
 }
 
 function findAngle(x1, y1, x2, y2) {
-    if (x1 < x2) distanceX = x2 - x1;
-    else if (x1 > x2) distanceX = x1 - x2;
-    if (y1 < y2) distanceY = y2 - y1;
-    else if (y1 > y2) distanceY = y1 - y2;
+    distanceX = x2 - x1;
+    distanceY = y2 - y1;
     angle = Math.atan(distanceY / distanceX);
     //angle = Math.atan2(x2 - x1, y2 - y1);
     angle = angle * 180 * Math.PI;
