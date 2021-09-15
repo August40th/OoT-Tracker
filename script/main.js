@@ -634,8 +634,13 @@ function clickDungeon(d) {
                             l.style.whiteSpace = 'nowrap';
                             l.style.backgroundColor = 'aqua';
 
-                            l.style.left = x1+"px";
-                            l.style.top = y1+"px";
+                            if (x1 <= x2) {
+                                l.style.left = x1+"px";
+                                l.style.top = y1+"px";
+                            } else if (x1 > x2) {
+                                l.style.left = x2+"px";
+                                l.style.top = y2+"px";
+                            }
 
                             document.getElementById('mapdiv').appendChild(l);
                         }
@@ -1082,7 +1087,8 @@ function findAngle(x1, y1, x2, y2) {
     //angle = Math.atan(distanceY / distanceX);
     angle = Math.atan2(x2 - x1, y2 - y1);
     angle = angle * 180 * Math.PI;
-
+    do { if (angle > 360) angle = angle - 360; } while (angle > 360);
+    else if (angle < 0) angle = angle + 360;
     return angle;
 }
 
