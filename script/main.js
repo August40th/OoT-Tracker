@@ -1078,8 +1078,8 @@ function findAngle(x1, y1, x2, y2) {
         }
     }
     //angle = Math.atan(distanceY / distanceX);
-    angle = Math.toDegrees(Math.atan2(x2 - x1, y2 - y1));
-    // Keep angle between 0 and 360
+    angle = Math.atan2(x2 - x1, y2 - y1));
+    angle = angle * 180 * Math.PI;
     angle = angle + Math.ceil( -angle / 360 ) * 360;
 
     return angle;
