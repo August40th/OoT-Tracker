@@ -1092,7 +1092,7 @@ function findDistance(x1, y1, x2, y2) {
     angle = findAngle(x1, y1, x2, y2);
     if ( (angle > 69 && angle < 111) || (angle > 249 && angle < 291) ) distance = distanceY;
     else if ( (angle > 339 && angle < 21) || (angle > 159 && angle < 201) ) distance = distanceX;
-    else { distance = Math.s qrt(distanceX * distanceX + distanceY * distanceY); }
+    else { distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY); }
     return distance;
 }
 
