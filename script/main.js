@@ -621,13 +621,13 @@ function clickDungeon(d) {
                             let x2 = parseFloat(dungeons[v].x)*mapDivWidth/100
                             let y2 = parseFloat(dungeons[v].x)*mapDivHeight/100
 
-                            var l = document.createElement('line');
+                            var l = document.createElement('eline');
                             l.innerHTML = key + 'leads to ' + ent;
                             l.id = 'eline';
                             l.style.height = '4px';
                             l.style.width = findDistance(x1, y1, x2, y2 ) + 'px';
                             l.style.transformOrigin = "0 0"
-                            l.style.transform = 'rotate('+ findAngle(x1, y1, x2, y2) + 'rad)';
+                            l.style.transform = 'rotate('+ findAngle(x1, y1, x2, y2) + 'deg)';
                             l.style.position = 'absolute';
                             l.style.whiteSpace = 'nowrap';
                             l.style.backgroundColor = 'aqua';
@@ -1077,7 +1077,11 @@ function findAngle(x1, y1, x2, y2) {
             return (3 * Math.PI / 2);
         }
     }
-    angle = Math.atan(distanceY / distanceX);
+    //angle = Math.atan(distanceY / distanceX);
+    double angle = Math.toDegrees(Math.atan2(x2 - x1, y2 - y1));
+    // Keep angle between 0 and 360
+    angle = angle + Math.ceil( -angle / 360 ) * 360;
+
     return angle;
 }
 
