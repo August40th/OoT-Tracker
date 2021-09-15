@@ -1085,7 +1085,7 @@ function findDistance(x1, y1, x2, y2) {
     else if (x1 > x2) distanceX = x1 - x2;
     if (y1 < y2) distanceY = y2 - y1;
     else if (y1 > y2) distanceY = y1 - y2;
-    distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY); }
+    distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
     return distance;
 }
 
