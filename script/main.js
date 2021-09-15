@@ -633,14 +633,8 @@ function clickDungeon(d) {
                             l.style.position = 'absolute';
                             l.style.whiteSpace = 'nowrap';
                             l.style.backgroundColor = 'aqua';
-
-                            if (x1 <= x2) {
-                                l.style.left = x1+"px";
-                                l.style.top = y1+"px";
-                            } else if (x1 > x2) {
-                                l.style.left = x2+"px";
-                                l.style.top = y2+"px";
-                            }
+                            l.style.left = x1+"px";
+                            l.style.top = y1+"px";
 
                             document.getElementById('mapdiv').appendChild(l);
                         }
