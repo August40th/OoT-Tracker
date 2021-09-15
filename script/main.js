@@ -613,21 +613,28 @@ function clickDungeon(d) {
                 for ( var v = 0; v < dungeons.length; v++) {
                     for (var ent in dungeons[v].chestlist) {
                         if (dungeons[dungeonSelect].chestlist[key].leadsto == ent) {
+                            let mapDivWidth = 828;
+                            let mapDivHeight = 420;
+
+                            let x1 = parseFloat(dungeons[dungeonSelect].x)*mapDivWidth/100
+                            let y1 = parseFloat(dungeons[dungeonSelect].y)*mapDivHeight/100
+                            let x2 = parseFloat(dungeons[v].x)*mapDivWidth/100
+                            let y2 = parseFloat(dungeons[v].x)*mapDivHeight/100
+
                             var l = document.createElement('line');
-                            //l.innerHTML = key + 'leads to ' + ent;
+                            l.innerHTML = key + 'leads to ' + ent;
                             l.id = 'eline';
                             l.style.height = '4px';
-                            l.style.width = findDistance(parseFloat(dungeons[dungeonSelect].x), parseFloat(dungeons[dungeonSelect].y), parseFloat(dungeons[v].x), parseFloat(dungeons[v].y) ) + '%';
-                            l.style.transform = 'rotate('+ findAngle(parseFloat(dungeons[dungeonSelect].x), parseFloat(dungeons[dungeonSelect].y), parseFloat(dungeons[v].x), parseFloat(dungeons[v].y) ) +'rad)';
-                            l.style.position = 'fixed';
+                            l.style.width = findDistance(x1, y1, x2, y2 ) + 'px';
+                            l.style.transformOrigin = "0 0"
+                            l.style.transform = 'rotate('+ findAngle(x1, y1, x2, y2) + 'rad)';
+                            l.style.position = 'absolute';
                             l.style.whiteSpace = 'nowrap';
                             l.style.backgroundColor = 'aqua';
-                            if (parseFloat(dungeons[dungeonSelect].x) <= parseFloat(dungeons[v].x) ) {
-                                l.style.left = dungeons[dungeonSelect].x;
-                                l.style.top = dungeons[dungeonSelect].y;
-                            } if (parseFloat(dungeons[dungeonSelect].x) > parseFloat(dungeons[v].x) ) {
-                                l.style.left = dungeons[v].x;
-                                l.style.top = dungeons[v].y; }
+
+                            l.style.left = x1+"px";
+                            l.style.top = y1+"px";
+
                             document.getElementById('mapdiv').appendChild(l);
                         }
                 } }
@@ -1057,46 +1064,13 @@ function toggleDungeonChest(sender, d, c) {
     }
     updateMap();
     saveCookie();
-}
-
-function findAngle(x1, y1, x2, y2) {
-    const distanceX = x2 - x1;
-    const distanceY = y2 - y1;
-    if (distanceX == 0) {
-        if (distanceY < 0) {
-            return (Math.PI / 2);
-        }
-        if (distanceY > 0) {
-            return (3 * Math.PI / 2);
-        }
-    }
-    angle = Math.atan(distanceY / distanceX);
-    return angle;
-}
-
-function findDistance(x1, y1, x2, y2) {
-    const distanceX = x2 - x1;
-    const distanceY = y2 - y1;
-    distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
-    return distance;
-}
-
-function highlightDungeonChest(x) {
+}function highlightDungeonChest(x) {
     x.style.backgroundColor = '#282828';
 }
 
 function unhighlightDungeonChest(x) {
     x.style.backgroundColor = '';
 }
-
-//function setOrder(H) {
-//   if (H) {
- //     document.getElementById('layoutdiv').classList.remove('flexcontainer');
-   //} else {
-     // document.getElementById('layoutdiv').classList.add('flexcontainer');
-//   }
- //  saveCookie();
-//}
 
 function setRainbow(sender) {
    rainbowbridge = sender.value;
