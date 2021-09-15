@@ -629,7 +629,7 @@ function clickDungeon(d) {
                             l.style.height = '4px';
                             l.style.width = findDistance(x1, y1, x2, y2 ) + 'px';
                             l.style.transformOrigin = "0 0"
-                            l.style.transform = 'rotate('+ findAngle(parseFloat(dungeons[dungeonSelect].x), parseFloat(dungeons[dungeonSelect].y), parseFloat(dungeons[v].x)*mapDivWidt, parseFloat(dungeons[v].y) ) + 'deg)';
+                            l.style.transform = 'rotate('+ findAngle(parseFloat(dungeons[dungeonSelect].x), parseFloat(dungeons[dungeonSelect].y), parseFloat(dungeons[v].x), parseFloat(dungeons[v].y) ) + 'deg)';
                             l.style.position = 'absolute';
                             l.style.whiteSpace = 'nowrap';
                             l.style.backgroundColor = 'aqua';
