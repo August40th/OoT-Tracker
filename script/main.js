@@ -621,7 +621,7 @@ function clickDungeon(d) {
                             let x1 = parseFloat(dungeons[dungeonSelect].x)*mapDivWidth/100
                             let y1 = parseFloat(dungeons[dungeonSelect].y)*mapDivHeight/100
                             let x2 = parseFloat(dungeons[v].x)*mapDivWidth/100
-                            let y2 = parseFloat(dungeons[v].x)*mapDivHeight/100
+                            let y2 = parseFloat(dungeons[v].y)*mapDivHeight/100
 
                             var l = document.createElement('eline');
                             l.innerHTML = key + 'leads to ' + ent;
