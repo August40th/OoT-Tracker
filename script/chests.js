@@ -1123,7 +1123,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[5].found == true && items.MasterSword && items.ForestKey >= 3 && items.Hookshot && items.Bow && items.Glove;
             }
-         }, 'Checkerboard Chest': { x: "84%", y: "54%", leadsto: "unknown", floor: "2", type: "chest", access: "vanilla",
+         }, 'Checkerboard Chest': { x: "84%", y: "33%%", leadsto: "unknown", floor: "2", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[5].found == true && 
                   (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) &&
@@ -3302,7 +3302,7 @@ var dungeons = [
                       ) );
                }
          },
-         'City Grotto Chest': { x: "63%", y: "4.5%", leadsto: "unknown", type: "chest", access: "grotto",
+         'City Grotto Chest': { x: "63%", y: "42.5%", leadsto: "unknown", type: "chest", access: "grotto",
             isAvailable: function () {
                return dungeons[18].found == true &&
                   ( ( (items.Bombs || items.Hammer || (items.Bombchu && BombchuLogic) ) && 
@@ -3360,7 +3360,7 @@ var dungeons = [
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ;
                }
          },
-         'Deku Theater Skull Mask': { x: "45%", y: "28%", leadsto: "unknown", type: "NPC", access: "grotto",
+         'Deku Theater Skull Mask': { x: "45%", y: "25%", leadsto: "unknown", type: "NPC", access: "grotto",
             isAvailable: function () {
                return dungeons[18].found == true && 
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  )
