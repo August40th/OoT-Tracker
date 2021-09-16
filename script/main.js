@@ -629,7 +629,7 @@ function clickDungeon(d) {
                             l.style.height = '4px';
                             l.style.width = findDistance(x1, y1, x2, y2 ) + 'px';
                             l.style.transformOrigin = "0 0"
-                            l.style.transform = 'rotate('+ findAngle(parseFloat(dungeons[dungeonSelect].x), parseFloat(dungeons[dungeonSelect].y), parseFloat(dungeons[v].x), parseFloat(dungeons[v].y) ) + 'deg)';
+                            l.style.transform = 'rotate('+ findAnglr(x1, y1, x2, y2 ) + 'deg)';
                             l.style.position = 'absolute';
                             l.style.whiteSpace = 'nowrap';
                             l.style.backgroundColor = 'aqua';
@@ -1068,13 +1068,11 @@ function toggleDungeonChest(sender, d, c) {
 }
 
 function findAngle(x1, y1, x2, y2) {
-    if (x1 < x2) distanceX = x2 - x1;
-    else if (x1 > x2) distanceX = x1 - x2;
-    if (y1 < y2) distanceY = y2 - y1;
-    else if (y1 > y2) distanceY = y1 - y2;
-    angle = Math.atan2(distanceY, distanceX);
-    //angle = Math.atan2(y2 - y1, x2 - x1);
+    angle = Math.atan2(y2 - y1, x2 - x1);
     angle = angle * 180 * Math.PI;
+    if (y2 - y1 < 0 && x2 - x1 > 0) angle = 180 - angle;
+    else if (y2 - y1 < 0 && x2 - x1 < 0) angle = 270 - angle;
+    else if (y2 - y1 > 0 && x2 - x1 < 0) angle = 360 - angle;
     do { if (angle >= 360) angle = angle - 360; } while (angle >= 360);
     do { if (angle < 0) angle = angle + 360; } while (angle < 0);
     return angle;
