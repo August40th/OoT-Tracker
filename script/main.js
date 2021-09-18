@@ -1073,13 +1073,13 @@ function findAngle(x1, y1, x2, y2) {
     if (y1 < y2) distanceY = y2 - y1;
     else if (y1 > y2) distanceY = y1 - y2;
     angle = Math.atan2(distanceY, distanceX);
-    if (y2 < y1 && x2 < x1) angle = Math.atan(distanceY/-distanceX); //top l
-    else if (y2 > y1 && x2 < x1) angle = Math.atan(-distanceY/ -distanceX); //bottom l
-    else if (y2 < y1 && x2 > x1) angle = Math.atan(distanceY/ distanceX); //top r
-    else if (y2 > y1 && x2 > x1) angle = Math.atan(-distanceY/ distanceX); //bottom r 
     angle = angle * 180 * Math.PI;
-    //do { if (angle >= 360) angle = angle - 360; } while (angle >= 360);
-    //do { if (angle < 0) angle = angle + 360; } while (angle < 0);
+    if (y2 < y1 && x2 < x1) angle = 225; //top l
+    else if (y2 > y1 && x2 < x1) angle = 135; //bottom l
+    else if (y2 < y1 && x2 > x1) angle = 315; //top r
+    else if (y2 > y1 && x2 > x1) angle = 45; //bottom r
+    do { if (angle >= 360) angle = angle - 360; } while (angle >= 360);
+    do { if (angle < 0) angle = angle + 360; } while (angle < 0);
     return angle;
 }
 function findDistance(x1, y1, x2, y2) {
