@@ -612,6 +612,7 @@ function clickDungeon(d) {
                 c.onmouseover = new Function('highlight(this' + ',"' + key + '")');
                 c.onmouseout = new Function('unhighlight(this' + ',"' + key + '")');
                 for ( var v = 0; v < dungeons.length; v++) {
+                    if ( v == dungeonSelect) continue;
                     for (var ent in dungeons[v].chestlist) {
                         if (dungeons[dungeonSelect].chestlist[key].leadsto == ent) {
                             let mapDivWidth = 828;
@@ -634,7 +635,33 @@ function clickDungeon(d) {
                             l.style.backgroundColor = 'aqua';
                             l.style.left = x1+"px";
                             l.style.top = y1+"px";
+                            
+                            for ( var u = 0; u < dungeons.length; u++) {
+                                if ( u == v) continue;
+                                for (var nxt in dungeons[u].chestlist) {
+                                    if (dungeons[v].chestlist[ent].leadsto == nxt) {
+                                        let mapDivWidth = 828;
+                                        let mapDivHeight = 420;
 
+                                        let x1 = parseFloat(dungeons[v].x)*mapDivWidth/100
+                                        let y1 = parseFloat(dungeons[v].y)*mapDivHeight/100
+                                        let x2 = parseFloat(dungeons[u].x)*mapDivWidth/100
+                                        let y2 = parseFloat(dungeons[u].y)*mapDivHeight/100
+
+                                        var l2 = document.createElement('eline');
+                                        //l.innerHTML = ent + 'leads to ' + nxt;
+                                        l2.id = 'eline';
+                                        l2.style.height = '4px';
+                                        l2.style.width = findDistance(x1, y1, x2, y2 ) + 'px';
+                                        l2.style.transformOrigin = "0 0"
+                                        l2.style.transform = 'rotate('+ findAngle(x1, y1, x2, y2 ) + 'deg)';
+                                        l2.style.position = 'absolute';
+                                        l2.style.whiteSpace = 'nowrap';
+                                        l2.style.backgroundColor = 'pink';
+                                        l2.style.left = x1+"px";
+                                        l2.style.top = y1+"px"; }}
+                            }
+                            document.getElementById('mapdiv').appendChild(l2);
                             document.getElementById('mapdiv').appendChild(l);
                         }
                 } }
