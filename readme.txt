@@ -15,7 +15,7 @@ Medigoron, Carpet sale
 List Gossip Stones
 OW mini maps
 Multi floor dungeon maps
-Entrance tracker - lines connecting selected region with found paths (Big thanks to Gilgameth#9116 for helping me get this working)
+Entrance tracker - lines connecting selected region with found paths (Big thanks to github.com/fgil90 for helping me get this working)
 
 Right click items to cycle in reverse
 
