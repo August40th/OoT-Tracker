@@ -618,17 +618,17 @@ function clickDungeon(d) {
                             let mapDivWidth = 828;
                             let mapDivHeight = 420;
 
-                            let x1 = parseFloat(dungeons[dungeonSelect].x)*mapDivWidth/100
-                            let y1 = parseFloat(dungeons[dungeonSelect].y)*mapDivHeight/100
-                            let x2 = parseFloat(dungeons[v].x)*mapDivWidth/100
-                            let y2 = parseFloat(dungeons[v].y)*mapDivHeight/100
+                            let x1 = parseFloat(dungeons[dungeonSelect].x)*mapDivWidth/100;
+                            let y1 = parseFloat(dungeons[dungeonSelect].y)*mapDivHeight/100;
+                            let x2 = parseFloat(dungeons[v].x)*mapDivWidth/100;
+                            let y2 = parseFloat(dungeons[v].y)*mapDivHeight/100;
 
                             var l = document.createElement('eline');
                             l.innerHTML = key + 'leads to ' + ent;
                             l.id = 'eline';
                             l.style.height = '4px';
                             l.style.width = findDistance(x1, y1, x2, y2 ) + 'px';
-                            l.style.transformOrigin = "0 0"
+                            l.style.transformOrigin = "0 0";
                             l.style.transform = 'rotate('+ findAngle(x1, y1, x2, y2 ) + 'deg)';
                             l.style.position = 'absolute';
                             l.style.whiteSpace = 'nowrap';
@@ -636,34 +636,35 @@ function clickDungeon(d) {
                             l.style.left = x1+"px";
                             l.style.top = y1+"px";
                             
-                            for ( var u = 0; u < dungeons.length; u++) {
-                                if ( u == v) continue;
-                                for (var nxt in dungeons[u].chestlist) {
-                                    if (dungeons[v].chestlist[ent].leadsto == nxt) {
-                                        let mapDivWidth = 828;
-                                        let mapDivHeight = 420;
-
-                                        let x1 = parseFloat(dungeons[v].x)*mapDivWidth/100
-                                        let y1 = parseFloat(dungeons[v].y)*mapDivHeight/100
-                                        let x2 = parseFloat(dungeons[u].x)*mapDivWidth/100
-                                        let y2 = parseFloat(dungeons[u].y)*mapDivHeight/100
-
-                                        var j = document.createElement('eline');
-                                        //l.innerHTML = ent + 'leads to ' + nxt;
-                                        j.id = 'eline';
-                                        j.style.height = '4px';
-                                        j.style.width = findDistance(x1, y1, x2, y2 ) + 'px';
-                                        j.style.transformOrigin = "0 0"
-                                        j.style.transform = 'rotate('+ findAngle(x1, y1, x2, y2 ) + 'deg)';
-                                        j.style.position = 'absolute';
-                                        j.style.whiteSpace = 'nowrap';
-                                        j.style.backgroundColor = 'pink';
-                                        j.style.left = x1+"px";
-                                        j.style.top = y1+"px"; }}
-                            }
-                            document.getElementById('mapdiv').appendChild(j);
                             document.getElementById('mapdiv').appendChild(l);
                         }
+                        for ( var u = 0; u < dungeons.length; u++) {
+                            if ( u == v) continue;
+                            for (var nxt in dungeons[u].chestlist) {
+                                if (dungeons[v].chestlist[ent].leadsto == nxt) {
+                                    let mapDivWidth = 828;
+                                    let mapDivHeight = 420;
+                                    
+                                    let x1 = parseFloat(dungeons[v].x)*mapDivWidth/100;
+                                    let y1 = parseFloat(dungeons[v].y)*mapDivHeight/100;
+                                    let x2 = parseFloat(dungeons[u].x)*mapDivWidth/100;
+                                    let y2 = parseFloat(dungeons[u].y)*mapDivHeight/100;
+                                    var j = document.createElement('eline');
+                                    j.innerHTML = ent + 'leads to ' + nxt;
+                                    j.id = 'eline';
+                                    j.style.height = '4px';
+                                    j.style.width = findDistance(x1, y1, x2, y2 ) + 'px';
+                                    j.style.transformOrigin = "0 0";
+                                    j.style.transform = 'rotate('+ findAngle(x1, y1, x2, y2 ) + 'deg)';
+                                    j.style.position = 'absolute';
+                                    j.style.whiteSpace = 'nowrap';
+                                    j.style.backgroundColor = 'pink';
+                                    j.style.left = x1+"px";
+                                    j.style.top = y1+"px"; 
+                                    document.getElementById('mapdiv').appendChild(j);
+                                } } )
+                        }
+                    }
                 } }
             }
             continue;}
