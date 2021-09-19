@@ -1498,7 +1498,7 @@ function setERTracker(sender) {
    else if (Age === "Adult" && RndmStart == false)
        clickDungeon(14);
    else if (RndmStart == true)
-       clickDungeon(32);
+       clickDungeon(35);
     updateMap();
     saveCookie();
 }
