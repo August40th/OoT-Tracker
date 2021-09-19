@@ -583,7 +583,7 @@ function clickDungeon(d) {
     }
 
     for (var key in dungeons[dungeonSelect].chestlist) {
-        if ( dungeons[dungeonSelect].chestlist[key].leadsto !== "unknown" && (dungeons[dungeonSelect].chestlist[key].type == "entrance" || dungeons[dungeonSelect].chestlist[key].type == "dungeon") ) { //  
+        if ( dungeons[dungeonSelect].chestlist[key].leadsto !== "unknown" && (dungeons[dungeonSelect].chestlist[key].type == "entrance" || dungeons[dungeonSelect].chestlist[key].type == "dungeon" || dungeons[dungeonSelect].chestlist[key].type == "owl" || dungeons[dungeonSelect].chestlist[key].type == "warp" || dungeons[dungeonSelect].chestlist[key].type == "spawn") ) { //  
             if (OWERmap == true ) { 
                 var c = document.createElement('span');
                 c.innerHTML = 'x';
@@ -1054,6 +1054,53 @@ function toggleDungeonChest(sender, d, c) {
         t.innerHTML = c + ' leads to';
         l.innerHTML = '';
         for ( var k = 0; k < dungeons.length; k++) {
+            if ( k > 0 && k < 13 && (mixphoo == "Off" || DungeonER == false) ) continue;
+            printdun =true;
+            if (printdun == true) {
+                var e = document.createElement('li');
+                e.innerHTML = dungeons[k].name;
+                e.className = k;
+                e.onmouseover = new Function('highlightDungeonChest(this)');
+                e.onmouseout = new Function('unhighlightDungeonChest(this)');
+                e.style.cursor = "pointer";
+                e.onclick = function(setLeadsto){
+                                ent = this.innerHTML;
+                                dungeons[d].chestlist[c].leadsto = ent;
+                                clickDungeon(d); }
+                l.appendChild(e);
+            }
+        }
+    }
+    if (dungeons[d].chestlist[c].leadsto == "unknown" && dungeons[d].chestlist[c].type == "warp" ) { 
+        var t = document.getElementById('submaparea');
+        var l = document.getElementById('submaplist');
+        t.innerHTML = c + ' leads to';
+        l.innerHTML = '';
+        for ( var k = 0; k < dungeons.length; k++) {
+            if ( k > 0 && k < 13 && (mixphoo == "Off" || DungeonER == false) ) continue;
+            printdun =true;
+            if (printdun == true) {
+                var e = document.createElement('li');
+                e.innerHTML = dungeons[k].name;
+                e.className = k;
+                e.onmouseover = new Function('highlightDungeonChest(this)');
+                e.onmouseout = new Function('unhighlightDungeonChest(this)');
+                e.style.cursor = "pointer";
+                e.onclick = function(setLeadsto){
+                                ent = this.innerHTML;
+                                dungeons[d].chestlist[c].leadsto = ent;
+                                clickDungeon(d); }
+                l.appendChild(e);
+            }
+        }
+    }
+    if (dungeons[d].chestlist[c].leadsto == "unknown" && dungeons[d].chestlist[c].type == "spawn" ) { 
+        var t = document.getElementById('submaparea');
+        var l = document.getElementById('submaplist');
+        t.innerHTML = c + ' leads to';
+        l.innerHTML = '';
+        for ( var k = 0; k < dungeons.length; k++) {
+            if ( k > 0 && k < 13 && (mixphoo == "Off" || DungeonER == false) ) continue;
             printdun =true;
             if (printdun == true) {
                 var e = document.createElement('li');
