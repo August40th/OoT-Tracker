@@ -583,9 +583,8 @@ function clickDungeon(d) {
     }
 
     for (var key in dungeons[dungeonSelect].chestlist) {
-        if ( dungeons[dungeonSelect].chestlist[key].access == "dungeon" && dungeons[dungeonSelect].chestlist[key].type == "dungeon" ) { //Dungeon door  
-            continue;}
-        if ( dungeons[dungeonSelect].chestlist[key].leadsto !== "unknown" && dungeons[dungeonSelect].chestlist[key].type == "entrance" ) { //  
+        if ( dungeons[dungeonSelect].chestlist[key].leadsto !== "unknown" && ( (dungeons[dungeonSelect].chestlist[key].access == "dungeon" && dungeons[dungeonSelect].chestlist[key].type == "dungeon" ) 
+                                                                              || dungeons[dungeonSelect].chestlist[key].type == "entrance") ) { //  
             if (OWERmap == true ) { 
                 var c = document.createElement('span');
                 c.innerHTML = 'x';
