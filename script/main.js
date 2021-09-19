@@ -1065,7 +1065,7 @@ function toggleDungeonChest(sender, d, c) {
                 e.style.cursor = "pointer";
                 e.onclick = function(setLeadsto){
                                 ent = this.innerHTML;
-                                dungeons[d].chestlist[c].leadsto = dungeons[v].name;
+                                dungeons[d].chestlist[c].leadsto = dungeons[k].name;
                                 clickDungeon(d); }
                 l.appendChild(e);
             }
@@ -1088,7 +1088,7 @@ function toggleDungeonChest(sender, d, c) {
                 e.style.cursor = "pointer";
                 e.onclick = function(setLeadsto){
                                 ent = this.innerHTML;
-                                dungeons[d].chestlist[c].leadsto = dungeons[v].name;
+                                dungeons[d].chestlist[c].leadsto = dungeons[k].name;
                                 clickDungeon(d); }
                 l.appendChild(e);
             }
@@ -1111,7 +1111,7 @@ function toggleDungeonChest(sender, d, c) {
                 e.style.cursor = "pointer";
                 e.onclick = function(setLeadsto){
                                 ent = this.innerHTML;
-                                dungeons[d].chestlist[c].leadsto = dungeons[v].name;
+                                dungeons[d].chestlist[c].leadsto = dungeons[k].name;
                                 clickDungeon(d); }
                 l.appendChild(e);
             }
