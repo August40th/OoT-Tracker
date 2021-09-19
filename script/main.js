@@ -648,20 +648,20 @@ function clickDungeon(d) {
                                         let x2 = parseFloat(dungeons[u].x)*mapDivWidth/100
                                         let y2 = parseFloat(dungeons[u].y)*mapDivHeight/100
 
-                                        var l2 = document.createElement('eline');
+                                        var j = document.createElement('eline');
                                         //l.innerHTML = ent + 'leads to ' + nxt;
-                                        l2.id = 'eline';
-                                        l2.style.height = '4px';
-                                        l2.style.width = findDistance(x1, y1, x2, y2 ) + 'px';
-                                        l2.style.transformOrigin = "0 0"
-                                        l2.style.transform = 'rotate('+ findAngle(x1, y1, x2, y2 ) + 'deg)';
-                                        l2.style.position = 'absolute';
-                                        l2.style.whiteSpace = 'nowrap';
-                                        l2.style.backgroundColor = 'pink';
-                                        l2.style.left = x1+"px";
-                                        l2.style.top = y1+"px"; }}
+                                        j.id = 'eline';
+                                        j.style.height = '4px';
+                                        j.style.width = findDistance(x1, y1, x2, y2 ) + 'px';
+                                        j.style.transformOrigin = "0 0"
+                                        j.style.transform = 'rotate('+ findAngle(x1, y1, x2, y2 ) + 'deg)';
+                                        j.style.position = 'absolute';
+                                        j.style.whiteSpace = 'nowrap';
+                                        j.style.backgroundColor = 'pink';
+                                        j.style.left = x1+"px";
+                                        j.style.top = y1+"px"; }}
                             }
-                            document.getElementById('mapdiv').appendChild(l2);
+                            document.getElementById('mapdiv').appendChild(j);
                             document.getElementById('mapdiv').appendChild(l);
                         }
                 } }
