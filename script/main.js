@@ -662,7 +662,7 @@ function clickDungeon(d) {
                                     j.style.left = x1+"px";
                                     j.style.top = y1+"px"; 
                                     document.getElementById('mapdiv').appendChild(j);
-                                } } )
+                                } } }
                         }
                     }
                 } }
