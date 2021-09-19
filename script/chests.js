@@ -1897,7 +1897,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[10].found == true && items.SpiritKey && (items.Ocarina && items.RequiemofSpirit && items.Bombs) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2) && items.Lens && items.Magic) || (items.Ocarina && items.RequiemofSpirit)) && items.Glove >= 2);
             },
-         }, 'Temple Right Hand' : { x: "99%", y: "50%", leadsto: "Temple Right Hand", type: "dungeon", access: "dungeon",
+         }, 'Desert Right Hand' : { x: "99%", y: "50%", leadsto: "Spirit Right Hand", type: "dungeon", access: "dungeon",
          isAvailable: function () {
             return false; }
          }, 'Colossus Right Hand Chest': { x: "26%", y: "83%", leadsto: "unknown", floor: "2", type: "chest", access: "vanilla",
@@ -1951,7 +1951,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[10].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.SpiritKey >= 2 && items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic)) && (items.Bombs || (items.Bombchu && BombchuLogic)) && ((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2 || items.RequiemofSpirit);
             }
-         }, 'Temple Left Hand': { x: "99%", y: "50%", leadsto: "Temple Left Hand", type: "dungeon", access: "dungeon",
+         }, 'Desert Left Hand': { x: "99%", y: "50%", leadsto: "Spirit Left Hand", type: "dungeon", access: "dungeon",
             isAvailable: function () {
                return false ; }
          }, 'Colossus Left Hand Chest': { x: "71%", y: "83%", leadsto: "unknown", floor: "2", type: "chest", access: "vanilla",
@@ -4698,7 +4698,7 @@ var dungeons = [
                    ) || (items.Ocarina && items.RequiemofSpirit) 
                  ) ;
             }
-         }, 'Temple Right Hand': { x: "99%", y: "50%", leadsto: "none", type: "dungeon", access: "dungeon",
+         }, 'Spirit Right Hand': { x: "99%", y: "50%", leadsto: "none", type: "dungeon", access: "dungeon",
             isAvailable: function () {
                return false ; }
          },'Spirit Temple': { x: "9%", y: "45%", leadsto: "unknown", type: "dungeon", access: "door",
@@ -4709,7 +4709,7 @@ var dungeons = [
                    ) || (items.Ocarina && items.RequiemofSpirit) 
                  ) ;
                }
-         }, 'Temple Left Hand': { x: "99%", y: "55%", leadsto: "none", type: "dungeon", access: "dungeon",
+         }, 'Spirit Left Hand': { x: "99%", y: "55%", leadsto: "none", type: "dungeon", access: "dungeon",
             isAvailable: function () {
                return false ; }
          },
