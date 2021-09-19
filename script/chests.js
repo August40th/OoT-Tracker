@@ -18,56 +18,58 @@ function generalCanGetChest(chestlist) {
          continue;}
       if ( chestlist[key].type == "warp" && Warps == false) {
          continue;}
+      if ( chestlist[key].type == "spawn" && RndmStart  == false) {
+         continue;}
       if ( chestlist[key].type == "owl" && Owls == false) { //Do Nothing
-            continue;}
-        if ( chestlist[key].access == "door" && chestlist[key].type == "simple" && IndoorER == "Off" ) { //Simple Doorways
-            continue;}
-        if ( chestlist[key].access == "door" && chestlist[key].type == "alldoor" && IndoorER !== "Full" ) { // Full indoor doorways
-            continue;}
-        if ( chestlist[key].access == "door" && chestlist[key].type == "dungeon" && DungeonER == false ) { // Dungeon OW door
-            continue;}
-        if ( chestlist[key].access == "simple" && IndoorER !== "Off" ) { //simple indoor checks
-            continue;}
-        if ( chestlist[key].access == "alldoor" && IndoorER == "Full" ) { //Link's House, ToT, and windmill checks
-            continue;}
-        if ( chestlist[key].access == "grotto" && chestlist[key].type == "grotto" && GrottoER == false ) { //Grotto doorways
-            continue;}
-        if ( chestlist[key].access == "grotto" && chestlist[key].type !== "grotto" && GrottoER == true ) { //Grotto checks
-            continue;}
-        if ( chestlist[key].type == "skulltula" && skulltula == "Off") { // Skulls
-            continue;}
-        if ( (chestlist[key].access == "master" || chestlist[key].access == "vanilla") && chestlist[key].type == "skulltula" && skulltula == "Overworld" ) { // Dungeon Skulls
-            continue;}
-        if ( (chestlist[key].access == "outdoor" || chestlist[key].access == "simple" || chestlist[key].access == "grotto") && chestlist[key].type == "skulltula" && skulltula == "Dungeons" ) { // OW Skulls
-            continue;}
-        if (chestlist[key].type == "scrub" && Scrubsanity == false) { //Scrubs 
-            continue;}
-        if (chestlist[key].type == "shop" && shopsize == 0) { //Shops 
-            continue;}
-        if (chestlist[key].type == "cow" && Cowsanity == false) { //Cows
-            continue;}
-        if ( chestlist[key].type == "ksword" && Ksword == false ) { //kokiri shuffle
-            continue;}
-        if ( chestlist[key].type == "bean" && BeanShuffle == false ) { //Bean shuffle
-            continue;}
-        if ( chestlist[key].type == "egg" && WeirdEgg == false ) { //Bean shuffle
-            continue;}
-        if ( chestlist[key].type == "knife" && Medigoron == false ) { //Medigoron item
-            continue;}
-        if ( chestlist[key].type == "carpet" && Aladdin == false ) { //Carpet Sale
-            continue;}
-        if ( chestlist[key].type == "ocarina" && OcarinaShuffle == false ) { //Ocarina shuffle in field
-            continue;}
-        if ( chestlist[key].access == "no OWER" && chestlist[key].type == "ocarina" && ((OWERmap == true && OcarinaShuffle == true) || OcarinaShuffle == false) ) { //OWER Ocarina shuffle
-            continue;}
-        if ( chestlist[key].type == "guard" && fortkeys == "Fight" ) { //Fortress Guard checks
-            continue;}
-        if ( chestlist[key].type == "membership" && gerudobridge !== "Shuffle" ) { //Fortress Guard checks
-            continue;}
-        if (chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
-            continue;}
-        if ( chestlist[key].OWER == false && OWERmap == true) { // OWER Market street
-            continue;}
+         continue;}
+      if ( chestlist[key].access == "door" && chestlist[key].type == "simple" && IndoorER == "Off" ) { //Simple Doorways
+         continue;}
+      if ( chestlist[key].access == "door" && chestlist[key].type == "alldoor" && IndoorER !== "Full" ) { // Full indoor doorways
+         continue;}
+      if ( chestlist[key].access == "door" && chestlist[key].type == "dungeon" && DungeonER == false ) { // Dungeon OW door
+         continue;}
+      if ( chestlist[key].access == "simple" && IndoorER !== "Off" ) { //simple indoor checks
+         continue;}
+      if ( chestlist[key].access == "alldoor" && IndoorER == "Full" ) { //Link's House, ToT, and windmill checks
+         continue;}
+      if ( chestlist[key].access == "grotto" && chestlist[key].type == "grotto" && GrottoER == false ) { //Grotto doorways
+         continue;}
+      if ( chestlist[key].access == "grotto" && chestlist[key].type !== "grotto" && GrottoER == true ) { //Grotto checks
+         continue;}
+      if ( chestlist[key].type == "skulltula" && skulltula == "Off") { // Skulls
+         continue;}
+      if ( (chestlist[key].access == "master" || chestlist[key].access == "vanilla") && chestlist[key].type == "skulltula" && skulltula == "Overworld" ) { // Dungeon Skulls
+         continue;}
+      if ( (chestlist[key].access == "outdoor" || chestlist[key].access == "simple" || chestlist[key].access == "grotto") && chestlist[key].type == "skulltula" && skulltula == "Dungeons" ) { // OW Skulls
+         continue;}
+      if (chestlist[key].type == "scrub" && Scrubsanity == false) { //Scrubs 
+         continue;}
+      if (chestlist[key].type == "shop" && shopsize == 0) { //Shops 
+         continue;}
+      if (chestlist[key].type == "cow" && Cowsanity == false) { //Cows
+         continue;}
+      if ( chestlist[key].type == "ksword" && Ksword == false ) { //kokiri shuffle
+         continue;}
+      if ( chestlist[key].type == "bean" && BeanShuffle == false ) { //Bean shuffle
+         continue;}
+      if ( chestlist[key].type == "egg" && WeirdEgg == false ) { //Bean shuffle
+         continue;}
+      if ( chestlist[key].type == "knife" && Medigoron == false ) { //Medigoron item
+         continue;}
+      if ( chestlist[key].type == "carpet" && Aladdin == false ) { //Carpet Sale
+         continue;}
+      if ( chestlist[key].type == "ocarina" && OcarinaShuffle == false ) { //Ocarina shuffle in field
+         continue;}
+      if ( chestlist[key].access == "no OWER" && chestlist[key].type == "ocarina" && ((OWERmap == true && OcarinaShuffle == true) || OcarinaShuffle == false) ) { //OWER Ocarina shuffle
+         continue;}
+      if ( chestlist[key].type == "guard" && fortkeys == "Fight" ) { //Fortress Guard checks
+         continue;}
+      if ( chestlist[key].type == "membership" && gerudobridge !== "Shuffle" ) { //Fortress Guard checks
+         continue;}
+      if (chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
+         continue;}
+      if ( chestlist[key].OWER == false && OWERmap == true) { // OWER Market street
+         continue;}
       if (chestlist.hasOwnProperty(key)) {
          if (!chestlist[key].isOpened)
             unopened++;
@@ -2421,7 +2423,7 @@ var dungeons = [
          }, 'Temple of Time': { x: "46%", y: "58%", leadsto: "unknown", type: "alldoor", access: "door",
             isAvailable: function () {
                return dungeons[14].found == true; }
-         }, 'Prelude Warp': { x: "48%", y: "48%", leadsto: "unknown", type: "warp", access: "warp",
+         }, 'Prelude Warp': { x: "48%", y: "48%", leadsto: "none", type: "warp", access: "warp",
                isAvailable: function () {
                   return items.Ocarina && items.PreludeofLight; }
          }, 'Song for Forest Medallion': { x: "48%", y: "22%", leadsto: "unknown", type: "song", access: "alldoor",
@@ -3021,7 +3023,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[19].found == true && 
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); }
-         }, 'Minuet Warp': { x: "84%", y: "50%", leadsto: "unknown", type: "warp", access: "warp",
+         }, 'Minuet Warp': { x: "84%", y: "50%", leadsto: "none", type: "warp", access: "warp",
                isAvailable: function () {
                   return items.Ocarina && items.MinuetofForest; }
          }, 'Meadow Storms Grotto': { x: "80%", y: "75%", leadsto: "unknown", type: "grotto", access: "grotto",
@@ -3624,7 +3626,7 @@ var dungeons = [
                      && //access via city or trail
                      (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                     ) ; }
-         }, 'Bolero Warp': { x: "53%", y: "41%", leadsto: "unknown", type: "warp", access: "warp",
+         }, 'Bolero Warp': { x: "53%", y: "41%", leadsto: "none", type: "warp", access: "warp",
                isAvailable: function () {
                   return items.Ocarina && items.BoleroofFire; }
          }, 'Soil Patch Skulltula': { x: "47%", y: "42%", leadsto: "unknown", type: "skulltula", access: "outdoor",
@@ -3868,7 +3870,7 @@ var dungeons = [
          }, 'Grave Pull Scrub 3': { x: "19%", y: "64%", leadsto: "unknown", type: "scrub", access: "grotto",
             isAvailable: function () {
                return OWERmap == false || dungeons[26].found == true; },
-         }, 'Serenade Warp': { x: "44.5%", y: "78%", leadsto: "unknown", type: "warp", access: "warp",
+         }, 'Serenade Warp': { x: "44.5%", y: "78%", leadsto: "none", type: "warp", access: "warp",
                isAvailable: function () {
                   return items.Ocarina && items.SerenadeoffWater; }
          }, 'Top of Tree Skulltula': { x: "49.5%", y: "79%", leadsto: "unknown", type: "skulltula", access: "outdoor",
@@ -4096,7 +4098,7 @@ var dungeons = [
                   ( (items.Membership && (items.HoverBoots || items.Hookshot >= 2) ) 
                    || (items.Ocarina && items.RequiemofSpirit) ) &&
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ; }
-         }, 'Requiem Warp': { x: "20%", y: "14%", leadsto: "unknown", type: "warp", access: "warp",
+         }, 'Requiem Warp': { x: "20%", y: "14%", leadsto: "none", type: "warp", access: "warp",
                isAvailable: function () {
                   return items.Ocarina && items.RequiemofSpirit; }
          }, 'Desert Strength Grotto': { x: "28%", y: "20%", leadsto: "unknown", type: "grotto", access: "grotto",
@@ -4235,7 +4237,7 @@ var dungeons = [
                   items.Magic && (items.Dins || 
                  (items.Bow && items.Fire && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                  ); }
-         }, 'Noturne Warp': { x: "61%", y: "45%", leadsto: "unknown", type: "warp", access: "warp",
+         }, 'Noturne Warp': { x: "61%", y: "45%", leadsto: "none", type: "warp", access: "warp",
             isAvailable: function () {
                return (OWERmap == false || dungeons[30].found == true) && items.Ocarina && items.NocturneofShadow ; }
          }, 'Noturne Gossip': { x: "63%", y: "34%", leadsto: "unknown", type: "gossip", access: "outdoor",
