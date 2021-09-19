@@ -623,7 +623,6 @@ function clickDungeon(d) {
                             let y2 = parseFloat(dungeons[v].y)*mapDivHeight/100;
 
                             var l = document.createElement('eline');
-                            //l.innerHTML = key + ' leads to ' + ent;
                             l.id = 'eline';
                             l.style.height = '4px';
                             l.style.width = findDistance(x1, y1, x2, y2 ) + 'px';
@@ -634,7 +633,13 @@ function clickDungeon(d) {
                             l.style.backgroundColor = 'aqua';
                             l.style.left = x1+"px";
                             l.style.top = y1+"px";
-
+                            
+                            var ll = document.createElement('span');
+                            ll.innerHTML = key + ' leads to ' + ent;
+                            ll.onmouseover = ll.style.visibility = 'visible';
+                            ll.onmouseout = ll.style.visibility = 'hidden';
+                           
+                            l.appendChild(ll);
                             document.getElementById('mapdiv').appendChild(l);
                         }
                 } }
@@ -653,6 +658,8 @@ function clickDungeon(d) {
         if ( dungeons[dungeonSelect].chestlist[key].type == "entrance" && OWERmap == false) { //Do Nothing
             continue;}
         if ( dungeons[dungeonSelect].chestlist[key].type == "warp" && Warps == false) {
+            continue;}
+        if ( dungeons[dungeonSelect].chestlist[key].type == "spawn" && RndmStart == false) {
             continue;}
         if ( dungeons[dungeonSelect].chestlist[key].type == "owl" && Owls == false) { //Do Nothing
             continue;}
@@ -702,8 +709,9 @@ function clickDungeon(d) {
             continue;}
         if ( dungeons[dungeonSelect] == dungeons[28] && dungeons[dungeonSelect].chestlist[key].type == "membership" && gerudobridge !== "Shuffle" ) { //Fortress Guard checks
             continue;}
-        if (OWERmap == false && dungeonSelect >= 33) continue;
-        
+        if ( (Warps == false || RndmStart == false) && dungeonSelect == 35 ) continue;
+        if (OWERmap == false && (dungeonSelect == 33 || dungeonSelect == 34 ) ) continue;
+
         var s = document.createElement('li');
         if (dungeons[dungeonSelect].chestlist[key].leadsto == "unknown") s.innerHTML = key;
         else if (dungeons[dungeonSelect].chestlist[key].leadsto !== "unknown") s.innerHTML = dungeons[dungeonSelect].chestlist[key].leadsto;
@@ -1960,6 +1968,8 @@ function updateMap() {
                 continue;}
             if ( dungeons[k].chestlist[key].type == "warp" && Warps == false) {
                 continue;}
+            if ( dungeons[k].chestlist[key].type == "spawn" && RndmStart == false) {
+                continue;}
             if ( dungeons[k].chestlist[key].type == "owl" && Owls == false) { //Do Nothing
                 continue;}
             if ( dungeons[k].chestlist[key].access == "door" && dungeons[k].chestlist[key].type == "simple" && IndoorER == "Off" ) { //Simple Doorways
@@ -2008,7 +2018,9 @@ function updateMap() {
                 continue;}
             if ( OWERmap == true && dungeons[k] == dungeons[13] && dungeons[k].chestlist[key].OWER == false ) {
                 continue;}
-            if (OWERmap == false && (k == 33 || k == 34) ) continue;
+            if ( (Warps == false || RndmStart == false) && k == 35 ) continue;
+            if (OWERmap == false && (k == 33 || k == 34 ) ) continue;            
+            
             if (dungeons[k].chestlist.hasOwnProperty(key)) {
                 if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable()) {
                     DCcount++;
@@ -2167,6 +2179,8 @@ function populateMapdiv() {
                 continue;}
             if ( dungeons[k].chestlist[key].type == "warp" && Warps == false) {
                 continue;}
+            if ( dungeons[k].chestlist[key].type == "spawn" && RndmStart == false) {
+                continue;}
             if ( dungeons[k].chestlist[key].type == "owl" && Owls == false) { //Do Nothing
                 continue;}
             if ( dungeons[k].chestlist[key].access == "door" && dungeons[k].chestlist[key].type == "simple" && IndoorER == "Off" ) { //Simple Doorways
@@ -2215,7 +2229,8 @@ function populateMapdiv() {
                 continue;}
             if ( OWERmap == true && dungeons[k] == dungeons[13] && dungeons[k].chestlist[key].OWER == false ) {
                 continue;}
-            if (OWERmap == false && (k == 33 || k == 34) ) continue;
+            if ( (Warps == false || RndmStart == false) && k == 35 ) continue;
+            if (OWERmap == false && (k == 33 || k == 34 ) ) continue;
             if (dungeons[k].chestlist.hasOwnProperty(key)) {
                 if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable()) {
                     DCcount++;
@@ -2269,6 +2284,8 @@ function populateMapdiv() {
             continue;}
         if ( dungeons[dungeonSelect].chestlist[key].type == "warp" && Warps == false) {
             continue;}
+        if ( dungeons[dungeonSelect].chestlist[key].type == "spawn" && RndmStart == false) {
+            continue;}
         if ( dungeons[dungeonSelect].chestlist[key].type == "owl" && Owls == false) { //Do Nothing
             continue;}
         if ( dungeons[dungeonSelect].chestlist[key].access == "door" && dungeons[dungeonSelect].chestlist[key].type == "simple" && IndoorER == "Off" ) { //Simple Doorways
@@ -2317,7 +2334,8 @@ function populateMapdiv() {
             continue;}
         if ( OWERmap == true && dungeons[dungeonSelect] == dungeons[13] && dungeons[dungeonSelect].chestlist[key].OWER == false ) { //Fortress Guard checks
                 continue;}
-        if (OWERmap == false && dungeonSelect >= 33) continue;
+        if ( (Warps == false || RndmStart == false) && dungeonSelect == 35 ) continue;
+        if (OWERmap == false && (dungeonSelect == 33 || dungeonSelect == 34 ) ) continue;
 
         var s = document.createElement('li');
         s.innerHTML = key;
