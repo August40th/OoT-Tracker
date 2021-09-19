@@ -613,7 +613,7 @@ function clickDungeon(d) {
                 for ( var v = 0; v < dungeons.length; v++) {
                     if (v == dungeonSelect) continue;
                     for (var ent in dungeons[v].chestlist) {
-                        if (dungeons[dungeonSelect].chestlist[key].leadsto == ent || dungeons[dungeonSelect].chestlist[key].leadsto == dungeons[v].name + ' ' + ent) {
+                        if (dungeons[dungeonSelect].chestlist[key].leadsto == ent || dungeons[dungeonSelect].chestlist[key].leadsto == dungeons[v].name + ' ' + ent || dungeons[dungeonSelect].chestlist[key].leadsto == dungeons[v].name) {
                             let mapDivWidth = 828;
                             let mapDivHeight = 420;
 
@@ -1065,7 +1065,7 @@ function toggleDungeonChest(sender, d, c) {
                 e.style.cursor = "pointer";
                 e.onclick = function(setLeadsto){
                                 ent = this.innerHTML;
-                                dungeons[d].chestlist[c].leadsto = ent;
+                                dungeons[d].chestlist[c].leadsto = dungeons[v].name;
                                 clickDungeon(d); }
                 l.appendChild(e);
             }
@@ -1088,7 +1088,7 @@ function toggleDungeonChest(sender, d, c) {
                 e.style.cursor = "pointer";
                 e.onclick = function(setLeadsto){
                                 ent = this.innerHTML;
-                                dungeons[d].chestlist[c].leadsto = ent;
+                                dungeons[d].chestlist[c].leadsto = dungeons[v].name;
                                 clickDungeon(d); }
                 l.appendChild(e);
             }
@@ -1111,7 +1111,7 @@ function toggleDungeonChest(sender, d, c) {
                 e.style.cursor = "pointer";
                 e.onclick = function(setLeadsto){
                                 ent = this.innerHTML;
-                                dungeons[d].chestlist[c].leadsto = ent;
+                                dungeons[d].chestlist[c].leadsto = dungeons[v].name;
                                 clickDungeon(d); }
                 l.appendChild(e);
             }
