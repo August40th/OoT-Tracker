@@ -709,7 +709,7 @@ function clickDungeon(d) {
             continue;}
         if ( dungeons[dungeonSelect] == dungeons[28] && dungeons[dungeonSelect].chestlist[key].type == "membership" && gerudobridge !== "Shuffle" ) { //Fortress Guard checks
             continue;}
-        if ( (Warps == false || RndmStart == false) && dungeonSelect == 35 ) continue;
+        if ( (Warps == false && RndmStart == false) && dungeonSelect == 35 ) continue;
         if (OWERmap == false && (dungeonSelect == 33 || dungeonSelect == 34 ) ) continue;
 
         var s = document.createElement('li');
@@ -2018,7 +2018,7 @@ function updateMap() {
                 continue;}
             if ( OWERmap == true && dungeons[k] == dungeons[13] && dungeons[k].chestlist[key].OWER == false ) {
                 continue;}
-            if ( (Warps == false || RndmStart == false) && k == 35 ) continue;
+            if ( (Warps == false && RndmStart == false) && k == 35 ) continue;
             if (OWERmap == false && (k == 33 || k == 34 ) ) continue;            
             
             if (dungeons[k].chestlist.hasOwnProperty(key)) {
@@ -2229,7 +2229,7 @@ function populateMapdiv() {
                 continue;}
             if ( OWERmap == true && dungeons[k] == dungeons[13] && dungeons[k].chestlist[key].OWER == false ) {
                 continue;}
-            if ( (Warps == false || RndmStart == false) && k == 35 ) continue;
+            if ( (Warps == false && RndmStart == false) && k == 35 ) continue;
             if (OWERmap == false && (k == 33 || k == 34 ) ) continue;
             if (dungeons[k].chestlist.hasOwnProperty(key)) {
                 if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable()) {
@@ -2334,7 +2334,7 @@ function populateMapdiv() {
             continue;}
         if ( OWERmap == true && dungeons[dungeonSelect] == dungeons[13] && dungeons[dungeonSelect].chestlist[key].OWER == false ) { //Fortress Guard checks
                 continue;}
-        if ( (Warps == false || RndmStart == false) && dungeonSelect == 35 ) continue;
+        if ( (Warps == false && RndmStart == false) && dungeonSelect == 35 ) continue;
         if (OWERmap == false && (dungeonSelect == 33 || dungeonSelect == 34 ) ) continue;
 
         var s = document.createElement('li');
