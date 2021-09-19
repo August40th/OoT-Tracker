@@ -4530,30 +4530,30 @@ var dungeons = [
    },
    { name: "Spawns & Warps", x: "63.5%", y: "86.2%", type: "overworld", found: true,
       chestlist: {
-         'Child Spawn': { x: "61%", y: "45%", leadsto: "unknown", type: "warp", access: "warp",
+         'Child Spawn': { x: "61%", y: "45%", leadsto: "unknown", type: "spawn", access: "spawn",
          isAvailable: function () {
-            return  items.Ocarina && items.NocturneofShadow ; }
-         }, 'Adult Spwwn': { x: "61%", y: "45%", leadsto: "unknown", type: "warp", access: "warp",
+            return  true ; }
+         }, 'Adult Spwwn': { x: "61%", y: "45%", leadsto: "unknown", type: "spawn", access: "spawn",
          isAvailable: function () {
-            return  items.Ocarina && items.NocturneofShadow ; }
+            return  true ; }
          },'Minuet': { x: "61%", y: "45%", leadsto: "unknown", type: "warp", access: "warp",
          isAvailable: function () {
-            return  items.Ocarina && items.NocturneofShadow ; }
+            return  items.Ocarina && items.MinuetofForest ; }
          }, 'Bolero': { x: "61%", y: "45%", leadsto: "unknown", type: "warp", access: "warp",
          isAvailable: function () {
-            return  items.Ocarina && items.NocturneofShadow ; }
+            return  items.Ocarina && items.BoleroofFire ; }
          },'Serenade': { x: "61%", y: "45%", leadsto: "unknown", type: "warp", access: "warp",
          isAvailable: function () {
-            return  items.Ocarina && items.NocturneofShadow ; }
+            return  items.Ocarina && items.SerenadeofWater ; }
          },'Noturne': { x: "61%", y: "45%", leadsto: "unknown", type: "warp", access: "warp",
          isAvailable: function () {
             return  items.Ocarina && items.NocturneofShadow ; }
          },'Requiem': { x: "61%", y: "45%", leadsto: "unknown", type: "warp", access: "warp",
          isAvailable: function () {
-            return  items.Ocarina && items.NocturneofShadow ; }
+            return  items.Ocarina && items.RequiemofSpirit ; }
          },'Prelude': { x: "61%", y: "45%", leadsto: "unknown", type: "warp", access: "warp",
          isAvailable: function () {
-            return  items.Ocarina && items.NocturneofShadow ; }
+            return  items.Ocarina && items.PreludeofLight ; }
          },
       }, isBeatable: function () { return this.canGetChest(); 
       }, canGetChest: function () { return generalCanGetChest(this.chestlist); }
