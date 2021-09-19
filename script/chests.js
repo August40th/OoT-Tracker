@@ -1897,16 +1897,14 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[10].found == true && items.SpiritKey && (items.Ocarina && items.RequiemofSpirit && items.Bombs) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2) && items.Lens && items.Magic) || (items.Ocarina && items.RequiemofSpirit)) && items.Glove >= 2);
             },
-         },
-         'Hand to Desert 1' : { x: "99%", y: "50%", leadsto: "Desert Colossus", type: "dungeon", access: "dungeon",
+         }, 'Temple Right Hand' : { x: "99%", y: "50%", leadsto: "Temple Right Hand", type: "dungeon", access: "dungeon",
          isAvailable: function () {
-            return true ; }
+            return false; }
          }, 'Colossus Right Hand Chest': { x: "26%", y: "83%", leadsto: "unknown", floor: "2", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[10].found == true && (items.RequiemofSpirit && items.SpiritKey >= 2 && items.Ocarina && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.Bombs || (items.Bombchu && BombchuLogic))) || (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && items.MasterSword && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic)) && items.SpiritKey >= 2);
             }
-         },
-         'Wolfos Lullaby Chest': { x: "54.5%", y: "22%", leadsto: "unknown", floor: "0", type: "chest", access: "vanilla",
+         }, 'Wolfos Lullaby Chest': { x: "54.5%", y: "22%", leadsto: "unknown", floor: "0", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[10].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && ((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && items.Hookshot && items.Ocarina && items.ZeldasLullaby;
             }
@@ -1914,28 +1912,23 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[10].found == true && ((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2) && items.Lens && items.Magic) || (items.Ocarina && items.RequiemofSpirit)) && items.Glove >= 2;
             },
-         },
-         'Silver Rupee Halfpipe': { x: "79%", y: "10%", leadsto: "unknown", floor: "0", type: "chest", access: "vanilla",
+         }, 'Silver Rupee Halfpipe': { x: "79%", y: "10%", leadsto: "unknown", floor: "0", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[10].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && ((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic));
             }
-         },
-         'Floormaster Left Chest': { x: "69%", y: "35%", leadsto: "unknown", floor: "1", type: "chest", access: "vanilla",
+         }, 'Floormaster Left Chest': { x: "69%", y: "35%", leadsto: "unknown", floor: "1", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[10].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.SpiritKey && ((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic));
             }
-         },
-         'Floormaster Right Chest': { x: "66.5%", y: "35%", leadsto: "unknown", floor: "1", type: "chest", access: "vanilla",
+         }, 'Floormaster Right Chest': { x: "66.5%", y: "35%", leadsto: "unknown", floor: "1", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[10].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.SpiritKey && ((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic));
             }
-         },
-         'Top Right after Lullaby': { x: "59%", y: "20%", leadsto: "unknown", floor: "2", type: "chest", access: "vanilla",
+         }, 'Top Right after Lullaby': { x: "59%", y: "20%", leadsto: "unknown", floor: "2", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[10].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.SpiritKey && (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic))) && items.Ocarina && items.ZeldasLullaby && (items.HoverBoots || items.Hookshot);
             }
-         },
-         'Statue\'s Hand after Lullaby': { x: "40%", y: "26%", leadsto: "unknown", floor: "1", type: "chest", access: "vanilla",
+         }, 'Statue\'s Hand after Lullaby': { x: "40%", y: "26%", leadsto: "unknown", floor: "1", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[10].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.SpiritKey && (((((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2)) || items.RequiemofSpirit) && items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic))) && items.Ocarina && items.ZeldasLullaby;
             }
@@ -1958,10 +1951,9 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[10].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.SpiritKey >= 2 && items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic)) && (items.Bombs || (items.Bombchu && BombchuLogic)) && ((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2 || items.RequiemofSpirit);
             }
-         },
-         'Hand to Desert 2': { x: "99%", y: "50%", leadsto: "Desert Colossus", type: "dungeon", access: "dungeon",
+         }, 'Temple Left Hand': { x: "99%", y: "50%", leadsto: "Temple Left Hand", type: "dungeon", access: "dungeon",
             isAvailable: function () {
-               return true ; }
+               return false ; }
          }, 'Colossus Left Hand Chest': { x: "71%", y: "83%", leadsto: "unknown", floor: "2", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[10].found == true && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && items.MasterSword && items.SpiritKey >= 2 && items.Glove >= 2 && (items.Bow || items.Hookshot || (items.Bombchu && BombchuLogic)) && (items.Bombs || (items.Bombchu && BombchuLogic)) && ((items.EponasSong && items.HoverBoots) || items.Hookshot >= 2 || items.RequiemofSpirit);
@@ -4706,7 +4698,10 @@ var dungeons = [
                    ) || (items.Ocarina && items.RequiemofSpirit) 
                  ) ;
             }
-         }, 'Spirit Temple': { x: "9%", y: "45%", leadsto: "unknown", type: "dungeon", access: "door",
+         }, 'Temple Right Hand': { x: "99%", y: "50%", leadsto: "none", type: "dungeon", access: "dungeon",
+            isAvailable: function () {
+               return false ; }
+         },'Spirit Temple': { x: "9%", y: "45%", leadsto: "unknown", type: "dungeon", access: "door",
                isAvailable: function () {
                   return (OWERmap == false || dungeons[29].found == true)
                && ( (items.Membership && (items.HoverBoots || items.Hookshot >= 2) 
@@ -4714,6 +4709,9 @@ var dungeons = [
                    ) || (items.Ocarina && items.RequiemofSpirit) 
                  ) ;
                }
+         }, 'Temple Left Hand': { x: "99%", y: "55%", leadsto: "none", type: "dungeon", access: "dungeon",
+            isAvailable: function () {
+               return false ; }
          },
          'Song from Sheik': { x: "13%", y: "45%", leadsto: "unknown", type: "song", access: "outdoor",
             isAvailable: function () {
