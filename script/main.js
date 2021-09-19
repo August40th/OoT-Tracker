@@ -611,6 +611,7 @@ function clickDungeon(d) {
                 c.onmouseover = new Function('highlight(this' + ',"' + key + '")');
                 c.onmouseout = new Function('unhighlight(this' + ',"' + key + '")');
                 for ( var v = 0; v < dungeons.length; v++) {
+                    if (v == dungeonSelect) continue;
                     for (var ent in dungeons[v].chestlist) {
                         if (dungeons[dungeonSelect].chestlist[key].leadsto == ent) {
                             let mapDivWidth = 828;
