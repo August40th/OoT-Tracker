@@ -935,12 +935,13 @@ function toggleDungeonChest(sender, d, c) {
                 var e = document.createElement('li');
                 e.innerHTML = dungeons[k].name;
                 e.className = k;
+                e.id = k;
                 e.onmouseover = new Function('highlightDungeonChest(this)');
                 e.onmouseout = new Function('unhighlightDungeonChest(this)');
                 e.style.cursor = "pointer";
                 e.onclick = function (openarea) {
+                    var v = this.id;
                     l.innerHTML = '';
-                    var v = this.className;
                     for (var ent in dungeons[v].chestlist) {
                         if (dungeons[v].chestlist[ent].type == "entrance" && dungeons[v].chestlist[ent].leadsto == "unknown") {
                             var ee = document.createElement('li');
@@ -1021,12 +1022,13 @@ function toggleDungeonChest(sender, d, c) {
                 var e = document.createElement('li');
                 e.innerHTML = dungeons[k].name;
                 e.className = k;
+                e.id = k;
                 e.onmouseover = new Function('highlightDungeonChest(this)');
                 e.onmouseout = new Function('unhighlightDungeonChest(this)');
                 e.style.cursor = "pointer";
                 e.onclick = function (openarea) {
+                    var v = this.id;
                     l.innerHTML = '';
-                    var v = this.className;
                     for (var ent in dungeons[v].chestlist) {
                         if (dungeons[v].chestlist[ent].type == "dungeon" && dungeons[v].chestlist[ent].leadsto == "unknown") {
                             var ee = document.createElement('li');
