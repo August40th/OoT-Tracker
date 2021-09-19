@@ -613,7 +613,7 @@ function clickDungeon(d) {
                 for ( var v = 0; v < dungeons.length; v++) {
                     if (v == dungeonSelect) continue;
                     for (var ent in dungeons[v].chestlist) {
-                        if (dungeons[dungeonSelect].chestlist[key].leadsto == ent) {
+                        if (dungeons[dungeonSelect].chestlist[key].leadsto == ent || dungeons[dungeonSelect].chestlist[key].leadsto == dungeons[v].name + ' ' + ent) {
                             let mapDivWidth = 828;
                             let mapDivHeight = 420;
 
@@ -623,7 +623,7 @@ function clickDungeon(d) {
                             let y2 = parseFloat(dungeons[v].y)*mapDivHeight/100;
 
                             var l = document.createElement('eline');
-                            l.innerHTML = key + 'leads to ' + ent;
+                            //l.innerHTML = key + ' leads to ' + ent;
                             l.id = 'eline';
                             l.style.height = '4px';
                             l.style.width = findDistance(x1, y1, x2, y2 ) + 'px';
