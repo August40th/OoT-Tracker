@@ -1073,7 +1073,7 @@ function findAngle(x1, y1, x2, y2) {
     if (y1 < y2) distanceY = y2 - y1;
     else if (y1 > y2) distanceY = y1 - y2;
     angle = Math.atan2(distanceY, distanceX);
-    angle = angle * 180 * Math.PI;
+    angle = angle * 180 / Math.PI;
     if (y2 < y1 && x2 < x1) angle = 225; //top l
     else if (y2 > y1 && x2 < x1) angle = 135; //bottom l
     else if (y2 < y1 && x2 > x1) angle = 315; //top r
