@@ -4530,7 +4530,7 @@ var dungeons = [
       }, isBeatable: function () { return this.canGetChest(); 
       }, canGetChest: function () { return generalCanGetChest(this.chestlist); }
    },
-   { name: "Spawns & Warps", x: "63.5%", y: "86.2%", type: "overworld", found: true,
+   { name: "Spawns & Warps", x: "58.5%", y: "72%", type: "overworld", found: true,
       chestlist: {
          'Child Spawn': { x: "61%", y: "45%", leadsto: "unknown", type: "spawn", access: "spawn",
          isAvailable: function () {
