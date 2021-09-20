@@ -992,6 +992,7 @@ function toggleDungeonChest(sender, d, c) {
         for ( var k = 0; k < 35; k++) {
             if ( (k == 0 || k > 12) && c !== "Dungeon Door") continue;
             if ( (k > 0 && k < 13) && c == "Dungeon Door") continue;
+            if (OWERmap == false && (k == 33 || k == 34 ) ) continue;
             printdun = false;
             for (var key in dungeons[k].chestlist) {
                 if (dungeons[k].chestlist[key].type == "dungeon" && dungeons[k].chestlist[key].leadsto == "unknown") {
@@ -1036,6 +1037,7 @@ function toggleDungeonChest(sender, d, c) {
         l.innerHTML = '';
         for ( var k = 0; k < 35; k++) {
             if ( k > 0 && k < 13 ) continue;
+            if (OWERmap == false && (k == 33 || k == 34 ) ) continue;
             printdun =true;
             if (printdun == true) {
                 var e = document.createElement('li');
@@ -1059,6 +1061,7 @@ function toggleDungeonChest(sender, d, c) {
         l.innerHTML = '';
         for ( var k = 0; k < 35; k++) {
             if ( k > 0 && k < 13 ) continue;
+            if (OWERmap == false && (k == 33 || k == 34 ) ) continue;
             printdun =true;
             if (printdun == true) {
                 var e = document.createElement('li');
@@ -1082,6 +1085,7 @@ function toggleDungeonChest(sender, d, c) {
         l.innerHTML = '';
         for ( var k = 0; k < 35; k++) {
             if ( k > 0 && k < 13 ) continue;
+            if (OWERmap == false && (k == 33 || k == 34 ) ) continue;
             printdun =true;
             if (printdun == true) {
                 var e = document.createElement('li');
