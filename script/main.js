@@ -991,6 +991,7 @@ function toggleDungeonChest(sender, d, c) {
         l.innerHTML = '';
         for ( var k = 0; k < 35; k++) {
             if ( (k == 0 || k > 12) && c !== "Dungeon Door") continue;
+            if ( (k > 0 && k < 13) && c == "Dungeon Door") continue;
             printdun = false;
             for (var key in dungeons[k].chestlist) {
                 if (dungeons[k].chestlist[key].type == "dungeon" && dungeons[k].chestlist[key].leadsto == "unknown") {
