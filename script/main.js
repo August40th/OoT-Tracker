@@ -583,72 +583,45 @@ function clickDungeon(d) {
     }
 
     for (var key in dungeons[dungeonSelect].chestlist) {
-        if ( dungeons[dungeonSelect].chestlist[key].leadsto !== "none" ) {
-            if ((OWERmap == true && dungeons[dungeonSelect].chestlist[key].type == "entrance") || 
-                (DungeonER == true && dungeons[dungeonSelect].chestlist[key].type == "dungeon") || 
-                (Owls == true && dungeons[dungeonSelect].chestlist[key].type == "owl") ||
-                (Warps == true && dungeons[dungeonSelect].chestlist[key].type == "warp") ||
-                (RndmStart == true && dungeons[dungeonSelect].chestlist[key].type == "spawn")) { 
-                var c = document.createElement('span');
-                c.innerHTML = 'x';
-                c.id = dungeons[dungeonSelect].chestlist[key].type;
-                c.className = key;
-                c.style.cursor = 'pointer';
-                c.style.position = 'absolute';
-                c.style.width = '16px';
-                c.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
-                c.style.top = dungeons[dungeonSelect].chestlist[key].y;
-                c.style.left = dungeons[dungeonSelect].chestlist[key].x;
-                minimap.appendChild(c);
+        if ((OWERmap == true && dungeons[dungeonSelect].chestlist[key].type == "entrance") || 
+            (DungeonER == true && dungeons[dungeonSelect].chestlist[key].type == "dungeon") || 
+            (Owls == true && dungeons[dungeonSelect].chestlist[key].type == "owl") ||
+            (Warps == true && dungeons[dungeonSelect].chestlist[key].type == "warp") ||
+            (RndmStart == true && dungeons[dungeonSelect].chestlist[key].type == "spawn")) {
+            for ( var v = 0; v < dungeons.length; v++) {
+                if (v == dungeonSelect) continue;
+                for (var ent in dungeons[v].chestlist) {
+                    if (dungeons[dungeonSelect].chestlist[key].leadsto == ent || dungeons[dungeonSelect].chestlist[key].leadsto == dungeons[v].name + ' ' + ent || dungeons[dungeonSelect].chestlist[key].leadsto == dungeons[v].name) {
+                        let mapDivWidth = 828;
+                        let mapDivHeight = 420;
 
-                var cc = document.createElement('span');
-                cc.className = 'minimap ' + key;
-                cc.innerHTML = dungeons[dungeonSelect].chestlist[key].leadsto;
-                cc.id = 'minimap ' + key;
-                cc.style.width = '160px';
-                cc.style.backgroundColor = 'black';
-                cc.style.color = '#fff';
-                cc.style.position = 'absolute';
-                cc.style.textAlign = 'center';
-                cc.style.fontSize = '20px';
-                c.appendChild(cc);
-                c.onmouseover = new Function('highlight(this' + ',"' + key + '")');
-                c.onmouseout = new Function('unhighlight(this' + ',"' + key + '")');
-                for ( var v = 0; v < dungeons.length; v++) {
-                    if (v == dungeonSelect) continue;
-                    for (var ent in dungeons[v].chestlist) {
-                        if (dungeons[dungeonSelect].chestlist[key].leadsto == ent || dungeons[dungeonSelect].chestlist[key].leadsto == dungeons[v].name + ' ' + ent || dungeons[dungeonSelect].chestlist[key].leadsto == dungeons[v].name) {
-                            let mapDivWidth = 828;
-                            let mapDivHeight = 420;
+                        let x1 = parseFloat(dungeons[dungeonSelect].x)*mapDivWidth/100;
+                        let y1 = parseFloat(dungeons[dungeonSelect].y)*mapDivHeight/100;
+                        let x2 = parseFloat(dungeons[v].x)*mapDivWidth/100;
+                        let y2 = parseFloat(dungeons[v].y)*mapDivHeight/100;
 
-                            let x1 = parseFloat(dungeons[dungeonSelect].x)*mapDivWidth/100;
-                            let y1 = parseFloat(dungeons[dungeonSelect].y)*mapDivHeight/100;
-                            let x2 = parseFloat(dungeons[v].x)*mapDivWidth/100;
-                            let y2 = parseFloat(dungeons[v].y)*mapDivHeight/100;
-
-                            var l = document.createElement('eline');
-                            l.id = 'eline';
-                            l.style.height = '4px';
-                            l.style.width = findDistance(x1, y1, x2, y2 ) + 'px';
-                            l.style.transformOrigin = "0 0";
-                            l.style.transform = 'rotate('+ findAngle(x1, y1, x2, y2 ) + 'deg)';
-                            l.style.position = 'absolute';
-                            l.style.whiteSpace = 'nowrap';
-                            l.style.backgroundColor = 'aqua';
-                            l.style.left = x1+"px";
-                            l.style.top = y1+"px";
-                            
-                            var ll = document.createElement('span');
-                            ll.innerHTML = key + ' leads to ' + ent;
-                            ll.onmouseover = ll.style.visibility = 'visible';
-                            ll.onmouseout = ll.style.visibility = 'hidden';
+                        var l = document.createElement('eline');
+                        l.id = 'eline';
+                        l.style.height = '4px';
+                        l.style.width = findDistance(x1, y1, x2, y2 ) + 'px';
+                        l.style.transformOrigin = "0 0";
+                        l.style.transform = 'rotate('+ findAngle(x1, y1, x2, y2 ) + 'deg)';
+                        l.style.position = 'absolute';
+                        l.style.whiteSpace = 'nowrap';
+                        l.style.backgroundColor = 'aqua';
+                        l.style.left = x1+"px";
+                        l.style.top = y1+"px";
+                         
+                        var ll = document.createElement('span');
+                        ll.innerHTML = key + ' leads to ' + ent;
+                        ll.onmouseover = ll.style.visibility = 'visible';
+                        ll.onmouseout = ll.style.visibility = 'hidden';
                            
-                            l.appendChild(ll);
-                            document.getElementById('mapdiv').appendChild(l);
-                        }
+                        l.appendChild(ll);
+                        document.getElementById('mapdiv').appendChild(l);
+                    }
                 } }
-            }
-            continue;}
+        }
         if ( dungeons[dungeonSelect].type == "dungeon" && quest == "Mixed" && dungeons[dungeonSelect].mixedtype == "master" && dungeons[dungeonSelect].chestlist[key].access == "master") { //Mixed quest checks
             continue;}
         if ( dungeons[dungeonSelect] .type == "dungeon" && quest == "Mixed" && dungeons[dungeonSelect].mixedtype == "vanilla" && dungeons[dungeonSelect].chestlist[key].access == "vanilla") { //Mixed quest checks
