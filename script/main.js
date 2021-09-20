@@ -583,8 +583,12 @@ function clickDungeon(d) {
     }
 
     for (var key in dungeons[dungeonSelect].chestlist) {
-        if ( dungeons[dungeonSelect].chestlist[key].leadsto !== "unknown" && (dungeons[dungeonSelect].chestlist[key].type == "entrance" || dungeons[dungeonSelect].chestlist[key].type == "dungeon" || dungeons[dungeonSelect].chestlist[key].type == "owl" || dungeons[dungeonSelect].chestlist[key].type == "warp" || dungeons[dungeonSelect].chestlist[key].type == "spawn") ) { //  
-            if (OWERmap == true ) { 
+        if ( dungeons[dungeonSelect].chestlist[key].leadsto !== "unknown" ) {
+            if ((OWERmap == true && dungeons[dungeonSelect].chestlist[key].type == "entrance") || 
+                (DungeonER == true && dungeons[dungeonSelect].chestlist[key].type == "dungeon") || 
+                (Owls == true && dungeons[dungeonSelect].chestlist[key].type == "owl") ||
+                (Warps == true && dungeons[dungeonSelect].chestlist[key].type == "warp") ||
+                (RndmStart == true && dungeons[dungeonSelect].chestlist[key].type == "spawn")) { 
                 var c = document.createElement('span');
                 c.innerHTML = 'x';
                 c.id = dungeons[dungeonSelect].chestlist[key].type;
@@ -920,7 +924,7 @@ function toggleDungeonChest(sender, d, c) {
         sender.className = 'DCunavailable';
     
     var printdun;
-    if (dungeons[d].chestlist[c].type == "entrance" ) {
+    if (dungeons[d].chestlist[c].type == "entrance" && mixphoo !== "Full") {
         var t = document.getElementById('submaparea');
         var l = document.getElementById('submaplist');
         t.innerHTML = c + ' leads to';
@@ -963,7 +967,7 @@ function toggleDungeonChest(sender, d, c) {
             }
         }
     }
-    if (dungeons[d].chestlist[c].leadsto == "unknown" && dungeons[d].chestlist[c].type == "simple" || (IndoorER == "Full" && dungeons[d].chestlist[c].type == "alldoor")) { 
+    if (mixphoo !== "Full" && dungeons[d].chestlist[c].leadsto == "unknown" && dungeons[d].chestlist[c].type == "simple" || (IndoorER == "Full" && dungeons[d].chestlist[c].type == "alldoor")) { 
         var t = document.getElementById('submaparea');
         var l = document.getElementById('submaplist');
         t.innerHTML = c + ' leads to';
@@ -985,7 +989,7 @@ function toggleDungeonChest(sender, d, c) {
             }
         }
     }
-    if (dungeons[d].chestlist[c].leadsto == "unknown" && dungeons[d].chestlist[c].type == "grotto" ) { 
+    if (mixphoo !== "Full" && dungeons[d].chestlist[c].leadsto == "unknown" && dungeons[d].chestlist[c].type == "grotto" ) { 
         var t = document.getElementById('submaparea');
         var l = document.getElementById('submaplist');
         t.innerHTML = c + ' leads to';
@@ -1007,7 +1011,7 @@ function toggleDungeonChest(sender, d, c) {
             }
         }
     }
-    if (dungeons[d].chestlist[c].leadsto == "unknown" && dungeons[d].chestlist[c].type == "dungeon" ) { 
+    if (mixphoo !== "Full" && dungeons[d].chestlist[c].leadsto == "unknown" && dungeons[d].chestlist[c].type == "dungeon" ) { 
         var t = document.getElementById('submaparea');
         var l = document.getElementById('submaplist');
         t.innerHTML = c + ' leads to';
@@ -1056,7 +1060,7 @@ function toggleDungeonChest(sender, d, c) {
         t.innerHTML = c + ' leads to';
         l.innerHTML = '';
         for ( var k = 0; k < dungeons.length; k++) {
-            if ( k > 0 && k < 13 && (mixphoo == "Off" || DungeonER == false) ) continue;
+            if ( k > 0 && k < 13 ) continue;
             printdun =true;
             if (printdun == true) {
                 var e = document.createElement('li');
@@ -1079,7 +1083,7 @@ function toggleDungeonChest(sender, d, c) {
         t.innerHTML = c + ' leads to';
         l.innerHTML = '';
         for ( var k = 0; k < dungeons.length; k++) {
-            if ( k > 0 && k < 13 && (mixphoo == "Off" || DungeonER == false) ) continue;
+            if ( k > 0 && k < 13 ) continue;
             printdun =true;
             if (printdun == true) {
                 var e = document.createElement('li');
@@ -1102,7 +1106,7 @@ function toggleDungeonChest(sender, d, c) {
         t.innerHTML = c + ' leads to';
         l.innerHTML = '';
         for ( var k = 0; k < dungeons.length; k++) {
-            if ( k > 0 && k < 13 && (mixphoo == "Off" || DungeonER == false) ) continue;
+            if ( k > 0 && k < 13 ) continue;
             printdun =true;
             if (printdun == true) {
                 var e = document.createElement('li');
