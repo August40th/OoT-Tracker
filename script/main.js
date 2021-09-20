@@ -646,6 +646,8 @@ function clickDungeon(d) {
             continue;}
         if ( dungeons[dungeonSelect].chestlist[key].access == "door" && dungeons[dungeonSelect].chestlist[key].type == "dungeon" && DungeonER == false ) { // Dungeon doorways
             continue;}
+        if ( dungeons[dungeonSelect].chestlist[key].access == "dungeon" && dungeons[dungeonSelect].chestlist[key].type == "dungeon" && DungeonER == false ) { // Dungeon doorways
+            continue;}
         if ( dungeons[dungeonSelect].chestlist[key].access == "simple" && IndoorER !== "Off" ) { //simple indoor checks
             continue;}
         if ( dungeons[dungeonSelect].chestlist[key].access == "alldoor" && IndoorER == "Full" ) { //Link's House, ToT, and windmill checks
@@ -688,6 +690,7 @@ function clickDungeon(d) {
             continue;}
         if ( (Warps == false && RndmStart == false) && dungeonSelect == 35 ) continue;
         if (OWERmap == false && (dungeonSelect == 33 || dungeonSelect == 34 ) ) continue;
+        if ( dungeons[dungeonSelect].chestlist[key].leadsto == "none" || dungeons[dungeonSelect].chestlist[key].leadsto == "Spirit Right Hand" || dungeons[dungeonSelect].chestlist[key].leadsto == "Spirit Left Hand") continue;
 
         var s = document.createElement('li');
         if (dungeons[dungeonSelect].chestlist[key].leadsto == "unknown") s.innerHTML = key;
@@ -2010,6 +2013,8 @@ function updateMap() {
                 continue;}
             if ( dungeons[k].chestlist[key].access == "door" && dungeons[k].chestlist[key].type == "dungeon" && DungeonER == false ) { // Dungeon doorways
                 continue;}
+            if ( dungeons[k].chestlist[key].access == "dungeon" && dungeons[k].chestlist[key].type == "dungeon" && DungeonER == false ) { // Dungeon doorways
+                continue;}
             if ( dungeons[k].chestlist[key].access == "simple" && IndoorER !== "Off" ) { //simple indoor checks
                 continue;}
             if ( dungeons[k].chestlist[key].access == "alldoor" && IndoorER == "Full" ) { //Link's House, ToT, and windmill checks
@@ -2051,7 +2056,9 @@ function updateMap() {
             if ( (OWERmap == true || IndoorER !== "Off") && dungeons[k].chestlist[key].OWER == false ) { 
                 continue;}
             if ( (Warps == false && RndmStart == false) && k == 35 ) continue;
-            if (OWERmap == false && (k == 33 || k == 34 ) ) continue;            
+            if (OWERmap == false && (k == 33 || k == 34 ) ) continue;
+            if ( dungeons[k].chestlist[key].leadsto == "none" || dungeons[k].chestlist[key].leadsto == "Spirit Right Hand" || dungeons[k].chestlist[key].leadsto == "Spirit Left Hand") continue;
+
             
             if (dungeons[k].chestlist.hasOwnProperty(key)) {
                 if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable()) {
@@ -2221,6 +2228,8 @@ function populateMapdiv() {
                 continue;}
             if ( dungeons[k].chestlist[key].access == "door" && dungeons[k].chestlist[key].type == "dungeon" && DungeonER == false ) { // Dungeon doorways
                 continue;}
+            if ( dungeons[k].chestlist[key].access == "dungeon" && dungeons[k].chestlist[key].type == "dungeon" && DungeonER == false ) { // Dungeon doorways
+                continue;}
             if ( dungeons[k].chestlist[key].access == "simple" && IndoorER !== "Off" ) { //simple indoor checks
                 continue;}
             if ( dungeons[k].chestlist[key].access == "alldoor" && IndoorER == "Full" ) { //Link's House, ToT, and windmill checks
@@ -2263,6 +2272,9 @@ function populateMapdiv() {
                 continue;}
             if ( (Warps == false && RndmStart == false) && k == 35 ) continue;
             if (OWERmap == false && (k == 33 || k == 34 ) ) continue;
+            if ( dungeons[k].chestlist[key].leadsto == "none" || dungeons[k].chestlist[key].leadsto == "Spirit Right Hand" || dungeons[k].chestlist[key].leadsto == "Spirit Left Hand") continue;
+
+            
             if (dungeons[k].chestlist.hasOwnProperty(key)) {
                 if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable()) {
                     DCcount++;
@@ -2326,6 +2338,8 @@ function populateMapdiv() {
             continue;}
         if ( dungeons[dungeonSelect].chestlist[key].access == "door" && dungeons[dungeonSelect].chestlist[key].type == "dungeon" && DungeonER == false ) { // Dungeon doorways
             continue;}
+        if ( dungeons[dungeonSelect].chestlist[key].access == "dungeon" && dungeons[dungeonSelect].chestlist[key].type == "dungeon" && DungeonER == false ) { // Dungeon doorways
+            continue;}
         if ( dungeons[dungeonSelect].chestlist[key].access == "simple" && IndoorER !== "Off" ) { //simple indoor checks
             continue;}
         if ( dungeons[dungeonSelect].chestlist[key].access == "alldoor" && IndoorER == "Full" ) { //Link's House, ToT, and windmill checks
@@ -2368,6 +2382,7 @@ function populateMapdiv() {
                 continue;}
         if ( (Warps == false && RndmStart == false) && dungeonSelect == 35 ) continue;
         if (OWERmap == false && (dungeonSelect == 33 || dungeonSelect == 34 ) ) continue;
+        if ( dungeons[dungeonSelect].chestlist[key].leadsto == "none" || dungeons[dungeonSelect].chestlist[key].leadsto == "Spirit Right Hand" || dungeons[dungeonSelect].chestlist[key].leadsto == "Spirit Left Hand") continue;
 
         var s = document.createElement('li');
         s.innerHTML = key;
