@@ -709,7 +709,8 @@ function clickDungeon(d) {
         s.style.cursor = "pointer";
 
         DClist.appendChild(s);
-
+        
+        if ( (dungeons[dungeonSelect].mixedtype == "vanilla" && dungeons[dungeonSelect].chestlist[key].access == "master") || (dungeons[dungeonSelect].mixedtype == "master" && dungeons[dungeonSelect].chestlist[key].access == "vanilla") ) continue;
         if ( (dungeons[dungeonSelect].chestlist[key].floor == here && dungeons[dungeonSelect].type == "dungeon") || dungeons[dungeonSelect].type == "overworld") {
             c = document.createElement('span');
             c.innerHTML = 'x';
