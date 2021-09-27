@@ -1135,8 +1135,8 @@ function findDistance(x1, y1, x2, y2) {
     else if (x1 > x2) distanceX = x1 - x2;
     if (y1 < y2) distanceY = y2 - y1;
     else if (y1 > y2) distanceY = y1 - y2;
-    if (x1 == x2) distance = distanceY
-    else if (y1 == y2) distance = distanceX
+    if (x1 == x2) distance = distanceY;
+    else if (y1 == y2) distance = distanceX;
     else distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
     return distance;
 }
@@ -1407,9 +1407,9 @@ function setOWER(sender) {
    } if (OWERmap == true) {
    document.getElementById('dungeon33').style.visibility = 'unset';
    document.getElementById('dungeon34').style.visibility = 'unset';
-   } if (Warps == false && Rndmstrt == false) {
+   } if (Warps == false && RndmStart  == false) {
    document.getElementById('dungeon35').style.visibility = 'hidden';
-   } if (Warps == true || Rndmstrt == true) {
+   } if (Warps == true || RndmStart  == true) {
    document.getElementById('dungeon35').style.visibility = 'unset';
    } 
 
