@@ -615,14 +615,12 @@ function clickDungeon(d) {
                         var ll = document.createElement('span');
                         ll.className = 'linelabel';
                         ll.innerHTML = key + ' leads to ' + ent;
-                        ll.backgroundColor = 'black';
-                        ll.fontsize = '20px';
-                        ll.fontcolor = 'white';
                         ll.onmouseover = function (showit) {
-                            ll.style.visibility = 'unset';
+                            ll.className = 'linelabelshow';
                             ll.style.visibility = 'visible';
                         }
                         ll.onmouseout = function (hideit) {
+                            ll.className = 'gone';
                             ll.style.visibility = 'hidden'; }
                            
                         l.appendChild(ll);
