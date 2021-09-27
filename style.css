@@ -218,7 +218,7 @@ label {
     color: rgb(0,0,0);
 }
 
-.mapspan .tooltipgray, .linelabelshow {
+.mapspan .tooltipgray, .linelabel {
     visibility: hidden;
     width: 160px;
     font-size: 20;
