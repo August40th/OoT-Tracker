@@ -622,8 +622,10 @@ function clickDungeon(d) {
                         var ll = document.createElement('span');
                         ll.id = key + ' linelable ' + ent;
                         ll.innerHTML = key + ' leads to ' + ent;
-                        ll.onmouseout = new Function('lineunhighlight(this)')
-                        ll.onmouseover = new Function('linehighlight(this)');
+                        l.onmouseout = ll.style.visibility = 'hidden';
+                        l.onmouseover = ll.style.visibility = 'visible';
+                        //ll.onmouseout = new Function('lineunhighlight(this)')
+                        //ll.onmouseover = new Function('linehighlight(this)');
 
                         l.appendChild(ll);
                         document.getElementById('mapdiv').appendChild(l);
