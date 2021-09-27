@@ -501,12 +501,12 @@ function unhighlightDungeon(x) {
     document.getElementById('dungeon' + x).style.backgroundImage = "url(images/poi.png)";
 }
 
-function linehighlight(a) {
-    a.style.visibility = 'visible';
+function linehighlight(a, b) {
+    document.getElementById(a + ' linelable ' + b).style.visibility = 'visible';
 }
 
-function lineunhighlight(a) {
-    a.style.visibility = 'hidden';
+function lineunhighlight(a, b) {
+    document.getElementById(a + ' linelable ' + b).style.visibility = 'hidden';
 }
 
 // mark dungeon as
