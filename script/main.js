@@ -614,7 +614,7 @@ function clickDungeon(d) {
                          
                         var ll = document.createElement('span');
                         ll.innerHTML = key + ' leads to ' + ent;
-                        ll.onmouseover = ll.style.visibility = 'visible';
+                        ll.onmouseover = ll.style.visibility = 'unset';
                         ll.onmouseout = ll.style.visibility = 'hidden';
                            
                         l.appendChild(ll);
@@ -710,9 +710,8 @@ function clickDungeon(d) {
 
         DClist.appendChild(s);
         
-        if ( (dungeons[dungeonSelect].mixedtype == "vanilla" && dungeons[dungeonSelect].chestlist[key].access == "master") || (dungeons[dungeonSelect].mixedtype == "master" && dungeons[dungeonSelect].chestlist[key].access == "vanilla") ) continue;
-        if ( (dungeons[dungeonSelect].chestlist[key].floor == here && dungeons[dungeonSelect].type == "dungeon") || dungeons[dungeonSelect].type == "overworld") {
-            c = document.createElement('span');
+        if ( (dungeons[dungeonSelect].chestlist[key].floor == here && dungeons[dungeonSelect].type == "dungeon" && (dungeons[dungeonSelect].mixedtype == dungeons[dungeonSelect].chestlist[key].access || quest == 'Mixecd') ) || dungeons[dungeonSelect].type == "overworld") {
+            var c = document.createElement('span');
             c.innerHTML = 'x';
             c.id = dungeons[dungeonSelect].chestlist[key].type;
             c.className = key + ' ' + s.className;
@@ -1024,7 +1023,7 @@ function toggleDungeonChest(sender, d, c) {
                             ee.onclick = function(setLeadsto){
                                 ent = this.innerHTML;
                                 dungeons[d].chestlist[c].leadsto = dungeons[v].name + ' ' + ent;
-                                dungeons[v].chestlist[ent].leadsto = c;
+                                dungeons[v].chestlist[ent].leadsto = dungeons[d].name + ' ' + c;
                                 clickDungeon(d);
                             }
                             l.appendChild(ee); }
@@ -1117,7 +1116,13 @@ function findAngle(x1, y1, x2, y2) {
     else if (y1 > y2) distanceY = y1 - y2;
     angle = Math.atan2(distanceY, distanceX);
     angle = angle * 180 / Math.PI;
-    if (y2 < y1 && x2 < x1) angle = 180 + angle; //top l
+    if (y1 == y2) { //x axis
+        if (x2 > x1) angle = 0;
+        else if (x2 < x1) angle = 180; }
+    else if (x2 == x1) { //y axis
+        if (y2 > y1) angle = 90;
+        else if (y2 < y1) angle = 270; }
+    else if (y2 < y1 && x2 < x1) angle = 180 + angle; //top l
     else if (y2 > y1 && x2 < x1) angle = 180 - angle; //bottom l
     else if (y2 < y1 && x2 > x1) angle = 360 - angle; //top r
     else if (y2 > y1 && x2 > x1) angle = angle; //bottom r
@@ -1181,7 +1186,7 @@ function setprizesize(sender) {
 }
 
 function setQuest(sender) {
-   quest = sender.value;
+    quest = sender.value;
    if (quest == 'Master') {
       questimg = 1;
       itemsMax.ForestKey = 6;
@@ -1400,7 +1405,12 @@ function setOWER(sender) {
    } if (OWERmap == true) {
    document.getElementById('dungeon33').style.visibility = 'unset';
    document.getElementById('dungeon34').style.visibility = 'unset';
-   }
+   } if (Warps == false && Rndmstrt == false) {
+   document.getElementById('dungeon35').style.visibility = 'hidden';
+   } if (Warps == true || Rndmstrt == true) {
+   document.getElementById('dungeon35').style.visibility = 'unset';
+   } 
+
 
    updateMap();
 
