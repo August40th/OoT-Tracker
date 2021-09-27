@@ -502,11 +502,11 @@ function unhighlightDungeon(x) {
 }
 
 function linehighlight(a) {
-    document.getElementById('a').style.visibility = 'visible';
+    document.getElementById(a).style.visibility = 'visible';
 }
 
 function lineunhighlight(a) {
-    document.getElementById('a').style.visibility = 'hidden';
+    document.getElementById(a).style.visibility = 'hidden';
 }
 
 // mark dungeon as
