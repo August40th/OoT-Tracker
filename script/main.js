@@ -614,8 +614,11 @@ function clickDungeon(d) {
                          
                         var ll = document.createElement('span');
                         ll.innerHTML = key + ' leads to ' + ent;
+                        ll.backgroundColor = 'black';
+                        ll.fontSize = '20';
+                        ll.fontColor = 'white';
                         ll.onmouseover = function (showit) {
-                            ll.style.visibility = 'visible'; }
+                            ll.style.visibility = 'unset'; }
                         ll.onmouseout = function (hideit) {
                             ll.style.visibility = 'hidden'; }
                            
