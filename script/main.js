@@ -1110,12 +1110,13 @@ function toggleDungeonChest(sender, d, c) {
 }
 
 function findAngle(x1, y1, x2, y2) {
-    if (x1 < x2) distanceX = x2 - x1;
+    if (x1 <= x2) distanceX = x2 - x1;
     else if (x1 > x2) distanceX = x1 - x2;
     if (y1 < y2) distanceY = y2 - y1;
     else if (y1 > y2) distanceY = y1 - y2;
-    angle = Math.atan2(distanceY, distanceX);
-    angle = angle * 180 / Math.PI;
+    if (distanceX > 0) {
+        angle = Math.atan2(distanceY, distanceX);
+        angle = angle * 180 / Math.PI; }
     if (y1 == y2) { //x axis
         if (x2 > x1) angle = 0;
         else if (x2 < x1) angle = 180; }
