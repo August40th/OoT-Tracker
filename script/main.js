@@ -613,16 +613,14 @@ function clickDungeon(d) {
                         l.style.top = y1+"px";
                          
                         var ll = document.createElement('span');
-                        ll.className = 'linelabel';
+                        ll.id = 'linelabel';
                         ll.innerHTML = key + ' leads to ' + ent;
-                        ll.onmouseover = function (showit) {
-                            ll.className = 'linelabelshow';
-                            ll.style.visibility = 'visible';
-                        }
                         ll.onmouseout = function (hideit) {
-                            ll.className = 'gone';
-                            ll.style.visibility = 'hidden'; }
-                           
+                            document.getElementById('linelabel').style.visibility = 'hidden'; }
+                        ll.onmouseover = function (showit) {
+                            document.getElementById('linelabel').style.visibility = 'visible';
+                        }  
+                        
                         l.appendChild(ll);
                         document.getElementById('mapdiv').appendChild(l);
                     }
