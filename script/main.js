@@ -1999,7 +1999,7 @@ function gridItemRClick(row, col, corner) {
 function updateMap() {
     for (k = 0; k < dungeons.length; k++) {
         if (OWERmap == false && k >= 33) continue;
-        if (dungeonMarked.indexOf(k) !== null) document.getElementById("dungeon" + k).className = "mapspan dungeon " + dungeons[k].canGetChest() + ((dungeonMarked.indexOf(k) > -1) ? " wayofhero" : " ");
+        if (dungeonMarked.length > 0) document.getElementById("dungeon" + k).className = "mapspan dungeon " + dungeons[k].canGetChest() + ((dungeonMarked.indexOf(k) > -1) ? " wayofhero" : " ");
         else document.getElementById("dungeon" + k).className = "mapspan dungeon " + dungeons[k].canGetChest();
         var DCcount = 0;
         for (var key in dungeons[k].chestlist) {
