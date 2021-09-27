@@ -156,27 +156,6 @@ label {
     opacity: 0.45;
 }
 
-.mini{
-    width: 16;
-    height: 16;
-    vertical-align: text-bottom;
-}
-
-.boss{
-    width: 12;
-    height: 12;
-
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 75% 75%;
-
-    position: absolute;
-    margin-left: -6px;
-    margin-top: -6px;
-
-    z-index: 2;
-}
-
 .dungeon{
     width: 24;
     height: 24;
@@ -239,7 +218,7 @@ label {
     color: rgb(0,0,0);
 }
 
-.mapspan .tooltipgray {
+.mapspan .tooltipgray, .linelabelshow {
     visibility: hidden;
     width: 160px;
     font-size: 20;
@@ -255,12 +234,8 @@ label {
     margin-left: -60px;
 }
 
-.mapspan .tooltipgray:hover {
-    display: none;
-}
-
-.mapspan:hover .tooltipgray {
-    visibility: visible;
+.gone {
+    visibility: hidden;
 }
 
 .minimap {
@@ -277,14 +252,6 @@ label {
     bottom: 120%;
     left: 50%;
     margin-left: -60px;
-}
-
-.minimap:hover {
-    display: none;
-}
-
-.minimap:hover {
-    visibility: visible;
 }
 
 #submaparea {
