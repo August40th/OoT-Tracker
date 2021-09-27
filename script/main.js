@@ -625,8 +625,8 @@ function clickDungeon(d) {
                         ll.style.backgroundColor = 'black';
                         ll.style.color = 'white';
                         ll.style.fontSize = '20';
-                        l.onmouseout = new Function('lineunhighlight('ll')');
-                        l.onmouseover = new Function('linehighlight('ll')');
+                        l.onmouseout = new Function('lineunhighlight(' + ll + ')');
+                        l.onmouseover = new Function('linehighlight(' + ll + ')');
 
                         l.appendChild(ll);
                         document.getElementById('mapdiv').appendChild(l);
