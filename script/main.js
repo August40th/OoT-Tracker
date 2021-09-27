@@ -613,7 +613,7 @@ function clickDungeon(d) {
                         l.style.top = y1+"px";
                          
                         var ll = document.createElement('span');
-                        ll.className = 'line label';
+                        ll.className = 'linelabel';
                         ll.innerHTML = key + ' leads to ' + ent;
                         ll.backgroundColor = 'black';
                         ll.fontsize = '20px';
