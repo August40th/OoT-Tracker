@@ -1081,7 +1081,7 @@ var dungeons = [
          }, 'Blue Poe Chest': { x: "59%", y: "5%", leadsto: "unknown", floor: "3", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[5].found == true && items.MasterSword && items.ForestKey >= 3 && items.Hookshot && items.Bow && items.Glove; }
-         }, 'Checkerboard Chest': { x: "84%", y: "33%%", leadsto: "unknown", floor: "2", type: "chest", access: "vanilla",
+         }, 'Checkerboard Chest': { x: "84%", y: "33%", leadsto: "unknown", floor: "2", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[5].found == true && 
                   (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) &&
@@ -1142,7 +1142,7 @@ var dungeons = [
          }, 'MQ Blue Poe Chest': { x: "59%", y: "5%", leadsto: "unknown", floor: "3", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[5].found == true && items.Hookshot && items.Glove && items.ForestKey >= 2 && items.Bow; }
-         }, 'MQ Checkerboard Room Chest': { x: "83%", y: "26%", leadsto: "unknown", floor: "2", type: "chest", access: "master",
+         }, 'MQ Checkerboard Chest': { x: "83%", y: "30%", leadsto: "unknown", floor: "2", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[5].found == true && items.Hookshot && items.Glove && items.ForestKey >= 5 && items.Bow; }
          }, 'MQ Chest Near Boss Door': { x: "42%", y: "36.5%", leadsto: "unknown", floor: "0", type: "chest", access: "master",
