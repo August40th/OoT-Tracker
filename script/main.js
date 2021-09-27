@@ -625,10 +625,8 @@ function clickDungeon(d) {
                         ll.style.backgroundColor = 'black';
                         ll.style.color = 'white';
                         ll.style.fontSize = '20';
-                        l.onmouseout = function (showit) {
-                            document.getElementById(key + ' linelable ' + ent).style.visibility = 'hidden';}
-                        l.onmouseover = function (hideit) {
-                            document.getElementById(key + ' linelable ' + ent).style.visibility = 'visible';}
+                        l.onmouseout = new Function('lineunhighlight(' + key + ',"' + ent + '")');
+                        l.onmouseover = new Function('linehighlight(' + key + ',"' + ent + '")');
                         //ll.onmouseout = new Function('lineunhighlight(this)')
                         //ll.onmouseover = new Function('linehighlight(this)');
 
