@@ -1999,8 +1999,8 @@ function gridItemRClick(row, col, corner) {
 function updateMap() {
     for (k = 0; k < dungeons.length; k++) {
         if (OWERmap == false && k >= 33) continue;
-        if (dungeonMarked.length > 0) document.getElementById("dungeon" + k).className = "mapspan dungeon " + dungeons[k].canGetChest() + ((dungeonMarked.indexOf(k) > -1) ? " wayofhero" : " ");
-        else document.getElementById("dungeon" + k).className = "mapspan dungeon " + dungeons[k].canGetChest();
+        if (dungeonMarked.length == 0) document.getElementById("dungeon" + k).className = "mapspan dungeon " + dungeons[k].canGetChest();
+        else if (dungeonMarked.length > 0) document.getElementById("dungeon" + k).className = "mapspan dungeon " + dungeons[k].canGetChest() + ((dungeonMarked.indexOf(k) > -1) ? " wayofhero" : " ");
         var DCcount = 0;
         for (var key in dungeons[k].chestlist) {
             if ( dungeons[k].chestlist[key].access == "entrance" && dungeons[k].chestlist[key].type == "dungeon" ) { //Dungeon door  
