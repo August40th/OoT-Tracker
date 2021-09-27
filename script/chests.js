@@ -1160,7 +1160,7 @@ var dungeons = [
       { 'Dungeon Door': { x: "99%", y: "50%", leadsto: "unknown", floor: "0", type: "dungeon", access: "dungeon",
             isAvailable: function () {
                return false ; }
-         }, 'Chest Near Boss': { x: "63.5%", y: "36%", leadsto: "unknown", floor: "0", type: "chest", access: "vanilla",
+         }, 'Chest Near Boss': { x: "35.5%", y: "59%", leadsto: "unknown", floor: "0", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[6].found == true && items.MasterSword && (OpenForest == 1 || (items.KokiriSword && items.DekuShield && OpenForest == 0)) && (items.BoleroofFire || ((items.HoverBoots || items.Hookshot) && (items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Hammer || items.Bow || (items.Magic && items.Dins)))); }
          }, 'Before 1st Fire Dancer Skulltula': { x: "57%", y: "23%", leadsto: "unknown", floor: "0", type: "skulltula", access: "vanilla",
@@ -1233,7 +1233,7 @@ var dungeons = [
                                   || items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove || items.Bow || (items.Magic && items.Dins)) //:ink the Goron
                             )
                       ); }
-         }, 'MQ Chest Near Boss Door': { x: "36.5%", y: "61%", leadsto: "unknown", floor: "0", type: "chest", access: "master",
+         }, 'MQ Chest Near Boss Door': { x: "35.5%", y: "60%", leadsto: "unknown", floor: "0", type: "chest", access: "master",
             isAvailable: function () {
                return dungeons[6].found == true && (items.Magic && (items.Dins || (items.Bow && items.Fire)) &&
                        ((items.BoleroofFire && items.Ocarina) //Warp
