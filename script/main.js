@@ -622,8 +622,13 @@ function clickDungeon(d) {
                         var ll = document.createElement('span');
                         ll.id = key + ' linelable ' + ent;
                         ll.innerHTML = key + ' leads to ' + ent;
-                        l.onmouseout = ll.style.visibility = 'hidden';
-                        l.onmouseover = ll.style.visibility = 'visible';
+                        ll.style.backgroundColor = 'black';
+                        ll.style.color = 'white';
+                        ll.style.fontSize = '20';
+                        l.onmouseout = function (showit(key, ent) ) {
+                            document.getElementById(key + ' linelable ' + ent).style.visibility = 'hidden';}
+                        l.onmouseover = function (hideit(key, ent) ) {
+                            document.getElementById(key + ' linelable ' + ent).style.visibility = 'visible';}
                         //ll.onmouseout = new Function('lineunhighlight(this)')
                         //ll.onmouseover = new Function('linehighlight(this)');
 
