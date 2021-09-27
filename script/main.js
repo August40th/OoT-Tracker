@@ -2298,7 +2298,7 @@ function populateMapdiv() {
             }
         }
 
-        if ( dungeons[dungeonSelect].chestlist[key] !== "undefined" && dungeons[dungeonSelect].chestlist[key].type == "entrance" && dungeons[dungeonSelect].chestlist[key].leadsto !== "unknown") {
+        if ( dungeons[k].chestlist[key] !== "undefined" && dungeons[k].chestlist[key].type == "entrance" && dungeons[k].chestlist[key].leadsto !== "unknown") {
             var ss = document.createElement('span');
             ss.className = 'chestCount';
             if ( quest == "Mixed" && (dungeons[k].mixedtype !== "vanilla" || dungeons[k].mixedtype !== "master") ) {
