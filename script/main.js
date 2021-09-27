@@ -625,8 +625,8 @@ function clickDungeon(d) {
                         ll.style.backgroundColor = 'black';
                         ll.style.color = 'white';
                         ll.style.fontSize = '20';
-                        l.onmouseout = new Function('lineunhighlight(' + key + ',"' + ent + '")');
-                        l.onmouseover = new Function('linehighlight(' + key + ',"' + ent + '")');
+                        l.onmouseout = new Function('lineunhighlight('key + ',"' + ent + '")');
+                        l.onmouseover = new Function('linehighlight('key + ',"' + ent + '")');
                         //ll.onmouseout = new Function('lineunhighlight(this)')
                         //ll.onmouseover = new Function('linehighlight(this)');
 
