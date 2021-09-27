@@ -3864,7 +3864,7 @@ var dungeons = [
          }, 'Grave Pull Scrub 1': { x: "17.5%", y: "67%", leadsto: "unknown", type: "scrub", access: "grotto",
             isAvailable: function () {
                return OWERmap == false || dungeons[26].found == true; },
-         }, 'Grave Pull Scrub 2': { x: "17.5%", y: "67%", leadsto: "unknown", type: "scrub", access: "grotto",
+         }, 'Grave Pull Scrub 2': { x: "20.5%", y: "67%", leadsto: "unknown", type: "scrub", access: "grotto",
             isAvailable: function () {
                return OWERmap == false || dungeons[26].found == true; },
          }, 'Grave Pull Scrub 3': { x: "19%", y: "64%", leadsto: "unknown", type: "scrub", access: "grotto",
