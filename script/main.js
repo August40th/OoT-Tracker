@@ -615,10 +615,12 @@ function clickDungeon(d) {
                         var ll = document.createElement('span');
                         ll.innerHTML = key + ' leads to ' + ent;
                         ll.backgroundColor = 'black';
-                        ll.fontSize = '20';
-                        ll.fontColor = 'white';
+                        ll.fontsize = '20';
+                        ll.color = 'white';
                         ll.onmouseover = function (showit) {
-                            ll.style.visibility = 'unset'; }
+                            ll.style.visibility = 'unset';
+                            ll.style.visibility = 'visible';
+                        }
                         ll.onmouseout = function (hideit) {
                             ll.style.visibility = 'hidden'; }
                            
