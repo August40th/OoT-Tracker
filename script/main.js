@@ -614,8 +614,10 @@ function clickDungeon(d) {
                          
                         var ll = document.createElement('span');
                         ll.innerHTML = key + ' leads to ' + ent;
-                        ll.onmouseover = ll.style.visibility = 'unset';
-                        ll.onmouseout = ll.style.visibility = 'hidden';
+                        ll.onmouseover = function (showit) {
+                            ll.style.visibility = 'visible'; }
+                        ll.onmouseout = function (hideit) {
+                            ll.style.visibility = 'hidden'; }
                            
                         l.appendChild(ll);
                         document.getElementById('mapdiv').appendChild(l);
