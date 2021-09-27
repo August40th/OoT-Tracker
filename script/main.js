@@ -501,12 +501,12 @@ function unhighlightDungeon(x) {
     document.getElementById('dungeon' + x).style.backgroundImage = "url(images/poi.png)";
 }
 
-function linehighlight(a, b) {
-    document.getElementById(a + ' linelable ' + b).style.visibility = 'visible';
+function linehighlight(a, b, c) {
+    document.getElementById(b + ' linelable ' + c).style.visibility = 'visible';
 }
 
-function lineunhighlight(a, b) {
-    document.getElementById(a + ' linelable ' + b).style.visibility = 'hidden';
+function lineunhighlight(a, b, c) {
+    document.getElementById(b + ' linelable ' + c).style.visibility = 'hidden';
 }
 
 // mark dungeon as
@@ -625,8 +625,8 @@ function clickDungeon(d) {
                         ll.style.backgroundColor = 'black';
                         ll.style.color = 'white';
                         ll.style.fontSize = '20';
-                        l.onmouseout = new Function('lineunhighlight('key + ',"' + ent + '")');
-                        l.onmouseover = new Function('linehighlight('key + ',"' + ent + '")');
+                        l.onmouseout = new Function('lineunhighlight(this,' + key + ',"' + ent + '")');
+                        l.onmouseover = new Function('linehighlight(this,' + key + ',"' + ent + '")');
                         //ll.onmouseout = new Function('lineunhighlight(this)')
                         //ll.onmouseover = new Function('linehighlight(this)');
 
