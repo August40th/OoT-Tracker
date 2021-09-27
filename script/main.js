@@ -614,10 +614,8 @@ function clickDungeon(d) {
                          
                         var ll = document.createElement('span');
                         ll.innerHTML = key + ' leads to ' + ent;
-                        ll.onmouseover = function (showit) {
-                            ll.style.visibility = 'visible'; }
-                        ll.onmouseout = function (hideit) {
-                            ll.style.visibility = 'hidden'; }
+                        ll.onmouseover = ll.style.visibility = 'unset';
+                        ll.onmouseout = ll.style.visibility = 'hidden';
                            
                         l.appendChild(ll);
                         document.getElementById('mapdiv').appendChild(l);
@@ -634,7 +632,7 @@ function clickDungeon(d) {
             continue;}
         if ( dungeons[dungeonSelect] == dungeons[12] && dungeons[dungeonSelect].chestlist[key].type == "trial" && trialsize == 0 ) { //Castle trials
             continue;}
-        if ( dungeons[dungeonSelect].chestlist[key].type == "entrance" && OWERmap == false) { //Do Nothing
+        if ( dungeons[dungeonSelect].chestlist[key].type == "entrance" && (OWERmap == false || dungeons[dungeonSelect].chestlist[key].leadsto !== "unknown")) { //Do Nothing
             continue;}
         if ( dungeons[dungeonSelect].chestlist[key].type == "warp" && Warps == false) {
             continue;}
@@ -694,24 +692,23 @@ function clickDungeon(d) {
         if (OWERmap == false && (dungeonSelect == 33 || dungeonSelect == 34 ) ) continue;
         if ( dungeons[dungeonSelect].chestlist[key].leadsto == "none" || dungeons[dungeonSelect].chestlist[key].leadsto == "Spirit Right Hand" || dungeons[dungeonSelect].chestlist[key].leadsto == "Spirit Left Hand") continue;
 
-        if ( dungeons[dungeonSelect].chestlist[key].type == "entrance" && dungeons[dungeonSelect].chestlist[key].leadsto !== "unknown") {
-            var s = document.createElement('li');
-            if (dungeons[dungeonSelect].chestlist[key].leadsto == "unknown") s.innerHTML = key;
-            else if (dungeons[dungeonSelect].chestlist[key].leadsto !== "unknown") s.innerHTML = dungeons[dungeonSelect].chestlist[key].leadsto;
-            if (dungeons[dungeonSelect].chestlist[key].isOpened) {            
-                s.className = "DCopened";
-            } else if ( dungeons[dungeonSelect].chestlist[key].isAvailable()) {
-                s.className = "DCavailable";
-            } else {
-                s.className = "DCunavailable";
-            }
+        var s = document.createElement('li');
+        if (dungeons[dungeonSelect].chestlist[key].leadsto == "unknown") s.innerHTML = key;
+        else if (dungeons[dungeonSelect].chestlist[key].leadsto !== "unknown") s.innerHTML = dungeons[dungeonSelect].chestlist[key].leadsto;
+        if (dungeons[dungeonSelect].chestlist[key].isOpened) {            
+            s.className = "DCopened";
+        } else if ( dungeons[dungeonSelect].chestlist[key].isAvailable()) {
+            s.className = "DCavailable";
+        } else {
+            s.className = "DCunavailable";
+        }
 
-            s.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
-            s.onmouseover = new Function('highlightDungeonChest(this)');
-            s.onmouseout = new Function('unhighlightDungeonChest(this)');
-            s.style.cursor = "pointer";
+        s.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
+        s.onmouseover = new Function('highlightDungeonChest(this)');
+        s.onmouseout = new Function('unhighlightDungeonChest(this)');
+        s.style.cursor = "pointer";
 
-            DClist.appendChild(s); }
+        DClist.appendChild(s);
         
         if ( (dungeons[dungeonSelect].chestlist[key].floor == here && dungeons[dungeonSelect].type == "dungeon" && (dungeons[dungeonSelect].mixedtype == dungeons[dungeonSelect].chestlist[key].access || quest == 'Mixecd') ) || dungeons[dungeonSelect].type == "overworld") {
             var c = document.createElement('span');
@@ -1999,8 +1996,7 @@ function gridItemRClick(row, col, corner) {
 function updateMap() {
     for (k = 0; k < dungeons.length; k++) {
         if (OWERmap == false && k >= 33) continue;
-        if (dungeonMarked.length == 0) document.getElementById("dungeon" + k).className = "mapspan dungeon " + dungeons[k].canGetChest();
-        else if (dungeonMarked.length) document.getElementById("dungeon" + k).className = "mapspan dungeon " + dungeons[k].canGetChest() + ((dungeonMarked.indexOf(k) > -1) ? " wayofhero" : " ");
+        document.getElementById("dungeon" + k).className = "mapspan dungeon " + dungeons[k].canGetChest() + ((dungeonMarked.indexOf(k) > -1) ? " wayofhero" : " ");
         var DCcount = 0;
         for (var key in dungeons[k].chestlist) {
             if ( dungeons[k].chestlist[key].access == "entrance" && dungeons[k].chestlist[key].type == "dungeon" ) { //Dungeon door  
@@ -2017,7 +2013,7 @@ function updateMap() {
                 continue;}
             if ( dungeons[k] == dungeons[12] && dungeons[k].chestlist[key].type == "trial" && trialsize == 0 ) { //Castle trials
                 continue;}
-            if ( dungeons[k].chestlist[key].type == "entrance" && OWERmap == false) { //Do Nothing
+            if ( dungeons[k].chestlist[key].type == "entrance" && (OWERmap == false || dungeons[k].chestlist[key].leadsto !== "unknown")) { //Do Nothing
                 continue;}
             if ( dungeons[k].chestlist[key].type == "warp" && Warps == false) {
                 continue;}
@@ -2076,6 +2072,7 @@ function updateMap() {
             if ( (Warps == false && RndmStart == false) && k == 35 ) continue;
             if (OWERmap == false && (k == 33 || k == 34 ) ) continue;
             if ( dungeons[k].chestlist[key].leadsto == "none" || dungeons[k].chestlist[key].leadsto == "Spirit Right Hand" || dungeons[k].chestlist[key].leadsto == "Spirit Left Hand") continue;
+
             
             if (dungeons[k].chestlist.hasOwnProperty(key)) {
                 if (!dungeons[k].chestlist[key].isOpened && dungeons[k].chestlist[key].isAvailable()) {
@@ -2299,28 +2296,27 @@ function populateMapdiv() {
             }
         }
 
-        if ( dungeons[k].chestlist.hasOwnProperty(key) && dungeons[k].chestlist[key].type == "entrance" && dungeons[k].chestlist[key].leadsto !== "unknown") {
-            var ss = document.createElement('span');
-            ss.className = 'chestCount';
-            if ( quest == "Mixed" && (dungeons[k].mixedtype !== "vanilla" || dungeons[k].mixedtype !== "master") ) {
-                ss.innerHTML = '?';
-            } else if (DCcount == 0) {
-                ss.innerHTML = '';
-            } else {
-                ss.innerHTML = DCcount;
-            }
-            ss.style.color = 'black'
-            s.style.textAlign = 'center';
-            ss.display = 'inline-block';
-            ss.style.lineHeight = '24px';
-            s.appendChild(ss);
+        var ss = document.createElement('span');
+        ss.className = 'chestCount';
+        if ( quest == "Mixed" && dungeons[k].mixedtype == "default" ) {
+            ss.innerHTML = '?';
+        } else if (DCcount == 0) {
+            ss.innerHTML = '';
+        } else {
+            ss.innerHTML = DCcount;
+        }
+        ss.style.color = 'black'
+        s.style.textAlign = 'center';
+        ss.display = 'inline-block';
+        ss.style.lineHeight = '24px';
+        s.appendChild(ss);
 
-            var ss = document.createElement('span');
-            ss.className = 'tooltipgray';
-            ss.innerHTML = dungeons[k].name;
-            s.appendChild(ss);
+        var ss = document.createElement('span');
+        ss.className = 'tooltipgray';
+        ss.innerHTML = dungeons[k].name;
+        s.appendChild(ss);
 
-            mapdiv.appendChild(s); }
+        mapdiv.appendChild(s);
     }
 
     document.getElementById('submaparea').innerHTML = dungeons[0].name;
@@ -2342,7 +2338,7 @@ function populateMapdiv() {
             continue;}
         if ( dungeons[dungeonSelect] == dungeons[12] && dungeons[dungeonSelect].chestlist[key].type == "trial" && trialsize == 0 ) { //Castle trials
             continue;}
-        if ( dungeons[dungeonSelect].chestlist[key].type == "entrance" && OWERmap == false) { //Do Nothing
+        if ( dungeons[dungeonSelect].chestlist[key].type == "entrance" && (OWERmap == false || dungeons[dungeonSelect].chestlist[key].leadsto !== "unknown")) { //Do Nothing
             continue;}
         if ( dungeons[dungeonSelect].chestlist[key].type == "warp" && Warps == false) {
             continue;}
