@@ -498,8 +498,15 @@ function highlightDungeon(x) {
 }
 
 function unhighlightDungeon(x) {
-   if (dungeonSelect != x)
-      document.getElementById('dungeon' + x).style.backgroundImage = "url(images/poi.png)";
+    document.getElementById('dungeon' + x).style.backgroundImage = "url(images/poi.png)";
+}
+
+function linehighlight(a) {
+    a.style.visibility = 'visible';
+}
+
+function lineunhighlight(a) {
+    a.style.visibility = 'hidden';
 }
 
 // mark dungeon as
@@ -613,14 +620,11 @@ function clickDungeon(d) {
                         l.style.top = y1+"px";
                          
                         var ll = document.createElement('span');
-                        ll.id = 'linelabel';
+                        ll.id = key + ' linelable ' + ent;
                         ll.innerHTML = key + ' leads to ' + ent;
-                        ll.onmouseout = function (hideit) {
-                            document.getElementById('linelabel').style.visibility = 'hidden'; }
-                        ll.onmouseover = function (showit) {
-                            document.getElementById('linelabel').style.visibility = 'visible';
-                        }  
-                        
+                        ll.onmouseout = new Function('lineunhighlight(this)')
+                        ll.onmouseover = new Function('linehighlight(this)');
+
                         l.appendChild(ll);
                         document.getElementById('mapdiv').appendChild(l);
                     }
