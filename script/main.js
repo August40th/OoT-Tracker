@@ -1042,7 +1042,7 @@ function toggleDungeonChest(sender, d, c) {
             clickDungeon(d); 
             Scrub2++;}
         l.appendChild(e2); 
-      } if (ScrubLeft ==0) {
+      } if (ScrubLeft == 0) {
         e3.innerHTML = '2 Scrubs Left front';
         e3.onmouseover = new Function('highlightDungeonChest(this)');
         e3.onmouseout = new Function('unhighlightDungeonChest(this)');
@@ -1052,7 +1052,7 @@ function toggleDungeonChest(sender, d, c) {
             clickDungeon(d); 
             ScrubLeft++;}
         l.appendChild(e3); 
-      } if (Scrub3==0) {
+      } if (Scrub3 < 4) {
         e4.innerHTML = '3 Scrubs';
         e4.onmouseover = new Function('highlightDungeonChest(this)');
         e4.onmouseout = new Function('unhighlightDungeonChest(this)');
@@ -1063,7 +1063,7 @@ function toggleDungeonChest(sender, d, c) {
             Scrub3++;}
         l.appendChild(e4); 
       } if (Fairy < 5) {
-        e5.innerHTML = 'Small Fountain';
+        e5.innerHTML = 'Fairy Fountain';
         e5.onmouseover = new Function('highlightDungeonChest(this)');
         e5.onmouseout = new Function('unhighlightDungeonChest(this)');
         e5.style.cursor = "pointer";
