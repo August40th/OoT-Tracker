@@ -1043,7 +1043,7 @@ function toggleDungeonChest(sender, d, c) {
                 Generic++;}
             l.appendChild(e1); 
           } if (Scrub1 == 0) {
-            e1.innerHTML = 'Lone Scrub';
+            e2.innerHTML = 'Lone Scrub';
             e2.onmouseover = new Function('highlightDungeonChest(this)');
             e2.onmouseout = new Function('unhighlightDungeonChest(this)');
             e2.style.cursor = "pointer";
