@@ -676,7 +676,7 @@ function clickDungeon(d) {
             continue;}
         if ( dungeons[dungeonSelect] == dungeons[12] && dungeons[dungeonSelect].chestlist[key].type == "trial" && trialsize == 0 ) { //Castle trials
             continue;}
-        if ( dungeons[dungeonSelect].chestlist[key].type == "entrance" && (OWERmap == false || dungeons[dungeonSelect].chestlist[key].leadsto !== "unknown")) { //Do Nothing
+        if ( dungeons[dungeonSelect].chestlist[key].type == "entrance" && (OWERmap == false )) { //|| dungeons[dungeonSelect].chestlist[key].leadsto !== "unknown")) { //Do Nothing
             continue;}
         if ( dungeons[dungeonSelect].chestlist[key].type == "warp" && Warps == false) {
             continue;}
@@ -752,7 +752,7 @@ function clickDungeon(d) {
         s.onmouseout = new Function('unhighlightDungeonChest(this)');
         s.style.cursor = "pointer";
 
-        DClist.appendChild(s);
+        if (dungeons[dungeonSelect].chestlist[key].leadsto !== "unknown") DClist.appendChild(s);
         
         if ( (dungeons[dungeonSelect].chestlist[key].floor == here && dungeons[dungeonSelect].type == "dungeon" && (dungeons[dungeonSelect].mixedtype == dungeons[dungeonSelect].chestlist[key].access || quest == 'Mixecd') ) || dungeons[dungeonSelect].type == "overworld") {
             var c = document.createElement('span');
