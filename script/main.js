@@ -637,8 +637,7 @@ function clickDungeon(d) {
                     (Warps == true && dungeons[v].chestlist[ent].type == "warp") ||
                     (RndmStart == true && dungeons[v].chestlist[ent].type == "spawn") ) ) {
                         for ( var u = 0; u < dungeons.length; u++) {
-                            if (u == dungeonSelect) continue;
-                            if (u !== v) continue;
+                            if (u == dungeonSelect || u == v) continue;
                             for (var nxt in dungeons[u].chestlist) {
                                 if (dungeons[v].chestlist[ent].leadsto == nxt || dungeons[v].chestlist[ent].leadsto == dungeons[u].name + ' ' + nxt || dungeons[v].chestlist[ent].leadsto == dungeons[u].name) {
                         let mapDivWidth = 828;
