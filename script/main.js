@@ -1024,8 +1024,8 @@ function toggleDungeonChest(sender, d, c) {
         e.onclick = function(setLeadsto){
             dungeons[d].chestlist[c].leadsto = this.innerHTML;
             clickDungeon(d); 
-            l.appendChild(e); 
-            Scrub1++; } 
+            Scrub1++;}
+        l.appendChild(e); 
       } if (Scrub2 < 4) {
         e.innerHTML = '2 Scrubs';
         e.onmouseover = new Function('highlightDungeonChest(this)');
@@ -1034,8 +1034,8 @@ function toggleDungeonChest(sender, d, c) {
         e.onclick = function(setLeadsto){
             dungeons[d].chestlist[c].leadsto = this.innerHTML;
             clickDungeon(d); 
-            l.appendChild(e); 
-            Scrub2++; } 
+            Scrub2++;}
+        l.appendChild(e); 
       } if (ScrubLeft ==0) {
         e.innerHTML = '2 Scrubs Left front';
         e.onmouseover = new Function('highlightDungeonChest(this)');
@@ -1044,8 +1044,8 @@ function toggleDungeonChest(sender, d, c) {
         e.onclick = function(setLeadsto){
             dungeons[d].chestlist[c].leadsto = this.innerHTML;
             clickDungeon(d); 
-            l.appendChild(e); 
-            ScrubLeft++; } 
+            ScrubLeft++;}
+        l.appendChild(e); 
       } if (Scrub3==0) {
         e.innerHTML = '3 Scrubs';
         e.onmouseover = new Function('highlightDungeonChest(this)');
@@ -1054,10 +1054,9 @@ function toggleDungeonChest(sender, d, c) {
         e.onclick = function(setLeadsto){
             dungeons[d].chestlist[c].leadsto = this.innerHTML;
             clickDungeon(d); 
-            l.appendChild(e); 
-            Scrub3++; } 
-      }
-      if (Fairy < 5) {
+            Scrub1++;}
+        l.appendChild(e); 
+      } if (Fairy < 5) {
         e.innerHTML = 'Lone Scrub';
         e.onmouseover = new Function('highlightDungeonChest(this)');
         e.onmouseout = new Function('unhighlightDungeonChest(this)');
@@ -1065,8 +1064,8 @@ function toggleDungeonChest(sender, d, c) {
         e.onclick = function(setLeadsto){
             dungeons[d].chestlist[c].leadsto = this.innerHTML;
             clickDungeon(d); 
-            l.appendChild(e); 
-            Fairy++; } 
+            Scrub1++;}
+        l.appendChild(e); 
       }
     }
     if (mixphoo !== "Full" && dungeons[d].chestlist[c].leadsto == "unknown" && dungeons[d].chestlist[c].type == "dungeon" ) { 
