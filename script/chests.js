@@ -4523,7 +4523,7 @@ var dungeons = [
          }, 'Bridge to Forest': { x: "68%", y: "52.5%", leadsto: "unknown", type: "entrance", access: "entrance",
              isAvailable: function () {
                   return dungeons[34].found == true; }
-         }, 'Bridge to Woods': { x: "49.5%", y: "52.5%", leadsto: "Woods to Bridge", type: "entrance", access: "entrance",
+         }, 'Bridge to Woods': { x: "54.5%", y: "45.5%", leadsto: "Woods to Bridge", type: "entrance", access: "entrance",
              isAvailable: function () {
                   return dungeons[34].found == true; }
          },
