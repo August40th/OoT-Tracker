@@ -1448,12 +1448,12 @@ function setOWER(sender) {
    document.getElementById('dungeon33').style.visibility = 'hidden';
    document.getElementById('dungeon34').style.visibility = 'hidden';
    } if (OWERmap == true) {
-   document.getElementById('dungeon33').style.visibility = 'unset';
-   document.getElementById('dungeon34').style.visibility = 'unset';
+   document.getElementById('dungeon33').style.visibility = 'visible';
+   document.getElementById('dungeon34').style.visibility = 'visible';
    } if (Warps == false && RndmStart  == false) {
    document.getElementById('dungeon35').style.visibility = 'hidden';
    } if (Warps == true || RndmStart  == true) {
-   document.getElementById('dungeon35').style.visibility = 'unset';
+   document.getElementById('dungeon35').style.visibility = 'visible';
    } 
 
 
