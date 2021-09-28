@@ -657,7 +657,7 @@ function clickDungeon(d) {
 
                                             var j = document.createElement('eline');
                                             j.id = 'eline';
-                                            j.style.height = '2px';
+                                            j.style.height = '4px';
                                             j.style.width = findDistance(x1, y1, x2, y2 ) + 'px';
                                             j.style.transformOrigin = "0 0";
                                             j.style.transform = 'rotate('+ findAngle(x1, y1, x2, y2 ) + 'deg)';
@@ -666,7 +666,21 @@ function clickDungeon(d) {
                                             j.style.backgroundColor = 'yellow';
                                             j.style.left = x1+"px";
                                             j.style.top = y1+"px";
-                                            document.getElementById('mapdiv').appendChild(j); }}}}}
+                                            document.getElementById('mapdiv').appendChild(j); 
+                                        
+                                            var jj = document.createElement('span');
+                                            jj.id = 'minimap ' + key;
+                                            jj.innerHTML = key + ' >>> ' + ent.replaceAll("to", "from");
+                                            jj.style.width = 'auto';
+                                            jj.style.backgroundColor = 'black';
+                                            jj.style.color = '#fff';
+                                            jj.style.position = 'absolute';
+                                            jj.style.transform = 'rotate('+ findAngle(x1, y1, x2, y2 )*-1 + 'deg)';
+                                            jj.style.textAlign = 'center';
+                                            jj.style.fontSize = '20px';
+                                            j.appendChild(jj);
+                                            j.onmouseover = new Function('highlight(this' + ',"' + key + '")');
+                                            j.onmouseout = new Function('unhighlight(this' + ',"' + key + '")'); }}}}}
                     }
                 } }
         }
