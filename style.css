@@ -234,8 +234,13 @@ label {
     margin-left: -60px;
 }
 
-.gone {
+.mapspan .tooltipgray:hover {
+    display: none;
     visibility: hidden;
+}
+
+.mapspan:hover .tooltipgray {
+    visibility: visible;
 }
 
 .minimap {
