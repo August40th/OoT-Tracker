@@ -640,25 +640,27 @@ function clickDungeon(d) {
                             if (u == dungeonSelect || u == v) continue;
                             for (var nxt in dungeons[u].chestlist) {
                                 if (dungeons[v].chestlist[ent].leadsto == nxt || dungeons[v].chestlist[ent].leadsto == dungeons[u].name + ' ' + nxt || dungeons[v].chestlist[ent].leadsto == dungeons[u].name) {
-                        let mapDivWidth = 828;
-                        let mapDivHeight = 420;
-                        let x1 = parseFloat(dungeons[v].x)*mapDivWidth/100;
-                        let y1 = parseFloat(dungeons[v].y)*mapDivHeight/100;
-                        let x2 = parseFloat(dungeons[u].x)*mapDivWidth/100;
-                        let y2 = parseFloat(dungeons[u].y)*mapDivHeight/100;
+                                    for (var o in dungeons[v].chestlist) {
+                                        if (dungeons[dungeonSelect].chestlist[key].leadsto == o) {
+                                            let mapDivWidth = 828;
+                                            let mapDivHeight = 420;
+                                            let x1 = parseFloat(dungeons[v].x)*mapDivWidth/100;
+                                            let y1 = parseFloat(dungeons[v].y)*mapDivHeight/100;
+                                            let x2 = parseFloat(dungeons[u].x)*mapDivWidth/100;
+                                            let y2 = parseFloat(dungeons[u].y)*mapDivHeight/100;
 
-                        var j = document.createElement('jline');
-                        j.id = 'jline';
-                        j.style.height = '2px';
-                        j.style.width = findDistance(x1, y1, x2, y2 ) + 'px';
-                        j.style.transformOrigin = "0 0";
-                        j.style.transform = 'rotate('+ findAngle(x1, y1, x2, y2 ) + 'deg)';
-                        j.style.position = 'absolute';
-                        j.style.whiteSpace = 'nowrap';
-                        j.style.backgroundColor = 'yellow';
-                        j.style.left = x1+"px";
-                        j.style.top = y1+"px";
-                        document.getElementById('mapdiv').appendChild(j); }}}
+                                            var j = document.createElement('jline');
+                                            j.id = 'jline';
+                                            j.style.height = '2px';
+                                            j.style.width = findDistance(x1, y1, x2, y2 ) + 'px';
+                                            j.style.transformOrigin = "0 0";
+                                            j.style.transform = 'rotate('+ findAngle(x1, y1, x2, y2 ) + 'deg)';
+                                            j.style.position = 'absolute';
+                                            j.style.whiteSpace = 'nowrap';
+                                            j.style.backgroundColor = 'yellow';
+                                            j.style.left = x1+"px";
+                                            j.style.top = y1+"px";
+                                            document.getElementById('mapdiv').appendChild(j); }}}}}
                     }
                 } }
         }
