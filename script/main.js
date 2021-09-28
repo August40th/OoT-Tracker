@@ -82,6 +82,8 @@ Age = 'Child';
 RndmStart = false;
 mixphoo = "Off";
 
+Generic=0; Scrub1=0; Scrub2=0; ScrubLeft=0; Scrub3=0; Wolfos=0; Cow=0; Web=0; Redead=0; Tektite=0; Dampe=0; Tomb=0; Redeadgrave=0; Fairygrave=0; Skulltula=0; MudWall=0; Octorock=0; Fairy=0;
+
 var mouseOverItem = false;
 var mouseLastOverR;
 var mouseLastOverC;
@@ -1014,7 +1016,6 @@ function toggleDungeonChest(sender, d, c) {
      t.innerHTML = c + ' leads to';
      l.innerHTML = '';
 
-    var Generic=0, Scrub1=0, Scrub2=0, ScrubLeft=0, Scrub3=0, Wolfos=0, Cow=0, Web=0, Redead=0, Tektite=0, Dampe=0, Tomb=0, Redeadgrave=0, Fairygrave=0, Skulltula=0, MudWall=0, Octorock=0, Fairy=0;
     var e = document.createElement('li');
     if (Scrub1 ==0) {
         e.innerHTML = 'Lone Scrub';
@@ -1054,7 +1055,7 @@ function toggleDungeonChest(sender, d, c) {
         e.onclick = function(setLeadsto){
             dungeons[d].chestlist[c].leadsto = this.innerHTML;
             clickDungeon(d); 
-            Scrub1++;}
+            Scrub3++;}
         l.appendChild(e); 
       } if (Fairy < 5) {
         e.innerHTML = 'Lone Scrub';
@@ -1064,7 +1065,7 @@ function toggleDungeonChest(sender, d, c) {
         e.onclick = function(setLeadsto){
             dungeons[d].chestlist[c].leadsto = this.innerHTML;
             clickDungeon(d); 
-            Scrub1++;}
+            Fairy++;}
         l.appendChild(e); 
       }
     }
