@@ -946,7 +946,7 @@ function toggleDungeonChest(sender, d, c) {
         sender.className = 'DCunavailable';
     
     var printdun;
-    if (dungeons[d].chestlist[c].type == "entrance" && mixphoo !== "Full") {
+    if (dungeons[d].chestlist[c].type == "entrance" && mixphoo !== "Full" && dungeons[d].chestlist[c].leadsto == "unknown" ) {
         var t = document.getElementById('submaparea');
         var l = document.getElementById('submaplist');
         t.innerHTML = c + ' leads to';
