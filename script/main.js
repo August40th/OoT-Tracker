@@ -1016,57 +1016,62 @@ function toggleDungeonChest(sender, d, c) {
      t.innerHTML = c + ' leads to';
      l.innerHTML = '';
 
-    var e = document.createElement('li');
+    var e1 = document.createElement('li');
+    var e2 = document.createElement('li');
+    var e3 = document.createElement('li');
+    var e4 = document.createElement('li');
+    var e5 = document.createElement('li');
+
     if (Scrub1 ==0) {
-        e.innerHTML = 'Lone Scrub';
-        e.onmouseover = new Function('highlightDungeonChest(this)');
-        e.onmouseout = new Function('unhighlightDungeonChest(this)');
-        e.style.cursor = "pointer";
-        e.onclick = function(setLeadsto){
+        e1.innerHTML = 'Lone Scrub';
+        e1.onmouseover = new Function('highlightDungeonChest(this)');
+        e1.onmouseout = new Function('unhighlightDungeonChest(this)');
+        e1.style.cursor = "pointer";
+        e1.onclick = function(setLeadsto){
             dungeons[d].chestlist[c].leadsto = this.innerHTML;
             clickDungeon(d); 
             Scrub1++;}
-        l.appendChild(e); 
+        l.appendChild(e1); 
       } if (Scrub2 < 4) {
-        e.innerHTML = '2 Scrubs';
-        e.onmouseover = new Function('highlightDungeonChest(this)');
-        e.onmouseout = new Function('unhighlightDungeonChest(this)');
-        e.style.cursor = "pointer";
-        e.onclick = function(setLeadsto){
+        e2.innerHTML = '2 Scrubs';
+        e2.onmouseover = new Function('highlightDungeonChest(this)');
+        e2.onmouseout = new Function('unhighlightDungeonChest(this)');
+        e2.style.cursor = "pointer";
+        e2.onclick = function(setLeadsto){
             dungeons[d].chestlist[c].leadsto = this.innerHTML;
             clickDungeon(d); 
             Scrub2++;}
-        l.appendChild(e); 
+        l.appendChild(e2); 
       } if (ScrubLeft ==0) {
-        e.innerHTML = '2 Scrubs Left front';
-        e.onmouseover = new Function('highlightDungeonChest(this)');
-        e.onmouseout = new Function('unhighlightDungeonChest(this)');
-        e.style.cursor = "pointer";
-        e.onclick = function(setLeadsto){
+        e3.innerHTML = '2 Scrubs Left front';
+        e3.onmouseover = new Function('highlightDungeonChest(this)');
+        e3.onmouseout = new Function('unhighlightDungeonChest(this)');
+        e3.style.cursor = "pointer";
+        e3.onclick = function(setLeadsto){
             dungeons[d].chestlist[c].leadsto = this.innerHTML;
             clickDungeon(d); 
             ScrubLeft++;}
-        l.appendChild(e); 
+        l.appendChild(e3); 
       } if (Scrub3==0) {
-        e.innerHTML = '3 Scrubs';
-        e.onmouseover = new Function('highlightDungeonChest(this)');
-        e.onmouseout = new Function('unhighlightDungeonChest(this)');
-        e.style.cursor = "pointer";
-        e.onclick = function(setLeadsto){
+        e4.innerHTML = '3 Scrubs';
+        e4.onmouseover = new Function('highlightDungeonChest(this)');
+        e4.onmouseout = new Function('unhighlightDungeonChest(this)');
+        e4.style.cursor = "pointer";
+        e4.onclick = function(setLeadsto){
             dungeons[d].chestlist[c].leadsto = this.innerHTML;
             clickDungeon(d); 
             Scrub3++;}
-        l.appendChild(e); 
+        l.appendChild(e4); 
       } if (Fairy < 5) {
-        e.innerHTML = 'Lone Scrub';
-        e.onmouseover = new Function('highlightDungeonChest(this)');
-        e.onmouseout = new Function('unhighlightDungeonChest(this)');
-        e.style.cursor = "pointer";
-        e.onclick = function(setLeadsto){
+        e5.innerHTML = 'Lone Scrub';
+        e5.onmouseover = new Function('highlightDungeonChest(this)');
+        e5.onmouseout = new Function('unhighlightDungeonChest(this)');
+        e5.style.cursor = "pointer";
+        e5.onclick = function(setLeadsto){
             dungeons[d].chestlist[c].leadsto = this.innerHTML;
             clickDungeon(d); 
             Fairy++;}
-        l.appendChild(e); 
+        l.appendChild(e5); 
       }
     }
     if (mixphoo !== "Full" && dungeons[d].chestlist[c].leadsto == "unknown" && dungeons[d].chestlist[c].type == "dungeon" ) { 
