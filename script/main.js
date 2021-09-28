@@ -615,7 +615,7 @@ function clickDungeon(d) {
                         l.style.transform = 'rotate('+ findAngle(x1, y1, x2, y2 ) + 'deg)';
                         l.style.position = 'absolute';
                         l.style.whiteSpace = 'nowrap';
-                        l.style.backgroundColor = 'aqua';
+                        l.style.backgroundColor = 'red';
                         l.style.left = x1+"px";
                         l.style.top = y1+"px";
                          
@@ -649,7 +649,7 @@ function clickDungeon(d) {
 
                                     var j = document.createElement('eline');
                                     j.id = 'eline';
-                                    j.style.height = '4px';
+                                    j.style.height = '2px';
                                     j.style.width = findDistance(x1, y1, x2, y2 ) + 'px';
                                     j.style.transformOrigin = "0 0";
                                     j.style.transform = 'rotate('+ findAngle(x1, y1, x2, y2 ) + 'deg)';
