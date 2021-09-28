@@ -628,7 +628,7 @@ function clickDungeon(d) {
                         ll.style.backgroundColor = 'black';
                         ll.style.color = '#fff';
                         ll.style.position = 'absolute';
-                        ll.style.transform = 'rotate('- findAngle(x1, y1, x2, y2 ) + 'deg)';
+                        ll.style.transform = 'rotate('+ findAngle(x1, y1, x2, y2 )*-1 + 'deg)';
                         ll.style.textAlign = 'center';
                         ll.style.fontSize = '20px';
                         l.appendChild(ll);
