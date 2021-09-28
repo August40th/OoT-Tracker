@@ -1007,28 +1007,68 @@ function toggleDungeonChest(sender, d, c) {
             //}
         //}
     //}
-    //if (mixphoo !== "Full" && dungeons[d].chestlist[c].leadsto == "unknown" && dungeons[d].chestlist[c].type == "grotto" ) { 
-      //  var t = document.getElementById('submaparea');
-        //var l = document.getElementById('submaplist');
-        //t.innerHTML = c + ' leads to';
-        //l.innerHTML = '';
-        //for ( var k = 0; k < 35; k++) {
-          //  for (var g in dungeons[k].chestlist) {
-            //    if (dungeons[k].chestlist[g].isOpened == false && dungeons[k].chestlist[g].type == "grotto" ) {
-              //      var e = document.createElement('li');
-                //    e.innerHTML = g;
-                  //  e.className = g;
-                    //e.onmouseover = new Function('highlightDungeonChest(this)');
-                    //e.onmouseout = new Function('unhighlightDungeonChest(this)');
-                    //e.style.cursor = "pointer";
-                    //e.onclick = function(setLeadsto){
-                      //              g = this.innerHTML;
-                        //            dungeons[d].chestlist[c].leadsto = g;
-                          //          clickDungeon(d); }
-                    //l.appendChild(e); }
-            //}
-        //}
-    //}
+    if (mixphoo !== "Full" && dungeons[d].chestlist[c].leadsto == "unknown" && dungeons[d].chestlist[c].type == "grotto" ) { 
+      var t = document.getElementById('submaparea');
+      var l = document.getElementById('submaplist');
+
+     t.innerHTML = c + ' leads to';
+     l.innerHTML = '';
+
+    var Generic=0, Scrub1=0, Scrub2=0, ScrubLeft=0, Scrub3=0, Wolfos=0, Cow=0, Web=0, Redead=0, Tektite=0, Dampe=0, Tomb=0, Redeadgrave=0, Fairygrave=0, Skulltula=0, MudWall=0, Octorock=0, Fairy=0;
+    var e = document.createElement('li');
+    if (Scrub1 ==0) {
+        e.innerHTML = 'Lone Scrub';
+        e.onmouseover = new Function('highlightDungeonChest(this)');
+        e.onmouseout = new Function('unhighlightDungeonChest(this)');
+        e.style.cursor = "pointer";
+        e.onclick = function(setLeadsto){
+            dungeons[d].chestlist[c].leadsto = this.innerHTML;
+            clickDungeon(d); 
+            l.appendChild(e); 
+            Scrub1++; } 
+      } if (Scrub2 < 4) {
+        e.innerHTML = '2 Scrubs';
+        e.onmouseover = new Function('highlightDungeonChest(this)');
+        e.onmouseout = new Function('unhighlightDungeonChest(this)');
+        e.style.cursor = "pointer";
+        e.onclick = function(setLeadsto){
+            dungeons[d].chestlist[c].leadsto = this.innerHTML;
+            clickDungeon(d); 
+            l.appendChild(e); 
+            Scrub2++; } 
+      } if (ScrubLeft ==0) {
+        e.innerHTML = '2 Scrubs Left front';
+        e.onmouseover = new Function('highlightDungeonChest(this)');
+        e.onmouseout = new Function('unhighlightDungeonChest(this)');
+        e.style.cursor = "pointer";
+        e.onclick = function(setLeadsto){
+            dungeons[d].chestlist[c].leadsto = this.innerHTML;
+            clickDungeon(d); 
+            l.appendChild(e); 
+            ScrubLeft++; } 
+      } if (Scrub3==0) {
+        e.innerHTML = '3 Scrubs';
+        e.onmouseover = new Function('highlightDungeonChest(this)');
+        e.onmouseout = new Function('unhighlightDungeonChest(this)');
+        e.style.cursor = "pointer";
+        e.onclick = function(setLeadsto){
+            dungeons[d].chestlist[c].leadsto = this.innerHTML;
+            clickDungeon(d); 
+            l.appendChild(e); 
+            Scrub3++; } 
+      }
+      if (Fairy < 5) {
+        e.innerHTML = 'Lone Scrub';
+        e.onmouseover = new Function('highlightDungeonChest(this)');
+        e.onmouseout = new Function('unhighlightDungeonChest(this)');
+        e.style.cursor = "pointer";
+        e.onclick = function(setLeadsto){
+            dungeons[d].chestlist[c].leadsto = this.innerHTML;
+            clickDungeon(d); 
+            l.appendChild(e); 
+            Fairy++; } 
+      }
+    }
     if (mixphoo !== "Full" && dungeons[d].chestlist[c].leadsto == "unknown" && dungeons[d].chestlist[c].type == "dungeon" ) { 
         var t = document.getElementById('submaparea');
         var l = document.getElementById('submaplist');
