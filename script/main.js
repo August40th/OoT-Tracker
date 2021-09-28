@@ -636,6 +636,11 @@ function clickDungeon(d) {
                     (Owls == true && dungeons[v].chestlist[ent].type == "owl") ||
                     (Warps == true && dungeons[v].chestlist[ent].type == "warp") ||
                     (RndmStart == true && dungeons[v].chestlist[ent].type == "spawn") ) ) {
+                        for ( var u = 0; u < dungeons.length; u++) {
+                            if (u == dungeonSelect) continue;
+                            if (u !== v) continue;
+                            for (var nxt in dungeons[u].chestlist) {
+                                if (dungeons[v].chestlist[ent].leadsto == nxt || dungeons[v].chestlist[ent].leadsto == dungeons[u].name + ' ' + nxt || dungeons[v].chestlist[ent].leadsto == dungeons[u].name) {
                         let mapDivWidth = 828;
                         let mapDivHeight = 420;
                         let x1 = parseFloat(dungeons[v].x)*mapDivWidth/100;
@@ -654,7 +659,7 @@ function clickDungeon(d) {
                         j.style.backgroundColor = 'yellow';
                         j.style.left = x1+"px";
                         j.style.top = y1+"px";
-                        document.getElementById('mapdiv').appendChild(j);
+                        document.getElementById('mapdiv').appendChild(j); }}}
                     }
                 } }
         }
