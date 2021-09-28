@@ -619,16 +619,16 @@ function clickDungeon(d) {
                         l.style.left = x1+"px";
                         l.style.top = y1+"px";
                          
-                        var ll = document.createElement('span');
-                        ll.id = key + ' linelable ' + ent;
-                        ll.innerHTML = key + ' leads to ' + ent;
-                        ll.style.backgroundColor = 'black';
-                        ll.style.color = 'white';
-                        ll.style.fontSize = '20';
+                        //var ll = document.createElement('span');
+                        //ll.id = key + ' linelable ' + ent;
+                        //ll.innerHTML = key + ' leads to ' + ent;
+                        //ll.style.backgroundColor = 'black';
+                        //ll.style.color = 'white';
+                        //ll.style.fontSize = '20';
                         //l.onmouseout = new Function('lineunhighlight(' + ll + ')');
                         //l.onmouseover = new Function('linehighlight(' + ll + ')');
 
-                        l.appendChild(ll);
+                        //l.appendChild(ll);
                         document.getElementById('mapdiv').appendChild(l);
                     }
                 } }
@@ -1125,16 +1125,16 @@ function findAngle(x1, y1, x2, y2) {
     else if (x1 > x2) distanceX = x1 - x2;
     if (y1 < y2) distanceY = y2 - y1;
     else if (y1 > y2) distanceY = y1 - y2;
-    if (distanceX > 0) {
+    if (distanceX > 0 && distanceY > 0) {
         angle = Math.atan2(distanceY, distanceX);
         angle = angle * 180 / Math.PI; }
-    if (y1 == y2) { //x axis
-        if (x2 > x1) angle = 0;
+    else if (y1 == y2) { //x axis
+        if (x2 >= x1) angle = 0;
         else if (x2 < x1) angle = 180; }
     else if (x2 == x1) { //y axis
         if (y2 > y1) angle = 90;
         else if (y2 < y1) angle = 270; }
-    else if (y2 < y1 && x2 < x1) angle = 180 + angle; //top l
+    if (y2 < y1 && x2 < x1) angle = 180 + angle; //top l
     else if (y2 > y1 && x2 < x1) angle = 180 - angle; //bottom l
     else if (y2 < y1 && x2 > x1) angle = 360 - angle; //top r
     else if (y2 > y1 && x2 > x1) angle = angle; //bottom r
