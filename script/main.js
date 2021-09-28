@@ -2338,25 +2338,25 @@ function updateMap() {
                         } else {
                             c = document.getElementsByClassName('minimap ' + key + ' DCunavailable');
                         }
-                        c.innerHTML = 'x';
-                        c.style.cursor = 'pointer';
-                        c.style.position = 'absolute';
-                        c.style.width = '16px';
+                        //c.innerHTML = 'x';
+                        //c.style.cursor = 'pointer';
+                        //c.style.position = 'absolute';
+                        //c.style.width = '16px';
                         c.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
-                        c.style.top = dungeons[dungeonSelect].chestlist[key].y;
-                        c.style.left = dungeons[dungeonSelect].chestlist[key].x;
+                        //c.style.top = dungeons[dungeonSelect].chestlist[key].y;
+                        //c.style.left = dungeons[dungeonSelect].chestlist[key].x;
                         minimap.appendChild(c);
 
                         var cc = document.getElementById('minimap ' + key + ' lable');
                         if (dungeons[dungeonSelect].chestlist[key].leadsto == "unknown") cc.innerHTML = key;
                         else if (dungeons[dungeonSelect].chestlist[key].leadsto !== "unknown") cc.innerHTML = dungeons[dungeonSelect].chestlist[key].leadsto;
-                        cc.id = 'minimap ' + key;
-                        cc.style.width = '160px';
-                        cc.style.backgroundColor = 'black';
-                        cc.style.color = '#fff';
-                        cc.style.position = 'absolute';
-                        cc.style.textAlign = 'center';
-                        cc.style.fontSize = '20px';
+                        //cc.id = 'minimap ' + key;
+                        //cc.style.width = '160px';
+                        //cc.style.backgroundColor = 'black';
+                        //cc.style.color = '#fff';
+                        //cc.style.position = 'absolute';
+                        //cc.style.textAlign = 'center';
+                        //cc.style.fontSize = '20px';
                         c.appendChild(cc);
                         c.onmouseover = new Function('highlight(this' + ',"' + key + '")');
                         c.onmouseout = new Function('unhighlight(this' + ',"' + key + '")');
