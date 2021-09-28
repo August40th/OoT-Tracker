@@ -1063,7 +1063,7 @@ function toggleDungeonChest(sender, d, c) {
             Scrub3++;}
         l.appendChild(e4); 
       } if (Fairy < 5) {
-        e5.innerHTML = 'Lone Scrub';
+        e5.innerHTML = 'Small Fountain';
         e5.onmouseover = new Function('highlightDungeonChest(this)');
         e5.onmouseout = new Function('unhighlightDungeonChest(this)');
         e5.style.cursor = "pointer";
