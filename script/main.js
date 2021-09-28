@@ -485,7 +485,7 @@ function deserializeDungeonChests(serializedDungeons) {
 }
 
 function highlight(a, b) {
-    document.getElementById('minimap ' + b).style.visibility = 'visible';
+    document.getElementById('minimap ' + b).style.visibility = 'unset';
 }
 
 function unhighlight(a, b) {
@@ -630,36 +630,35 @@ function clickDungeon(d) {
                         //l.appendChild(ll);
                         
                         document.getElementById('mapdiv').appendChild(l);
-                    
-                        if ( (dungeons[v].chestlist[ent].leadsto !== "unknown" || dungeons[v].chestlist[ent].leadsto !== "none") && ( (OWERmap == true && dungeons[v].chestlist[ent].type == "entrance") || 
-                        (DungeonER == true && dungeons[v].chestlist[ent].type == "dungeon") || 
-                        (Owls == true && dungeons[v].chestlist[ent].type == "owl") ||
-                        (Warps == true && dungeons[v].chestlist[ent].type == "warp") ||
-                        (RndmStart == true && dungeons[v].chestlist[ent].type == "spawn") ) ) {
-                            for ( var u = 0; u < dungeons.length; u++) {
-                                if (u == dungeonSelect || u == v) continue;
-                                for (var nxt in dungeons[u].chestlist) {
-                                    if (dungeons[v].chestlist[ent].leadsto == nxt || dungeons[v].chestlist[ent].leadsto == dungeons[u].name + ' ' + nxt || dungeons[v].chestlist[ent].leadsto == dungeons[u].name) {
-                                        let mapDivWidth = 828;
-                                        let mapDivHeight = 420;
-                                        let x1 = parseFloat(dungeons[v].x)*mapDivWidth/100;
-                                        let y1 = parseFloat(dungeons[v].y)*mapDivHeight/100;
-                                        let x2 = parseFloat(dungeons[u].x)*mapDivWidth/100;
-                                        let y2 = parseFloat(dungeons[u].y)*mapDivHeight/100;
+                    }
+                    if ( (dungeons[v].chestlist[ent].leadsto !== "unknown" || dungeons[v].chestlist[ent].leadsto !== "none") && ( (OWERmap == true && dungeons[v].chestlist[ent].type == "entrance") || 
+                    (DungeonER == true && dungeons[v].chestlist[ent].type == "dungeon") || 
+                    (Owls == true && dungeons[v].chestlist[ent].type == "owl") ||
+                    (Warps == true && dungeons[v].chestlist[ent].type == "warp") ||
+                    (RndmStart == true && dungeons[v].chestlist[ent].type == "spawn") ) ) {
+                        for ( var u = 0; u < dungeons.length; u++) {
+                            if (u == dungeonSelect || u == v) continue;
+                            for (var nxt in dungeons[u].chestlist) {
+                                if (dungeons[u].chestlist[nxt].leadsto == ent || dungeons[u].chestlist[nxt].leadsto == dungeons[v].name + ' ' + nxt || dungeons[u].chestlist[nxt].leadsto == dungeons[v]name) {
+                                    let mapDivWidth = 828;
+                                    let mapDivHeight = 420;
+                                    let x1 = parseFloat(dungeons[v].x)*mapDivWidth/100;
+                                    let y1 = parseFloat(dungeons[v].y)*mapDivHeight/100;
+                                    let x2 = parseFloat(dungeons[u].x)*mapDivWidth/100;
+                                    let y2 = parseFloat(dungeons[u].y)*mapDivHeight/100;
 
-                                        var j = document.createElement('eline');
-                                        j.id = 'eline';
-                                        j.style.height = '2px';
-                                        j.style.width = findDistance(x1, y1, x2, y2 ) + 'px';
-                                        j.style.transformOrigin = "0 0";
-                                        j.style.transform = 'rotate('+ findAngle(x1, y1, x2, y2 ) + 'deg)';
-                                        j.style.position = 'absolute';
-                                        j.style.whiteSpace = 'nowrap';
-                                        j.style.backgroundColor = 'yellow';
-                                        j.style.left = x1+"px";
-                                        j.style.top = y1+"px";
-                                        document.getElementById('mapdiv').appendChild(j); }
-                                }
+                                    var j = document.createElement('eline');
+                                    j.id = 'eline';
+                                    j.style.height = '2px';
+                                    j.style.width = findDistance(x1, y1, x2, y2 ) + 'px';
+                                    j.style.transformOrigin = "0 0";
+                                    j.style.transform = 'rotate('+ findAngle(x1, y1, x2, y2 ) + 'deg)';
+                                    j.style.position = 'absolute';
+                                    j.style.whiteSpace = 'nowrap';
+                                    j.style.backgroundColor = 'yellow';
+                                    j.style.left = x1+"px";
+                                    j.style.top = y1+"px";
+                                    document.getElementById('mapdiv').appendChild(j); }
                             }
                         }
                     }
