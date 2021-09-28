@@ -649,8 +649,8 @@ function clickDungeon(d) {
                                             let x2 = parseFloat(dungeons[u].x)*mapDivWidth/100;
                                             let y2 = parseFloat(dungeons[u].y)*mapDivHeight/100;
 
-                                            var j = document.createElement('jline');
-                                            j.id = 'jline';
+                                            var j = document.createElement('eline');
+                                            j.id = 'eline';
                                             j.style.height = '2px';
                                             j.style.width = findDistance(x1, y1, x2, y2 ) + 'px';
                                             j.style.transformOrigin = "0 0";
