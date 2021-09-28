@@ -620,7 +620,19 @@ function clickDungeon(d) {
                         l.style.backgroundColor = 'red';
                         l.style.left = x1+"px";
                         l.style.top = y1+"px";
-                         
+
+                        var ll = document.createElement('span');
+                        ll.id = 'minimap ' + key;
+                        ll.innerHTML = key + ' leads to ' + ent;
+                        ll.style.width = '160px';
+                        ll.style.backgroundColor = 'black';
+                        ll.style.color = '#fff';
+                        ll.style.position = 'absolute';
+                        ll.style.textAlign = 'center';
+                        ll.style.fontSize = '20px';
+                        l.appendChild(ll);
+                        l.onmouseover = new Function('highlight(this' + ',"' + key + '")');
+                        l.onmouseout = new Function('unhighlight(this' + ',"' + key + '")');
                         //var ll = document.createElement('span');
                         //ll.id = key + ' linelable ' + ent;
                         //ll.innerHTML = key + ' leads to ' + ent;
