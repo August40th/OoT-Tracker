@@ -623,7 +623,7 @@ function clickDungeon(d) {
 
                         var ll = document.createElement('span');
                         ll.id = 'minimap ' + key;
-                        ll.innerHTML = key + ' -> ' + ent;
+                        ll.innerHTML = key + ' >>> ' + ent.replaceAll("to", "from");
                         ll.style.width = 'auto';
                         ll.style.backgroundColor = 'black';
                         ll.style.color = '#fff';
