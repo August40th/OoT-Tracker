@@ -631,6 +631,7 @@ function clickDungeon(d) {
                         ll.style.transform = 'rotate('+ findAngle(x1, y1, x2, y2 )*-1 + 'deg)';
                         ll.style.textAlign = 'center';
                         ll.style.fontSize = '20px';
+                        ll.style.visibility = 'hidden';
                         l.appendChild(ll);
                         l.onmouseover = new Function('highlight(this' + ',"' + key + '")');
                         l.onmouseout = new Function('unhighlight(this' + ',"' + key + '")');
@@ -678,6 +679,7 @@ function clickDungeon(d) {
                                             jj.style.transform = 'rotate('+ findAngle(x1, y1, x2, y2 )*-1 + 'deg)';
                                             jj.style.textAlign = 'center';
                                             jj.style.fontSize = '20px';
+                                            jj.style.visibility = 'hidden';
                                             j.appendChild(jj);
                                             j.onmouseover = new Function('highlight(this' + ',"' + key + '")');
                                             j.onmouseout = new Function('unhighlight(this' + ',"' + key + '")'); }}}}}
