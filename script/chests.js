@@ -4514,13 +4514,13 @@ var dungeons = [
    },
    { name: "Lost Woods Bridge", x: "70%", y: "54%", type: "overworld", found: true,
       chestlist: 
-      { 'Bridge to Forest': { x: "32%", y: "52.5%", leadsto: "unknown", type: "entrance", access: "entrance",
+      { 'Bridge to Field': { x: "32%", y: "52.5%", leadsto: "unknown", type: "entrance", access: "entrance",
              isAvailable: function () {
                   return dungeons[34].found == true; }
          }, 'Fairy Ocarina': { x: "50%", y: "52.5%", leadsto: "unknown", type: "ocarina", access: "OWER",
             isAvailable: function () {
                return dungeons[34].found == true; }
-         }, 'Bridge to Field': { x: "68%", y: "52.5%", leadsto: "unknown", type: "entrance", access: "entrance",
+         }, 'Bridge to Forest': { x: "68%", y: "52.5%", leadsto: "unknown", type: "entrance", access: "entrance",
              isAvailable: function () {
                   return dungeons[34].found == true; }
          }, 'Bridge to Woods': { x: "49.5%", y: "52.5%", leadsto: "Woods to Bridge", type: "entrance", access: "entrance",
