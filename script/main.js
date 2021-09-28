@@ -628,20 +628,12 @@ function clickDungeon(d) {
                         ll.style.backgroundColor = 'black';
                         ll.style.color = '#fff';
                         ll.style.position = 'absolute';
+                        ll.style.transform = 'rotate('- findAngle(x1, y1, x2, y2 ) + 'deg)';
                         ll.style.textAlign = 'center';
                         ll.style.fontSize = '20px';
                         l.appendChild(ll);
                         l.onmouseover = new Function('highlight(this' + ',"' + key + '")');
                         l.onmouseout = new Function('unhighlight(this' + ',"' + key + '")');
-                        //var ll = document.createElement('span');
-                        //ll.id = key + ' linelable ' + ent;
-                        //ll.innerHTML = key + ' leads to ' + ent;
-                        //ll.style.backgroundColor = 'black';
-                        //ll.style.color = 'white';
-                        //ll.style.fontSize = '20';
-                        //l.onmouseout = new Function('lineunhighlight(' + ll + ')');
-                        //l.onmouseover = new Function('linehighlight(' + ll + ')');
-                        //l.appendChild(ll);
                         
                         document.getElementById('mapdiv').appendChild(l);
                     }
