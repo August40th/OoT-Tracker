@@ -2331,7 +2331,6 @@ function updateMap() {
                 minimap.innerHTML = '';
                 if (key in dungeons[dungeonSelect].chestlist) {
                     if (dungeons[dungeonSelect].chestlist[key] !== undefined && (dungeons[dungeonSelect].chestlist[key].floor == here && dungeons[dungeonSelect].type == "dungeon" && (dungeons[dungeonSelect].mixedtype == dungeons[dungeonSelect].chestlist[key].access || quest == 'Mixecd') ) || dungeons[dungeonSelect].type == "overworld") {
-                        c.innerHTML = 'x';
                         if (dungeons[dungeonSelect].chestlist[key].isOpened) {
                             c = document.getElementsByClassName('minimap ' + key + ' DCopened');
                         } else if ( dungeons[dungeonSelect].chestlist[key].isAvailable() ) {
