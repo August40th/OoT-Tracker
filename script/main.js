@@ -640,6 +640,8 @@ function clickDungeon(d) {
                             if (u == dungeonSelect || u == v) continue;
                             for (var nxt in dungeons[u].chestlist) {
                                 if (dungeons[v].chestlist[ent].leadsto == nxt || dungeons[v].chestlist[ent].leadsto == dungeons[u].name + ' ' + nxt || dungeons[v].chestlist[ent].leadsto == dungeons[u].name) {
+                                    let mapDivWidth = 828;
+                                    let mapDivHeight = 420;
                                     let x1 = parseFloat(dungeons[v].x)*mapDivWidth/100;
                                     let y1 = parseFloat(dungeons[v].y)*mapDivHeight/100;
                                     let x2 = parseFloat(dungeons[u].x)*mapDivWidth/100;
