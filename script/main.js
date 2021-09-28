@@ -623,7 +623,7 @@ function clickDungeon(d) {
 
                         var ll = document.createElement('span');
                         ll.id = 'minimap ' + key;
-                        ll.innerHTML = key + ' leads to ' + ent;
+                        ll.innerHTML = key + ' -> ' + ent;
                         ll.style.width = 'auto';
                         ll.style.backgroundColor = 'black';
                         ll.style.color = '#fff';
@@ -760,34 +760,34 @@ function clickDungeon(d) {
         }
         else { DClist.appendChild(s);}
         
-        if ( (dungeons[dungeonSelect].chestlist[key].floor == here && dungeons[dungeonSelect].type == "dungeon" && (dungeons[dungeonSelect].mixedtype == dungeons[dungeonSelect].chestlist[key].access || quest == 'Mixecd') ) || dungeons[dungeonSelect].type == "overworld") {
-            var c = document.createElement('span');
-            c.innerHTML = 'x';
-            c.id = dungeons[dungeonSelect].chestlist[key].type;
-            c.className = key + ' ' + s.className;
-            c.style.cursor = 'pointer';
-            c.style.position = 'absolute';
-            c.style.width = '16px';
-            c.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
-            c.style.top = dungeons[dungeonSelect].chestlist[key].y;
-            c.style.left = dungeons[dungeonSelect].chestlist[key].x;
-            minimap.appendChild(c);
+        //if ( (dungeons[dungeonSelect].chestlist[key].floor == here && dungeons[dungeonSelect].type == "dungeon" && (dungeons[dungeonSelect].mixedtype == dungeons[dungeonSelect].chestlist[key].access || quest == 'Mixecd') ) || dungeons[dungeonSelect].type == "overworld") {
+            //var c = document.createElement('span');
+            //c.innerHTML = 'x';
+            //c.id = dungeons[dungeonSelect].chestlist[key].type;
+            //c.className = key + ' ' + s.className;
+            //c.style.cursor = 'pointer';
+            //c.style.position = 'absolute';
+            //c.style.width = '16px';
+            //c.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
+            //c.style.top = dungeons[dungeonSelect].chestlist[key].y;
+            //c.style.left = dungeons[dungeonSelect].chestlist[key].x;
+            //minimap.appendChild(c);
 
-            var cc = document.createElement('span');
-            cc.className = 'minimap ' + key;
-            if (dungeons[dungeonSelect].chestlist[key].leadsto == "unknown") cc.innerHTML = key;
-            else if (dungeons[dungeonSelect].chestlist[key].leadsto !== "unknown") cc.innerHTML = dungeons[dungeonSelect].chestlist[key].leadsto;
-            cc.id = 'minimap ' + key;
-            cc.style.width = '160px';
-            cc.style.backgroundColor = 'black';
-            cc.style.color = '#fff';
-            cc.style.position = 'absolute';
-            cc.style.textAlign = 'center';
-            cc.style.fontSize = '20px';
-            c.appendChild(cc);
-            c.onmouseover = new Function('highlight(this' + ',"' + key + '")');
-            c.onmouseout = new Function('unhighlight(this' + ',"' + key + '")');
-        }
+            //var cc = document.createElement('span');
+            //cc.className = 'minimap ' + key;
+            //if (dungeons[dungeonSelect].chestlist[key].leadsto == "unknown") cc.innerHTML = key;
+            //else if (dungeons[dungeonSelect].chestlist[key].leadsto !== "unknown") cc.innerHTML = dungeons[dungeonSelect].chestlist[key].leadsto;
+            //cc.id = 'minimap ' + key;
+            //cc.style.width = '160px';
+            //cc.style.backgroundColor = 'black';
+            //cc.style.color = '#fff';
+            //cc.style.position = 'absolute';
+            //cc.style.textAlign = 'center';
+            //cc.style.fontSize = '20px';
+            //c.appendChild(cc);
+            //c.onmouseover = new Function('highlight(this' + ',"' + key + '")');
+            //c.onmouseout = new Function('unhighlight(this' + ',"' + key + '")');
+        //}
     }
 }
 
@@ -2312,6 +2312,7 @@ function updateMap() {
                     DCcount++;
                 }
                 var minimap = document.getElementById('minimapdiv');
+                minimap.innerHTML = '';
                 if (key in dungeons[dungeonSelect].chestlist) {
                     if (dungeons[dungeonSelect].chestlist[key] !== undefined && (dungeons[dungeonSelect].chestlist[key].floor == here && dungeons[dungeonSelect].type == "dungeon" && (dungeons[dungeonSelect].mixedtype == dungeons[dungeonSelect].chestlist[key].access || quest == 'Mixecd') ) || dungeons[dungeonSelect].type == "overworld") {
                         c = document.createElement('span');
