@@ -752,7 +752,9 @@ function clickDungeon(d) {
         s.onmouseout = new Function('unhighlightDungeonChest(this)');
         s.style.cursor = "pointer";
 
-        if (dungeons[dungeonSelect].chestlist[key].leadsto !== "unknown" && dungeons[dungeonSelect].chestlist[key].type !== "entrance") DClist.appendChild(s);
+        if (dungeons[dungeonSelect].chestlist[key].leadsto !== "unknown" && dungeons[dungeonSelect].chestlist[key].type == "entrance") {
+        }
+        else { DClist.appendChild(s);}
         
         if ( (dungeons[dungeonSelect].chestlist[key].floor == here && dungeons[dungeonSelect].type == "dungeon" && (dungeons[dungeonSelect].mixedtype == dungeons[dungeonSelect].chestlist[key].access || quest == 'Mixecd') ) || dungeons[dungeonSelect].type == "overworld") {
             var c = document.createElement('span');
