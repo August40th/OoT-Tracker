@@ -639,7 +639,7 @@ function clickDungeon(d) {
                         for ( var u = 0; u < dungeons.length; u++) {
                             if (u == dungeonSelect || u == v) continue;
                             for (var nxt in dungeons[u].chestlist) {
-                                if (dungeons[u].chestlist[nxt].leadsto == ent || dungeons[u].chestlist[nxt].leadsto == dungeons[v].name + ' ' + nxt || dungeons[u].chestlist[nxt].leadsto == dungeons[v]name) {
+                                if (dungeons[u].chestlist[nxt].leadsto == ent || dungeons[u].chestlist[nxt].leadsto == dungeons[v].name + ' ' + ent || dungeons[u].chestlist[nxt].leadsto == dungeons[v].name) {
                                     let mapDivWidth = 828;
                                     let mapDivHeight = 420;
                                     let x1 = parseFloat(dungeons[v].x)*mapDivWidth/100;
