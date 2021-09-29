@@ -1053,7 +1053,7 @@ function toggleDungeonChest(sender, d, c) {
             clickDungeon(d);}
         l.appendChild(e0);
         if (IndoorER == "Full" && ToT == 0) {
-            e1.innerHTML = 'Temple of Time';
+            e1.innerHTML = 'Temple O\' Time';
             e1.onmouseover = new Function('highlightDungeonChest(this)');
             e1.onmouseout = new Function('unhighlightDungeonChest(this)');
             e1.style.cursor = "pointer";
@@ -1684,7 +1684,7 @@ function toggleDungeonChest(sender, d, c) {
                         clickDungeon(d);}
                     l.appendChild(e0);
                     if (IndoorER == "Full" && ToT == 0) {
-                        e1.innerHTML = 'Temple of Time';
+                        e1.innerHTML = 'Temple O\' Time';
                         e1.onmouseover = new Function('highlightDungeonChest(this)');
                         e1.onmouseout = new Function('unhighlightDungeonChest(this)');
                         e1.style.cursor = "pointer";
@@ -2264,7 +2264,7 @@ function toggleDungeonChest(sender, d, c) {
                     clickDungeon(d);}
                 l.appendChild(e0);
                 if (IndoorER == "Full" && ToT == 0) {
-                    e1.innerHTML = 'Temple of Time';
+                    e1.innerHTML = 'Temple O\' Time';
                     e1.onmouseover = new Function('highlightDungeonChest(this)');
                     e1.onmouseout = new Function('unhighlightDungeonChest(this)');
                     e1.style.cursor = "pointer";
