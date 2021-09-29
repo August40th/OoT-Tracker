@@ -672,7 +672,7 @@ function clickDungeon(d) {
                                             document.getElementById('mapdiv').appendChild(j); 
                                         
                                             var jj = document.createElement('span');
-                                            jj.id = 'minimap' + nxt;
+                                            jj.id = 'minimap ' + nxt;
                                             jj.innerHTML = ent + ' >>> ' + nxt.replaceAll("to", "from");;
                                             jj.style.width = 'auto';
                                             jj.style.backgroundColor = 'black';
