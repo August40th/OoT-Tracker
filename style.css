@@ -25,6 +25,8 @@ body{
     z-index:11;	
     background-color: rgb(255,255,255);	
     color: red;
+    height: 50px;
+    width: 180px;
 }
 
 #button{
