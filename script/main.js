@@ -1613,6 +1613,7 @@ function toggleDungeonChest(sender, d, c) {
             f1.onmouseout = new Function('unhighlightDungeonChest(this)');
             f1.style.cursor = "pointer";
             f1.onclick = function (openarea) {
+                l.innerHTML = '';
                 for ( var k = 0; k < 35; k++) {
                     if ( (k == 0 || k > 12) && c !== "Dungeon Door") continue;
                     if ( (k > 0 && k < 13) && c == "Dungeon Door") continue;
