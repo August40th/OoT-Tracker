@@ -1940,7 +1940,7 @@ function toggleDungeonChest(sender, d, c) {
                 } 
                 l.appendChild(f2);
             } if (GrottoER == true) {
-                f3.innerHTML = 'Indoor';
+                f3.innerHTML = 'Grotto';
                 f3.onmouseover = new Function('highlightDungeonChest(this)');
                 f3.onmouseout = new Function('unhighlightDungeonChest(this)');
                 f3.style.cursor = "pointer";
@@ -1953,18 +1953,189 @@ function toggleDungeonChest(sender, d, c) {
                         dungeons[d].chestlist[c].leadsto = this.innerHTML;
                         clickDungeon(d);}
                     l.appendChild(e0);
-                    if (IndoorER == "Full" && ToT == 0) {
-                        e1.innerHTML = 'Temple of Time';
+                    if (Generic < 9) {
+                        e1.innerHTML = 'Generic';
                         e1.onmouseover = new Function('highlightDungeonChest(this)');
                         e1.onmouseout = new Function('unhighlightDungeonChest(this)');
                         e1.style.cursor = "pointer";
                         e1.onclick = function(setLeadsto){
                             dungeons[d].chestlist[c].leadsto = this.innerHTML;
                             clickDungeon(d); 
-                            ToT++;}
-                        l.appendChild(e1); }
-                }
-            } l.appendChild(f3);
+                            Generic++;}
+                        l.appendChild(e1); 
+                    } if (Scrub1 == 0) {
+                        e2.innerHTML = 'Lone Scrub';
+                        e2.onmouseover = new Function('highlightDungeonChest(this)');
+                        e2.onmouseout = new Function('unhighlightDungeonChest(this)');
+                        e2.style.cursor = "pointer";
+                        e2.onclick = function(setLeadsto){
+                            dungeons[d].chestlist[c].leadsto = this.innerHTML;
+                            clickDungeon(d); 
+                            Scrub1++;}
+                        l.appendChild(e2); 
+                    } if (Scrub2 < 4) {
+                        e3.innerHTML = '2 Scrubs';
+                        e3.onmouseover = new Function('highlightDungeonChest(this)');
+                        e3.onmouseout = new Function('unhighlightDungeonChest(this)');
+                        e3.style.cursor = "pointer";
+                        e3.onclick = function(setLeadsto){
+                            dungeons[d].chestlist[c].leadsto = this.innerHTML;
+                            clickDungeon(d); 
+                            Scrub2++;}
+                        l.appendChild(e3); 
+                    } if (ScrubLeft == 0) {
+                        e4.innerHTML = '2 Scrubs Left front';
+                        e4.onmouseover = new Function('highlightDungeonChest(this)');
+                        e4.onmouseout = new Function('unhighlightDungeonChest(this)');
+                        e4.style.cursor = "pointer";
+                        e4.onclick = function(setLeadsto){
+                            dungeons[d].chestlist[c].leadsto = this.innerHTML;
+                            clickDungeon(d); 
+                            ScrubLeft++;}
+                        l.appendChild(e4); 
+                    } if (Scrub3 < 4) {
+                        e5.innerHTML = '3 Scrubs';
+                        e5.onmouseover = new Function('highlightDungeonChest(this)');
+                        e5.onmouseout = new Function('unhighlightDungeonChest(this)');
+                        e5.style.cursor = "pointer";
+                        e5.onclick = function(setLeadsto){
+                            dungeons[d].chestlist[c].leadsto = this.innerHTML;
+                            clickDungeon(d); 
+                            Scrub3++;}
+                        l.appendChild(e5); 
+                    } if (Dampe == 0) {
+                        e6.innerHTML = 'Dampe\'s Grave';
+                        e6.onmouseover = new Function('highlightDungeonChest(this)');
+                        e6.onmouseout = new Function('unhighlightDungeonChest(this)');
+                        e6.style.cursor = "pointer";
+                        e6.onclick = function(setLeadsto){
+                            dungeons[d].chestlist[c].leadsto = this.innerHTML;
+                            clickDungeon(d); 
+                            Dampe++;}
+                        l.appendChild(e6); 
+                    } if (Tomb == 0) {
+                        e7.innerHTML = 'Royal Tomb';
+                        e7.onmouseover = new Function('highlightDungeonChest(this)');
+                        e7.onmouseout = new Function('unhighlightDungeonChest(this)');
+                        e7.style.cursor = "pointer";
+                        e7.onclick = function(setLeadsto){
+                            dungeons[d].chestlist[c].leadsto = this.innerHTML;
+                            clickDungeon(d); 
+                            Tomb++;}
+                        l.appendChild(e7); 
+                    } if (Redeadgrave == 0) {
+                        e8.innerHTML = 'Redead Grave';
+                        e8.onmouseover = new Function('highlightDungeonChest(this)');
+                        e8.onmouseout = new Function('unhighlightDungeonChest(this)');
+                        e8.style.cursor = "pointer";
+                        e8.onclick = function(setLeadsto){
+                            dungeons[d].chestlist[c].leadsto = this.innerHTML;
+                            clickDungeon(d); 
+                            ScrubLeft++;}
+                        l.appendChild(e8); 
+                    } if (Fairygrave == 0) {
+                        e9.innerHTML = 'Fairy/Shield Grave';
+                        e9.onmouseover = new Function('highlightDungeonChest(this)');
+                        e9.onmouseout = new Function('unhighlightDungeonChest(this)');
+                        e9.style.cursor = "pointer";
+                        e9.onclick = function(setLeadsto){
+                            dungeons[d].chestlist[c].leadsto = this.innerHTML;
+                            clickDungeon(d); 
+                            Fairygrave++;}
+                        l.appendChild(e9); 
+                    } if (Tektite == 0) {
+                        e10.innerHTML = 'Tektite';
+                        e10.onmouseover = new Function('highlightDungeonChest(this)');
+                        e10.onmouseout = new Function('unhighlightDungeonChest(this)');
+                        e10.style.cursor = "pointer";
+                        e10.onclick = function(setLeadsto){
+                            dungeons[d].chestlist[c].leadsto = this.innerHTML;
+                            clickDungeon(d); 
+                            Tektite++;}
+                        l.appendChild(e10); 
+                    } if (Cow == 0) {
+                        e11.innerHTML = 'Cash Cow';
+                        e11.onmouseover = new Function('highlightDungeonChest(this)');
+                        e11.onmouseout = new Function('unhighlightDungeonChest(this)');
+                        e11.style.cursor = "pointer";
+                        e11.onclick = function(setLeadsto){
+                            dungeons[d].chestlist[c].leadsto = this.innerHTML;
+                            clickDungeon(d); 
+                            Cow++;}
+                        l.appendChild(e11); 
+                    } if (Web == 0) {
+                        e12.innerHTML = 'Web Grotto';
+                        e12.onmouseover = new Function('highlightDungeonChest(this)');
+                        e12.onmouseout = new Function('unhighlightDungeonChest(this)');
+                        e12.style.cursor = "pointer";
+                        e12.onclick = function(setLeadsto){
+                            dungeons[d].chestlist[c].leadsto = this.innerHTML;
+                            clickDungeon(d); 
+                            Web++;}
+                        l.appendChild(e12); 
+                    } if (Skulltula == 0) {
+                        e13.innerHTML = 'Skulltula grotto';
+                        e13.onmouseover = new Function('highlightDungeonChest(this)');
+                        e13.onmouseout = new Function('unhighlightDungeonChest(this)');
+                        e13.style.cursor = "pointer";
+                        e13.onclick = function(setLeadsto){
+                            dungeons[d].chestlist[c].leadsto = this.innerHTML;
+                            clickDungeon(d); 
+                            Skulltula++;}
+                        l.appendChild(e13); 
+                    } if (MudWall == 0) {
+                        e14.innerHTML = 'Mud Wall grotto';
+                        e14.onmouseover = new Function('highlightDungeonChest(this)');
+                        e14.onmouseout = new Function('unhighlightDungeonChest(this)');
+                        e14.style.cursor = "pointer";
+                        e14.onclick = function(setLeadsto){
+                            dungeons[d].chestlist[c].leadsto = this.innerHTML;
+                            clickDungeon(d); 
+                            MudWall++;}
+                        l.appendChild(e14); 
+                    } if (Wolfos == 0) {
+                        e15.innerHTML = 'Wolfos';
+                        e15.onmouseover = new Function('highlightDungeonChest(this)');
+                        e15.onmouseout = new Function('unhighlightDungeonChest(this)');
+                        e15.style.cursor = "pointer";
+                        e15.onclick = function(setLeadsto){
+                            dungeons[d].chestlist[c].leadsto = this.innerHTML;
+                            clickDungeon(d); 
+                            Wolfos++;}
+                        l.appendChild(e15); 
+                    } if (Redead == 0) {
+                        e16.innerHTML = 'Redead';
+                        e16.onmouseover = new Function('highlightDungeonChest(this)');
+                        e16.onmouseout = new Function('unhighlightDungeonChest(this)');
+                        e16.style.cursor = "pointer";
+                        e16.onclick = function(setLeadsto){
+                            dungeons[d].chestlist[c].leadsto = this.innerHTML;
+                            clickDungeon(d); 
+                            Redead++;}
+                        l.appendChild(e16); 
+                    } if (Octorock == 0) {
+                        e17.innerHTML = 'Octorock';
+                        e17.onmouseover = new Function('highlightDungeonChest(this)');
+                        e17.onmouseout = new Function('unhighlightDungeonChest(this)');
+                        e17.style.cursor = "pointer";
+                        e17.onclick = function(setLeadsto){
+                            dungeons[d].chestlist[c].leadsto = this.innerHTML;
+                            clickDungeon(d); 
+                            Octorock++;}
+                        l.appendChild(e17); 
+                    } if (Fairy < 5) {
+                        e18.innerHTML = 'Fairy Fountain';
+                        e18.onmouseover = new Function('highlightDungeonChest(this)');
+                        e18.onmouseout = new Function('unhighlightDungeonChest(this)');
+                        e18.style.cursor = "pointer";
+                        e18.onclick = function(setLeadsto){
+                            dungeons[d].chestlist[c].leadsto = this.innerHTML;
+                            clickDungeon(d); 
+                            Fairy++;}
+                        l.appendChild(e18); 
+                    } }
+                l.appendChild(f3); 
+            }
     } if (dungeons[d].chestlist[c].leadsto == "unknown" && dungeons[d].chestlist[c].type == "owl" ) { 
         var t = document.getElementById('submaparea');
         var l = document.getElementById('submaplist');
