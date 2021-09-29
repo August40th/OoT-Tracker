@@ -2872,7 +2872,7 @@ function toggleDungeonChest(sender, d, c) {
             }
         }
     }
-    updateMap();
+    //updateMap();
     saveCookie();
 }
 
