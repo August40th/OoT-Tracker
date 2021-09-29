@@ -2876,6 +2876,7 @@ function toggleDungeonChest(sender, d, c) {
         }
     }
     updateMap();
+    clickDungeon(d);
     saveCookie();
 }
 
