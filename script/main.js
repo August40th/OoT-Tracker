@@ -610,7 +610,7 @@ function clickDungeon(d) {
             for ( var v = 0; v < dungeons.length; v++) {
                 if (v == dungeonSelect) continue;
                 for (var ent in dungeons[v].chestlist) {
-                    if ( (dungeons[v].chestlist[ent].type == "entrance" || dungeons[v].chestlist[ent].type == "dungeon") && (dungeons[dungeonSelect].chestlist[key].leadsto == ent || dungeons[dungeonSelect].chestlist[key].leadsto == dungeons[v].name + ' ' + ent || dungeons[dungeonSelect].chestlist[key].leadsto == dungeons[v].name)) {
+                    if ( (dungeons[v].chestlist[ent].type == "entrance" || dungeons[v].chestlist[ent].type == "dungeon" || (mixphoo !== "Off" && (dungeons[dungeonSelect].chestlist[key].type == "simple" || dungeons[dungeonSelect].chestlist[key].type == "alldoor" || dungeons[dungeonSelect].chestlist[key].type == "grotto") )) && (dungeons[dungeonSelect].chestlist[key].leadsto == ent || dungeons[dungeonSelect].chestlist[key].leadsto == dungeons[v].name + ' ' + ent || dungeons[dungeonSelect].chestlist[key].leadsto == dungeons[v].name)) {
                         let mapDivWidth = 828;
                         let mapDivHeight = 420;
 
@@ -661,8 +661,8 @@ function clickDungeon(d) {
                         for ( var u = 0; u < dungeons.length; u++) {
                             if (u == dungeonSelect || u == v) continue;
                             for (var nxt in dungeons[u].chestlist) {
-                                if ( (dungeons[v].chestlist[ent].type == "entrance" || dungeons[v].chestlist[ent].type == "dungeon") &&
-                                    (dungeons[u].chestlist[nxt].type == "entrance" || dungeons[u].chestlist[nxt].type == "dungeon") &&
+                                if ( (dungeons[v].chestlist[ent].type == "entrance" || dungeons[v].chestlist[ent].type == "dungeon" || (mixphoo !== "Off" && (dungeons[dungeonSelect].chestlist[key].type == "simple" || dungeons[dungeonSelect].chestlist[key].type == "alldoor" || dungeons[dungeonSelect].chestlist[key].type == "grotto") ) ) &&
+                                    (dungeons[u].chestlist[nxt].type == "entrance" || dungeons[u].chestlist[nxt].type == "dungeon" || (mixphoo !== "Off" && (dungeons[dungeonSelect].chestlist[key].type == "simple" || dungeons[dungeonSelect].chestlist[key].type == "alldoor" || dungeons[dungeonSelect].chestlist[key].type == "grotto") )) &&
                                     (dungeons[v].chestlist[ent].leadsto == nxt || dungeons[v].chestlist[ent].leadsto == dungeons[u].name + ' ' + nxt || 
                                      dungeons[v].chestlist[ent].leadsto == dungeons[u].name) ) {
                                     for (var o in dungeons[v].chestlist) {
