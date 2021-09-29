@@ -1836,7 +1836,7 @@ function toggleDungeonChest(sender, d, c) {
                             dungeons[d].chestlist[c].leadsto = this.innerHTML;
                             clickDungeon(d); 
                             Stable++;}
-                        l.appendChild(e18); 
+                        l.appendChild(e19); 
                     } if (Talon == 0) {
                         e20.innerHTML = 'Ranch House';
                         e20.onmouseover = new Function('highlightDungeonChest(this)');
@@ -1846,7 +1846,7 @@ function toggleDungeonChest(sender, d, c) {
                             dungeons[d].chestlist[c].leadsto = this.innerHTML;
                             clickDungeon(d); 
                             Talon++;}
-                        l.appendChild(e18); 
+                        l.appendChild(e20); 
                     } if (Midos == 0) {
                         e21.innerHTML = 'Mido\'s House';
                         e21.onmouseover = new Function('highlightDungeonChest(this)');
@@ -1856,7 +1856,7 @@ function toggleDungeonChest(sender, d, c) {
                             dungeons[d].chestlist[c].leadsto = this.innerHTML;
                             clickDungeon(d); 
                             Midos++;}
-                        l.appendChild(e18); 
+                        l.appendChild(e21); 
                     } if (Sarias == 0) {
                         e22.innerHTML = 'Saria\'s House';
                         e22.onmouseover = new Function('highlightDungeonChest(this)');
@@ -1866,7 +1866,7 @@ function toggleDungeonChest(sender, d, c) {
                             dungeons[d].chestlist[c].leadsto = this.innerHTML;
                             clickDungeon(d); 
                             Sarias++;}
-                        l.appendChild(e18); 
+                        l.appendChild(e22); 
                     } if (Twins == 0) {
                         e23.innerHTML = 'Twins\' House';
                         e23.onmouseover = new Function('highlightDungeonChest(this)');
@@ -1876,7 +1876,7 @@ function toggleDungeonChest(sender, d, c) {
                             dungeons[d].chestlist[c].leadsto = this.innerHTML;
                             clickDungeon(d); 
                             Twins++;}
-                        l.appendChild(e18); 
+                        l.appendChild(e23); 
                     } if (KnowitAll == 0) {
                         e24.innerHTML = 'Know it All Bros';
                         e24.onmouseover = new Function('highlightDungeonChest(this)');
@@ -1886,7 +1886,7 @@ function toggleDungeonChest(sender, d, c) {
                             dungeons[d].chestlist[c].leadsto = this.innerHTML;
                             clickDungeon(d); 
                             KnowitAll++;}
-                        l.appendChild(e18); 
+                        l.appendChild(e24); 
                     } if (Impafront == 0) {
                         e25.innerHTML = 'Impa\'s Front Door';
                         e25.onmouseover = new Function('highlightDungeonChest(this)');
@@ -1896,7 +1896,7 @@ function toggleDungeonChest(sender, d, c) {
                             dungeons[d].chestlist[c].leadsto = this.innerHTML;
                             clickDungeon(d); 
                             Impafront++;}
-                        l.appendChild(e18); 
+                        l.appendChild(e25); 
                     } if (TowerHouse == 0) {
                         e26.innerHTML = 'Tower House';
                         e26.onmouseover = new Function('highlightDungeonChest(this)');
@@ -1906,7 +1906,7 @@ function toggleDungeonChest(sender, d, c) {
                             dungeons[d].chestlist[c].leadsto = this.innerHTML;
                             clickDungeon(d); 
                             TowerHouse++;}
-                        l.appendChild(e18); 
+                        l.appendChild(e26); 
                     } if (Grannys == 0) {
                         e27.innerHTML = 'Granny\'s';
                         e27.onmouseover = new Function('highlightDungeonChest(this)');
@@ -1916,7 +1916,7 @@ function toggleDungeonChest(sender, d, c) {
                             dungeons[d].chestlist[c].leadsto = this.innerHTML;
                             clickDungeon(d); 
                             Grannys++;}
-                        l.appendChild(e18); 
+                        l.appendChild(e27); 
                     } if (DampeHut == 0) {
                         e28.innerHTML = 'Dampe\'s Hut';
                         e28.onmouseover = new Function('highlightDungeonChest(this)');
@@ -1926,7 +1926,7 @@ function toggleDungeonChest(sender, d, c) {
                             dungeons[d].chestlist[c].leadsto = this.innerHTML;
                             clickDungeon(d); 
                             DampeHut++;}
-                        l.appendChild(e18); 
+                        l.appendChild(e28); 
                     } if (CarpTent == 0) {
                         e29.innerHTML = 'Carpenter\'s Tent';
                         e29.onmouseover = new Function('highlightDungeonChest(this)');
@@ -1936,7 +1936,8 @@ function toggleDungeonChest(sender, d, c) {
                             dungeons[d].chestlist[c].leadsto = this.innerHTML;
                             clickDungeon(d); 
                             CarpTent++; }
-                        l.appendChild(e18); } 
+                        l.appendChild(e29); 
+                    } 
                 } l.appendChild(f2);
             } if (GrottoER == true) {
                 f3.innerHTML = 'Grotto';
