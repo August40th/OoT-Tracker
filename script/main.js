@@ -1937,9 +1937,33 @@ function toggleDungeonChest(sender, d, c) {
                             clickDungeon(d); 
                             CarpTent++; }
                         l.appendChild(e29); }
-                } 
-                l.appendChild(f2);
-            } 
+                } l.appendChild(f2);
+            } if (GrottoER == true) {
+                f3.innerHTML = 'Indoor';
+                f3.onmouseover = new Function('highlightDungeonChest(this)');
+                f3.onmouseout = new Function('unhighlightDungeonChest(this)');
+                f3.style.cursor = "pointer";
+                f3.onclick = function(setLeadsto){
+                    e0.innerHTML = 'dead';
+                    e0.onmouseover = new Function('highlightDungeonChest(this)');
+                    e0.onmouseout = new Function('unhighlightDungeonChest(this)');
+                    e0.style.cursor = "pointer";
+                    e0.onclick = function(openit) {
+                        dungeons[d].chestlist[c].leadsto = this.innerHTML;
+                        clickDungeon(d);}
+                    l.appendChild(e0);
+                    if (IndoorER == "Full" && ToT == 0) {
+                        e1.innerHTML = 'Temple of Time';
+                        e1.onmouseover = new Function('highlightDungeonChest(this)');
+                        e1.onmouseout = new Function('unhighlightDungeonChest(this)');
+                        e1.style.cursor = "pointer";
+                        e1.onclick = function(setLeadsto){
+                            dungeons[d].chestlist[c].leadsto = this.innerHTML;
+                            clickDungeon(d); 
+                            ToT++;}
+                        l.appendChild(e1); }
+                }
+            } l.appendChild(f3);
     } if (dungeons[d].chestlist[c].leadsto == "unknown" && dungeons[d].chestlist[c].type == "owl" ) { 
         var t = document.getElementById('submaparea');
         var l = document.getElementById('submaplist');
