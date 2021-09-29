@@ -131,7 +131,7 @@ var dungeons = [
                return dungeons[0].found == true
                  && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) &&
                   items.Ocarina && items.EponasSong; }
-         }, 'Saria\'s House': { x: "2950%", y: "65%", leadsto: "unknown", type: "simple", access: "door",
+         }, 'Saria\'s House': { x: "29%", y: "65%", leadsto: "unknown", type: "simple", access: "door",
             isAvailable: function () {
                return dungeons[0].found == true ; }
          }, 'Twin\'s House': { x: "37.5%", y: "61%", leadsto: "unknown", type: "simple", access: "door",
