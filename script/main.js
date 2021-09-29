@@ -487,12 +487,10 @@ function deserializeDungeonChests(serializedDungeons) {
 }
 
 function highlight(a, b) {
-    document.getElementById('minimapdiv').style.zIndex = -1;
     document.getElementById('minimap ' + b).style.visibility = 'unset';
 }
 
 function unhighlight(a, b) {
-    document.getElementById('minimapdiv').style.zIndex = 0;
     document.getElementById('minimap ' + b).style.visibility = 'hidden';
 }
 
@@ -505,12 +503,14 @@ function unhighlightDungeon(x) {
     document.getElementById('dungeon' + x).style.backgroundImage = "url(images/poi.png)";
 }
 
-function linehighlight(a) {
-    document.getElementById(a.id).style.visibility = 'visible';
+function linehighlight(a, b) {
+    document.getElementById('minimapdiv').style.zIndex = -1;
+    document.getElementById('minimap ' + b).style.visibility = 'unset';
 }
 
-function lineunhighlight(a) {
-    document.getElementById(a.id).style.visibility = 'hidden';
+function lineunhighlight(a, b) {
+    document.getElementById('minimapdiv').style.zIndex = 0;
+    document.getElementById('minimap ' + b).style.visibility = 'hidden';
 }
 
 // mark dungeon as
@@ -635,8 +635,8 @@ function clickDungeon(d) {
                         ll.style.fontSize = '24px';
                         ll.style.visibility = 'hidden';
                         l.appendChild(ll);
-                        l.onmouseover = new Function('highlight(this' + ',"' + key + '")');
-                        l.onmouseout = new Function('unhighlight(this' + ',"' + key + '")');
+                        l.onmouseover = new Function('linehighlight(this' + ',"' + key + '")');
+                        l.onmouseout = new Function('lineunhighlight(this' + ',"' + key + '")');
                         
                         document.getElementById('mapdiv').appendChild(l);
                     }
