@@ -1630,7 +1630,7 @@ function toggleDungeonChest(sender, d, c) {
                         e.onmouseover = new Function('highlightDungeonChest(this)');
                         e.onmouseout = new Function('unhighlightDungeonChest(this)');
                         e.style.cursor = "pointer";
-                        e.onclick = function (openarea) {
+                        e.onclick = function (openuh) {
                             var v = this.id;                
                             l.innerHTML = '';
                             for (var ent in dungeons[v].chestlist) {
