@@ -1040,7 +1040,7 @@ function toggleDungeonChest(sender, d, c) {
             dungeons[d].chestlist[c].leadsto = this.innerHTML;
             clickDungeon(d);}
         l.appendChild(e0);
-        if (ToT == 0) {
+        if (IndoorER == "Full" && ToT == 0) {
             e1.innerHTML = 'Temple of Time';
             e1.onmouseover = new Function('highlightDungeonChest(this)');
             e1.onmouseout = new Function('unhighlightDungeonChest(this)');
@@ -1050,7 +1050,7 @@ function toggleDungeonChest(sender, d, c) {
                 clickDungeon(d); 
                 ToT++;}
             l.appendChild(e1); 
-        } if (Windmill == 0) {
+        } if (IndoorER == "Full" && Windmill == 0) {
             e2.innerHTML = 'Windmill';
             e2.onmouseover = new Function('highlightDungeonChest(this)');
             e2.onmouseout = new Function('unhighlightDungeonChest(this)');
@@ -1060,7 +1060,7 @@ function toggleDungeonChest(sender, d, c) {
                 clickDungeon(d); 
                 Windmill++;}
             l.appendChild(e2);
-        } if (Links == 0) {
+        } if (IndoorER == "Full" && Links == 0) {
             e3.innerHTML = 'Links House';
             e3.onmouseover = new Function('highlightDungeonChest(this)');
             e3.onmouseout = new Function('unhighlightDungeonChest(this)');
@@ -1070,7 +1070,7 @@ function toggleDungeonChest(sender, d, c) {
                 clickDungeon(d); 
                 Links++;}
             l.appendChild(e3); 
-        } if (PotShopF == 0) {
+        } if (IndoorER == "Full" && PotShopF == 0) {
             e4.innerHTML = 'Pot Shop front';
             e4.onmouseover = new Function('highlightDungeonChest(this)');
             e4.onmouseout = new Function('unhighlightDungeonChest(this)');
@@ -1080,7 +1080,7 @@ function toggleDungeonChest(sender, d, c) {
                 clickDungeon(d); 
                 PotShopF++;}
             l.appendChild(e4); 
-        } if (PotShopB == 0) {
+        } if (IndoorER == "Full" && PotShopB == 0) {
             e5.innerHTML = 'Pot Shop back';
             e5.onmouseover = new Function('highlightDungeonChest(this)');
             e5.onmouseout = new Function('unhighlightDungeonChest(this)');
