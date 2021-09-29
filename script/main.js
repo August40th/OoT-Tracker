@@ -603,7 +603,7 @@ function clickDungeon(d) {
             (Owls == true && dungeons[dungeonSelect].chestlist[key].type == "owl") ||
             (Warps == true && dungeons[dungeonSelect].chestlist[key].type == "warp") ||
             (RndmStart == true && dungeons[dungeonSelect].chestlist[key].type == "spawn") ||
-            (mixphoo == "Full" && (dungeons[dungeonSelect].chestlist[key].type == "simple" || 
+            (mixphoo !== "Off" && (dungeons[dungeonSelect].chestlist[key].type == "simple" || 
                                    dungeons[dungeonSelect].chestlist[key].type == "alldoor" || 
                                    dungeons[dungeonSelect].chestlist[key].type == "grotto") 
             ) ) {
@@ -654,7 +654,7 @@ function clickDungeon(d) {
                          (Owls == true && dungeons[v].chestlist[ent].type == "owl") ||
                          (Warps == true && dungeons[v].chestlist[ent].type == "warp") ||
                          (RndmStart == true && dungeons[dungeonSelect].chestlist[key].type == "spawn") ||
-                         (mixphoo == "Full" && (dungeons[dungeonSelect].chestlist[key].type == "simple" || 
+                         (mixphoo !== "Off" && (dungeons[dungeonSelect].chestlist[key].type == "simple" || 
                                                 dungeons[dungeonSelect].chestlist[key].type == "alldoor" || 
                                                 dungeons[dungeonSelect].chestlist[key].type == "grotto") )
                          ) ) {
