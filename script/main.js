@@ -3296,7 +3296,7 @@ function showSettings(sender) {
         showTracker('mapdiv', document.getElementsByName('showmap')[0]);
         document.getElementById('itemconfig').style.display = 'none';
         document.getElementById('rowButtons').style.display = 'none';
-        sender.innerHTML = '🔧';
+        sender.innerHTML = 'Settings';
         saveCookie();
     } else {
         var x = document.getElementById('settings');
@@ -3305,7 +3305,7 @@ function showSettings(sender) {
             sender.innerHTML = 'X';
         } else {
             x.style.display = 'none';
-            sender.innerHTML = '🔧';
+            sender.innerHTML = 'Settings';
         }
     }
 }
