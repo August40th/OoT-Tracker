@@ -672,8 +672,8 @@ function clickDungeon(d) {
                                             document.getElementById('mapdiv').appendChild(j); 
                                         
                                             var jj = document.createElement('span');
-                                            jj.id = 'minimap ' + key;
-                                            jj.innerHTML = dungeons[v].name + ' >>> ' + dungeons[u].name;
+                                            jj.id = 'minimap' + nxt;
+                                            jj.innerHTML = ent + ' >>> ' + nxt.replaceAll("to", "from");;
                                             jj.style.width = 'auto';
                                             jj.style.backgroundColor = 'black';
                                             jj.style.color = '#fff';
@@ -683,8 +683,8 @@ function clickDungeon(d) {
                                             jj.style.fontSize = '24px';
                                             jj.style.visibility = 'hidden';
                                             j.appendChild(jj);
-                                            j.onmouseover = new Function('highlight(this' + ',"' + key + '")');
-                                            j.onmouseout = new Function('unhighlight(this' + ',"' + key + '")'); }}}}}
+                                            j.onmouseover = new Function('highlight(this' + ',"' + nxt + '")');
+                                            j.onmouseout = new Function('unhighlight(this' + ',"' + nxt + '")'); }}}}}
                     }
                 } }
         }
