@@ -487,10 +487,12 @@ function deserializeDungeonChests(serializedDungeons) {
 }
 
 function highlight(a, b) {
+    document.getElementById('minimapdiv').style.zIndex = -1;
     document.getElementById('minimap ' + b).style.visibility = 'unset';
 }
 
 function unhighlight(a, b) {
+    document.getElementById('minimapdiv').style.zIndex = 0;
     document.getElementById('minimap ' + b).style.visibility = 'hidden';
 }
 
