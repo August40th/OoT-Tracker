@@ -1651,7 +1651,7 @@ function toggleDungeonChest(sender, d, c) {
                                 }
                             }
                         }
-                    }
+                        l.appendChild(e); }
                 }
             }
             l.appendChild(f1);
