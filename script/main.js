@@ -3916,6 +3916,7 @@ function updateMap() {
             }
             child = child.nextSibling;
         }
+        clickDungeon(dungeonSelect);
     }
 
 
