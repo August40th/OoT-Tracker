@@ -1937,7 +1937,8 @@ function toggleDungeonChest(sender, d, c) {
                             clickDungeon(d); 
                             CarpTent++; }
                         l.appendChild(e29); }
-                } l.appendChild(f2);
+                } 
+                l.appendChild(f2);
             } if (GrottoER == true) {
                 f3.innerHTML = 'Indoor';
                 f3.onmouseover = new Function('highlightDungeonChest(this)');
