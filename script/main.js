@@ -82,6 +82,8 @@ Age = 'Child';
 RndmStart = false;
 mixphoo = "Off";
 
+Generic=0; Scrub1=0; Scrub2=0; ScrubLeft=0; Scrub3=0; Wolfos=0; Cow=0; Web=0; Redead=0; Tektite=0; Dampe=0; Tomb=0; Redeadgrave=0; Fairygrave=0; Skulltula=0; MudWall=0; Octorock=0; Fairy=0;
+
 var mouseOverItem = false;
 var mouseLastOverR;
 var mouseLastOverC;
@@ -485,7 +487,7 @@ function deserializeDungeonChests(serializedDungeons) {
 }
 
 function highlight(a, b) {
-    document.getElementById('minimap ' + b).style.visibility = 'visible';
+    document.getElementById('minimap ' + b).style.visibility = 'unset';
 }
 
 function unhighlight(a, b) {
@@ -498,8 +500,15 @@ function highlightDungeon(x) {
 }
 
 function unhighlightDungeon(x) {
-   if (dungeonSelect != x)
-      document.getElementById('dungeon' + x).style.backgroundImage = "url(images/poi.png)";
+    document.getElementById('dungeon' + x).style.backgroundImage = "url(images/poi.png)";
+}
+
+function linehighlight(a) {
+    document.getElementById(a.id).style.visibility = 'visible';
+}
+
+function lineunhighlight(a) {
+    document.getElementById(a.id).style.visibility = 'hidden';
 }
 
 // mark dungeon as
@@ -608,17 +617,72 @@ function clickDungeon(d) {
                         l.style.transform = 'rotate('+ findAngle(x1, y1, x2, y2 ) + 'deg)';
                         l.style.position = 'absolute';
                         l.style.whiteSpace = 'nowrap';
-                        l.style.backgroundColor = 'aqua';
+                        l.style.backgroundColor = 'red';
                         l.style.left = x1+"px";
                         l.style.top = y1+"px";
-                         
+
                         var ll = document.createElement('span');
-                        ll.innerHTML = key + ' leads to ' + ent;
-                        ll.onmouseover = ll.style.visibility = 'visible';
-                        ll.onmouseout = ll.style.visibility = 'hidden';
-                           
+                        ll.id = 'minimap ' + key;
+                        ll.innerHTML = key + ' >>> ' + ent.replaceAll("to", "from");
+                        ll.style.width = 'auto';
+                        ll.style.backgroundColor = 'black';
+                        ll.style.color = '#fff';
+                        ll.style.position = 'absolute';
+                        ll.style.transform = 'rotate('+ findAngle(x1, y1, x2, y2 )*-1 + 'deg)';
+                        ll.style.textAlign = 'center';
+                        ll.style.fontSize = '24px';
+                        ll.style.visibility = 'hidden';
                         l.appendChild(ll);
+                        l.onmouseover = new Function('highlight(this' + ',"' + key + '")');
+                        l.onmouseout = new Function('unhighlight(this' + ',"' + key + '")');
+                        
                         document.getElementById('mapdiv').appendChild(l);
+                    }
+                    if ( (dungeons[v].chestlist[ent].leadsto !== "unknown" || dungeons[v].chestlist[ent].leadsto !== "none") && ( (OWERmap == true && dungeons[v].chestlist[ent].type == "entrance") || 
+                    (DungeonER == true && dungeons[v].chestlist[ent].type == "dungeon") || 
+                    (Owls == true && dungeons[v].chestlist[ent].type == "owl") ||
+                    (Warps == true && dungeons[v].chestlist[ent].type == "warp") ||
+                    (RndmStart == true && dungeons[v].chestlist[ent].type == "spawn") ) ) {
+                        for ( var u = 0; u < dungeons.length; u++) {
+                            if (u == dungeonSelect || u == v) continue;
+                            for (var nxt in dungeons[u].chestlist) {
+                                if (dungeons[v].chestlist[ent].leadsto == nxt || dungeons[v].chestlist[ent].leadsto == dungeons[u].name + ' ' + nxt || dungeons[v].chestlist[ent].leadsto == dungeons[u].name) {
+                                    for (var o in dungeons[v].chestlist) {
+                                        if (dungeons[dungeonSelect].chestlist[key].leadsto == o || dungeons[dungeonSelect].chestlist[key].leadsto == dungeons[v].name + ' ' + o || dungeons[dungeonSelect].chestlist[key].leadsto == dungeons[v].name) {
+                                            let mapDivWidth = 828;
+                                            let mapDivHeight = 420;
+                                            let x1 = parseFloat(dungeons[v].x)*mapDivWidth/100;
+                                            let y1 = parseFloat(dungeons[v].y)*mapDivHeight/100;
+                                            let x2 = parseFloat(dungeons[u].x)*mapDivWidth/100;
+                                            let y2 = parseFloat(dungeons[u].y)*mapDivHeight/100;
+
+                                            var j = document.createElement('eline');
+                                            j.id = 'eline';
+                                            j.style.height = '4px';
+                                            j.style.width = findDistance(x1, y1, x2, y2 ) + 'px';
+                                            j.style.transformOrigin = "0 0";
+                                            j.style.transform = 'rotate('+ findAngle(x1, y1, x2, y2 ) + 'deg)';
+                                            j.style.position = 'absolute';
+                                            j.style.whiteSpace = 'nowrap';
+                                            j.style.backgroundColor = 'yellow';
+                                            j.style.left = x1+"px";
+                                            j.style.top = y1+"px";
+                                            document.getElementById('mapdiv').appendChild(j); 
+                                        
+                                            var jj = document.createElement('span');
+                                            jj.id = 'minimap ' + key;
+                                            jj.innerHTML = nxt + ' >>> ' + ent.replaceAll("to", "from");
+                                            jj.style.width = 'auto';
+                                            jj.style.backgroundColor = 'black';
+                                            jj.style.color = '#fff';
+                                            jj.style.position = 'absolute';
+                                            jj.style.transform = 'rotate('+ findAngle(x1, y1, x2, y2 )*-1 + 'deg)';
+                                            jj.style.textAlign = 'center';
+                                            jj.style.fontSize = '24px';
+                                            jj.style.visibility = 'hidden';
+                                            j.appendChild(jj);
+                                            j.onmouseover = new Function('highlight(this' + ',"' + key + '")');
+                                            j.onmouseout = new Function('unhighlight(this' + ',"' + key + '")'); }}}}}
                     }
                 } }
         }
@@ -632,7 +696,7 @@ function clickDungeon(d) {
             continue;}
         if ( dungeons[dungeonSelect] == dungeons[12] && dungeons[dungeonSelect].chestlist[key].type == "trial" && trialsize == 0 ) { //Castle trials
             continue;}
-        if ( dungeons[dungeonSelect].chestlist[key].type == "entrance" && (OWERmap == false || dungeons[dungeonSelect].chestlist[key].leadsto !== "unknown")) { //Do Nothing
+        if ( dungeons[dungeonSelect].chestlist[key].type == "entrance" && (OWERmap == false )) { //|| dungeons[dungeonSelect].chestlist[key].leadsto !== "unknown")) { //Do Nothing
             continue;}
         if ( dungeons[dungeonSelect].chestlist[key].type == "warp" && Warps == false) {
             continue;}
@@ -708,11 +772,12 @@ function clickDungeon(d) {
         s.onmouseout = new Function('unhighlightDungeonChest(this)');
         s.style.cursor = "pointer";
 
-        DClist.appendChild(s);
+        if (dungeons[dungeonSelect].chestlist[key].leadsto !== "unknown" && dungeons[dungeonSelect].chestlist[key].type == "entrance") {
+        }
+        else { DClist.appendChild(s);}
         
-        if ( (dungeons[dungeonSelect].mixedtype == "vanilla" && dungeons[dungeonSelect].chestlist[key].access == "master") || (dungeons[dungeonSelect].mixedtype == "master" && dungeons[dungeonSelect].chestlist[key].access == "vanilla") ) continue;
-        if ( (dungeons[dungeonSelect].chestlist[key].floor == here && dungeons[dungeonSelect].type == "dungeon") || dungeons[dungeonSelect].type == "overworld") {
-            c = document.createElement('span');
+        if ( (dungeons[dungeonSelect].chestlist[key].floor == here && dungeons[dungeonSelect].type == "dungeon" && (dungeons[dungeonSelect].mixedtype == dungeons[dungeonSelect].chestlist[key].access || quest == 'Mixecd') ) || dungeons[dungeonSelect].type == "overworld") {
+            var c = document.createElement('span');
             c.innerHTML = 'x';
             c.id = dungeons[dungeonSelect].chestlist[key].type;
             c.className = key + ' ' + s.className;
@@ -901,7 +966,7 @@ function toggleDungeonChest(sender, d, c) {
         sender.className = 'DCunavailable';
     
     var printdun;
-    if (dungeons[d].chestlist[c].type == "entrance" && mixphoo !== "Full") {
+    if (dungeons[d].chestlist[c].type == "entrance" && mixphoo !== "Full" && dungeons[d].chestlist[c].leadsto == "unknown" ) {
         var t = document.getElementById('submaparea');
         var l = document.getElementById('submaplist');
         t.innerHTML = c + ' leads to';
@@ -966,28 +1031,211 @@ function toggleDungeonChest(sender, d, c) {
             //}
         //}
     //}
-    //if (mixphoo !== "Full" && dungeons[d].chestlist[c].leadsto == "unknown" && dungeons[d].chestlist[c].type == "grotto" ) { 
-      //  var t = document.getElementById('submaparea');
-        //var l = document.getElementById('submaplist');
-        //t.innerHTML = c + ' leads to';
-        //l.innerHTML = '';
-        //for ( var k = 0; k < 35; k++) {
-          //  for (var g in dungeons[k].chestlist) {
-            //    if (dungeons[k].chestlist[g].isOpened == false && dungeons[k].chestlist[g].type == "grotto" ) {
-              //      var e = document.createElement('li');
-                //    e.innerHTML = g;
-                  //  e.className = g;
-                    //e.onmouseover = new Function('highlightDungeonChest(this)');
-                    //e.onmouseout = new Function('unhighlightDungeonChest(this)');
-                    //e.style.cursor = "pointer";
-                    //e.onclick = function(setLeadsto){
-                      //              g = this.innerHTML;
-                        //            dungeons[d].chestlist[c].leadsto = g;
-                          //          clickDungeon(d); }
-                    //l.appendChild(e); }
-            //}
-        //}
-    //}
+    if (mixphoo !== "Full" && dungeons[d].chestlist[c].leadsto == "unknown" && dungeons[d].chestlist[c].type == "grotto" ) { 
+        var t = document.getElementById('submaparea');
+        var l = document.getElementById('submaplist');
+        t.innerHTML = c + ' leads to';
+        l.innerHTML = '';
+
+        var e0 = document.createElement('li'); var e1 = document.createElement('li'); var e2 = document.createElement('li');
+        var e3 = document.createElement('li'); var e4 = document.createElement('li'); var e5 = document.createElement('li');
+        var e6 = document.createElement('li'); var e7 = document.createElement('li'); var e8 = document.createElement('li');
+        var e9 = document.createElement('li'); var e10 = document.createElement('li'); var e11 = document.createElement('li');
+        var e12 = document.createElement('li'); var e13 = document.createElement('li'); var e14 = document.createElement('li');
+        var e15 = document.createElement('li'); var e16 = document.createElement('li'); var e17 = document.createElement('li');
+        var e18 = document.createElement('li');
+        
+        e0.innerHTML = 'dead';
+        e0.onmouseover = new Function('highlightDungeonChest(this)');
+        e0.onmouseout = new Function('unhighlightDungeonChest(this)');
+        e0.style.cursor = "pointer";
+        e0.onclick = function(setLeadsto){
+                dungeons[d].chestlist[c].leadsto = this.innerHTML;
+                clickDungeon(d); 
+                Generic++;}
+        l.appendChild(e0); 
+        if (Generic < 9) {
+            e1.innerHTML = 'Generic';
+            e1.onmouseover = new Function('highlightDungeonChest(this)');
+            e1.onmouseout = new Function('unhighlightDungeonChest(this)');
+            e1.style.cursor = "pointer";
+            e1.onclick = function(setLeadsto){
+                dungeons[d].chestlist[c].leadsto = this.innerHTML;
+                clickDungeon(d); 
+                Generic++;}
+            l.appendChild(e1); 
+          } if (Scrub1 == 0) {
+            e2.innerHTML = 'Lone Scrub';
+            e2.onmouseover = new Function('highlightDungeonChest(this)');
+            e2.onmouseout = new Function('unhighlightDungeonChest(this)');
+            e2.style.cursor = "pointer";
+            e2.onclick = function(setLeadsto){
+                dungeons[d].chestlist[c].leadsto = this.innerHTML;
+                clickDungeon(d); 
+                Scrub1++;}
+            l.appendChild(e2); 
+          } if (Scrub2 < 4) {
+            e3.innerHTML = '2 Scrubs';
+            e3.onmouseover = new Function('highlightDungeonChest(this)');
+            e3.onmouseout = new Function('unhighlightDungeonChest(this)');
+            e3.style.cursor = "pointer";
+            e3.onclick = function(setLeadsto){
+                dungeons[d].chestlist[c].leadsto = this.innerHTML;
+                clickDungeon(d); 
+                Scrub2++;}
+            l.appendChild(e3); 
+          } if (ScrubLeft == 0) {
+            e4.innerHTML = '2 Scrubs Left front';
+            e4.onmouseover = new Function('highlightDungeonChest(this)');
+            e4.onmouseout = new Function('unhighlightDungeonChest(this)');
+            e4.style.cursor = "pointer";
+            e4.onclick = function(setLeadsto){
+                dungeons[d].chestlist[c].leadsto = this.innerHTML;
+                clickDungeon(d); 
+                ScrubLeft++;}
+            l.appendChild(e4); 
+          } if (Scrub3 < 4) {
+            e5.innerHTML = '3 Scrubs';
+            e5.onmouseover = new Function('highlightDungeonChest(this)');
+            e5.onmouseout = new Function('unhighlightDungeonChest(this)');
+            e5.style.cursor = "pointer";
+            e5.onclick = function(setLeadsto){
+                dungeons[d].chestlist[c].leadsto = this.innerHTML;
+                clickDungeon(d); 
+                Scrub3++;}
+            l.appendChild(e5); 
+          } if (Dampe == 0) {
+            e6.innerHTML = 'Dampe\'s Grave';
+            e6.onmouseover = new Function('highlightDungeonChest(this)');
+            e6.onmouseout = new Function('unhighlightDungeonChest(this)');
+            e6.style.cursor = "pointer";
+            e6.onclick = function(setLeadsto){
+                dungeons[d].chestlist[c].leadsto = this.innerHTML;
+                clickDungeon(d); 
+                Dampe++;}
+            l.appendChild(e6); 
+          }if (Tomb == 0) {
+            e7.innerHTML = 'Royal Tomb';
+            e7.onmouseover = new Function('highlightDungeonChest(this)');
+            e7.onmouseout = new Function('unhighlightDungeonChest(this)');
+            e7.style.cursor = "pointer";
+            e7.onclick = function(setLeadsto){
+                dungeons[d].chestlist[c].leadsto = this.innerHTML;
+                clickDungeon(d); 
+                Tomb++;}
+            l.appendChild(e7); 
+          } if (Redeadgrave == 0) {
+            e8.innerHTML = 'Redead Grave';
+            e8.onmouseover = new Function('highlightDungeonChest(this)');
+            e8.onmouseout = new Function('unhighlightDungeonChest(this)');
+            e8.style.cursor = "pointer";
+            e8.onclick = function(setLeadsto){
+                dungeons[d].chestlist[c].leadsto = this.innerHTML;
+                clickDungeon(d); 
+                ScrubLeft++;}
+            l.appendChild(e8); 
+          } if (Fairygrave == 0) {
+            e9.innerHTML = 'Fairy/Shield Grave';
+            e9.onmouseover = new Function('highlightDungeonChest(this)');
+            e9.onmouseout = new Function('unhighlightDungeonChest(this)');
+            e9.style.cursor = "pointer";
+            e9.onclick = function(setLeadsto){
+                dungeons[d].chestlist[c].leadsto = this.innerHTML;
+                clickDungeon(d); 
+                Fairygrave++;}
+            l.appendChild(e9); 
+          } if (Tektite == 0) {
+            e10.innerHTML = 'Tektite';
+            e10.onmouseover = new Function('highlightDungeonChest(this)');
+            e10.onmouseout = new Function('unhighlightDungeonChest(this)');
+            e10.style.cursor = "pointer";
+            e10.onclick = function(setLeadsto){
+                dungeons[d].chestlist[c].leadsto = this.innerHTML;
+                clickDungeon(d); 
+                Tektite++;}
+            l.appendChild(e10); 
+          } if (Cow == 0) {
+            e11.innerHTML = 'Cash Cow';
+            e11.onmouseover = new Function('highlightDungeonChest(this)');
+            e11.onmouseout = new Function('unhighlightDungeonChest(this)');
+            e11.style.cursor = "pointer";
+            e11.onclick = function(setLeadsto){
+                dungeons[d].chestlist[c].leadsto = this.innerHTML;
+                clickDungeon(d); 
+                Cow++;}
+            l.appendChild(e11); 
+          } if (Web == 0) {
+            e12.innerHTML = 'Web Grotto';
+            e12.onmouseover = new Function('highlightDungeonChest(this)');
+            e12.onmouseout = new Function('unhighlightDungeonChest(this)');
+            e12.style.cursor = "pointer";
+            e12.onclick = function(setLeadsto){
+                dungeons[d].chestlist[c].leadsto = this.innerHTML;
+                clickDungeon(d); 
+                Web++;}
+            l.appendChild(e12); 
+          } if (Skulltula == 0) {
+            e13.innerHTML = 'Skulltula grotto';
+            e13.onmouseover = new Function('highlightDungeonChest(this)');
+            e13.onmouseout = new Function('unhighlightDungeonChest(this)');
+            e13.style.cursor = "pointer";
+            e13.onclick = function(setLeadsto){
+                dungeons[d].chestlist[c].leadsto = this.innerHTML;
+                clickDungeon(d); 
+                Skulltula++;}
+            l.appendChild(e13); 
+          } if (MudWall == 0) {
+            e14.innerHTML = 'Mud Wall grotto';
+            e14.onmouseover = new Function('highlightDungeonChest(this)');
+            e14.onmouseout = new Function('unhighlightDungeonChest(this)');
+            e14.style.cursor = "pointer";
+            e14.onclick = function(setLeadsto){
+                dungeons[d].chestlist[c].leadsto = this.innerHTML;
+                clickDungeon(d); 
+                MudWall++;}
+            l.appendChild(e14); 
+          } if (Wolfos == 0) {
+            e15.innerHTML = 'Wolfos';
+            e15.onmouseover = new Function('highlightDungeonChest(this)');
+            e15.onmouseout = new Function('unhighlightDungeonChest(this)');
+            e15.style.cursor = "pointer";
+            e15.onclick = function(setLeadsto){
+                dungeons[d].chestlist[c].leadsto = this.innerHTML;
+                clickDungeon(d); 
+                Wolfos++;}
+            l.appendChild(e15); 
+          } if (Redead == 0) {
+            e16.innerHTML = 'Redead';
+            e16.onmouseover = new Function('highlightDungeonChest(this)');
+            e16.onmouseout = new Function('unhighlightDungeonChest(this)');
+            e16.style.cursor = "pointer";
+            e16.onclick = function(setLeadsto){
+                dungeons[d].chestlist[c].leadsto = this.innerHTML;
+                clickDungeon(d); 
+                Redead++;}
+            l.appendChild(e16); 
+          } if (Octorock == 0) {
+            e17.innerHTML = 'Octorock';
+            e17.onmouseover = new Function('highlightDungeonChest(this)');
+            e17.onmouseout = new Function('unhighlightDungeonChest(this)');
+            e17.style.cursor = "pointer";
+            e17.onclick = function(setLeadsto){
+                dungeons[d].chestlist[c].leadsto = this.innerHTML;
+                clickDungeon(d); 
+                Octorock++;}
+            l.appendChild(e17); 
+          } if (Fairy < 5) {
+            e18.innerHTML = 'Fairy Fountain';
+            e18.onmouseover = new Function('highlightDungeonChest(this)');
+            e18.onmouseout = new Function('unhighlightDungeonChest(this)');
+            e18.style.cursor = "pointer";
+            e18.onclick = function(setLeadsto){
+                dungeons[d].chestlist[c].leadsto = this.innerHTML;
+                clickDungeon(d); 
+                Fairy++;}
+            l.appendChild(e18); 
+          }
+    }
     if (mixphoo !== "Full" && dungeons[d].chestlist[c].leadsto == "unknown" && dungeons[d].chestlist[c].type == "dungeon" ) { 
         var t = document.getElementById('submaparea');
         var l = document.getElementById('submaplist');
@@ -1024,7 +1272,7 @@ function toggleDungeonChest(sender, d, c) {
                             ee.onclick = function(setLeadsto){
                                 ent = this.innerHTML;
                                 dungeons[d].chestlist[c].leadsto = dungeons[v].name + ' ' + ent;
-                                dungeons[v].chestlist[ent].leadsto = c;
+                                dungeons[v].chestlist[ent].leadsto = dungeons[d].name + ' ' + c;
                                 clickDungeon(d);
                             }
                             l.appendChild(ee); }
@@ -1111,12 +1359,19 @@ function toggleDungeonChest(sender, d, c) {
 }
 
 function findAngle(x1, y1, x2, y2) {
-    if (x1 < x2) distanceX = x2 - x1;
+    if (x1 <= x2) distanceX = x2 - x1;
     else if (x1 > x2) distanceX = x1 - x2;
     if (y1 < y2) distanceY = y2 - y1;
     else if (y1 > y2) distanceY = y1 - y2;
-    angle = Math.atan2(distanceY, distanceX);
-    angle = angle * 180 / Math.PI;
+    if (distanceX > 0 && distanceY > 0) {
+        angle = Math.atan2(distanceY, distanceX);
+        angle = angle * 180 / Math.PI; }
+    else if (y1 == y2) { //x axis
+        if (x2 >= x1) angle = 0;
+        else if (x2 < x1) angle = 180; }
+    else if (x2 == x1) { //y axis
+        if (y2 > y1) angle = 90;
+        else if (y2 < y1) angle = 270; }
     if (y2 < y1 && x2 < x1) angle = 180 + angle; //top l
     else if (y2 > y1 && x2 < x1) angle = 180 - angle; //bottom l
     else if (y2 < y1 && x2 > x1) angle = 360 - angle; //top r
@@ -1130,7 +1385,9 @@ function findDistance(x1, y1, x2, y2) {
     else if (x1 > x2) distanceX = x1 - x2;
     if (y1 < y2) distanceY = y2 - y1;
     else if (y1 > y2) distanceY = y1 - y2;
-    distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
+    if (x1 == x2) distance = distanceY;
+    else if (y1 == y2) distance = distanceX;
+    else distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
     return distance;
 }
 
@@ -1181,7 +1438,7 @@ function setprizesize(sender) {
 }
 
 function setQuest(sender) {
-   quest = sender.value;
+    quest = sender.value;
    if (quest == 'Master') {
       questimg = 1;
       itemsMax.ForestKey = 6;
@@ -1398,9 +1655,14 @@ function setOWER(sender) {
    document.getElementById('dungeon33').style.visibility = 'hidden';
    document.getElementById('dungeon34').style.visibility = 'hidden';
    } if (OWERmap == true) {
-   document.getElementById('dungeon33').style.visibility = 'unset';
-   document.getElementById('dungeon34').style.visibility = 'unset';
-   }
+   document.getElementById('dungeon33').style.visibility = 'visible';
+   document.getElementById('dungeon34').style.visibility = 'visible';
+   } if (Warps == false && RndmStart  == false) {
+   document.getElementById('dungeon35').style.visibility = 'hidden';
+   } if (Warps == true || RndmStart  == true) {
+   document.getElementById('dungeon35').style.visibility = 'visible';
+   } 
+
 
    updateMap();
 
@@ -1988,8 +2250,8 @@ function updateMap() {
         for (var key in dungeons[k].chestlist) {
             if ( dungeons[k].chestlist[key].access == "entrance" && dungeons[k].chestlist[key].type == "dungeon" ) { //Dungeon door  
                 continue;}
-            if ( dungeons[k].chestlist[key].leadsto !== "unknown" && dungeons[k].chestlist[key].type == "entrance" ) {
-                continue;}
+            //if ( dungeons[k].chestlist[key].leadsto !== "unknown" && dungeons[k].chestlist[key].type == "entrance" ) {
+              //  continue;}
             if ( dungeons[k].type == "dungeon" && quest == "Mixed" && dungeons[k].mixedtype == "master" && dungeons[k].chestlist[key].access == "master") { //Mixed quest checks
                 continue;}
             if ( dungeons[k].type == "dungeon" && quest == "Mixed" && dungeons[k].mixedtype == "vanilla" && dungeons[k].chestlist[key].access == "vanilla") { //Mixed quest checks
@@ -2066,8 +2328,9 @@ function updateMap() {
                     DCcount++;
                 }
                 var minimap = document.getElementById('minimapdiv');
+                //minimap.innerHTML = '';
                 if (key in dungeons[dungeonSelect].chestlist) {
-                    if (dungeons[dungeonSelect].chestlist[key] !== undefined && (dungeons[dungeonSelect].chestlist[key].floor == here && dungeons[dungeonSelect].type == "dungeon") || dungeons[dungeonSelect].type == "overworld") {
+                    if (dungeons[dungeonSelect].chestlist[key] !== undefined && (dungeons[dungeonSelect].chestlist[key].floor == here && dungeons[dungeonSelect].type == "dungeon" && (dungeons[dungeonSelect].mixedtype == dungeons[dungeonSelect].chestlist[key].access || quest == 'Mixecd') ) || dungeons[dungeonSelect].type == "overworld") {
                         c = document.createElement('span');
                         c.innerHTML = 'x';
                         c.id = dungeons[dungeonSelect].chestlist[key].type;
