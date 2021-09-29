@@ -2328,7 +2328,6 @@ function updateMap() {
                     DCcount++;
                 }
                 var minimap = document.getElementById('minimapdiv');
-                minimap.innerHTML = '';
                 if (key in dungeons[dungeonSelect].chestlist) {
                     if (dungeons[dungeonSelect].chestlist[key] !== undefined && (dungeons[dungeonSelect].chestlist[key].floor == here && dungeons[dungeonSelect].type == "dungeon" && (dungeons[dungeonSelect].mixedtype == dungeons[dungeonSelect].chestlist[key].access || quest == 'Mixecd') ) || dungeons[dungeonSelect].type == "overworld") {
                         c = document.createElement('span');
@@ -2348,7 +2347,7 @@ function updateMap() {
                         c.style.top = dungeons[dungeonSelect].chestlist[key].y;
                         c.style.left = dungeons[dungeonSelect].chestlist[key].x;
                         minimap.appendChild(c);
-                       
+
                         var cc = document.createElement('span');
                         cc.className = 'minimap ' + key;
                         if (dungeons[dungeonSelect].chestlist[key].leadsto == "unknown") cc.innerHTML = key;
