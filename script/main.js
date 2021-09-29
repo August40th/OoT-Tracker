@@ -671,7 +671,7 @@ function clickDungeon(d) {
                                         
                                             var jj = document.createElement('span');
                                             jj.id = 'minimap ' + key;
-                                            jj.innerHTML = ent + ' >>> ' + nxt.replaceAll("to", "from");
+                                            jj.innerHTML = nxt + ' >>> ' + ent.replaceAll("to", "from");
                                             jj.style.width = 'auto';
                                             jj.style.backgroundColor = 'black';
                                             jj.style.color = '#fff';
