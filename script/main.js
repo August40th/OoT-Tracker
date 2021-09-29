@@ -1613,7 +1613,7 @@ function toggleDungeonChest(sender, d, c) {
             f1.onmouseout = new Function('unhighlightDungeonChest(this)');
             f1.style.cursor = "pointer";
             f1.onclick = function (openarea) {
-                var v = this.id;
+                var v;
                 l.innerHTML = '';
                 for (var ent in dungeons[v].chestlist) {
                     if (dungeons[v].chestlist[ent].type == "dungeon" && dungeons[v].chestlist[ent].leadsto == "unknown") {
@@ -1639,6 +1639,7 @@ function toggleDungeonChest(sender, d, c) {
                 f2.onmouseout = new Function('unhighlightDungeonChest(this)');
                 f2.style.cursor = "pointer";
                 f2.onclick = function(setLeadsto){
+                    l.innerHTML = '';
                     e0.innerHTML = 'dead';
                     e0.onmouseover = new Function('highlightDungeonChest(this)');
                     e0.onmouseout = new Function('unhighlightDungeonChest(this)');
@@ -1945,6 +1946,7 @@ function toggleDungeonChest(sender, d, c) {
                 f3.onmouseout = new Function('unhighlightDungeonChest(this)');
                 f3.style.cursor = "pointer";
                 f3.onclick = function(setLeadsto){
+                    l.innerHTML = '';
                     e0.innerHTML = 'dead';
                     e0.onmouseover = new Function('highlightDungeonChest(this)');
                     e0.onmouseout = new Function('unhighlightDungeonChest(this)');
