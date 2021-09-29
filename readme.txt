@@ -15,7 +15,9 @@ Medigoron, Carpet sale
 List Gossip Stones
 OW mini maps
 Multi floor dungeon maps
-Entrance tracker - lines connecting selected region with found paths (Big thanks to github.com/fgil90 for helping me get this working)
+Entrance tracker - lines connecting selected region with found paths, red lines are paths accessed from the current location, yellow lines show paths I area removed. (Big thanks to github.com/fgil90 for helping me get this working) 
+*Mixed Pools functioning 
+**No Decoupled entrance support atm
 
 Right click items to cycle in reverse
 
@@ -34,4 +36,4 @@ If you notice any wrong mini map coordinates or bugs in logic please message me 
 
 ****ToDo List****
 Logic tweaks/fixes
-Mixed Pools for Mixed Fools *settings option doesn't do anything atm
+Decoupled support
