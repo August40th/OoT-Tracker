@@ -673,7 +673,7 @@ function clickDungeon(d) {
                                         
                                             var jj = document.createElement('span');
                                             jj.id = 'minimap ' + key;
-                                            jj.innerHTML = dungeons[v].chestlist[ent] + ' >>> ' + nxt.replaceAll("to", "from");
+                                            jj.innerHTML = dungeons[v].name+ ' >>> ' dungeons[u].name;
                                             jj.style.width = 'auto';
                                             jj.style.backgroundColor = 'black';
                                             jj.style.color = '#fff';
