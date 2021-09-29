@@ -598,7 +598,7 @@ function clickDungeon(d) {
     }
 
     for (var key in dungeons[dungeonSelect].chestlist) {
-        if ((OWERmap == true && dungeons[dungeonSelect].chestlist[key].type == "entrance") || 
+        if ( (OWERmap == true && dungeons[dungeonSelect].chestlist[key].type == "entrance") || 
             (DungeonER == true && dungeons[dungeonSelect].chestlist[key].type == "dungeon") || 
             (Owls == true && dungeons[dungeonSelect].chestlist[key].type == "owl") ||
             (Warps == true && dungeons[dungeonSelect].chestlist[key].type == "warp") ||
@@ -657,7 +657,7 @@ function clickDungeon(d) {
                          (mixphoo == "Full" && (dungeons[dungeonSelect].chestlist[key].type == "simple" || 
                                                 dungeons[dungeonSelect].chestlist[key].type == "alldoor" || 
                                                 dungeons[dungeonSelect].chestlist[key].type == "grotto") )
-                         ) ) ) {
+                         ) ) {
                         for ( var u = 0; u < dungeons.length; u++) {
                             if (u == dungeonSelect || u == v) continue;
                             for (var nxt in dungeons[u].chestlist) {
