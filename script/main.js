@@ -603,7 +603,10 @@ function clickDungeon(d) {
             (Owls == true && dungeons[dungeonSelect].chestlist[key].type == "owl") ||
             (Warps == true && dungeons[dungeonSelect].chestlist[key].type == "warp") ||
             (RndmStart == true && dungeons[dungeonSelect].chestlist[key].type == "spawn") ||
-            (mixphoo == "Full" && (dungeons[dungeonSelect].chestlist[key].type == "simple" || dungeons[dungeonSelect].chestlist[key].type == "alldoor" || dungeons[dungeonSelect].chestlist[key].type == "grotto") ) ) {
+            (mixphoo == "Full" && (dungeons[dungeonSelect].chestlist[key].type == "simple" || 
+                                   dungeons[dungeonSelect].chestlist[key].type == "alldoor" || 
+                                   dungeons[dungeonSelect].chestlist[key].type == "grotto") 
+            ) ) {
             for ( var v = 0; v < dungeons.length; v++) {
                 if (v == dungeonSelect) continue;
                 for (var ent in dungeons[v].chestlist) {
@@ -645,12 +648,16 @@ function clickDungeon(d) {
                         
                         document.getElementById('mapdiv').appendChild(l);
                     }
-                    if ( (dungeons[v].chestlist[ent].leadsto !== "unknown" || dungeons[v].chestlist[ent].leadsto !== "none") && ( (OWERmap == true && dungeons[v].chestlist[ent].type == "entrance") || 
-                    (DungeonER == true && dungeons[v].chestlist[ent].type == "dungeon") || 
-                    (Owls == true && dungeons[v].chestlist[ent].type == "owl") ||
-                    (Warps == true && dungeons[v].chestlist[ent].type == "warp") ||
-                    (RndmStart == true && dungeons[dungeonSelect].chestlist[key].type == "spawn") ||
-                    (mixphoo == "Full" && (dungeons[dungeonSelect].chestlist[key].type == "simple" || dungeons[dungeonSelect].chestlist[key].type == "alldoor" || dungeons[dungeonSelect].chestlist[key].type == "grotto") ) ) {
+                    if ( (dungeons[v].chestlist[ent].leadsto !== "unknown" || dungeons[v].chestlist[ent].leadsto !== "none") && 
+                        ((OWERmap == true && dungeons[v].chestlist[ent].type == "entrance") || 
+                         (DungeonER == true && dungeons[v].chestlist[ent].type == "dungeon") || 
+                         (Owls == true && dungeons[v].chestlist[ent].type == "owl") ||
+                         (Warps == true && dungeons[v].chestlist[ent].type == "warp") ||
+                         (RndmStart == true && dungeons[dungeonSelect].chestlist[key].type == "spawn") ||
+                         (mixphoo == "Full" && (dungeons[dungeonSelect].chestlist[key].type == "simple" || 
+                                                dungeons[dungeonSelect].chestlist[key].type == "alldoor" || 
+                                                dungeons[dungeonSelect].chestlist[key].type == "grotto") )
+                         ) ) ) {
                         for ( var u = 0; u < dungeons.length; u++) {
                             if (u == dungeonSelect || u == v) continue;
                             for (var nxt in dungeons[u].chestlist) {
