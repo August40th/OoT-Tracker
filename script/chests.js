@@ -2347,13 +2347,11 @@ var dungeons = [
                return dungeons[13].found == true && 
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) 
                   ); }
-         }, 'Slingshot Shooting': {
-            type: "simple", 
-            x: "46%", y: "18%", access: "door",
+         }, 'Slingshot Shooting': { x: "46%", y: "18%", leadsto: "unknown", type: "simple", access: "door",
             isAvailable: function () {
                return dungeons[13].found == true &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); }
-         }, 'Shooting Mini Game': { x: "46%", y: "18%", leadsto: "unknown", type: "NPC", access: "simple",
+         }, 'Slingshot Mini Game': { x: "46%", y: "18%", leadsto: "unknown", type: "NPC", access: "simple",
             isAvailable: function () {
                return dungeons[13].found == true
                  && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); }
