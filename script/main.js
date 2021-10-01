@@ -1109,7 +1109,7 @@ function toggleDungeonChest(sender, d, c) {
                 clickDungeon(d); 
                 Shop++;}
             l.appendChild(e6); 
-        } if (GreatFairy == 0) {
+        } if (GreatFairy < 6) {
             e7.innerHTML = 'Great Fairy';
             e7.onmouseover = new Function('highlightDungeonChest(this)');
             e7.onmouseout = new Function('unhighlightDungeonChest(this)');
@@ -1119,7 +1119,7 @@ function toggleDungeonChest(sender, d, c) {
                 clickDungeon(d); 
                 GreatFairy++;}
             l.appendChild(e7); 
-        } if (SkullHouse < 5) {
+        } if (SkullHouse == 0) {
             e8.innerHTML = 'Skulltula House';
             e8.onmouseover = new Function('highlightDungeonChest(this)');
             e8.onmouseout = new Function('unhighlightDungeonChest(this)');
@@ -1440,7 +1440,7 @@ function toggleDungeonChest(sender, d, c) {
             e8.onclick = function(setLeadsto){
                 dungeons[d].chestlist[c].leadsto = this.innerHTML;
                 clickDungeon(d); 
-                ScrubLeft++;}
+                Redeadgrave++;}
             l.appendChild(e8); 
           } if (Fairygrave == 0) {
             e9.innerHTML = 'Fairy/Shield Grave';
@@ -1740,7 +1740,7 @@ function toggleDungeonChest(sender, d, c) {
                             clickDungeon(d); 
                             Shop++;}
                         l.appendChild(e6); 
-                    } if (GreatFairy == 0) {
+                    } if (GreatFairy < 6) {
                         e7.innerHTML = 'Great Fairy';
                         e7.onmouseover = new Function('highlightDungeonChest(this)');
                         e7.onmouseout = new Function('unhighlightDungeonChest(this)');
@@ -1750,7 +1750,7 @@ function toggleDungeonChest(sender, d, c) {
                             clickDungeon(d); 
                             GreatFairy++;}
                         l.appendChild(e7); 
-                    } if (SkullHouse < 5) {
+                    } if (SkullHouse == 0) {
                         e8.innerHTML = 'Skulltula House';
                         e8.onmouseover = new Function('highlightDungeonChest(this)');
                         e8.onmouseout = new Function('unhighlightDungeonChest(this)');
@@ -2065,7 +2065,7 @@ function toggleDungeonChest(sender, d, c) {
                         e8.onclick = function(setLeadsto){
                             dungeons[d].chestlist[c].leadsto = this.innerHTML;
                             clickDungeon(d); 
-                            ScrubLeft++;}
+                            Redeadgrave++;}
                         l.appendChild(e8); 
                     } if (Fairygrave == 0) {
                         e9.innerHTML = 'Fairy/Shield Grave';
@@ -2321,7 +2321,7 @@ function toggleDungeonChest(sender, d, c) {
                         clickDungeon(d); 
                         Shop++;}
                     l.appendChild(e6); 
-                } if (GreatFairy == 0) {
+                } if (GreatFairy < 6) {
                     e7.innerHTML = 'Great Fairy';
                     e7.onmouseover = new Function('highlightDungeonChest(this)');
                     e7.onmouseout = new Function('unhighlightDungeonChest(this)');
@@ -2331,7 +2331,7 @@ function toggleDungeonChest(sender, d, c) {
                         clickDungeon(d); 
                         GreatFairy++;}
                     l.appendChild(e7); 
-                } if (SkullHouse < 5) {
+                } if (SkullHouse == 0) {
                     e8.innerHTML = 'Skulltula House';
                     e8.onmouseover = new Function('highlightDungeonChest(this)');
                     e8.onmouseout = new Function('unhighlightDungeonChest(this)');
@@ -2646,7 +2646,7 @@ function toggleDungeonChest(sender, d, c) {
                     e8.onclick = function(setLeadsto){
                         dungeons[d].chestlist[c].leadsto = this.innerHTML;
                         clickDungeon(d); 
-                        ScrubLeft++;}
+                        Redeadgrave++;}
                     l.appendChild(e8); 
                 } if (Fairygrave == 0) {
                     e9.innerHTML = 'Fairy/Shield Grave';
