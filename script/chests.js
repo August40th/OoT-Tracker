@@ -2353,7 +2353,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[13].found == true &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); }
-         }, 'Slingshot Mini Game': { x: "46%", y: "18%", leadsto: "unknown", type: "NPC", access: "simple",
+         }, 'Shooting Mini Game': { x: "46%", y: "18%", leadsto: "unknown", type: "NPC", access: "simple",
             isAvailable: function () {
                return dungeons[13].found == true
                  && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); }
