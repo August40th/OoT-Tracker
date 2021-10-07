@@ -83,10 +83,10 @@ RndmStart = false;
 mixphoo = "Off";
 
 Generic=0; Scrub1=0; Scrub2=0; ScrubLeft=0; Scrub3=0; Wolfos=0; Cow=0; Web=0; Redead=0; Tektite=0; Dampe=0; Tomb=0; Redeadgrave=0; 
-Fairygrave=0; Skulltula=0; MudWall=0; Octorock=0; Fairy=0;
+Fairygrave=0; Skulltula=0; MudWall=0; Octorock=0; Fairy=0; GuardHouse=0;
 ToT=0; Windmill=0; Links=0; PotShopF=0; PotShopB=0; GreatFairy=0; Shop=0; SkullHouse=0; ImpaBack=0; Archery=0; Lab=0; Fishing=0; 
 Bowling=0; MaskShop=0; ChestGame=0; Sling=0; AlleyHouse=0; Silo=0; Talon=0; Stable=0; Midos=0; Sarias=0; Twins=0; KnowitAll=0; 
-Impafront=0; TowerHouse=0; Grannys=0; DampeHut=0; CarpTent=0;
+Impafront=0; TowerHouse=0; Grannys=0; DampeHut=0; CarpTent=0; Theater=0;
 
 var mouseOverItem = false;
 var mouseLastOverR;
