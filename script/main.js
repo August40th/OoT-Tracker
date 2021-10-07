@@ -1024,7 +1024,7 @@ function toggleDungeonChest(sender, d, c) {
             }
         }
     }
-    else if (mixphoo == "Off" && dungeons[d].chestlist[c].leadsto == "unknown" && dungeons[d].chestlist[c].type == "simple" || (IndoorER == "Full" && dungeons[d].chestlist[c].type == "alldoor")) {     
+    else if (mixphoo == "Off" && dungeons[d].chestlist[c].leadsto == "unknown" && (dungeons[d].chestlist[c].type == "simple" || (IndoorER == "Full" && dungeons[d].chestlist[c].type == "alldoor")) ) {     
         var t = document.getElementById('submaparea');
         var l = document.getElementById('submaplist');
         t.innerHTML = c + ' leads to';
@@ -1040,6 +1040,7 @@ function toggleDungeonChest(sender, d, c) {
         var e21 = document.createElement('li'); var e22 = document.createElement('li');  var e23 = document.createElement('li'); 
         var e24 = document.createElement('li'); var e25 = document.createElement('li'); var e26 = document.createElement('li'); 
         var e27 = document.createElement('li'); var e28 = document.createElement('li'); var e29 = document.createElement('li'); 
+        var e30 = document.createElement('li');
 
         e0.innerHTML = 'dead';
         e0.onmouseover = new Function('highlightDungeonChest(this)');
@@ -1209,6 +1210,16 @@ function toggleDungeonChest(sender, d, c) {
                 clickDungeon(d); 
                 Sling++;}
             l.appendChild(e16); 
+        } if (GuardHouse == 0) {
+            e30.innerHTML = 'Guard House';
+            e30.onmouseover = new Function('highlightDungeonChest(this)');
+            e30.onmouseout = new Function('unhighlightDungeonChest(this)');
+            e30.style.cursor = "pointer";
+            e30.onclick = function(setLeadsto){
+                dungeons[d].chestlist[c].leadsto = this.innerHTML;
+                clickDungeon(d); 
+                GuardHouse++;}
+            l.appendChild(e30); 
         } if (AlleyHouse == 0) {
             e17.innerHTML = 'Back Alley House';
             e17.onmouseover = new Function('highlightDungeonChest(this)');
@@ -1352,7 +1363,7 @@ function toggleDungeonChest(sender, d, c) {
         var e9 = document.createElement('li'); var e10 = document.createElement('li'); var e11 = document.createElement('li');
         var e12 = document.createElement('li'); var e13 = document.createElement('li'); var e14 = document.createElement('li');
         var e15 = document.createElement('li'); var e16 = document.createElement('li'); var e17 = document.createElement('li');
-        var e18 = document.createElement('li');
+        var e18 = document.createElement('li'); var e19 = document.createElement('li');
         
         e0.innerHTML = 'dead';
         e0.onmouseover = new Function('highlightDungeonChest(this)');
@@ -1412,7 +1423,17 @@ function toggleDungeonChest(sender, d, c) {
                 clickDungeon(d); 
                 Scrub3++;}
             l.appendChild(e5); 
-          } if (Dampe == 0) {
+          } if (Theater == 0) {
+            e19.innerHTML = 'Deku Theater';
+            e19.onmouseover = new Function('highlightDungeonChest(this)');
+            e19.onmouseout = new Function('unhighlightDungeonChest(this)');
+            e19.style.cursor = "pointer";
+            e19.onclick = function(setLeadsto){
+                dungeons[d].chestlist[c].leadsto = this.innerHTML;
+                clickDungeon(d); 
+                Theater++;}
+            l.appendChild(e19); 
+        } if (Dampe == 0) {
             e6.innerHTML = 'Dampe\'s Grave';
             e6.onmouseover = new Function('highlightDungeonChest(this)');
             e6.onmouseout = new Function('unhighlightDungeonChest(this)');
@@ -1596,7 +1617,7 @@ function toggleDungeonChest(sender, d, c) {
         l.innerHTML = '';
 
         var f0 = document.createElement('li'); var f1 = document.createElement('li'); var f2 = document.createElement('li');
-        var f3 = document.createElement('li');
+        var f3 = document.createElement('li'); var e30 = document.createElement('li');
         var e0 = document.createElement('li'); var e1 = document.createElement('li'); var e2 = document.createElement('li');
         var e3 = document.createElement('li'); var e4 = document.createElement('li'); var e5 = document.createElement('li');
         var e6 = document.createElement('li'); var e7 = document.createElement('li'); var e8 = document.createElement('li');
@@ -1840,6 +1861,16 @@ function toggleDungeonChest(sender, d, c) {
                             clickDungeon(d); 
                             Sling++;}
                         l.appendChild(e16); 
+                    } if (GuardHouse == 0) {
+                        e30.innerHTML = 'Guard House';
+                        e30.onmouseover = new Function('highlightDungeonChest(this)');
+                        e30.onmouseout = new Function('unhighlightDungeonChest(this)');
+                        e30.style.cursor = "pointer";
+                        e30.onclick = function(setLeadsto){
+                            dungeons[d].chestlist[c].leadsto = this.innerHTML;
+                            clickDungeon(d); 
+                            GuardHouse++;}
+                        l.appendChild(e30); 
                     } if (AlleyHouse == 0) {
                         e17.innerHTML = 'Back Alley House';
                         e17.onmouseover = new Function('highlightDungeonChest(this)');
@@ -2037,6 +2068,16 @@ function toggleDungeonChest(sender, d, c) {
                             clickDungeon(d); 
                             Scrub3++;}
                         l.appendChild(e5); 
+                    } if (Theater == 0) {
+                        e19.innerHTML = 'Deku Theater';
+                        e19.onmouseover = new Function('highlightDungeonChest(this)');
+                        e19.onmouseout = new Function('unhighlightDungeonChest(this)');
+                        e19.style.cursor = "pointer";
+                        e19.onclick = function(setLeadsto){
+                            dungeons[d].chestlist[c].leadsto = this.innerHTML;
+                            clickDungeon(d); 
+                            Theater++;}
+                        l.appendChild(e19); 
                     } if (Dampe == 0) {
                         e6.innerHTML = 'Dampe\'s Grave';
                         e6.onmouseover = new Function('highlightDungeonChest(this)');
@@ -2177,7 +2218,7 @@ function toggleDungeonChest(sender, d, c) {
         l.innerHTML = '';
 
         var f0 = document.createElement('li'); var f1 = document.createElement('li'); var f2 = document.createElement('li');
-        var f3 = document.createElement('li'); var f4 = document.createElement('li');
+        var f3 = document.createElement('li'); var f4 = document.createElement('li'); var e30 = document.createElement('li');
         var e0 = document.createElement('li'); var e1 = document.createElement('li'); var e2 = document.createElement('li');
         var e3 = document.createElement('li'); var e4 = document.createElement('li'); var e5 = document.createElement('li');
         var e6 = document.createElement('li'); var e7 = document.createElement('li'); var e8 = document.createElement('li');
@@ -2421,6 +2462,16 @@ function toggleDungeonChest(sender, d, c) {
                         clickDungeon(d); 
                         Sling++;}
                     l.appendChild(e16); 
+                } if (GuardHouse == 0) {
+                    e30.innerHTML = 'Guard House';
+                    e30.onmouseover = new Function('highlightDungeonChest(this)');
+                    e30.onmouseout = new Function('unhighlightDungeonChest(this)');
+                    e30.style.cursor = "pointer";
+                    e30.onclick = function(setLeadsto){
+                        dungeons[d].chestlist[c].leadsto = this.innerHTML;
+                        clickDungeon(d); 
+                        GuardHouse++;}
+                    l.appendChild(e30); 
                 } if (AlleyHouse == 0) {
                     e17.innerHTML = 'Back Alley House';
                     e17.onmouseover = new Function('highlightDungeonChest(this)');
@@ -2618,6 +2669,16 @@ function toggleDungeonChest(sender, d, c) {
                         clickDungeon(d); 
                         Scrub3++;}
                     l.appendChild(e5); 
+                } if (Theater == 0) {
+                    e19.innerHTML = 'Deku Theater';
+                    e19.onmouseover = new Function('highlightDungeonChest(this)');
+                    e19.onmouseout = new Function('unhighlightDungeonChest(this)');
+                    e19.style.cursor = "pointer";
+                    e19.onclick = function(setLeadsto){
+                        dungeons[d].chestlist[c].leadsto = this.innerHTML;
+                        clickDungeon(d); 
+                        Theater++;}
+                    l.appendChild(e19); 
                 } if (Dampe == 0) {
                     e6.innerHTML = 'Dampe\'s Grave';
                     e6.onmouseover = new Function('highlightDungeonChest(this)');
