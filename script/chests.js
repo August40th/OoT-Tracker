@@ -178,7 +178,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[0].found == true && 
                   (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) ) ; }
-         }, 'Inside the Deku Tree': { x: "74%", y: "28%", leadsto: "unknown", type: "dungeon", access: "door",
+         }, 'Great Deku Mouth': { x: "74%", y: "28%", leadsto: "unknown", type: "dungeon", access: "door",
             isAvailable: function () {
                return dungeons[0].found == true && 
                   (OpenDeku == 1 || (items.KokiriSword && items.DekuShield) ) ; }
@@ -188,7 +188,7 @@ var dungeons = [
    },
    { name: "Deku Tree", x: "88%", y: "48.5%", type: "dungeon", mixedtype: "default", keytype: "none", found: true, topfloor: 4, floorwdoor: 2,
       chestlist: 
-      { 'Dungeon Door': { x: "99%", y: "50%", leadsto: "unknown", floor: "2", type: "dungeon", access: "dungeon",
+      { 'Tree Innards': { x: "99%", y: "50%", leadsto: "unknown", floor: "2", type: "dungeon", access: "dungeon",
             isAvailable: function () {
                return false ; }
          }, 'Lobby Chest': { x: "76%", y: "55%", leadsto: "unknown", floor: "2", type: "chest", access: "vanilla",
@@ -288,7 +288,7 @@ var dungeons = [
    },
    { name: "Dodongo's Cavern", x: "60.6%", y: "08.4%", type: "dungeon", mixedtype: "default", keytype: "none", found: true, topfloor: 1, floorwdoor: 0,
       chestlist: 
-      { 'Dungeon Door': { x: "99%", y: "50%", leadsto: "unknown", floor: "0", type: "dungeon", access: "dungeon",
+      { 'Dino Lair': { x: "99%", y: "50%", leadsto: "unknown", floor: "0", type: "dungeon", access: "dungeon",
             isAvailable: function () {
                return false ; }
          }, 'Lobby Gossip': { x: "47%", y: "54%", leadsto: "unknown", floor: "0", type: "gossip", access: "vanilla",
@@ -617,7 +617,7 @@ var dungeons = [
       }, canGetChest: function () { return generalCanGetChest(this.chestlist); },
    },{ name: "Jabu Jabu's Belly", x: "88.4%", y: "18%", type: "dungeon", mixedtype: "default", keytype: "none", found: true, topfloor: 1, floorwdoor: 1,
       chestlist: 
-      { 'Dungeon Door': { x: "99%", y: "50%", leadsto: "unknown", floor: "1", type: "dungeon", access: "dungeon",
+      { 'Fish Innards': { x: "99%", y: "50%", leadsto: "unknown", floor: "1", type: "dungeon", access: "dungeon",
             isAvailable: function () {
                return false ; }
          }, 'Water Switch Skulltula': {
@@ -874,7 +874,7 @@ var dungeons = [
    },
    { name: "Bottom of the Well", x: "69.3%", y: "23.4%", type: "dungeon", mixedtype: "default", keytype: "WellKey", found: true, topfloor: 2, floorwdoor: 2,
       chestlist: 
-      { 'Dungeon Door': { x: "99%", y: "50%", leadsto: "unknown", floor: "2", type: "dungeon", access: "dungeon",
+      { 'Well Lobby': { x: "99%", y: "50%", leadsto: "unknown", floor: "2", type: "dungeon", access: "dungeon",
             isAvailable: function () {
                return false ; }
          }, 'Front Left Hidden Wall': { x: "45%", y: "41%", leadsto: "unknown", floor: "2", type: "chest", access: "vanilla",
@@ -1007,7 +1007,7 @@ var dungeons = [
    },
    { name: "Forest Temple", x: "78.5%", y: "39%", type: "dungeon", mixedtype: "default", keytype: "ForestKey", found: true, topfloor: 3, floorwdoor: 2,
       chestlist: 
-      { 'Dungeon Door': { x: "99%", y: "50%", leadsto: "unknown", floor: "2", type: "dungeon", access: "dungeon",
+      { 'Forest Lobby': { x: "99%", y: "50%", leadsto: "unknown", floor: "2", type: "dungeon", access: "dungeon",
             isAvailable: function () {
                return false ; }
          }, 'Lobby Skulltula': { x: "54%", y: "87%", leadsto: "unknown", floor: "2", type: "skulltula", access: "vanilla",
@@ -1157,7 +1157,7 @@ var dungeons = [
    },
    { name: "Fire Temple", x: "65.4%", y: "04%", type: "dungeon", mixedtype: "default", keytype: "FireKey", found: true, topfloor: 4, floorwdoor: 0,
       chestlist: 
-      { 'Dungeon Door': { x: "99%", y: "50%", leadsto: "unknown", floor: "0", type: "dungeon", access: "dungeon",
+      { 'Fire Lobby': { x: "99%", y: "50%", leadsto: "unknown", floor: "0", type: "dungeon", access: "dungeon",
             isAvailable: function () {
                return false ; }
          }, 'Chest Near Boss': { x: "35.5%", y: "59%", leadsto: "unknown", floor: "0", type: "chest", access: "vanilla",
@@ -1408,7 +1408,7 @@ var dungeons = [
    },
    { name: "Ice Cavern", x: "93.5%", y: "18%", type: "dungeon", mixedtype: "default", keytype: "none", found: true, topfloor: 0, floorwdoor: 0,
       chestlist: 
-      { 'Dungeon Door': { x: "99%", y: "50%", leadsto: "unknown", floor: "0", type: "dungeon", access: "dungeon",
+      { 'Frozen Lobby': { x: "99%", y: "50%", leadsto: "unknown", floor: "0", type: "dungeon", access: "dungeon",
             isAvailable: function () {
                return false ; }
          }, 'Above Silver Rupee Skulltula': { x: "49%", y: "40%", leadsto: "unknown", floor: "0", type: "skulltula", access: "vanilla",
@@ -1465,7 +1465,7 @@ var dungeons = [
    },
    { name: "Water Temple", x: "36.1%", y: "91%", type: "dungeon", mixedtype: "default", keytype: "WaterKey", found: true, topfloor: 3, floorwdoor: 3,
       chestlist: 
-      { 'Dungeon Door': { x: "99%", y: "50%", leadsto: "unknown", floor: "3", type: "dungeon", access: "dungeon",
+      { 'Water Lobby': { x: "99%", y: "50%", leadsto: "unknown", floor: "3", type: "dungeon", access: "dungeon",
             isAvailable: function () {
                return false ; }
          }, 'Water Jet Chest': { x: "86%", y: "59%", leadsto: "unknown", floor: "3", type: "chest", access: "vanilla",
@@ -1579,7 +1579,7 @@ var dungeons = [
    },
    { name: "Gerudo Training Ground", x: "20.7%", y: "16.4%", type: "dungeon", mixedtype: "default", keytype: "GTGKey", found: true, topfloor: 1, floorwdoor: 0,
       chestlist: 
-      { 'Dungeon Door': { x: "99%", y: "50%", leadsto: "unknown", floor: "0", type: "dungeon", access: "dungeon",
+      { 'GTG Lobby': { x: "99%", y: "50%", leadsto: "unknown", floor: "0", type: "dungeon", access: "dungeon",
             isAvailable: function () {
                return false ; }
          }, 'Lobby Right Chest': { x: "49%", y: "81%", leadsto: "unknown", floor: "0", type: "chest", access: "vanilla",
@@ -1705,7 +1705,7 @@ var dungeons = [
    },
    { name: "Spirit Temple", x: "02.5%", y: "17%", type: "dungeon", mixedtype: "default", keytype: "SpiritKey", found: true, topfloor: 3, floorwdoor: 0,
       chestlist: 
-      { 'Dungeon Door': { x: "99%", y: "50%", leadsto: "unknown", floor: "0", type: "dungeon", access: "dungeon",
+      { 'Spirit': { x: "99%", y: "50%", leadsto: "unknown", floor: "0", type: "dungeon", access: "dungeon",
             isAvailable: function () {
                return false ; }
          }, 'Child Switch Room': { x: "11%", y: "22%", leadsto: "unknown", floor: "0", type: "chest", access: "vanilla",
@@ -1943,7 +1943,7 @@ var dungeons = [
    },
    { name: "Shadow Temple", x: "79.7%", y: "19.5%", type: "dungeon", mixedtype: "default", keytype: "ShadowKey", found: true, topfloor: 3, floorwdoor: 3,
       chestlist: 
-      { 'Dungeon Door': { x: "99%", y: "50%", leadsto: "unknown", floor: "3", type: "dungeon", access: "dungeon",
+      { 'Shadow Lobby': { x: "99%", y: "50%", leadsto: "unknown", floor: "3", type: "dungeon", access: "dungeon",
             isAvailable: function () {
                return false ; }
          }, 'Keese and Redead': { x: "40.5%", y: "27%", leadsto: "unknown", floor: "3", type: "chest", access: "vanilla",
@@ -2698,7 +2698,7 @@ var dungeons = [
          }, 'Skulltula House 50': { x: "45%", y: "69%", leadsto: "unknown", type: "NPC", access: "simple",
             isAvailable: function () {
                return dungeons[16].found == true && items.Skulltula >= 50 ; }
-         }, 'Bottom of The Well': { x: "69%", y: "61.6%", leadsto: "unknown", type: "dungeon", access: "door",
+         }, 'Kakariko Well': { x: "69%", y: "61.6%", leadsto: "unknown", type: "dungeon", access: "door",
                isAvailable: function () {
                   return dungeons[16].found == true
                  && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
@@ -3044,7 +3044,7 @@ var dungeons = [
          }, 'Temple Gossip': { x: "80%", y: "23%", leadsto: "unknown", type: "gossip", access: "outdoor",
             isAvailable: function () {
                return dungeons[19].found == true; }
-         }, 'Forest Temple': { x: "95%", y: "47%", leadsto: "unknown", type: "dungeon", access: "door",
+         }, 'Meadow Temple': { x: "95%", y: "47%", leadsto: "unknown", type: "dungeon", access: "door",
                isAvailable: function () {
                   return dungeons[19].found == true && items.Hookshot &&
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) );
@@ -3307,7 +3307,7 @@ var dungeons = [
                             (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale) ) )
                        )
                    ) ; }
-         }, 'Lord Jabu Jabu\'s Belly': { x: "39%", y: "38%", leadsto: "unknown", type: "dungeon", access: "door",
+         }, 'Lord Jabu\'s Mouth': { x: "39%", y: "38%", leadsto: "unknown", type: "dungeon", access: "door",
                isAvailable: function () {
                   return dungeons[22].found == true &&
                      (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) //Can get child
@@ -3421,7 +3421,7 @@ var dungeons = [
                                                ))
                             ) )
                      ) ; }
-         }, 'Ice Cavern': { x: "60%", y: "2.5%", leadsto: "unknown", type: "dungeon", access: "door",
+         }, 'Fountain Cavern': { x: "60%", y: "2.5%", leadsto: "unknown", type: "dungeon", access: "door",
                isAvailable: function () {
                   return dungeons[22].found == true &&
                   (
@@ -3454,7 +3454,7 @@ var dungeons = [
                    || ( (items.Bombs || (items.Bombchu && BombchuLogic) ) &&
                        (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                       ) ); }
-         }, 'Dodongo\'s Cavern': { x: "36%", y: "47%", leadsto: "unknown", type: "dungeon", access: "door",
+         }, 'DMT Cavern': { x: "36%", y: "47%", leadsto: "unknown", type: "dungeon", access: "door",
                isAvailable: function () {
                   return (OWERmap == false || dungeons[23].found == true) &&
                   ( (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
@@ -3632,7 +3632,7 @@ var dungeons = [
                return (OWERmap == false || dungeons[24].found == true) &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) &&
                   items.Ocarina && items.BoleroofFire && items.Bottle ; }
-         }, 'Fire Temple': { x: "54%", y: "3%", leadsto: "unknown", type: "dungeon", access: "door",
+         }, 'Crater Temple': { x: "54%", y: "3%", leadsto: "unknown", type: "dungeon", access: "door",
                isAvailable: function () {
                   return (OWERmap == false || dungeons[24].found == true) &&
                   ( ( ( (items.BoleroofFire && items.Ocarina ) //Bolero warp
@@ -3908,7 +3908,7 @@ var dungeons = [
             isAvailable: function () {
                return (OWERmap == false || dungeons[26].found == true) &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ; }
-         }, 'Water Temple': { x: "46.5%", y: "71%", leadsto: "unknown", type: "dungeon", access: "door",
+         }, 'Lake Temple': { x: "46.5%", y: "71%", leadsto: "unknown", type: "dungeon", access: "door",
                isAvailable: function () {
                   return (OWERmap == false || dungeons[26].found == true) && items.Hookshot &&
                   (items.Scale >= 2 || items.IronBoots) &&
@@ -4045,7 +4045,7 @@ var dungeons = [
                    (items.Ocarina && items.RequiemofSpirit && items.HoverBoots) || items.Hookshot >= 2) &&
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ; 
             }
-         }, 'Gerudo Training Grounds': { x: "33%", y: "65%", leadsto: "unknown", type: "dungeon", access: "door",
+         }, 'Gerudo Training Gate': { x: "33%", y: "65%", leadsto: "unknown", type: "dungeon", access: "door",
                isAvailable: function () {
                   return (OWERmap == false || dungeons[28].found == true) && items.Membership; 
             }
@@ -4127,7 +4127,7 @@ var dungeons = [
          }, 'Spirit Right Hand': { x: "99%", y: "50%", leadsto: "none", type: "dungeon", access: "dungeon",
             isAvailable: function () {
                return false ; }
-         },'Spirit Temple': { x: "9%", y: "45%", leadsto: "unknown", type: "dungeon", access: "door",
+         },'Desert Temple': { x: "9%", y: "45%", leadsto: "unknown", type: "dungeon", access: "door",
                isAvailable: function () {
                   return (OWERmap == false || dungeons[29].found == true)
                && ( (items.Membership && (items.HoverBoots || items.Hookshot >= 2) 
@@ -4242,7 +4242,7 @@ var dungeons = [
             isAvailable: function () {
                return (OWERmap == false || dungeons[30].found == true) && items.Ocarina && items.NocturneofShadow
             }
-         }, 'Shadow Temple': { x: "95%", y: "45%", leadsto: "unknown", type: "dungeon", access: "door",
+         }, 'Spooky Temple': { x: "95%", y: "45%", leadsto: "unknown", type: "dungeon", access: "door",
                isAvailable: function () {
                   return (OWERmap == false || dungeons[30].found == true) && 
                      (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
