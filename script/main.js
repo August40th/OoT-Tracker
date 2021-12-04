@@ -656,7 +656,10 @@ function clickDungeon(d) {
                         for ( var u = 0; u < dungeons.length; u++) {
                             if (u == dungeonSelect || u == v) continue;
                             for (var step1 in dungeons[u].chestlist ) {
-                                if (dungeons[u].chestlist[step1].leadsto == dungeons[v].chestlist[ent].leadsto ) hld = u; }
+                                if (dungeons[u].chestlist[step1].leadsto == dungeons[v].chestlist[ent].leadsto ) {
+                                    if ( dungeons[u].chestlist[step1].leadsto == "unknown" || dungeons[u].chestlist[step1].leadsto == "none" ) 
+                                        continue;
+                                    else hld = u; } }
                         }
                         
                         if (hld !== -1){
