@@ -648,54 +648,6 @@ function clickDungeon(d) {
                         
                         document.getElementById('mapdiv').appendChild(l);
                     }
-                    if (dungeons[v].chestlist[ent].leadsto !== "unknown" || dungeons[v].chestlist[ent].leadsto !== "none" ) {
-                        let mapDivWidth = 828;
-                        let mapDivHeight = 420;
-                        var hld = -1;
-                        
-                        for ( var u = 0; u < dungeons.length; u++) {
-                            if (u == dungeonSelect || u == v) continue;
-                            for (var step1 in dungeons[u].chestlist ) {
-                                if (dungeons[u].chestlist[step1].leadsto == dungeons[v].chestlist[ent].leadsto )
-                                    if ( dungeons[u].chestlist[step1].leadsto !== "unknown" && dungeons[u].chestlist[step1].leadsto !== "none" ) 
-                                        hld = u; }
-                        }
-                        
-                        if (hld !== -1){
-                            let x1 = parseFloat(dungeons[v].x)*mapDivWidth/100;
-                            let y1 = parseFloat(dungeons[v].y)*mapDivHeight/100;
-                            let x2 = parseFloat(dungeons[hld].x)*mapDivWidth/100;
-                            let y2 = parseFloat(dungeons[hld].y)*mapDivHeight/100;
-
-                            var xi = document.createElement('eline');
-                            xi.id = 'eline';
-                            xi.style.height = '4px';
-                            xi.style.width = findDistance(x1, y1, x2, y2 ) + 'px';
-                            xi.style.transformOrigin = "0 0";
-                            xi.style.transform = 'rotate('+ findAngle(x1, y1, x2, y2 ) + 'deg)';
-                            xi.style.position = 'absolute';
-                            xi.style.whiteSpace = 'nowrap';
-                            xi.style.backgroundColor = 'blue';
-                            xi.style.left = x1+"px";
-                            xi.style.top = y1+"px";
-
-                            var pi = document.createElement('span');
-                            pi.id = 'minimap ' + key;
-                            pi.innerHTML = key + ' >>> ' + ent.replaceAll("to", "from");
-                            pi.style.width = 'auto';
-                            pi.style.backgroundColor = 'black';
-                            pi.style.color = '#fff';
-                            pi.style.position = 'absolute';
-                            pi.style.transform = 'rotate('+ findAngle(x1, y1, x2, y2 )*-1 + 'deg)';
-                            pi.style.textAlign = 'center';
-                            pi.style.fontSize = '24px';
-                            pi.style.visibility = 'hidden';
-                            xi.appendChild(ll);
-                            xi.onmouseover = new Function('linehighlight(this' + ',"' + key + '")');
-                            xi.onmouseout = new Function('lineunhighlight(this' + ',"' + key + '")');
-
-                            document.getElementById('mapdiv').appendChild(xi); }
-                    }
                     if ( (dungeons[v].chestlist[ent].leadsto !== "unknown" || dungeons[v].chestlist[ent].leadsto !== "none") && 
                         ((OWERmap == true && dungeons[v].chestlist[ent].type == "entrance") || 
                          (DungeonER == true && dungeons[v].chestlist[ent].type == "dungeon") || 
