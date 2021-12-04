@@ -655,7 +655,7 @@ function clickDungeon(d) {
                         
                         for ( var u = 0; u < dungeons.length; u++) {
                             if (u == dungeonSelect || u == v) continue;
-                            if (var step1 in dungeons[u].chestlist == dungeons[v].chestlist[ent].leadsto) hld = u;
+                            for (var step1 in dungeons[u].chestlist == dungeons[v].chestlist[ent].leadsto) hld = u;
                         }
                         if (hld = -1) continue;
 
