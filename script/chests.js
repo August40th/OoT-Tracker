@@ -417,7 +417,7 @@ var dungeons = [
            x: "22%", y: "54%", leadsto: "unknown", floor: "1", type: "chest", access: "vanilla",
             isAvailable: function () {
                return dungeons[2].found == true &&
-                ( ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove) &&
+                ( ( (items.Bombs || (items.Bombchu && BombchuLogic) ) &&
                    (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                  || ( (items.Bombs || (items.Bombchu && BombchuLogic) 
                        || (items.Hammer && (items.Bow || (items.Magic && items.Dins) ) ) || (items.Hammer && items.Glove) ) 
