@@ -2823,11 +2823,11 @@ function toggleDungeonChest(sender, d, c) {
                     printdun = false;
                     for (var key in dungeons[k].chestlist) {
                         if (dungeons[k].chestlist[key].leadsto == "unknown" && 
-                            ( (DungeonER == true && dungeons[d].chestlist[c].type == "dungeon") || 
-                             (GrottoER == true && dungeons[d].chestlist[c].type == "grotto") || 
-                             (IndoorER == "Simple" && dungeons[d].chestlist[c].type == "simple") || 
-                             (IndoorER == "Full" && dungeons[d].chestlist[c].type == "alldoor") || 
-                             dungeons[d].chestlist[c].type == "entrance")) {
+                            ( (DungeonER == true && dungeons[k].chestlist[key].type == "dungeon") || 
+                             (GrottoER == true && dungeons[k].chestlist[key].type == "grotto") || 
+                             (IndoorER == "Simple" && dungeons[k].chestlist[key].type == "simple") || 
+                             (IndoorER == "Full" && dungeons[k].chestlist[key].type == "alldoor") || 
+                             dungeons[k].chestlist[key].type == "entrance")) {
                             printdun = true; }
                     }
                     if (printdun == true) {
@@ -2842,12 +2842,12 @@ function toggleDungeonChest(sender, d, c) {
                             var v = this.id;
                             l.innerHTML = '';
                             for (var ent in dungeons[v].chestlist) {
-                                if (dungeons[k].chestlist[key].leadsto == "unknown" && 
-                                    ( (DungeonER == true && dungeons[d].chestlist[c].type == "dungeon") || 
-                                    (GrottoER == true && dungeons[d].chestlist[c].type == "grotto") || 
-                                    (IndoorER == "Simple" && dungeons[d].chestlist[c].type == "simple") || 
-                                    (IndoorER == "Full" && dungeons[d].chestlist[c].type == "alldoor") || 
-                                    dungeons[d].chestlist[c].type == "entrance")) {
+                                if (dungeons[v].chestlist[ent].leadsto == "unknown" && 
+                                    ( (DungeonER == true && dungeons[v].chestlist[ent].type == "dungeon") || 
+                                    (GrottoER == true && dungeons[v].chestlist[ent].type == "grotto") || 
+                                    (IndoorER == "Simple" && dungeons[v].chestlist[ent].type == "simple") || 
+                                    (IndoorER == "Full" && dungeons[v].chestlist[ent].type == "alldoor") || 
+                                    dungeons[v].chestlist[ent].type == "entrance")) {
                                     var ee = document.createElement('li');
                                     ee.innerHTML = ent;
                                     ee.className = ent + ' entrance';
