@@ -1071,7 +1071,7 @@ function toggleDungeonChest(sender, d, c) {
                 Windmill++;}
             l.appendChild(e2);
         } if (IndoorER == "Full" && Links == 0) {
-            e3.innerHTML = 'Cow House';
+            e3.innerHTML = 'Treehouse Cow';
             e3.onmouseover = new Function('highlightDungeonChest(this)');
             e3.onmouseout = new Function('unhighlightDungeonChest(this)');
             e3.style.cursor = "pointer";
@@ -1444,7 +1444,7 @@ function toggleDungeonChest(sender, d, c) {
                 Dampe++;}
             l.appendChild(e6); 
           }if (Tomb == 0) {
-            e7.innerHTML = 'Royal Family Tomb';
+            e7.innerHTML = 'Royal Tomb';
             e7.onmouseover = new Function('highlightDungeonChest(this)');
             e7.onmouseout = new Function('unhighlightDungeonChest(this)');
             e7.style.cursor = "pointer";
@@ -1534,7 +1534,7 @@ function toggleDungeonChest(sender, d, c) {
                 Wolfos++;}
             l.appendChild(e15); 
           } if (Redead == 0) {
-            e16.innerHTML = 'Redead';
+            e16.innerHTML = 'Redeads';
             e16.onmouseover = new Function('highlightDungeonChest(this)');
             e16.onmouseout = new Function('unhighlightDungeonChest(this)');
             e16.style.cursor = "pointer";
@@ -1722,7 +1722,7 @@ function toggleDungeonChest(sender, d, c) {
                             Windmill++;}
                         l.appendChild(e2);
                     } if (IndoorER == "Full" && Links == 0) {
-                        e3.innerHTML = 'Cow House';
+                        e3.innerHTML = 'Treehouse Cow';
                         e3.onmouseover = new Function('highlightDungeonChest(this)');
                         e3.onmouseout = new Function('unhighlightDungeonChest(this)');
                         e3.style.cursor = "pointer";
@@ -2089,7 +2089,7 @@ function toggleDungeonChest(sender, d, c) {
                             Dampe++;}
                         l.appendChild(e6); 
                     } if (Tomb == 0) {
-                        e7.innerHTML = 'Royal Family Tomb';
+                        e7.innerHTML = 'Royal Tomb';
                         e7.onmouseover = new Function('highlightDungeonChest(this)');
                         e7.onmouseout = new Function('unhighlightDungeonChest(this)');
                         e7.style.cursor = "pointer";
@@ -2179,7 +2179,7 @@ function toggleDungeonChest(sender, d, c) {
                             Wolfos++;}
                         l.appendChild(e15); 
                     } if (Redead == 0) {
-                        e16.innerHTML = 'Redead';
+                        e16.innerHTML = 'Redeads';
                         e16.onmouseover = new Function('highlightDungeonChest(this)');
                         e16.onmouseout = new Function('unhighlightDungeonChest(this)');
                         e16.style.cursor = "pointer";
@@ -2323,7 +2323,7 @@ function toggleDungeonChest(sender, d, c) {
                         Windmill++;}
                     l.appendChild(e2);
                 } if (IndoorER == "Full" && Links == 0) {
-                    e3.innerHTML = 'Cow House';
+                    e3.innerHTML = 'Treehouse Cow';
                     e3.onmouseover = new Function('highlightDungeonChest(this)');
                     e3.onmouseout = new Function('unhighlightDungeonChest(this)');
                     e3.style.cursor = "pointer";
@@ -2690,7 +2690,7 @@ function toggleDungeonChest(sender, d, c) {
                         Dampe++;}
                     l.appendChild(e6); 
                 } if (Tomb == 0) {
-                    e7.innerHTML = 'Royal Family Tomb';
+                    e7.innerHTML = 'Royal Tomb';
                     e7.onmouseover = new Function('highlightDungeonChest(this)');
                     e7.onmouseout = new Function('unhighlightDungeonChest(this)');
                     e7.style.cursor = "pointer";
@@ -2780,7 +2780,7 @@ function toggleDungeonChest(sender, d, c) {
                         Wolfos++;}
                     l.appendChild(e15); 
                 } if (Redead == 0) {
-                    e16.innerHTML = 'Redead';
+                    e16.innerHTML = 'Redeads';
                     e16.onmouseover = new Function('highlightDungeonChest(this)');
                     e16.onmouseout = new Function('unhighlightDungeonChest(this)');
                     e16.style.cursor = "pointer";
@@ -2822,7 +2822,12 @@ function toggleDungeonChest(sender, d, c) {
                 for ( var k = 0; k < 35; k++) {
                     printdun = false;
                     for (var key in dungeons[k].chestlist) {
-                        if (dungeons[k].chestlist[key].type == "entrance" && dungeons[k].chestlist[key].leadsto == "unknown") {
+                        if (dungeons[k].chestlist[key].leadsto == "unknown" && 
+                            ( (DungeonER == true && dungeons[d].chestlist[c].type == "dungeon") || 
+                             (GrottoER == true && dungeons[d].chestlist[c].type == "grotto") || 
+                             (IndoorER == "Simple" && dungeons[d].chestlist[c].type == "simple") || 
+                             (IndoorER == "Full" && dungeons[d].chestlist[c].type == "alldoor") || 
+                             dungeons[d].chestlist[c].type == "entrance")) {
                             printdun = true; }
                     }
                     if (printdun == true) {
@@ -2837,7 +2842,12 @@ function toggleDungeonChest(sender, d, c) {
                             var v = this.id;
                             l.innerHTML = '';
                             for (var ent in dungeons[v].chestlist) {
-                                if (dungeons[v].chestlist[ent].type == "entrance" && dungeons[v].chestlist[ent].leadsto == "unknown") {
+                                if (dungeons[k].chestlist[key].leadsto == "unknown" && 
+                                    ( (DungeonER == true && dungeons[d].chestlist[c].type == "dungeon") || 
+                                    (GrottoER == true && dungeons[d].chestlist[c].type == "grotto") || 
+                                    (IndoorER == "Simple" && dungeons[d].chestlist[c].type == "simple") || 
+                                    (IndoorER == "Full" && dungeons[d].chestlist[c].type == "alldoor") || 
+                                    dungeons[d].chestlist[c].type == "entrance")) {
                                     var ee = document.createElement('li');
                                     ee.innerHTML = ent;
                                     ee.className = ent + ' entrance';
