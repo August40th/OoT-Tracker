@@ -633,7 +633,7 @@ function clickDungeon(d) {
 
                         var ll = document.createElement('span');
                         ll.id = 'minimap ' + key;
-                        ll.innerHTML = key + ' >>> ' + ent.replaceAll("to", "from");
+                        ll.innerHTML = key + ' >>> ' + ent.replaceAll(" to ", " from ");
                         ll.style.width = 'auto';
                         ll.style.backgroundColor = 'black';
                         ll.style.color = '#fff';
@@ -686,7 +686,7 @@ function clickDungeon(d) {
                                         
                                             var jj = document.createElement('span');
                                             jj.id = 'minimap ' + nxt;
-                                            jj.innerHTML = ent + ' >>> ' + nxt.replaceAll("to", "from");;
+                                            jj.innerHTML = ent + ' >>> ' + nxt.replaceAll(" to ", " from ");;
                                             jj.style.width = 'auto';
                                             jj.style.backgroundColor = 'black';
                                             jj.style.color = '#fff';
