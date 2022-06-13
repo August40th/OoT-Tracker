@@ -1705,7 +1705,7 @@ var dungeons = [
    },
    { name: "Spirit Temple", x: "02.5%", y: "17%", type: "dungeon", mixedtype: "default", keytype: "SpiritKey", found: true, topfloor: 3, floorwdoor: 0,
       chestlist: 
-      { 'Spirit': { x: "99%", y: "50%", leadsto: "unknown", floor: "0", type: "dungeon", access: "dungeon",
+      { 'Spirit Lobby': { x: "99%", y: "50%", leadsto: "unknown", floor: "0", type: "dungeon", access: "dungeon",
             isAvailable: function () {
                return false ; }
          }, 'Child Switch Room': { x: "11%", y: "22%", leadsto: "unknown", floor: "0", type: "chest", access: "vanilla",
@@ -2595,7 +2595,7 @@ var dungeons = [
          }, 'Man on Roof': { x: "62%", y: "50%", leadsto: "unknown", type: "NPC", access: "outdoor",
             isAvailable: function () {
                return dungeons[16].found == true ; }
-         }, 'Potion Sale': { x: "65%", y: "33%", leadsto: "unknown", type: "shop", access: "simple",
+         }, 'Potion Sale': { x: "65%", y: "33%", leadsto: "unknown", type: "shop", access: "alldoor",
             isAvailable: function () {
                return dungeons[16].found == true && 
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); }
@@ -3731,7 +3731,7 @@ var dungeons = [
       { 'Ranch to Field': { x: "82%", y: "3%", leadsto: "unknown", type: "entrance", access: "entrance",
              isAvailable: function () {
                   return dungeons[25].found == true; }
-         }, 'Talon\'s House': { x: "70%", y: "14%", leadsto: "unknown", type: "simple", access: "door",
+         }, 'Ranch House': { x: "70%", y: "14%", leadsto: "unknown", type: "simple", access: "door",
             isAvailable: function () {
                return OWERmap == false || dungeons[25].found == true; }
          }, 'Talon\'s Cucco game': { x: "76%", y: "18%", leadsto: "unknown", type: "NPC", access: "simple",
@@ -3750,9 +3750,7 @@ var dungeons = [
          }, '2nd Floor Window Skulltula': { x: "69%", y: "20%", leadsto: "unknown", type: "skulltula", access: "outdoor",
             isAvailable: function () {
                return (OWERmap == false || dungeons[25].found == true) && items.Boomerang &&
-                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ;
-            
-            }
+                  (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ; }
          }, 'Tree Skulltula': { x: "76%", y: "26%", leadsto: "unknown", type: "skulltula", access: "outdoor",
             isAvailable: function () {
                return (OWERmap == false || dungeons[25].found == true) && 
