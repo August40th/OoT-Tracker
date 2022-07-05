@@ -1,8 +1,7 @@
-body{
+{
     background-color: rgb(0,0,0);
     margin: 0px;
     color: gold;
-    overflow-x: hidden;
 }
 
 .flexcontainer {
@@ -29,7 +28,6 @@ body{
     height: 50px;
     width: 180px;
     font-size: 32;
-    display: none;
 }
 
 #button{
@@ -183,10 +181,9 @@ label {
     background-repeat: no-repeat;
 
     position: relative;
-    width: 528px;
-    height: 520px;
-    margin: auto;
-    margin-top: -510px;
+    width: 828px;
+    height: 420px;
+    left: 0px;
 }
 
 
@@ -198,7 +195,6 @@ label {
     height: 260px;
     margin-top: 160px;
     font-size: 24;
-    display: none;
 }
 
 .DCunavailable{
@@ -311,72 +307,4 @@ label {
 
 #gossip {
     background-color: rgb(0,0,255);   
-}
-.above {
-    background-color: rgb(209, 209, 211);
-    height: 685px;
-}
-
-.mid {
-    /* background-color: black; */
-    height: 685px;
-    width: 33.3%;
-    margin: auto;
-    float: left;
-    /* background:Green; */
-
-}
-
-.mid_1,
-.mid_2 {
-    display: inline-block;
-    background-color: rgb(8, 8, 8);
-    width: 12%;
-    height: 40px;
-    border: 1px solid white;
-}
-
-.mid_2 {
-    width: 70%;
-}
-
-.left {
-    background-color: rgb(209, 209, 211);
-    height: 685px;
-
-    float: left;
-    /* background:Red; */
-    width: 33.3%;
-}
-
-.right {
-    background-color: rgb(209, 209, 211);
-    height: 685px;
-    width: 33.3%;
-    float: right;
-    /* background:blue; */
-}
-
-@media(max-width:800px) {
-    .left img {
-        height: 50px;
-        width: 50px;
-    }
-
-    .right img {
-        height: 50px;
-        width: 50px;
-    }
-
-    .mapdiv {
-        background-image: url(images/map.png);
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-        position: relative;
-        width: 328px;
-        height: 520px;
-        margin: auto;
-        margin-top: -510px;
-    }
-
 }
