@@ -305,6 +305,25 @@ label {
     background-color: rgb(0,255,0);   
 }
 
+.minimapdiv #skulltula.DCavailable {
+    width: 28px;
+    height: 28px;
+    background: url('images/Skulltula0.png') ;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.minimapdiv #skulltula.DCunavailable {
+    width: 28px;
+    height: 28px;
+    background: url('images/Skulltula0.png') ;
+    background-repeat: no-repeat;
+   background-size: 100% 100%;
+}
+.minimapdiv #skulltula.DCopened {
+    background: none;
+}
+
 #gossip {
     background-color: rgb(0,0,255);   
 }
