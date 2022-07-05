@@ -554,7 +554,7 @@ function clickDungeon(d) {
         here = dungeons[dungeonSelect].floorwdoor;}
     if (here == undefined) here = dungeons[dungeonSelect].floorwdoor;
     if (dungeons[dungeonSelect].type == "overworld")
-        minimap.style.backgroundImage = 'url(images/' + inimaps[dungeonSelect] + '.png)';
+        minimap.style.backgroundImage = 'url(images/' + minimaps[dungeonSelect] + '.png)';
     if (dungeons[dungeonSelect].type == "dungeon")
         minimap.style.backgroundImage = 'url(images/' + minimaps[dungeonSelect] + here + '.png)';
     minimap.innerHTML = '';
