@@ -1,454 +1,176 @@
 <html>
+    <head>
+        <title>Ocarina of Time Item Tracker</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css" type="text/css">
+    
+        <script src="script/items.js"></script>
+        <script src="script/chests.js"></script>
+        <script src="script/main.js"></script>
+    </head>
 
-<head>
-    <title>Ocarina of Time Item Tracker</title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css" type="text/css">
-
-    <script src="items.js"></script>
-    <script src="chests.js"></script>
-    <script src="main.js"></script>
-    <style>
-       
-    </style>
-</head>
-
-<body>
-    <div class="above">
-        <div class="left">
-
-            <img src="images/CastleKey0.png" alt="">
-            <img src="images/FireKey0.png" alt="">
-            <img src="images/WaterKey0.png" alt="">
-            <img src="images/CastleKey0.png" alt="">
-            <img src="images/FireKey0.png" alt="">
-            <img src="images/WaterKey0.png" alt="">
-            <img src="images/CastleKey0.png" alt="">
-            <img src="images/FireKey0.png" alt="">
-            <img src="images/WaterKey0.png" alt="">
-            <img src="images/CastleKey0.png" alt="">
-            <img src="images/FireKey0.png" alt="">
-            <img src="images/WaterKey0.png" alt="">
-            <img src="images/CastleKey0.png" alt="">
-            <img src="images/FireKey0.png" alt="">
-            <img src="images/WaterKey0.png" alt="">
-
-
-
-
-        </div>
-        <div class="mid">
-
-            <div class="mid_1">
-                <img style="height: 30px" src="images/Mask1.png" alt="">
-
+    <body>
+    
+        <div id='layoutdiv'>
+            <div id='itemdiv' class='itemdiv'>
             </div>
-            <div class="mid_2">
-                <p style="text-align: center">1</p>
+            <div id='mapdiv' class='mapdiv'>
+                <div id='submapdiv' class='submapdiv' style="overflow-y: scroll">
+                    <hr style="margin-top: 2px; margin-bottom: 4px">
+                    <div align='center'><span id='submaparea' style="font-size:20px" onclick="bulkDCSelect(this)">Hyrule</span></div>
+                    <hr style="margin-top: 4px; margin-bottom: 4px">
+                    <ul onselectstart="return false" id='submaplist' style="margin-top: 4px; margin-bottom: 8px; overflow-y: auto; min-height: 50px; list-style-type: none;">
+                    </ul>
+                </div>
+             </div>
+            <div id='minimapdiv' class='minimapdiv'>
+                <button id='button' type='button' > </button>
+                <button id='button' type='button' > </button>
             </div>
-            <div class="mid_1">
-                <img style="height: 30px" src="images/Mask10.png" alt="">
-            </div>
-            <div class="mid_1">
-                <img style="height: 30px" src="images/Mask2.png" alt="">
-
-            </div>
-            <div class="mid_2">
-                <p style="text-align: center">2</p>
-            </div>
-            <div class="mid_1">
-                <img style="height: 30px" src="images/Hookshot1.png" alt="">
-            </div>
-            <div class="mid_1">
-                <img style="height: 30px" src="images/MasterSword1.png" alt="">
-
-            </div>
-            <div class="mid_2">
-                <p style="text-align: center">3</p>
-            </div>
-            <div class="mid_1">
-                <img style="height: 30px" src="images/Magic1.png" alt="">
-            </div>
-            <div class="mid_1">
-                <img style="height: 30px" src="images/Magic1.png" alt="">
-
-            </div>
-            <div class="mid_2">
-                <p style="text-align: center">4</p>
-            </div>
-            <div class="mid_1">
-                <img style="height: 30px" src="images/Membership.png" alt="">
-            </div>
-            <div class="mid_1">
-                <img style="height: 30px" src="images/Nayrus.png" alt="">
-
-            </div>
-            <div class="mid_2">
-                <p style="text-align: center">5</p>
-            </div>
-            <div class="mid_1">
-                <img style="height: 30px" src="images/MirrorShield.png" alt="">
-            </div>
-            <div class="mid_1">
-                <img style="height: 30px" src="images/Nuts1.png" alt="">
-
-            </div>
-            <div class="mid_2">
-                <p style="text-align: center">6</p>
-            </div>
-            <div class="mid_1">
-                <img style="height: 30px" src="images/Skulltula0.png" alt="">
-            </div>
-            <div class="mid_1">
-                <img style="height: 30px" src="images/ShadowMedallion.png" alt="">
-
-            </div>
-            <div class="mid_2">
-                <p style="text-align: center">7</p>
-            </div>
-            <div class="mid_1">
-                <img style="height: 30px" src="images/ZoraLetter.png" alt="">
-            </div>
-            <div class="mid_1">
-                <img style="height: 30px" src="images/ZoraSapphire.png" alt="">
-
-            </div>
-            <div class="mid_2">
-                <p style="text-align: center">8</p>
-            </div>
-            <div class="mid_1">
-                <img style="height: 30px" src="images/ZoraTunic.png" alt="">
-            </div>
-            <div class="mid_1">
-                <img style="height: 30px" src="images/Bottle0.png" alt="">
-
-            </div>
-            <div class="mid_2">
-                <p style="text-align: center">9</p>
-            </div>
-            <div class="mid_1">
-                <img style="height: 30px" src="images/Bottle0.png" alt="">
-            </div>
-            <div class="mid_1">
-                <img style="height: 30px" src="images/Mask1.png" alt="">
-
-            </div>
-            <div class="mid_2">
-                <p style="text-align: center">10</p>
-            </div>
-            <div class="mid_1">
-                <img style="height: 30px" src="images/Mask10.png" alt="">
-            </div>
-            <div class="mid_1">
-                <img style="height: 30px" src="images/Mask2.png" alt="">
-
-            </div>
-            <div class="mid_2">
-                <p style="text-align: center">11</p>
-            </div>
-            <div class="mid_1">
-                <img style="height: 30px" src="images/Hookshot1.png" alt="">
-            </div>
-            <div class="mid_1">
-                <img style="height: 30px" src="images/MasterSword1.png" alt="">
-
-            </div>
-            <div class="mid_2">
-                <p style="text-align: center">12</p>
-            </div>
-            <div class="mid_1">
-                <img style="height: 30px" src="images/Magic1.png" alt="">
-            </div>
-            <div class="mid_1">
-                <img style="height: 30px" src="images/Magic1.png" alt="">
-
-            </div>
-            <div class="mid_2">
-                <p style="text-align: center">13</p>
-            </div>
-            <div class="mid_1">
-                <img style="height: 30px" src="images/Membership.png" alt="">
-            </div>
-            <div class="mid_1">
-                <img style="height: 30px" src="images/Nayrus.png" alt="">
-
-            </div>
-            <div class="mid_2">
-                <p style="text-align: center">14</p>
-            </div>
-            <div class="mid_1">
-                <img style="height: 30px" src="images/MirrorShield.png" alt="">
-            </div>
-            <div class="mid_1">
-                <img style="height: 30px" src="images/Nuts1.png" alt="">
-
-            </div>
-            <div class="mid_2">
-                <p style="text-align: center">15</p>
-            </div>
-            <div class="mid_1">
-                <img style="height: 30px" src="images/Skulltula0.png" alt="">
-            </div>
-            <div class="mid_1">
-                <img style="height: 30px" src="images/ShadowMedallion.png" alt="">
-
-            </div>
-            <div class="mid_2">
-                <p style="text-align: center">16</p>
-            </div>
-            <div class="mid_1">
-                <img style="height: 30px" src="images/ZoraLetter.png" alt="">
-            </div>
-            <div class="mid_1">
-                <img style="height: 30px" src="images/ZoraSapphire.png" alt="">
-
-            </div>
-            <div class="mid_2">
-                <p style="text-align: center">17</p>
-            </div>
-            <div class="mid_1">
-                <img style="height: 30px" src="images/ZoraTunic.png" alt="">
-            </div>
-
-
-
-        </div>
-        <div class="right">
-            <img src="images/CastleKey0.png" alt="">
-            <img src="images/FireKey0.png" alt="">
-            <img src="images/WaterKey0.png" alt="">
-            <img src="images/CastleKey0.png" alt="">
-            <img src="images/FireKey0.png" alt="">
-            <img src="images/WaterKey0.png" alt="">
-            <img src="images/CastleKey0.png" alt="">
-            <img src="images/FireKey0.png" alt="">
-            <img src="images/WaterKey0.png" alt="">
-            <img src="images/CastleKey0.png" alt="">
-            <img src="images/FireKey0.png" alt="">
-            <img src="images/WaterKey0.png" alt="">
-            <img src="images/CastleKey0.png" alt="">
-            <img src="images/FireKey0.png" alt="">
-            <img src="images/WaterKey0.png" alt="">
-
-        </div>
-
-    </div>
-
-    <div id='layoutdiv'>
-        <div id='itemdiv' class='itemdiv'>
-        </div>
-        <div id='mapdiv' class='mapdiv'>
-            <div id='submapdiv' class='submapdiv' style="overflow-y: scroll">
-                <hr style="margin-top: 2px; margin-bottom: 4px">
-                <div align='center'><span id='submaparea' style="font-size:20px"
-                        onclick="bulkDCSelect(this)">Hyrule</span></div>
-                <hr style="margin-top: 4px; margin-bottom: 4px">
-                <ul onselectstart="return false" id='submaplist'
-                    style="margin-top: 4px; margin-bottom: 8px; overflow-y: auto; min-height: 50px; list-style-type: none;">
-                </ul>
-            </div>
-        </div>
-        <div id='minimapdiv' class='minimapdiv'>
-            <button id='button' type='button'> </button>
-            <button id='button' type='button'> </button>
-        </div>
-    </div>
-
-    <!-- Setting panel-->
-
-    <button id='settingsbutton' type='button' onclick='showSettings(this)'>Settings</button>
-    <fieldset id='settings' class='settings'>
-        <div class="row">
-            <div class="column">
-                <legend>Settings <button type="button" onclick="EditMode()">Edit Mode</button> </legend>
-                <fieldset>
-                    <center>
-                        <legend>Items:
-                            <input type="range" name='itemdivsize' value='100' max='200' min='1'
-                                onchange="setZoom('itemdiv', this)">
-                            <span id='itemdivsize'>100%</span>
-                        </legend>
-                        <legend>Map: <input type="range" name='mapdivsize' value='100' max='200' min='1'
-                                onchange="setZoom('mapdiv', this)">
-                            <span id='mapdivsize'>100%</span>
-                        </legend>
-                </fieldset>
-                <fieldset>
-                    <legend>World</legend>
-                    <center> <input type='checkbox' name='OpenDeku' checked='true' onchange="setTree(this)">Open Deku
-                        Tree
-                        <input type='checkbox' name='OpenDoor' checked='true' onchange="setDoor(this)">Open Door of Time
-                        <br>
-                        <input type='checkbox' name='OpenFountain' checked='false' onchange="setFountain(this)">Open
-                        Zora Fountain
-                        <legend>Big Poes: 1 <input type="range" name='poecount' value='1' max='10' min='1'
-                                onchange="setPoes(this)">
-                            <span id='poecount'> 10 </span>
-                        </legend>
+         </div>
+        
+        <!-- Setting panel-->
+        
+        <button id='settingsbutton' type='button' onclick='showSettings(this)'>Settings</button>
+        <fieldset id='settings' class='settings'> 
+            <div class="row">
+                <div class="column">
+                    <legend>Settings <button type="button" onclick="EditMode()">Edit Mode</button> </legend>
+                    <fieldset> <center>
+                        <legend>Items: 
+                        <input type="range" name='itemdivsize' value='100' max='200' min='1' onchange="setZoom('itemdiv', this)">
+                        <span id='itemdivsize'>100%</span> </legend>
+                        <legend>Map: <input type="range" name='mapdivsize' value='100' max='200' min='1' onchange="setZoom('mapdiv', this)">
+                        <span id='mapdivsize'>100%</span> </legend>
+                    </fieldset>    
+                    <fieldset> 
+                        <legend>World</legend>
+                                <center> <input type='checkbox' name='OpenDeku' checked='true' onchange="setTree(this)">Open Deku Tree
+                                <input type='checkbox' name='OpenDoor' checked='true' onchange="setDoor(this)">Open Door of Time <br>
+                                <input type='checkbox' name='OpenFountain' checked='false' onchange="setFountain(this)">Open Zora Fountain
+                        <legend>Big Poes: 1 <input type="range" name='poecount' value='1' max='10' min='1' onchange="setPoes(this)">
+                        <span id='poecount'> 10 </span> </legend>
                         <hr>
-                        <legend> Quest
-                            <input type='radio' name='quest' value='Vanilla' checked='true'
-                                onclick="setQuest(this)">Vanilla
-                            <input type='radio' name='quest' value='Master' onclick="setQuest(this)">Master
-                            <input type='radio' name='quest' value='Mixed' onclick="setQuest(this)">Mixed
-                        </legend>
-                    </center>
-                </fieldset>
-                <fieldset>
-                    <legend>Fortress Logic</legend>
-                    Fort Keys:
-                    <input type='radio' name='fortkeys' value='Fight' checked='true' onclick="setFortKeys(this)">Guard
-                    Fight
-                    <input type='radio' name='fortkeys' value='Overworld' checked='true'
-                        onclick="setFortKeys(this)">Overworld<br>
-                    <center><input type='radio' name='fortkeys' value='Dungeons' checked='true'
-                            onclick="setFortKeys(this)">Dungeons
-                        <input type='radio' name='fortkeys' value='Keysanity' checked='true'
-                            onclick="setFortKeys(this)">Keysanity<br>
+                        <legend> Quest 
+                        <input type='radio' name='quest' value='Vanilla' checked='true' onclick="setQuest(this)">Vanilla 
+                        <input type='radio' name='quest' value='Master' onclick="setQuest(this)">Master 
+                        <input type='radio' name='quest' value='Mixed' onclick="setQuest(this)">Mixed </legend>
+                        </center> </fieldset>
+                        <fieldset>
+                            <legend>Fortress Logic</legend>
+                                Fort Keys: 
+                                    <input type='radio' name='fortkeys' value='Fight' checked='true' onclick="setFortKeys(this)">Guard Fight
+                                    <input type='radio' name='fortkeys' value='Overworld' checked='true' onclick="setFortKeys(this)">Overworld<br>
+                                    <center><input type='radio' name='fortkeys' value='Dungeons' checked='true' onclick="setFortKeys(this)">Dungeons
+                                    <input type='radio' name='fortkeys' value='Keysanity' checked='true' onclick="setFortKeys(this)">Keysanity<br>
+                                <hr>
+                                 Carpenters: 
+                                    <input type='radio' name='carpenters' value='4' onchange="setCarpenter(this)">All 4
+                                    <input type='radio' name='carpenters' value='1' onchange="setCarpenter(this)">Just 1                          
+                                    </center>
+                                <hr>
+                                Membership:
+                                    <input type='radio' name='gerudobridge' value='Vanilla' onclick="setFortressLogic(this)">Vanilla
+                                    <input type='radio' name='gerudobridge' value='Shuffle' onclick="setFortressLogic(this)">Shuffle
+                                    <input type='radio' name='gerudobridge' value='Start' onclick="setFortressLogic(this)">Start with<br>
+                        </fieldset>
+                        <fieldset> <Legend>Ganon's Castle</legend>
+                        <legend>Rainbow Bridge</legend> 
+                            <center><input type='radio' name='rainbowbridge' value='Open' checked='true' onclick="setRainbow(this)">Open
+                            <input type='radio' name='rainbowbridge' value='Vanilla' onclick="setRainbow(this)">Vanilla
+                            <input type='radio' name='rainbowbridge' value='Skulltulas' onclick="setRainbow(this)">Skulltulas <br>
+                            <input type='radio' name='rainbowbridge' value='Stones' onclick="setRainbow(this)">Spiritual Stones
+                            <input type='radio' name='rainbowbridge' value='Medallions' onclick="setRainbow(this)">Medallions
+                            <input type='radio' name='rainbowbridge' value='Dungeons' onclick="setRainbow(this)">Dungeons
+                        </center> 
                         <hr>
-                        Carpenters:
-                        <input type='radio' name='carpenters' value='4' onchange="setCarpenter(this)">All 4
-                        <input type='radio' name='carpenters' value='1' onchange="setCarpenter(this)">Just 1
-                    </center>
-                    <hr>
-                    Membership:
-                    <input type='radio' name='gerudobridge' value='Vanilla' onclick="setFortressLogic(this)">Vanilla
-                    <input type='radio' name='gerudobridge' value='Shuffle' onclick="setFortressLogic(this)">Shuffle
-                    <input type='radio' name='gerudobridge' value='Start' onclick="setFortressLogic(this)">Start
-                    with<br>
-                </fieldset>
-                <fieldset>
-                    <Legend>Ganon's Castle</legend>
-                    <legend>Rainbow Bridge</legend>
-                    <center><input type='radio' name='rainbowbridge' value='Open' checked='true'
-                            onclick="setRainbow(this)">Open
-                        <input type='radio' name='rainbowbridge' value='Vanilla' onclick="setRainbow(this)">Vanilla
-                        <input type='radio' name='rainbowbridge' value='Skulltulas'
-                            onclick="setRainbow(this)">Skulltulas <br>
-                        <input type='radio' name='rainbowbridge' value='Stones' onclick="setRainbow(this)">Spiritual
-                        Stones
-                        <input type='radio' name='rainbowbridge' value='Medallions'
-                            onclick="setRainbow(this)">Medallions
-                        <input type='radio' name='rainbowbridge' value='Dungeons' onclick="setRainbow(this)">Dungeons
-                    </center>
-                    <hr>
-                    <legend>Castle Trials: 0 <input type="range" name='trialsize' value='0' max='6' min='0'
-                            onchange="setTrialSize(this)">
-                        <span id='trialsize'> 6 </span>
-                    </legend>
-                    <hr>
-                    <legend>Ganon's Boss Key
-                        <input type='radio' name='castlelogic' value='Removed' onclick="setCastle(this)">Removed
-                        <input type='radio' name='castlelogic' value='Vanilla' onclick="setCastle(this)">Vanilla
-                    </legend>
-                    <center><input type='radio' name='castlelogic' value='Castle' onclick="setCastle(this)">Ganons
-                        Castle
-                        <input type='radio' name='castlelogic' value='Anywhere' onclick="setCastle(this)">Anywhere<br>
-                        <input type='radio' name='castlelogic' value='LACSVan' onclick="setCastle(this)">LACS Vanilla
-                        <input type='radio' name='castlelogic' value='LACSStones' onclick="setCastle(this)">LACS
-                        Stones<br>
-                        <input type='radio' name='castlelogic' value='LACSMeds' onclick="setCastle(this)">LACS
-                        Medallions
-                        <input type='radio' name='castlelogic' value='LACSAD' onclick="setCastle(this)">LACS All
-                        Dungeons
-                    </center>
-                </fieldset>
-            </div>
-            <div class="column">
+                        <legend>Castle Trials: 0 <input type="range" name='trialsize' value='0' max='6' min='0' onchange="setTrialSize(this)">
+                        <span id='trialsize'> 6 </span> </legend> 
+                        <hr>
+                        <legend>Ganon's Boss Key 
+                            <input type='radio' name='castlelogic' value='Removed' onclick="setCastle(this)">Removed 
+                            <input type='radio' name='castlelogic' value='Vanilla' onclick="setCastle(this)">Vanilla</legend>
+                            <center><input type='radio' name='castlelogic' value='Castle' onclick="setCastle(this)">Ganons Castle
+                            <input type='radio' name='castlelogic' value='Anywhere' onclick="setCastle(this)">Anywhere<br>
+                            <input type='radio' name='castlelogic' value='LACSVan' onclick="setCastle(this)">LACS Vanilla
+                            <input type='radio' name='castlelogic' value='LACSStones' onclick="setCastle(this)">LACS Stones<br>
+                            <input type='radio' name='castlelogic' value='LACSMeds' onclick="setCastle(this)">LACS Medallions
+                            <input type='radio' name='castlelogic' value='LACSAD' onclick="setCastle(this)">LACS All Dungeons
+                        </center> </fieldset>
+                </div>
+                <div class="column">
                 <fieldset>
                     <legend>Sanity</legend>
                     <fieldset>
                         <legend>Dungeon Keys</legend>
-                        <input type='radio' name='smallkeys' value='Remove' onclick="setSmallKeys(this)">Keysy
-                        <input type='radio' name='smallkeys' value='Vanilla' checked='true'
-                            onclick="setSmallKeys(this)">Van. chest
-                        <input type='radio' name='smallkeys' value='Dungeon' checked='true'
-                            onclick="setSmallKeys(this)">Van. Dungon<br>
-                        <input type='radio' name='smallkeys' value='Overworld' checked='true'
-                            onclick="setSmallKeys(this)">Overworld
-                        <input type='radio' name='smallkeys' value='Dungeons' checked='true'
-                            onclick="setSmallKeys(this)">Dungeons
-                        <input type='radio' name='smallkeys' value='Keysanity'
-                            onclick="setSmallKeys(this)">KeySanity<br>
+                            <input type='radio' name='smallkeys' value='Remove' onclick="setSmallKeys(this)">Keysy
+                            <input type='radio' name='smallkeys' value='Vanilla' checked='true' onclick="setSmallKeys(this)">Van. chest
+                            <input type='radio' name='smallkeys' value='Dungeon' checked='true' onclick="setSmallKeys(this)">Van. Dungon<br>
+                            <input type='radio' name='smallkeys' value='Overworld' checked='true' onclick="setSmallKeys(this)">Overworld
+                            <input type='radio' name='smallkeys' value='Dungeons' checked='true' onclick="setSmallKeys(this)">Dungeons
+                            <input type='radio' name='smallkeys' value='Keysanity' onclick="setSmallKeys(this)">KeySanity<br>
                         <hr>
                         Boss:
-                        <input type='radio' name='bosskeys' value='Remove' onclick="setBossKeys(this)">Keysy
-                        <input type='radio' name='bosskeys' value='Vanilla' onclick="setBossKeys(this)">Vanilla
-                        <input type='radio' name='bosskeys' value='Dungon' onclick="setBossKeys(this)">Van. Dungeon<br>
-                        <input type='radio' name='bosskeys' value='Overworld' onclick="setBossKeys(this)">Overworld
-                        <input type='radio' name='bosskeys' value='Dungeons' checked='true'
-                            onclick="setBossKeys(this)">Dungeons
-                        <input type='radio' name='bosskeys' value='Keysanity' onclick="setBossKeys(this)">KeySanity<br>
+                            <input type='radio' name='bosskeys' value='Remove' onclick="setBossKeys(this)">Keysy
+                            <input type='radio' name='bosskeys' value='Vanilla' onclick="setBossKeys(this)">Vanilla
+                            <input type='radio' name='bosskeys' value='Dungon' onclick="setBossKeys(this)">Van. Dungeon<br>
+                            <input type='radio' name='bosskeys' value='Overworld' onclick="setBossKeys(this)">Overworld
+                            <input type='radio' name='bosskeys' value='Dungeons' checked='true' onclick="setBossKeys(this)">Dungeons 
+                            <input type='radio' name='bosskeys' value='Keysanity' onclick="setBossKeys(this)">KeySanity<br>
                     </fieldset>
-                    <fieldset>
-                        <legend>Critters</legend>
-                        Skulltula:
+                    <fieldset><legend>Critters</legend>
+                        Skulltula: 
                         <input type='radio' name='skulltula' value='Off' checked='true' onclick="setSkulltula(this)">Off
                         <input type='radio' name='skulltula' value='Dungeons' onclick="setSkulltula(this)">Dungeons <br>
                         <center><input type='radio' name='skulltula' value='All' onclick="setSkulltula(this)">All
-                            <input type='radio' name='skulltula' value='Overworld'
-                                onclick="setSkulltula(this)">Overworld<br>
-                            <hr>
-                            <input type='checkbox' name='Scrubsanity' checked='false' onchange="setScrub(this)">Scrubs
-                            <input type='checkbox' name='Cowsanity' checked='false' onchange="setCows(this)">Cow
-                            Milk<br>
+                        <input type='radio' name='skulltula' value='Overworld' onclick="setSkulltula(this)">Overworld<br>
+                        <hr>
+                        <input type='checkbox' name='Scrubsanity' checked='false' onchange="setScrub(this)">Scrubs
+                        <input type='checkbox' name='Cowsanity' checked='false' onchange="setCows(this)">Cow Milk<br>
                         </center>
                     </fieldset>
-                    <fieldset>
-                        <legend>Getting Crazy</legend>
+                    <fieldset> <legend>Getting Crazy</legend>
                         <legend>Starting Age</legend>
-                        <center><input type='radio' name='Age' value='Child' onclick="setAge(this)">Child
+                            <center><input type='radio' name='Age' value='Child' onclick="setAge(this)">Child
                             <input type='radio' name='Age' value='Adult' onclick="setAge(this)">Adult
-                            <input type='checkbox' name='RndmStart' checked='false' onchange="setERTracker(this)">Random
-                            Start
-                        </center>
-                        Shop Size: 0 <input type="range" name='shopsize' value='4' max='4' min='0'
-                            onchange="setShopsize(this)">
-                        <span id='shopsize'> 4 </span><br> -->
+                            <input type='checkbox' name='RndmStart' checked='false' onchange="setERTracker(this)">Random Start </center>                       
+                        Shop Size: 0 <input type="range" name='shopsize' value='4' max='4' min='0' onchange="setShopsize(this)">
+                            <span id='shopsize'> 4 </span><br>                        
                         <input type='checkbox' name='Ksword' checked='true' onchange="setKsword(this)">Kokiki Sword
                         <input type='checkbox' name='OcarinaShuffle' checked='false' onchange="setOcarina(this)">Ocarina
                         <input type='checkbox' name='WeirdEgg' checked='false' onchange="setEgg(this)">Weird Egg <br>
                         <input type='checkbox' name='BeanShuffle' checked='false' onchange="setBean(this)">Beans
-                        <input type='checkbox' name='Medigoron' checked='false' onchange="setMedigoron(this)">Medigoron
-                        <input type='checkbox' name='Aladdin' checked='false' onchange="setCarpet(this)">Carpet Sale<br>
-                        <input type='checkbox' name='BombchuLogic' checked='false' onchange="setBombchu(this)">Bombchu
-                        IN Logic -->
+                        <input type='checkbox' name='Medigoron' checked='false' onchange="setMedigoron(this)">Medigoron           
+                        <input type='checkbox' name='Aladdin' checked='false' onchange="setCarpet(this)">Carpet Sale<br>            
+                        <input type='checkbox' name='BombchuLogic' checked='false' onchange="setBombchu(this)">Bombchu IN Logic
                     </fieldset>
-                    <fieldset>
-                        <legend>Losing Your Mind</legend> -->
-                        <legend>Songs: <input type='radio' name='SongShuffle' value='Songs'
-                                onchange="setSongs(this)">Songs
-                            <input type='radio' name='SongShuffle' value='Bosses' onchange="setSongs(this)">Dungeons
-                            <input type='radio' name='SongShuffle' value='Songsanity'
-                                onchange="setSongs(this)">Songsanity
-                        </legend>
-                        <be> -->
-                            <hr>
-                            <legend>Entrance Randomizer</legend> -->
+                    <fieldset> <legend>Losing Your Mind</legend>
+                        <legend>Songs: <input type='radio' name='SongShuffle' value='Songs' onchange="setSongs(this)">Songs
+                        <input type='radio' name='SongShuffle' value='Bosses' onchange="setSongs(this)">Dungeons
+                        <input type='radio' name='SongShuffle' value='Songsanity' onchange="setSongs(this)">Songsanity</legend><be>
+                        <hr>
+                        <legend>Entrance Randomizer</legend>
                             <input type='checkbox' name='Owls' checked='false' onchange="setOwls(this)">Owl Drops
                             <input type='checkbox' name='Warps' checked='false' onchange="setWarps(this)">Warp Songs<br>
-                            <input type='radio' name='IndoorER' value='Simple' onclick="setIndoorER(this)">Simple
-                            Indoors
+                            <input type='radio' name='IndoorER' value='Simple' onclick="setIndoorER(this)">Simple Indoors
                             <input type='radio' name='IndoorER' value='Full' onclick="setIndoorER(this)">All Indoors
                             <input type='radio' name='IndoorER' value='Off' onclick="setIndoorER(this)">Off<br>
                             <input type='checkbox' name='GrottoER' checked='false' onchange="setGrottoER(this)">Grottos
                             <input type='checkbox' name='DungeonER' checked='false' onchange="setDER(this)">Dungeons
-                            <input type='checkbox' name='OWERmap' checked='false' onchange="setOWER(this)">Overworld
-                            <br>
+                            <input type='checkbox' name='OWERmap' checked='false' onchange="setOWER(this)">Overworld <br>
                             <input type='radio' name='mixphoo' value='Off' onclick="setMixedPools(this)">Off
                             <input type='radio' name='mixphoo' value='Simple' onclick="setMixedPools(this)">Simple
-                            <input type='radio' name='mixphoo' value='Full' onclick="setMixedPools(this)">Full -->
+                            <input type='radio' name='mixphoo' value='Full' onclick="setMixedPools(this)">Full
+                    </fieldset>    
                     </fieldset>
-                </fieldset>
-    </fieldset>
-    </div>
-    </div>
-    </fieldset>
-    <table id='itemconfig' class='itemconfig' style='display:none'></table>
-
-    <script>
-        init();
-    </script>
-</body>
-
+                    </fieldset>
+                </div>
+            </div>
+        </fieldset> 
+        <table id='itemconfig' class='itemconfig' style='display:none'></table>
+        
+        <script>
+            init();
+        </script>
+    </body>
 </html>
