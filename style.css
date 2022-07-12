@@ -183,7 +183,8 @@ label {
     position: relative;
     width: 828px;
     height: 420px;
-    left: 0px;
+    left: 820px;
+    bottom: 410;
 }
 
 
@@ -255,11 +256,8 @@ label {
     text-align: center;
     border-radius: 6px;
     padding: 5px 0;
-    position: absolute;
+    position: relative;
     z-index: 1;
-    bottom: 120%;
-    left: 50%;
-    margin-left: -60px;
 }
 
 #submaparea {
@@ -277,8 +275,8 @@ label {
     position: relative;
     width: 700px;
     height: 420;
-    left: 830px;
-    top: -420px;
+    left: 820;
+    top: -1250;
 }
 
 #chest, #NPC, #freestanding, #ksword, #skulltula, #scrub, 
@@ -287,7 +285,7 @@ label {
     background-repeat: no-repeat;
     font-size: 12;
 
-    position: absolute;
+    position: relative;
     cursor: pointer;
 }
 
