@@ -204,7 +204,7 @@ var defaultItemGrid = [
         "SongofStorms",
         "Ocarina",
         "Scarecrow",
-        "Membership'
+        "Membership"
     ]
 ]
 
