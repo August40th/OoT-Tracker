@@ -127,11 +127,11 @@ var defaultItemGrid = [
         "Hookshot"
     ],
     [
-        "HylianShield"
+        "HylianShield",
         "Bow"
     ],
     [
-        "GoronTunic"
+        "GoronTunic",
         "Hammer"
     ],
     [
@@ -198,7 +198,7 @@ var defaultItemGrid = [
         "ZeldasLullaby",
         "KokiriEmerald",
         "GoronRuby",
-        "ZoraSapphire",
+        "ZoraSapphire"
     ],
     [
         "SongofStorms",
