@@ -276,7 +276,7 @@ var defaultItemGrid = [
     ]
 ]
 
-var defaultItemGrid = [
+var ItemGrid2P = [
     [
         "SongofTime",
         "KokiriSword",
@@ -452,6 +452,117 @@ var defaultItemGrid = [
         "Ocarina",
         "Wallet",
         "Heart"
+    ]
+]
+
+var defaultItemGrid = [
+    [
+        "KokiriBoots",
+        "KokiriSword"
+    ],
+    [
+        "KokiriTunic",
+        "Slingshot"
+    ],
+    [
+        "DekuShield",
+        "Bombs"
+    ],
+    [
+        "Stick",
+        "Scale"
+    ],
+    [
+        "Nuts",
+        "ZoraLetter"
+    ],
+    [
+        "Bottle",
+        "Boomerang"
+    ],
+    [
+        "MasterSword",
+        "Hookshot"
+    ],
+    [
+        "HylianShield"
+        "Bow"
+    ],
+    [
+        "GoronTunic"
+        "Hammer"
+    ],
+    [
+        "ZoraTunic",
+        "IronBoots"
+    ],
+    [
+        "Bombchu",
+        "HoverBoots"
+    ],
+    [
+        "Farores",
+        "Dins"
+    ],
+    [
+        "Nayrus",
+        "Magic"
+    ],
+    [
+        "BigPoe",
+        "Lens"
+    ],
+    [
+        "StoneofAgony",
+        "Glove"
+    ],
+    [
+        "Wallet",
+        "MirrorShield"
+    ],
+    [
+        "Ice",
+        "Fire"
+    ],
+    [
+        "Heart",
+        "Light"
+    ],
+    [ 
+        "SongofTime",
+        "Mask",
+        "LightMedallion",
+        "Trade"
+    ],
+    [
+        "SunsSong",
+        "ShadowMedallion",
+        "GoMode",
+        "ForestMedallion"
+    ],
+    [
+        "SariasSong",
+        "SpiritMedallion",
+        "Skulltula",
+        "FireMedallion"
+    ],
+    [
+        "EponasSong",
+        "Bottle",
+        "WaterMedallion",
+        "Bean"
+    ],
+    [
+        "ZeldasLullaby",
+        "KokiriEmerald",
+        "GoronRuby",
+        "ZoraSapphire",
+    ],
+    [
+        "SongofStorms",
+        "Ocarina",
+        "Scarecrow",
+        "Membership'
     ]
 ]
 
