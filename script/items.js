@@ -1,4 +1,4 @@
-var defaultItemGrid = [
+var defaultItemGridx = [
     [
         "SongofTime",
         "KokiriSword",
@@ -276,7 +276,7 @@ var default2PItemGrid = [
     ]
 ]
 
-var default2pItemGrid = [
+var defaultItemGrid = [
     [
         "SongofTime",
         "KokiriSword",
