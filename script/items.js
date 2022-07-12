@@ -97,7 +97,7 @@ var defaultItemGridx = [
     ]
 ]
 
-var default2PItemGrid = [
+var defaultItemGrid = [
     [
         "SongofTime",
         "KokiriSword",
