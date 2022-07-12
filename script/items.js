@@ -143,7 +143,7 @@ var defaultItemGrid = [
     [
         "BigPoe",
         "Ice",
-        "Bow"
+        "Bow",
         "Light",
     ],
     [
@@ -175,7 +175,7 @@ var defaultItemGrid = [
         "Mask",
         "LightMedallion",
         "Trade",
-        "PreludeofLight",
+        "PreludeofLight"
     ],
     [
         "SunsSong",
