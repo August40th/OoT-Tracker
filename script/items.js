@@ -101,56 +101,62 @@ var defaultItemGrid = [
     [
         "KokiriBoots",
         "KokiriTunic",
+        "GoronTunic",
+        "ZoraTunic",
+        "blank",
+        "blank",
         "KokiriSword",
-        "IronBoots"
+        "blank",
+        "blank",
+        "Hookshot"
     ],
     [
         "DekuShield",
         "HylianShield",
-        "Slingshot",
-        "HoverBoots"
-    ],
-    [
-        "Stick",
-        "Nuts",
-        "Bombs",
-        "Dins"
-    ],
-    [
-        "GoronTunic",
-        "ZoraTunic",
-        "Scale",
-        "Fire"
-    ],
-    [
         "MasterSword",
         "BiggoronSword",
-        "ZoraLetter",
-        "Magic"
-    ],
-    [
-        "StoneofAgony",
-        "Bombchu",
-        "Boomerang",
-        "Lens"
+        "blank",
+        "blank",
+        "Slingshot",
+        "blank",
+        "blank",
+        "Bow"
     ],
     [
         "Nayrus",
+        "Nuts",
+        "Stick",
         "Farores",
-        "Hookshot",
-        "Glove"
-    ],
-    [
-        "BigPoe",
-        "Ice",
-        "Bow",
-        "Light"
+        "blank",
+        "blank",
+        "Bombs",
+        "blank",
+        "blank",
+        "Hammer"
     ],
     [
         "Heart",
+        "StoneofAgony",
+        "BigPoe",
+        "Ice",
         "blank",
-        "Hammer",
-        "MirrorShield"
+        "blank",
+        "ZoraLetter",
+        "blank",
+        "blank",
+        "Scale"
+    ],
+    [
+        "blank",
+        "blank",
+        "BFA",
+        "Bombchu",
+        "blank",
+        "blank",
+        "Boomerang",
+        "blank",
+        "blank",
+        "IronBoots"
     ],
     [
         "ForestKey",
@@ -159,7 +165,9 @@ var defaultItemGrid = [
         "SpiritKey",
         "ShadowKey",
         "CastleKey",
-        "GTGKey"
+        "GTGKey",
+        "blank",
+        "HoverBoots"
     ],
     [
         "BossForest",
@@ -168,42 +176,69 @@ var defaultItemGrid = [
         "BossSpirit",
         "BossShadow",
         "BossCastle",
-        "Membership"
+        "Membership",
+        "blank",
+        "Dins"
     ],
     [ 
         "SongofTime",
         "Mask",
         "LightMedallion",
         "Trade",
-        "PreludeofLight"
+        "PreludeofLight",
+        "blank",
+        "blank",
+        "blank",
+        "blank",
+        "Fire"
     ],
     [
         "SunsSong",
         "ShadowMedallion",
         "GoMode",
         "ForestMedallion",
-        "MinuetofForest"
+        "MinuetofForest",
+        "blank",
+        "blank",
+        "blank",
+        "blank",
+        "Magic"
     ],
     [
         "SariasSong",
         "SpiritMedallion",
         "Skulltula",
         "FireMedallion",
-        "BoleroofFire"
+        "BoleroofFire",
+        "blank",
+        "blank",
+        "blank",
+        "blank",
+        "Lens"
     ],
     [
         "EponasSong",
         "Bottle",
         "WaterMedallion",
         "Bean",
-        "SerenadeofWater"
+        "SerenadeofWater",
+        "blank",
+        "blank",
+        "blank",
+        "blank",
+        "Glove"
     ],
     [
         "ZeldasLullaby",
         "KokiriEmerald",
         "GoronRuby",
         "ZoraSapphire",
-        "NocturneofShadow"
+        "NocturneofShadow",
+        "blank",
+        "blank",
+        "blank",
+        "blank",
+        "MirrorShield"
     ],
     [
         "SongofStorms",
@@ -211,6 +246,11 @@ var defaultItemGrid = [
         "Wallet",
         "Scarecrow",
         "RequiemofSpirit",
+        "blank",
+        "blank",
+        "blank",
+        "blank",
+        "Light"
     ]
 ]
 
