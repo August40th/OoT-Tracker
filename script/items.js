@@ -137,8 +137,8 @@ var defaultItemGrid = [
     [
         "Heart",
         "StoneofAgony",
-        "BigPoe",
         "Ice",
+        "BigPoe",
         "blank",
         "blank",
         "ZoraLetter",
@@ -147,9 +147,9 @@ var defaultItemGrid = [
         "Scale"
     ],
     [
-        "blank",
-        "blank",
         "BFA",
+        "blank",
+        "blank",
         "Bombchu",
         "blank",
         "blank",
@@ -159,6 +159,7 @@ var defaultItemGrid = [
         "IronBoots"
     ],
     [
+        "WellKey",
         "ForestKey",
         "FireKey",
         "WaterKey",
@@ -170,6 +171,7 @@ var defaultItemGrid = [
         "HoverBoots"
     ],
     [
+        "blank",
         "BossForest",
         "BossFire",
         "BossWater",
