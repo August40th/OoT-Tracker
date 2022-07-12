@@ -100,98 +100,75 @@ var defaultItemGridx = [
 var defaultItemGrid = [
     [
         "KokiriBoots",
-        "KokiriSword"
-    ],
-    [
         "KokiriTunic",
-        "Slingshot"
-    ],
-    [
-        "DekuShield",
-        "Bombs"
-    ],
-    [
-        "Stick",
-        "Scale"
-    ],
-    [
-        "Nuts",
-        "ZoraLetter"
-    ],
-    [
-        "Bottle",
-        "Boomerang"
-    ],
-    [
-        "MasterSword",
-        "Hookshot"
-    ],
-    [
-        "HylianShield",
-        "Bow"
-    ],
-    [
-        "GoronTunic",
-        "Hammer"
-    ],
-    [
-        "ZoraTunic",
+        "KokiriSword",
         "IronBoots"
     ],
     [
-        "Bombchu",
-        "HoverBoots",
-        "blank",
-        "WellKey"
+        "DekuShield",
+        "HylianShield",
+        "Slingshot",
+        "HoverBoots"
     ],
     [
-        "Farores",
-        "Dins",
-        "blank",
-        "ForestKey",
-        "BossForest"
+        "Stick",
+        "Nuts",
+        "Bombs",
+        "Dins"
     ],
     [
-        "Nayrus",
-        "Magic",
-        "blank",
-        "FireKey",
-        "BossFire"
+        "GoronTunic",
+        "ZoraTunic",
+        "Scale",
+        "Fire"
     ],
     [
-        "BigPoe",
-        "Lens",
-        "blank",
-        "WaterKey",
-        "BossWater"
+        "MasterSword",
+        "BiggoronSword",
+        "ZoraLetter",
+        "Magic"
     ],
     [
         "StoneofAgony",
-        "Glove",
-        "blank",
-        "ShadowKey",
-        "BossShadow"
+        "Bombchu",
+        "Boomerang",
+        "Lens"
     ],
     [
-        "BiggoronSword",
-        "MirrorShield",
-        "blank",
-        "SpiritKey",
-        "BossSpirit"
+        "Nayrus",
+        "Farores",
+        "Hookshot",
+        "Glove"
     ],
     [
+        "BigPoe",
         "Ice",
-        "Fire",
-        "blank",
-        "GTGKey",
-        "Membership"
+        "Bow"
+        "Light",
     ],
     [
         "Heart",
-        "Light",
         "blank",
+        "Hammer",
+        "MirrorShield"
+    ],
+    [
+        "ForestKey",
+        "FireKey",
+        "WaterKey",
+        "SpiritKey",
+        "ShadowKey",
         "CastleKey",
-        "BossCastle"
+        "GTGKey"
+    ],
+    [
+        "BossForest",
+        "BossFire",
+        "BossWater",
+        "BossSpirit",
+        "BossShadow",
+        "BossCastle",
+        "Membership"
     ],
     [ 
         "SongofTime",
