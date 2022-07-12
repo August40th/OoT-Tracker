@@ -144,7 +144,7 @@ var defaultItemGrid = [
         "BigPoe",
         "Ice",
         "Bow",
-        "Light",
+        "Light"
     ],
     [
         "Heart",
