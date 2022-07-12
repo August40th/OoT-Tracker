@@ -140,71 +140,100 @@ var defaultItemGrid = [
     ],
     [
         "Bombchu",
-        "HoverBoots"
+        "HoverBoots",
+        "blank",
+        "WellKey"
     ],
     [
         "Farores",
-        "Dins"
+        "Dins",
+        "blank",
+        "ForestKey",
+        "BossForest"
     ],
     [
         "Nayrus",
-        "Magic"
+        "Magic",
+        "blank",
+        "FireKey",
+        "BossFire"
     ],
     [
         "BigPoe",
-        "Lens"
+        "Lens",
+        "blank",
+        "WaterKey",
+        "BossWater"
     ],
     [
         "StoneofAgony",
-        "Glove"
+        "Glove",
+        "blank",
+        "ShadowKey",
+        "BossShadow"
     ],
     [
-        "Wallet",
-        "MirrorShield"
+        "BiggoronSword",
+        "MirrorShield",
+        "blank",
+        "SpiritKey",
+        "BossSpirit"
     ],
     [
         "Ice",
-        "Fire"
+        "Fire",
+        "blank",
+        "GTGKey",
+        "Membership"
     ],
     [
         "Heart",
-        "Light"
+        "Light",
+        "blank",
+        "CastleKey",
+        "BossCastle"
     ],
     [ 
         "SongofTime",
         "Mask",
         "LightMedallion",
-        "Trade"
+        "Trade",
+        "PreludeofLight",
     ],
     [
         "SunsSong",
         "ShadowMedallion",
         "GoMode",
-        "ForestMedallion"
+        "ForestMedallion",
+        "MinuetofForest"
     ],
     [
         "SariasSong",
         "SpiritMedallion",
         "Skulltula",
-        "FireMedallion"
+        "FireMedallion",
+        "BoleroofFire"
     ],
     [
         "EponasSong",
         "Bottle",
         "WaterMedallion",
-        "Bean"
+        "Bean",
+        "SerenadeofWater"
     ],
     [
         "ZeldasLullaby",
         "KokiriEmerald",
         "GoronRuby",
-        "ZoraSapphire"
+        "ZoraSapphire",
+        "NocturneofShadow"
     ],
     [
         "SongofStorms",
         "Ocarina",
+        "Wallet",
         "Scarecrow",
-        "Membership"
+        "RequiemofSpirit",
     ]
 ]
 
