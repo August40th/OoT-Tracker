@@ -283,6 +283,7 @@ var items = {
     LightMedallion:false,
     BigPoe:0,
     GoMode:false,
+    BFA:false,
     
     ForestKey:0,
     FireKey:0,
