@@ -155,7 +155,7 @@ var dungeons = [
          }, 'Infront Storms Grotto': { x: "14%", y: "25%", leadsto: "unknown", type: "gossip", access: "outdoor",
             isAvailable: function () {
                return dungeons[0].found == true ; }
-         }, 'Song of Storms Grotto': { x: "16.7%", y: "26.4%", leadsto: "unknown", type: "grotto", access: "grotto",
+         }, 'Forest Storms Grotto': { x: "16.7%", y: "26.4%", leadsto: "unknown", type: "grotto", access: "grotto",
             isAvailable: function () {
                return dungeons[0].found == true
                && items.Ocarina && items.SongofStorms; }
@@ -3063,7 +3063,7 @@ var dungeons = [
                return dungeons[20].found == true && 
                   (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale || OWERmap ) &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); }
-         }, 'Song of Storms Grotto': { x: "4%", y: "42%", leadsto: "unknown", type: "grotto", access: "grotto",
+         }, 'River Storms Grotto': { x: "4%", y: "42%", leadsto: "unknown", type: "grotto", access: "grotto",
             isAvailable: function () {
                return dungeons[20].found == true && 
                   items.Ocarina && items.SongofStorms &&
@@ -3080,14 +3080,6 @@ var dungeons = [
                        (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                       ) ); }
          }, 'Storms Grotto Scrub 2': { x: "5%", y: "44%", leadsto: "unknown", type: "scrub", access: "grotto",
-            isAvailable: function () {
-               return dungeons[20].found == true && 
-                  items.Ocarina && items.SongofStorms &&
-                  ( (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-                   || ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale || OWERmap ) &&
-                       (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
-                      ) ); }
-         }, 'Storms Grotto Scrub 3': { x: "3.5%", y: "40%", leadsto: "unknown", type: "scrub", access: "grotto",
             isAvailable: function () {
                return dungeons[20].found == true && 
                   items.Ocarina && items.SongofStorms &&
@@ -3480,7 +3472,7 @@ var dungeons = [
                    || ( (items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove) &&
                        (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                       ) ); }
-         }, 'Song of Storms Grotto': { x: "50%", y: "58%", leadsto: "unknown", type: "grotto", access: "grotto",
+         }, 'Trail Storms Grotto': { x: "50%", y: "58%", leadsto: "unknown", type: "grotto", access: "grotto",
             isAvailable: function () {
                return (OWERmap == false || dungeons[23].found == true) && 
                   items.Ocarina && items.SongofStorms ; }
@@ -3975,7 +3967,7 @@ var dungeons = [
                   (items.Membership || (items.Ocarina && items.EponasSong) || items.Hookshot >= 2) &&
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ; 
             }
-         }, 'Song of Storms Grotto': { x: "33%", y: "27%", leadsto: "unknown", type: "grotto", access: "grotto",
+         }, 'Valley Storms Grotto': { x: "33%", y: "27%", leadsto: "unknown", type: "grotto", access: "grotto",
             isAvailable: function () {
                return (OWERmap == false || dungeons[27].found == true) && items.Ocarina && items.SongofStorms &&
                   (items.Membership || (items.Ocarina && items.EponasSong) || items.Hookshot >= 2) &&
