@@ -971,7 +971,7 @@ function toggleDungeonMapDown() {
     clickDungeon(dungeonSelect);
 }
 
-function IndoorFull(var e1,int ToT,var  d , var c)
+function IndoorFull(var e1,var ToT,var  d , var c)
 { e1.onmouseover = new Function('highlightDungeonChest(this)');
   e1.onmouseout = new Function('unhighlightDungeonChest(this)');
   e1.onclick = function(setLeadsto){ e1.style.cursor = "pointer";
@@ -1030,7 +1030,7 @@ function Element_Creation(var e1,var l,var Names, var values, var d,var c)
                      { e1=null;e1=document.createElement('li');e1.innerHTML = Names[i];
                        e1=IndoorFull(e1,values[i],d,c);  l.appendChild(e1);
                         return  e1;}
-function IndoorOff(var f2, var e0, var l, int d , int c )
+function IndoorOff(var f2, var e0, var l, var d , var c )
 {
      f2.innerHTML = 'Indoor';
                 f2.onmouseover = new Function('highlightDungeonChest(this)');
@@ -1047,6 +1047,7 @@ function IndoorOff(var f2, var e0, var l, int d , int c )
                         clickDungeon(d);
                     }
                     l.appendChild(e1);
+                }
 }
 function checklist()
             {
@@ -1152,6 +1153,7 @@ function If_Conditions(var e1,var l,var Names, var Values, var d, var c)
                 default:break;}
         }
     }
+  }
 function dungeon_typeCondition( var IndoorEr, var GrottoER,var f1,var f2,var e1,var l,var names,var values,var d,var c)
         {
             if(IndoorEr!=="Off")
@@ -1190,7 +1192,10 @@ function dungeon_typeCondition( var IndoorEr, var GrottoER,var f1,var f2,var e1,
         }    
 function   Simple_TypeConditio(var IndoorEr,var e1,var l,var Names,var Values, var d, var c){
 if(IndoorEr=="full"){If_Conditions(e1,l,Names,values,d,c);}
-function toggleDungeonChest(sender, d, c) {
+}
+
+function toggleDungeonChest(sender, d, c) 
+{
     dungeons[d].chestlist[c].isOpened = !dungeons[d].chestlist[c].isOpened;
     if (dungeons[d].chestlist[c].isOpened)
         sender.className = 'DCopened';
@@ -1286,8 +1291,9 @@ function toggleDungeonChest(sender, d, c) {
         const Names =["Generic","Scrub1","Scrub2","ScrubLeft","Scrub3","Theater","Dampe","Tomb","Redeadgrave","Fairygrave","Tektite","Cow","Web","Skulltula","MudWall","Wolfos","Redead","Octorock","Fairy"];
             If_Conditions(e1,l,Names,Values,d,c);
     }
-    else if (mixphoo == "Simple" && dungeons[d].chestlist[c].leadsto == "unknown" && (dungeons[d].chestlist[c].type == "dungeon" || dungeons[d].chestlist[c].type == "grotto" || dungeons[d].chestlist[c].type == "simple" || dungeons[d].chestlist[c].type == "alldoor" ) ) {
-        var t = document.getElementById('submaparea');
+    else if (mixphoo == "Simple" && dungeons[d].chestlist[c].leadsto == "unknown" && (dungeons[d].chestlist[c].type == "dungeon" || dungeons[d].chestlist[c].type == "grotto" || dungeons[d].chestlist[c].type == "simple" || dungeons[d].chestlist[c].type == "alldoor"  )) 
+    {
+           var t = document.getElementById('submaparea');
         var l = document.getElementById('submaplist');
         t.innerHTML = c + ' leads to';
         l.innerHTML = '';
@@ -1349,6 +1355,7 @@ function toggleDungeonChest(sender, d, c) {
                                         dungeons[v].chestlist[ent].leadsto = c;
                                         clickDungeon(d);
                                     }
+                                }
                                     l.appendChild(ee); 
                                 }
                             }
@@ -1359,7 +1366,6 @@ function toggleDungeonChest(sender, d, c) {
             }
             l.appendChild(f2);
         }
-
          else if (dungeons[d].chestlist[c].leadsto == "unknown" && dungeons[d].chestlist[c].type == "owl" ) { 
         var t = document.getElementById('submaparea');
         var l = document.getElementById('submaplist');
