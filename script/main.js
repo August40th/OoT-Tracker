@@ -987,6 +987,7 @@ function toggleDungeonChest(sender, d, c) {
         t.innerHTML = c + ' leads to';
         l.innerHTML = '';
         for ( var k = 0; k < 35; k++) {
+            if ( k >= 1 || k <= 13) continue;
             printdun = false;
             for (var key in dungeons[k].chestlist) {
                 if (dungeons[k].chestlist[key].type == "entrance" && dungeons[k].chestlist[key].leadsto == "unknown") {
@@ -2247,7 +2248,7 @@ function toggleDungeonChest(sender, d, c) {
                 l.innerHTML = '';
                 for ( var k = 0; k < 35; k++) {
                     if ( (k == 0 || k > 12) && c !== "Dungeon Door") continue;
-                    if ( (k > 0 && k < 13) && c == "Dungeon Door") continue;
+                    if ( (k > 0 && k < 13) && c == "Dungeon Door" ) continue;
                     if (OWERmap == false && (k == 33 || k == 34 ) ) continue;
                     printdun = false;
                     for (var key in dungeons[k].chestlist) {
@@ -2820,6 +2821,7 @@ function toggleDungeonChest(sender, d, c) {
             f4.onclick = function (openarea) {
                 l.innerHTML = '';
                 for ( var k = 0; k < 35; k++) {
+                    if (k >= 0 && k <= 12 ) continue;
                     printdun = false;
                     for (var key in dungeons[k].chestlist) {
                         if (dungeons[k].chestlist[key].leadsto == "unknown" && 
