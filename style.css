@@ -11,9 +11,9 @@ body{
 .settings{
     background-color: rgb(0,0,0);
     width: 850px;
-    position: absolute;
+    position: relative;
     right:0;
-    bottom: 0;
+    bottom: 1666;
     z-index : 10;
     display: none;
 }
