@@ -344,10 +344,10 @@ var items = {
     Membership:false,
 
     blank: false,
-    BiggoronSword{:
-        if (Medigoron == false){
-            false;}
-        else {0;}}
+    BiggoronSword
+//        if (Medigoron == false){
+  //          false;}
+    //    else {0;}}
 };
 
 var itemsMin = {
