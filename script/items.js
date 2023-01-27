@@ -344,10 +344,7 @@ var items = {
     Membership:false,
 
     blank: false,
-    BiggoronSword: 
-        if (Medigoron == false){
-            false;}
-        else {0;}
+    BiggoronSword,
 };
 
 var itemsMin = {
