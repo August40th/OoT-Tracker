@@ -284,7 +284,6 @@ var items = {
 
     KokiriSword:false,
     MasterSword:1,
-    BiggoronSword:false,
     DekuShield:false,
     HylianShield:false,
     MirrorShield:false,
@@ -344,7 +343,11 @@ var items = {
     BossCastle:0,
     Membership:false,
 
-    blank: false
+    blank: false,
+    BiggoronSword: 
+        if (Medigoron == false){
+            false;}
+        else {0;}
 };
 
 var itemsMin = {
@@ -380,7 +383,11 @@ var itemsMin = {
     BossCastle:0,
     BigPoe:0,
     
-    MasterSword:0.
+    MasterSword:0,
+    BiggoronSword:
+        if (Medigoron == true){
+            0;}
+        else {null;}
 };
 
 var itemsMax = {
@@ -416,4 +423,8 @@ var itemsMax = {
     BossCastle:1,
     BigPoe:10,
     MasterSword:1,
+    BiggoronSword:
+        if (Medigoron == true){
+            2;}
+        else {null;}
 };
