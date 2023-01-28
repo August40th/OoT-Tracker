@@ -344,7 +344,7 @@ var items = {
     Membership:false,
 
     blank: false,
-    BiggoronSword
+    BiggoronSword: false
 //        if (Medigoron == false){
   //          false;}
     //    else {0;}}
