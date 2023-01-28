@@ -384,9 +384,9 @@ var itemsMin = {
     BigPoe:0,
     
     MasterSword:0,
-    BiggoronSword{:
+    BiggoronSword:
         if (Medigoron == true){0;}
-        else {null;}}
+        else {null;}
 };
 
 var itemsMax = {
@@ -422,7 +422,7 @@ var itemsMax = {
     BossCastle:1,
     BigPoe:10,
     MasterSword:1,
-    BiggoronSword{:
+    BiggoronSword:
         if (Medigoron == true){2;}
-        else {null;}}
+        else {null;}
 };
