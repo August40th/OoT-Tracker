@@ -3096,31 +3096,31 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[20].found == true && 
                   (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale || OWERmap ) &&
-                  items.Ocarina && items.SongofStorms &&
+                  items.Ocarina && items.ZeldasLullaby &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); }
          }, 'Epona\'s Frog': { x: "44%", y: "20%", leadsto: "unknown", type: "frog", access: "outdoor",
             isAvailable: function () {
                return dungeons[20].found == true && 
                   (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale || OWERmap ) &&
-                  items.Ocarina && items.SongofStorms &&
+                  items.Ocarina && items.EponasSong &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); }
          }, 'Saria\'s Frog': { x: "47%", y: "20%", leadsto: "unknown", type: "frog", access: "outdoor",
             isAvailable: function () {
                return dungeons[20].found == true && 
                   (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale || OWERmap ) &&
-                  items.Ocarina && items.SongofStorms &&
+                  items.Ocarina && items.SariasSong &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); }
          }, 'Sun\'s Frog': { x: "50%", y: "20%", leadsto: "unknown", type: "frog", access: "outdoor",
             isAvailable: function () {
                return dungeons[20].found == true && 
                   (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale || OWERmap ) &&
-                  items.Ocarina && items.SongofStorms &&
+                  items.Ocarina && items.SunsSong &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); }
          }, 'Frogs of Time': { x: "48%", y: "16%", leadsto: "unknown", type: "frog", access: "outdoor",
             isAvailable: function () {
                return dungeons[20].found == true && 
                   (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale || OWERmap ) &&
-                  items.Ocarina && items.SongofStorms &&
+                  items.Ocarina && items.SongofTime &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); }
          }, 'Frogs in the Rain': { x: "45%", y: "16%", leadsto: "unknown", type: "NPC", access: "outdoor",
             isAvailable: function () {
