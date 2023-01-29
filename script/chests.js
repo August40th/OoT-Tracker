@@ -18,6 +18,7 @@ function generalCanGetChest(chestlist) {
          continue;}
       if ( chestlist[key].type == "warp" && Warps == false) {
          continue;}
+      if (key == 'Warp Pad') { continue;}
       if ( chestlist[key].type == "spawn" && RndmStart  == false) {
          continue;}
       if ( chestlist[key].type == "owl" && Owls == false) { //Do Nothing
@@ -2423,7 +2424,7 @@ var dungeons = [
          }, 'Temple of Time': { x: "46%", y: "58%", leadsto: "unknown", type: "alldoor", access: "door",
             isAvailable: function () {
                return dungeons[14].found == true; }
-         }, 'Prelude Warp': { x: "48%", y: "48%", leadsto: "none", type: "warp", access: "warp",
+         }, 'Warp Pad': { x: "48%", y: "48%", leadsto: "none", type: "warp", access: "warp",
                isAvailable: function () {
                   return items.Ocarina && items.PreludeofLight; }
          }, 'Song for Forest Medallion': { x: "48%", y: "22%", leadsto: "unknown", type: "song", access: "alldoor",
@@ -3023,7 +3024,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[19].found == true && 
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); }
-         }, 'Minuet Warp': { x: "84%", y: "50%", leadsto: "none", type: "warp", access: "warp",
+         }, 'Warp Pad': { x: "84%", y: "50%", leadsto: "none", type: "warp", access: "warp",
                isAvailable: function () {
                   return items.Ocarina && items.MinuetofForest; }
          }, 'Meadow Storms Grotto': { x: "80%", y: "75%", leadsto: "unknown", type: "grotto", access: "grotto",
@@ -3648,7 +3649,7 @@ var dungeons = [
                      && //access via city or trail
                      (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                     ) ; }
-         }, 'Bolero Warp': { x: "53%", y: "41%", leadsto: "none", type: "warp", access: "warp",
+         }, 'Warp Pad': { x: "53%", y: "41%", leadsto: "none", type: "warp", access: "warp",
                isAvailable: function () {
                   return items.Ocarina && items.BoleroofFire; }
          }, 'Soil Patch Skulltula': { x: "47%", y: "42%", leadsto: "unknown", type: "skulltula", access: "outdoor",
@@ -3890,7 +3891,7 @@ var dungeons = [
          }, 'Grave Pull Scrub 3': { x: "19%", y: "64%", leadsto: "unknown", type: "scrub", access: "grotto",
             isAvailable: function () {
                return OWERmap == false || dungeons[26].found == true; },
-         }, 'Serenade Warp': { x: "44.5%", y: "78%", leadsto: "none", type: "warp", access: "warp",
+         }, 'Warp Pad': { x: "44.5%", y: "78%", leadsto: "none", type: "warp", access: "warp",
                isAvailable: function () {
                   return items.Ocarina && items.SerenadeoffWater; }
          }, 'Top of Tree Skulltula': { x: "49.5%", y: "79%", leadsto: "unknown", type: "skulltula", access: "outdoor",
@@ -4118,7 +4119,7 @@ var dungeons = [
                   ( (items.Membership && (items.HoverBoots || items.Hookshot >= 2) ) 
                    || (items.Ocarina && items.RequiemofSpirit) ) &&
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime)  ) ; }
-         }, 'Requiem Warp': { x: "20%", y: "14%", leadsto: "none", type: "warp", access: "warp",
+         }, 'Warp Pad': { x: "20%", y: "14%", leadsto: "none", type: "warp", access: "warp",
                isAvailable: function () {
                   return items.Ocarina && items.RequiemofSpirit; }
          }, 'Desert Strength Grotto': { x: "28%", y: "20%", leadsto: "unknown", type: "grotto", access: "grotto",
@@ -4257,7 +4258,7 @@ var dungeons = [
                   items.Magic && (items.Dins || 
                  (items.Bow && items.Fire && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                  ); }
-         }, 'Noturne Warp': { x: "61%", y: "45%", leadsto: "none", type: "warp", access: "warp",
+         }, 'Warp Pad': { x: "61%", y: "45%", leadsto: "none", type: "warp", access: "warp",
             isAvailable: function () {
                return (OWERmap == false || dungeons[30].found == true) && items.Ocarina && items.NocturneofShadow ; }
          }, 'Noturne Gossip': { x: "63%", y: "34%", leadsto: "unknown", type: "gossip", access: "outdoor",
