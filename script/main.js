@@ -720,6 +720,7 @@ function clickDungeon(d) {
             continue;}
         if ( dungeons[dungeonSelect].chestlist[key].type == "warp" && Warps == false) {
             continue;}
+        if (key == 'Warp Pad'){ continue;}
         if ( dungeons[dungeonSelect].chestlist[key].type == "spawn" && RndmStart == false) {
             continue;}
         if ( dungeons[dungeonSelect].chestlist[key].type == "owl" && Owls == false) { //Do Nothing
@@ -3863,6 +3864,7 @@ function updateMap() {
                 continue;}
             if ( dungeons[k].chestlist[key].type == "warp" && Warps == false) {
                 continue;}
+            if (key == 'Warp Pad'){ continue;}
             if ( dungeons[k].chestlist[key].type == "spawn" && RndmStart == false) {
                 continue;}
             if ( dungeons[k].chestlist[key].type == "owl" && Owls == false) { //Do Nothing
@@ -4081,6 +4083,7 @@ function populateMapdiv() {
                 continue;}
             if ( dungeons[k].chestlist[key].type == "warp" && Warps == false) {
                 continue;}
+            if (k == 'Warp Pad'){ continue;}
             if ( dungeons[k].chestlist[key].type == "spawn" && RndmStart == false) {
                 continue;}
             if ( dungeons[k].chestlist[key].type == "owl" && Owls == false) { //Do Nothing
@@ -4193,6 +4196,7 @@ function populateMapdiv() {
             continue;}
         if ( dungeons[dungeonSelect].chestlist[key].type == "warp" && Warps == false) {
             continue;}
+        if (key == 'Warp Pad'){ continue;}
         if ( dungeons[dungeonSelect].chestlist[key].type == "spawn" && RndmStart == false) {
             continue;}
         if ( dungeons[dungeonSelect].chestlist[key].type == "owl" && Owls == false) { //Do Nothing
