@@ -52,6 +52,7 @@ Scrubsanity = false;
 Shopsanity = false;
 shopsize = 0;
 Cowsanity = false;
+Frogsanity = false;
 quest = 'Vanilla';
 
 Ksword = true;
@@ -153,6 +154,7 @@ var cookieDefault = {
    fountain: 0,
    shpsize: 0,
    cowShuff: 0,
+   frogShuff: 0,
    numtrials: 0,
    pigBK: 'Removed',
    gER: 0,
@@ -237,6 +239,8 @@ function loadCookie() {
 
    document.getElementsByName('Cowsanity')[0].checked = !!cookieobj.cowShuff;
    document.getElementsByName('Cowsanity')[0].onchange();
+   document.getElementsByName('Frogsanity')[0].checked = !!cookieobj.frogShuff;
+   document.getElementsByName('Frogsanity')[0].onchange();
    document.getElementsByName('Scrubsanity')[0].checked = !!cookieobj.scrb;
    document.getElementsByName('Scrubsanity')[0].onchange();
 
@@ -376,7 +380,8 @@ function saveCookie() {
    cookieobj.numpoe = document.getElementsByName('poecount')[0].value;
 
    cookieobj.cowShuff = document.getElementsByName('Cowsanity')[0].checked ? 1 : 0;
-
+   cookieobj.frogShuff = document.getElementsByName('Frogsanity')[0].checked ? 1 : 0;
+    
    cookieobj.chulogic = document.getElementsByName('BombchuLogic')[0].checked ? 1 : 0;
    cookieobj.medi = document.getElementsByName('Medigoron')[0].checked ? 1 : 0;
    cookieobj.ladin = document.getElementsByName('Aladdin')[0].checked ? 1 : 0;
@@ -744,6 +749,8 @@ function clickDungeon(d) {
         if (dungeons[dungeonSelect].chestlist[key].type == "shop" && shopsize == 0) { //Shops 
             continue;}
         if (dungeons[dungeonSelect].chestlist[key].type == "cow" && Cowsanity == false) { //Cows
+            continue;}
+        if (dungeons[dungeonSelect].chestlist[key].type == "frog" && Frogsanity == false) { //Cows
             continue;}
         if ( dungeons[dungeonSelect] == dungeons[0] && dungeons[dungeonSelect].chestlist[key].type == "ksword" && Ksword == false ) { //kokiri shuffle
             continue;}
@@ -3277,7 +3284,13 @@ function setCows(sender) {
    Cowsanity = sender.checked;
    updateMap();
 
-   //if (IndoorER !== "Off") drawIndoorChecks();
+   saveCookie();
+}
+
+function setFrogs(sender) {
+   Frogsanity = sender.checked;
+   updateMap();
+
    saveCookie();
 }
 
@@ -3880,6 +3893,8 @@ function updateMap() {
                 continue;}
             if (dungeons[k].chestlist[key].type == "cow" && Cowsanity == false) { //Cows
                 continue;}
+            if (dungeons[k].chestlist[key].type == "frog" && Frogsanity == false) { //Cows
+                continue;}
             if ( dungeons[k] == dungeons[0] && dungeons[k].chestlist[key].type == "ksword" && Ksword == false ) { //kokiri shuffle
                 continue;}
             if ( dungeons[k] == dungeons[20] && dungeons[k].chestlist[key].type == "bean" && BeanShuffle == false ) { //Bean shuffle
@@ -4096,6 +4111,8 @@ function populateMapdiv() {
                 continue;}
             if (dungeons[k].chestlist[key].type == "cow" && Cowsanity == false) { //Cows
                 continue;}
+            if (dungeons[k].chestlist[key].type == "frog" && Frogsanity == false) { //Cows
+                continue;}
             if ( dungeons[k] == dungeons[0] && dungeons[k].chestlist[key].type == "ksword" && Ksword == false ) { //kokiri shuffle
                 continue;}
             if ( dungeons[k] == dungeons[20] && dungeons[k].chestlist[key].type == "bean" && BeanShuffle == false ) { //Bean shuffle
@@ -4205,6 +4222,8 @@ function populateMapdiv() {
         if (dungeons[dungeonSelect].chestlist[key].type == "shop" && shopsize == 0) { //Shops 
             continue;}
         if (dungeons[dungeonSelect].chestlist[key].type == "cow" && Cowsanity == false) { //Cows
+            continue;}
+        if (dungeons[dungeonSelect].chestlist[key].type == "frog" && Frogsanity == false) { //Cows
             continue;}
         if ( dungeons[dungeonSelect] == dungeons[0] && dungeons[dungeonSelect].chestlist[key].type == "ksword" && Ksword == false ) { //kokiri shuffle
             continue;}
