@@ -48,6 +48,8 @@ function generalCanGetChest(chestlist) {
          continue;}
       if (chestlist[key].type == "cow" && Cowsanity == false) { //Cows
          continue;}
+      if (chestlist[key].type == "frog" && Frogsanity == false) { //frogs
+         continue;}
       if ( chestlist[key].type == "ksword" && Ksword == false ) { //kokiri shuffle
          continue;}
       if ( chestlist[key].type == "bean" && BeanShuffle == false ) { //Bean shuffle
