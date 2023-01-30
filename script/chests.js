@@ -2695,7 +2695,7 @@ var dungeons = [
          }, 'Skulltula House 30': { x: "42%", y: "71.5%", leadsto: "unknown", type: "NPC", access: "simple",
             isAvailable: function () {
                return dungeons[16].found == true && items.Skulltula >= 30 ; }
-         }, 'Skulltula House 40': { x: "45%", y: "73%", leadsto: "unknown", type: "NPC", access: "simple", type: "indoor",
+         }, 'Skulltula House 40': { x: "45%", y: "73%", leadsto: "unknown", type: "NPC", access: "simple",
             isAvailable: function () {
                return dungeons[16].found == true && items.Skulltula >= 40 ; }
          }, 'Skulltula House 50': { x: "45%", y: "69%", leadsto: "unknown", type: "NPC", access: "simple",
