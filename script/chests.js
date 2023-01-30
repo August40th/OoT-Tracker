@@ -3095,43 +3095,43 @@ var dungeons = [
                return dungeons[20].found == true && 
                   (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale || OWERmap ) &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); }
-         }, 'Lullaby Frog': { x: "41%", y: "20%", leadsto: "unknown", type: "frog", access: "outdoor",
+         }, 'Lullaby Frog': { x: "44%", y: "18%", leadsto: "unknown", type: "frog", access: "outdoor",
             isAvailable: function () {
                return dungeons[20].found == true && 
                   (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale || OWERmap ) &&
                   items.Ocarina && items.ZeldasLullaby &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); }
-         }, 'Epona\'s Frog': { x: "44%", y: "20%", leadsto: "unknown", type: "frog", access: "outdoor",
+         }, 'Epona\'s Frog': { x: "47%", y: "18%", leadsto: "unknown", type: "frog", access: "outdoor",
             isAvailable: function () {
                return dungeons[20].found == true && 
                   (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale || OWERmap ) &&
                   items.Ocarina && items.EponasSong &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); }
-         }, 'Saria\'s Frog': { x: "47%", y: "20%", leadsto: "unknown", type: "frog", access: "outdoor",
+         }, 'Saria\'s Frog': { x: "50%", y: "18%", leadsto: "unknown", type: "frog", access: "outdoor",
             isAvailable: function () {
                return dungeons[20].found == true && 
                   (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale || OWERmap ) &&
                   items.Ocarina && items.SariasSong &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); }
-         }, 'Sun\'s Frog': { x: "50%", y: "20%", leadsto: "unknown", type: "frog", access: "outdoor",
+         }, 'Sun\'s Frog': { x: "53%", y: "18%", leadsto: "unknown", type: "frog", access: "outdoor",
             isAvailable: function () {
                return dungeons[20].found == true && 
                   (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale || OWERmap ) &&
                   items.Ocarina && items.SunsSong &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); }
-         }, 'Frogs of Time': { x: "48%", y: "16%", leadsto: "unknown", type: "frog", access: "outdoor",
+         }, 'Frogs of Time': { x: "50%", y: "14%", leadsto: "unknown", type: "frog", access: "outdoor",
             isAvailable: function () {
                return dungeons[20].found == true && 
                   (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale || OWERmap ) &&
                   items.Ocarina && items.SongofTime &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); }
-         }, 'Frogs in the Rain': { x: "45%", y: "16%", leadsto: "unknown", type: "NPC", access: "outdoor",
+         }, 'Frogs in the Rain': { x: "47%", y: "14%", leadsto: "unknown", type: "NPC", access: "outdoor",
             isAvailable: function () {
                return dungeons[20].found == true && 
                   (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale || OWERmap ) &&
                   items.Ocarina && items.SongofStorms &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); }
-         }, 'Frogs Mini Game': { x: "42%", y: "16%", leadsto: "unknown", type: "NPC", access: "outdoor",
+         }, 'Frogs Mini Game': { x: "44%", y: "14%", leadsto: "unknown", type: "NPC", access: "outdoor",
             isAvailable: function () {
                return dungeons[20].found == true && 
                   (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale || OWERmap ) &&
@@ -3862,7 +3862,7 @@ var dungeons = [
          }, 'Diving in the Lab': { x: "22%", y: "41%", leadsto: "unknown", type: "NPC", access: "simple",
             isAvailable: function () {
                return (OWERmap == false || dungeons[26].found == true) &&
-                  ( ( (items.IronBoots || items.Scale >= 2) && 
+                  ( ( ((items.IronBoots && items.Hookshot) || items.Scale >= 2) && 
                      (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) )
                    || (items.Scale >= 2 && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) ) ); }
          }, 'Lab Roof Freestanding': { x: "24.5%", y: "43%", leadsto: "unknown", type: "freestanding", access: "outdoor",
