@@ -561,7 +561,6 @@ function toggleMarkDungeon(x) {
 function clickDungeon(d) {
     dungeonSelect = d;
     const colours = ['red', 'yellow', 'cyan', 'orange', 'purple', 'green', 'brown', 'white'];
-    var Cs = 0;
     
     document.getElementById('submaparea').innerHTML = dungeons[dungeonSelect].name;
     document.getElementById('submaparea').className = 'DC' + dungeons[dungeonSelect].isBeatable();
