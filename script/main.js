@@ -560,7 +560,6 @@ function toggleMarkDungeon(x) {
 
 function clickDungeon(d) {
     dungeonSelect = d;
-    const colours = ["red", "yellow", "cyan", "orange", "purple", "green", "brown", "white"];
     
     document.getElementById('submaparea').innerHTML = dungeons[dungeonSelect].name;
     document.getElementById('submaparea').className = 'DC' + dungeons[dungeonSelect].isBeatable();
@@ -652,7 +651,27 @@ function clickDungeon(d) {
                         l.style.transform = 'rotate('+ findAngle(x1, y1, x2, y2 ) + 'deg)';
                         l.style.position = 'absolute';
                         l.style.whiteSpace = 'nowrap';
-                        l.style.backgroundColor = colours[Cs];
+                        if (Cs == 0){
+                            l.style.backgroundColor = "red";
+                        }
+                        else if (Cs == 1){
+                            l.style.backgroundColor = "yellow";
+                        }
+                        else if (Cs == 2){
+                            l.style.backgroundColor = "cyan";
+                        }
+                        else if (Cs == 3){
+                            l.style.backgroundColor = "orange";
+                        }
+                        else if (Cs == 4){
+                            l.style.backgroundColor = "green";
+                        }
+                        else if (Cs == 5){
+                            l.style.backgroundColor = "blue";
+                        }
+                        else{
+                            l.style.backgroundColor = "white";
+                        }
                         l.style.left = x1+"px";
                         l.style.top = y1+"px";
 
@@ -704,7 +723,27 @@ function clickDungeon(d) {
                                             j.style.transform = 'rotate('+ findAngle(x1, y1, x2, y2 ) + 'deg)';
                                             j.style.position = 'absolute';
                                             j.style.whiteSpace = 'nowrap';
-                                            j.style.backgroundColor = colours[Cs];
+                                            if (Cs == 0){
+                                                j.style.backgroundColor = "red";
+                                            }
+                                            else if (Cs == 1){
+                                                j.style.backgroundColor = "yellow";
+                                            }
+                                            else if (Cs == 2){
+                                                j.style.backgroundColor = "cyan";
+                                            }
+                                            else if (Cs == 3){
+                                                j.style.backgroundColor = "orange";
+                                            }
+                                            else if (Cs == 4){
+                                                j.style.backgroundColor = "green";
+                                            }
+                                            else if (Cs == 5){
+                                                j.style.backgroundColor = "blue";
+                                            }
+                                            else{
+                                                j.style.backgroundColor = "white";
+                                            }
                                             j.style.left = x1+"px";
                                             j.style.top = y1+"px";
                                             document.getElementById('mapdiv').appendChild(j); 
