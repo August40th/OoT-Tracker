@@ -470,6 +470,11 @@ function saveCookie() {
          cookieobj.age = rbutton.value;
    }
 
+    //cookieobj.medallions = JSON.parse(JSON.stringify(medallions));
+    //cookieobj.items = JSON.parse(JSON.stringify(itemLayout));
+    //cookieobj.obtainedItems = JSON.parse(JSON.stringify(items));
+    //cookieobj.dungeonChests = JSON.parse(JSON.stringify(serializeDungeonChests()));
+
     setCookie(cookieobj);
 
     cookielock = false;
@@ -536,7 +541,7 @@ function toggleMarkDungeon(x) {
 
 function clickDungeon(d) {
     dungeonSelect = d;
-    
+
     document.getElementById('submaparea').innerHTML = dungeons[dungeonSelect].name;
     document.getElementById('submaparea').className = 'DC' + dungeons[dungeonSelect].isBeatable();
     var DClist = document.getElementById('submaplist');
@@ -609,7 +614,7 @@ function clickDungeon(d) {
             ) ) {
             for ( var v = 0; v < dungeons.length; v++) {
                 if (v == dungeonSelect) continue;
-                for (var ent in dungeons[v].chestlist, Cs=0, Cs++) {
+                for (var ent in dungeons[v].chestlist) {
                     if (dungeons[v].chestlist[ent].leadsto !== "unknown" && (dungeons[dungeonSelect].chestlist[key].leadsto == ent || dungeons[dungeonSelect].chestlist[key].leadsto == dungeons[v].name + ' ' + ent || dungeons[dungeonSelect].chestlist[key].leadsto == dungeons[v].name + ' Dungeon Door' || dungeons[dungeonSelect].chestlist[key].leadsto == dungeons[v].name) ) {
                         let mapDivWidth = 828;
                         let mapDivHeight = 420;
@@ -627,27 +632,7 @@ function clickDungeon(d) {
                         l.style.transform = 'rotate('+ findAngle(x1, y1, x2, y2 ) + 'deg)';
                         l.style.position = 'absolute';
                         l.style.whiteSpace = 'nowrap';
-                        if (Cs == 0){
-                            l.style.backgroundColor = "red";
-                        }
-                        else if (Cs == 1){
-                            l.style.backgroundColor = "yellow";
-                        }
-                        else if (Cs == 2){
-                            l.style.backgroundColor = "cyan";
-                        }
-                        else if (Cs == 3){
-                            l.style.backgroundColor = "orange";
-                        }
-                        else if (Cs == 4){
-                            l.style.backgroundColor = "green";
-                        }
-                        else if (Cs == 5){
-                            l.style.backgroundColor = "blue";
-                        }
-                        else{
-                            l.style.backgroundColor = "white";
-                        }
+                        l.style.backgroundColor = 'red';
                         l.style.left = x1+"px";
                         l.style.top = y1+"px";
 
@@ -682,7 +667,7 @@ function clickDungeon(d) {
                             if (u == dungeonSelect || u == v) continue;
                             for (var nxt in dungeons[u].chestlist) {
                                 if (dungeons[v].chestlist[ent].leadsto == nxt || dungeons[v].chestlist[ent].leadsto == dungeons[u].name + ' ' + nxt || dungeons[v].chestlist[ent].leadsto == dungeons[u].name + ' Dungeon Door' || dungeons[v].chestlist[ent].leadsto == dungeons[u].name) {
-                                    for (var o in dungeons[v].chestlist, Cs=0, Cs++) {
+                                    for (var o in dungeons[v].chestlist) {
                                         if (dungeons[u].chestlist[nxt].leadsto !== "unknown" && (dungeons[dungeonSelect].chestlist[key].leadsto == o || dungeons[dungeonSelect].chestlist[key].leadsto == dungeons[v].name + ' ' + o || dungeons[dungeonSelect].chestlist[key].leadsto == dungeons[v].name + ' Dungeon Door' || dungeons[dungeonSelect].chestlist[key].leadsto == ' Dungeon Door' || dungeons[dungeonSelect].chestlist[key].leadsto == dungeons[v].name) ) {
                                             let mapDivWidth = 828;
                                             let mapDivHeight = 420;
@@ -699,27 +684,7 @@ function clickDungeon(d) {
                                             j.style.transform = 'rotate('+ findAngle(x1, y1, x2, y2 ) + 'deg)';
                                             j.style.position = 'absolute';
                                             j.style.whiteSpace = 'nowrap';
-                                            if (Cs == 0){
-                                                j.style.backgroundColor = "red";
-                                            }
-                                            else if (Cs == 1){
-                                                j.style.backgroundColor = "yellow";
-                                            }
-                                            else if (Cs == 2){
-                                                j.style.backgroundColor = "cyan";
-                                            }
-                                            else if (Cs == 3){
-                                                j.style.backgroundColor = "orange";
-                                            }
-                                            else if (Cs == 4){
-                                                j.style.backgroundColor = "green";
-                                            }
-                                            else if (Cs == 5){
-                                                j.style.backgroundColor = "blue";
-                                            }
-                                            else{
-                                                j.style.backgroundColor = "white";
-                                            }
+                                            j.style.backgroundColor = 'yellow';
                                             j.style.left = x1+"px";
                                             j.style.top = y1+"px";
                                             document.getElementById('mapdiv').appendChild(j); 
