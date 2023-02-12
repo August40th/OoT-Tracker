@@ -634,7 +634,7 @@ function clickDungeon(d) {
             ) ) {
             for ( var v = 0; v < dungeons.length; v++) {
                 if (v == dungeonSelect) continue;
-                for (var ent in dungeons[v].chestlist,Cs=0, Cs++) {
+                for (var ent in dungeons[v].chestlist, var Cs=0, Cs++) {
                     if (dungeons[v].chestlist[ent].leadsto !== "unknown" && (dungeons[dungeonSelect].chestlist[key].leadsto == ent || dungeons[dungeonSelect].chestlist[key].leadsto == dungeons[v].name + ' ' + ent || dungeons[dungeonSelect].chestlist[key].leadsto == dungeons[v].name + ' Dungeon Door' || dungeons[dungeonSelect].chestlist[key].leadsto == dungeons[v].name) ) {
                         let mapDivWidth = 828;
                         let mapDivHeight = 420;
@@ -687,7 +687,7 @@ function clickDungeon(d) {
                             if (u == dungeonSelect || u == v) continue;
                             for (var nxt in dungeons[u].chestlist) {
                                 if (dungeons[v].chestlist[ent].leadsto == nxt || dungeons[v].chestlist[ent].leadsto == dungeons[u].name + ' ' + nxt || dungeons[v].chestlist[ent].leadsto == dungeons[u].name + ' Dungeon Door' || dungeons[v].chestlist[ent].leadsto == dungeons[u].name) {
-                                    for (var o in dungeons[v].chestlist,Cs=0, Cs++) {
+                                    for (var o in dungeons[v].chestlist, var Cs=0, Cs++) {
                                         if (dungeons[u].chestlist[nxt].leadsto !== "unknown" && (dungeons[dungeonSelect].chestlist[key].leadsto == o || dungeons[dungeonSelect].chestlist[key].leadsto == dungeons[v].name + ' ' + o || dungeons[dungeonSelect].chestlist[key].leadsto == dungeons[v].name + ' Dungeon Door' || dungeons[dungeonSelect].chestlist[key].leadsto == ' Dungeon Door' || dungeons[dungeonSelect].chestlist[key].leadsto == dungeons[v].name) ) {
                                             let mapDivWidth = 828;
                                             let mapDivHeight = 420;
