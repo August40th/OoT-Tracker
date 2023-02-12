@@ -560,7 +560,9 @@ function toggleMarkDungeon(x) {
 
 function clickDungeon(d) {
     dungeonSelect = d;
-
+    const colours = ['red', 'yellow', 'cyan', 'orange', 'purple', 'green', 'brown', 'white'];
+    var Cs = 0;
+    
     document.getElementById('submaparea').innerHTML = dungeons[dungeonSelect].name;
     document.getElementById('submaparea').className = 'DC' + dungeons[dungeonSelect].isBeatable();
     var DClist = document.getElementById('submaplist');
@@ -633,7 +635,7 @@ function clickDungeon(d) {
             ) ) {
             for ( var v = 0; v < dungeons.length; v++) {
                 if (v == dungeonSelect) continue;
-                for (var ent in dungeons[v].chestlist) {
+                for (var ent in dungeons[v].chestlist,Cs=0, Cs++) {
                     if (dungeons[v].chestlist[ent].leadsto !== "unknown" && (dungeons[dungeonSelect].chestlist[key].leadsto == ent || dungeons[dungeonSelect].chestlist[key].leadsto == dungeons[v].name + ' ' + ent || dungeons[dungeonSelect].chestlist[key].leadsto == dungeons[v].name + ' Dungeon Door' || dungeons[dungeonSelect].chestlist[key].leadsto == dungeons[v].name) ) {
                         let mapDivWidth = 828;
                         let mapDivHeight = 420;
@@ -651,7 +653,7 @@ function clickDungeon(d) {
                         l.style.transform = 'rotate('+ findAngle(x1, y1, x2, y2 ) + 'deg)';
                         l.style.position = 'absolute';
                         l.style.whiteSpace = 'nowrap';
-                        l.style.backgroundColor = 'red';
+                        l.style.backgroundColor = colours[Cs];
                         l.style.left = x1+"px";
                         l.style.top = y1+"px";
 
@@ -686,7 +688,7 @@ function clickDungeon(d) {
                             if (u == dungeonSelect || u == v) continue;
                             for (var nxt in dungeons[u].chestlist) {
                                 if (dungeons[v].chestlist[ent].leadsto == nxt || dungeons[v].chestlist[ent].leadsto == dungeons[u].name + ' ' + nxt || dungeons[v].chestlist[ent].leadsto == dungeons[u].name + ' Dungeon Door' || dungeons[v].chestlist[ent].leadsto == dungeons[u].name) {
-                                    for (var o in dungeons[v].chestlist) {
+                                    for (var o in dungeons[v].chestlist,Cs=0, Cs++) {
                                         if (dungeons[u].chestlist[nxt].leadsto !== "unknown" && (dungeons[dungeonSelect].chestlist[key].leadsto == o || dungeons[dungeonSelect].chestlist[key].leadsto == dungeons[v].name + ' ' + o || dungeons[dungeonSelect].chestlist[key].leadsto == dungeons[v].name + ' Dungeon Door' || dungeons[dungeonSelect].chestlist[key].leadsto == ' Dungeon Door' || dungeons[dungeonSelect].chestlist[key].leadsto == dungeons[v].name) ) {
                                             let mapDivWidth = 828;
                                             let mapDivHeight = 420;
@@ -703,7 +705,7 @@ function clickDungeon(d) {
                                             j.style.transform = 'rotate('+ findAngle(x1, y1, x2, y2 ) + 'deg)';
                                             j.style.position = 'absolute';
                                             j.style.whiteSpace = 'nowrap';
-                                            j.style.backgroundColor = 'yellow';
+                                            j.style.backgroundColor = colours[Cs];
                                             j.style.left = x1+"px";
                                             j.style.top = y1+"px";
                                             document.getElementById('mapdiv').appendChild(j); 
