@@ -472,9 +472,28 @@ function saveCookie() {
 
     //cookieobj.medallions = JSON.parse(JSON.stringify(medallions));
     //cookieobj.items = JSON.parse(JSON.stringify(itemLayout));
-    //cookieobj.obtainedItems = JSON.parse(JSON.stringify(items));
-    //cookieobj.dungeonChests = JSON.parse(JSON.stringify(serializeDungeonChests()));
+    const items = JSON.parse(cookie);
 
+  // Iterate over each item in the object
+  for (const item in items) {
+    // Get the value of the item
+    const value = items[item];
+
+    // Save the value as a string 'true' or 'false' in the cookie
+    document.cookie = `${item}=${value}; expires=Thu, 18 Dec 2023 12:00:00 UTC; path=/;`;
+  }
+const OpenedChests = JSON.parse(cookie);
+
+  // Iterate over each DungeonChest in the object
+  for (const dungeonChest in OpenedChests.DungeonChests) {
+    // Get the isOpened value of the DungeonChest
+    const isOpened = OpenedChests.DungeonChests[dungeonChest].isOpened;
+
+    // Save the isOpened value as a string 'true' or 'false' in the cookie
+    document.cookie = `DungeonChests.${dungeonChest}.isOpened=${isOpened}; expires=Thu, 18 Dec 2023 12:00:00 UTC; path=/;`;
+  }
+
+    saveDungeonChestsCookie(DungeonChests);
     setCookie(cookieobj);
 
     cookielock = false;
