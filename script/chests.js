@@ -170,7 +170,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[0].found == true &&
                   items.Ocarina && items.SongofStorms; }
-         }, 'Forest to Woods': { x: "17%", y: "19.5%", leadsto: "unknown", type: "entrance", access: "entrance",
+         }, 'Forest to Woods': { x: "19%", y: "19.5%", leadsto: "unknown", type: "entrance", access: "entrance",
           isAvailable: function () {
                return dungeons[0].found == true ; }
        }, 'Left of Deku Tree Gossip': { x: "73%", y: "8%", leadsto: "unknown", type: "gossip", access: "outdoor",
@@ -4021,7 +4021,7 @@ var dungeons = [
          }, 'Valley to Fortress': { x: "02%", y: "27%", leadsto: "unknown", type: "entrance", access: "entrance",
              isAvailable: function () {
                   return dungeons[27].found == true; }
-         }, 'Valley to Lake': { x: "99%", y: "50%", leadsto: "Lake from Valley", type: "entrance", access: "entrance",
+         }, 'Valley to Lake': { x: "50%", y: "99%", leadsto: "Lake from Valley", type: "entrance", access: "entrance",
          isAvailable: function () {
             return true ; }
          }, 
