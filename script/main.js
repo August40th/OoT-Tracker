@@ -2829,7 +2829,7 @@ function toggleDungeonChest(sender, d, c) {
             f4.onclick = function (openarea) {
                 l.innerHTML = '';
                 for ( var k = 0; k < 35; k++) {
-                    if (k >= 0 && k <= 12 ) continue;
+                    if (k > 0 && k <= 12 ) continue;
                     printdun = false;
                     for (var key in dungeons[k].chestlist) {
                         if (dungeons[k].chestlist[key].leadsto == "unknown" && 
