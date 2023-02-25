@@ -4021,7 +4021,7 @@ var dungeons = [
          }, 'Valley to Fortress': { x: "02%", y: "27%", leadsto: "unknown", type: "entrance", access: "entrance",
              isAvailable: function () {
                   return dungeons[27].found == true; }
-         }, 'Valley to Lake': { x: "50%", y: "99%", leadsto: "Lake from Valley", type: "entrance", access: "entrance",
+         }, 'Valley to Lake': { x: "60%", y: "95%", leadsto: "Lake from Valley", type: "entrance", access: "entrance",
          isAvailable: function () {
             return true ; }
          }, 
