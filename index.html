@@ -76,12 +76,15 @@
                         </fieldset>
                         <fieldset> <Legend>Ganon's Castle</legend>
                         <legend>Rainbow Bridge</legend> 
-                            <center><input type='radio' name='rainbowbridge' value='Open' checked='true' onclick="setRainbow(this)">Open
-                            <input type='radio' name='rainbowbridge' value='Vanilla' onclick="setRainbow(this)">Vanilla
-                            <input type='radio' name='rainbowbridge' value='Skulltulas' onclick="setRainbow(this)">Skulltulas <br>
-                            <input type='radio' name='rainbowbridge' value='Stones' onclick="setRainbow(this)">Spiritual Stones
-                            <input type='radio' name='rainbowbridge' value='Medallions' onclick="setRainbow(this)">Medallions
-                            <input type='radio' name='rainbowbridge' value='Dungeons' onclick="setRainbow(this)">Dungeons
+                            <center>
+                                <select name="rainbowbridge" onchange="setRainbow(this.value)">
+                                    <option value="Open" selected="true">Open</option>
+                                    <option value="Vanilla">Vanilla</option>
+                                    <option value="Skulltulas">Skulltulas</option>
+                                    <option value="Stones">Spiritual Stones</option>
+                                    <option value="Medallions">Medallions</option>
+                                    <option value="Dungeons">Dungeons</option>
+                            </select>
                         </center> 
                         <hr>
                         <legend>Castle Trials: 0 <input type="range" name='trialsize' value='0' max='6' min='0' onchange="setTrialSize(this)">
