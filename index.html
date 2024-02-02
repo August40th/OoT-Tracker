@@ -48,13 +48,16 @@
                                 <center> <input type='checkbox' name='OpenDeku' checked='true' onchange="setTree(this)">Open Deku Tree
                                 <input type='checkbox' name='OpenDoor' checked='true' onchange="setDoor(this)">Open Door of Time <br>
                                 <input type='checkbox' name='OpenFountain' checked='false' onchange="setFountain(this)">Open Zora Fountain
-                        <legend>Big Poes: 1 <input type="range" name='poecount' value='1' max='10' min='1' onchange="setPoes(this)">
-                        <span id='poecount'> 10 </span> </legend>
+                        <legend>Big Poes: <input type="range" name='poecount' value='1' max='10' min='1' onchange="setPoes(this)">
+                        <span id='poecount'>10 </span> </legend>
                         <hr>
                         <legend> Quest 
-                        <input type='radio' name='quest' value='Vanilla' checked='true' onclick="setQuest(this)">Vanilla 
-                        <input type='radio' name='quest' value='Master' onclick="setQuest(this)">Master 
-                        <input type='radio' name='quest' value='Mixed' onclick="setQuest(this)">Mixed </legend>
+                            <select name='quest' onchange="setQuest(this.value)">
+                                <option value='Vamilla'>Vamilla</option>
+                                <option value='Master'>Master</option>
+                                <option value='Mixed'>Mixed</option>
+                            </select>
+                        </legend>
                         </center> </fieldset>
                         <fieldset>
                             <legend>Fortress Logic</legend>
@@ -76,19 +79,17 @@
                         </fieldset>
                         <fieldset> <Legend>Ganon's Castle</legend>
                         <legend>Rainbow Bridge</legend> 
-                            <center>
-                                <select name='rainbowbridge' onchange="setRainbow(this.value)">
-                                    <option value='Open'>Open</option>
-                                    <option value='Vanilla'>Vanilla</option>
-                                    <option value='Skulltulas'>Skulltulas</option>
-                                    <option value='Stones'>Spiritual Stones</option>
-                                    <option value='Medallions'>Medallions</option>
-                                    <option value='Dungeons'>Dungeons</option>
-                                </select>
-                        </center> 
+                            <select name='rainbowbridge' onchange="setRainbow(this.value)">
+                                <option value='Open'>Open</option>
+                                <option value='Vanilla'>Vanilla</option>
+                                <option value='Skulltulas'>Skulltulas</option>
+                                <option value='Stones'>Spiritual Stones</option>
+                                <option value='Medallions'>Medallions</option>
+                                <option value='Dungeons'>Dungeons</option>
+                            </select>
                         <hr>
                         <legend>Castle Trials: 0 <input type="range" name='trialsize' value='0' max='6' min='0' onchange="setTrialSize(this)">
-                        <span id='trialsize'> 6 </span> </legend> 
+                        <span id='trialsize'> trialsize.value </span> </legend> 
                         <hr>
                         <legend>Ganon's Boss Key 
                             <input type='radio' name='castlelogic' value='Removed' onclick="setCastle(this)">Removed 
