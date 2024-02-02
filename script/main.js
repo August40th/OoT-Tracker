@@ -35,7 +35,7 @@ var checkhas = ['Hookshot0', 'Slingshot0'];
 var questdungeons = [];
 var questimg = ['', 'MQ'];
 
-rainbowbridge = 'Open';
+rainbowbridge = 'Medallions';
 castlelogic = 'Removed';
 trialsize = 0;
 prizesize = 0;
