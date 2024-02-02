@@ -2999,7 +2999,7 @@ function unhighlightDungeonChest(x) {
 }
 
 function setRainbow(sender) {
-   rainbowbridge = sender.value;
+   rainbowbridge = sender;
    updateMap();
    saveCookie();
 }
