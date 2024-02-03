@@ -1109,7 +1109,7 @@ function toggleDungeonChest(sender, d, c) {
                 clickDungeon(d); 
                 PotShopB++;}
             l.appendChild(e5); 
-        } if (Shop < 8) {
+        } if (Shop < 7) {
             e6.innerHTML = 'Shop';
             e6.onmouseover = new Function('highlightDungeonChest(this)');
             e6.onmouseout = new Function('unhighlightDungeonChest(this)');
@@ -1760,7 +1760,7 @@ function toggleDungeonChest(sender, d, c) {
                             clickDungeon(d); 
                             PotShopB++;}
                         l.appendChild(e5); 
-                    } if (Shop < 8) {
+                    } if (Shop < 7) {
                         e6.innerHTML = 'Shop';
                         e6.onmouseover = new Function('highlightDungeonChest(this)');
                         e6.onmouseout = new Function('unhighlightDungeonChest(this)');
@@ -2361,7 +2361,7 @@ function toggleDungeonChest(sender, d, c) {
                         clickDungeon(d); 
                         PotShopB++;}
                     l.appendChild(e5); 
-                } if (Shop < 8) {
+                } if (Shop < 7) {
                     e6.innerHTML = 'Shop';
                     e6.onmouseover = new Function('highlightDungeonChest(this)');
                     e6.onmouseout = new Function('unhighlightDungeonChest(this)');
@@ -3005,7 +3005,7 @@ function setRainbow(sender) {
 }
 
 function setCastle(sender) {
-   castlelogic = sender.value;
+   castlelogic = sender;
    if (castlelogic == 'Removed')
       itemsMin.BossCastle = 1;
    else itemsMin.BossCastle = 0;
@@ -3037,7 +3037,7 @@ function setprizesize(sender) {
 }
 
 function setQuest(sender) {
-    quest = sender.value;
+    quest = sender;
    if (quest == 'Master') {
       questimg = 1;
       itemsMax.ForestKey = 6;
@@ -3097,13 +3097,13 @@ function setPoes(sender) {
 }
 
 function setFortKeys(sender) {
-    fortkeys = sender.value;
+    fortkeys = sender;
     updateGridItemAll();
    saveCookie();
 }
 
 function setFortressLogic(sender) {
-   gerudobridge = sender.value;
+   gerudobridge = sender;
    if (gerudobridge == 'Start') {
       items.Membership = true;
    }
@@ -3115,7 +3115,7 @@ function setFortressLogic(sender) {
 }
 
 function setCarpenter(sender) {
-   carpenters = sender.value;
+   carpenters = sender;
 
    updateGridItemAll();
    updateMap();
@@ -4331,7 +4331,7 @@ function isBridgeOpen() {
 
 function isFortressOpen() {
    switch (gerudobridge) {
-      case "Default":
+      case "Vanilla":
          return items.Membership;
       case "Shuffle":
          return items.Membership;
