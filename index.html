@@ -45,7 +45,7 @@
                     </fieldset>    
                     <fieldset> 
                         <legend>World</legend>
-                                <center> <input type='checkbox' name='OpenDeku' checked='true' onchange="setTree(this)">Open Deku Tree
+                                <input type='checkbox' name='OpenDeku' checked='true' onchange="setTree(this)">Open Deku Tree
                                 <input type='checkbox' name='OpenDoor' checked='true' onchange="setDoor(this)">Open Door of Time <br>
                                 <input type='checkbox' name='OpenFountain' checked='false' onchange="setFountain(this)">Open Zora Fountain
                         <legend>Big Poes: <input type="range" name='poecount' value='1' max='10' min='1' onchange="setPoes(this)">
@@ -58,24 +58,30 @@
                                 <option value='Mixed'>Mixed</option>
                             </select>
                         </legend>
-                        </center> </fieldset>
+                    </fieldset>
                         <fieldset>
                             <legend>Fortress Logic</legend>
                                 Fort Keys: 
-                                    <input type='radio' name='fortkeys' value='Fight' checked='true' onclick="setFortKeys(this)">Guard Fight
-                                    <input type='radio' name='fortkeys' value='Overworld' checked='true' onclick="setFortKeys(this)">Overworld<br>
-                                    <center><input type='radio' name='fortkeys' value='Dungeons' checked='true' onclick="setFortKeys(this)">Dungeons
-                                    <input type='radio' name='fortkeys' value='Keysanity' checked='true' onclick="setFortKeys(this)">Keysanity<br>
+                                    <select name='fortkeys' onchange="setFortKeys(this.value)">
+                                        <option value='Fight'>Guard Fight</option>
+                                        <option value='Region'>Regional</option>
+                                        <option value='OverWorld'>OverWorld</option>
+                                        <option value='Dungeons'>Dungeons</option>
+                                        <option value='Keysanity'>Anywhere</option><br>
+                                    </select>
                                 <hr>
                                  Carpenters: 
-                                    <input type='radio' name='carpenters' value='4' onchange="setCarpenter(this)">All 4
-                                    <input type='radio' name='carpenters' value='1' onchange="setCarpenter(this)">Just 1                          
-                                    </center>
-                                <hr>
+                                    <select name='carpenters' onchange="setCarpenter(this.value)">
+                                        <option value=4>All 4</option>
+                                        <option value=1>Just 1</option>
+                                        <option value=0>None</option>
+                                    </select>
                                 Membership:
-                                    <input type='radio' name='gerudobridge' value='Vanilla' onclick="setFortressLogic(this)">Vanilla
-                                    <input type='radio' name='gerudobridge' value='Shuffle' onclick="setFortressLogic(this)">Shuffle
-                                    <input type='radio' name='gerudobridge' value='Start' onclick="setFortressLogic(this)">Start with<br>
+                                    <select name='gerudobridge' onchange="setFortressLogic(this.value)">
+                                        <option value='Vanilla'>Vanilla</option>
+                                        <option value='Shuffle'>Shuffle</option>
+                                        <option value='Start'>Start With</option>
+                                    </select><br>
                         </fieldset>
                         <fieldset> <Legend>Ganon's Castle</legend>
                         <legend>Rainbow Bridge</legend> 
@@ -92,15 +98,22 @@
                         <span id='trialsize'>6</span> </legend> 
                         <hr>
                         <legend>Ganon's Boss Key 
-                            <input type='radio' name='castlelogic' value='Removed' onclick="setCastle(this)">Removed 
-                            <input type='radio' name='castlelogic' value='Vanilla' onclick="setCastle(this)">Vanilla</legend>
-                            <center><input type='radio' name='castlelogic' value='Castle' onclick="setCastle(this)">Ganons Castle
-                            <input type='radio' name='castlelogic' value='Anywhere' onclick="setCastle(this)">Anywhere<br>
-                            <input type='radio' name='castlelogic' value='LACSVan' onclick="setCastle(this)">LACS Vanilla
-                            <input type='radio' name='castlelogic' value='LACSStones' onclick="setCastle(this)">LACS Stones<br>
-                            <input type='radio' name='castlelogic' value='LACSMeds' onclick="setCastle(this)">LACS Medallions
-                            <input type='radio' name='castlelogic' value='LACSAD' onclick="setCastle(this)">LACS All Dungeons
-                        </center> </fieldset>
+                            <select name='castlelogic' onchange="setCastle(this.value)">
+                                <option value='Removed'>Removed</option>
+                                <option value='Vanilla'>Vanilla</option>
+                                <option value='Castle'>Castle</option>
+                                <option value='Region'>Regional</option>
+                                <option value='Overworld'>OverWorld</option>
+                                <option value='Dungeons'>Dungeons</option>
+                                <option value='Anywhere'>Anywhere</option>
+                                <option value='LACSVan'>LACS Vanilla</option>
+                                <option value='LACSStones'>LACS Stones</option>
+                                <option value='LACSMeds'>LACS Meds</option>
+                                <option value='LACSDun'>LACS Dungeons</option>                                
+                                <option value='Skulltulas'>LACS Skulls</option>
+                                <option value='Hearts'>LACS Hearts</option>
+                            </select>
+                        </fieldset>
                 </div>
                 <div class="column">
                 <fieldset>
