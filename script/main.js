@@ -41,7 +41,7 @@ trialsize = 0;
 prizesize = 0;
 maxprize = 0;
 
-gerudobridge = 'Default';
+gerudobridge = 'Vanilla';
 fortkeys = 'Fight';
 carpenters = 1;
 smallkeys = 'Dungeons';
