@@ -276,60 +276,67 @@ function loadCookie() {
          rbutton.click();
    }
 
-   for (rbuttonID in document.getElementsByName('carpenters')) {
-      rbutton = document.getElementsByName('carpenters')[rbuttonID]
-      if (rbutton.value == cookieobj.carp)
-         rbutton.click();
-   }
-
-    for (rbuttonID in document.getElementsByName('fortkeys')) {
-      rbutton = document.getElementsByName('fortkeys')[rbuttonID]
-      if (rbutton.value == cookieobj.frtky)
-         rbutton.click();
-   }
+    for (var i = 0; i < document.getElementsByName('carpenters')[0].options.length; i++) {
+        if (document.getElementsByName('carpenters')[0].options[i].value === cookieobj.carp) {
+            document.getElementsByName('carpenters')[0].options[i].selected = true;
+            break;
+        }
+    }
+    
+    for (var i = 0; i < document.getElementsByName('fortkeys')[0].options.length; i++) {
+        if (document.getElementsByName('fortkeys')[0].options[i].value === cookieobj.frtky) {
+            document.getElementsByName('fortkeys')[0].options[i].selected = true;
+            break;
+        }
+    }
 
     for (var i = 0; i < document.getElementsByName('rainbowbridge')[0].options.length; i++) {
         if (document.getElementsByName('rainbowbridge')[0].options[i].value === cookieobj.rainlogic) {
             document.getElementsByName('rainbowbridge')[0].options[i].selected = true;
             break;
+        }
     }
-}
 
-   for (rbuttonID in document.getElementsByName('castlelogic')) {
-      rbutton = document.getElementsByName('castlelogic')[rbuttonID]
-      if (rbutton.value == cookieobj.pigBK)
-         rbutton.click();
-   }
+    for (var i = 0; i < document.getElementsByName('castlelogic')[0].options.length; i++) {
+        if (document.getElementsByName('castlelogic')[0].options[i].value === cookieobj.pigBK) {
+            document.getElementsByName('castlelogic')[0].options[i].selected = true;
+            break;
+        }
+    }
 
-   for (rbuttonID in document.getElementsByName('quest')) {
-      rbutton = document.getElementsByName('quest')[rbuttonID]
-      if (rbutton.value == cookieobj.qlogic)
-         rbutton.click();
-   }
+    for (var i = 0; i < document.getElementsByName('quest')[0].options.length; i++) {
+        if (document.getElementsByName('quest')[0].options[i].value === cookieobj.qlogic) {
+            document.getElementsByName('quest')[0].options[i].selected = true;
+            break;
+        }
+    }
 
-   for (rbuttonID in document.getElementsByName('gerudobridge')) {
-      rbutton = document.getElementsByName('gerudobridge')[rbuttonID]
-      if (rbutton.value == cookieobj.flogic)
-         rbutton.click();
-   }
+    for (var i = 0; i < document.getElementsByName('gerudobridge')[0].options.length; i++) {
+        if (document.getElementsByName('gerudobridge')[0].options[i].value === cookieobj.flogic) {
+            document.getElementsByName('gerudobridge')[0].options[i].selected = true;
+            break;
+        }
+    }
 
-   for (rbuttonID in document.getElementsByName('smallkeys')) {
-      rbutton = document.getElementsByName('smallkeys')[rbuttonID]
-      if (rbutton.value == cookieobj.smallk)
-         rbutton.click();
-   }
+    for (var i = 0; i < document.getElementsByName('smallkeys')[0].options.length; i++) {
+        if (document.getElementsByName('smallkeys')[0].options[i].value === cookieobj.smallk) {
+            document.getElementsByName('smallkeys')[0].options[i].selected = true;
+            break;
+        }
+    }
 
-   for (rbuttonID in document.getElementsByName('bosskeys')) {
-      rbutton = document.getElementsByName('bosskeys')[rbuttonID]
-      if (rbutton.value == cookieobj.bossk)
-         rbutton.click();
-   }
-
-   for (rbuttonID in document.getElementsByName('skulltula')) {
-      rbutton = document.getElementsByName('skulltula')[rbuttonID]
-      if (rbutton.value == cookieobj.sklogic)
-         rbutton.click();
-   }
+    for (var i = 0; i < document.getElementsByName('bosskeys')[0].options.length; i++) {
+        if (document.getElementsByName('bosskeys')[0].options[i].value === cookieobj.bossk) {
+            document.getElementsByName('bosskeys')[0].options[i].selected = true;
+            break;
+        }
+    }
+    for (var i = 0; i < document.getElementsByName('skulltula')[0].options.length; i++) {
+        if (document.getElementsByName('skulltula')[0].options[i].value === cookieobj.sklogic) {
+            document.getElementsByName('skulltula')[0].options[i].selected = true;
+            break;
+        }
+    }
 
    for (rbuttonID in document.getElementsByName('IndoorER')) {
       rbutton = document.getElementsByName('IndoorER')[rbuttonID]
@@ -342,12 +349,6 @@ function loadCookie() {
       if (rbutton.value == cookieobj.age)
          rbutton.click();
    }
-    for (rbuttonID in document.getElementsByName('rainbowbridge')) {
-        rbutton = document.getElementsByName('rainbowbridge')[rbuttonID];
-        if (rbutton.value == cookieobj.rainlogic) {
-            rbutton.click();
-        }
-    }
 
     cookielock = false;
 }
@@ -392,64 +393,47 @@ function saveCookie() {
    cookieobj.warp = document.getElementsByName('Warps')[0].checked ? 1 : 0;
    cookieobj.kswrd = document.getElementsByName('Ksword')[0].checked ? 1 : 0;
 
-   for (rbuttonID in document.getElementsByName('carpenters')) {
-      rbutton = document.getElementsByName('carpenters')[rbuttonID]
-      if (rbutton.checked)
-         cookieobj.carp = rbutton.value;
-   }
+    if (document.getElementsByName('carpenters')[0].selectedIndex !== -1) {
+        cookieobj.carp = document.getElementsByName('carpenters')[0].options[document.getElementsByName('carpenters')[0].selectedIndex].value;
+    }
 
-    for (rbuttonID in document.getElementsByName('fortkeys')) {
-      rbutton = document.getElementsByName('fortkeys')[rbuttonID]
-      if (rbutton.checked)
-         cookieobj.frtky = rbutton.value;
-   }
+    if (document.getElementsByName('fortkeys')[0].selectedIndex !== -1) {
+        cookieobj.frtky = document.getElementsByName('fortkeys')[0].options[document.getElementsByName('fortkeys')[0].selectedIndex].value;
+    }
 
     if (document.getElementsByName('rainbowbridge')[0].selectedIndex !== -1) {
         cookieobj.rainlogic = document.getElementsByName('rainbowbridge')[0].options[document.getElementsByName('rainbowbridge')[0].selectedIndex].value;
     }
 
-   for (rbuttonID in document.getElementsByName('castlelogic')) {
-      rbutton = document.getElementsByName('castlelogic')[rbuttonID]
-      if (rbutton.checked)
-         cookieobj.pigBK = rbutton.value;
-   } 
+    if (document.getElementsByName('castlelogic')[0].selectedIndex !== -1) {
+        cookieobj.pigBK = document.getElementsByName('castlelogic')[0].options[document.getElementsByName('castlelogic')[0].selectedIndex].value;
+    }
 
-   for (rbuttonID in document.getElementsByName('quest')) {
-      rbutton = document.getElementsByName('quest')[rbuttonID]
-      if (rbutton.checked)
-         cookieobj.qlogic = rbutton.value;
-   }
+    if (document.getElementsByName('quest')[0].selectedIndex !== -1) {
+        cookieobj.qlogic = document.getElementsByName('quest')[0].options[document.getElementsByName('quest')[0].selectedIndex].value;
+    }
 
-   for (rbuttonID in document.getElementsByName('gerudobridge')) {
-      rbutton = document.getElementsByName('gerudobridge')[rbuttonID]
-      if (rbutton.checked)
-         cookieobj.flogic = rbutton.value;
-   }
+    if (document.getElementsByName('gerudobridge')[0].selectedIndex !== -1) {
+        cookieobj.flogic = document.getElementsByName('gerudobridge')[0].options[document.getElementsByName('gerudobridge')[0].selectedIndex].value;
+    }
 
-   for (rbuttonID in document.getElementsByName('smallkeys')) {
-      rbutton = document.getElementsByName('smallkeys')[rbuttonID]
-      if (rbutton.checked)
-         cookieobj.smallk = rbutton.value;
-   }
+    if (document.getElementsByName('smallkeys')[0].selectedIndex !== -1) {
+        cookieobj.smallk = document.getElementsByName('smallkeys')[0].options[document.getElementsByName('smallkeys')[0].selectedIndex].value;
+    }
 
-   for (rbuttonID in document.getElementsByName('bosskeys')) {
-      rbutton = document.getElementsByName('bosskeys')[rbuttonID]
-      if (rbutton.checked)
-         cookieobj.bossk = rbutton.value;
-   }
+    if (document.getElementsByName('bosskeys')[0].selectedIndex !== -1) {
+        cookieobj.bossk = document.getElementsByName('bosskeys')[0].options[document.getElementsByName('bosskeys')[0].selectedIndex].value;
+    }
 
-   for (rbuttonID in document.getElementsByName('skulltula')) {
-      rbutton = document.getElementsByName('skulltula')[rbuttonID]
-      if (rbutton.checked)
-         cookieobj.sklogic = rbutton.value;
-   }
+    if (document.getElementsByName('skulltula')[0].selectedIndex !== -1) {
+        cookieobj.sklogic = document.getElementsByName('skulltula')[0].options[document.getElementsByName('skulltula')[0].selectedIndex].value;
+    }
     
     for (rbuttonID in document.getElementsByName('mixphoo')) {
       rbutton = document.getElementsByName('mixphoo')[rbuttonID]
       if (rbutton.checked)
          cookieobj.mixp = rbutton.value;
    }
-
 
    for (rbuttonID in document.getElementsByName('SongShuffle')) {
       rbutton = document.getElementsByName('SongShuffle')[rbuttonID]
