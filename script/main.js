@@ -307,6 +307,7 @@ function loadCookie() {
     for (var i = 0; i < document.getElementsByName('quest')[0].options.length; i++) {
         if (document.getElementsByName('quest')[0].options[i].value === cookieobj.qlogic) {
             document.getElementsByName('quest')[0].options[i].selected = true;
+            setQuest(qlogic);
             break;
         }
     }
