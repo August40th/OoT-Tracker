@@ -3135,7 +3135,7 @@ function setBossKeys(sender) {
 }
 
 function setSkulltula(sender) {
-   skulltula = sender.value;
+   skulltula = sender;
    updateMap();
    saveCookie();
 }
