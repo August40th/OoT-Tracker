@@ -45,10 +45,9 @@
                     </fieldset>    
                     <fieldset> 
                         <legend>World</legend>
-                                <input type='checkbox' name='OpenDeku' checked='true' onchange="setTree(this)">Open Deku Tree
-                                <input type='checkbox' name='OpenDoor' checked='true' onchange="setDoor(this)">Open Door of Time 
-                                <span class="slider round"></span><br>
-                                <input type='checkbox' name='OpenFountain' checked='false' onchange="setFountain(this)">Open Zora Fountain
+                                <input type='checkbox' name='OpenDeku' checked='true' onchange="setTree(this)">Open Deku Tree<br>
+                                <input type='checkbox' name='OpenDoor' checked='true' onchange="setDoor(this)">Open Door of Time <br>
+                                <input type='checkbox' name='OpenFountain' checked='false' onchange="setFountain(this)">Open Zora Fountain<br>
                         <legend>Big Poes: <input type="range" name='poecount' value='1' max='10' min='1' onchange="setPoes(this)">
                         <span id='poecount'>10 </span> </legend>
                         <hr>
@@ -76,7 +75,7 @@
                                         <option value=4>All 4</option>
                                         <option value=1>Just 1</option>
                                         <option value=0>None</option>
-                                    </select>
+                                    </select><br>
                                 Membership:
                                     <select name='gerudobridge' onchange="setFortressLogic(this.value)">
                                         <option value='Vanilla'>Vanilla</option>
@@ -129,7 +128,7 @@
                                     <option value='Overworld'>OverWorld</option>
                                     <option value='Dungeons'>Dungeons</option>
                                     <option value='Anywhere'>Anywhere</option>
-                            </select>
+                            </select><br>
                         Boss:
                             <select name='bosskeys' onchange="setBossKeys(this.value)">
                                     <option value='Removed'>Removed</option>
