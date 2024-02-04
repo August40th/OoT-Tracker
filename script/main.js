@@ -3123,28 +3123,25 @@ function setCarpenter(sender) {
 }
 
 function setSmallKeys(sender) {
-   smallkeys = sender.value;
-
+   smallkeys = sender;
    updateMap();
    saveCookie();
 }
 
 function setBossKeys(sender) {
-   bosskeys = sender.value;
+   bosskeys = sender;
    updateMap();
    saveCookie();
 }
 
 function setSkulltula(sender) {
    skulltula = sender.value;
-
    updateMap();
    saveCookie();
 }
 
 function setScrub(sender) {
    Scrubsanity = sender.checked;
-
    updateMap();
    saveCookie();
 }
@@ -4343,7 +4340,7 @@ function isFortressOpen() {
 
 function isKeysanity() {
    switch (smallkeys) {
-      case "Remove":
+      case "Removed":
          return false;
       case "Dungeons":
          return false;
