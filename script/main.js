@@ -405,7 +405,6 @@ function saveCookie() {
    }
 
     if (document.getElementsByName('rainbowbridge')[0].selectedIndex !== -1) {
-        document.getElementsByName('rainbowbridge')[0].options[dropdown.selectedIndex].value;
         cookieobj.rainlogic = document.getElementsByName('rainbowbridge')[0].options[document.getElementsByName('rainbowbridge')[0].selectedIndex].value;
     }
 
