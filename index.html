@@ -120,21 +120,26 @@
                     <legend>Sanity</legend>
                     <fieldset>
                         <legend>Dungeon Keys</legend>
-                            <input type='radio' name='smallkeys' value='Remove' onclick="setSmallKeys(this)">Keysy
-                            <input type='radio' name='smallkeys' value='Vanilla' checked='true' onclick="setSmallKeys(this)">Van. chest
-                            <input type='radio' name='smallkeys' value='Dungeon' checked='true' onclick="setSmallKeys(this)">Van. Dungon<br>
-                            <input type='radio' name='smallkeys' value='Overworld' checked='true' onclick="setSmallKeys(this)">Overworld
-                            <input type='radio' name='smallkeys' value='Dungeons' checked='true' onclick="setSmallKeys(this)">Dungeons
-                            <input type='radio' name='smallkeys' value='Keysanity' onclick="setSmallKeys(this)">KeySanity<br>
-                        <hr>
+                            <select name='smallkeys' onchange="setSmallKeys(this.value)">
+                                    <option value='Removed'>Removed</option>
+                                    <option value='Vanilla'>Vanilla</option>
+                                    <option value='Castle'>Castle</option>
+                                    <option value='Region'>Regional</option>
+                                    <option value='Overworld'>OverWorld</option>
+                                    <option value='Dungeons'>Dungeons</option>
+                                    <option value='Anywhere'>Anywhere</option>
+                            </select>
                         Boss:
-                            <input type='radio' name='bosskeys' value='Remove' onclick="setBossKeys(this)">Keysy
-                            <input type='radio' name='bosskeys' value='Vanilla' onclick="setBossKeys(this)">Vanilla
-                            <input type='radio' name='bosskeys' value='Dungon' onclick="setBossKeys(this)">Van. Dungeon<br>
-                            <input type='radio' name='bosskeys' value='Overworld' onclick="setBossKeys(this)">Overworld
-                            <input type='radio' name='bosskeys' value='Dungeons' checked='true' onclick="setBossKeys(this)">Dungeons 
-                            <input type='radio' name='bosskeys' value='Keysanity' onclick="setBossKeys(this)">KeySanity<br>
-                    </fieldset>
+                            <select name='bosskeys' onchange="setBossKeys(this.value)">
+                                    <option value='Removed'>Removed</option>
+                                    <option value='Vanilla'>Vanilla</option>
+                                    <option value='Castle'>Castle</option>
+                                    <option value='Region'>Regional</option>
+                                    <option value='Overworld'>OverWorld</option>
+                                    <option value='Dungeons'>Dungeons</option>
+                                    <option value='Anywhere'>Anywhere</option>
+                            </select>
+                        </fieldset>
                     <fieldset><legend>Critters</legend>
                         Skulltula: 
                         <input type='radio' name='skulltula' value='Off' checked='true' onclick="setSkulltula(this)">Off
