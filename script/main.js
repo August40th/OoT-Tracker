@@ -288,11 +288,12 @@ function loadCookie() {
          rbutton.click();
    }
 
-    for (rbuttonID in document.getElementsByName('rainbowbridge')) {
-      rbutton = document.getElementsByName('rainbowbridge')[rbuttonID]
-      if (rbutton.value == cookieobj.rainlogic)
-         rbutton.click();
-   }
+    for (var i = 0; i < document.getElementsByName('rainbowbridge')[0].options.length; i++) {
+        if (document.getElementsByName('rainbowbridge')[0].options[i].value === cookieobj.rainlogic) {
+            document.getElementsByName('rainbowbridge')[0].options[i].selected = true;
+            break;
+    }
+}
 
    for (rbuttonID in document.getElementsByName('castlelogic')) {
       rbutton = document.getElementsByName('castlelogic')[rbuttonID]
@@ -403,11 +404,10 @@ function saveCookie() {
          cookieobj.frtky = rbutton.value;
    }
 
-    for (rbuttonID in document.getElementsByName('rainbowbridge')) {
-      rbutton = document.getElementsByName('rainbowbridge')[rbuttonID]
-      if (rbutton.checked)
-         cookieobj.rainlogic = rbutton.value;
-   }
+    if (document.getElementsByName('rainbowbridge')[0].selectedIndex !== -1) {
+        document.getElementsByName('rainbowbridge')[0].options[dropdown.selectedIndex].value;
+        cookieobj.rainlogic = document.getElementsByName('rainbowbridge')[0].options[document.getElementsByName('rainbowbridge')[0].selectedIndex].value;
+    }
 
    for (rbuttonID in document.getElementsByName('castlelogic')) {
       rbutton = document.getElementsByName('castlelogic')[rbuttonID]
