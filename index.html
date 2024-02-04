@@ -36,7 +36,7 @@
             <div class="row">
                 <div class="column">
                     <legend>Settings <button type="button" onclick="EditMode()">Edit Mode</button> </legend>
-                    <fieldset> <center>
+                    <fieldset>
                         <legend>Items: 
                         <input type="range" name='itemdivsize' value='100' max='200' min='1' onchange="setZoom('itemdiv', this)">
                         <span id='itemdivsize'>100%</span> </legend>
@@ -145,7 +145,7 @@
                                     <option value='Dungeons'>Dungeons</option>
                                     <option value='Overworld'>Overworld</option>
                                     <option value='All'>All</option>
-                        <hr>
+                        </select><br>
                         <input type='checkbox' name='Scrubsanity' checked='false' onchange="setScrub(this)">Scrubs<br>
                         <input type='checkbox' name='Cowsanity' checked='false' onchange="setCows(this)">Cow Milk<br>
                         <input type='checkbox' name='Frogsanity' checked='false' onchange="setFrogs(this)">Frogs<br>
