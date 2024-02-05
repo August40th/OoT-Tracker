@@ -3008,6 +3008,7 @@ function setCastle(sender) {
 }
 
 function setTrialSize(sender) {
+    document.getElementById('trialsize').textContent = sender.value;
    trialsize = sender.value;
    updateMap();
    if (rainbowbridge == "Skulltulas" ) {
