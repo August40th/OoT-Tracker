@@ -51,7 +51,7 @@
                         <legend>Big Poes: <input type="range" name='poecount' value='1' max='10' min='1' onchange="setPoes(this)">
                         <span id='poecount'>10 </span> </legend>
                         <hr>
-                        <legend> Quest 
+                        <legend> Quest <br>
                             <select name='quest' onchange="setQuest(this.value)">
                                 <option value='Vanilla'>Vanilla</option>
                                 <option value='Master'>Master</option>
@@ -61,7 +61,7 @@
                     </fieldset>
                         <fieldset>
                             <legend>Fortress Logic</legend>
-                                Fort Keys: 
+                                Fort Keys: <br>
                                     <select name='fortkeys' onchange="setFortKeys(this.value)">
                                         <option value='Fight'>Guard Fight</option>
                                         <option value='Region'>Regional</option>
@@ -70,13 +70,13 @@
                                         <option value='Keysanity'>Anywhere</option><br>
                                     </select>
                                 <hr>
-                                 Carpenters: 
+                                 Carpenters: <br>
                                     <select name='carpenters' onchange="setCarpenter(this.value)">
                                         <option value=4>All 4</option>
                                         <option value=1>Just 1</option>
                                         <option value=0>None</option>
                                     </select><br>
-                                Membership:
+                                Membership:<br>
                                     <select name='gerudobridge' onchange="setFortressLogic(this.value)">
                                         <option value='Vanilla'>Vanilla</option>
                                         <option value='Shuffle'>Shuffle</option>
@@ -97,7 +97,7 @@
                         <legend>Castle Trials: 0 <input type="range" name='trialsize' value='0' max='6' min='0' onchange="setTrialSize(this)">
                         <span id='trialsize'>6</span> </legend> 
                         <hr>
-                        <legend>Ganon's Boss Key 
+                        <legend>Ganon's Boss Key <br>
                             <select name='castlelogic' onchange="setCastle(this.value)">
                                 <option value='Removed'>Removed</option>
                                 <option value='Vanilla'>Vanilla</option>
@@ -120,7 +120,8 @@
                     <legend>Sanity</legend>
                     <fieldset>
                         <legend>Dungeon Keys</legend>
-                            Small: <select name='smallkeys' onchange="setSmallKeys(this.value)">
+                            Small: <br>
+                                <select name='smallkeys' onchange="setSmallKeys(this.value)">
                                     <option value='Keysy'>Keysy</option>
                                     <option value='Vanilla'>Vanilla</option>
                                     <option value='VanDungeon'>Own Dungeon</option>
@@ -129,7 +130,8 @@
                                     <option value='Dungeons'>Any Dungeon</option>
                                     <option value='Anywhere'>Anywhere</option>
                             </select><br>
-                            Boss: <select name='bosskeys' onchange="setBossKeys(this.value)">
+                            Boss: <br>
+                                <select name='bosskeys' onchange="setBossKeys(this.value)">
                                     <option value='Keysy'>Keysy</option>
                                     <option value='Vanilla'>Vanilla</option>
                                     <option value='VanDungeon'>Own Dungeon</option>
@@ -137,14 +139,15 @@
                                     <option value='Overworld'>OverWorld</option>
                                     <option value='Dungeons'>Any Dungeon</option>
                                     <option value='Anywhere'>Anywhere</option>
-                            </select>
+                                </select>
                         </fieldset>
                     <fieldset><legend>Critters</legend>
-                        Skulltula: <select name='skulltula' onchange="setSkulltula(this.value)">
-                                    <option value='Off'>Off</option>
-                                    <option value='Dungeons'>Dungeons</option>
-                                    <option value='Overworld'>Overworld</option>
-                                    <option value='All'>All</option>
+                        Skulltula: <br>
+                            <select name='skulltula' onchange="setSkulltula(this.value)">
+                                <option value='Off'>Off</option>
+                                <option value='Dungeons'>Dungeons</option>
+                                <option value='Overworld'>Overworld</option>
+                                <option value='All'>All</option>
                         </select><br>
                         <input type='checkbox' name='Scrubsanity' checked='false' onchange="setScrub(this)">Scrubs<br>
                         <input type='checkbox' name='Cowsanity' checked='false' onchange="setCows(this)">Cow Milk<br>
