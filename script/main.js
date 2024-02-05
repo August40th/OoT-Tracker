@@ -279,6 +279,7 @@ function loadCookie() {
     for (var i = 0; i < document.getElementsByName('carpenters')[0].options.length; i++) {
         if (document.getElementsByName('carpenters')[0].options[i].value === cookieobj.carp) {
             document.getElementsByName('carpenters')[0].options[i].selected = true;
+            setCarpenter(cookieobj.carp);
             break;
         }
     }
@@ -286,6 +287,7 @@ function loadCookie() {
     for (var i = 0; i < document.getElementsByName('fortkeys')[0].options.length; i++) {
         if (document.getElementsByName('fortkeys')[0].options[i].value === cookieobj.frtky) {
             document.getElementsByName('fortkeys')[0].options[i].selected = true;
+            setFortKeys(cookieobj.frtky);
             break;
         }
     }
@@ -293,6 +295,7 @@ function loadCookie() {
     for (var i = 0; i < document.getElementsByName('rainbowbridge')[0].options.length; i++) {
         if (document.getElementsByName('rainbowbridge')[0].options[i].value === cookieobj.rainlogic) {
             document.getElementsByName('rainbowbridge')[0].options[i].selected = true;
+            setRainbow(cookieobj.rainlogic);
             break;
         }
     }
@@ -300,6 +303,7 @@ function loadCookie() {
     for (var i = 0; i < document.getElementsByName('castlelogic')[0].options.length; i++) {
         if (document.getElementsByName('castlelogic')[0].options[i].value === cookieobj.pigBK) {
             document.getElementsByName('castlelogic')[0].options[i].selected = true;
+            setCastle(cookieobj.pigBK);
             break;
         }
     }
@@ -315,6 +319,7 @@ function loadCookie() {
     for (var i = 0; i < document.getElementsByName('gerudobridge')[0].options.length; i++) {
         if (document.getElementsByName('gerudobridge')[0].options[i].value === cookieobj.flogic) {
             document.getElementsByName('gerudobridge')[0].options[i].selected = true;
+            setFortressLogic(cookieobj.flogic);
             break;
         }
     }
@@ -322,6 +327,7 @@ function loadCookie() {
     for (var i = 0; i < document.getElementsByName('smallkeys')[0].options.length; i++) {
         if (document.getElementsByName('smallkeys')[0].options[i].value === cookieobj.smallk) {
             document.getElementsByName('smallkeys')[0].options[i].selected = true;
+            setSmallKeys(cookieobj.smallk);
             break;
         }
     }
@@ -329,12 +335,14 @@ function loadCookie() {
     for (var i = 0; i < document.getElementsByName('bosskeys')[0].options.length; i++) {
         if (document.getElementsByName('bosskeys')[0].options[i].value === cookieobj.bossk) {
             document.getElementsByName('bosskeys')[0].options[i].selected = true;
+            setBossKeys(cookieobj.bossk);
             break;
         }
     }
     for (var i = 0; i < document.getElementsByName('skulltula')[0].options.length; i++) {
         if (document.getElementsByName('skulltula')[0].options[i].value === cookieobj.sklogic) {
             document.getElementsByName('skulltula')[0].options[i].selected = true;
+            setSkulltula(cookieobj.sklogic);
             break;
         }
     }
