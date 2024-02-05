@@ -48,29 +48,82 @@
                     </fieldset>
                     <fieldset> 
                         <legend>World</legend>
-                        <input type='checkbox' name='OpenDeku' checked='true' onchange="setTree(this)">Open Deku Tree<br>
-                        <input type='checkbox' name='OpenDoor' checked='true' onchange="setDoor(this)">Open Door of Time <br>
-                        <input type='checkbox' name='OpenFountain' checked='false' onchange="setFountain(this)">Open Zora Fountain<br>
-                        <legend>Big Poes: <span id="poecount">1</span><br>
-                            <input type="range" name="poecount" value="1" max="10" min="1" onchange="setPoes(this)"><br>
-                        </legend>
-                    </fieldset>
+                            <input type='checkbox' name='OpenDeku' checked='true' onchange="setTree(this)">Open Deku Tree<br>
+                            <input type='checkbox' name='OpenDoor' checked='true' onchange="setDoor(this)">Open Door of Time <br>
+                            <input type='checkbox' name='OpenFountain' checked='false' onchange="setFountain(this)">Open Zora Fountain<br>
+                            <legend>Big Poes: <span id="poecount">1</span><br>
+                                <input type="range" name="poecount" value="1" max="10" min="1" onchange="setPoes(this)"><br>
+                            </legend>
+                        <fieldset>
+                            <legend>Fortress Logic</legend>
+                                Fort Keys: <br>
+                                    <select name='fortkeys' onchange="setFortKeys(this.value)">
+                                        <option value='Fight'>Guard Fight</option>
+                                        <option value='Region'>Regional</option>
+                                        <option value='OverWorld'>OverWorld</option>
+                                        <option value='Dungeons'>Dungeons</option>
+                                        <option value='Keysanity'>Anywhere</option><br>
+                                    </select>
+                                 Carpenters: <br>
+                                    <select name='carpenters' onchange="setCarpenter(this.value)">
+                                        <option value=4>All 4</option>
+                                        <option value=1>Just 1</option>
+                                        <option value=0>None</option>
+                                    </select><br>
+                                Membership:<br>
+                                    <select name='gerudobridge' onchange="setFortressLogic(this.value)">
+                                        <option value='Vanilla'>Vanilla</option>
+                                        <option value='Shuffle'>Shuffle</option>
+                                        <option value='Start'>Start With</option>
+                                    </select><br>
+                            </fieldset>
+                        </fieldset>
+                        <fieldset> <Legend>Ganon's Castle</legend>
+                        <legend>Rainbow Bridge</legend> 
+                            <select name='rainbowbridge' onchange="setRainbow(this.value)">
+                                <option value='Open'>Open</option>
+                                <option value='Vanilla'>Vanilla</option>
+                                <option value='Skulltulas'>Skulltulas</option>
+                                <option value='Stones'>Spiritual Stones</option>
+                                <option value='Medallions'>Medallions</option>
+                                <option value='Dungeons'>Dungeons</option>
+                            </select>
+                        <legend>Castle Trials: <span id="trialsize">0</span><br>
+                            <input type="range" name="trialsize" value="0" max="6" min="0" onchange="setTrialSize(this)"><br>
+                        </legend> 
+                        <legend>Ganon's Boss Key <br>
+                            <select name='castlelogic' onchange="setCastle(this.value)">
+                                <option value='Removed'>Removed</option>
+                                <option value='Vanilla'>Vanilla</option>
+                                <option value='Castle'>Castle</option>
+                                <option value='Region'>Regional</option>
+                                <option value='Overworld'>OverWorld</option>
+                                <option value='Dungeons'>Dungeons</option>
+                                <option value='Anywhere'>Anywhere</option>
+                                <option value='LACSVan'>LACS Vanilla</option>
+                                <option value='LACSStones'>LACS Stones</option>
+                                <option value='LACSMeds'>LACS Meds</option>
+                                <option value='LACSDun'>LACS Dungeons</option>                                
+                                <option value='Skulltulas'>LACS Skulls</option>
+                                <option value='Hearts'>LACS Hearts</option>
+                            </select>
                 </div>
                 <div class="column">
                     <fieldset>
-                        <legend> Quest <br></legend>
+                        <legend> Dungeons <br></legend>
+                        Dungeon Quest: <br>
                         <select name='quest' onchange="setQuest(this.value)">
                             <option value='Vanilla'>Vanilla</option>
                             <option value='Master'>Master</option>
                             <option value='Mixed'>Mixed</option>
                         </select>
                         <legend>Dungeon Keys</legend>
-                        <p>Small:</p>
+                        Small:
                         <select name='smallkeys' onchange="setSmallKeys(this.value)">
                             <option value='Keysy'>Keysy</option>
                             <!-- Other options for small keys -->
                         </select><br>
-                        <p>Boss:</p>
+                        Boss:
                         <select name='bosskeys' onchange="setBossKeys(this.value)">
                             <option value='Keysy'>Keysy</option>
                             <!-- Other options for boss keys -->
@@ -79,8 +132,7 @@
                 </div>
                 <div class="column">
                 <fieldset>
-                    <legend>Sanity</legend>
-            
+                    <legend>Shuffle</legend>
                     <fieldset>
                         <legend>Critters</legend>
                         Skulltula: <br>
