@@ -51,7 +51,6 @@
                         <legend>Big Poes: <span id="poecount">1</span><br>
                             <input type="range" name="poecount" value="1" max="10" min="1" onchange="setPoes(this)"><br>
                         </legend>
-                        <hr>
                         <legend> Quest <br>
                             <select name='quest' onchange="setQuest(this.value)">
                                 <option value='Vanilla'>Vanilla</option>
@@ -95,8 +94,9 @@
                                 <option value='Dungeons'>Dungeons</option>
                             </select>
                         <hr>
-                        <legend>Castle Trials: 0 <input type="range" name='trialsize' value='0' max='6' min='0' onchange="setTrialSize(this)">
-                        <span id='trialsize'>6</span> </legend> 
+                        <legend>Castle Trials: <span id="trialsize">0</span><br>
+                            <input type="range" name="trialsize" value="0" max="6" min="0" onchange="setTrialSize(this)"><br>
+                        </legend> 
                         <hr>
                         <legend>Ganon's Boss Key <br>
                             <select name='castlelogic' onchange="setCastle(this.value)">
