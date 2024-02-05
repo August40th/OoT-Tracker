@@ -3203,6 +3203,7 @@ function setBean(sender) {
 }
 
 function setShopsize(sender) {
+    document.getElementById('shopsize').textContent = sender.value;
    shopsize = sender.value;
    if (shopsize > 0) {
       Shopsanity = true;
