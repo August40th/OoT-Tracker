@@ -51,13 +51,6 @@
                         <legend>Big Poes: <span id="poecount">1</span><br>
                             <input type="range" name="poecount" value="1" max="10" min="1" onchange="setPoes(this)"><br>
                         </legend>
-                        <legend> Quest <br>
-                            <select name='quest' onchange="setQuest(this.value)">
-                                <option value='Vanilla'>Vanilla</option>
-                                <option value='Master'>Master</option>
-                                <option value='Mixed'>Mixed</option>
-                            </select>
-                        </legend>
                     </fieldset>
                         <fieldset>
                             <legend>Fortress Logic</legend>
@@ -114,31 +107,39 @@
                         </fieldset>
                 </div>
                 <div class="column">
+                    <legend> Quest <br>
+                        <select name='quest' onchange="setQuest(this.value)">
+                            <option value='Vanilla'>Vanilla</option>
+                            <option value='Master'>Master</option>
+                            <option value='Mixed'>Mixed</option>
+                        </select>
+                    </legend>
+                    <legend>Dungeon Keys
+                        Small: <br>
+                            <select name='smallkeys' onchange="setSmallKeys(this.value)">
+                                <option value='Keysy'>Keysy</option>
+                                <option value='Vanilla'>Vanilla</option>
+                                <option value='VanDungeon'>Own Dungeon</option>
+                                <option value='Region'>Regional</option>
+                                <option value='Overworld'>OverWorld</option>
+                                <option value='Dungeons'>Any Dungeon</option>
+                                <option value='Anywhere'>Anywhere</option>
+                            </select><br>
+                        Boss: <br>
+                            <select name='bosskeys' onchange="setBossKeys(this.value)">
+                                <option value='Keysy'>Keysy</option>
+                                <option value='Vanilla'>Vanilla</option>
+                                <option value='VanDungeon'>Own Dungeon</option>
+                                <option value='Region'>Regional</option>
+                                <option value='Overworld'>OverWorld</option>
+                                <option value='Dungeons'>Any Dungeon</option>
+                                <option value='Anywhere'>Anywhere</option>
+                            </select>
+                    </legend>
+                </div>
+                <div class="column">
                 <fieldset>
                     <legend>Sanity</legend>
-                    <fieldset>
-                        <legend>Dungeon Keys</legend>
-                            Small: <br>
-                                <select name='smallkeys' onchange="setSmallKeys(this.value)">
-                                    <option value='Keysy'>Keysy</option>
-                                    <option value='Vanilla'>Vanilla</option>
-                                    <option value='VanDungeon'>Own Dungeon</option>
-                                    <option value='Region'>Regional</option>
-                                    <option value='Overworld'>OverWorld</option>
-                                    <option value='Dungeons'>Any Dungeon</option>
-                                    <option value='Anywhere'>Anywhere</option>
-                            </select><br>
-                            Boss: <br>
-                                <select name='bosskeys' onchange="setBossKeys(this.value)">
-                                    <option value='Keysy'>Keysy</option>
-                                    <option value='Vanilla'>Vanilla</option>
-                                    <option value='VanDungeon'>Own Dungeon</option>
-                                    <option value='Region'>Regional</option>
-                                    <option value='Overworld'>OverWorld</option>
-                                    <option value='Dungeons'>Any Dungeon</option>
-                                    <option value='Anywhere'>Anywhere</option>
-                                </select>
-                        </fieldset>
                     <fieldset><legend>Critters</legend>
                         Skulltula: <br>
                             <select name='skulltula' onchange="setSkulltula(this.value)">
