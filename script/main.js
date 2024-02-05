@@ -3082,6 +3082,7 @@ function setMixedPools(sender) {
 }
 
 function setPoes(sender) {
+    document.getElementById('poecount').textContent = sender.value;
     poecount = sender.value;
     itemsMax.BigPoe = poecount;
     updateGridItemAll();
