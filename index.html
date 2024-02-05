@@ -63,7 +63,7 @@
                                         <option value='OverWorld'>OverWorld</option>
                                         <option value='Dungeons'>Dungeons</option>
                                         <option value='Keysanity'>Anywhere</option><br>
-                                    </select>
+                                    </select> <br>
                                  Carpenters: <br>
                                     <select name='carpenters' onchange="setCarpenter(this.value)">
                                         <option value=4>All 4</option>
@@ -110,6 +110,20 @@
                 </div>
                 <div class="column">
                     <fieldset>
+                        <legend>Entrance Randomizer</legend>
+                        <input type='checkbox' name='Owls' checked='false' onchange="setOwls(this)">Owl Drops
+                        <input type='checkbox' name='Warps' checked='false' onchange="setWarps(this)">Warp Songs<br>
+                        <input type='radio' name='IndoorER' value='Simple' onclick="setIndoorER(this)">Simple Indoors
+                        <input type='radio' name='IndoorER' value='Full' onclick="setIndoorER(this)">All Indoors
+                        <input type='radio' name='IndoorER' value='Off' onclick="setIndoorER(this)">Off<br>
+                        <input type='checkbox' name='GrottoER' checked='false' onchange="setGrottoER(this)">Grottos
+                        <input type='checkbox' name='DungeonER' checked='false' onchange="setDER(this)">Dungeons
+                        <input type='checkbox' name='OWERmap' checked='false' onchange="setOWER(this)">Overworld <br>
+                        <legend>Mixed Pools: 
+                            <input type='radio' name='mixphoo' value='Off' onclick="setMixedPools(this)">Off
+                            <input type='radio' name='mixphoo' value='Simple' onclick="setMixedPools(this)">Simple
+                            <input type='radio' name='mixphoo' value='Full' onclick="setMixedPools(this)">Full
+                        </legend>
                         <legend> Dungeons <br></legend>
                         Dungeon Quest: <br>
                         <select name='quest' onchange="setQuest(this.value)">
@@ -117,6 +131,7 @@
                             <option value='Master'>Master</option>
                             <option value='Mixed'>Mixed</option>
                         </select>
+                        <hr>
                         <legend>Dungeon Keys</legend>
                         Small:
                         <select name='smallkeys' onchange="setSmallKeys(this.value)">
@@ -185,21 +200,6 @@
                             <input type='radio' name='SongShuffle' value='Bosses' onchange="setSongs(this)">Dungeons
                             <input type='radio' name='SongShuffle' value='Songsanity' onchange="setSongs(this)">Songsanity
                         </legend><br>
-                        <hr>
-                        <legend>Entrance Randomizer</legend>
-                        <input type='checkbox' name='Owls' checked='false' onchange="setOwls(this)">Owl Drops
-                        <input type='checkbox' name='Warps' checked='false' onchange="setWarps(this)">Warp Songs<br>
-                        <input type='radio' name='IndoorER' value='Simple' onclick="setIndoorER(this)">Simple Indoors
-                        <input type='radio' name='IndoorER' value='Full' onclick="setIndoorER(this)">All Indoors
-                        <input type='radio' name='IndoorER' value='Off' onclick="setIndoorER(this)">Off<br>
-                        <input type='checkbox' name='GrottoER' checked='false' onchange="setGrottoER(this)">Grottos
-                        <input type='checkbox' name='DungeonER' checked='false' onchange="setDER(this)">Dungeons
-                        <input type='checkbox' name='OWERmap' checked='false' onchange="setOWER(this)">Overworld <br>
-                        <legend>Mixed Pools: 
-                            <input type='radio' name='mixphoo' value='Off' onclick="setMixedPools(this)">Off
-                            <input type='radio' name='mixphoo' value='Simple' onclick="setMixedPools(this)">Simple
-                            <input type='radio' name='mixphoo' value='Full' onclick="setMixedPools(this)">Full
-                        </legend>
                     </fieldset>
                 </fieldset>
             </div>
