@@ -3077,7 +3077,7 @@ function setQuest(sender) {
 }
 
 function setMixedPools(sender) {
-    mixphoo = sender.value;
+    mixphoo = sender;
     updateMap();
     saveCookie();
 }
@@ -3178,7 +3178,7 @@ function setOcarina(sender) {
 }
 
 function setSongs(sender) {
-   SongShuffle = sender.value;
+   SongShuffle = sender;
    updateGridItemAll();
    saveCookie();
 }
@@ -3226,7 +3226,7 @@ function setGrottoER(sender) {
 }
 
 function setIndoorER(sender) {
-   IndoorER = sender.value;
+   IndoorER = sender;
    updateMap();
 
    saveCookie();
