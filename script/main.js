@@ -3871,7 +3871,6 @@ function updateMap() {
                 continue;}
             if ( (OWERmap == true || IndoorER !== "Off") && dungeons[k].chestlist[key].OWER == false ) { 
                 continue;}
-            if ( (Warps == false && (cspawn == false && aspawn == false) && k == 35 ) continue;
             if (OWERmap == false && (k == 33 || k == 34 ) ) continue;
             if ( dungeons[k].chestlist[key].leadsto == "none" || dungeons[k].chestlist[key].leadsto == "Spirit Right Hand" || dungeons[k].chestlist[key].leadsto == "Spirit Left Hand") continue;
 
