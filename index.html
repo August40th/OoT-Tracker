@@ -50,8 +50,10 @@
                         <legend>World</legend>
                             <legend>Starting Age</legend>
                                 <input type='radio' name='Age' value='Child' onclick="setAge(this)">Child
-                                <input type='radio' name='Age' value='Adult' onclick="setAge(this)">Adult
-                                <input type='checkbox' name='RndmStart' checked='false' onchange="setERTracker(this)">Random Start
+                                <input type='radio' name='Age' value='Adult' onclick="setAge(this)">Adult<br>
+                            <legend>Random Spawns</legend>
+                                <input type='checkbox' name='childspawn' checked='false' onchange="setSpawn(this)">Child Spawn
+                                <input type='checkbox' name='adultspawn' checked='false' onchange="setSpawn(this)">Child Spawn<br>
                             <input type='checkbox' name='OpenDeku' checked='true' onchange="setTree(this)">Open Deku Tree<br>
                             <input type='checkbox' name='OpenDoor' checked='true' onchange="setDoor(this)">Open Door of Time <br>
                             <input type='checkbox' name='OpenFountain' checked='false' onchange="setFountain(this)">Open Zora Fountain<br>
