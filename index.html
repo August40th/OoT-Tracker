@@ -67,7 +67,7 @@
                             <legend>Big Poes: <span id="poecount">1</span><br>
                                 <input type="range" name="poecount" value="1" max="10" min="1" onchange="setPoes(this)"><br>
                             </legend>
-                        <legend>Entrance Randomizer</legend>
+                        <fieldset><legend>Entrance Randomizer</legend>
                             Interior Entrances: <br>
                             <select name='IndoorER' onchange="setIndoorER(this.value)">
                                 <option value='Simple'>Simple </option>
@@ -77,10 +77,10 @@
                             <input type='checkbox' name='HideoutDoors' checked='false' onchange="AddHideout(this)">Add Thieves Hideout<br>
                             <input type='checkbox' name='GrottoER' checked='false' onchange="setGrottoER(this)">Grottos<br>
                             <input type='checkbox' name='DungeonER' checked='false' onchange="setDER(this)">Dungeons<br>
-                            <input type='checkbox' name='CastleER' checked='false' onchange="setCasterER(this)">Ganon's Castle<br>
+                            <input type='checkbox' name='CastleER' checked='false' onchange="setCasteER(this)">Ganon's Castle<br>
                             <input type='checkbox' name='OWERmap' checked='false' onchange="setOWER(this)">Overworld <br>
                             <input type='checkbox' name='ValleyRiver' checked='false' onchange="setValleyRiver(this)">Valley River Exit <br>
-                            <input type='checkbox' name='Owls' checked='false' onchange="setOwls(this)">Owl Drops
+                            <input type='checkbox' name='Owls' checked='false' onchange="setOwls(this)">Owl Drops<br>
                             <input type='checkbox' name='Warps' checked='false' onchange="setWarps(this)">Song Warps<br>
                             <legend>Mixed Pools: <br>
                                 <select name='mixphoo' onchange="setMixedPools(this.value)">
@@ -89,6 +89,7 @@
                                 <option value='Off'>Off</option>
                             </select><br>
                             </legend>
+                        </fieldset>
                 </div>
                 <div class="column">
                     <fieldset><legend>Dungeons & Keys</legend>
@@ -99,7 +100,6 @@
                             <option value='Master'>Master</option>
                             <option value='Mixed'>Mixed</option>
                         </select>
-                        <hr>
                         Dungeon Shortcuts:
                             <select name='shortcuts' onchange="setShortcuts(this.value)">
                                 <option value='Off'>Off</option>
@@ -112,6 +112,7 @@
                                 <option value='All'>All</option>
                                 <option value='Age'>Age Restrict</option>
                             </select><br>
+                        <hr>
                         <fieldset><legend>Keys</legend>
                         Small:<br>
                         <select name='smallkeys' onchange="setSmallKeys(this.value)">
@@ -226,12 +227,17 @@
                     </fieldset>                        
                         Shop Size: <span id="shopsize">4</span><br>
                         <input type="range" name="shopsize" value="4" max="4" min="0" onchange="setShopsize(this)"><br>
+                        Child Trade:<br>
+                        Adult Trade:<br>
                         <input type='checkbox' name='Ksword' checked='true' onchange="setKsword(this)">Kokiri Sword<br>
                         <input type='checkbox' name='OcarinaShuffle' checked='false' onchange="setOcarina(this)">Ocarina<br>
                         <input type='checkbox' name='WeirdEgg' checked='false' onchange="setEgg(this)">Weird Egg <br>
                         <input type='checkbox' name='BeanShuffle' checked='false' onchange="setBean(this)">Beans<br>
-                        <input type='checkbox' name='BigMoney' checked='false' onchange="setMerch(this)">Expensive erchants<br>
-                        <input type='checkbox' name='BombchuLogic' checked='false' onchange="setBombchu(this)">Bombchu Bag
+                        <input type='checkbox' name='BigMoney' checked='false' onchange="setMerch(this)">Expensive Merchants<br>
+                        <input type='checkbox' name='BombchuLogic' checked='false' onchange="setBombchu(this)">Bombchu Bag<br>
+                        Hearts & Rupees:<br>
+                        Pots:<br>
+                        Crates:<br>
                 </fieldset>
             </div>
             </div>
