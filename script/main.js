@@ -41,29 +41,35 @@ trialsize = 0;
 prizesize = 0;
 maxprize = 0;
 
-gerudobridge = 'Vanilla';
+quest = 'Vanilla';
 fortkeys = 'Fight';
 carpenters = 1;
 smallkeys = 'Dungeons';
-
+lensgamekeys = 'Vanilla';
+keyrings = 'Off';
+BossRings = false;
 bosskeys = 'Dungeons';
+silvers = 'Vanilla'
+BossDoors = 'Off';
+shortcuts = 'Off';
+
 skulltula = 'Off';
 Scrubsanity = false;
 Shopsanity = false;
 shopsize = 0;
 Cowsanity = false;
 Frogsanity = false;
-quest = 'Vanilla';
+Beehives = false
 
 Ksword = true;
 OcarinaShuffle = false;
 SongShuffle = 'Songs';
 WeirdEgg = false;
 BeanShuffle = false;
+BigMoney = false;
+GerudoCard = false;
 
 BombchuLogic = false;
-Medigoron = false;
-Aladdin = false;
 
 OpenForest = true;
 OpenDeku = true;
@@ -74,13 +80,17 @@ poecount = 1;
 
 GrottoER = false;
 IndoorER = 'Off';
+HideoutDoors = false;
+ValleyRiver = false;
 OWERmap = true;
 DungeonER = false;
+CastleER = false;
 Owls = false;
 Warps = false;
 
 Age = 'Child';
-RndmStart = false;
+cspawn = false;
+aspawn = false;
 mixphoo = "Off";
 
 Generic=0; Scrub1=0; Scrub2=0; ScrubLeft=0; Scrub3=0; Wolfos=0; Cow=0; Web=0; Redead=0; Tektite=0; Dampe=0; Tomb=0; Redeadgrave=0; 
@@ -137,13 +147,20 @@ var cookieDefault = {
    mZoom: 100,
    rainlogic: 'Open',
    qlogic: 'Vanilla',
-   flogic: 'Vanilla',
+   gcard: 'Vanilla',
    frtky: 'Fight',
    carp: '1',
    smallk: 'Dungeons',
    bossk: 'Dungeons',
+    lensk: 0,
+    rings: 'Off',
+    brings: 0,
+    silrup: 'Off',
+    cuts: 'Off',
+    bossd: 'Off',
    scrb: 0,
    sklogic: 'Off',
+    hives: 0,
    ocShuff: 0,
    sngShuff: 'Songs',
    eggShuff: 0,
@@ -159,12 +176,15 @@ var cookieDefault = {
    pigBK: 'Removed',
    gER: 0,
    oER: 0,
+    cER: 0,
    iER: 'Off',
+    fortdoors: 0,
+    valriv: 0,
    dER: 0,
-   medi: 0,
-   ladin: 0,
+   merch: 0,
    age: 'Child',
-   rstrt: 0,
+   cspwn: 0,
+    aspwn:0,
    owl: 0,
    warp: 0,
    kswrd: 1,
@@ -247,14 +267,6 @@ function loadCookie() {
    document.getElementsByName('BombchuLogic')[0].checked = !!cookieobj.chulogic;
    document.getElementsByName('BombchuLogic')[0].onchange();
 
-   document.getElementsByName('Medigoron')[0].checked = !!cookieobj.medi;
-   document.getElementsByName('Medigoron')[0].onchange();
-   document.getElementsByName('Aladdin')[0].checked = !!cookieobj.ladin;
-   document.getElementsByName('Aladdin')[0].onchange();
-
-   document.getElementsByName('RndmStart')[0].checked = !!cookieobj.rstrt;
-   document.getElementsByName('RndmStart')[0].onchange();
-
    document.getElementsByName('Owls')[0].checked = !!cookieobj.owl;
    document.getElementsByName('Owls')[0].onchange();
 
@@ -316,13 +328,6 @@ function loadCookie() {
         }
     }
 
-    for (var i = 0; i < document.getElementsByName('gerudobridge')[0].options.length; i++) {
-        if (document.getElementsByName('gerudobridge')[0].options[i].value === cookieobj.flogic) {
-            document.getElementsByName('gerudobridge')[0].options[i].selected = true;
-            setFortressLogic(cookieobj.flogic);
-            break;
-        }
-    }
 
     for (var i = 0; i < document.getElementsByName('smallkeys')[0].options.length; i++) {
         if (document.getElementsByName('smallkeys')[0].options[i].value === cookieobj.smallk) {
@@ -394,9 +399,6 @@ function saveCookie() {
    cookieobj.frogShuff = document.getElementsByName('Frogsanity')[0].checked ? 1 : 0;
     
    cookieobj.chulogic = document.getElementsByName('BombchuLogic')[0].checked ? 1 : 0;
-   cookieobj.medi = document.getElementsByName('Medigoron')[0].checked ? 1 : 0;
-   cookieobj.ladin = document.getElementsByName('Aladdin')[0].checked ? 1 : 0;
-   cookieobj.rstrt = document.getElementsByName('RndmStart')[0].checked ? 1 : 0;
 
    cookieobj.owl = document.getElementsByName('Owls')[0].checked ? 1 : 0;
    cookieobj.warp = document.getElementsByName('Warps')[0].checked ? 1 : 0;
@@ -420,10 +422,6 @@ function saveCookie() {
 
     if (document.getElementsByName('quest')[0].selectedIndex !== -1) {
         cookieobj.qlogic = document.getElementsByName('quest')[0].options[document.getElementsByName('quest')[0].selectedIndex].value;
-    }
-
-    if (document.getElementsByName('gerudobridge')[0].selectedIndex !== -1) {
-        cookieobj.flogic = document.getElementsByName('gerudobridge')[0].options[document.getElementsByName('gerudobridge')[0].selectedIndex].value;
     }
 
     if (document.getElementsByName('smallkeys')[0].selectedIndex !== -1) {
@@ -3096,14 +3094,8 @@ function setFortKeys(sender) {
    saveCookie();
 }
 
-function setFortressLogic(sender) {
-   gerudobridge = sender;
-   if (gerudobridge == 'Start') {
-      items.Membership = true;
-   }
-    else items.Membership = false;
-   updateGridItemAll();
-
+function setGerudoCard(sender) {
+   GerudoCard = sender.checked;
    updateMap();
    saveCookie();
 }
@@ -3173,7 +3165,6 @@ function setOcarina(sender) {
    items.Ocarina = itemsMin.Ocarina;
    updateGridItemAll();
    updateMap();
-
    saveCookie();
 }
 
@@ -3193,13 +3184,11 @@ function setEgg(sender) {
    items.Mask = itemsMin.Mask;
    updateGridItemAll();
    updateMap();
-
    saveCookie();
 }
 
 function setBean(sender) {
    BeanShuffle = sender.checked;
-
    updateMap();
    saveCookie();
 }
@@ -3221,14 +3210,12 @@ function setShopsize(sender) {
 function setGrottoER(sender) {
    GrottoER = sender.checked;
    updateMap();
-
    saveCookie();
 }
 
 function setIndoorER(sender) {
    IndoorER = sender;
    updateMap();
-
    saveCookie();
 }
 
@@ -3254,9 +3241,7 @@ function setOWER(sender) {
    document.getElementById('dungeon35').style.visibility = 'visible';
    } 
 
-
    updateMap();
-
    saveCookie();
 }
 
@@ -3269,34 +3254,23 @@ function setDER(sender) {
             dungeons[k].found = true ; }
     }
    updateMap();
-
    saveCookie();
 }
 
 function setCows(sender) {
    Cowsanity = sender.checked;
    updateMap();
-
    saveCookie();
 }
 
 function setFrogs(sender) {
    Frogsanity = sender.checked;
    updateMap();
-
    saveCookie();
 }
 
-function setMedigoron(sender) {
-   Medigoron = sender.checked;
-
-   updateMap();
-   saveCookie();
-}
-
-function setCarpet(sender) {
-   Aladdin = sender.checked;
-
+function setMerch(sender) {
+   BigMoney = sender.checked;
    updateMap();
    saveCookie();
 }
@@ -3329,23 +3303,21 @@ function setWarps(sender) {
 function setAge(sender) {
     Age = sender.value;
     updateMap();
-   if (Age === "Child" && RndmStart == false)
+   if (Age === "Child")
        clickDungeon(0);
-   else if (Age === "Adult" && RndmStart == false)
+   else
        clickDungeon(14);
-   else if (RndmStart == true)
-       clickDungeon(32);
    saveCookie();    
    updateMap();
 }
 
 function setERTracker(sender) {
     RndmStart = sender.checked;
-    if (Age === "Child" && RndmStart == false)
+    if (Age === "Child")
        clickDungeon(0);
-   else if (Age === "Adult" && RndmStart == false)
+   else if (Age === "Adult")
        clickDungeon(14);
-   else if (RndmStart == true)
+   else if (cspawn == true || aspawn == true)
        clickDungeon(35);
     updateMap();
     saveCookie();
@@ -4322,14 +4294,6 @@ function isBridgeOpen() {
 }
 
 function isFortressOpen() {
-   switch (gerudobridge) {
-      case "Vanilla":
-         return items.Membership;
-      case "Shuffle":
-         return items.Membership;
-      case "Start":
-         return true;
-   }
    return items.Membership;
 }
 
