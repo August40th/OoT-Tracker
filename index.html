@@ -58,29 +58,30 @@
                             <legend>Big Poes: <span id="poecount">1</span><br>
                                 <input type="range" name="poecount" value="1" max="10" min="1" onchange="setPoes(this)"><br>
                             </legend>
+                        <legend>Entrance Randomizer</legend>
+                            <input type='checkbox' name='Owls' checked='false' onchange="setOwls(this)">Owl Drops
+                            <input type='checkbox' name='Warps' checked='false' onchange="setWarps(this)">Song Warps<br>
+                            Interior Entrances: <br>
+                            <select name='IndoorER' onchange="setIndoorER(this.value)">
+                                <option value='Simple'>Simple </option>
+                                <option value='Full'>All indoors </option>
+                                <option value='Off'>Off </option>
+                            </select><br>
+                            <input type='checkbox' name='HideoutDoors' checked='false' onchange="AddHideout(this)">Add Thieves Hideout<br>
+                            <input type='checkbox' name='GrottoER' checked='false' onchange="setGrottoER(this)">Grottos<br>
+                            <input type='checkbox' name='DungeonER' checked='false' onchange="setDER(this)">Dungeons<br>
+                            <input type='checkbox' name='OWERmap' checked='false' onchange="setOWER(this)">Overworld <br>
+                            <legend>Mixed Pools: <br>
+                                <select name='mixphoo' onchange="setMixedPools(this.value)">
+                                <option value='Simple'>Simple</option>
+                                <option value='Full'>Full</option>
+                                <option value='Off'>Off</option>
+                            </select><br>
+                            </legend>
                 </div>
                 <div class="column">
                     <fieldset><legend>Dungeons & Keys</legend>
-                        <legend>Entrance Randomizer</legend>
-                        <input type='checkbox' name='Owls' checked='false' onchange="setOwls(this)">Owl Drops
-                        <input type='checkbox' name='Warps' checked='false' onchange="setWarps(this)">Song Warps<br>
-                        Interior Entrances: <br>
-                        <select name='IndoorER' onchange="setIndoorER(this.value)">
-                            <option value='Simple'>Simple </option>
-                            <option value='Full'>All indoors </option>
-                            <option value='Off'>Off </option>
-                        </select><br>
-                        <input type='checkbox' name='HideoutDoors' checked='false' onchange="AddHideout(this)">Add Thieves Hideout<br>
-                        <input type='checkbox' name='GrottoER' checked='false' onchange="setGrottoER(this)">Grottos<br>
-                        <input type='checkbox' name='DungeonER' checked='false' onchange="setDER(this)">Dungeons<br>
-                        <input type='checkbox' name='OWERmap' checked='false' onchange="setOWER(this)">Overworld <br>
-                        <legend>Mixed Pools: <br>
-                            <select name='mixphoo' onchange="setMixedPools(this.value)">
-                            <option value='Simple'>Simple</option>
-                            <option value='Full'>Full</option>
-                            <option value='Off'>Off</option>
-                        </select><br>
-                        </legend>
+
                         <fieldset><legend> Dungeons <br></legend>
                         Dungeon Quest: <br>
                         <select name='quest' onchange="setQuest(this.value)">
