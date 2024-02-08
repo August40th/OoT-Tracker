@@ -4036,7 +4036,7 @@ function populateMapdiv() {
             if ( dungeons[k].chestlist[key].type == "warp" && Warps == false) {
                 continue;}
             if (k == 'Warp Pad'){ continue;}
-            if ( dungeons[k].chestlist[key].type == "spawn" && R(cspawn == false && aspawn == false)) {
+            if ( dungeons[k].chestlist[key].type == "spawn" && (cspawn == false && aspawn == false)) {
                 continue;}
             if ( dungeons[k].chestlist[key].type == "owl" && Owls == false) { //Do Nothing
                 continue;}
