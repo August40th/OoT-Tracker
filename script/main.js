@@ -763,7 +763,7 @@ function clickDungeon(d) {
             continue;}
         if (dungeons[dungeonSelect].chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
             continue;}
-        if ( dungeons[dungeonSelect] == dungeons[28] && dungeons[dungeonSelect].chestlist[key].type == "membership" && gerudobridge !== "Shuffle" ) { //Fortress Guard checks
+        if ( dungeons[dungeonSelect] == dungeons[28] && dungeons[dungeonSelect].chestlist[key].type == "membership" && GerudoCard == false ) { //Fortress Guard checks
             continue;}
         if ( (Warps == false && (cspawn == true && aspawn == true)) && dungeonSelect == 35 ) continue;
         if (OWERmap == false && (dungeonSelect == 33 || dungeonSelect == 34 ) ) continue;
@@ -3527,7 +3527,7 @@ function updateGridItem(row, index) {
    itemGrid[row][index]['item'].name = items[item];
 
    if (fortresskeys[item] !== undefined) {
-      if (fortkeys !== 'Fight' && gerudobridge !== 'Start')
+      if (fortkeys !== 'Fight' && GerudoCard == true)
          itemGrid[row][index][3].style.backgroundImage = "url(images/" + keyimg[fortresskeys[item]] + ".png)";
       else
          itemGrid[row][index][3].style.backgroundImage = "";
@@ -3865,7 +3865,7 @@ function updateMap() {
                 continue;}
             if ( dungeons[k] == dungeons[28] && dungeons[k].chestlist[key].type == "guard" && fortkeys == "Fight" ) { //Fortress Guard checks
                 continue;}
-            if ( dungeons[k] == dungeons[28] && dungeons[k].chestlist[key].type == "membership" && gerudobridge !== "Shuffle" ) { //Fortress Guard checks
+            if ( dungeons[k] == dungeons[28] && dungeons[k].chestlist[key].type == "membership" && GerudoCard == false ) { //Fortress Guard checks
                 continue;}
             if (dungeons[k].chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
                 continue;}
@@ -4084,7 +4084,7 @@ function populateMapdiv() {
                 continue;}
             if ( dungeons[k] == dungeons[28] && dungeons[k].chestlist[key].type == "guard" && fortkeys == "Fight" ) { //Fortress Guard checks
                 continue;}
-            if ( dungeons[k] == dungeons[28] && dungeons[k].chestlist[key].type == "membership" && gerudobridge !== "Shuffle" ) { //Fortress Guard checks
+            if ( dungeons[k] == dungeons[28] && dungeons[k].chestlist[key].type == "membership" && GerudoCard == false ) { //Fortress Guard checks
                 continue;}
             if (dungeons[k].chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
                 continue;}
@@ -4197,7 +4197,7 @@ function populateMapdiv() {
             continue;}
         if ( dungeons[dungeonSelect] == dungeons[28] && dungeons[dungeonSelect].chestlist[key].type == "guard" && fortkeys == "Fight" ) { //Fortress Guard checks
             continue;}
-        if ( dungeons[dungeonSelect] == dungeons[28] && dungeons[dungeonSelect].chestlist[key].type == "membership" && gerudobridge !== "Shuffle" ) { //Fortress Guard checks
+        if ( dungeons[dungeonSelect] == dungeons[28] && dungeons[dungeonSelect].chestlist[key].type == "membership" && GerudoCard == false ) { //Fortress Guard checks
             continue;}
         if (dungeons[dungeonSelect].chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
             continue;}
