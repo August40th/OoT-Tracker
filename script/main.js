@@ -597,7 +597,7 @@ function clickDungeon(d) {
             (DungeonER == true && dungeons[dungeonSelect].chestlist[key].type == "dungeon") || 
             (Owls == true && dungeons[dungeonSelect].chestlist[key].type == "owl") ||
             (Warps == true && dungeons[dungeonSelect].chestlist[key].type == "warp") ||
-            (RndmStart == true && dungeons[dungeonSelect].chestlist[key].type == "spawn") ||
+            ((cspawn == true || aspawn == true) && dungeons[dungeonSelect].chestlist[key].type == "spawn") ||
             (mixphoo !== "Off" && (dungeons[dungeonSelect].chestlist[key].type == "simple" || 
                                    dungeons[dungeonSelect].chestlist[key].type == "alldoor" || 
                                    dungeons[dungeonSelect].chestlist[key].type == "grotto") 
@@ -648,7 +648,7 @@ function clickDungeon(d) {
                          (DungeonER == true && dungeons[v].chestlist[ent].type == "dungeon") || 
                          (Owls == true && dungeons[v].chestlist[ent].type == "owl") ||
                          (Warps == true && dungeons[v].chestlist[ent].type == "warp") ||
-                         (RndmStart == true && dungeons[dungeonSelect].chestlist[key].type == "spawn") ||
+                         ((cspawn == true || aspawn == true) && dungeons[dungeonSelect].chestlist[key].type == "spawn") ||
                          (mixphoo !== "Off" && (dungeons[dungeonSelect].chestlist[key].type == "simple" || 
                                                 dungeons[dungeonSelect].chestlist[key].type == "alldoor" || 
                                                 dungeons[dungeonSelect].chestlist[key].type == "grotto") )
@@ -711,7 +711,7 @@ function clickDungeon(d) {
         if ( dungeons[dungeonSelect].chestlist[key].type == "warp" && Warps == false) {
             continue;}
         if (key == 'Warp Pad'){ continue;}
-        if ( dungeons[dungeonSelect].chestlist[key].type == "spawn" && RndmStart == false) {
+        if ( dungeons[dungeonSelect].chestlist[key].type == "spawn" && (cspawn == false && aspawn == false)) {
             continue;}
         if ( dungeons[dungeonSelect].chestlist[key].type == "owl" && Owls == false) { //Do Nothing
             continue;}
@@ -765,7 +765,7 @@ function clickDungeon(d) {
             continue;}
         if ( dungeons[dungeonSelect] == dungeons[28] && dungeons[dungeonSelect].chestlist[key].type == "membership" && gerudobridge !== "Shuffle" ) { //Fortress Guard checks
             continue;}
-        if ( (Warps == false && RndmStart == false) && dungeonSelect == 35 ) continue;
+        if ( (Warps == false && (cspawn == true && aspawn == true)) && dungeonSelect == 35 ) continue;
         if (OWERmap == false && (dungeonSelect == 33 || dungeonSelect == 34 ) ) continue;
         if ( dungeons[dungeonSelect].chestlist[key].leadsto == "none" || dungeons[dungeonSelect].chestlist[key].leadsto == "Spirit Right Hand" || dungeons[dungeonSelect].chestlist[key].leadsto == "Spirit Left Hand") continue;
 
@@ -3235,9 +3235,9 @@ function setOWER(sender) {
    } if (OWERmap == true) {
    document.getElementById('dungeon33').style.visibility = 'visible';
    document.getElementById('dungeon34').style.visibility = 'visible';
-   } if (Warps == false && RndmStart  == false) {
+   } if (Warps == false && (cspawn == true || aspawn == true)) {
    document.getElementById('dungeon35').style.visibility = 'hidden';
-   } if (Warps == true || RndmStart  == true) {
+   } if (Warps == true || (cspawn == true || aspawn == true)) {
    document.getElementById('dungeon35').style.visibility = 'visible';
    } 
 
@@ -3309,18 +3309,6 @@ function setAge(sender) {
        clickDungeon(14);
    saveCookie();    
    updateMap();
-}
-
-function setERTracker(sender) {
-    RndmStart = sender.checked;
-    if (Age === "Child")
-       clickDungeon(0);
-   else if (Age === "Adult")
-       clickDungeon(14);
-   else if (cspawn == true || aspawn == true)
-       clickDungeon(35);
-    updateMap();
-    saveCookie();
 }
 
 function setZoom(target, sender) {
@@ -3829,7 +3817,7 @@ function updateMap() {
             if ( dungeons[k].chestlist[key].type == "warp" && Warps == false) {
                 continue;}
             if (key == 'Warp Pad'){ continue;}
-            if ( dungeons[k].chestlist[key].type == "spawn" && RndmStart == false) {
+            if ( dungeons[k].chestlist[key].type == "spawn" && (cspawn == false && aspawn == false)) {
                 continue;}
             if ( dungeons[k].chestlist[key].type == "owl" && Owls == false) { //Do Nothing
                 continue;}
@@ -3883,7 +3871,7 @@ function updateMap() {
                 continue;}
             if ( (OWERmap == true || IndoorER !== "Off") && dungeons[k].chestlist[key].OWER == false ) { 
                 continue;}
-            if ( (Warps == false && RndmStart == false) && k == 35 ) continue;
+            if ( (Warps == false && (cspawn == false && aspawn == false) && k == 35 ) continue;
             if (OWERmap == false && (k == 33 || k == 34 ) ) continue;
             if ( dungeons[k].chestlist[key].leadsto == "none" || dungeons[k].chestlist[key].leadsto == "Spirit Right Hand" || dungeons[k].chestlist[key].leadsto == "Spirit Left Hand") continue;
 
@@ -4048,7 +4036,7 @@ function populateMapdiv() {
             if ( dungeons[k].chestlist[key].type == "warp" && Warps == false) {
                 continue;}
             if (k == 'Warp Pad'){ continue;}
-            if ( dungeons[k].chestlist[key].type == "spawn" && RndmStart == false) {
+            if ( dungeons[k].chestlist[key].type == "spawn" && R(cspawn == false && aspawn == false)) {
                 continue;}
             if ( dungeons[k].chestlist[key].type == "owl" && Owls == false) { //Do Nothing
                 continue;}
@@ -4102,7 +4090,7 @@ function populateMapdiv() {
                 continue;}
             if ( (OWERmap == true || IndoorER !== "Off") && dungeons[k].chestlist[key].OWER == false ) { 
                 continue;}
-            if ( (Warps == false && RndmStart == false) && k == 35 ) continue;
+            if ( (Warps == false && (cspawn == false && aspawn == false)) && k == 35 ) continue;
             if (OWERmap == false && (k == 33 || k == 34 ) ) continue;
             if ( dungeons[k].chestlist[key].leadsto == "none" || dungeons[k].chestlist[key].leadsto == "Spirit Right Hand" || dungeons[k].chestlist[key].leadsto == "Spirit Left Hand") continue;
 
@@ -4161,7 +4149,7 @@ function populateMapdiv() {
         if ( dungeons[dungeonSelect].chestlist[key].type == "warp" && Warps == false) {
             continue;}
         if (key == 'Warp Pad'){ continue;}
-        if ( dungeons[dungeonSelect].chestlist[key].type == "spawn" && RndmStart == false) {
+        if ( dungeons[dungeonSelect].chestlist[key].type == "spawn" && (cspawn == false && aspawn == false)) {
             continue;}
         if ( dungeons[dungeonSelect].chestlist[key].type == "owl" && Owls == false) { //Do Nothing
             continue;}
@@ -4215,7 +4203,7 @@ function populateMapdiv() {
             continue;}
         if ( (OWERmap == true || IndoorER !== "Off") && dungeons[dungeonSelect].chestlist[key].OWER == false ) { 
                 continue;}
-        if ( (Warps == false && RndmStart == false) && dungeonSelect == 35 ) continue;
+        if ( (Warps == false && (cspawn == false && aspawn == false)) && dungeonSelect == 35 ) continue;
         if (OWERmap == false && (dungeonSelect == 33 || dungeonSelect == 34 ) ) continue;
         if ( dungeons[dungeonSelect].chestlist[key].leadsto == "none" || dungeons[dungeonSelect].chestlist[key].leadsto == "Spirit Right Hand" || dungeons[dungeonSelect].chestlist[key].leadsto == "Spirit Left Hand") continue;
 
