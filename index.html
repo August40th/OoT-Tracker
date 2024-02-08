@@ -52,8 +52,8 @@
                                 <input type='radio' name='Age' value='Child' onclick="setAge(this)">Child
                                 <input type='radio' name='Age' value='Adult' onclick="setAge(this)">Adult<br>
                             <legend>Random Spawns</legend>
-                                <input type='checkbox' name='childspawn' checked='false' onchange="setSpawn(this)">Child Spawn
-                                <input type='checkbox' name='adultspawn' checked='false' onchange="setSpawn(this)">Child Spawn<br>
+                                <input type='checkbox' name='childspawn' checked='false' onchange="setSpawn(this)">Child
+                                <input type='checkbox' name='adultspawn' checked='false' onchange="setSpawn(this)">Adult<br>
                             <input type='checkbox' name='OpenDeku' checked='true' onchange="setTree(this)">Open Deku Tree<br>
                             <input type='checkbox' name='OpenDoor' checked='true' onchange="setDoor(this)">Open Door of Time <br>
                             <input type='checkbox' name='OpenFountain' checked='false' onchange="setFountain(this)">Open Zora Fountain<br>
@@ -83,7 +83,6 @@
                 </div>
                 <div class="column">
                     <fieldset><legend>Dungeons & Keys</legend>
-
                         <fieldset><legend> Dungeons <br></legend>
                         Dungeon Quest: <br>
                         <select name='quest' onchange="setQuest(this.value)">
@@ -92,8 +91,8 @@
                             <option value='Mixed'>Mixed</option>
                         </select>
                         <hr>
-                        <legend>Dungeon Keys</legend>
-                        Small:
+                        <fieldset><legend>Keys</legend>
+                        Small:<br>
                         <select name='smallkeys' onchange="setSmallKeys(this.value)">
                             <option value='Keysy'>Keysy</option>
                             <option value='Vanilla'>Vanilla</option>
@@ -120,7 +119,7 @@
                             <option value='Dungeons'>Any Dungeon</option>
                             <option value='Anywhere'>Anywhere</option>
                         </select><br>
-                        Boss:
+                        Boss:<br>
                         <select name='bosskeys' onchange="setBossKeys(this.value)">
                             <option value='Keysy'>Keysy</option>
                             <option value='Vanilla'>Vanilla</option>
@@ -130,6 +129,7 @@
                             <option value='Dungeons'>Any Dungeon</option>
                             <option value='Anywhere'>Anywhere</option>
                         </select>
+                        </fieldset>
                     </fieldset>
                     <fieldset>
                             <legend>Fortress Logic</legend>
