@@ -52,17 +52,22 @@
                                 <input type='radio' name='Age' value='Child' onclick="setAge(this)">Child
                                 <input type='radio' name='Age' value='Adult' onclick="setAge(this)">Adult<br>
                             <legend>Random Spawns</legend>
-                                <input type='checkbox' name='childspawn' checked='false' onchange="setSpawn(this)">Child
-                                <input type='checkbox' name='adultspawn' checked='false' onchange="setSpawn(this)">Adult<br>
+                                <input type='checkbox' name='cspawn' checked='false' onchange="setSpawn(this)">Child
+                                <input type='checkbox' name='aspawn' checked='false' onchange="setSpawn(this)">Adult<br>
                             <input type='checkbox' name='OpenDeku' checked='true' onchange="setTree(this)">Open Deku Tree<br>
+                            Kakariko Gate:<br>
                             <input type='checkbox' name='OpenDoor' checked='true' onchange="setDoor(this)">Open Door of Time <br>
                             <input type='checkbox' name='OpenFountain' checked='false' onchange="setFountain(this)">Open Zora Fountain<br>
+                            Carpenters:
+                                <select name='carpenters' onchange="setCarpenter(this.value)">
+                                    <option value=4>All 4</option>
+                                    <option value=1>Just 1</option>
+                                    <option value=0>None</option>
+                                </select><br>
                             <legend>Big Poes: <span id="poecount">1</span><br>
                                 <input type="range" name="poecount" value="1" max="10" min="1" onchange="setPoes(this)"><br>
                             </legend>
                         <legend>Entrance Randomizer</legend>
-                            <input type='checkbox' name='Owls' checked='false' onchange="setOwls(this)">Owl Drops
-                            <input type='checkbox' name='Warps' checked='false' onchange="setWarps(this)">Song Warps<br>
                             Interior Entrances: <br>
                             <select name='IndoorER' onchange="setIndoorER(this.value)">
                                 <option value='Simple'>Simple </option>
@@ -72,7 +77,11 @@
                             <input type='checkbox' name='HideoutDoors' checked='false' onchange="AddHideout(this)">Add Thieves Hideout<br>
                             <input type='checkbox' name='GrottoER' checked='false' onchange="setGrottoER(this)">Grottos<br>
                             <input type='checkbox' name='DungeonER' checked='false' onchange="setDER(this)">Dungeons<br>
+                            <input type='checkbox' name='CastleER' checked='false' onchange="setCasterER(this)">Ganon's Castle<br>
                             <input type='checkbox' name='OWERmap' checked='false' onchange="setOWER(this)">Overworld <br>
+                            <input type='checkbox' name='ValleyRiver' checked='false' onchange="setValleyRiver(this)">Valley River Exit <br>
+                            <input type='checkbox' name='Owls' checked='false' onchange="setOwls(this)">Owl Drops
+                            <input type='checkbox' name='Warps' checked='false' onchange="setWarps(this)">Song Warps<br>
                             <legend>Mixed Pools: <br>
                                 <select name='mixphoo' onchange="setMixedPools(this.value)">
                                 <option value='Simple'>Simple</option>
@@ -91,6 +100,18 @@
                             <option value='Mixed'>Mixed</option>
                         </select>
                         <hr>
+                        Dungeon Shortcuts:
+                            <select name='shortcuts' onchange="setShortcuts(this.value)">
+                                <option value='Off'>Off</option>
+                                <option value='All'>All</option>
+                                <option value='Some'>Some</option>
+                            </select><br>
+                        Shuffle Boss Doors:
+                            <select name='BossDoors' onchange="setBossDoors(this.value)">
+                                <option value='Off'>Off</option>
+                                <option value='All'>All</option>
+                                <option value='Age'>Age Restrict</option>
+                            </select><br>
                         <fieldset><legend>Keys</legend>
                         Small:<br>
                         <select name='smallkeys' onchange="setSmallKeys(this.value)">
@@ -102,23 +123,30 @@
                             <option value='Dungeons'>Any Dungeon</option>
                             <option value='Anywhere'>Anywhere</option>
                         </select><br>
-                        Thieves Hideout: 
-                        <select name='hideoutkeys' onchange="setHideoutKeys(this.value)">
-                            <option value='Vanilla'>Vanilla</option>
-                            <option value='Region'>Regional</option>
-                            <option value='Overworld'>OverWorld</option>
-                            <option value='Dungeons'>Any Dungeon</option>
-                            <option value='Anywhere'>Anywhere</option>
-                        </select><br>
+                        Fort Keys:
+                            <select name='fortkeys' onchange="setFortKeys(this.value)">
+                                <option value='Fight'>Guard Fight</option>
+                                <option value='Region'>Regional</option>
+                                <option value='OverWorld'>OverWorld</option>
+                                <option value='Dungeons'>Dungeons</option>
+                                <option value='Keysanity'>Anywhere</option><br>
+                            </select> <br>
                         Lens Game Keys:
                             <select name='lensgamekeys' onchange="setTreasureKeys(this.value)">
-                            <option value='Keysy'>Keysy</option>
-                            <option value='Vanilla'>Vanilla</option>
-                            <option value='Region'>Regional</option>
-                            <option value='Overworld'>OverWorld</option>
-                            <option value='Dungeons'>Any Dungeon</option>
-                            <option value='Anywhere'>Anywhere</option>
-                        </select><br>
+                                <option value='Keysy'>Keysy</option>
+                                <option value='Vanilla'>Vanilla</option>
+                                <option value='Region'>Regional</option>
+                                <option value='Overworld'>OverWorld</option>
+                                <option value='Dungeons'>Any Dungeon</option>
+                                <option value='Anywhere'>Anywhere</option>
+                            </select><br>
+                        Key Rings: 
+                            <select name='keyrings' onchange="setKeyRings(this.value)">
+                                <option value='Off'>Off</option>
+                                <option value='All'>All</option>
+                                <option value='Some'>Some</option>
+                            </select><br>
+                            <input type='checkbox' name='BossRings' checked='false' onchange="setBossRings(this)">Boss keys on rings<br>
                         Boss:<br>
                         <select name='bosskeys' onchange="setBossKeys(this.value)">
                             <option value='Keysy'>Keysy</option>
@@ -129,32 +157,17 @@
                             <option value='Dungeons'>Any Dungeon</option>
                             <option value='Anywhere'>Anywhere</option>
                         </select>
+                        Silver Rupees:
+                            <select name='silvers' onchange=setSilvers(this.value)">
+                                <option value='Remove'>Remove</option>
+                                <option value='Vanilla'>Vanilla</option>
+                                <option value='Region'>Regional</option>
+                                <option value='Overworld'>OverWorld</option>
+                                <option value='Dungeons'>Any Dungeon</option>
+                                <option value='Anywhere'>Anywhere</option>
+                            </select><br>
                         </fieldset>
                     </fieldset>
-                    <fieldset>
-                            <legend>Fortress Logic</legend>
-                                Fort Keys: <br>
-                                    <select name='fortkeys' onchange="setFortKeys(this.value)">
-                                        <option value='Fight'>Guard Fight</option>
-                                        <option value='Region'>Regional</option>
-                                        <option value='OverWorld'>OverWorld</option>
-                                        <option value='Dungeons'>Dungeons</option>
-                                        <option value='Keysanity'>Anywhere</option><br>
-                                    </select> <br>
-                                 Carpenters: <br>
-                                    <select name='carpenters' onchange="setCarpenter(this.value)">
-                                        <option value=4>All 4</option>
-                                        <option value=1>Just 1</option>
-                                        <option value=0>None</option>
-                                    </select><br>
-                                Membership:<br>
-                                    <select name='gerudobridge' onchange="setFortressLogic(this.value)">
-                                        <option value='Vanilla'>Vanilla</option>
-                                        <option value='Shuffle'>Shuffle</option>
-                                        <option value='Start'>Start With</option>
-                                    </select><br>
-                            </fieldset>
-                        </fieldset>
                         <fieldset> <Legend>Ganon's Castle</legend>
                         <legend>Rainbow Bridge</legend> 
                             <select name='rainbowbridge' onchange="setRainbow(this.value)">
@@ -209,6 +222,7 @@
                         <input type='checkbox' name='Scrubsanity' checked='false' onchange="setScrub(this)">Scrubs<br>
                         <input type='checkbox' name='Cowsanity' checked='false' onchange="setCows(this)">Cow Milk<br>
                         <input type='checkbox' name='Frogsanity' checked='false' onchange="setFrogs(this)">Frogs<br>
+                        <input type='checkbox' name='Beehives' checked='false' onchange="setBees(this)">Beehives<br>
                     </fieldset>                        
                         Shop Size: <span id="shopsize">4</span><br>
                         <input type="range" name="shopsize" value="4" max="4" min="0" onchange="setShopsize(this)"><br>
@@ -216,9 +230,8 @@
                         <input type='checkbox' name='OcarinaShuffle' checked='false' onchange="setOcarina(this)">Ocarina<br>
                         <input type='checkbox' name='WeirdEgg' checked='false' onchange="setEgg(this)">Weird Egg <br>
                         <input type='checkbox' name='BeanShuffle' checked='false' onchange="setBean(this)">Beans<br>
-                        <input type='checkbox' name='Medigoron' checked='false' onchange="setMedigoron(this)">Medigoron<br>
-                        <input type='checkbox' name='Aladdin' checked='false' onchange="setCarpet(this)">Carpet Sale<br>
-                        <input type='checkbox' name='BombchuLogic' checked='false' onchange="setBombchu(this)">Bombchu IN Logic
+                        <input type='checkbox' name='BigMoney' checked='false' onchange="setMerch(this)">Expensive erchants<br>
+                        <input type='checkbox' name='BombchuLogic' checked='false' onchange="setBombchu(this)">Bombchu Bag
                 </fieldset>
             </div>
             </div>
