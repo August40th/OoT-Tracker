@@ -19,7 +19,7 @@ function generalCanGetChest(chestlist) {
       if ( chestlist[key].type == "warp" && Warps == false) {
          continue;}
       if (key == 'Warp Pad') { continue;}
-      if ( chestlist[key].type == "spawn" && RndmStart  == false) {
+      if ( chestlist[key].type == "spawn" && aspawn == false && cspawn == false) {
          continue;}
       if ( chestlist[key].type == "owl" && Owls == false) { //Do Nothing
          continue;}
@@ -57,9 +57,9 @@ function generalCanGetChest(chestlist) {
          continue;}
       if ( chestlist[key].type == "egg" && WeirdEgg == false ) { //Bean shuffle
          continue;}
-      if ( chestlist[key].type == "knife" && Medigoron == false ) { //Medigoron item
+      if ( chestlist[key].type == "knife" && BigMoney == false ) { //Medigoron item
          continue;}
-      if ( chestlist[key].type == "carpet" && Aladdin == false ) { //Carpet Sale
+      if ( chestlist[key].type == "carpet" && BigMoney == false ) { //Carpet Sale
          continue;}
       if ( chestlist[key].type == "ocarina" && OcarinaShuffle == false ) { //Ocarina shuffle in field
          continue;}
@@ -67,7 +67,7 @@ function generalCanGetChest(chestlist) {
          continue;}
       if ( chestlist[key].type == "guard" && fortkeys == "Fight" ) { //Fortress Guard checks
          continue;}
-      if ( chestlist[key].type == "membership" && gerudobridge !== "Shuffle" ) { //Fortress Guard checks
+      if ( chestlist[key].type == "membership" && GerudoCard == false ) { //Fortress Guard checks
          continue;}
       if (chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
          continue;}
