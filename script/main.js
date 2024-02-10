@@ -301,7 +301,7 @@ function loadCookie() {
     for (var i = 0; i < document.getElementsByName('mixphoo')[0].options.length; i++) {
         if (document.getElementsByName('mixphoo')[0].options[i].value === cookieobj.mixp) {
             document.getElementsByName('mixphoo')[0].options[i].selected = true;
-            setCarpenter(cookieobj.mixp);
+            setMixedPools(cookieobj.mixp);
             break;
         }
     }
@@ -309,7 +309,7 @@ function loadCookie() {
     for (var i = 0; i < document.getElementsByName('SongShuffle')[0].options.length; i++) {
         if (document.getElementsByName('SongShuffle')[0].options[i].value === cookieobj.sngShuff) {
             document.getElementsByName('SongShuffle')[0].options[i].selected = true;
-            setCarpenter(cookieobj.sngShuff);
+            setSongs(cookieobj.sngShuff);
             break;
         }
     }
@@ -380,7 +380,7 @@ function loadCookie() {
     for (var i = 0; i < document.getElementsByName('IndoorER')[0].options.length; i++) {
         if (document.getElementsByName('IndoorER')[0].options[i].value === cookieobj.iER) {
             document.getElementsByName('IndoorER')[0].options[i].selected = true;
-            setSkulltula(cookieobj.iER);
+            setIndoorER(cookieobj.iER);
             break;
         }
     }
@@ -388,7 +388,7 @@ function loadCookie() {
     for (var i = 0; i < document.getElementsByName('shortcuts')[0].options.length; i++) {
         if (document.getElementsByName('shortcuts')[0].options[i].value === cookieobj.cuts) {
             document.getElementsByName('shortcuts')[0].options[i].selected = true;
-            setSkulltula(cookieobj.cuts);
+            //setSkulltula(cookieobj.cuts);
             break;
         }
     }
@@ -396,7 +396,7 @@ function loadCookie() {
     for (var i = 0; i < document.getElementsByName('BossDoors')[0].options.length; i++) {
         if (document.getElementsByName('BossDoors')[0].options[i].value === cookieobj.bossd) {
             document.getElementsByName('BossDoors')[0].options[i].selected = true;
-            setSkulltula(cookieobj.bossd);
+            //setSkulltula(cookieobj.bossd);
             break;
         }
     }
@@ -404,7 +404,7 @@ function loadCookie() {
     for (var i = 0; i < document.getElementsByName('lensgamekeys')[0].options.length; i++) {
         if (document.getElementsByName('lensgamekeys')[0].options[i].value === cookieobj.lensk) {
             document.getElementsByName('lensgamekeys')[0].options[i].selected = true;
-            setSkulltula(cookieobj.lensk);
+            //setSkulltula(cookieobj.lensk);
             break;
         }
     }
@@ -412,7 +412,7 @@ function loadCookie() {
     for (var i = 0; i < document.getElementsByName('keyrings')[0].options.length; i++) {
         if (document.getElementsByName('keyrings')[0].options[i].value === cookieobj.rings) {
             document.getElementsByName('keyrings')[0].options[i].selected = true;
-            setSkulltula(cookieobj.rings);
+            //setSkulltula(cookieobj.rings);
             break;
         }
     }
@@ -420,7 +420,7 @@ function loadCookie() {
     for (var i = 0; i < document.getElementsByName('silvers')[0].options.length; i++) {
         if (document.getElementsByName('silvers')[0].options[i].value === cookieobj.silrup) {
             document.getElementsByName('silvers')[0].options[i].selected = true;
-            setSkulltula(cookieobj.silrup);
+            //setSkulltula(cookieobj.silrup);
             break;
         }
     }
