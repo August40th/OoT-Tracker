@@ -3463,6 +3463,11 @@ function setMerch(sender) {
    updateMap();
 }
 
+function setValleyRiver(sender) {
+    ValleyRiver = sender.checked;
+   saveCookie();    
+   updateMap();
+}
 
 function setZoom(target, sender) {
     document.getElementById(target).style.zoom = sender.value / 100;
