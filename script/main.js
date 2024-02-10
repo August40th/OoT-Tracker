@@ -3469,6 +3469,12 @@ function setValleyRiver(sender) {
    updateMap();
 }
 
+function setBossRings(sender) {
+    BossRings = sender.checked;
+   saveCookie();    
+   updateMap();
+}
+
 function setZoom(target, sender) {
     document.getElementById(target).style.zoom = sender.value / 100;
     document.getElementById(target).style.zoom = sender.value / 100;
