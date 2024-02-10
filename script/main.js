@@ -3398,6 +3398,72 @@ function setAge(sender) {
    updateMap();
 }
 
+function setAdultSpawn(sender) {
+    aspawn = sender.checked;
+   saveCookie();    
+   updateMap();
+}
+function setChildSpawn(sender) {
+    cspawn = sender.checked;
+   saveCookie();    
+   updateMap();
+}
+
+function AddHideout(sender) {
+    HideoutDoors = sender.checked;
+   saveCookie();    
+   updateMap();
+}
+
+function setCasteER(sender) {
+    CastleER = sender.checked;
+   saveCookie();    
+   updateMap();
+}
+
+function setShortcuts(sender) {
+    shortcuts = sender;
+   saveCookie();    
+   updateMap();
+}
+
+function setBossDoors(sender) {
+    BossDoors = sender;
+   saveCookie();    
+   updateMap();
+}
+
+function setTreasureKeys(sender) {
+    lensgamekeys = sender;
+   saveCookie();    
+   updateMap();
+}
+
+function setKeyRings(sender) {
+    keyrings = sender;
+   saveCookie();    
+   updateMap();
+}
+
+function setSilvers(sender) {
+    silvers = sender;
+   saveCookie();    
+   updateMap();
+}
+
+function setBees(sender) {
+    Beehives = sender.checked;
+   saveCookie();    
+   updateMap();
+}
+
+function setMerch(sender) {
+    BigMoney = sender.checked;
+   saveCookie();    
+   updateMap();
+}
+
+
 function setZoom(target, sender) {
     document.getElementById(target).style.zoom = sender.value / 100;
     document.getElementById(target).style.zoom = sender.value / 100;
