@@ -275,6 +275,28 @@ function loadCookie() {
 
    document.getElementsByName('Ksword')[0].checked = !!cookieobj.kswrd;
    document.getElementsByName('Ksword')[0].onchange();
+
+    document.getElementsByName('aspawn')[0].checked = !!cookieobj.aspwn;
+    document.getElementsByName('aspawn')[0].onchange();
+    document.getElementsByName('cspawn')[0].checked = !!cookieobj.cspwn;
+    document.getElementsByName('cspawn')[0].onchange();
+
+    document.getElementsByName('HideoutDoors')[0].checked = !!cookieobj.fortdoors;
+    document.getElementsByName('HideoutDoors')[0].onchange();
+    document.getElementsByName('CastleER')[0].checked = !!cookieobj.cER;
+    document.getElementsByName('CastleER')[0].onchange();
+    document.getElementsByName('ValleyRiver')[0].checked = !!cookieobj.valriv;
+    document.getElementsByName('ValleyRiver')[0].onchange();
+
+    document.getElementsByName('BossRings')[0].checked = !!cookieobj.brings;
+    document.getElementsByName('BossRings')[0].onchange();
+
+    document.getElementsByName('Beehives')[0].checked = !!cookieobj.hives;
+    document.getElementsByName('Beehives')[0].onchange();
+    document.getElementsByName('GerudoCard')[0].checked = !!cookieobj.gcard;
+    document.getElementsByName('GerudoCard')[0].onchange();
+    document.getElementsByName('BigMoney')[0].checked = !!cookieobj.merch;
+    document.getElementsByName('BigMoney')[0].onchange();
     
     for (rbuttonID in document.getElementsByName('mixphoo')) {
       rbutton = document.getElementsByName('mixphoo')[rbuttonID]
@@ -403,6 +425,16 @@ function saveCookie() {
    cookieobj.owl = document.getElementsByName('Owls')[0].checked ? 1 : 0;
    cookieobj.warp = document.getElementsByName('Warps')[0].checked ? 1 : 0;
    cookieobj.kswrd = document.getElementsByName('Ksword')[0].checked ? 1 : 0;
+
+    cookieobj.aspwn = document.getElementsByName('aspawn')[0].checked ? 1 : 0;
+   cookieobj.cspwn = document.getElementsByName('cspawn')[0].checked ? 1 : 0;
+   cookieobj.fortdoors = document.getElementsByName('HideoutDoors')[0].checked ? 1 : 0;
+   cookieobj.cER = document.getElementsByName('CastleER')[0].checked ? 1 : 0;
+   cookieobj.valriv = document.getElementsByName('ValleyRiver')[0].checked ? 1 : 0;
+   cookieobj.brings = document.getElementsByName('BossRings')[0].checked ? 1 : 0;
+   cookieobj.hives = document.getElementsByName('Beehives')[0].checked ? 1 : 0;
+   cookieobj.gcard = document.getElementsByName('GerudoCard')[0].checked ? 1 : 0;
+   cookieobj.merch = document.getElementsByName('BigMoney')[0].checked ? 1 : 0;
 
     if (document.getElementsByName('carpenters')[0].selectedIndex !== -1) {
         cookieobj.carp = document.getElementsByName('carpenters')[0].options[document.getElementsByName('carpenters')[0].selectedIndex].value;
