@@ -297,18 +297,22 @@ function loadCookie() {
     document.getElementsByName('GerudoCard')[0].onchange();
     document.getElementsByName('BigMoney')[0].checked = !!cookieobj.merch;
     document.getElementsByName('BigMoney')[0].onchange();
-    
-    for (rbuttonID in document.getElementsByName('mixphoo')) {
-      rbutton = document.getElementsByName('mixphoo')[rbuttonID]
-      if (rbutton.value == cookieobj.mixp)
-         rbutton.click();
-   }
-    
-    for (rbuttonID in document.getElementsByName('SongShuffle')) {
-      rbutton = document.getElementsByName('SongShuffle')[rbuttonID]
-      if (rbutton.value == cookieobj.sngShuff)
-         rbutton.click();
-   }
+
+    for (var i = 0; i < document.getElementsByName('mixphoo')[0].options.length; i++) {
+        if (document.getElementsByName('mixphoo')[0].options[i].value === cookieobj.mixp) {
+            document.getElementsByName('mixphoo')[0].options[i].selected = true;
+            setCarpenter(cookieobj.mixp);
+            break;
+        }
+    }
+
+    for (var i = 0; i < document.getElementsByName('SongShuffle')[0].options.length; i++) {
+        if (document.getElementsByName('SongShuffle')[0].options[i].value === cookieobj.sngShuff) {
+            document.getElementsByName('SongShuffle')[0].options[i].selected = true;
+            setCarpenter(cookieobj.sngShuff);
+            break;
+        }
+    }
 
     for (var i = 0; i < document.getElementsByName('carpenters')[0].options.length; i++) {
         if (document.getElementsByName('carpenters')[0].options[i].value === cookieobj.carp) {
@@ -350,7 +354,6 @@ function loadCookie() {
         }
     }
 
-
     for (var i = 0; i < document.getElementsByName('smallkeys')[0].options.length; i++) {
         if (document.getElementsByName('smallkeys')[0].options[i].value === cookieobj.smallk) {
             document.getElementsByName('smallkeys')[0].options[i].selected = true;
@@ -374,11 +377,53 @@ function loadCookie() {
         }
     }
 
-   for (rbuttonID in document.getElementsByName('IndoorER')) {
-      rbutton = document.getElementsByName('IndoorER')[rbuttonID]
-      if (rbutton.value == cookieobj.iER)
-         rbutton.click();
-   }
+    for (var i = 0; i < document.getElementsByName('IndoorER')[0].options.length; i++) {
+        if (document.getElementsByName('IndoorER')[0].options[i].value === cookieobj.iER) {
+            document.getElementsByName('IndoorER')[0].options[i].selected = true;
+            setSkulltula(cookieobj.iER);
+            break;
+        }
+    }
+
+    for (var i = 0; i < document.getElementsByName('shortcuts')[0].options.length; i++) {
+        if (document.getElementsByName('shortcuts')[0].options[i].value === cookieobj.cuts) {
+            document.getElementsByName('shortcuts')[0].options[i].selected = true;
+            setSkulltula(cookieobj.cuts);
+            break;
+        }
+    }
+
+    for (var i = 0; i < document.getElementsByName('BossDoors')[0].options.length; i++) {
+        if (document.getElementsByName('BossDoors')[0].options[i].value === cookieobj.bossd) {
+            document.getElementsByName('BossDoors')[0].options[i].selected = true;
+            setSkulltula(cookieobj.bossd);
+            break;
+        }
+    }
+
+    for (var i = 0; i < document.getElementsByName('lensgamekeys')[0].options.length; i++) {
+        if (document.getElementsByName('lensgamekeys')[0].options[i].value === cookieobj.lensk) {
+            document.getElementsByName('lensgamekeys')[0].options[i].selected = true;
+            setSkulltula(cookieobj.lensk);
+            break;
+        }
+    }
+
+    for (var i = 0; i < document.getElementsByName('keyrings')[0].options.length; i++) {
+        if (document.getElementsByName('keyrings')[0].options[i].value === cookieobj.rings) {
+            document.getElementsByName('keyrings')[0].options[i].selected = true;
+            setSkulltula(cookieobj.rings);
+            break;
+        }
+    }
+
+    for (var i = 0; i < document.getElementsByName('silvers')[0].options.length; i++) {
+        if (document.getElementsByName('silvers')[0].options[i].value === cookieobj.silrup) {
+            document.getElementsByName('silvers')[0].options[i].selected = true;
+            setSkulltula(cookieobj.silrup);
+            break;
+        }
+    }
 
    for (rbuttonID in document.getElementsByName('Age')) {
       rbutton = document.getElementsByName('Age')[rbuttonID]
@@ -467,24 +512,34 @@ function saveCookie() {
     if (document.getElementsByName('skulltula')[0].selectedIndex !== -1) {
         cookieobj.sklogic = document.getElementsByName('skulltula')[0].options[document.getElementsByName('skulltula')[0].selectedIndex].value;
     }
-    
-    for (rbuttonID in document.getElementsByName('mixphoo')) {
-      rbutton = document.getElementsByName('mixphoo')[rbuttonID]
-      if (rbutton.checked)
-         cookieobj.mixp = rbutton.value;
-   }
 
-   for (rbuttonID in document.getElementsByName('SongShuffle')) {
-      rbutton = document.getElementsByName('SongShuffle')[rbuttonID]
-      if (rbutton.checked)
-         cookieobj.sngShuff = rbutton.value;
-   }
+    if (document.getElementsByName('mixphoo')[0].selectedIndex !== -1) {
+        cookieobj.mixp = document.getElementsByName('mixphoo')[0].options[document.getElementsByName('mixphoo')[0].selectedIndex].value;
+    }
 
-   for (rbuttonID in document.getElementsByName('IndoorER')) {
-      rbutton = document.getElementsByName('IndoorER')[rbuttonID]
-      if (rbutton.checked)
-         cookieobj.iER = rbutton.value;
-   }
+    if (document.getElementsByName('SongShuffle')[0].selectedIndex !== -1) {
+        cookieobj.sngShuff = document.getElementsByName('SongShuffle')[0].options[document.getElementsByName('SongShuffle')[0].selectedIndex].value;
+    }
+
+    if (document.getElementsByName('IndoorER')[0].selectedIndex !== -1) {
+        cookieobj.iER = document.getElementsByName('IndoorER')[0].options[document.getElementsByName('IndoorER')[0].selectedIndex].value;
+    }
+
+    if (document.getElementsByName('shortcuts')[0].selectedIndex !== -1) {
+        cookieobj.cuts = document.getElementsByName('shortcuts')[0].options[document.getElementsByName('shortcuts')[0].selectedIndex].value;
+    }
+    if (document.getElementsByName('BossDoors')[0].selectedIndex !== -1) {
+        cookieobj.bossd = document.getElementsByName('BossDoors')[0].options[document.getElementsByName('BossDoors')[0].selectedIndex].value;
+    }
+    if (document.getElementsByName('lensgamekeys')[0].selectedIndex !== -1) {
+        cookieobj.lensk = document.getElementsByName('lensgamekeys')[0].options[document.getElementsByName('lensgamekeys')[0].selectedIndex].value;
+    }
+    if (document.getElementsByName('keyrings')[0].selectedIndex !== -1) {
+        cookieobj.rings = document.getElementsByName('keyrings')[0].options[document.getElementsByName('keyrings')[0].selectedIndex].value;
+    }
+    if (document.getElementsByName('silvers')[0].selectedIndex !== -1) {
+        cookieobj.silrup = document.getElementsByName('silvers')[0].options[document.getElementsByName('silvers')[0].selectedIndex].value;
+    }
 
    for (rbuttonID in document.getElementsByName('Age')) {
       rbutton = document.getElementsByName('Age')[rbuttonID]
