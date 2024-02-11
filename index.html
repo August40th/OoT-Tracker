@@ -54,6 +54,7 @@
                             <legend>Random Spawns</legend>
                                 <input type='checkbox' name='cspawn' checked='false' onchange="setChildSpawn(this)">Child
                                 <input type='checkbox' name='aspawn' checked='false' onchange="setAdultSpawn(this)">Adult<br>
+                            <hr>
                             <input type='checkbox' name='OpenDeku' checked='true' onchange="setTree(this)">Open Deku Tree<br>
                             Kakariko Gate:<br>
                             <input type='checkbox' name='OpenDoor' checked='true' onchange="setDoor(this)">Open Door of Time <br>
@@ -76,12 +77,16 @@
                             </select><br>
                             <input type='checkbox' name='HideoutDoors' checked='false' onchange="AddHideout(this)">Add Thieves Hideout<br>
                             <input type='checkbox' name='GrottoER' checked='false' onchange="setGrottoER(this)">Grottos<br>
+                            <hr>
                             <input type='checkbox' name='DungeonER' checked='false' onchange="setDER(this)">Dungeons<br>
                             <input type='checkbox' name='CastleER' checked='false' onchange="setCasteER(this)">Ganon's Castle<br>
+                            <hr>
                             <input type='checkbox' name='OWERmap' checked='false' onchange="setOWER(this)">Overworld <br>
                             <input type='checkbox' name='ValleyRiver' checked='false' onchange="setValleyRiver(this)">Valley River Exit <br>
+                            <hr>
                             <input type='checkbox' name='Owls' checked='false' onchange="setOwls(this)">Owl Drops<br>
                             <input type='checkbox' name='Warps' checked='false' onchange="setWarps(this)">Song Warps<br>
+                            <hr>
                             <legend>Mixed Pools: <br>
                                 <select name='mixphoo' onchange="setMixedPools(this.value)">
                                 <option value='Simple'>Simple</option>
@@ -94,19 +99,19 @@
                 <div class="column">
                     <fieldset><legend>Dungeons & Keys</legend>
                         <fieldset><legend> Dungeons <br></legend>
-                        Dungeon Quest:
+                        Dungeon Quest:<br>
                         <select name='quest' onchange="setQuest(this.value)">
                             <option value='Vanilla'>Vanilla</option>
                             <option value='Master'>Master</option>
                             <option value='Mixed'>Mixed</option>
                         </select><br>
-                        Dungeon Shortcuts:
+                        Dungeon Shortcuts:<br>
                             <select name='shortcuts' onchange="setShortcuts(this.value)">
                                 <option value='Off'>Off</option>
                                 <option value='All'>All</option>
                                 <option value='Some'>Some</option>
                             </select><br>
-                        Shuffle Boss Doors:
+                        Shuffle Boss Doors:<br>
                             <select name='BossDoors' onchange="setBossDoors(this.value)">
                                 <option value='Off'>Off</option>
                                 <option value='All'>All</option>
@@ -124,7 +129,7 @@
                             <option value='Dungeons'>Any Dungeon</option>
                             <option value='Anywhere'>Anywhere</option>
                         </select><br>
-                        Fort Keys:
+                        Fort Keys:<br>
                             <select name='fortkeys' onchange="setFortKeys(this.value)">
                                 <option value='Fight'>Guard Fight</option>
                                 <option value='Region'>Regional</option>
@@ -132,7 +137,7 @@
                                 <option value='Dungeons'>Dungeons</option>
                                 <option value='Keysanity'>Anywhere</option><br>
                             </select> <br>
-                        Lens Game Keys:
+                        Lens Game Keys:<br>
                             <select name='lensgamekeys' onchange="setTreasureKeys(this.value)">
                                 <option value='Keysy'>Keysy</option>
                                 <option value='Vanilla'>Vanilla</option>
@@ -148,7 +153,7 @@
                                 <option value='Some'>Some</option>
                             </select><br>
                             <input type='checkbox' name='BossRings' checked='false' onchange="setBossRings(this)">Boss keys on rings<br>
-                        Boss:
+                        Boss:<br>
                         <select name='bosskeys' onchange="setBossKeys(this.value)">
                             <option value='Keysy'>Keysy</option>
                             <option value='Vanilla'>Vanilla</option>
@@ -158,6 +163,7 @@
                             <option value='Dungeons'>Any Dungeon</option>
                             <option value='Anywhere'>Anywhere</option>
                         </select><br>
+                        </fieldset>
                         Silver Rupees:
                             <select name='silvers' onchange=setSilvers(this.value)">
                                 <option value='Remove'>Remove</option>
@@ -167,7 +173,6 @@
                                 <option value='Dungeons'>Any Dungeon</option>
                                 <option value='Anywhere'>Anywhere</option>
                             </select><br>
-                        </fieldset>
                     </fieldset>
                         <fieldset> <Legend>Ganon's Castle</legend>
                         <legend>Rainbow Bridge</legend> 
