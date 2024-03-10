@@ -71,7 +71,7 @@ function generalCanGetChest(chestlist) {
          continue;}
       if (chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
          continue;}
-      if ( chestlist[key].OWER == false && OWERmap == true) { // OWER Market street
+      if ( chestlist[key].OWER == false || OWERmap == true) { // OWER Market street
          continue;}
       if (chestlist.hasOwnProperty(key)) {
          if (!chestlist[key].isOpened)
@@ -2310,11 +2310,11 @@ var dungeons = [
       { 'Guard/Ghostbuster House': { x: "65%", y: "94%", OWER: false, leadsto: "unknown", type: "simple", access: "door",
                isAvailable: function () {
                   return dungeons[13].found == true ; }
-         }, 'Pottery Crate Skulltula': { x: "59%", y: "96.5%", OWER: false, leadsto: "unknown", type: "skulltula", access: "simple",
+         }, 'Pottery Crate Skulltula': { x: "65%", y: "94%", OWER: false, leadsto: "unknown", type: "skulltula", access: "simple",
             isAvailable: function () {
                return dungeons[13].found == true
                  && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); }
-         }, '10 Big Poes': { x: "61%", y: "97%", OWER: false, leadsto: "unknown", type: "NPC", access: "simple",
+         }, '10 Big Poes': { x: "65%", y: "92%", OWER: false, leadsto: "unknown", type: "NPC", access: "simple",
             isAvailable: function () { //Adult only indoor
                return dungeons[13].found == true
                && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
@@ -2335,7 +2335,7 @@ var dungeons = [
                return dungeons[13].found == true && 
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
             }
-         }, 'Bombchu Sale': { x: "22%", y: "91%", leadsto: "unknown", type: "shop", access: "simple",
+         }, 'Bombchu Sale': { x: "22%", y: "91%", leadsto: "unknown", type: "shop", access: "door",
             isAvailable: function () {
                return dungeons[13].found == true
                  && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
@@ -2362,12 +2362,12 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[13].found == true &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); }
-         }, 'Bombchu Bowling 1': { x: "34%", y: "40%", leadsto: "unknown", type: "NPC", access: "simple",
+         }, 'Bombchu Bowling 1': { x: "34%", y: "40%", leadsto: "unknown", type: "NPC", access: "door",
             isAvailable: function () {
                return dungeons[13].found == true
                  && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && (items.Bombs || (items.Bombchu && BombchuLogic));}
-         }, 'Bombchu Bowling 2': { x: "37%", y: "40%", leadsto: "unknown", type: "NPC", access: "simple",
+         }, 'Bombchu Bowling 2': { x: "37%", y: "40%", leadsto: "unknown", type: "NPC", access: "door",
             isAvailable: function () {
                return dungeons[13].found == true
                  && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
@@ -2388,7 +2388,7 @@ var dungeons = [
                return dungeons[13].found == true &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); 
             }
-         }, 'Potion Sale': { x: "84%", y: "47%", leadsto: "unknown", type: "shop", access: "simple",
+         }, 'Potion Sale': { x: "84%", y: "47%", leadsto: "unknown", type: "shop", access: "door",
             isAvailable: function () {
                return dungeons[13].found == true
                  && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); }
@@ -2396,7 +2396,7 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[13].found == true &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); }
-         }, 'Bazaar Sale': { x: "84%", y: "66%", leadsto: "unknown", type: "shop", access: "simple",
+         }, 'Bazaar Sale': { x: "84%", y: "66%", leadsto: "unknown", type: "shop", access: "door",
             isAvailable: function () {
                return dungeons[13].found == true
                  && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); }
@@ -2545,7 +2545,7 @@ var dungeons = [
       chestlist: 
       { 'Village to Field': { x: "2%", y: "75%", leadsto: "unknown", type: "entrance", access: "entrance",
              isAvailable: function () {
-                  return dungeons[16] == true; }
+                  return dungeons[16].found == true; }
          }, 'Song from Sheik': { x: "59%", y: "58%", leadsto: "unknown", type: "song", access: "outdoor",
             isAvailable: function () {
                return dungeons[16].found == true && 
@@ -2810,7 +2810,7 @@ var dungeons = [
                        && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                       ) );
                }
-         }, 'Goron Sale': { x: "45%", y: "45%", leadsto: "unknown", type: "shop", access: "simple",
+         }, 'Goron Sale': { x: "45%", y: "45%", leadsto: "unknown", type: "shop", access: "door",
             isAvailable: function () {
                return dungeons[17].found == true &&
                   ( items.Bombs || (items.Bombchu && BombchuLogic) || items.Glove
@@ -3125,13 +3125,13 @@ var dungeons = [
                   (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale || OWERmap ) &&
                   items.Ocarina && items.SongofTime &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); }
-         }, 'Frogs in the Rain': { x: "47%", y: "14%", leadsto: "unknown", type: "NPC", access: "outdoor",
+         }, 'Frogs in the Rain': { x: "44%", y: "14%", leadsto: "unknown", type: "NPC", access: "outdoor",
             isAvailable: function () {
                return dungeons[20].found == true && 
                   (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale || OWERmap ) &&
                   items.Ocarina && items.SongofStorms &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); }
-         }, 'Frogs Mini Game': { x: "44%", y: "14%", leadsto: "unknown", type: "NPC", access: "outdoor",
+         }, 'Frogs Mini Game': { x: "47%", y: "14%", leadsto: "unknown", type: "NPC", access: "outdoor",
             isAvailable: function () {
                return dungeons[20].found == true && 
                   (items.Bombs || (items.Bombchu && BombchuLogic) || items.Scale || OWERmap ) &&
