@@ -63,15 +63,13 @@ function generalCanGetChest(chestlist) {
          continue;}
       if ( chestlist[key].type == "ocarina" && OcarinaShuffle == false ) { //Ocarina shuffle in field
          continue;}
-      if ( chestlist[key].access == "no OWER" && chestlist[key].type == "ocarina" && ((OWERmap == true && OcarinaShuffle == true) || OcarinaShuffle == false) ) { //OWER Ocarina shuffle
-         continue;}
       if ( chestlist[key].type == "guard" && fortkeys == "Fight" ) { //Fortress Guard checks
          continue;}
       if ( chestlist[key].type == "membership" && GerudoCard == false ) { //Fortress Guard checks
          continue;}
       if (chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
          continue;}
-      if ( chestlist[key].OWER == false || OWERmap == true) { // OWER Market street
+      if ( chestlist[key].OWER == false && OWERmap == true) { // OWER Market street
          continue;}
       if (chestlist.hasOwnProperty(key)) {
          if (!chestlist[key].isOpened)
@@ -2315,7 +2313,7 @@ var dungeons = [
                return dungeons[13].found == true
                  && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); }
          }, '10 Big Poes': { x: "65%", y: "92%", OWER: false, leadsto: "unknown", type: "NPC", access: "simple",
-            isAvailable: function () { //Adult only indoor
+            isAvailable: function () {
                return dungeons[13].found == true
                && (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && items.BigPoe >= 1; }
@@ -2362,12 +2360,12 @@ var dungeons = [
             isAvailable: function () {
                return dungeons[13].found == true &&
                   (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); }
-         }, 'Bombchu Bowling 1': { x: "34%", y: "40%", leadsto: "unknown", type: "NPC", access: "door",
+         }, 'Bombchu Bowling 1': { x: "34%", y: "40%", leadsto: "unknown", type: "NPC", access: "simple",
             isAvailable: function () {
                return dungeons[13].found == true
                  && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && (items.Bombs || (items.Bombchu && BombchuLogic));}
-         }, 'Bombchu Bowling 2': { x: "37%", y: "40%", leadsto: "unknown", type: "NPC", access: "door",
+         }, 'Bombchu Bowling 2': { x: "37%", y: "40%", leadsto: "unknown", type: "NPC", access: "simple",
             isAvailable: function () {
                return dungeons[13].found == true
                  && (Age == "Child" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
