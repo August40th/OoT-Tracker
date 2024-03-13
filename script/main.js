@@ -3455,12 +3455,6 @@ function setBees(sender) {
    updateMap();
 }
 
-function setMerch(sender) {
-    BigMoney = sender.checked;
-   saveCookie();    
-   updateMap();
-}
-
 function setValleyRiver(sender) {
     ValleyRiver = sender.checked;
    saveCookie();    
@@ -4234,7 +4228,7 @@ function populateMapdiv() {
                 continue;}
             if ( dungeons[k] == dungeons[15] && dungeons[k].chestlist[key].type == "egg" && WeirdEgg == false ) { //Bean shuffle
                 continue;}
-            if ( dungeons[k].chestlist[key].type == "merch" && BigMoney == false ) {
+            if ( dungeons[k].chestlist[key].type == "" && BigMoney == false ) {
                 continue;}
             if ( dungeons[k].chestlist[key].type == "ocarina" && OcarinaShuffle == false && dungeons[k] == dungeons[32]) { //Ocarina shuffle for field
                 continue;}
