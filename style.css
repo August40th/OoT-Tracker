@@ -196,12 +196,6 @@ label {
     height: 260px;
 }
 
-#submaparea {
-    width:100%;
-    transform: translateX(-50%);
-    cursor: pointer;
-}
-
 #submaplist {
     position:relative;
     top: 2;
