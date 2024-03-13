@@ -836,9 +836,7 @@ function clickDungeon(d) {
             continue;}
         if ( dungeons[dungeonSelect] == dungeons[15] && dungeons[dungeonSelect].chestlist[key].type == "egg" && WeirdEgg == false ) { //Bean shuffle
             continue;}
-        if ( dungeons[dungeonSelect] == dungeons[17] && dungeons[dungeonSelect].chestlist[key].type == "knife" && BigMoney == false ) { //Medigoron item
-            continue;}
-        if ( dungeons[dungeonSelect] == dungeons[31] && dungeons[dungeonSelect].chestlist[key].type == "carpet" && BigMoney == false ) { //Carpet Sale
+        if ( dungeons[dungeonSelect].chestlist[key].type == "knife" && BigMoney == false ) { //Medigoron item
             continue;}
         if ( dungeons[dungeonSelect].chestlist[key].type == "ocarina" && OcarinaShuffle == false && dungeons[dungeonSelect] == dungeons[32]) { //Ocarina shuffle for field
             continue;}
@@ -878,6 +876,7 @@ function clickDungeon(d) {
         
         if ( (dungeons[dungeonSelect].chestlist[key].floor == here && dungeons[dungeonSelect].type == "dungeon" && (dungeons[dungeonSelect].mixedtype == dungeons[dungeonSelect].chestlist[key].access || quest == 'Mixed') ) || dungeons[dungeonSelect].type == "overworld") {
             var c = document.createElement('span');
+            c.innerHTML = 'x';
             c.id = dungeons[dungeonSelect].chestlist[key].type;
             c.className = key + ' ' + s.className;
             c.style.cursor = 'pointer';
@@ -4018,9 +4017,7 @@ function updateMap() {
                 continue;}
             if ( dungeons[k] == dungeons[15] && dungeons[k].chestlist[key].type == "egg" && WeirdEgg == false ) { //Bean shuffle
                 continue;}
-            if ( dungeons[k] == dungeons[17] && dungeons[k].chestlist[key].type == "knife" && BigMoney == false ) { //Medigoron item
-                continue;}
-            if ( dungeons[k] == dungeons[31] && dungeons[k].chestlist[key].type == "carpet" && BigMoney == false ) { //Carpet Sale
+            if ( dungeons[k].chestlist[key].type == "merch" && BigMoney == false ) {
                 continue;}
             if ( dungeons[k].chestlist[key].type == "ocarina" && OcarinaShuffle == false && dungeons[k] == dungeons[32]) { //Ocarina shuffle for field
                 continue;}
@@ -4048,6 +4045,7 @@ function updateMap() {
                 if (key in dungeons[dungeonSelect].chestlist) {
                     if (dungeons[dungeonSelect].chestlist[key] !== undefined && (dungeons[dungeonSelect].chestlist[key].floor == here && dungeons[dungeonSelect].type == "dungeon" && (dungeons[dungeonSelect].mixedtype == dungeons[dungeonSelect].chestlist[key].access || quest == 'Mixed') ) || dungeons[dungeonSelect].type == "overworld") {
                         c = document.createElement('span');
+                        c.innerHTML = 'x';
                         c.id = dungeons[dungeonSelect].chestlist[key].type;
                         if (dungeons[dungeonSelect].chestlist[key].isOpened) {
                             c.className = key + ' DCopened';
@@ -4236,9 +4234,7 @@ function populateMapdiv() {
                 continue;}
             if ( dungeons[k] == dungeons[15] && dungeons[k].chestlist[key].type == "egg" && WeirdEgg == false ) { //Bean shuffle
                 continue;}
-            if ( dungeons[k] == dungeons[17] && dungeons[k].chestlist[key].type == "knife" && BigMoney == false ) { //Medigoron item
-                continue;}
-            if ( dungeons[k] == dungeons[31] && dungeons[k].chestlist[key].type == "carpet" && BigMoney == false ) { //Carpet Sale
+            if ( dungeons[k].chestlist[key].type == "merch" && BigMoney == false ) {
                 continue;}
             if ( dungeons[k].chestlist[key].type == "ocarina" && OcarinaShuffle == false && dungeons[k] == dungeons[32]) { //Ocarina shuffle for field
                 continue;}
@@ -4349,9 +4345,7 @@ function populateMapdiv() {
             continue;}
         if ( dungeons[dungeonSelect] == dungeons[15] && dungeons[dungeonSelect].chestlist[key].type == "egg" && WeirdEgg == false ) { //Bean shuffle
             continue;}
-        if ( dungeons[dungeonSelect] == dungeons[17] && dungeons[dungeonSelect].chestlist[key].type == "knife" && BigMoney == false ) { //Medigoron item
-            continue;}
-        if ( dungeons[dungeonSelect] == dungeons[31] && dungeons[dungeonSelect].chestlist[key].type == "carpet" && BigMoney == false ) { //Carpet Sale
+        if ( dungeons[dungeonSelect].chestlist[key].type == "knife" && BigMoney == false ) { //Medigoron item
             continue;}
         if ( dungeons[dungeonSelect].chestlist[key].type == "ocarina" && OcarinaShuffle == false && dungeons[dungeonSelect] == dungeons[32]) { //Ocarina shuffle for field
             continue;}
