@@ -197,7 +197,7 @@ label {
 }
 
 #submaplist {
-    max-height: calc(100% - 36px);
+    max-height: calc(100% - 42px);
 }
 
 .DCunavailable{
@@ -273,7 +273,7 @@ label {
 }
 
 #chest, #NPC, #freestanding, #ksword, #skulltula, #scrub, 
-#ocarina, #egg, #song, #cow, #bean, #gossip, #knife, #carpet,
+#ocarina, #egg, #song, #cow, #bean, #gossip, #merch,
 #alldoor, #simple, #grotto, #entrance, #dungeon, #boss, #frog{
     background-repeat: no-repeat;
     font-size: 12;
