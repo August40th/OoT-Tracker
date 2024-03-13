@@ -57,9 +57,7 @@ function generalCanGetChest(chestlist) {
          continue;}
       if ( chestlist[key].type == "egg" && WeirdEgg == false ) { //Bean shuffle
          continue;}
-      if ( chestlist[key].type == "knife" && BigMoney == false ) { //Medigoron item
-         continue;}
-      if ( chestlist[key].type == "carpet" && BigMoney == false ) { //Carpet Sale
+      if ( chestlist[key].type == "merch" && BigMoney == false ) { //Medigoron item
          continue;}
       if ( chestlist[key].type == "ocarina" && OcarinaShuffle == false ) { //Ocarina shuffle in field
          continue;}
@@ -2723,7 +2721,7 @@ var dungeons = [
                return dungeons[17].found == true && 
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
                && (items.Glove || items.Bombs || (items.Bombchu && BombchuLogic) || items.Bow) ; }
-         }, 'Medigoron': { x: "28%", y: "85%", leadsto: "unknown", type: "knife", access: "outdoor",
+         }, 'Medigoron': { x: "28%", y: "85%", leadsto: "unknown", type: "merch", access: "outdoor",
             isAvailable: function () {
                return dungeons[17].found == true && items.Wallet >= 2 &&
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) )
@@ -4278,7 +4276,7 @@ var dungeons = [
       { 'Wasteland to Fortress': { x: "90%", y: "85.4%", leadsto: "unknown", type: "entrance", access: "entrance",
             isAvailable: function () {
                   return dungeons[31].found == true; }
-         }, 'Carpet Salesman': { x: "72%", y: "65%", leadsto: "unknown", type: "carpet", access: "outdoor",
+         }, 'Carpet Salesman': { x: "72%", y: "65%", leadsto: "unknown", type: "merch", access: "outdoor",
             isAvailable: function () {
                return dungeons[31].found == true && 
                   (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ) &&
