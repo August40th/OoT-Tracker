@@ -878,7 +878,6 @@ function clickDungeon(d) {
         
         if ( (dungeons[dungeonSelect].chestlist[key].floor == here && dungeons[dungeonSelect].type == "dungeon" && (dungeons[dungeonSelect].mixedtype == dungeons[dungeonSelect].chestlist[key].access || quest == 'Mixed') ) || dungeons[dungeonSelect].type == "overworld") {
             var c = document.createElement('span');
-            c.innerHTML = 'x';
             c.id = dungeons[dungeonSelect].chestlist[key].type;
             c.className = key + ' ' + s.className;
             c.style.cursor = 'pointer';
@@ -4049,7 +4048,6 @@ function updateMap() {
                 if (key in dungeons[dungeonSelect].chestlist) {
                     if (dungeons[dungeonSelect].chestlist[key] !== undefined && (dungeons[dungeonSelect].chestlist[key].floor == here && dungeons[dungeonSelect].type == "dungeon" && (dungeons[dungeonSelect].mixedtype == dungeons[dungeonSelect].chestlist[key].access || quest == 'Mixed') ) || dungeons[dungeonSelect].type == "overworld") {
                         c = document.createElement('span');
-                        c.innerHTML = 'x';
                         c.id = dungeons[dungeonSelect].chestlist[key].type;
                         if (dungeons[dungeonSelect].chestlist[key].isOpened) {
                             c.className = key + ' DCopened';
