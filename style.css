@@ -187,15 +187,29 @@ label {
     bottom: 410;
 }
 
-
-.submapdiv{
-    background-color: black;
+.submapdiv {
+    background-color:black;
     text-align: center;
-    position: absolute;
-    width: 230px;
+    position: relative;
+    top: 160;
+    width: 240px;
     height: 260px;
-    margin-top: 160px;
-    font-size: 24;
+}
+
+#submaparea {
+    width:100%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+#submaplist {
+    position:relative;
+    top: 2;
+    height: 260;
+    list-style-type: none;
+    padding: 2;
+    overflow-y: auto;
+    max-height: calc(100% - 55px);
 }
 
 .DCunavailable{
@@ -260,15 +274,6 @@ label {
     z-index: 1;
 }
 
-#submaparea {
-    font-size: 24;
-    cursor: pointer;
-}
-
-,submaparea {
-    font-size: 24;
-}
-
 .minimapdiv{
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -280,7 +285,7 @@ label {
 }
 
 #chest, #NPC, #freestanding, #ksword, #skulltula, #scrub, 
-#ocarina, #egg, #song, #cow, #bean, #gossip, #knife, #carpet
+#ocarina, #egg, #song, #cow, #bean, #gossip, #knife, #carpet,
 #alldoor, #simple, #grotto, #entrance, #dungeon, #boss, #frog{
     background-repeat: no-repeat;
     font-size: 12;
