@@ -836,7 +836,7 @@ function clickDungeon(d) {
             continue;}
         if ( dungeons[dungeonSelect] == dungeons[15] && dungeons[dungeonSelect].chestlist[key].type == "egg" && WeirdEgg == false ) { //Bean shuffle
             continue;}
-        if ( dungeons[dungeonSelect].chestlist[key].type == "knife" && BigMoney == false ) { //Medigoron item
+        if ( dungeons[dungeonSelect].chestlist[key].type == "merch" && BigMoney == false ) { //Medigoron item
             continue;}
         if ( dungeons[dungeonSelect].chestlist[key].type == "ocarina" && OcarinaShuffle == false && dungeons[dungeonSelect] == dungeons[32]) { //Ocarina shuffle for field
             continue;}
@@ -4339,7 +4339,7 @@ function populateMapdiv() {
             continue;}
         if ( dungeons[dungeonSelect] == dungeons[15] && dungeons[dungeonSelect].chestlist[key].type == "egg" && WeirdEgg == false ) { //Bean shuffle
             continue;}
-        if ( dungeons[dungeonSelect].chestlist[key].type == "knife" && BigMoney == false ) { //Medigoron item
+        if ( dungeons[dungeonSelect].chestlist[key].type == "merch" && BigMoney == false ) { //Medigoron item
             continue;}
         if ( dungeons[dungeonSelect].chestlist[key].type == "ocarina" && OcarinaShuffle == false && dungeons[dungeonSelect] == dungeons[32]) { //Ocarina shuffle for field
             continue;}
