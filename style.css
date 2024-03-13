@@ -197,13 +197,7 @@ label {
 }
 
 #submaplist {
-    position:relative;
-    top: 2;
-    height: 260;
-    list-style-type: none;
-    padding: 2;
-    overflow-y: auto;
-    max-height: calc(100% - 55px);
+    max-height: calc(100% - 36px);
 }
 
 .DCunavailable{
