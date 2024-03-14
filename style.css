@@ -197,6 +197,7 @@ label {
 }
 
 #submaplist {
+    padding: 2;
     max-height: calc(100% - 42px);
 }
 
