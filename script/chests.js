@@ -2612,7 +2612,6 @@ var dungeons = [
                   return dungeons[16].found == true && items.Trade >= 4 &&
                      (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); }
                }
-         },
          }, 'Kakariko Open Grotto': { x: "69%", y: "39.3%", leadsto: "unknown", type: "grotto", access: "grotto",
                isAvailable: function () {
                   return dungeons[16].found == true ;
