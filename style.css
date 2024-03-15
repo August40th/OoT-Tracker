@@ -194,6 +194,7 @@ label {
     top: 160;
     width: 240px;
     height: 260px;
+    cursor: pointer;
 }
 
 #submaplist {
