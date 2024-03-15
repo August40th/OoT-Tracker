@@ -3458,9 +3458,9 @@ function setBees(sender) {
 function setValleyRiver(sender) {
     ValleyRiver = sender.checked;
     if (ValleyRiver == true) {
-        dungeons[27].chestlist[16].leadsto = "unknown"; }
+        dungeons[27].chestlist[13].leadsto = "unknown"; }
     else {
-        dungeons[27].chestlist[16].leadsto = "Lake from Valley";}
+        dungeons[27].chestlist[13.leadsto = "Lake from Valley";}
    saveCookie();    
    updateMap();
 }
