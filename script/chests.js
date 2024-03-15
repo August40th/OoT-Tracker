@@ -2604,8 +2604,15 @@ var dungeons = [
                      (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); }
          }, 'Granny\'s Shop': { x: "68%", y: "45%", leadsto: "unknown", type: "simple", access: "door",
                isAvailable: function () {
-                  return dungeons[16].found == true ;
+                  return dungeons[16].found == true && 
+                     (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); }
                }
+         }, 'Granny\'s Potion': { x: "68%", y: "45%", leadsto: "unknown", type: "merch", access: "alldoor",
+               isAvailable: function () {
+                  return dungeons[16].found == true && items.Trade >= 4 &&
+                     (Age == "Adult" || OpenDoor == true || (items.Ocarina && items.SongofTime) ); }
+               }
+         },
          }, 'Kakariko Open Grotto': { x: "69%", y: "39.3%", leadsto: "unknown", type: "grotto", access: "grotto",
                isAvailable: function () {
                   return dungeons[16].found == true ;
