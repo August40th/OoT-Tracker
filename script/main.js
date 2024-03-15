@@ -2942,7 +2942,8 @@ function toggleDungeonChest(sender, d, c) {
                                     ee.onclick = function(setLeadsto){
                                         ent = this.innerHTML;
                                         dungeons[d].chestlist[c].leadsto = ent;
-                                        dungeons[v].chestlist[ent].leadsto = c;
+                                        if (c !== "Valley to Lake") {
+                                            dungeons[v].chestlist[ent].leadsto = c;}
                                         clickDungeon(d);
                                     }
                                     l.appendChild(ee); 
