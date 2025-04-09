@@ -618,279 +618,294 @@ function toggleMarkDungeon(x) {
 
 function clickDungeon(d) {
     dungeonSelect = d;
-
-    document.getElementById('submaparea').innerHTML = dungeons[dungeonSelect].name;
-    document.getElementById('submaparea').className = 'DC' + dungeons[dungeonSelect].isBeatable();
-    var DClist = document.getElementById('submaplist');
+    const currentDungeon = dungeons[dungeonSelect];
+    const isDungeon = currentDungeon.type === "dungeon";
+    const isOverworld = currentDungeon.type === "overworld";
+    
+    // Update submap area
+    const submaparea = document.getElementById('submaparea');
+    submaparea.innerHTML = currentDungeon.name;
+    submaparea.className = 'DC' + currentDungeon.isBeatable();
+    // Fix the incorrect assignment of function result instead of the function itself
+    submaparea.onclick = () => bulkDCSelect();
+    
+    // Clear submap list
+    const DClist = document.getElementById('submaplist');
     DClist.innerHTML = '';
-    do {
-        if (document.getElementById('eline') !== null) document.getElementById('eline').remove(); 
-    } while (document.getElementById('eline') !== null);
-
-    var regionSelected = document.getElementById('submaparea').innerHTML;
-    regionSelected.onclick = bulkDCSelect();
-
-    var minimap = document.getElementById('minimapdiv');
+    
+    // Remove all existing elines
+    while (document.getElementById('eline') !== null) {
+        document.getElementById('eline').remove();
+    }
+    
+    // Setup minimap
+    const minimap = document.getElementById('minimapdiv');
     if (dungeonSelect !== last) {
         last = dungeonSelect;
-        here = dungeons[dungeonSelect].floorwdoor;}
-    if (here == undefined) here = dungeons[dungeonSelect].floorwdoor;
-    if (dungeons[dungeonSelect].type == "overworld")
-        minimap.style.backgroundImage = 'url(images/' + minimaps[dungeonSelect] + '.png)';
-    if (dungeons[dungeonSelect].type == "dungeon")
-        minimap.style.backgroundImage = 'url(images/' + minimaps[dungeonSelect] + here + '.png)';
+        here = currentDungeon.floorwdoor;
+    }
+    if (here === undefined) here = currentDungeon.floorwdoor;
+    
+    // Set background image and color based on dungeon type
     minimap.innerHTML = '';
-    if (dungeons[dungeonSelect].type == "overworld")
-            document.getElementById('minimapdiv').style.backgroundColor = "maroon";
-        else if (dungeons[dungeonSelect].type == "dungeon") {
-            document.getElementById('minimapdiv').style.backgroundColor = "red";
-            var ub = document.createElement('button');
-            ub.style.backgroundImage = 'url(images/Up.png)';
-            ub.style.height = '32px';
-            ub.style.width = '48px';
-            ub.style.position = 'absolute';
-            ub.style.top = '345px';
-            ub.style.left = '22px';
-            ub.style.backgroundPosition = 'center';
-            ub.style.backgroundSize = '160%';
-            ub.onclick = new Function('toggleDungeonMapUp(last)');
-            var db = document.createElement('button');
-            db.style.backgroundImage = 'url(images/Down.png)';
-            db.style.height = '32px';
-            db.style.width = '48px';
-            db.style.position = 'absolute';
-            db.style.top = '369px';
-            db.style.left = '22px';
-            db.style.backgroundPosition = 'center';
-            db.style.backgroundSize = '160%';
-            db.onclick = new Function('toggleDungeonMapDown(last)');
-            if (dungeonSelect !== 7) { //not needed in ice
-                document.getElementById('minimapdiv').appendChild(ub);
-                document.getElementById('minimapdiv').appendChild(db);
+    if (isOverworld) {
+        minimap.style.backgroundImage = `url(images/${minimaps[dungeonSelect]}.png)`;
+        minimap.style.backgroundColor = "maroon";
+    } else if (isDungeon) {
+        minimap.style.backgroundImage = `url(images/${minimaps[dungeonSelect]}${here}.png)`;
+        minimap.style.backgroundColor = "red";
+        
+        // Add up/down buttons for dungeons (except ice)
+        if (dungeonSelect !== 7) {
+            const createNavButton = (image, top, action) => {
+                const btn = document.createElement('button');
+                btn.style.backgroundImage = `url(images/${image}.png)`;
+                btn.style.height = '32px';
+                btn.style.width = '48px';
+                btn.style.position = 'absolute';
+                btn.style.top = top;
+                btn.style.left = '22px';
+                btn.style.backgroundPosition = 'center';
+                btn.style.backgroundSize = '160%';
+                btn.onclick = () => {
+                    if (action === 'Up') {
+                        toggleDungeonMapUp(last);
+                    } else if (action === 'Down') {
+                        toggleDungeonMapDown(last);
+                    }
+                };
+                minimap.appendChild(btn);
+            };
+            
+            createNavButton('Up', '345px', 'Up');
+            createNavButton('Down', '369px', 'Down');
+        }
+    }
+    // Mark as found if needed
+    if ((OWERmap && isOverworld && !currentDungeon.found) || 
+        (DungeonER && isDungeon && !currentDungeon.found)) {
+        currentDungeon.found = true;
+        updateMap();
+    }
+
+    // Helper constants and functions for drawing connections
+    const MAP_DIV_WIDTH = 828;
+    const MAP_DIV_HEIGHT = 420;
+    const mapDiv = document.getElementById('mapdiv');
+    
+    // Process all potential connections more efficiently
+    function drawConnectionLines() {
+        // Create a data structure to store all valid connections
+        const connections = [];
+        const secondLevelConnections = [];
+        
+        // First, collect all valid connections instead of processing them in nested loops
+        for (let srcDungeonIdx = 0; srcDungeonIdx < dungeons.length; srcDungeonIdx++) {
+            const srcDungeon = dungeons[srcDungeonIdx];
+            
+            for (const srcKey in srcDungeon.chestlist) {
+                const srcChest = srcDungeon.chestlist[srcKey];
+                
+                // Skip if not a valid connection type
+                if (!isValidERType(srcChest)) continue;
+                
+                // For each destination dungeon
+                for (let destDungeonIdx = 0; destDungeonIdx < dungeons.length; destDungeonIdx++) {
+                    if (destDungeonIdx === srcDungeonIdx) continue;
+                    
+                    const destDungeon = dungeons[destDungeonIdx];
+                    
+                    // Check each chest in destination dungeon
+                    for (const destKey in destDungeon.chestlist) {
+                        const destChest = destDungeon.chestlist[destKey];
+                        
+                        // Check if this is a direct connection
+                        if (destChest.leadsto !== "unknown" && 
+                            isDestination(srcChest, destDungeon, destKey)) {
+                            
+                            connections.push({
+                                from: { dungeonIdx: srcDungeonIdx, key: srcKey },
+                                to: { dungeonIdx: destDungeonIdx, key: destKey },
+                                color: 'red'
+                            });
+                            
+                            // Look for second-level connections
+                            if (isValidERType(destChest)) {
+                                for (let thirdDungeonIdx = 0; thirdDungeonIdx < dungeons.length; thirdDungeonIdx++) {
+                                    if (thirdDungeonIdx === srcDungeonIdx || thirdDungeonIdx === destDungeonIdx) continue;
+                                    
+                                    const thirdDungeon = dungeons[thirdDungeonIdx];
+                                    
+                                    for (const thirdKey in thirdDungeon.chestlist) {
+                                        const thirdChest = thirdDungeon.chestlist[thirdKey];
+                                        
+                                        if (isDestination(destChest, thirdDungeon, thirdKey) &&
+                                            thirdChest.leadsto !== "unknown") {
+                                            
+                                            secondLevelConnections.push({
+                                                from: { dungeonIdx: destDungeonIdx, key: destKey },
+                                                to: { dungeonIdx: thirdDungeonIdx, key: thirdKey },
+                                                color: 'yellow'
+                                            });
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
-
-    if (OWERmap == true && dungeons[dungeonSelect].type == "overworld" && dungeons[dungeonSelect].found == false) {
-        dungeons[dungeonSelect].found = true ;
-        updateMap();
-    }
-    if (DungeonER == true  && dungeons[dungeonSelect].type == "dungeon" && dungeons[dungeonSelect].found == false) {
-        dungeons[dungeonSelect].found = true ;
-        updateMap();
-    }
-
-    for (var key in dungeons[dungeonSelect].chestlist) {
-        if ( (OWERmap == true && dungeons[dungeonSelect].chestlist[key].type == "entrance") || 
-            (DungeonER == true && dungeons[dungeonSelect].chestlist[key].type == "dungeon") || 
-            (Owls == true && dungeons[dungeonSelect].chestlist[key].type == "owl") ||
-            (Warps == true && dungeons[dungeonSelect].chestlist[key].type == "warp") ||
-            ((cspawn == true || aspawn == true) && dungeons[dungeonSelect].chestlist[key].type == "spawn") ||
-            (mixphoo !== "Off" && (dungeons[dungeonSelect].chestlist[key].type == "simple" || 
-                                   dungeons[dungeonSelect].chestlist[key].type == "alldoor" || 
-                                   dungeons[dungeonSelect].chestlist[key].type == "grotto") 
-            ) ) {
-            for ( var v = 0; v < dungeons.length; v++) {
-                if (v == dungeonSelect) continue;
-                for (var ent in dungeons[v].chestlist) {
-                    if (dungeons[v].chestlist[ent].leadsto !== "unknown" && (dungeons[dungeonSelect].chestlist[key].leadsto == ent || dungeons[dungeonSelect].chestlist[key].leadsto == dungeons[v].name + ' ' + ent || dungeons[dungeonSelect].chestlist[key].leadsto == dungeons[v].name + ' Dungeon Door' || dungeons[dungeonSelect].chestlist[key].leadsto == dungeons[v].name) ) {
-                        let mapDivWidth = 828;
-                        let mapDivHeight = 420;
-
-                        let x1 = parseFloat(dungeons[dungeonSelect].x)*mapDivWidth/100;
-                        let y1 = parseFloat(dungeons[dungeonSelect].y)*mapDivHeight/100;
-                        let x2 = parseFloat(dungeons[v].x)*mapDivWidth/100;
-                        let y2 = parseFloat(dungeons[v].y)*mapDivHeight/100;
-
-                        var l = document.createElement('eline');
-                        l.id = 'eline';
-                        l.style.height = '4px';
-                        l.style.width = findDistance(x1, y1, x2, y2 ) + 'px';
-                        l.style.transformOrigin = "0 0";
-                        l.style.transform = 'rotate('+ findAngle(x1, y1, x2, y2 ) + 'deg)';
-                        l.style.position = 'absolute';
-                        l.style.whiteSpace = 'nowrap';
-                        l.style.backgroundColor = 'red';
-                        l.style.left = x1+"px";
-                        l.style.top = y1+"px";
-
-                        var ll = document.createElement('span');
-                        ll.id = 'minimap ' + key;
-                        ll.innerHTML = key + ' >>> ' + ent.replaceAll(" to ", " from ");
-                        ll.style.width = 'auto';
-                        ll.style.backgroundColor = 'black';
-                        ll.style.color = '#fff';
-                        ll.style.position = 'absolute';
-                        ll.style.transform = 'rotate('+ findAngle(x1, y1, x2, y2 )*-1 + 'deg)';
-                        ll.style.textAlign = 'center';
-                        ll.style.fontSize = '24px';
-                        ll.style.visibility = 'hidden';
-                        l.appendChild(ll);
-                        l.onmouseover = new Function('linehighlight(this' + ',"' + key + '")');
-                        l.onmouseout = new Function('lineunhighlight(this' + ',"' + key + '")');
-                        
-                        document.getElementById('mapdiv').appendChild(l);
-                    }
-                    if ( (dungeons[v].chestlist[ent].leadsto !== "unknown" || dungeons[v].chestlist[ent].leadsto !== "none") && 
-                        ((OWERmap == true && dungeons[v].chestlist[ent].type == "entrance") || 
-                         (DungeonER == true && dungeons[v].chestlist[ent].type == "dungeon") || 
-                         (Owls == true && dungeons[v].chestlist[ent].type == "owl") ||
-                         (Warps == true && dungeons[v].chestlist[ent].type == "warp") ||
-                         ((cspawn == true || aspawn == true) && dungeons[dungeonSelect].chestlist[key].type == "spawn") ||
-                         (mixphoo !== "Off" && (dungeons[dungeonSelect].chestlist[key].type == "simple" || 
-                                                dungeons[dungeonSelect].chestlist[key].type == "alldoor" || 
-                                                dungeons[dungeonSelect].chestlist[key].type == "grotto") )
-                         ) ) {
-                        for ( var u = 0; u < dungeons.length; u++) {
-                            if (u == dungeonSelect || u == v) continue;
-                            for (var nxt in dungeons[u].chestlist) {
-                                if (dungeons[v].chestlist[ent].leadsto == nxt || dungeons[v].chestlist[ent].leadsto == dungeons[u].name + ' ' + nxt || dungeons[v].chestlist[ent].leadsto == dungeons[u].name + ' Dungeon Door' || dungeons[v].chestlist[ent].leadsto == dungeons[u].name) {
-                                    for (var o in dungeons[v].chestlist) {
-                                        if (dungeons[u].chestlist[nxt].leadsto !== "unknown" && (dungeons[dungeonSelect].chestlist[key].leadsto == o || dungeons[dungeonSelect].chestlist[key].leadsto == dungeons[v].name + ' ' + o || dungeons[dungeonSelect].chestlist[key].leadsto == dungeons[v].name + ' Dungeon Door' || dungeons[dungeonSelect].chestlist[key].leadsto == ' Dungeon Door' || dungeons[dungeonSelect].chestlist[key].leadsto == dungeons[v].name) ) {
-                                            let mapDivWidth = 828;
-                                            let mapDivHeight = 420;
-                                            let x1 = parseFloat(dungeons[v].x)*mapDivWidth/100;
-                                            let y1 = parseFloat(dungeons[v].y)*mapDivHeight/100;
-                                            let x2 = parseFloat(dungeons[u].x)*mapDivWidth/100;
-                                            let y2 = parseFloat(dungeons[u].y)*mapDivHeight/100;
-
-                                            var j = document.createElement('eline');
-                                            j.id = 'eline';
-                                            j.style.height = '4px';
-                                            j.style.width = findDistance(x1, y1, x2, y2 ) + 'px';
-                                            j.style.transformOrigin = "0 0";
-                                            j.style.transform = 'rotate('+ findAngle(x1, y1, x2, y2 ) + 'deg)';
-                                            j.style.position = 'absolute';
-                                            j.style.whiteSpace = 'nowrap';
-                                            j.style.backgroundColor = 'yellow';
-                                            j.style.left = x1+"px";
-                                            j.style.top = y1+"px";
-                                            document.getElementById('mapdiv').appendChild(j); 
-                                        
-                                            var jj = document.createElement('span');
-                                            jj.id = 'minimap ' + nxt;
-                                            jj.innerHTML = ent + ' >>> ' + nxt.replaceAll(" to ", " from ");;
-                                            jj.style.width = 'auto';
-                                            jj.style.backgroundColor = 'black';
-                                            jj.style.color = '#fff';
-                                            jj.style.position = 'absolute';
-                                            jj.style.transform = 'rotate('+ findAngle(x1, y1, x2, y2 )*-1 + 'deg)';
-                                            jj.style.textAlign = 'center';
-                                            jj.style.fontSize = '24px';
-                                            jj.style.visibility = 'hidden';
-                                            j.appendChild(jj);
-                                            j.onmouseover = new Function('linehighlight(this' + ',"' + nxt + '")');
-                                            j.onmouseout = new Function('lineunhighlight(this' + ',"' + nxt + '")'); }}}}}
-                    }
-                } }
+        
+        /**
+         * Create a connection line between two dungeons
+         * @param {Object} conn - Connection data
+         * @param {number} MAP_DIV_WIDTH - Map div width
+         * @param {number} MAP_DIV_HEIGHT - Map div height
+         * @returns {HTMLElement} - The created line element
+         */
+        function createConnectionLine(conn, MAP_DIV_WIDTH, MAP_DIV_HEIGHT) {
+            const fromDungeon = dungeons[conn.from.dungeonIdx];
+            const toDungeon = dungeons[conn.to.dungeonIdx];
+            
+            const fromPos = {
+                x: parseFloat(fromDungeon.x) * MAP_DIV_WIDTH / 100,
+                y: parseFloat(fromDungeon.y) * MAP_DIV_HEIGHT / 100
+            };
+            
+            const toPos = {
+                x: parseFloat(toDungeon.x) * MAP_DIV_WIDTH / 100,
+                y: parseFloat(toDungeon.y) * MAP_DIV_HEIGHT / 100
+            };
+            
+            // Create line element
+            const line = document.createElement('eline');
+            line.id = 'eline';
+            line.style.height = '4px';
+            line.style.width = findDistance(fromPos.x, fromPos.y, toPos.x, toPos.y) + 'px';
+            line.style.transformOrigin = "0 0";
+            line.style.transform = 'rotate(' + findAngle(fromPos.x, fromPos.y, toPos.x, toPos.y) + 'deg)';
+            line.style.position = 'absolute';
+            line.style.whiteSpace = 'nowrap';
+            line.style.backgroundColor = conn.color;
+            line.style.left = fromPos.x + "px";
+            line.style.top = fromPos.y + "px";
+            
+            // Create and append label
+            const label = document.createElement('span');
+            label.id = 'minimap ' + conn.from.key;
+            label.innerHTML = conn.from.key + ' >>> ' + conn.to.key.replaceAll(" to ", " from ");
+            label.style.width = 'auto';
+            label.style.backgroundColor = 'black';
+            label.style.color = '#fff';
+            label.style.position = 'absolute';
+            label.style.transform = 'rotate(' + findAngle(fromPos.x, fromPos.y, toPos.x, toPos.y) * -1 + 'deg)';
+            label.style.textAlign = 'center';
+            label.style.fontSize = '24px';
+            label.style.visibility = 'hidden';
+            
+            line.appendChild(label);
+            line.onmouseover = () => linehighlight(line, conn.from.key);
+            line.onmouseout = () => lineunhighlight(line, conn.from.key);
+            
+            return line;
         }
-        if ( dungeons[dungeonSelect].type == "dungeon" && quest == "Mixed" && dungeons[dungeonSelect].mixedtype == "master" && dungeons[dungeonSelect].chestlist[key].access == "master") { //Mixed quest checks
-            continue;}
-        if ( dungeons[dungeonSelect] .type == "dungeon" && quest == "Mixed" && dungeons[dungeonSelect].mixedtype == "vanilla" && dungeons[dungeonSelect].chestlist[key].access == "vanilla") { //Mixed quest checks
-            continue;}
-        if ( dungeons[dungeonSelect].type == "dungeon" && dungeons[dungeonSelect].chestlist[key].access == "master" && quest == "Vanilla" ) { //Master checks
-            continue;}
-        if ( dungeons[dungeonSelect].type == "dungeon" && dungeons[dungeonSelect].chestlist[key].access == "vanilla" && quest == "Master" ) { //Master checks
-            continue;}
-        if ( dungeons[dungeonSelect] == dungeons[12] && dungeons[dungeonSelect].chestlist[key].type == "trial" && trialsize == 0 ) { //Castle trials
-            continue;}
-        if ( dungeons[dungeonSelect].chestlist[key].type == "entrance" && (OWERmap == false )) { //|| dungeons[dungeonSelect].chestlist[key].leadsto !== "unknown")) { //Do Nothing
-            continue;}
-        if ( dungeons[dungeonSelect].chestlist[key].type == "warp" && Warps == false) {
-            continue;}
-        if (key == 'Warp Pad'){ continue;}
-        if ( dungeons[dungeonSelect].chestlist[key].type == "spawn" && (cspawn == false && aspawn == false)) {
-            continue;}
-        if ( dungeons[dungeonSelect].chestlist[key].type == "owl" && Owls == false) { //Do Nothing
-            continue;}
-        if ( dungeons[dungeonSelect].chestlist[key].access == "door" && dungeons[dungeonSelect].chestlist[key].type == "simple" && IndoorER == "Off" ) { //Simple Doorways
-            continue;}
-        if ( dungeons[dungeonSelect].chestlist[key].access == "door" && dungeons[dungeonSelect].chestlist[key].type == "alldoor" && IndoorER !== "Full" ) { // Full indoor doorways
-            continue;}
-        if ( dungeons[dungeonSelect].chestlist[key].access == "door" && dungeons[dungeonSelect].chestlist[key].type == "dungeon" && DungeonER == false ) { // Dungeon doorways
-            continue;}
-        if ( dungeons[dungeonSelect].chestlist[key].access == "dungeon" && dungeons[dungeonSelect].chestlist[key].type == "dungeon" && DungeonER == false ) { // Dungeon doorways
-            continue;}
-        if ( dungeons[dungeonSelect].chestlist[key].access == "simple" && IndoorER !== "Off" ) { //simple indoor checks
-            continue;}
-        if ( dungeons[dungeonSelect].chestlist[key].access == "alldoor" && IndoorER == "Full" ) { //Link's House, ToT, and windmill checks
-            continue;}
-        if ( dungeons[dungeonSelect].chestlist[key].access == "grotto" && dungeons[dungeonSelect].chestlist[key].type == "grotto" && GrottoER == false ) { //Grotto doorways
-            continue;}
-        if ( dungeons[dungeonSelect].chestlist[key].access == "grotto" && dungeons[dungeonSelect].chestlist[key].type !== "grotto" && GrottoER == true ) { //Grotto checks
-            continue;}
-        if (dungeons[dungeonSelect].type == "overworld" && dungeons[dungeonSelect].chestlist[key].type == "skulltula" && (skulltula == "Off" || skulltula == "Dungeons") ) { // Overworld Skulls
-            continue;}
-        if (dungeons[dungeonSelect].type == "dungeon" && dungeons[dungeonSelect].chestlist[key].type == "skulltula" && (skulltula == "Off" || skulltula == "Overworld") ) { // Dungeon Skulls
-            continue;}
-        if (dungeons[dungeonSelect].chestlist[key].type == "scrub" && Scrubsanity == false) { //Scrubs 
-            continue;}
-        if (dungeons[dungeonSelect].chestlist[key].type == "shop" && shopsize == 0) { //Shops 
-            continue;}
-        if (dungeons[dungeonSelect].chestlist[key].type == "cow" && Cowsanity == false) { //Cows
-            continue;}
-        if (dungeons[dungeonSelect].chestlist[key].type == "frog" && Frogsanity == false) { //Cows
-            continue;}
-        if ( dungeons[dungeonSelect] == dungeons[0] && dungeons[dungeonSelect].chestlist[key].type == "ksword" && Ksword == false ) { //kokiri shuffle
-            continue;}
-        if ( dungeons[dungeonSelect] == dungeons[20] && dungeons[dungeonSelect].chestlist[key].type == "bean" && BeanShuffle == false ) { //Bean shuffle
-            continue;}
-        if ( dungeons[dungeonSelect] == dungeons[15] && dungeons[dungeonSelect].chestlist[key].type == "egg" && WeirdEgg == false ) { //Bean shuffle
-            continue;}
-        if ( dungeons[dungeonSelect].chestlist[key].type == "merch" && BigMoney == false ) { //Medigoron item
-            continue;}
-        if ( dungeons[dungeonSelect].chestlist[key].type == "ocarina" && OcarinaShuffle == false && dungeons[dungeonSelect] == dungeons[32]) { //Ocarina shuffle for field
-            continue;}
-        if ( dungeons[dungeonSelect].chestlist[key].type == "ocarina" && dungeons[dungeonSelect] == dungeons[0] && (OWERmap == true || OcarinaShuffle == false) ) { //Ocarina shuffle for no OWER
-            continue;}
-        if ( dungeons[dungeonSelect] == dungeons[28] && dungeons[dungeonSelect].chestlist[key].type == "guard" && fortkeys == "Fight" ) { //Fortress Guard checks
-            continue;}
-        if ( (OWERmap == true || IndoorER !== "Off") && dungeons[dungeonSelect].chestlist[key].OWER == false ) { 
-            continue;}
-        if (dungeons[dungeonSelect].chestlist[key].type == "gossip" && items.StoneofAgony == false) { //Gossip stones
-            continue;}
-        if ( dungeons[dungeonSelect] == dungeons[28] && dungeons[dungeonSelect].chestlist[key].type == "membership" && GerudoCard == false ) { //Fortress Guard checks
-            continue;}
-        if ( (Warps == false && (cspawn == true && aspawn == true)) && dungeonSelect == 35 ) continue;
-        if (OWERmap == false && (dungeonSelect == 33 || dungeonSelect == 34 ) ) continue;
-        if ( dungeons[dungeonSelect].chestlist[key].leadsto == "none" || dungeons[dungeonSelect].chestlist[key].leadsto == "Spirit Right Hand" || dungeons[dungeonSelect].chestlist[key].leadsto == "Spirit Left Hand") continue;
-
-        var s = document.createElement('li');
-        if (dungeons[dungeonSelect].chestlist[key].leadsto == "unknown") s.innerHTML = key;
-        else if (dungeons[dungeonSelect].chestlist[key].leadsto !== "unknown") s.innerHTML = dungeons[dungeonSelect].chestlist[key].leadsto;
+        
+        // Now draw all the connections we collected
+        [...connections, ...secondLevelConnections].forEach(conn => {
+            const line = createConnectionLine(conn, MAP_DIV_WIDTH, MAP_DIV_HEIGHT);
+            mapDiv.appendChild(line);
+        });
+    }
+    
+    function isValidERType(chest) {
+        return (OWERmap && chest.type === "entrance") || 
+               (DungeonER && chest.type === "dungeon") || 
+               (Owls && chest.type === "owl") ||
+               (Warps && chest.type === "warp") ||
+               ((cspawn || aspawn) && chest.type === "spawn") ||
+               (mixphoo !== "Off" && ["simple", "alldoor", "grotto"].includes(chest.type));
+    }
+    
+    function isDestination(sourceChest, destDungeon, destKey) {
+        const destFullName = destDungeon.name + ' ' + destKey;
+        return sourceChest.leadsto === destKey || 
+               sourceChest.leadsto === destFullName || 
+               sourceChest.leadsto === destDungeon.name + ' Dungeon Door' || 
+               sourceChest.leadsto === destDungeon.name;
+    }
+    
+    // Draw all connection lines at once
+    drawConnectionLines();
+    
+    // Now process all chests to display in the list and minimap
+    for (const key in dungeons[dungeonSelect].chestlist) {
+        // Skip chest if it doesn't match current settings
+        if (shouldSkipChest(dungeons[dungeonSelect], key, dungeons[dungeonSelect].chestlist[key])) {
+            continue;
+        }
+        
+        // Skip specific leadsto values
+        if (dungeons[dungeonSelect].chestlist[key].leadsto === "none" || 
+            dungeons[dungeonSelect].chestlist[key].leadsto === "Spirit Right Hand" || 
+            dungeons[dungeonSelect].chestlist[key].leadsto === "Spirit Left Hand") {
+            continue;
+        }
+        // Create list item element first
+        const s = document.createElement('li');
+        
+        if (dungeons[dungeonSelect].chestlist[key].leadsto === "unknown") {
+            s.innerHTML = key;
+        } else {
+            s.innerHTML = dungeons[dungeonSelect].chestlist[key].leadsto;
+        }
+        
+        // Set appropriate class
         if (dungeons[dungeonSelect].chestlist[key].isOpened) {            
             s.className = "DCopened";
-        } else if ( dungeons[dungeonSelect].chestlist[key].isAvailable()) {
+        } else if (dungeons[dungeonSelect].chestlist[key].isAvailable()) {
             s.className = "DCavailable";
         } else {
             s.className = "DCunavailable";
         }
-
-        s.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
-        s.onmouseover = new Function('highlightDungeonChest(this)');
-        s.onmouseout = new Function('unhighlightDungeonChest(this)');
-        s.style.cursor = "pointer";
-
-        if (dungeons[dungeonSelect].chestlist[key].leadsto !== "unknown" && dungeons[dungeonSelect].chestlist[key].type == "entrance") {
-        }
-        else { DClist.appendChild(s);}
         
-        if ( (dungeons[dungeonSelect].chestlist[key].floor == here && dungeons[dungeonSelect].type == "dungeon" && (dungeons[dungeonSelect].mixedtype == dungeons[dungeonSelect].chestlist[key].access || quest == 'Mixed') ) || dungeons[dungeonSelect].type == "overworld") {
-            var c = document.createElement('span');
+        // Add event handlers
+        s.onclick = () => toggleDungeonChest(s, dungeonSelect, key);
+        s.onmouseover = () => highlightDungeonChest(s);
+        s.onmouseout = () => unhighlightDungeonChest(s);
+        s.style.cursor = "pointer";
+        
+        // Add to list if not an unknown entrance
+        if (!(dungeons[dungeonSelect].chestlist[key].leadsto !== "unknown" && 
+              dungeons[dungeonSelect].chestlist[key].type === "entrance")) {
+            DClist.appendChild(s);
+        }
+        
+        // Add chest to minimap if it's visible on current floor
+        const showOnMinimap = (dungeons[dungeonSelect].chestlist[key].floor === here && 
+                              dungeons[dungeonSelect].type === "dungeon" && 
+                              (dungeons[dungeonSelect].mixedtype === dungeons[dungeonSelect].chestlist[key].access || 
+                               quest === 'Mixed')) || 
+                              dungeons[dungeonSelect].type === "overworld";
+                              
+        if (showOnMinimap) {
+            const c = document.createElement('span');
             c.innerHTML = 'x';
             c.id = dungeons[dungeonSelect].chestlist[key].type;
             c.className = key + ' ' + s.className;
             c.style.cursor = 'pointer';
             c.style.position = 'absolute';
             c.style.width = '16px';
-            c.onclick = new Function('toggleDungeonChest(this,' + dungeonSelect + ',"' + key + '")');
+            c.onclick = () => toggleDungeonChest(c, dungeonSelect, key);
             c.style.top = dungeons[dungeonSelect].chestlist[key].y;
             c.style.left = dungeons[dungeonSelect].chestlist[key].x;
             minimap.appendChild(c);
-
-            var cc = document.createElement('span');
+            
+            const cc = document.createElement('span');
             cc.className = 'minimap ' + key;
-            if (dungeons[dungeonSelect].chestlist[key].leadsto == "unknown") cc.innerHTML = key;
-            else if (dungeons[dungeonSelect].chestlist[key].leadsto !== "unknown") cc.innerHTML = dungeons[dungeonSelect].chestlist[key].leadsto;
+            cc.innerHTML = dungeons[dungeonSelect].chestlist[key].leadsto === "unknown" 
+                ? key 
+                : dungeons[dungeonSelect].chestlist[key].leadsto;
             cc.id = 'minimap ' + key;
             cc.style.width = '160px';
             cc.style.backgroundColor = 'black';
@@ -899,8 +914,8 @@ function clickDungeon(d) {
             cc.style.textAlign = 'center';
             cc.style.fontSize = '20px';
             c.appendChild(cc);
-            c.onmouseover = new Function('highlight(this' + ',"' + key + '")');
-            c.onmouseout = new Function('unhighlight(this' + ',"' + key + '")');
+            c.onmouseover = () => highlight(c, key);
+            c.onmouseout = () => unhighlight(c, key);
         }
     }
 }
