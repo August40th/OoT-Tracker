@@ -627,8 +627,8 @@ function clickDungeon(d) {
         if (document.getElementById('eline') !== null) document.getElementById('eline').remove(); 
     } while (document.getElementById('eline') !== null);
 
-    var regionSelected = document.getElementById('submaparea').innerHTML;
-    regionSelected.onclick = bulkDCSelect();
+    var dungeonSelect = document.getElementById('submaparea').innerHTML;
+    dungeonSelect.onclick = bulkDCSelect();
 
     var minimap = document.getElementById('minimapdiv');
     if (dungeonSelect !== last) {
